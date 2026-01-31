@@ -1,0 +1,1 @@
+ใช้ bun build target node
