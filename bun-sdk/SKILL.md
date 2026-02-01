@@ -45,8 +45,8 @@ outcome: SDKs มีคุณภาพและใช้งานง่าย
 - Overview: ภาพรวมของ topic
 - Key Concepts: concepts สำคัญที่ต้องรู้
 - Examples: ตัวอย่างการใช้งาน
-- Best Practices: best practices ที่ควรทำตาม
-- References: ลิงก์ไปยังแหล่งข้อมูลต้นฉบับ
+- Best practices ที่ควรทำตาม
+- เอกสารอ้างอิง
 
 ## How to Use
 
