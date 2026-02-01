@@ -69,8 +69,24 @@ Mobile renderer สำหรับ Android และ iOS
 ### `dioxus-router`
 Type-safe routing สำหรับ Dioxus applications
 
+### `dioxus-fullstack`
+Fullstack framework ด้วย Axum integration:
+- Server functions ด้วย `#[get]`, `#[post]` macros
+- WebSocket support
+- Server Events
+- Streaming support
+- Form handling
+
 ### `dioxus-hooks`
 Collection ของ custom hooks สำหรับ Dioxus
+
+### `dioxus-primitives`
+Component library 28 foundational components:
+- Radix-UI equivalents
+- Unstyled components
+- Keyboard shortcuts
+- ARIA accessibility
+- Cross-platform support
 
 ## Configuration
 
@@ -107,20 +123,23 @@ dioxus-mobile = "0.7"
 
 ## Development Tools
 
-### Hot Reloading
+### Hot Reloading & Hot-Patching
 - Real-time updates ขณะ development
 - Support RSX และ assets
+- Subsecond hot-patching สำหรับ Rust code
 - `dx serve` command
 
-### Linting
-- Automatic code formatting
-- Component validation
-- Props checking
+### Debugger
+- Integrated VSCode debugger
+- Press `d` ใน `dx serve` เพื่อ attach debugger
+- Support web, desktop, mobile
+- DWARF symbols สำหรับ proper symbol demangling
 
-### Bundling
-- Integrated bundler
-- Platform-specific optimization
-- WASM optimization
+### Automatic Tailwind
+- Auto-detect `tailwind.css` ที่ project root
+- Support Tailwind V3 และ V4
+- Start watcher โดยอัตโนมัติ
+- ไม่ต้อง manual setup
 
 ## Community Resources
 
@@ -139,3 +158,4 @@ dioxus-mobile = "0.7"
 - [Dioxus CLI Documentation](https://dioxuslabs.com/learn/0.7/guides/cli/)
 - [Dioxus Configuration](https://dioxuslabs.com/learn/0.7/guides/configuration/)
 - [Dioxus Ecosystem](https://dioxuslabs.com/learn/0.7/ecosystem/)
+- [Dioxus 0.7 Release](https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.0)

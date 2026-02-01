@@ -1,3 +1,10 @@
+---
+name: wxt
+description: Framework for building web extensions with TypeScript and auto-imports
+goal: สร้าง web extensions ด้วย WXT ตาม best practices
+outcome: Web extensions มีโครงสร้างและคุณภาพตามมาตรฐาน
+---
+
 # WXT
 
 ## Rules

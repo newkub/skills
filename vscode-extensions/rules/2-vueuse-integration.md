@@ -90,3 +90,11 @@ export = defineExtension(() => {
 3. **Throttle rapid events** with useThrottleFn
 4. **Use watchEffect** for reactive side effects
 5. **Import only needed utilities** for tree-shaking
+
+## Verification
+
+1. ตรวจสอบว่าติดตั้ง vueuse ด้วย `npm install vueuse`
+2. ทดสอบ composables ทำงานได้
+3. ตรวจสอบว่าใช้ debounce/throttle อย่างถูกต้อง
+4. ทดสอบด้วย `npm run test`
+5. ตรวจสอบ bundle size ด้วย `npm run build`

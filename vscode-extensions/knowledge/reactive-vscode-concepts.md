@@ -77,3 +77,11 @@ export = defineExtension(() => {
 - **VueUse**: Additional composition utilities
 - **Volar**: TypeScript support
 - **VSCode API**: Full API coverage
+
+## Verification
+
+1. ตรวจสอบว่าติดตั้ง reactive-vscode ด้วย `npm install reactive-vscode`
+2. ทดสอบ composables ด้วย `npm run test`
+3. ตรวจสอบว่าใช้ Composition API อย่างถูกต้อง
+4. ตรวจสอบว่า reactive state ทำงานได้
+5. ทดสอบด้วย `npm run build` เพื่อยืนยัน tree-shaking

@@ -1,6 +1,8 @@
 ---
-name: Git Maintaining a Project
-description: ความรู้เกี่ยวกับ Maintaining a Project ใน Git รวมถึง Working in Topic Branches, Applying Patches, Checking Out Remote Branches, Determining What Is Introduced, Integrating Contributed Work และ Tagging Your Releases
+name: git-maintaining-project
+description: ความรู้เกี่ยวกับ Maintaining a Project ใน Git
+goal: เข้าใจและใช้เครื่องมือ Maintaining Project ใน Git ได้อย่างถูกต้อง
+outcome: สามารถจัดการ contributions และ releases ของ project ได้อย่างมีประสิทธิภาพ
 ---
 
 # Git Maintaining a Project
@@ -11,11 +13,11 @@ Maintaining a Project ใน Git คือการจัดการและ�
 
 ## Working in Topic Branches
 
-### แนวคิด
+### Concept
 
 เมื่อต้องการรวม work ใหม่ ควรลองใน topic branch ก่อนเพื่อให้ง่ายต่อการปรับแก้และทดสอบ
 
-### วิธีการทำงาน
+### Workflow Steps
 
 ```bash
 # สร้าง topic branch จาก master
@@ -25,7 +27,7 @@ $ git checkout -b sc/ruby_client master
 $ git checkout -b ruby_client master
 ```
 
-### ประโยชน์
+### Benefits
 
 - ง่ายต่อการปรับแก้ patches แต่ละอัน
 - สามารถทิ้ง work ได้ถ้าไม่ทำงาน
@@ -45,7 +47,7 @@ $ git apply /tmp/patch-ruby-client.patch
 $ git apply --check 0001-see-if-this-helps-the-gem.patch
 ```
 
-**ลักษณะเด่น:**
+**Characteristics:**
 - ไม่สร้าง commit ให้อัตโนมัติ
 - ต้อง stage และ commit ด้วยตัวเอง
 - ใช้ `git apply --check` เพื่อตรวจสอบก่อน apply
@@ -66,13 +68,13 @@ $ git am -3 0001-see-if-this-helps-the-gem.patch
 $ git am -3 -i mbox
 ```
 
-**ลักษณะเด่น:**
+**Characteristics:**
 - สร้าง commit ให้อัตโนมัติ
 - รักษา author information และ commit message
 - ใช้ `-3` สำหรับ three-way merge
 - ใช้ `-i` สำหรับ interactive mode
 
-### การจัดการ Conflicts
+### Conflict Handling
 
 ```bash
 # ถ้า patch ไม่ apply ได้
@@ -93,7 +95,7 @@ $ git am --abort
 
 ## Checking Out Remote Branches
 
-### วิธีการทำงาน
+### Workflow Steps
 
 ```bash
 # เพิ่ม remote
@@ -109,7 +111,7 @@ $ git checkout -b rubyclient jessica/ruby-client
 $ git pull https://github.com/onetimeguy/project
 ```
 
-### ประโยชน์
+### Benefits
 
 - เหมาะสำหรับ contributors ที่มี repository ของตัวเอง
 - ได้รับ history ของ commits ด้วย
@@ -117,7 +119,7 @@ $ git pull https://github.com/onetimeguy/project
 
 ## Determining What Is Introduced
 
-### เช็ค commits ที่อยู่ใน branch แต่ไม่อยู่ใน master
+### Check commits ที่อยู่ใน branch แต่ไม่อยู่ใน master
 
 ```bash
 $ git log contrib --not master
@@ -129,16 +131,16 @@ $ git log contrib --not master
 $ git log master..contrib
 ```
 
-### เช็ค changes ที่จะเกิดขึ้นเมื่อ merge
+### Check changes ที่จะเกิดขึ้นเมื่อ merge
 
 ```bash
 # Diff ระหว่าง current branch และ common ancestor กับ master
 $ git diff master...contrib
 ```
 
-**หมายเหตุ:** ใช้ triple-dot (`...`) สำหรับ diff ระหว่าง current branch และ common ancestor
+**Note:** ใช้ triple-dot (`...`) สำหรับ diff ระหว่าง current branch และ common ancestor
 
-### เช็คสิ่งที่จะถูก introduce
+### Check สิ่งที่จะถูก introduce
 
 ```bash
 # เช็ค commits ที่จะถูก introduce
@@ -179,7 +181,6 @@ $ git merge develop
 #### Large-Merging Workflows
 
 ใช้ branches หลายอันตามระดับความเสถียร:
-
 - `master`: เสถียรที่สุด
 - `next`: work ใหม่ที่ปลอดภัย
 - `seen` (หรือ `pu`): work ที่ยังต้องการการทดสอบ
@@ -222,7 +223,7 @@ $ git config --global rerere.enabled true
 
 ## Tagging Your Releases
 
-### สร้าง Signed Tags
+### Create Signed Tags
 
 ```bash
 # สร้าง signed tag
@@ -232,7 +233,7 @@ $ git tag -s v1.5 -m 'my signed 1.5 tag'
 $ git tag -a v1.5 -m 'my 1.5 tag'
 ```
 
-### แจกจ่าย Public PGP Key
+### Distribute Public PGP Key
 
 ```bash
 # List keys
@@ -284,3 +285,9 @@ $ git show maintainer-pgp-pub | gpg --import
 
 - [Distributed Git - Maintaining a Project](https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project)
 - [Git Book](https://git-scm.com/book/en/v2)
+
+## Verification
+
+1. ตรวจสอบว่าเข้าใจเครื่องมือ Maintaining Project ทั้งหมด
+2. ทดสอบใช้ topic branches, apply patches, และ integrate work
+3. ตรวจสอบว่าสามารถจัดการ contributions และ releases ได้อย่างมีประสิทธิภาพ

@@ -329,6 +329,51 @@ const searchResults = await db
   );
 ```
 
+### Common Table Expressions (CTEs)
+```typescript
+// Define a CTE for complex queries
+const sq = db.$with('sq').as(
+  db.select().from(usersTable).where(eq(usersTable.id, 42))
+);
+
+const result = await db.with(sq).select().from(sq);
+
+// CTE with INSERT
+const inserted = db.$with('inserted').as(
+  db.insert(usersTable).values({ name: 'John' }).returning()
+);
+
+const result = await db.with(inserted).select().from(inserted);
+
+// CTE with UPDATE
+const updated = db.$with('updated').as(
+  db.update(usersTable)
+    .set({ age: 25 })
+    .where(eq(usersTable.name, 'John'))
+    .returning()
+);
+
+const result = await db.with(updated).select().from(updated);
+
+// CTE with DELETE
+const deleted = db.$with('deleted').as(
+  db.delete(usersTable)
+    .where(eq(usersTable.name, 'John'))
+    .returning()
+);
+
+const result = await db.with(deleted).select().from(deleted);
+
+// CTE with SQL expressions (requires alias)
+const sq = db.$with('sq').as(
+  db.select({
+    name: sql<string>`upper(${usersTable.name})`.as('name'),
+  }).from(usersTable)
+);
+
+const result = await db.with(sq).select({ name: sq.name }).from(sq);
+```
+
 ## Error Handling
 
 ```typescript
@@ -337,15 +382,57 @@ try {
     .insert(usersTable)
     .values({ name: 'John', email: 'john@example.com' })
     .returning();
-  
+
   return result;
 } catch (error) {
   if (error.code === '23505') {
     // Unique constraint violation
     throw new Error('User already exists');
   }
+  if (error.code === '23503') {
+    // Foreign key violation
+    throw new Error('Referenced record does not exist');
+  }
+  if (error.code === '23502') {
+    // Not null violation
+    throw new Error('Required field missing');
+  }
   throw error;
 }
+```
+
+## Validation with Zod
+
+```typescript
+import { createInsertSchema } from 'drizzle-zod';
+import { z } from 'zod';
+
+// Create validated insert schema
+const insertUserSchema = createInsertSchema(users, {
+  email: (schema) => schema.email('Invalid email format'),
+  name: (schema) => schema.min(2, 'Name must be at least 2 characters'),
+});
+
+// Use in API routes
+export async function createUser(data: unknown) {
+  const validated = insertUserSchema.parse(data);
+  const [user] = await db.insert(users).values(validated).returning();
+  return user;
+}
+
+// Advanced validation with business logic
+const createOrderSchema = createInsertSchema(orders, {
+  totalAmount: (schema) => schema.positive('Amount must be positive'),
+  orderDate: z.coerce.date(),
+}).refine((data) => {
+  if (data.status === 'shipped' && !data.shippedAt) {
+    return false;
+  }
+  return true;
+}, {
+  message: 'Shipped orders must have a shipped date',
+  path: ['shippedAt'],
+});
 ```
 
 ## Performance Tips

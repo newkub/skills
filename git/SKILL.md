@@ -1,6 +1,8 @@
 ---
 name: git
 description: Git Best Practices - แนวทางการใช้งาน Git ที่ดีและเป็นมาตรฐาน
+goal: ใช้ Git ตาม best practices
+outcome: การใช้งาน Git มีประสิทธิภาพและเป็นมาตรฐาน
 ---
 
 # Git Best Practices

@@ -1,71 +1,78 @@
-# Software Design Best Practices (แนวปฏิบัติที่ดีที่สุดสำหรับ Software Design)
+---
+name: software-design
+description: Best practices for software design including principles, patterns, architecture, and maintainability
+goal: ออกแบบ software ตาม best practices
+outcome: Software มีโครงสร้างและคุณภาพตามมาตรฐาน
+---
 
-## When to Apply (เมื่อใช้)
+# Software Design
 
-Skill นี้ให้ rules และ best practices ที่ครอบคลุมสำหรับการออกแบบ software ที่ maintainable, scalable, และ testable ใช้ guidelines เหล่านี้เมื่อ:
+## When to Apply
 
-- DESIGN modules, classes, และ APIs ในระดับ component
-- APPLY design patterns ที่เหมาะสมกับปัญหาที่เจอ
-- CREATE APIs ที่ clean และ intuitive
-- IMPLEMENT business logic ที่ maintainable
+ใช้ Skill นี้เมื่อออกแบบ software
 
-## Rule Categories by Priority (หมวดหมู่ Rules ตามลำดับความสำคัญ)
+- เมื่อออกแบบ modules, classes, และ APIs
+- เมื่อ apply design patterns
+- เมื่อสร้าง APIs
+- เมื่อ implement business logic
 
-| Priority | Category | Impact | Prefix |
+## Rules
+
+| Priority | Impact | Reference | Name | Description | Prefix | Condition |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | `CRITICAL` | [design-principles.md](./rules/design-principles.md) | Design Principles | SOLID, DRY, KISS, YAGNI | `design-` | เมื่อออกแบบ software |
+| 2 | `HIGH` | [architecture-patterns.md](./rules/architecture-patterns.md) | Architecture | Monolith, Modular, Microservices | `design-` | เมื่อเลือก architecture |
+| 3 | `HIGH` | [design-patterns.md](./rules/design-patterns.md) | Design Patterns | Factory, Strategy, Observer | `design-` | เมื่อใช้ patterns |
+| 4 | `HIGH` | [system-design.md](./rules/system-design.md) | System Design | Scalability, Reliability | `design-` | เมื่อออกแบบระบบ |
+| 5 | `HIGH` | [api-design.md](./rules/api-design.md) | API Design | REST, GraphQL, RPC | `design-` | เมื่อออกแบบ API |
+| 6 | `HIGH` | [data-design.md](./rules/data-design.md) | Data Design | Schema, Index, Consistency | `design-` | เมื่อออกแบบข้อมูล |
+| 7 | `HIGH` | [performance.md](./rules/performance.md) | Performance | Caching, Profiling | `design-` | เมื่อ optimize performance |
+| 8 | `CRITICAL` | [security.md](./rules/security.md) | Security | Auth, Encryption, Threat modeling | `design-` | เมื่อ implement security |
+| 9 | `HIGH` | [maintainability.md](./rules/maintainability.md) | Maintainability | Modularity, Refactoring | `design-` | เมื่อ maintain code |
+| 10 | `MEDIUM` | [developer-experience.md](./rules/developer-experience.md) | DX | Tooling, CLI, Docs | `design-` | เมื่อ improve DX |
+
+## Knowledge
+
+| Reference | Name | Description | Prefix |
 | :--- | :--- | :--- | :--- |
-| 1 | Design Principles (หลักการออกแบบ) | `CRITICAL` | `design-` |
-| 2 | Architecture (สถาปัตยกรรม) | `HIGH` | `design-` |
-| 3 | System Design (การออกแบบระบบ) | `HIGH` | `design-` |
-| 4 | API Design (การออกแบบ API) | `HIGH` | `design-` |
-| 5 | Data Design (การออกแบบข้อมูล) | `HIGH` | `design-` |
-| 6 | Performance (ประสิทธิภาพ) | `HIGH` | `design-` |
-| 7 | Security (ความปลอดภัย) | `CRITICAL` | `design-` |
-| 8 | Maintainability (การบำรุงรักษา) | `HIGH` | `design-` |
-| 9 | DX (Developer Experience) | `MEDIUM` | `design-` |
 
-## Quick Reference (อ้างอิงด่วน)
+## Overview
 
-### 1. Design Principles (`CRITICAL`)
-- `design-principles` - SOLID, DRY, KISS, YAGNI
+### Rules
 
-### 2. Architecture (`HIGH`)
-- `architecture-patterns` - Monolith, Modular, Microservices
+แต่ละไฟล์ Rule ประกอบด้วย:
+- เหตุผล (Why)
+- ตัวอย่างที่ไม่ดี (Anti-patterns)
+- ตัวอย่างที่ดี (Best practices)
+- กฎที่ต้องปฏิบัติตาม (Rules)
+- ผลกระทบถ้าไม่ทำตาม (Impact)
+- เอกสารอ้างอิง (References)
 
-### 3. Design Patterns (`HIGH`)
-- `design-patterns` - Factory, Strategy, Observer
+### Knowledge
 
-### 4. System Design (`HIGH`)
-- `system-design` - Scalability, Reliability
+แต่ละไฟล์ Knowledge ประกอบด้วย:
+- Overview: ภาพรวมของ topic
+- Key Concepts: concepts สำคัญที่ต้องรู้
+- Examples: ตัวอย่างการใช้งาน
+- Best Practices: best practices ที่ควรทำตาม
+- References: ลิงก์ไปยังแหล่งข้อมูลต้นฉบับ
 
-### 5. API Design (`HIGH`)
-- `api-design` - REST, GraphQL, RPC
+## How to Use
 
-### 6. Data Design (`HIGH`)
-- `data-design` - Schema, Index, Consistency
+แต่ละไฟล์ Rule อธิบายถึง:
+- เหตุผลที่ต้องทำตามกฎ
+- ตัวอย่างที่ไม่ดีและดี
+- กฎที่ต้องปฏิบัติตาม
+- ผลกระทบถ้าไม่ทำตาม
+- เอกสารอ้างอิง
 
-### 7. Performance (`HIGH`)
-- `performance` - Caching, Profiling
+แต่ละไฟล์ Knowledge อธิบายถึง:
+- ภาพรวมของ topic
+- Concepts สำคัญที่ต้องรู้
+- ตัวอย่างการใช้งาน
+- Best practices ที่ควรทำตาม
+- เอกสารอ้างอิง
 
-### 8. Security (`CRITICAL`)
-- `security` - Auth, Encryption, Threat modeling
+## References
 
-### 9. Maintainability (`HIGH`)
-- `maintainability` - Modularity, Refactoring
-
-### 10. DX (`MEDIUM`)
-- `developer-experience` - Tooling, CLI, Docs
-
-## How to Use (วิธีใช้)
-
-แต่ละ rule ถูก detail ในไฟล์ markdown แยกต่างกันภายใน `./rules/` directory ไฟล์เหล่านี้ให้ rationale, bad practices, good practices, และ references สำหรับแต่ละ rule
-
-- [`./rules/design-principles.md`](./rules/design-principles.md)
-- [`./rules/architecture-patterns.md`](./rules/architecture-patterns.md)
-- [`./rules/design-patterns.md`](./rules/design-patterns.md)
-- [`./rules/system-design.md`](./rules/system-design.md)
-- [`./rules/api-design.md`](./rules/api-design.md)
-- [`./rules/data-design.md`](./rules/data-design.md)
-- [`./rules/performance.md`](./rules/performance.md)
-- [`./rules/security.md`](./rules/security.md)
-- [`./rules/maintainability.md`](./rules/maintainability.md)
-- [`./rules/developer-experience.md`](./rules/developer-experience.md)
+- [Software Design Principles](https://example.com)

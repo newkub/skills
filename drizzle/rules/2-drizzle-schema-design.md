@@ -219,3 +219,55 @@ export const optimizedTable = pgTable('optimized_table', {
 - **Using string mode for timestamps**: Unnecessary performance hit
 - **Not leveraging prepared statements**: Missed optimization opportunities
 - **Identity columns vs serial**: Use identity columns (2025 standard)
+
+## Advanced Schema Features
+
+### Row-Level Security (RLS)
+```typescript
+import { pgTable, pgPolicy, sql } from 'drizzle-orm/pg-core';
+
+export const posts = pgTable('posts', {
+  id: integer('id').primaryKey().generatedAlwaysAsIdentity(),
+  title: text('title').notNull(),
+  userId: integer('user_id').notNull(),
+}, (table) => [
+  pgPolicy('posts_select_policy', {
+    as: 'permissive',
+    for: 'select',
+    using: sql`user_id = auth.uid()`,
+  }),
+]);
+```
+
+### Generated Columns for Computed Values
+```typescript
+const articles = pgTable('articles', {
+  id: integer('id').primaryKey().generatedAlwaysAsIdentity(),
+  title: text('title').notNull(),
+  content: text('content'),
+  searchVector: tsVector('search_vector').generatedAlwaysAs(
+    (): SQL => sql`to_tsvector('english', ${articles.title} || ' ' || ${articles.content})`
+  ),
+});
+```
+
+### Zod Integration for Validation
+```typescript
+import { createInsertSchema, createSelectSchema } from 'drizzle-zod';
+import { z } from 'zod';
+
+// Generate Zod schemas from Drizzle tables
+export const insertUserSchema = createInsertSchema(users, {
+  email: (schema) => schema.email('Invalid email format'),
+  name: (schema) => schema.min(2, 'Name must be at least 2 characters'),
+});
+
+export const selectUserSchema = createSelectSchema(users);
+
+// API route integration
+export async function createUser(data: unknown) {
+  const validated = insertUserSchema.parse(data);
+  const [user] = await db.insert(users).values(validated).returning();
+  return user;
+}
+```

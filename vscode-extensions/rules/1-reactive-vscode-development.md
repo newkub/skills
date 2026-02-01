@@ -110,3 +110,11 @@ export = defineExtension(() => {
 3. **Import only what you need** for tree-shaking
 4. **Use reactive patterns** for state management
 5. **Keep configuration reactive** with `defineConfig`
+
+## Verification
+
+1. ตรวจสอบว่าติดตั้ง reactive-vscode ด้วย `npm install reactive-vscode`
+2. ทดสอบ composables ทำงานได้
+3. ตรวจสอบว่าไม่มี manual subscriptions
+4. ทดสอบด้วย `npm run test`
+5. ตรวจสอบ bundle size ด้วย `npm run build`

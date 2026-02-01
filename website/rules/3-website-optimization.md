@@ -1,30 +1,34 @@
----
-name: # Web Optimization
-description: Best practices for optimizing web performance and user experience
----
+## Website Optimization
 
-## Overview
+### Description
+ปรับปรุง performance และ SEO ให้ website โหลดเร็วและค้นหาง่าย
 
-This rule covers fundamental web optimization principles to ensure fast loading times and efficient resource usage.
+### Examples
+```html
+<!-- ใช้ lazy loading -->
+<img src="image.jpg" loading="lazy" alt="Description">
 
-## Bad Practices
+<!-- ใช้ meta tags -->
+<meta name="description" content="Website description">
+<meta property="og:title" content="Page Title">
 
-- Not compressing images and assets
-- Loading unnecessary JavaScript and CSS
-- Not using CDN for static assets
-- Not implementing caching strategies
-- Not minimizing bundle sizes
+<!-- ใช้ semantic HTML -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+    </ul>
+  </nav>
+</header>
+```
 
-## Good Practices
+### Anti-patterns
+❌ ไม่ optimize images และ assets
+❌ ไม่ใช้ semantic HTML
+❌ ไม่มี meta tags สำหรับ SEO
+❌ ไม่คำนึงถึง mobile performance
 
-- Compress images using modern formats (WebP, AVIF)
-- Use code splitting and lazy loading
-- Implement CDN for static assets
-- Use browser caching and server-side caching
-- Minify and compress JavaScript, CSS, and HTML
-- Use tree shaking to remove unused code
-
-## References
-
-- [Web.dev Performance](https://web.dev/performance/)
-- [MDN Web Performance](https://developer.mozilla.org/en-US/docs/Web/Performance)
+## Verification
+1. ตรวจสอบ performance score ด้วย Lighthouse
+2. ทดสอบ SEO ด้วย Lighthouse SEO audit
+3. ตรวจสอบ loading speed บน mobile devices

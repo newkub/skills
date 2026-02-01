@@ -57,6 +57,7 @@ Signals เป็น reactive state management:
 - `use_signal` สำหรับ local state
 - `ReadSignal` สำหรับ reading state
 - `WriteSignal` สำหรับ writing state
+- Automatic batching สำหรับ performance
 
 ```rust
 let mut count = use_signal(|| 0);
@@ -64,7 +65,23 @@ count.set(10);
 let value = count.read();
 ```
 
-### 5. Hooks
+### 5. Stores
+
+Stores เป็น primitive ใหม่สำหรับ nested reactive state:
+- ใช้ `#[derive(Store)]` macro
+- Zoom เข้าไปยังส่วนเฉพาะของ state
+- Fine-grained reactivity สำหรับ nested structures
+
+```rust
+#[derive(Store)]
+struct Directory {
+    children: BTreeMap<String, Directory>,
+}
+
+let mut children = directory.children();
+```
+
+### 6. Hooks
 
 Hooks เป็น reusable logic:
 - เริ่มต้นด้วย `use_` prefix
@@ -96,9 +113,10 @@ let data = use_resource(|| async { fetch_data().await });
 ## Best Practices
 
 1. **Component Design**: แยก components ให้เล็กและมีหน้าที่ชัดเจน
-2. **State Management**: ใช้ signals สำหรับ reactive state
+2. **State Management**: ใช้ signals สำหรับ atomic state, stores สำหรับ nested state
 3. **Performance**: Memoize props และใช้ keys สำหรับ lists
 4. **Cross-Platform**: ใช้ conditional compilation สำหรับ platform-specific code
+5. **Hot-Patching**: ใช้ Subsecond สำหรับ rapid iteration
 
 ## References
 

@@ -1,55 +1,77 @@
-# Vue.js Development Best Practices (แนวปฏิบัติที่ดีที่สุดสำหรับการพัฒนา Vue.js)
+---
+name: vue
+description: Best practices for Vue.js development including security, performance, and developer experience
+goal: พัฒนา Vue.js ตาม best practices
+outcome: Vue.js applications มีคุณภาพและประสิทธิภาพ
+---
 
-## When to Apply (เมื่อใช้)
+# Vue.js Development
 
-Skill นี้ให้ rules และ best practices ที่ครอบคลุมสำหรับการพัฒนา Vue.js applications ที่ robust, maintainable, และ high-performance ใช้ guidelines เหล่านี้เมื่อ:
+## When to Apply
 
-- BUILD new Vue applications จากศูนย์
-- REFACTOR existing components เพื่อปรับปรุง quality และ consistency
-- ENSURE application security และ accessibility standards
-- OPTIMIZE application performance และ reactivity
+ใช้ Skill นี้เมื่อพัฒนา Vue.js applications
 
-## Rule Categories by Priority (หมวดหมู่ Rules ตามลำดับความสำคัญ)
+- เมื่อสร้าง Vue applications ใหม่
+- เมื่อ refactor existing components
+- เมื่อ ensure application security และ accessibility
+- เมื่อ optimize application performance
 
-| Priority | Category | Impact | Prefix |
+## Rules
+
+| Priority | Impact | Reference | Name | Description | Prefix | Condition |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | `CRITICAL` | [vue-security.md](./rules/vue-security.md) | Security | Guidelines สำหรับการปกป้อง Vue applications จาก vulnerabilities | `vue-` | เมื่อ ensure security |
+| 2 | `HIGH` | [vue-performance.md](./rules/vue-performance.md) | Performance | Best practices สำหรับการสร้าง high-performance Vue components | `vue-` | เมื่อ optimize performance |
+| 2 | `HIGH` | [vue-optimzation.md](./rules/vue-optimzation.md) | Optimization | Techniques สำหรับ optimizing Vue application performance | `vue-` | เมื่อ optimize |
+| 2 | `HIGH` | [vue-reactivity.md](./rules/vue-reactivity.md) | Reactivity | การเข้าใจและใช้ reactivity system ของ Vue | `vue-` | เมื่อใช้ reactivity |
+| 2 | `HIGH` | [vue-composables.md](./rules/vue-composables.md) | Composables | การสร้างและใช้ composables สำหรับ reusable logic | `vue-` | เมื่อสร้าง composables |
+| 2 | `HIGH` | [vue-reuseables.md](./rules/vue-reuseables.md) | Reusables | Patterns สำหรับการสร้าง reusable components และ utilities | `vue-` | เมื่อสร้าง reusable code |
+| 4 | `MEDIUM` | [vue-dx.md](./rules/vue-dx.md) | DX | Practices สำหรับการปรับปรุง developer experience | `vue-` | เมื่อ improve DX |
+| 4 | `MEDIUM` | [vue-styles.md](./rules/vue-styles.md) | Styles | Guidelines สำหรับการจัดการ component styling อย่าง scalable | `vue-` | เมื่อจัดการ styles |
+| 5 | `MEDIUM` | [vue-accessibility.md](./rules/vue-accessibility.md) | Accessibility | การรับรองว่า Vue applications ของคุณเข้าถึงได้สำหรับทุก users | `vue-` | เมื่อ ensure accessibility |
+
+## Knowledge
+
+| Reference | Name | Description | Prefix |
 | :--- | :--- | :--- | :--- |
-| 1 | Security (ความปลอดภัย) | `CRITICAL` | `vue-` |
-| 2 | Performance & Optimization (ประสิทธิภาพและการปรับแต่ง) | `HIGH` | `vue-` |
-| 3 | Core Concepts & Reusability (แนวคิดหลักและการใช้ซ้ำ) | `HIGH` | `vue-` |
-| 4 | Developer Experience (DX) (ประสบการณ์นักพัฒนา) | `MEDIUM` | `vue-` |
-| 5 | Accessibility (การเข้าถึง) | `MEDIUM` | `vue-` |
 
-## Quick Reference (อ้างอิงด่วน)
+## Overview
 
-### 1. Security (`CRITICAL`)
-- `vue-security` - Guidelines สำหรับการปกป้อง Vue applications จาก vulnerabilities ทั่วไป
+### Rules
 
-### 2. Performance & Optimization (`HIGH`)
-- `vue-performance` - Best practices สำหรับการสร้าง high-performance Vue components
-- `vue-optimzation` - Techniques สำหรับ optimizing Vue application performance
+แต่ละไฟล์ Rule ประกอบด้วย:
+- เหตุผล (Why)
+- ตัวอย่างที่ไม่ดี (Anti-patterns)
+- ตัวอย่างที่ดี (Best practices)
+- กฎที่ต้องปฏิบัติตาม (Rules)
+- ผลกระทบถ้าไม่ทำตาม (Impact)
+- เอกสารอ้างอิง (References)
 
-### 3. Core Concepts & Reusability (`HIGH`)
-- `vue-reactivity` - การเข้าใจและใช้ reactivity system ของ Vue อย่างมีประสิทธิภาพ
-- `vue-composables` - การสร้างและใช้ composables สำหรับ reusable logic
-- `vue-reuseables` - Patterns สำหรับการสร้าง reusable components และ utilities
+### Knowledge
 
-### 4. Developer Experience (DX) (`MEDIUM`)
-- `vue-dx` - Practices สำหรับการปรับปรุง developer experience
-- `vue-styles` - Guidelines สำหรับการจัดการ component styling อย่าง scalable
+แต่ละไฟล์ Knowledge ประกอบด้วย:
+- Overview: ภาพรวมของ topic
+- Key Concepts: concepts สำคัญที่ต้องรู้
+- Examples: ตัวอย่างการใช้งาน
+- Best Practices: best practices ที่ควรทำตาม
+- References: ลิงก์ไปยังแหล่งข้อมูลต้นฉบับ
 
-### 5. Accessibility (`MEDIUM`)
-- `vue-accessibility` - การรับรองว่า Vue applications ของคุณเข้าถึงได้สำหรับทุก users
+## How to Use
 
-## How to Use (วิธีใช้)
+แต่ละไฟล์ Rule อธิบายถึง:
+- เหตุผลที่ต้องทำตามกฎ
+- ตัวอย่างที่ไม่ดีและดี
+- กฎที่ต้องปฏิบัติตาม
+- ผลกระทบถ้าไม่ทำตาม
+- เอกสารอ้างอิง
 
-แต่ละ rule ถูก detail ในไฟล์ markdown แยกต่างกันภายใน `./rules/` directory ไฟล์เหล่านี้ให้ rationale, bad practices, good practices, และ references สำหรับแต่ละ rule
+แต่ละไฟล์ Knowledge อธิบายถึง:
+- ภาพรวมของ topic
+- Concepts สำคัญที่ต้องรู้
+- ตัวอย่างการใช้งาน
+- Best practices ที่ควรทำตาม
+- เอกสารอ้างอิง
 
-- [`./rules/vue-accessibility.md`](./rules/vue-accessibility.md)
-- [`./rules/vue-composables.md`](./rules/vue-composables.md)
-- [`./rules/vue-dx.md`](./rules/vue-dx.md)
-- [`./rules/vue-optimzation.md`](./rules/vue-optimzation.md)
-- [`./rules/vue-performance.md`](./rules/vue-performance.md)
-- [`./rules/vue-reactivity.md`](./rules/vue-reactivity.md)
-- [`./rules/vue-reuseables.md`](./rules/vue-reuseables.md)
-- [`./rules/vue-security.md`](./rules/vue-security.md)
-- [`./rules/vue-styles.md`](./rules/vue-styles.md)
+## References
+
+- [Vue.js Documentation](https://vuejs.org/)

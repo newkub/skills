@@ -62,3 +62,11 @@ npm run build
 3. **Lazy load heavy features** when possible
 4. **Monitor bundle size** during development
 5. **Use bundle analyzer** to identify large imports
+
+## Verification
+
+1. ตรวจสอบ bundle size ด้วย `npm run build`
+2. ตรวจสอบว่า import เฉพาะที่ใช้
+3. ทดสอบด้วย `npm run test`
+4. ตรวจสอบ dist/extension.js size < 50KB
+5. ใช้ bundle analyzer เพื่อตรวจสอบ

@@ -16,6 +16,21 @@ const pool = new Pool({
 export const db = drizzle(pool, { schema });
 ```
 
+### Connection Pool Best Practices
+- **Max connections**: Set based on application concurrency (typically 20-50)
+- **Idle timeout**: Close unused connections to free resources
+- **Connection timeout**: Fail fast on connection issues
+- **Statement timeout**: Prevent runaway queries
+```typescript
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  max: 20,
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000,
+  statement_timeout: 10000, // 10 second query timeout
+});
+```
+
 ### SQLite Configuration
 ```typescript
 import Database from 'better-sqlite3';
@@ -44,6 +59,11 @@ const getUserByEmail = db
 const user = await getUserByEmail.execute({ email: 'john@example.com' });
 ```
 
+**Benefits:**
+- 10-15% faster for repeated queries
+- Reduced parsing overhead
+- Better query plan caching
+
 ### Selective Field Loading
 ```typescript
 // Load only needed columns
@@ -65,6 +85,11 @@ const posts = await db.query.posts.findMany({
 });
 ```
 
+**Benefits:**
+- Reduces data transfer
+- Faster query execution
+- Lower memory usage
+
 ### Batch Operations
 ```typescript
 // Batch inserts
@@ -81,6 +106,11 @@ await db
   .set({ status: 'active' })
   .where(inArray(usersTable.id, userIds));
 ```
+
+**Benefits:**
+- Single round-trip to database
+- Reduced transaction overhead
+- Better performance for bulk operations
 
 ## Indexing Strategies
 
@@ -118,6 +148,24 @@ index('metadata_idx').using('gin', table.metadata),
 - **Missing indexes**: Slows down reads
 - **Composite index order**: Most selective first
 - **Partial indexes**: 275x performance improvement possible
+- **Covering indexes**: Avoid table lookups for frequently accessed columns
+
+### Index Selection Guidelines
+```typescript
+// Use partial indexes for filtered queries
+index('active_users_idx')
+  .on(table.email)
+  .where(eq(table.isActive, true)),
+
+// Use covering indexes to avoid table lookups
+index('posts_covering_idx')
+  .on(table.authorId)
+  .include(table.title, table.createdAt),
+
+// Use GIN indexes for JSONB and array searches
+index('metadata_idx').using('gin', table.metadata),
+index('tags_idx').using('gin', table.tags),
+```
 
 ## Query Performance Analysis
 
@@ -284,11 +332,11 @@ async function trackQuery<T>(name: string, query: Promise<T>): Promise<T> {
   try {
     const result = await query;
     const duration = Date.now() - start;
-    
+
     if (duration > 100) {
       console.warn(`Slow query [${name}]: ${duration}ms`);
     }
-    
+
     return result;
   } catch (error) {
     const duration = Date.now() - start;
@@ -298,9 +346,133 @@ async function trackQuery<T>(name: string, query: Promise<T>): Promise<T> {
 }
 
 // Usage
-const users = await trackQuery('getActiveUsers', 
+const users = await trackQuery('getActiveUsers',
   db.select().from(usersTable).where(eq(usersTable.isActive, true))
 );
+```
+
+## Testing Strategies
+
+### Test Data Generation with @praha/drizzle-factory
+```typescript
+import { defineFactory } from '@praha/drizzle-factory';
+import { users } from './schema';
+
+// Define a factory for test data
+const userFactory = defineFactory(users, {
+  defaults: {
+    name: 'Test User',
+    email: 'test@example.com',
+  },
+});
+
+// Create test data
+const user = await userFactory.create();
+
+// Create with overrides
+const adminUser = await userFactory.create({
+  name: 'Admin',
+  role: 'admin',
+});
+
+// Create multiple records
+const usersList = await userFactory.createMany(5);
+```
+
+### Testing with Testcontainers
+```typescript
+import { PostgreSqlContainer } from '@testcontainers/postgresql';
+import { drizzle } from 'drizzle-orm/node-postgres';
+import { migrate } from 'drizzle-orm/node-postgres/migrator';
+
+let testDb: ReturnType<typeof drizzle>;
+
+beforeAll(async () => {
+  // Start PostgreSQL container
+  const container = await new PostgreSqlContainer().start();
+
+  // Create database connection
+  const client = new Pool({
+    connectionString: container.getConnectionUri(),
+  });
+
+  testDb = drizzle(client);
+
+  // Run migrations
+  await migrate(testDb, { migrationsFolder: './drizzle' });
+});
+
+afterAll(async () => {
+  await container.stop();
+});
+```
+
+### Unit Testing with Mocks
+```typescript
+import { vi } from 'vitest';
+import { db } from './db';
+
+// Mock database queries
+vi.mock('./db', () => ({
+  db: {
+    select: vi.fn().mockReturnValue({
+      from: vi.fn().mockReturnValue({
+        where: vi.fn().mockResolvedValue([
+          { id: 1, name: 'Test User' },
+        ]),
+      }),
+    }),
+  },
+}));
+```
+
+## Framework Integration
+
+### Nuxt Integration
+```typescript
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: ['@nuxtjs/drizzle-kit'],
+  drizzle: {
+    driver: 'pg',
+    schema: './server/db/schema',
+    dbCredentials: {
+      url: process.env.DATABASE_URL,
+    },
+  },
+});
+
+// server/db/index.ts
+import { drizzle } from 'drizzle-orm/node-postgres';
+import { Pool } from 'pg';
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+});
+
+export const db = drizzle(pool);
+```
+
+### Next.js Integration
+```typescript
+// lib/db.ts
+import { drizzle } from 'drizzle-orm/node-postgres';
+import { Pool } from 'pg';
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+});
+
+export const db = drizzle(pool);
+
+// app/api/users/route.ts
+import { db } from '@/lib/db';
+import { users } from '@/db/schema';
+
+export async function GET() {
+  const allUsers = await db.select().from(users);
+  return Response.json(allUsers);
+}
 ```
 
 ## Best Practices Summary
@@ -308,26 +480,45 @@ const users = await trackQuery('getActiveUsers',
 ### Schema Design
 - Use identity columns (2025 standard)
 - Index foreign keys
-- Use date mode for timestamps
+- Use date mode for timestamps (10-15% faster than string mode)
 - Avoid over-indexing
+- Use partial indexes for filtered queries
+- Implement covering indexes for frequently accessed columns
 
 ### Query Writing
-- Use prepared statements
+- Use prepared statements for repeated queries (10-15% faster)
 - Select only needed columns
 - Use relational queries to avoid N+1
 - Implement pagination
+- Use batch operations for bulk inserts/updates
 
 ### Performance
-- Optimize connection pools
+- Optimize connection pools (max: 20-50, idle timeout: 30s)
 - Cache frequent queries
-- Monitor slow queries
+- Monitor slow queries (>100ms)
 - Use batch operations
+- Set statement timeouts to prevent runaway queries
 
 ### Production
 - Test migrations in staging
 - Use version-controlled migrations
 - Implement monitoring
 - Plan rollback strategies
+- Use connection pooling with proper timeouts
+
+### Development Workflow
+- Use `drizzle-kit push` for rapid prototyping
+- Use `drizzle-kit generate` for production migrations
+- Review generated SQL before running
+- Keep migration files in version control
+- Use descriptive migration names
+
+### Team Collaboration
+- Agree on migration strategy upfront
+- Use branch-specific migrations for feature branches
+- Resolve merge conflicts in migration files
+- Document breaking changes
+- Use consistent naming conventions
 
 ## Common Performance Pitfalls
 

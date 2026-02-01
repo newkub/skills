@@ -1,11 +1,13 @@
 # Browser Extension Messaging
 
-Messaging ใช้สำหรับสื่อสารระหว่าง components ของ extension
+## Description
+การสื่อสารระหว่าง components ของ browser extension เพื่อแลกเปลี่ยนข้อมูลและคำสั่งระหว่าง content scripts, background scripts, popup และส่วนอื่นๆ
 
-## One-time Messages
+## Examples
 
-### Send from Content Script to Background
+### One-time Messages
 
+#### Send from Content Script to Background
 ```typescript
 // Content script
 const response = await browser.runtime.sendMessage({ type: 'greet', name: 'World' });
@@ -19,8 +21,7 @@ browser.runtime.onMessage.addListener((message, sender) => {
 });
 ```
 
-### Send from Background to Content Script
-
+#### Send from Background to Content Script
 ```typescript
 // Background script
 const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
@@ -35,8 +36,7 @@ browser.runtime.onMessage.addListener((message, sender) => {
 });
 ```
 
-### Send from Popup to Background
-
+#### Send from Popup to Background
 ```typescript
 // Popup
 const response = await browser.runtime.sendMessage({ type: 'getData' });
@@ -50,10 +50,9 @@ browser.runtime.onMessage.addListener((message, sender) => {
 });
 ```
 
-## Long-lived Connections
+### Long-lived Connections
 
-### Create Connection
-
+#### Create Connection
 ```typescript
 // Content script
 const port = browser.runtime.connect({ name: 'my-connection' });
@@ -73,8 +72,7 @@ browser.runtime.onConnect.addListener((port) => {
 });
 ```
 
-### Disconnect
-
+#### Disconnect
 ```typescript
 port.onDisconnect.addListener(() => {
   console.log('Connection closed');
@@ -84,27 +82,42 @@ port.onDisconnect.addListener(() => {
 port.disconnect();
 ```
 
-## Send to Specific Tab
-
+### Send to Specific Tab
 ```typescript
 // Background script
 const tabId = 123;
 browser.tabs.sendMessage(tabId, { type: 'update' });
 ```
 
-## Send to Specific Extension
-
+### Send to Specific Extension
 ```typescript
 // Send to other extension
 const extensionId = 'abcdefghijklmnop';
 browser.runtime.sendMessage(extensionId, { type: 'message' });
 ```
 
-## Best Practices
+## Anti-patterns
 
-1. **ใช้ message type** สำหรับ routing
-2. **ใช้ long-lived connections** สำหรับ ongoing communication
-3. **Handle errors** อย่างเหมาะสม
-4. **Validate messages** ก่อน process
-5. **Use structured messages** สำหรับ complex data
-6. **Disconnect connections** เมื่อไม่ใช้แล้ว
+❌ **ไม่ใช้ message type**: ส่งข้อมูลโดยไม่มีโครงสร้างทำให้จัดการยาก
+✅ **ใช้ message type**: สร้าง message object พร้อม `type` สำหรับ routing
+
+❌ **ลืม handle errors**: ไม่จัดการกรณีที่ messaging ล้มเหลว
+✅ **Wrap with try-catch**: จัดการ errors จาก messaging
+
+❌ **ส่งข้อมูลใหญ่เกินไป**: ส่ง large objects ผ่าน one-time messages
+✅ **ใช้ long-lived connections**: สำหรับข้อมูลขนาดใหญ่หรือการสื่อสารต่อเนื่อง
+
+❌ **ไม่ validate messages**: ไม่ตรวจสอบข้อมูลก่อน process
+✅ **Validate input**: ตรวจสอบ message structure ก่อนดำเนินการ
+
+❌ **ลืม disconnect**: เปิด connections ค้างไว้ทำให้ memory leak
+✅ **Cleanup properly**: ปิด connections เมื่อไม่ใช้แล้ว
+
+## Verification
+
+1. ตรวจสอบว่า messaging ทำงานระหว่าง content script และ background
+2. ทดสอบ one-time messages โดยส่งข้อมูลและตรวจสอบ response
+3. ตรวจสอบ long-lived connections ว่าเชื่อมต่อและส่งข้อมูลได้
+4. ทดสอบ error handling โดยจำลองสถานการณ์ที่ messaging ล้มเหลว
+5. ยืนยันว่า connections ถูกปิดอย่างถูกต้องเมื่อไม่ใช้งาน
+6. ตรวจสอบว่า message validation ทำงานได้

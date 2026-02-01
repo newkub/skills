@@ -1,28 +1,32 @@
-# Testing Skill
+---
+name: testing
+description: Best practices for writing and maintaining tests
+goal: Write tests following best practices
+outcome: High quality and maintainable tests
+---
 
-## When to Apply
+# Testing
 
-- When writing new tests.
-- When refactoring existing tests.
+## When to Use
 
-## Rule Categories by Priority
+ใช้เมื่อเขียน tests หรือ refactor tests ที่มีอยู่
 
-| Priority | Category | Impact | Prefix |
-| :--- | :--- | :--- | :--- |
-| 1 | Naming | `HIGH` | `name-` |
-| 2 | Assertions | `HIGH` | `assert-` |
+## Quick Start
 
-## Quick Reference
+1. ติดตั้ง test framework (เช่น Vitest, Playwright)
+2. ตั้งค่า configuration สำหรับ project
+3. เขียน tests ตาม AAA pattern (Arrange, Act, Assert)
+4. รัน tests และตรวจสอบ coverage
+5. รวม tests ใน CI/CD pipeline
 
-### 1. Naming (`HIGH`)
+## Rules
 
--   `name-test-descriptions` - Write clear and descriptive test names.
+- [Test Setup](rules/1-setup.md)
+- [Test Configuration](rules/2-configuration.md)
+- [Test Usage](rules/3-usage.md)
 
-### 2. Assertions (`HIGH`)
+## Knowledge
 
--   `assert-meaningful-messages` - Use meaningful assertion messages.
-
-## How to Use
-
--   Each rule file contains a rationale, bad practice, and good practice examples.
--   Example Link: [`./rules/name-test-descriptions.md`](./rules/name-test-descriptions.md)
+- [Core Concepts](knowledge/core-concept.md)
+- [Testing Strategies](knowledge/testing-strategies.md)
+- [Best Practices](knowledge/best-practices.md)

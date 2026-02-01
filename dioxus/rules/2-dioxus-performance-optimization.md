@@ -20,6 +20,7 @@ Dioxus ใช้ Virtual DOM และ WebAssembly ซึ่งทำให้�
 - **SHOULD** ใช้ `#[component]` macro สำหรับ automatic props memoization
 - **MUST** ใช้ `Clone` และ `PartialEq` สำหรับ props ที่ต้อง memoize
 - **AVOID** การสร้าง closures ใหม่ในแต่ละ render
+- **BENEFIT**: Dioxus 0.7 automatically batches updates สำหรับ performance
 
 ```rust
 // ✅ Good - Memoized props
@@ -224,5 +225,6 @@ fn UnoptimizedList() -> Element {
 ## References
 
 - [Dioxus Performance Guide](https://dioxuslabs.com/learn/0.7/guides/performance)
+- [Dioxus Signals Documentation](https://dioxuslabs.com/learn/0.7/essentials/basics/signals)
 - [WebAssembly Optimization](https://webassembly.org/docs/future-features/)
 - [Dioxus Documentation](https://docs.rs/dioxus/)

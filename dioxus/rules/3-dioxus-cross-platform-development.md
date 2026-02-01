@@ -151,6 +151,7 @@ fn App() -> Element {
 - **SHOULD** ใช้ `dx serve --platform <platform>` สำหรับ testing
 - **MUST** ใช้ `dx bundle` สำหรับ production builds
 - **SHOULD** configure platform-specific settings ใน `dx.toml`
+- **FEATURE**: Use `dx serve` และกด `d` เพื่อ attach VSCode debugger
 
 ```bash
 # ✅ Good - Platform-specific serving
@@ -229,7 +230,8 @@ fn PlatformSpecificApp() -> Element {
 
 ## References
 
-- [Dioxus Web Guide](https://dioxuslabs.com/learn/0.6/guides/web/)
-- [Dioxus Desktop Guide](https://dioxuslabs.com/learn/0.6/guides/desktop/)
-- [Dioxus Mobile Guide](https://dioxuslabs.com/learn/0.6/guides/mobile/)
-- [Dioxus Fullstack Guide](https://dioxuslabs.com/learn/0.6/guides/fullstack/)
+- [Dioxus Web Guide](https://dioxuslabs.com/learn/0.7/guides/web/)
+- [Dioxus Desktop Guide](https://dioxuslabs.com/learn/0.7/guides/desktop/)
+- [Dioxus Mobile Guide](https://dioxuslabs.com/learn/0.7/guides/mobile/)
+- [Dioxus Fullstack Guide](https://dioxuslabs.com/learn/0.7/guides/fullstack/)
+- [Dioxus 0.7 Release](https://github.com/DioxusLabs/dioxus/releases/tag/v0.7.0)

@@ -1,6 +1,8 @@
 ---
-name: Git Contributing Workflows
-description: ความรู้เกี่ยวกับ Contributing to a Project ใน Git รวมถึง Private Small Team, Private Managed Team, Forked Public Project และ Public Project over Email
+name: git-contributing-workflows
+description: ความรู้เกี่ยวกับ Contributing to a Project ใน Git
+goal: เข้าใจและเลือก Contributing Workflow ที่เหมาะสมกับ project
+outcome: สามารถใช้ Contributing Workflow ที่เหมาะสมกับประเภท project ได้
 ---
 
 # Git Contributing Workflows
@@ -11,18 +13,18 @@ Contributing to a Project ใน Git มีหลายแนวทางขึ�
 
 ## Private Small Team
 
-### แนวคิด
+### Concept
 
-Private Small Team เป็น workflow ที่ง่ายที่สุดสำหรับทีมขนาดเล็กที่มี 1-2 คนและทุกคนมี push access
+Private Small Team เป็น workflow ที่ง่ายที่สุดสำหรับทีมขนาดเล็ก 1-2 คน ทุกคนมี push access
 
-### วิธีการทำงาน
+### Workflow Steps
 
 1. ทุกคน clone จาก shared repository
 2. ทำงานและ commit ใน local
 3. Push changes กลับไป shared repository
 4. ถ้ามี conflicts ต้อง fetch และ merge ก่อน
 
-### ขั้นตอนการทำงาน
+### Example
 
 ```bash
 # คนแรก (John)
@@ -51,48 +53,48 @@ $ git merge origin/master
 $ git push origin master
 ```
 
-### ข้อดี
+### Advantages
 
 - ง่ายต่อการเริ่มต้น
 - คล้ายกับ centralized VCSs
 - ได้รับประโยชน์จาก Git features (offline commits, branching, merging)
 
-### ข้อเสีย
+### Disadvantages
 
 - ต้อง merge ก่อน push ถ้ามีคนอื่น push ก่อน
 - ไม่เหมาะกับทีมขนาดใหญ่
 
 ## Private Managed Team
 
-### แนวคิด
+### Concept
 
 Private Managed Team เป็น workflow ที่มี maintainer หรือ lead developer ที่รับผิดชอบการ review และ merge changes
 
-### วิธีการทำงาน
+### Workflow Steps
 
 1. Contributors สร้าง branches สำหรับ features
 2. Contributors ส่ง pull requests หรือ patches
 3. Maintainer review changes
 4. Maintainer merge changes เข้า main branch
 
-### ข้อดี
+### Advantages
 
 - มีการ review ก่อน merge
 - ควบคุมคุณภาพ code ได้ดี
 - เหมาะกับทีมที่มี maintainer หลัก
 
-### ข้อเสีย
+### Disadvantages
 
 - ต้องมี maintainer ที่รับผิดชอบ
 - อาจช้ากว่าการ push โดยตรง
 
 ## Forked Public Project
 
-### แนวคิด
+### Concept
 
 Forked Public Project เป็น workflow ที่ใช้ใน open source projects บน GitHub, GitLab หรือ platforms อื่นๆ
 
-### วิธีการทำงาน
+### Workflow Steps
 
 1. Fork repository หลัก
 2. Clone forked repository มาที่ local
@@ -102,7 +104,7 @@ Forked Public Project เป็น workflow ที่ใช้ใน open source
 6. ส่ง pull request ไปที่ repository หลัก
 7. Maintainer review และ merge pull request
 
-### ขั้นตอน
+### Steps
 
 ```bash
 # Fork repository บน GitHub/GitLab
@@ -124,32 +126,32 @@ $ git push origin feature-name
 # ส่ง pull request ผ่าน web interface
 ```
 
-### ข้อดี
+### Advantages
 
 - ใช้ได้กับ open source projects
 - ง่ายต่อการส่ง contributions
 - Maintainer สามารถ review ได้
 - ใช้ features ของ GitHub/GitLab (code review, CI/CD)
 
-### ข้อเสีย
+### Disadvantages
 
 - ต้องมี account บน platform
 - ต้องเรียนรู้ workflow ของ platform
 
 ## Public Project over Email
 
-### แนวคิด
+### Concept
 
 Public Project over Email เป็น workflow ที่ใช้ email สำหรับส่ง patches โดยเฉพาะสำหรับ projects ที่ไม่มี public repository หรือใช้ email เป็นหลัก
 
-### วิธีการทำงาน
+### Workflow Steps
 
 1. Contributor สร้าง patches โดยใช้ `git format-patch`
 2. Contributor ส่ง patches ผ่าน email
 3. Maintainer รับ patches และ apply โดยใช้ `git am`
 4. Maintainer review และ merge changes
 
-### ขั้นตอน
+### Steps
 
 ```bash
 # Contributor สร้าง patches
@@ -162,13 +164,13 @@ $ git send-email --to maintainer@example.com /tmp/*.patch
 $ git am /tmp/0001-feature.patch
 ```
 
-### ข้อดี
+### Advantages
 
 - ใช้ได้กับทุก project
 - ไม่ต้องมี public repository
 - เหมาะกับ projects ที่ใช้ email เป็นหลัก
 
-### ข้อเสีย
+### Disadvantages
 
 - ต้องใช้ email
 - ไม่มี code review tools
@@ -198,7 +200,7 @@ $ git am /tmp/0001-feature.patch
 
 ## Best Practices
 
-### ทุก Workflow
+### All Workflows
 
 - ใช้ commit messages ที่ชัดเจนและเป็นมาตรฐาน
 - ทำงานบน branches ที่แยกจากกัน
@@ -210,7 +212,7 @@ $ git am /tmp/0001-feature.patch
 - ใช้ descriptive branch names
 - ส่ง pull requests ที่มี description ชัดเจน
 - ตอบการ review และแก้ไขตาม feedback
-- ลบ branches หลังจาก merge
+- ลบ branches หลัง merge
 
 ### Public Project over Email
 
@@ -222,3 +224,9 @@ $ git am /tmp/0001-feature.patch
 
 - [Distributed Git - Contributing to a Project](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project)
 - [Git Book](https://git-scm.com/book/en/v2)
+
+## Verification
+
+1. ตรวจสอบว่าเข้าใจ Contributing Workflows ทั้ง 4 แบบ
+2. ทดสอบเลือก workflow ที่เหมาะสมกับ project
+3. ตรวจสอบว่าสามารถใช้ workflow ที่เลือกได้อย่างถูกต้อง

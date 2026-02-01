@@ -24,6 +24,7 @@ description: กฎเกี่ยวกับโครงสร้างแล�
 - **USE** PascalCase สำหรับ component names
 - **MUST** ใช้ `#[component]` attribute สำหรับทุก component
 - **SHOULD** ตั้งชื่อ component ให้สื่อความหมายชัดเจน
+- **CAN** ใช้ `dioxus-primitives` components สำหรับ common UI elements
 
 ```rust
 // ✅ Good
@@ -110,7 +111,8 @@ fn App() -> Element {
 
 ### 4. State Management
 
-- **MUST** ใช้ `use_signal` สำหรับ local state
+- **MUST** ใช้ `use_signal` สำหรับ local state (atomic values)
+- **SHOULD** ใช้ `#[derive(Store)]` สำหรับ nested reactive state
 - **SHOULD** ใช้ `use_resource` สำหรับ async operations
 - **AVOID** การ mutate state โดยตรงใน render
 
@@ -258,4 +260,6 @@ fn TodoApp() -> Element {
 
 - [Dioxus Components Documentation](https://dioxuslabs.com/learn/0.7/essentials/ui/components)
 - [Dioxus Hooks Documentation](https://dioxuslabs.com/learn/0.7/essentials/basics/hooks)
+- [Dioxus Stores Documentation](https://dioxuslabs.com/learn/0.7/essentials/basics/stores)
+- [Dioxus Primitives](https://dioxuslabs.com/components)
 - [Dioxus Best Practices](https://docs.rs/dioxus/)
