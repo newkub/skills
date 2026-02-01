@@ -1,19 +1,32 @@
-# AGENTs Management Skill
+# Write Rules Skill
 
 ## When to Execute
 
 Use this workflow when you need to:
-- Create new skill documentation following strict standards
-- Review and improve existing skill quality
-- Ensure skills follow best practices and guidelines
-- Validate skill structure and compliance
-- Refactor skills into smaller, focused components
-- Create review reports for skill assessment
+- Create new workflow documentation following strict standards
+- Review and improve existing workflow quality
+- Ensure workflows follow best practices and guidelines
+- Validate workflow structure and compliance
+- Refactor workflows into smaller, focused components
+- Create review reports for workflow assessment
+- Create new skill documentation
 - Update existing skill structures
 - Standardize skill formats across the workspace
 - Ensure quality compliance with skill guidelines
 
 ## Quick Start
+
+Execute these steps to apply write rules:
+1. Read current workflow requirements and constraints
+2. Apply planning rules from `1-planning-requirements.md`
+3. Implement testing strategy from `2-testing-strategy.md`
+4. Follow writing guidelines from `3-writing-guidelines.md`
+5. Ensure robust workflow design from `4-robust-workflows.md`
+6. Validate quality assurance from `5-quality-assurance.md`
+7. Apply best practices from `6-best-practices.md`
+8. Use review workflow rules from `7-review-workflows.md` if needed
+9. Complete quality checklist from `8-quality-checklist.md`
+10. Generate reports using `9-reporting.md`
 
 Execute these steps to update skills:
 1. Read current AGENTs.md requirements
@@ -48,26 +61,15 @@ Execute these steps to update skills:
 - มี error handling guidance
 - ทดสอบความสมบูรณ์ก่อนส่งมอบ
 
-### 4. กฎเฉพาะสำหรับ Skills
-- ทุก skills folder ต้องมี prefix
-- ทุกครั้งที่แก้ไข skills ต้องทำตาม write-skills
-- ไม่อนุญาตให้มี folder ที่ไม่มี prefix
-- ต้องตรวจสอบความสอดคล้องของ prefix ก่อนสร้าง folder ใหม่
+## Write Rules Reference
 
-## ตารางสรุป Prefix ทั้งหมด
-
-| Prefix | ความหมาย | จำนวน | ตัวอย่าง |
-|--------|----------|--------|----------|
-| **arch-** | Architecture rules & configs | 10 | arch-utils, arch-components |
-| **config-** | Configuration files | 3 | config-package-json, config-nuxt-module |
-| **db-** | Database systems | 1 | db-postgres |
-| **framework-** | Frameworks | 6 | framework-next, framework-nuxt |
-| **guide-** | Learning guides | 4 | guide-vibe-coding, guide-learn |
-| **lang-** | Programming languages | 7 | lang-javascript, lang-rust |
-| **lib-** | Libraries | 11 | lib-react, lib-vue, lib-remotion |
-| **method-** | Methodologies & approaches | 8 | method-software-design, method-testing |
-| **platform-** | Specific platforms | 2 | platform-browser-extensions |
-| **sdk-** | Development kits | 3 | sdk-bun, sdk-node, sdk-rust |
-| **system-** | System-related tools | 2 | system-personal-tools, system-validation |
-| **tools-** | Development tools | 10 | tools-git, tools-turborepo |
-| **write-** | Writing/documentation | 2 | write-skills, write-workflows |
+For detailed workflow writing rules, see:
+- [Planning Requirements](rules/1-planning-requirements.md)
+- [Testing Strategy](rules/2-testing-strategy.md)
+- [Writing Guidelines](rules/3-writing-guidelines.md)
+- [Robust Workflows](rules/4-robust-workflows.md)
+- [Quality Assurance](rules/5-quality-assurance.md)
+- [Best Practices](rules/6-best-practices.md)
+- [Review Workflows](rules/7-review-workflows.md)
+- [Quality Checklist](rules/8-quality-checklist.md)
+- [Reporting](rules/9-reporting.md)

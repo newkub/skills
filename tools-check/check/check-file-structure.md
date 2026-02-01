@@ -1,0 +1,1 @@
+tokei --files --exclude .git
