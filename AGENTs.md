@@ -58,13 +58,13 @@ Execute these steps to update skills:
 
 | Prefix | ความหมาย | จำนวน | ตัวอย่าง |
 |--------|----------|--------|----------|
-| **arch-** | Architecture rules & configs | 10 | arch-utils, arch-components |
+| **arch-** | Architecture rules & configs | 7 | arch-utils, arch-components |
 | **config-** | Configuration files | 3 | config-package-json, config-nuxt-module |
 | **db-** | Database systems | 1 | db-postgres |
 | **framework-** | Frameworks | 6 | framework-next, framework-nuxt |
 | **guide-** | Learning guides | 4 | guide-vibe-coding, guide-learn |
 | **lang-** | Programming languages | 7 | lang-javascript, lang-rust |
-| **lib-** | Libraries | 11 | lib-react, lib-vue, lib-remotion |
+| **lib-** | Libraries | 14 | lib-react, lib-vue, lib-biome, lib-oxlint, lib-dprint |
 | **method-** | Methodologies & approaches | 8 | method-software-design, method-testing |
 | **platform-** | Specific platforms | 2 | platform-browser-extensions |
 | **sdk-** | Development kits | 3 | sdk-bun, sdk-node, sdk-rust |
