@@ -16,6 +16,7 @@
 | **Recovery** | Fallback types | `type WithFallback<T, F> = T | F` | Graceful degradation |
 
 ### Error Handling Patterns
+
 ```typescript
 // ✅ Result type pattern
 class Result<T, E = Error> {
@@ -51,22 +52,23 @@ async function fetchUser(id: number): Promise<Result<User>> {
 // ✅ Validation with detailed errors
 function validateUser(data: unknown): Result<User, ValidationError[]> {
   const errors: ValidationError[] = [];
-  
+
   if (!data || typeof data !== "object") {
     errors.push(new ValidationError("Data must be an object"));
     return Result.failure(errors);
   }
-  
+
   const user = data as Record<string, unknown>;
   if (typeof user.id !== "number") {
     errors.push(new ValidationError("id must be a number"));
   }
-  
+
   return errors.length > 0 ? Result.failure(errors) : Result.success(user as User);
 }
 ```
 
 ### Best Practices
+
 1. **Use Result types** สำหรับ operations ที่อาจ fail
 2. **Create custom error classes** สำหรับ domain-specific errors
 3. **Implement type guards** สำหรับ runtime error checking

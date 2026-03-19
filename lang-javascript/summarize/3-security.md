@@ -8,6 +8,7 @@ outcome: สามารถเขียน JavaScript code ที่ป้อง
 # Security Best Practices
 
 ## Overview
+
 Best practices สำหรับการเขียน JavaScript code ที่ปลอดภัย ป้องกัน common attacks และปกป้องข้อมูลผู้ใช้
 
 ## Best Practices Summary
@@ -28,6 +29,7 @@ Best practices สำหรับการเขียน JavaScript code ที
 ## Implementation Guidelines
 
 ### High Priority Practices
+
 1. **Validate all user inputs** - Never trust user input
 2. **Use HTTPS everywhere** - Encrypt all communications
 3. **Avoid dangerous functions** - Never use `eval()`, `setTimeout()` with strings
@@ -35,6 +37,7 @@ Best practices สำหรับการเขียน JavaScript code ที
 5. **Use secure headers** - Implement proper security headers
 
 ### Medium Priority Practices
+
 1. **Implement CSP** - Additional XSS protection
 2. **Use rate limiting** - Prevent abuse
 3. **Secure sensitive data** - Proper encryption
@@ -43,18 +46,21 @@ Best practices สำหรับการเขียน JavaScript code ที
 ### Security Checklist
 
 #### Input Validation
+
 - [ ] Validate all user inputs
 - [ ] Sanitize data before display
 - [ ] Use parameterized queries
 - [ ] Implement input length limits
 
 #### Data Protection
+
 - [ ] Use HTTPS everywhere
 - [ ] Encrypt sensitive data
 - [ ] Secure storage of secrets
 - [ ] Implement proper authentication
 
 #### Code Security
+
 - [ ] Avoid eval() and similar functions
 - [ ] Use secure headers
 - [ ] Implement CSP
@@ -73,15 +79,18 @@ Best practices สำหรับการเขียน JavaScript code ที
 ## Security Tools and Libraries
 
 ### Input Sanitization
+
 - **DOMPurify** - XSS protection
 - **validator.js** - Input validation
 - **joi** - Schema validation
 
 ### Security Headers
+
 - **Helmet.js** - Security headers middleware
 - **cors** - CORS protection
 
 ### Authentication
+
 - **bcrypt** - Password hashing
 - **jsonwebtoken** - JWT implementation
 - **passport.js** - Authentication middleware
@@ -89,6 +98,7 @@ Best practices สำหรับการเขียน JavaScript code ที
 ## Examples
 
 ### Input Validation and Sanitization
+
 ```javascript
 // Good: Input validation and sanitization
 import DOMPurify from 'dompurify';
@@ -99,15 +109,15 @@ function sanitizeUserInput(input) {
   if (typeof input !== 'string') {
     throw new Error('Invalid input type');
   }
-  
+
   // Remove potentially dangerous characters
   const sanitized = DOMPurify.sanitize(input);
-  
+
   // Additional validation
   if (!validator.isLength(sanitized, { min: 1, max: 100 })) {
     throw new Error('Input length invalid');
   }
-  
+
   return sanitized;
 }
 
@@ -121,6 +131,7 @@ element.innerHTML = userInput; // Dangerous
 ```
 
 ### Secure API Requests
+
 ```javascript
 // Good: Secure API communication
 async function secureApiRequest(url, data) {
@@ -134,11 +145,11 @@ async function secureApiRequest(url, data) {
       },
       body: JSON.stringify(data)
     });
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
+
     return await response.json();
   } catch (error) {
     console.error('API request failed:', error);
@@ -154,6 +165,7 @@ fetch('http://api.example.com/data', {
 ```
 
 ### Content Security Policy
+
 ```javascript
 // Good: Implement CSP
 const express = require('express');
@@ -180,6 +192,7 @@ const cspMeta = `
 ```
 
 ### Password Security
+
 ```javascript
 // Good: Secure password handling
 const bcrypt = require('bcrypt');
@@ -203,6 +216,7 @@ const userPassword = 'password123'; // Never store plain text
 ```
 
 ### JWT Security
+
 ```javascript
 // Good: Secure JWT implementation
 const jwt = require('jsonwebtoken');
@@ -213,7 +227,7 @@ function generateToken(user) {
     email: user.email,
     role: user.role
   };
-  
+
   return jwt.sign(payload, process.env.JWT_SECRET, {
     expiresIn: '1h',
     issuer: 'your-app',
@@ -234,6 +248,7 @@ const token = jwt.sign({ userId: 123 }, 'weak-secret'); // Weak secret, no optio
 ```
 
 ### Rate Limiting
+
 ```javascript
 // Good: Rate limiting implementation
 const rateLimit = require('express-rate-limit');
@@ -261,6 +276,7 @@ app.post('/login', loginLimiter, (req, res) => {
 ```
 
 ### Environment Variables Security
+
 ```javascript
 // Good: Secure environment handling
 require('dotenv').config();
@@ -294,6 +310,7 @@ const jwtSecret = 'my-secret-key'; // Use environment variables
 ## Security Headers
 
 ### Essential Headers
+
 ```javascript
 // Security headers to implement
 const securityHeaders = {
@@ -307,6 +324,7 @@ const securityHeaders = {
 ```
 
 ## Verification
+
 1. ตรวจสอบว่ามี input validation ทุกจุด
 2. ทดสอบว่าใช้ HTTPS ทั่งหมด
 3. ยืนยันว่าไม่มี eval() หรือ dangerous functions

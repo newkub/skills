@@ -20,7 +20,7 @@ Organize code into logical modules with clear responsibilities and consistent st
 
 ### 1. Use Standard Cargo Structure
 
-```
+```text
 my-project/
 ├── Cargo.toml          # Project configuration
 ├── Cargo.lock          # Dependency lock file
@@ -158,6 +158,7 @@ pub mod cli;
 ## Impact
 
 Not following proper project structure leads to:
+
 - Difficult code navigation and maintenance
 - Poor collaboration experience
 - Inconsistent code organization

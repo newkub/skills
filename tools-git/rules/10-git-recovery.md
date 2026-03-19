@@ -1,9 +1,11 @@
 # Git Recovery
 
 ## Description
+
 กู้คืนข้อมูลและแก้ไขปัญหาที่เกิดขึ้นกับ repository
 
 ## Examples
+
 ```bash
 # ดูประวัติทั้งหมดรวมถึงที่ถูกลบ
 git reflog
@@ -25,6 +27,7 @@ git reset --hard
 ```
 
 ## Anti-patterns
+
 ❌ ไม่มี backup ของ repository
 ❌ ใช้ `git reset --hard` โดยไม่ตรวจสอบ
 ❌ ไม่รู้จักวิธีกู้คืนข้อมูล

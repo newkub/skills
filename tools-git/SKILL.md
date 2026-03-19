@@ -6,12 +6,14 @@ outcome: สามารถจัดการ source code, ทำงานร่
 ---
 
 ## When to Use
+
 - เริ่มต้นโปรเจกต์ใหม่ที่ต้องการ version control
 - ทำงานร่วมกับทีมหลายคน
 - ต้องการติดตามการเปลี่ยนแปลงของ source code
 - จัดการ deployment และ release
 
 ## Quick Start
+
 1. ติดตั้ง Git: `git --version` ตรวจสอบว่าติดตั้งแล้ว
 2. ตั้งค่าผู้ใช้: `git config --global user.name "ชื่อของคุณ"` และ `git config --global user.email "email@example.com"`
 3. สร้าง repository: `git init` หรือ `git clone <url>`
@@ -19,6 +21,7 @@ outcome: สามารถจัดการ source code, ทำงานร่
 5. ส่งไปยัง remote: `git push origin main`
 
 ## Rules
+
 - [1-git-setup.md](rules/1-git-setup.md) - การติดตั้งและตั้งค่า Git
 - [2-git-branching.md](rules/2-git-branching.md) - การจัดการ branch
 - [3-git-commit.md](rules/3-git-commit.md) - การทำ commit ที่ดี
@@ -31,6 +34,7 @@ outcome: สามารถจัดการ source code, ทำงานร่
 - [10-git-recovery.md](rules/10-git-recovery.md) - การกู้คืนข้อมูลและแก้ไขปัญหา
 
 ## Knowledge
+
 - [core-concept.md](knowledge/core-concept.md) - แนวคิดพื้นฐานของ Git
 - [all-features.md](knowledge/all-features.md) - คุณสมบัติทั้งหมดของ Git
 - [best-practices/](knowledge/best-practices/) - best practices สำหรับการใช้ Git

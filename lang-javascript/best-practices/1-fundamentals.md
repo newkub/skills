@@ -21,18 +21,18 @@ class HttpClient {
       response: []
     };
   }
-  
+
   addRequestInterceptor(interceptor) {
     this.interceptors.request.push(interceptor);
   }
-  
+
   addResponseInterceptor(interceptor) {
     this.interceptors.response.push(interceptor);
   }
-  
+
   async request(url, config = {}) {
     const fullUrl = `${this.baseURL}${url}`;
-    
+
     // Apply request interceptors
     let requestConfig = {
       ...this.options,
@@ -42,40 +42,40 @@ class HttpClient {
         ...config.headers
       }
     };
-    
+
     for (const interceptor of this.interceptors.request) {
       requestConfig = await interceptor(requestConfig);
     }
-    
+
     // Create AbortController for timeout
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), requestConfig.timeout);
-    
+
     try {
       const response = await fetch(fullUrl, {
         ...requestConfig,
         signal: controller.signal
       });
-      
+
       clearTimeout(timeoutId);
-      
+
       // Apply response interceptors
       let processedResponse = response;
       for (const interceptor of this.interceptors.response) {
         processedResponse = await interceptor(processedResponse);
       }
-      
+
       return processedResponse;
     } catch (error) {
       clearTimeout(timeoutId);
       throw error;
     }
   }
-  
+
   async get(url, config = {}) {
     return this.request(url, { ...config, method: 'GET' });
   }
-  
+
   async post(url, data, config = {}) {
     return this.request(url, {
       ...config,
@@ -83,7 +83,7 @@ class HttpClient {
       body: JSON.stringify(data)
     });
   }
-  
+
   async put(url, data, config = {}) {
     return this.request(url, {
       ...config,
@@ -91,7 +91,7 @@ class HttpClient {
       body: JSON.stringify(data)
     });
   }
-  
+
   async delete(url, config = {}) {
     return this.request(url, { ...config, method: 'DELETE' });
   }
@@ -148,41 +148,41 @@ class ApiClient {
       }
     };
   }
-  
+
   async requestWithRetry(url, config = {}) {
     let lastError;
-    
+
     for (let attempt = 1; attempt <= this.retryConfig.maxRetries + 1; attempt++) {
       try {
         const response = await this.http.request(url, config);
         return response;
       } catch (error) {
         lastError = error;
-        
+
         // Don't retry on last attempt or if retry condition fails
         if (attempt > this.retryConfig.maxRetries || 
             !this.retryConfig.retryCondition(error)) {
           throw error;
         }
-        
+
         // Calculate delay with exponential backoff
         const delay = Math.min(
           this.retryConfig.baseDelay * Math.pow(2, attempt - 1),
           this.retryConfig.maxDelay
         );
-        
+
         console.log(`Request failed, retrying in ${delay}ms (attempt ${attempt})`);
         await new Promise(resolve => setTimeout(resolve, delay));
       }
     }
-    
+
     throw lastError;
   }
-  
+
   async get(url, config = {}) {
     return this.requestWithRetry(url, { ...config, method: 'GET' });
   }
-  
+
   async post(url, data, config = {}) {
     return this.requestWithRetry(url, {
       ...config,
@@ -203,37 +203,37 @@ class ApiCache {
     this.maxSize = maxSize;
     this.ttl = ttl;
   }
-  
+
   set(key, value) {
     // Remove oldest if cache is full
     if (this.cache.size >= this.maxSize) {
       const firstKey = this.cache.keys().next().value;
       this.cache.delete(firstKey);
     }
-    
+
     this.cache.set(key, {
       value,
       timestamp: Date.now()
     });
   }
-  
+
   get(key) {
     const item = this.cache.get(key);
     if (!item) return null;
-    
+
     // Check if expired
     if (Date.now() - item.timestamp > this.ttl) {
       this.cache.delete(key);
       return null;
     }
-    
+
     return item.value;
   }
-  
+
   clear() {
     this.cache.clear();
   }
-  
+
   // Cache key generator
   static generateKey(method, url, data = null) {
     const dataStr = data ? JSON.stringify(data) : '';
@@ -248,11 +248,11 @@ class CachedApiClient {
     this.cache = new ApiCache(cacheOptions.maxSize, cacheOptions.ttl);
     this.cacheableMethods = ['GET'];
   }
-  
+
   async request(url, config = {}) {
     const method = config.method || 'GET';
     const cacheKey = ApiCache.generateKey(method, url, config.body);
-    
+
     // Check cache for GET requests
     if (this.cacheableMethods.includes(method)) {
       const cached = this.cache.get(cacheKey);
@@ -261,17 +261,17 @@ class CachedApiClient {
         return cached;
       }
     }
-    
+
     const response = await this.http.request(url, config);
-    
+
     // Cache GET responses
     if (this.cacheableMethods.includes(method) && response.ok) {
       this.cache.set(cacheKey, response);
     }
-    
+
     return response;
   }
-  
+
   invalidateCache(pattern) {
     const keys = Array.from(this.cache.cache.keys());
     keys.forEach(key => {
@@ -295,7 +295,7 @@ class RequestQueue {
     this.running = 0;
     this.lastRequest = 0;
   }
-  
+
   async add(requestFn) {
     return new Promise((resolve, reject) => {
       this.queue.push({
@@ -306,24 +306,24 @@ class RequestQueue {
       this.process();
     });
   }
-  
+
   async process() {
     if (this.running >= this.maxConcurrent || this.queue.length === 0) {
       return;
     }
-    
+
     // Rate limiting
     const now = Date.now();
     if (now - this.lastRequest < this.rateLimit) {
       setTimeout(() => this.process(), this.rateLimit - (now - this.lastRequest));
       return;
     }
-    
+
     this.running++;
     this.lastRequest = now;
-    
+
     const { requestFn, resolve, reject } = this.queue.shift();
-    
+
     try {
       const result = await requestFn();
       resolve(result);
@@ -345,7 +345,7 @@ class QueuedApiClient {
       queueOptions.rateLimit || 1000
     );
   }
-  
+
   async request(url, config = {}) {
     return this.queue.add(() => this.http.request(url, config));
   }
@@ -360,11 +360,11 @@ class ResponseTransformer {
   constructor(transformers = {}) {
     this.transformers = transformers;
   }
-  
+
   addTransformer(endpoint, transformer) {
     this.transformers[endpoint] = transformer;
   }
-  
+
   transform(endpoint, data) {
     const transformer = this.transformers[endpoint];
     if (transformer) {
@@ -408,13 +408,13 @@ class TransformingApiClient {
     this.http = httpClient;
     this.transformer = transformer;
   }
-  
+
   async request(url, config = {}) {
     const response = await this.http.request(url, config);
     const data = await response.json();
-    
+
     const transformedData = this.transformer.transform(url, data);
-    
+
     return new Response(JSON.stringify(transformedData), {
       status: response.status,
       statusText: response.statusText,
@@ -434,15 +434,15 @@ class GraphQLClient {
     this.options = options;
     this.cache = new Map();
   }
-  
+
   async query(query, variables = {}, options = {}) {
     const key = JSON.stringify({ query, variables });
-    
+
     // Check cache for queries
     if (!options.skipCache && this.cache.has(key)) {
       return this.cache.get(key);
     }
-    
+
     const response = await fetch(this.endpoint, {
       method: 'POST',
       headers: {
@@ -451,29 +451,29 @@ class GraphQLClient {
       },
       body: JSON.stringify({ query, variables })
     });
-    
+
     if (!response.ok) {
       throw new Error(`GraphQL request failed: ${response.statusText}`);
     }
-    
+
     const data = await response.json();
-    
+
     if (data.errors) {
       throw new Error(data.errors[0].message);
     }
-    
+
     // Cache successful queries
     if (!options.skipCache) {
       this.cache.set(key, data);
     }
-    
+
     return data;
   }
-  
+
   async mutate(mutation, variables = {}) {
     return this.query(mutation, variables, { skipCache: true });
   }
-  
+
   clearCache() {
     this.cache.clear();
   }
@@ -533,7 +533,7 @@ class WebSocketManager {
     this.messageQueue = [];
     this.eventHandlers = new Map();
   }
-  
+
   connect() {
     try {
       this.ws = new WebSocket(this.url);
@@ -543,21 +543,21 @@ class WebSocketManager {
       this.scheduleReconnect();
     }
   }
-  
+
   setupEventHandlers() {
     this.ws.onopen = () => {
       console.log('WebSocket connected');
       this.reconnectAttempts = 0;
-      
+
       // Send queued messages
       while (this.messageQueue.length > 0) {
         const message = this.messageQueue.shift();
         this.send(message);
       }
-      
+
       this.emit('connected');
     };
-    
+
     this.ws.onmessage = (event) => {
       try {
         const data = JSON.parse(event.data);
@@ -566,33 +566,33 @@ class WebSocketManager {
         console.error('Failed to parse WebSocket message:', error);
       }
     };
-    
+
     this.ws.onclose = () => {
       console.log('WebSocket disconnected');
       this.emit('disconnected');
       this.scheduleReconnect();
     };
-    
+
     this.ws.onerror = (error) => {
       console.error('WebSocket error:', error);
       this.emit('error', error);
     };
   }
-  
+
   scheduleReconnect() {
     if (this.reconnectAttempts >= this.options.maxReconnectAttempts) {
       console.error('Max reconnection attempts reached');
       return;
     }
-    
+
     this.reconnectAttempts++;
     console.log(`Scheduling reconnection attempt ${this.reconnectAttempts}`);
-    
+
     setTimeout(() => {
       this.connect();
     }, this.options.reconnectInterval);
   }
-  
+
   send(message) {
     if (this.ws && this.ws.readyState === WebSocket.OPEN) {
       this.ws.send(JSON.stringify(message));
@@ -601,19 +601,19 @@ class WebSocketManager {
       this.messageQueue.push(message);
     }
   }
-  
+
   on(event, handler) {
     if (!this.eventHandlers.has(event)) {
       this.eventHandlers.set(event, []);
     }
     this.eventHandlers.get(event).push(handler);
   }
-  
+
   emit(event, data) {
     const handlers = this.eventHandlers.get(event) || [];
     handlers.forEach(handler => handler(data));
   }
-  
+
   disconnect() {
     if (this.ws) {
       this.ws.close();
@@ -632,27 +632,27 @@ class MockApiServer {
     this.handlers = new Map();
     this.delay = 100;
   }
-  
+
   addHandler(method, path, handler) {
     const key = `${method}:${path}`;
     this.handlers.set(key, handler);
   }
-  
+
   setDelay(ms) {
     this.delay = ms;
   }
-  
+
   async request(method, path, data = null) {
     const key = `${method}:${path}`;
     const handler = this.handlers.get(key);
-    
+
     if (!handler) {
       throw new Error(`No handler for ${method} ${path}`);
     }
-    
+
     // Simulate network delay
     await new Promise(resolve => setTimeout(resolve, this.delay));
-    
+
     return handler(data);
   }
 }

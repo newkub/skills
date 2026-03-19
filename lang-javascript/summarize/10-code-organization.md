@@ -8,6 +8,7 @@ outcome: สามารถจัดระเบียบ code ให้ maintai
 # Code Organization Best Practices
 
 ## Overview
+
 Best practices สำหรับการจัดระเบียบ JavaScript code ให้ maintainable, scalable และ readable
 
 ## Best Practices Summary
@@ -28,6 +29,7 @@ Best practices สำหรับการจัดระเบียบ JavaScr
 ## Implementation Guidelines
 
 ### High Priority Practices
+
 1. **Use modules** - Better code organization
 2. **Separate concerns** - Maintainable code
 3. **Use proper folder structure** - Scalable organization
@@ -35,6 +37,7 @@ Best practices สำหรับการจัดระเบียบ JavaScr
 5. **Use consistent code style** - Team collaboration
 
 ### Medium Priority Practices
+
 1. **Use TypeScript** - Type safety when beneficial
 2. **Keep files small** - Single responsibility
 3. **Document complex logic** - Better understanding
@@ -44,6 +47,7 @@ Best practices สำหรับการจัดระเบียบ JavaScr
 ### Code Organization Checklist
 
 #### Structure
+
 - [ ] Use ES6 modules
 - [ ] Follow naming conventions
 - [ ] Separate concerns properly
@@ -51,6 +55,7 @@ Best practices สำหรับการจัดระเบียบ JavaScr
 - [ ] Keep related code together
 
 #### Dependencies
+
 - [ ] Import only what's needed
 - [ ] Avoid circular dependencies
 - [ ] Use proper import paths
@@ -58,6 +63,7 @@ Best practices สำหรับการจัดระเบียบ JavaScr
 - [ ] Use tree-shaking friendly exports
 
 #### Maintainability
+
 - [ ] Keep files focused
 - [ ] Use consistent style
 - [ ] Document complex logic
@@ -76,6 +82,7 @@ Best practices สำหรับการจัดระเบียบ JavaScr
 ## Code Organization Examples
 
 ### Module Structure
+
 ```javascript
 // Good: Well-organized module
 // utils/userUtils.js
@@ -89,7 +96,7 @@ export function validateUser(user) {
   if (!user || typeof user !== 'object') {
     return false;
   }
-  
+
   const requiredFields = ['id', 'name', 'email'];
   return requiredFields.every(field => user[field]);
 }
@@ -103,7 +110,7 @@ export function formatUserName(user) {
   if (!user || !user.name) {
     return 'Unknown User';
   }
-  
+
   return user.name.trim();
 }
 
@@ -116,7 +123,7 @@ export function getUserInitials(user) {
   if (!user || !user.name) {
     return '??';
   }
-  
+
   return user.name
     .split(' ')
     .map(word => word.charAt(0).toUpperCase())
@@ -143,6 +150,7 @@ export default {
 ```
 
 ### Folder Structure
+
 ```javascript
 // Good: Feature-based organization
 // src/features/user/
@@ -175,6 +183,7 @@ export { useUser } from './hooks/useUser';
 ```
 
 ### Service Layer Organization
+
 ```javascript
 // Good: Service layer with proper separation
 // src/services/apiService.js
@@ -183,10 +192,10 @@ class APIService {
     this.baseURL = baseURL;
     this.cache = new Map();
   }
-  
+
   async request(endpoint, options = {}) {
     const url = `${this.baseURL}${endpoint}`;
-    
+
     const response = await fetch(url, {
       headers: {
         'Content-Type': 'application/json',
@@ -194,32 +203,32 @@ class APIService {
       },
       ...options
     });
-    
+
     if (!response.ok) {
       throw new APIError(`HTTP error! status: ${response.status}`);
     }
-    
+
     return response.json();
   }
-  
+
   async get(endpoint) {
     return this.request(endpoint);
   }
-  
+
   async post(endpoint, data) {
     return this.request(endpoint, {
       method: 'POST',
       body: JSON.stringify(data)
     });
   }
-  
+
   async put(endpoint, data) {
     return this.request(endpoint, {
       method: 'PUT',
       body: JSON.stringify(data)
     });
   }
-  
+
   async delete(endpoint) {
     return this.request(endpoint, {
       method: 'DELETE'
@@ -243,7 +252,7 @@ class UserService {
   constructor() {
     this.api = new APIService('https://api.example.com');
   }
-  
+
   async getUsers() {
     try {
       const users = await this.api.get('/users');
@@ -253,7 +262,7 @@ class UserService {
       throw error;
     }
   }
-  
+
   async getUserById(id) {
     try {
       const user = await this.api.get(`/users/${id}`);
@@ -265,7 +274,7 @@ class UserService {
       throw error;
     }
   }
-  
+
   async createUser(userData) {
     try {
       const newUser = await this.api.post('/users', userData);
@@ -275,7 +284,7 @@ class UserService {
       throw error;
     }
   }
-  
+
   async updateUser(id, userData) {
     try {
       const updatedUser = await this.api.put(`/users/${id}`, userData);
@@ -285,7 +294,7 @@ class UserService {
       throw error;
     }
   }
-  
+
   async deleteUser(id) {
     try {
       await this.api.delete(`/users/${id}`);
@@ -295,7 +304,7 @@ class UserService {
       throw error;
     }
   }
-  
+
   mapUserData(apiUser) {
     return {
       id: apiUser.id,
@@ -312,6 +321,7 @@ export default new UserService();
 ```
 
 ### Utility Functions Organization
+
 ```javascript
 // Good: Organized utility functions
 // src/utils/index.js
@@ -361,11 +371,11 @@ export function sortBy(array, key, order = 'asc') {
   return [...array].sort((a, b) => {
     const aVal = a[key];
     const bVal = b[key];
-    
+
     if (order === 'desc') {
       return bVal > aVal ? 1 : bVal < aVal ? -1 : 0;
     }
-    
+
     return aVal > bVal ? 1 : aVal < bVal ? -1 : 0;
   });
 }
@@ -380,22 +390,22 @@ export function deepClone(obj) {
   if (obj === null || typeof obj !== 'object') {
     return obj;
   }
-  
+
   if (obj instanceof Date) {
     return new Date(obj.getTime());
   }
-  
+
   if (obj instanceof Array) {
     return obj.map(item => deepClone(item));
   }
-  
+
   const cloned = {};
   for (const key in obj) {
     if (obj.hasOwnProperty(key)) {
       cloned[key] = deepClone(obj[key]);
     }
   }
-  
+
   return cloned;
 }
 
@@ -408,7 +418,7 @@ export function deepClone(obj) {
 export function deepMerge(target, ...sources) {
   if (!sources.length) return target;
   const source = sources.shift();
-  
+
   if (isObject(target) && isObject(source)) {
     for (const key in source) {
       if (isObject(source[key])) {
@@ -419,7 +429,7 @@ export function deepMerge(target, ...sources) {
       }
     }
   }
-  
+
   return deepMerge(target, ...sources);
 }
 
@@ -457,7 +467,7 @@ export function isValidPhone(phone) {
 export function validateRequiredFields(data, requiredFields) {
   const missing = [];
   const invalid = [];
-  
+
   for (const field of requiredFields) {
     if (!data[field]) {
       missing.push(field);
@@ -465,7 +475,7 @@ export function validateRequiredFields(data, requiredFields) {
       invalid.push(field);
     }
   }
-  
+
   return {
     isValid: missing.length === 0 && invalid.length === 0,
     missing,
@@ -475,6 +485,7 @@ export function validateRequiredFields(data, requiredFields) {
 ```
 
 ### Import/Export Best Practices
+
 ```javascript
 // Good: Clean imports and exports
 // src/components/UserCard.jsx
@@ -486,11 +497,11 @@ import './UserCard.css';
 
 const UserCard = ({ user, onClick }) => {
   const { updateUser } = useUser();
-  
+
   const handleClick = () => {
     onClick(user);
   };
-  
+
   return (
     <div className="user-card" onClick={handleClick}>
       <div className="user-avatar">
@@ -548,6 +559,7 @@ export {
 ```
 
 ### Configuration Management
+
 ```javascript
 // Good: Environment-based configuration
 // src/config/index.js
@@ -560,13 +572,13 @@ export const config = {
   isDevelopment,
   isProduction,
   isTest,
-  
+
   api: {
     baseURL: process.env.API_BASE_URL || 'https://api.example.com',
     timeout: parseInt(process.env.API_TIMEOUT) || 5000,
     retries: parseInt(process.env.API_RETRIES) || 3
   },
-  
+
   database: {
     host: process.env.DB_HOST || 'localhost',
     port: parseInt(process.env.DB_PORT) || 5432,
@@ -575,13 +587,13 @@ export const config = {
     password: process.env.DB_PASSWORD,
     ssl: process.env.DB_SSL === 'true'
   },
-  
+
   auth: {
     jwtSecret: process.env.JWT_SECRET,
     jwtExpiresIn: process.env.JWT_EXPIRES_IN || '24h',
     bcryptRounds: parseInt(process.env.BCRYPT_ROUNDS) || 12
   },
-  
+
   logging: {
     level: process.env.LOG_LEVEL || 'info',
     file: process.env.LOG_FILE || 'app.log',
@@ -594,7 +606,7 @@ export const config = {
 function validateConfig() {
   const required = ['JWT_SECRET', 'DB_PASSWORD'];
   const missing = required.filter(key => !process.env[key]);
-  
+
   if (missing.length > 0) {
     throw new Error(`Missing required environment variables: ${missing.join(', ')}`);
   }
@@ -606,6 +618,7 @@ if (!isTest) {
 ```
 
 ## Verification
+
 1. ตรวจสอบว่าใช้ modules อย่างถูกต้อง
 2. ทดสอบว่ามี proper folder structure
 3. ยืนยันว่ามี consistent naming conventions

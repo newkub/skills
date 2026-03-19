@@ -8,9 +8,11 @@ outcome: สามารถใช้ File System, HTTP Server, Path และ Pr
 # Node.js Features
 
 ## Concepts
+
 Node.js เป็น JavaScript runtime สำหรับ server-side programming ที่มี built-in modules สำหรับ file system operations, HTTP server creation, path manipulation, และ process management
 
 ## Best Practices
+
 - ใช้ fs module สำหรับ file operations แบบ async/await
 - ใช้ http module สำหรับสร้าง web servers
 - ใช้ path module สำหรับ cross-platform path handling
@@ -21,6 +23,7 @@ Node.js เป็น JavaScript runtime สำหรับ server-side programmi
 ## Examples
 
 ### File System (fs module)
+
 ```javascript
 const fs = require('fs').promises;
 const path = require('path');
@@ -141,18 +144,18 @@ async function copyFile(sourcePath, destPath) {
 // Usage examples
 (async () => {
   const filePath = 'example.txt';
-  
+
   // Write file
   await writeFile(filePath, 'Hello, Node.js!');
-  
+
   // Read file
   const content = await readFile(filePath);
   console.log('Content:', content);
-  
+
   // Get file stats
   const stats = await getFileStats(filePath);
   console.log('File stats:', stats);
-  
+
   // Check if exists
   const exists = await fileExists(filePath);
   console.log('File exists:', exists);
@@ -160,6 +163,7 @@ async function copyFile(sourcePath, destPath) {
 ```
 
 ### HTTP Server (http module)
+
 ```javascript
 const http = require('http');
 const url = require('url');
@@ -168,12 +172,12 @@ const url = require('url');
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
   const pathname = parsedUrl.pathname;
-  
+
   // Set CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  
+
   // Route handling
   if (pathname === '/') {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -221,28 +225,28 @@ class SimpleRouter {
   constructor() {
     this.routes = {};
   }
-  
+
   get(path, handler) {
     this.routes[`GET:${path}`] = handler;
   }
-  
+
   post(path, handler) {
     this.routes[`POST:${path}`] = handler;
   }
-  
+
   put(path, handler) {
     this.routes[`PUT:${path}`] = handler;
   }
-  
+
   delete(path, handler) {
     this.routes[`DELETE:${path}`] = handler;
   }
-  
+
   handleRequest(req, res) {
     const method = req.method;
     const pathname = url.parse(req.url).pathname;
     const handler = this.routes[`${method}:${pathname}`];
-    
+
     if (handler) {
       handler(req, res);
     } else {
@@ -305,6 +309,7 @@ advancedServer.listen(3001, () => {
 ```
 
 ### Path Manipulation (path module)
+
 ```javascript
 const path = require('path');
 
@@ -370,6 +375,7 @@ console.log('Config path:', configPath);
 ```
 
 ### Process Management (process object)
+
 ```javascript
 // Get command line arguments
 console.log('Command line arguments:', process.argv);
@@ -475,9 +481,9 @@ const { createReadStream, createWriteStream } = require('fs');
 function copyFile(source, destination) {
   const readStream = createReadStream(source);
   const writeStream = createWriteStream(destination);
-  
+
   readStream.pipe(writeStream);
-  
+
   return new Promise((resolve, reject) => {
     writeStream.on('finish', resolve);
     writeStream.on('error', reject);
@@ -496,6 +502,7 @@ function copyFile(source, destination) {
 ```
 
 ### Complete Example: File Server
+
 ```javascript
 const http = require('http');
 const fs = require('fs').promises;
@@ -506,18 +513,18 @@ class FileServer {
   constructor(rootDir = '.') {
     this.rootDir = path.resolve(rootDir);
   }
-  
+
   async handleRequest(req, res) {
     const parsedUrl = url.parse(req.url, true);
     let pathname = parsedUrl.pathname;
-    
+
     // Default to index.html
     if (pathname === '/') {
       pathname = '/index.html';
     }
-    
+
     const filePath = path.join(this.rootDir, pathname);
-    
+
     try {
       // Security check - prevent directory traversal
       if (!filePath.startsWith(this.rootDir)) {
@@ -525,9 +532,9 @@ class FileServer {
         res.end('Forbidden');
         return;
       }
-      
+
       const stats = await fs.stat(filePath);
-      
+
       if (stats.isDirectory()) {
         // List directory contents
         const files = await fs.readdir(filePath);
@@ -539,14 +546,14 @@ class FileServer {
             size: fileStats.size
           };
         });
-        
+
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify(fileList));
       } else {
         // Serve file
         const ext = path.extname(filePath);
         const contentType = this.getContentType(ext);
-        
+
         res.writeHead(200, { 'Content-Type': contentType });
         const fileStream = fs.createReadStream(filePath);
         fileStream.pipe(res);
@@ -561,7 +568,7 @@ class FileServer {
       }
     }
   }
-  
+
   getContentType(ext) {
     const types = {
       '.html': 'text/html',
@@ -589,6 +596,7 @@ server.listen(3002, () => {
 ```
 
 ## Verification
+
 1. ตรวจสอบว่า file operations ทำงานได้
 2. ทดสอบ HTTP server ทำงานได้
 3. ยืนยันว่า path manipulation ทำงานได้

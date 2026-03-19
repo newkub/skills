@@ -3,11 +3,12 @@
 ## รูปแบบการออกแบบที่นิยมใน JavaScript
 
 ### 1. Module Pattern
+
 ```javascript
 // IIFE Module
 const ShoppingCart = (() => {
   let cart = [];
-  
+
   return {
     addItem: (item) => cart.push(item),
     getItems: () => [...cart],
@@ -17,6 +18,7 @@ const ShoppingCart = (() => {
 ```
 
 ### 2. Singleton Pattern
+
 ```javascript
 class DatabaseConnection {
   constructor() {
@@ -26,7 +28,7 @@ class DatabaseConnection {
     this.connection = this.connect();
     DatabaseConnection.instance = this;
   }
-  
+
   connect() {
     // Database connection logic
     return { connected: true };
@@ -35,6 +37,7 @@ class DatabaseConnection {
 ```
 
 ### 3. Factory Pattern
+
 ```javascript
 class AnimalFactory {
   static createAnimal(type, name) {
@@ -58,19 +61,20 @@ class Dog {
 ```
 
 ### 4. Observer Pattern
+
 ```javascript
 class EventEmitter {
   constructor() {
     this.events = {};
   }
-  
+
   on(event, callback) {
     if (!this.events[event]) {
       this.events[event] = [];
     }
     this.events[event].push(callback);
   }
-  
+
   emit(event, data) {
     if (this.events[event]) {
       this.events[event].forEach(callback => callback(data));
@@ -80,6 +84,7 @@ class EventEmitter {
 ```
 
 ### 5. Strategy Pattern
+
 ```javascript
 class PaymentStrategy {
   pay(amount) {
@@ -101,6 +106,7 @@ class PayPalPayment extends PaymentStrategy {
 ```
 
 ### 6. Decorator Pattern
+
 ```javascript
 class Coffee {
   cost() {
@@ -112,7 +118,7 @@ class MilkDecorator {
   constructor(coffee) {
     this.coffee = coffee;
   }
-  
+
   cost() {
     return this.coffee.cost() + 1;
   }
@@ -122,7 +128,7 @@ class SugarDecorator {
   constructor(coffee) {
     this.coffee = coffee;
   }
-  
+
   cost() {
     return this.coffee.cost() + 0.5;
   }
@@ -130,6 +136,7 @@ class SugarDecorator {
 ```
 
 ### 7. Command Pattern
+
 ```javascript
 class Command {
   execute() {
@@ -142,7 +149,7 @@ class LightOnCommand extends Command {
     super();
     this.light = light;
   }
-  
+
   execute() {
     this.light.turnOn();
   }
@@ -152,11 +159,11 @@ class RemoteControl {
   constructor() {
     this.command = null;
   }
-  
+
   setCommand(command) {
     this.command = command;
   }
-  
+
   pressButton() {
     this.command.execute();
   }

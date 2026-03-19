@@ -16,7 +16,8 @@
 | **Configuration** | Configuration modules | `config/database.ts` | Organized settings |
 
 ### Project Structure
-```
+
+```text
 src/
 ├── types/           # Type definitions
 │   ├── user.ts
@@ -38,6 +39,7 @@ src/
 ```
 
 ### Organization Patterns
+
 ```typescript
 // ✅ Barrel exports
 // types/index.ts
@@ -87,6 +89,7 @@ export interface DatabaseConfig {
 ```
 
 ### Best Practices
+
 1. **Group related types** ใน modules เดียวกัน
 2. **Use barrel exports** สำหรับ clean imports
 3. **Separate concerns** ด้วย folder structure

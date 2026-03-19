@@ -16,6 +16,7 @@
 | **Authorization** | Role-based types | `interface AdminUser extends User { role: "admin"; }` | Type-safe permissions |
 
 ### Security Patterns
+
 ```typescript
 // ✅ Input validation
 function validateInput<T>(schema: z.ZodSchema<T>, input: unknown): T {
@@ -25,7 +26,7 @@ function validateInput<T>(schema: z.ZodSchema<T>, input: unknown): T {
 // ✅ Secure API client
 class SecureApiClient {
   constructor(private token: string) {}
-  
+
   async request<T>(endpoint: string): Promise<T> {
     const response = await fetch(endpoint, {
       headers: { Authorization: `Bearer ${this.token}` }
@@ -43,6 +44,7 @@ interface AppConfig {
 ```
 
 ### Security Checklist
+
 - [ ] ใช้ strict mode ใน tsconfig
 - [ ] Validate external data ที่ runtime
 - [ ] ใช้ branded types สำหรับ sensitive data

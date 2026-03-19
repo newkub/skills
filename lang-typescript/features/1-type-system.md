@@ -3,6 +3,7 @@
 ระบบ types ของ TypeScript อย่างละเอียด
 
 ### Basic Types
+
 ```typescript
 // Primitive types
 let str: string = "hello";
@@ -19,6 +20,7 @@ let any: any = 42; // หลีกเลี่ยงการใช้
 ```
 
 ### Object Types
+
 ```typescript
 // Interface
 interface User {
@@ -40,6 +42,7 @@ class Person {
 ```
 
 ### Union & Intersection
+
 ```typescript
 // Union types
 type Result = string | number;
@@ -50,6 +53,7 @@ type Employee = User & { department: string; };
 ```
 
 ### Type Inference
+
 ```typescript
 // Automatic inference
 let message = "hello"; // string

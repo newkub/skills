@@ -1,7 +1,8 @@
 # Commit Messages Best Practices
 
 ## Conventional Commits
-```
+
+```text
 <type>[optional scope]: <description>
 
 [optional body]
@@ -10,6 +11,7 @@
 ```
 
 ## Types
+
 - `feat`: ฟีเจอร์ใหม่
 - `fix`: แก้ไข bug
 - `docs`: แก้ไข documentation
@@ -19,6 +21,7 @@
 - `chore`: งานทั่วไปที่ไม่เปลี่ยน production code
 
 ## Examples
+
 ```bash
 feat(auth): add OAuth2 authentication
 fix: resolve login validation error
@@ -30,6 +33,7 @@ chore: update dependencies
 ```
 
 ## Guidelines
+
 - ใช้ present tense: "add" ไม่ใช่ "added"
 - ใช้ lowercase ยกเว้น proper nouns
 - ไม่ต้องมี period ท้ายข้อความ

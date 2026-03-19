@@ -244,7 +244,7 @@ jobs:
       with:
         toolchain: stable
         override: true
-    
+
     - name: Cache dependencies
       uses: actions/cache@v3
       with:
@@ -253,10 +253,10 @@ jobs:
           ~/.cargo/git
           target
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-    
+
     - name: Check lock file
       run: cargo check --locked
-    
+
     - name: Run tests
       run: cargo test --locked
 ```
@@ -285,6 +285,7 @@ another-crate = { version = "2.0", features = ["serde1"] }
 ## Impact
 
 Poor dependency management leads to:
+
 - Security vulnerabilities from outdated packages
 - Large binary sizes and slow compilation
 - Dependency conflicts and resolution issues

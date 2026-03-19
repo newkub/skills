@@ -27,7 +27,7 @@ Use stack allocation whenever possible:
 fn process_data() {
     let data = [1u8; 1024]; // Stack allocation
     let mut result = [0u8; 1024];
-    
+
     for i in 0..data.len() {
         result[i] = data[i] * 2;
     }
@@ -37,7 +37,7 @@ fn process_data() {
 fn process_data_heap() {
     let data = vec![1u8; 1024]; // Heap allocation
     let mut result = vec![0u8; 1024]; // Heap allocation
-    
+
     for i in 0..data.len() {
         result[i] = data[i] * 2;
     }
@@ -79,22 +79,22 @@ Use with_capacity to avoid reallocations:
 fn build_string(parts: &[&str]) -> String {
     let total_len: usize = parts.iter().map(|s| s.len()).sum();
     let mut result = String::with_capacity(total_len);
-    
+
     for part in parts {
         result.push_str(part);
     }
-    
+
     result
 }
 
 // Bad - multiple reallocations
 fn build_string_slow(parts: &[&str]) -> String {
     let mut result = String::new();
-    
+
     for part in parts {
         result.push_str(part); // May cause reallocations
     }
-    
+
     result
 }
 ```
@@ -112,12 +112,12 @@ fn efficient_data_structures() {
     let mut user_scores = HashMap::new();
     user_scores.insert("alice", 100);
     user_scores.insert("bob", 85);
-    
+
     // Fast membership testing
     let mut allowed_users = HashSet::new();
     allowed_users.insert("alice");
     allowed_users.insert("charlie");
-    
+
     // Efficient queue operations
     let mut task_queue = VecDeque::new();
     task_queue.push_back("task1");
@@ -129,7 +129,7 @@ fn efficient_data_structures() {
 fn inefficient_structures() {
     // Using Vec for key-value lookups - O(n) instead of O(1)
     let mut user_scores = vec![("alice", 100), ("bob", 85)];
-    
+
     // Linear search for user
     let alice_score = user_scores.iter()
         .find(|(name, _)| *name == "alice")
@@ -177,10 +177,10 @@ fn process_array_simd(data: &[f32]) -> Vec<f32> {
 #[cfg(target_arch = "x86_64")]
 fn process_array_explicit_simd(data: &[f32]) -> Vec<f32> {
     use std::arch::x86_64::*;
-    
+
     let mut result = vec![0.0f32; data.len()];
     let chunks = data.chunks_exact(8);
-    
+
     for (chunk, result_chunk) in chunks.zip(result.chunks_exact_mut(8)) {
         unsafe {
             let input = _mm256_loadu_ps(chunk.as_ptr());
@@ -191,7 +191,7 @@ fn process_array_explicit_simd(data: &[f32]) -> Vec<f32> {
             _mm256_storeu_ps(result_chunk.as_mut_ptr(), result_vec);
         }
     }
-    
+
     result
 }
 ```
@@ -211,7 +211,7 @@ async fn fetch_multiple_files() -> Result<Vec<String>, Box<dyn std::error::Error
         fs::read_to_string("file2.txt"),
         fs::read_to_string("file3.txt"),
     ];
-    
+
     // Run all file reads concurrently
     let results = futures::future::try_join_all(futures).await?;
     Ok(results)
@@ -220,12 +220,12 @@ async fn fetch_multiple_files() -> Result<Vec<String>, Box<dyn std::error::Error
 // Bad - blocking I/O
 fn fetch_multiple_files_blocking() -> Result<Vec<String>, Box<dyn std::error::Error>> {
     let mut results = Vec::new();
-    
+
     // Sequential blocking reads
     results.push(std::fs::read_to_string("file1.txt")?);
     results.push(std::fs::read_to_string("file2.txt")?);
     results.push(std::fs::read_to_string("file3.txt")?);
-    
+
     Ok(results)
 }
 ```
@@ -249,13 +249,13 @@ fn fibonacci(n: u64) -> u64 {
 fn fibonacci_iterative(n: u64) -> u64 {
     let mut a = 1;
     let mut b = 1;
-    
+
     for _ in 2..=n {
         let temp = a + b;
         a = b;
         b = temp;
     }
-    
+
     b
 }
 
@@ -263,7 +263,7 @@ fn bench_fibonacci(c: &mut Criterion) {
     c.bench_function("fibonacci_recursive", |b| {
         b.iter(|| fibonacci(black_box(20)))
     });
-    
+
     c.bench_function("fibonacci_iterative", |b| {
         b.iter(|| fibonacci_iterative(black_box(20)))
     });
@@ -314,6 +314,7 @@ fn display_user_bad(user: User) {
 ## Impact
 
 Poor performance practices lead to:
+
 - Unnecessary memory allocations
 - Inefficient algorithms and data structures
 - Poor cache locality

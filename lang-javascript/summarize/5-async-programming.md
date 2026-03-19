@@ -8,6 +8,7 @@ outcome: สามารถใช้ async/await, promises และ event-drive
 # Async Programming Best Practices
 
 ## Overview
+
 Best practices สำหรับการเขียน asynchronous JavaScript code ที่มีประสิทธิภาพและ maintainable
 
 ## Best Practices Summary
@@ -28,6 +29,7 @@ Best practices สำหรับการเขียน asynchronous JavaScrip
 ## Implementation Guidelines
 
 ### High Priority Practices
+
 1. **Use async/await** - Better readability than callbacks
 2. **Handle promise rejections** - Prevent unhandled rejections
 3. **Avoid callback hell** - Use modern async patterns
@@ -35,6 +37,7 @@ Best practices สำหรับการเขียน asynchronous JavaScrip
 5. **Use timeout handling** - Prevent hanging operations
 
 ### Medium Priority Practices
+
 1. **Use Promise.all for parallel operations** - Improve performance
 2. **Use Promise.allSettled** - Handle mixed success/failure
 3. **Debounce async operations** - Prevent duplicate requests
@@ -43,18 +46,21 @@ Best practices สำหรับการเขียน asynchronous JavaScrip
 ### Async Programming Checklist
 
 #### Before Writing Async Code
+
 - [ ] Plan the async flow
 - [ ] Consider error scenarios
 - [ ] Think about performance implications
 - [ ] Plan timeout strategies
 
 #### While Writing Async Code
+
 - [ ] Use async/await instead of callbacks
 - [ ] Handle all promise rejections
 - [ ] Implement proper error handling
 - [ ] Consider parallel operations
 
 #### After Writing Async Code
+
 - [ ] Test error scenarios
 - [ ] Verify timeout handling
 - [ ] Check for unhandled rejections
@@ -73,16 +79,17 @@ Best practices สำหรับการเขียน asynchronous JavaScrip
 ## Async Programming Examples
 
 ### Basic Async/Await
+
 ```javascript
 // Good: Modern async/await
 async function fetchUserData(userId) {
   try {
     const response = await fetch(`/api/users/${userId}`);
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
+
     const userData = await response.json();
     return userData;
   } catch (error) {
@@ -105,19 +112,19 @@ fetchUser('123', (user, error) => {
     console.error('Error:', error);
     return;
   }
-  
+
   fetchUserPosts(user.id, (posts, error) => {
     if (error) {
       console.error('Error:', error);
       return;
     }
-    
+
     fetchUserComments(posts[0].id, (comments, error) => {
       if (error) {
         console.error('Error:', error);
         return;
       }
-      
+
       console.log('Comments:', comments);
     });
   });
@@ -125,6 +132,7 @@ fetchUser('123', (user, error) => {
 ```
 
 ### Parallel Operations
+
 ```javascript
 // Good: Parallel operations with Promise.all
 async function fetchUserCompleteData(userId) {
@@ -134,7 +142,7 @@ async function fetchUserCompleteData(userId) {
       fetchUserPosts(userId),
       fetchUserComments(userId)
     ]);
-    
+
     return {
       user,
       posts,
@@ -153,7 +161,7 @@ async function fetchUserCompleteDataSafe(userId) {
     fetchUserPosts(userId),
     fetchUserComments(userId)
   ]);
-  
+
   return {
     user: userResult.status === 'fulfilled' ? userResult.value : null,
     posts: postsResult.status === 'fulfilled' ? postsResult.value : [],
@@ -168,13 +176,14 @@ async function fetchUserCompleteDataSafe(userId) {
 ```
 
 ### Timeout Handling
+
 ```javascript
 // Good: Timeout with Promise.race
 function withTimeout(promise, timeoutMs) {
   const timeout = new Promise((_, reject) => {
     setTimeout(() => reject(new Error('Operation timed out')), timeoutMs);
   });
-  
+
   return Promise.race([promise, timeout]);
 }
 
@@ -195,7 +204,7 @@ async function fetchWithTimeout(url, timeoutMs = 5000) {
 async function fetchWithAbort(url, timeoutMs = 5000) {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
-  
+
   try {
     const response = await fetch(url, {
       signal: controller.signal
@@ -213,15 +222,16 @@ async function fetchWithAbort(url, timeoutMs = 5000) {
 ```
 
 ### Debouncing Async Operations
+
 ```javascript
 // Good: Debounced async function
 function debounceAsync(fn, delay) {
   let timeoutId;
   let latestPromise;
-  
+
   return function debouncedFunction(...args) {
     clearTimeout(timeoutId);
-    
+
     return new Promise((resolve, reject) => {
       timeoutId = setTimeout(async () => {
         try {
@@ -249,34 +259,35 @@ searchInput.addEventListener('input', async (e) => {
 ```
 
 ### Async Generators
+
 ```javascript
 // Good: Async generator for processing streams
 async function* processLargeFile(filePath) {
   const file = await openFile(filePath);
   const reader = file.createReadStream();
-  
+
   for await (const chunk of reader) {
     const processedChunk = await processChunk(chunk);
     yield processedChunk;
   }
-  
+
   await file.close();
 }
 
 // Usage
 async function processFile() {
   const results = [];
-  
+
   for await (const chunk of processLargeFile('large-file.txt')) {
     results.push(chunk);
-    
+
     // Process in batches to avoid memory issues
     if (results.length >= 100) {
       await saveBatch(results);
       results.length = 0; // Clear array
     }
   }
-  
+
   // Save remaining chunks
   if (results.length > 0) {
     await saveBatch(results);
@@ -286,11 +297,11 @@ async function processFile() {
 // Async generator for API pagination
 async function* fetchAllPages(url) {
   let nextPage = url;
-  
+
   while (nextPage) {
     const response = await fetch(nextPage);
     const data = await response.json();
-    
+
     yield* data.results;
     nextPage = data.next;
   }
@@ -299,16 +310,17 @@ async function* fetchAllPages(url) {
 // Usage
 async function getAllUsers() {
   const users = [];
-  
+
   for await (const user of fetchAllPages('/api/users')) {
     users.push(user);
   }
-  
+
   return users;
 }
 ```
 
 ### Error Handling in Async Context
+
 ```javascript
 // Good: Comprehensive async error handling
 class AsyncOperation {
@@ -316,32 +328,32 @@ class AsyncOperation {
     this.retryCount = retryCount;
     this.retryDelay = retryDelay;
   }
-  
+
   async execute(operation, context = {}) {
     let lastError;
-    
+
     for (let attempt = 1; attempt <= this.retryCount; attempt++) {
       try {
         const result = await operation();
         return { success: true, result };
       } catch (error) {
         lastError = error;
-        
+
         console.warn(`Attempt ${attempt} failed:`, error.message);
-        
+
         if (attempt < this.retryCount) {
           await this.delay(this.retryDelay * attempt);
         }
       }
     }
-    
+
     return {
       success: false,
       error: lastError,
       context
     };
   }
-  
+
   delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -363,21 +375,22 @@ if (result.success) {
 ```
 
 ### Async IIFE for Top-Level Async
+
 ```javascript
 // Good: Async IIFE for module initialization
 (async () => {
   try {
     // Initialize database connection
     await connectDatabase();
-    
+
     // Load configuration
     const config = await loadConfig();
-    
+
     // Start server
     const server = await startServer(config);
-    
+
     console.log('Application started successfully');
-    
+
     // Handle graceful shutdown
     process.on('SIGTERM', async () => {
       console.log('Shutting down gracefully...');
@@ -385,7 +398,7 @@ if (result.success) {
       await disconnectDatabase();
       process.exit(0);
     });
-    
+
   } catch (error) {
     console.error('Failed to start application:', error);
     process.exit(1);
@@ -405,13 +418,14 @@ try {
 ## Async Performance Tips
 
 ### Memory Management
+
 ```javascript
 // Good: Process large datasets in chunks
 async function processLargeDataset(data, chunkSize = 1000) {
   for (let i = 0; i < data.length; i += chunkSize) {
     const chunk = data.slice(i, i + chunkSize);
     await processChunk(chunk);
-    
+
     // Allow garbage collection
     if (i % (chunkSize * 10) === 0) {
       await new Promise(resolve => setTimeout(resolve, 0));
@@ -429,6 +443,7 @@ async function processLargeDatasetBad(data) {
 ```
 
 ## Verification
+
 1. ตรวจสอบว่าใช้ async/await แทน callbacks
 2. ทดสอบว่ามี proper error handling
 3. ยืนยันว่ามี timeout handling

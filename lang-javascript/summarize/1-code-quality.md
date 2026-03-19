@@ -8,6 +8,7 @@ outcome: สามารถเขียน JavaScript code ที่ clean, main
 # Code Quality Best Practices
 
 ## Overview
+
 Best practices สำหรับการเขียน JavaScript code ที่มีคุณภาพสูง อ่านง่าย และบำรุงรักษาง่าย
 
 ## Best Practices Summary
@@ -28,11 +29,13 @@ Best practices สำหรับการเขียน JavaScript code ที
 ## Implementation Guidelines
 
 ### High Priority Practices
+
 1. **Always use `const` and `let`** - Never use `var` in modern JavaScript
 2. **Use strict equality (`===`)** - Prevent type coercion bugs
 3. **Avoid global variables** - Use modules and proper scoping
 
 ### Medium Priority Practices
+
 1. **Use meaningful names** - Make code self-documenting
 2. **Keep functions small** - Single responsibility principle
 3. **Use consistent code style** - Follow team conventions
@@ -41,11 +44,13 @@ Best practices สำหรับการเขียน JavaScript code ที
 ### Code Quality Checklist
 
 #### Before Writing Code
+
 - [ ] Plan clear variable and function names
 - [ ] Consider the scope and lifetime of variables
 - [ ] Think about function responsibilities
 
 #### While Writing Code
+
 - [ ] Use `const`/`let` instead of `var`
 - [ ] Use `===` instead of `==`
 - [ ] Keep functions focused on single responsibility
@@ -53,6 +58,7 @@ Best practices สำหรับการเขียน JavaScript code ที
 - [ ] Follow consistent naming conventions
 
 #### After Writing Code
+
 - [ ] Review for potential global variables
 - [ ] Check for complex logic that needs comments
 - [ ] Verify naming consistency
@@ -73,11 +79,13 @@ Best practices สำหรับการเขียน JavaScript code ที
 ## Tools and Resources
 
 ### Linting and Formatting
+
 - **ESLint** - Code quality and style checking
 - **Prettier** - Code formatting
 - **Husky** - Git hooks for pre-commit checks
 
 ### Code Quality Metrics
+
 - **Code complexity** - Measure cyclomatic complexity
 - **Code coverage** - Ensure tests cover critical code
 - **Technical debt** - Track code quality over time
@@ -85,6 +93,7 @@ Best practices สำหรับการเขียน JavaScript code ที
 ## Examples
 
 ### Good Practices
+
 ```javascript
 // Use const/let with meaningful names
 const MAX_RETRY_ATTEMPTS = 3;
@@ -102,7 +111,7 @@ function calculateDiscount(price, userTier) {
     silver: 0.10,
     gold: 0.15
   };
-  
+
   return price * discountRates[userTier];
 }
 
@@ -114,11 +123,11 @@ function getUserById(userId) {
 // Avoid global variables
 const userService = {
   users: [],
-  
+
   addUser(user) {
     this.users.push(user);
   },
-  
+
   getUserById(id) {
     return this.users.find(user => user.id === id);
   }
@@ -126,6 +135,7 @@ const userService = {
 ```
 
 ### Bad Practices
+
 ```javascript
 // Avoid var
 var name = 'John'; // Bad
@@ -150,6 +160,7 @@ const currentDate = new Date(); // Good
 ```
 
 ## Verification
+
 1. ตรวจสอบว่าใช้ const/let แทน var ทั่งหมด
 2. ทดสอบว่าใช้ === แทน == ทั่งหมด
 3. ยืนยันว่าไม่มี global variables

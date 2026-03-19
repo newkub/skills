@@ -6,9 +6,11 @@ outcome: โค้ด TypeScript ที่มี type safety และ maintaina
 ---
 
 ## When to Execute
+
 เมื่อต้องการตั้งค่า TypeScript ในโปรเจกต์ใหม่ หรือปรับปรุงการใช้ TypeScript ในโปรเจกต์ที่มีอยู่
 
 ## Quick Start
+
 1. ติดตั้ง TypeScript และตั้งค่า tsconfig.json
 2. เปิดใช้งาน strict compiler options
 3. ตั้งค่า build process สำหรับ development

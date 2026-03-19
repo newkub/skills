@@ -1,6 +1,7 @@
 # Branching Strategy Best Practices
 
 ## Git Flow
+
 - `main`: production code
 - `develop`: development code
 - `feature/*`: ฟีเจอร์ใหม่
@@ -8,17 +9,20 @@
 - `hotfix/*`: แก้ไขปัญหาเร่งด่วน
 
 ## GitHub Flow
+
 - `main`: production code
 - `feature/*`: ฟีเจร์ใหม่
 - Pull Request สำหรับ review
 - Merge หลัง approve
 
 ## GitLab Flow
+
 - `main`: production code
 - `environment/*`: สำหรับ environments
 - Feature branches สำหรับ development
 
 ## Best Practices
+
 1. **Branch Naming**
    - `feature/user-authentication`
    - `fix/login-validation`

@@ -3,6 +3,7 @@
 หลักการพื้นฐานของการเขียน TypeScript ที่ดี
 
 ### Type Safety First
+
 ```typescript
 // ✅ Good - Explicit types
 function calculateTotal(price: number, quantity: number): number {
@@ -16,6 +17,7 @@ function calculateTotal(price: any, quantity: any): any {
 ```
 
 ### Interface vs Type
+
 ```typescript
 // ✅ Good - Use interface for objects
 interface User {
@@ -30,6 +32,7 @@ type UserWithStatus = User & { status: Status };
 ```
 
 ### Naming Conventions
+
 ```typescript
 // ✅ Good - PascalCase for types
 interface UserProfile {}
@@ -47,6 +50,7 @@ interface HttpRequestConfig {
 ```
 
 ### Error Handling
+
 ```typescript
 // ✅ Good - Type-safe error handling
 type Result<T> = 
@@ -65,6 +69,7 @@ async function fetchUser(id: number): Promise<Result<User>> {
 ```
 
 ### Function Design
+
 ```typescript
 // ✅ Good - Clear input and output types
 function formatCurrency(amount: number, currency: string = "USD"): string {

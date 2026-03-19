@@ -7,6 +7,7 @@ Cargo is Rust's build system and package manager. It manages dependencies, build
 ## Cargo Commands
 
 ### Project Creation
+
 ```bash
 # Create new binary project
 cargo new my_project
@@ -22,6 +23,7 @@ cargo new my_project --name "awesome-project"
 ```
 
 ### Building
+
 ```bash
 # Debug build
 cargo build
@@ -46,6 +48,7 @@ cargo build --target-dir /tmp/build
 ```
 
 ### Running
+
 ```bash
 # Run debug build
 cargo run
@@ -67,6 +70,7 @@ cargo run --example my_example
 ```
 
 ### Testing
+
 ```bash
 # Run all tests
 cargo test
@@ -97,6 +101,7 @@ cargo test --doc
 ```
 
 ### Checking
+
 ```bash
 # Check if code compiles
 cargo check
@@ -115,6 +120,7 @@ cargo check --verbose
 ```
 
 ### Documentation
+
 ```bash
 # Generate documentation
 cargo doc
@@ -133,6 +139,7 @@ cargo doc -p my_package
 ```
 
 ### Formatting
+
 ```bash
 # Format all code
 cargo fmt
@@ -151,6 +158,7 @@ cargo fmt --all
 ```
 
 ### Linting
+
 ```bash
 # Run clippy
 cargo clippy
@@ -172,6 +180,7 @@ cargo clippy -- -A clippy::too_many_arguments
 ```
 
 ### Benchmarking
+
 ```bash
 # Run benchmarks
 cargo bench
@@ -189,6 +198,7 @@ cargo bench --release
 ## Dependency Management
 
 ### Adding Dependencies
+
 ```bash
 # Add dependency from crates.io
 cargo add serde
@@ -216,6 +226,7 @@ cargo add my_lib --git "https://github.com/user/my_lib.git" --tag "v1.0.0"
 ```
 
 ### Updating Dependencies
+
 ```bash
 # Update all dependencies
 cargo update
@@ -234,6 +245,7 @@ cargo update --dry-run
 ```
 
 ### Removing Dependencies
+
 ```bash
 # Remove dependency
 cargo rm serde
@@ -246,6 +258,7 @@ cargo rm serde tokio
 ```
 
 ### Listing Dependencies
+
 ```bash
 # List dependencies in tree format
 cargo tree
@@ -269,6 +282,7 @@ cargo tree --format "{p}"
 ## Workspace Management
 
 ### Workspace Structure
+
 ```toml
 # Cargo.toml (workspace root)
 [workspace]
@@ -286,6 +300,7 @@ tracing = "0.1"
 ```
 
 ### Workspace Commands
+
 ```bash
 # Build all workspace members
 cargo build
@@ -309,6 +324,7 @@ cargo check --workspace
 ## Configuration
 
 ### Cargo.toml Structure
+
 ```toml
 [package]
 name = "my_project"
@@ -406,6 +422,7 @@ debug = true
 ```
 
 ### Cargo Config
+
 Create `.cargo/config.toml`:
 
 ```toml
@@ -446,6 +463,7 @@ RUST_BACKTRACE = "1"
 ## Publishing
 
 ### Publishing to crates.io
+
 ```bash
 # Check if package can be published
 cargo publish --dry-run
@@ -464,6 +482,7 @@ cargo publish --token API_TOKEN
 ```
 
 ### Package Management
+
 ```bash
 # Package without publishing
 cargo package
@@ -478,6 +497,7 @@ cargo verify --manifest-path Cargo.toml
 ## Cross-Compilation
 
 ### Target Management
+
 ```bash
 # Install target
 rustup target add x86_64-unknown-linux-musl
@@ -493,6 +513,7 @@ rustup target remove x86_64-unknown-linux-musl
 ```
 
 ### Cross-Compilation Commands
+
 ```bash
 # Build for specific target
 cargo build --target x86_64-unknown-linux-musl
@@ -507,6 +528,7 @@ cargo run --target x86_64-pc-windows-gnu
 ## Environment Variables
 
 ### Common Variables
+
 ```bash
 # Set Rust home directory
 export RUSTUP_HOME="$HOME/.rustup"
@@ -528,6 +550,7 @@ export CARGO_TARGET_DIR="$HOME/.cargo-target"
 ```
 
 ### Cargo-Specific Variables
+
 ```bash
 # Set cargo home
 export CARGO_HOME="/path/to/cargo"
@@ -548,6 +571,7 @@ export CARGO_NET_GIT_FETCH_WITH_CLI=true
 ## Troubleshooting
 
 ### Common Issues
+
 ```bash
 # Clean build artifacts
 cargo clean
@@ -572,6 +596,7 @@ cargo verify --manifest-path Cargo.toml
 ```
 
 ### Debug Information
+
 ```bash
 # Verbose output
 cargo build --verbose
@@ -589,6 +614,7 @@ cargo build --message-format=json
 ## Integration with IDEs
 
 ### VS Code Integration
+
 ```json
 {
     "rust-analyzer.cargo.loadOutDirsFromCheck": true,
@@ -602,6 +628,7 @@ cargo build --message-format=json
 ```
 
 ### Tasks Configuration
+
 ```json
 {
     "version": "2.0.0",

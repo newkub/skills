@@ -8,9 +8,11 @@ outcome: สามารถใช้ Array, Object, String, Number, Date, แล
 # Built-in Objects
 
 ## Concepts
+
 JavaScript มี built-in objects ที่ให้ methods และ properties สำหรับการทำงานกับข้อมูลประเภทต่างๆ อย่างมีประสิทธิภาพ
 
 ## Best Practices
+
 - ใช้ array methods (map, filter, reduce) แทน loops สำหรับ data transformation
 - ใช้ Object methods สำหรับ object manipulation
 - ใช้ string methods สำหรับ text processing
@@ -21,6 +23,7 @@ JavaScript มี built-in objects ที่ให้ methods และ properti
 ## Examples
 
 ### Array Methods
+
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
 
@@ -53,6 +56,7 @@ console.log(allPositive); // true
 ```
 
 ### Object Methods
+
 ```javascript
 const person = {
   name: "John",
@@ -88,6 +92,7 @@ const sealed = Object.seal(person);
 ```
 
 ### String Methods
+
 ```javascript
 const text = "Hello, World!";
 
@@ -123,6 +128,7 @@ console.log(sliced); // "Hello"
 ```
 
 ### Number Methods
+
 ```javascript
 // parseInt - convert string to integer
 console.log(parseInt("42")); // 42
@@ -152,6 +158,7 @@ console.log(pi.toFixed(2)); // "3.14"
 ```
 
 ### Date Object
+
 ```javascript
 // Create date objects
 const now = new Date();
@@ -183,6 +190,7 @@ console.log(daysDiff); // 1
 ```
 
 ### Math Object
+
 ```javascript
 // Basic operations
 console.log(Math.PI); // 3.141592653589793
@@ -213,6 +221,7 @@ console.log(Math.tan(0)); // 0
 ```
 
 ## Verification
+
 1. ตรวจสอบว่าใช้ array methods แทน loops ได้
 2. ทดสอบ Object methods สำหรับ manipulation
 3. ยืนยันว่า string methods ทำงานได้

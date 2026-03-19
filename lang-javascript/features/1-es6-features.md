@@ -8,9 +8,11 @@ outcome: สามารถใช้ ES6+ features เขียนโค้ด J
 # ES6+ Features
 
 ## Concepts
+
 ES6+ (ECMAScript 2015 และเวอร์ชันใหม่) เป็นมาตรฐาน JavaScript สมัยใหม่ที่เพิ่มฟีเจอร์ใหม่ๆ เพื่อให้การเขียนโค้ดง่ายขึ้นและมีประสิทธิภาพดีขึ้น
 
 ## Best Practices
+
 - ใช้ arrow functions สำหรับ callback และ short functions
 - ใช้ template literals แทน string concatenation
 - ใช้ destructuring สำหรับ extracting values จาก objects/arrays
@@ -21,6 +23,7 @@ ES6+ (ECMAScript 2015 และเวอร์ชันใหม่) เป็�
 ## Examples
 
 ### Arrow Functions
+
 ```javascript
 // Traditional function
 function add(a, b) {
@@ -41,6 +44,7 @@ const calculate = (a, b) => {
 ```
 
 ### Template Literals
+
 ```javascript
 // String concatenation (old way)
 const name = "John";
@@ -59,6 +63,7 @@ const html = `
 ```
 
 ### Destructuring
+
 ```javascript
 // Object destructuring
 const person = {
@@ -80,6 +85,7 @@ console.log(rest);   // [3, 4, 5]
 ```
 
 ### Spread/Rest Operators
+
 ```javascript
 // Spread operator
 const arr1 = [1, 2, 3];
@@ -98,6 +104,7 @@ console.log(sum(1, 2, 3, 4)); // 10
 ```
 
 ### Default Parameters
+
 ```javascript
 // Default parameters
 function greet(name = "World", greeting = "Hello") {
@@ -110,6 +117,7 @@ console.log(greet("John", "Hi"));        // "Hi, John!"
 ```
 
 ### Classes
+
 ```javascript
 class Person {
   constructor(name, age) {
@@ -143,6 +151,7 @@ console.log(student.study()); // "Alice is studying"
 ```
 
 ### Modules
+
 ```javascript
 // math.js (exporting)
 export const PI = 3.14159;
@@ -169,6 +178,7 @@ console.log(calc.multiply(4, 5)); // 20
 ```
 
 ## Verification
+
 1. ตรวจสอบว่าใช้ arrow functions แทน traditional functions ได้
 2. ทดสอบ template literals กับ string interpolation
 3. ยืนยันว่า destructuring ทำงานได้กับ objects และ arrays

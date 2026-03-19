@@ -1,6 +1,7 @@
 # Git Automation Best Practices
 
 ## Git Hooks
+
 ```bash
 # .git/hooks/pre-commit
 #!/bin/bash
@@ -14,6 +15,7 @@ npm run e2e
 ```
 
 ## Git Aliases
+
 ```bash
 # สร้าง aliases สำหรับคำสั่งที่ใช้บ่อย
 git config --global alias.st status
@@ -26,6 +28,7 @@ git config --global alias.visual '!gitk'
 ```
 
 ## GitHub Actions
+
 ```yaml
 # .github/workflows/git-automation.yml
 name: Git Automation
@@ -45,6 +48,7 @@ jobs:
 ```
 
 ## Automated Scripts
+
 ```bash
 #!/bin/bash
 # git-setup.sh - สร้าง repository ใหม่
@@ -58,6 +62,7 @@ git push -u origin main
 ```
 
 ## Git Configuration Scripts
+
 ```bash
 #!/bin/bash
 # setup-git.sh
@@ -69,6 +74,7 @@ git config --global pull.rebase false
 ```
 
 ## Release Automation
+
 ```bash
 #!/bin/bash
 # release.sh
@@ -80,6 +86,7 @@ git push origin v$VERSION
 ```
 
 ## Maintenance Scripts
+
 ```bash
 #!/bin/bash
 # git-maintenance.sh

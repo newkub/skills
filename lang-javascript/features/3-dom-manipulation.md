@@ -8,9 +8,11 @@ outcome: สามารถสร้าง แก้ไข และจัดก
 # DOM Manipulation
 
 ## Concepts
+
 DOM (Document Object Model) คือการแสดง HTML document เป็น tree structure ที่ JavaScript สามารถจัดการได้ DOM manipulation คือการเปลี่ยนแปลง structure, style, และ content ของ HTML elements
 
 ## Best Practices
+
 - ใช้ querySelector และ querySelectorAll สำหรับ element selection
 - ใช้ addEventListener สำหรับ event handling
 - ใช้ createElement และ appendChild สำหรับ dynamic content
@@ -21,6 +23,7 @@ DOM (Document Object Model) คือการแสดง HTML document เป�
 ## Examples
 
 ### Element Selection
+
 ```javascript
 // Select single element
 const button = document.querySelector('#myButton');
@@ -44,6 +47,7 @@ if (button) {
 ```
 
 ### Event Handling
+
 ```javascript
 // Add event listener
 const button = document.querySelector('#myButton');
@@ -91,6 +95,7 @@ list.addEventListener('click', (e) => {
 ```
 
 ### Element Creation and Manipulation
+
 ```javascript
 // Create new element
 const newDiv = document.createElement('div');
@@ -127,6 +132,7 @@ parent.replaceChild(newElement, existingElement);
 ```
 
 ### Style Manipulation
+
 ```javascript
 const element = document.querySelector('.my-element');
 
@@ -159,6 +165,7 @@ console.log(computedStyle.fontSize);
 ```
 
 ### Content Manipulation
+
 ```javascript
 const element = document.querySelector('#content');
 
@@ -187,6 +194,7 @@ document.querySelector('#list').appendChild(fragment);
 ```
 
 ### Form Handling
+
 ```javascript
 const form = document.querySelector('#myForm');
 const input = document.querySelector('#myInput');
@@ -194,11 +202,11 @@ const input = document.querySelector('#myInput');
 // Get form values
 form.addEventListener('submit', (e) => {
   e.preventDefault(); // Prevent default form submission
-  
+
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
   console.log(data);
-  
+
   // Or get individual values
   const name = document.querySelector('#name').value;
   const email = document.querySelector('#email').value;
@@ -208,7 +216,7 @@ form.addEventListener('submit', (e) => {
 // Input validation
 input.addEventListener('input', (e) => {
   const value = e.target.value;
-  
+
   if (value.length < 3) {
     e.target.setCustomValidity('Must be at least 3 characters');
   } else {
@@ -225,6 +233,7 @@ if (form.checkValidity()) {
 ```
 
 ### Common Event Types
+
 ```javascript
 // Mouse events
 element.addEventListener('click', (e) => console.log('Click'));
@@ -238,7 +247,7 @@ element.addEventListener('mouseout', (e) => console.log('Mouse out'));
 document.addEventListener('keydown', (e) => {
   console.log('Key pressed:', e.key);
   console.log('Key code:', e.keyCode);
-  
+
   if (e.key === 'Enter') {
     console.log('Enter key pressed');
   }
@@ -259,6 +268,7 @@ input.addEventListener('blur', (e) => console.log('Input blurred'));
 ```
 
 ## Verification
+
 1. ตรวจสอบว่าสามารถ select elements ได้
 2. ทดสอบ event listeners ทำงานได้
 3. ยืนยันว่าสามารถสร้างและจัดการ elements ได้

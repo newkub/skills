@@ -1,9 +1,11 @@
 # Git Hooks
 
 ## Description
+
 ใช้ Git hooks สำหรับ automation และ quality control
 
 ## Examples
+
 ```bash
 # .git/hooks/pre-commit
 #!/bin/bash
@@ -25,6 +27,7 @@ fi
 ```
 
 ## Anti-patterns
+
 ❌ ไม่ใช้ hooks สำหรับ quality control
 ❌ ทำให้ hooks ทำงานช้าเกินไป
 ❌ ไม่ commit hooks ไปยัง repository

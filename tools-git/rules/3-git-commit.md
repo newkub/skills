@@ -1,9 +1,11 @@
 # Git Commit
 
 ## Description
+
 เขียน commit messages ที่ดีและทำ commit อย่างมีระเบียบ
 
 ## Examples
+
 ```bash
 # Commit ที่ดี
 git commit -m "feat: add user authentication system"
@@ -19,6 +21,7 @@ git commit --amend -m "feat: add user authentication with OAuth2"
 ```
 
 ## Anti-patterns
+
 ❌ Commit messages: "fix bug", "update", "temp"
 ❌ Commit ไฟล์ที่ไม่เกี่ยวข้องรวมกัน
 ❌ Commit ไฟล์ขนาดใหญ่โดยไม่แบ่ง

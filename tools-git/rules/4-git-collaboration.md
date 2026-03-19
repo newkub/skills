@@ -1,9 +1,11 @@
 # Git Collaboration
 
 ## Description
+
 ทำงานร่วมกับทีมโดยใช้ Git อย่างมีประสิทธิภาพ
 
 ## Examples
+
 ```bash
 # ดูการเปลี่ยนแปลงล่าสุดจาก remote
 git fetch origin
@@ -22,6 +24,7 @@ git commit -m "resolve merge conflicts"
 ```
 
 ## Anti-patterns
+
 ❌ ใช้ `git push --force` บน shared branches
 ❌ ไม่ sync กับ remote ก่อนทำงาน
 ❌ ไม่ resolve conflicts อย่างถูกต้อง

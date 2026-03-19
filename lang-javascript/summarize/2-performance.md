@@ -8,6 +8,7 @@ outcome: สามารถเขียน JavaScript code ที่ fast, effic
 # Performance Best Practices
 
 ## Overview
+
 Best practices สำหรับการปรับปรุงประสิทธิภาพ JavaScript code ทั้งใน browser และ Node.js
 
 ## Best Practices Summary
@@ -28,6 +29,7 @@ Best practices สำหรับการปรับปรุงประส�
 ## Implementation Guidelines
 
 ### High Priority Practices
+
 1. **Use modern array methods** - `map`, `filter`, `reduce` over loops
 2. **Avoid memory leaks** - Proper cleanup of event listeners
 3. **Minimize DOM manipulation** - Batch updates
@@ -35,6 +37,7 @@ Best practices สำหรับการปรับปรุงประส�
 5. **Avoid blocking operations** - Use async patterns
 
 ### Medium Priority Practices
+
 1. **Use debouncing/throttling** - Optimize event handlers
 2. **Use lazy loading** - Improve initial load time
 3. **Use requestAnimationFrame** - Smooth animations
@@ -43,17 +46,20 @@ Best practices สำหรับการปรับปรุงประส�
 ### Performance Checklist
 
 #### Before Optimization
+
 - [ ] Profile current performance
 - [ ] Identify bottlenecks
 - [ ] Set performance budgets
 
 #### During Development
+
 - [ ] Use efficient data structures
 - [ ] Minimize DOM operations
 - [ ] Implement proper cleanup
 - [ ] Use async patterns correctly
 
 #### After Development
+
 - [ ] Run performance tests
 - [ ] Check memory usage
 - [ ] Verify load times
@@ -72,11 +78,13 @@ Best practices สำหรับการปรับปรุงประส�
 ## Performance Tools
 
 ### Browser Tools
+
 - **Chrome DevTools** - Performance profiling
 - **Lighthouse** - Performance auditing
 - **WebPageTest** - Real-world performance testing
 
 ### Node.js Tools
+
 - **Node.js Profiler** - CPU and memory profiling
 - **Clinic.js** - Performance diagnostics
 - **0x** - Flame graph profiling
@@ -84,6 +92,7 @@ Best practices สำหรับการปรับปรุงประส�
 ## Examples
 
 ### Efficient Array Operations
+
 ```javascript
 // Good: Use array methods
 const numbers = [1, 2, 3, 4, 5];
@@ -99,6 +108,7 @@ for (let i = 0; i < numbers.length; i++) {
 ```
 
 ### DOM Optimization
+
 ```javascript
 // Good: Batch DOM updates
 const fragment = document.createDocumentFragment();
@@ -118,6 +128,7 @@ items.forEach(item => {
 ```
 
 ### Event Optimization
+
 ```javascript
 // Good: Debouncing
 function debounce(func, wait) {
@@ -144,6 +155,7 @@ document.getElementById('list').addEventListener('click', (e) => {
 ```
 
 ### Memory Management
+
 ```javascript
 // Good: Proper cleanup
 class Component {
@@ -151,7 +163,7 @@ class Component {
     this.handleClick = this.handleClick.bind(this);
     this.element.addEventListener('click', this.handleClick);
   }
-  
+
   destroy() {
     this.element.removeEventListener('click', this.handleClick);
     this.element = null;
@@ -169,6 +181,7 @@ class Component {
 ```
 
 ### Async Optimization
+
 ```javascript
 // Good: Parallel operations
 async function fetchUserData() {
@@ -177,7 +190,7 @@ async function fetchUserData() {
     fetchPosts(),
     fetchComments()
   ]);
-  
+
   return { user, posts, comments };
 }
 
@@ -186,12 +199,13 @@ async function fetchUserData() {
   const user = await fetchUser();
   const posts = await fetchPosts();
   const comments = await fetchComments();
-  
+
   return { user, posts, comments };
 }
 ```
 
 ### Web Workers
+
 ```javascript
 // Main thread
 const worker = new Worker('worker.js');
@@ -217,6 +231,7 @@ function processLargeDataSet(data) {
 ## Performance Metrics
 
 ### Key Metrics to Monitor
+
 - **First Contentful Paint (FCP)** - When content first appears
 - **Largest Contentful Paint (LCP)** - When main content loads
 - **Time to Interactive (TTI)** - When page becomes interactive
@@ -224,11 +239,13 @@ function processLargeDataSet(data) {
 - **First Input Delay (FID)** - Responsiveness to user input
 
 ### Memory Metrics
+
 - **Heap size** - Memory usage over time
 - **Garbage collection frequency** - GC performance impact
 - **Memory leaks** - Unreleased memory
 
 ## Verification
+
 1. ตรวจสอบว่าใช้ array methods แทน loops
 2. ทดสอบว่าไม่มี memory leaks
 3. ยืนยันว่า DOM operations ถูก batch

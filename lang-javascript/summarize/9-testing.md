@@ -8,6 +8,7 @@ outcome: สามารถเขียน unit tests, integration tests แล�
 # Testing Best Practices
 
 ## Overview
+
 Best practices สำหรับการเขียน tests ใน JavaScript รวมถึง unit tests, integration tests, E2E tests และ testing strategies
 
 ## Best Practices Summary
@@ -28,6 +29,7 @@ Best practices สำหรับการเขียน tests ใน JavaScrip
 ## Implementation Guidelines
 
 ### High Priority Practices
+
 1. **Write comprehensive unit tests** - Ensure code reliability
 2. **Test async operations properly** - Handle promises and async/await
 3. **Implement test coverage** - Aim for 80%+ coverage
@@ -35,6 +37,7 @@ Best practices สำหรับการเขียน tests ใน JavaScrip
 5. **Implement CI/CD testing** - Automated testing pipeline
 
 ### Medium Priority Practices
+
 1. **Use descriptive test names** - Better documentation
 2. **Test edge cases** - Robust error handling
 3. **Use test doubles** - Isolated testing
@@ -44,6 +47,7 @@ Best practices สำหรับการเขียน tests ใน JavaScrip
 ### Testing Checklist
 
 #### Test Structure
+
 - [ ] Use descriptive test names
 - [ ] Follow AAA pattern
 - [ ] Group related tests
@@ -51,6 +55,7 @@ Best practices สำหรับการเขียน tests ใน JavaScrip
 - [ ] Keep tests focused
 
 #### Test Coverage
+
 - [ ] Test happy path
 - [ ] Test error cases
 - [ ] Test edge cases
@@ -58,6 +63,7 @@ Best practices สำหรับการเขียน tests ใน JavaScrip
 - [ ] Measure coverage
 
 #### Test Quality
+
 - [ ] Tests are independent
 - [ ] Tests are deterministic
 - [ ] Tests run quickly
@@ -77,6 +83,7 @@ Best practices สำหรับการเขียน tests ใน JavaScrip
 ## Testing Examples
 
 ### Unit Testing with Jest
+
 ```javascript
 // Good: Comprehensive unit tests
 const { calculateTotal, applyDiscount, validateUser } = require('./utils');
@@ -86,83 +93,83 @@ describe('Utils', () => {
     test('should calculate total of positive numbers', () => {
       // Arrange
       const items = [10, 20, 30];
-      
+
       // Act
       const result = calculateTotal(items);
-      
+
       // Assert
       expect(result).toBe(60);
     });
-    
+
     test('should return 0 for empty array', () => {
       // Arrange
       const items = [];
-      
+
       // Act
       const result = calculateTotal(items);
-      
+
       // Assert
       expect(result).toBe(0);
     });
-    
+
     test('should handle negative numbers', () => {
       // Arrange
       const items = [10, -5, 20];
-      
+
       // Act
       const result = calculateTotal(items);
-      
+
       // Assert
       expect(result).toBe(25);
     });
-    
+
     test('should throw error for non-array input', () => {
       // Arrange
       const items = 'not an array';
-      
+
       // Act & Assert
       expect(() => calculateTotal(items)).toThrow('Input must be an array');
     });
   });
-  
+
   describe('applyDiscount', () => {
     test('should apply percentage discount correctly', () => {
       // Arrange
       const price = 100;
       const discount = 0.2; // 20%
-      
+
       // Act
       const result = applyDiscount(price, discount);
-      
+
       // Assert
       expect(result).toBe(80);
     });
-    
+
     test('should handle zero discount', () => {
       // Arrange
       const price = 100;
       const discount = 0;
-      
+
       // Act
       const result = applyDiscount(price, discount);
-      
+
       // Assert
       expect(result).toBe(100);
     });
-    
+
     test('should handle maximum discount', () => {
       // Arrange
       const price = 100;
       const discount = 1; // 100%
-      
+
       // Act
       const result = applyDiscount(price, discount);
-      
+
       // Assert
       expect(result).toBe(0);
     });
   });
-  
+
   describe('validateUser', () => {
     test('should validate valid user object', () => {
       // Arrange
@@ -171,14 +178,14 @@ describe('Utils', () => {
         name: 'John Doe',
         email: 'john@example.com'
       };
-      
+
       // Act
       const result = validateUser(user);
-      
+
       // Assert
       expect(result).toBe(true);
     });
-    
+
     test('should reject user without required fields', () => {
       // Arrange
       const user = {
@@ -186,14 +193,14 @@ describe('Utils', () => {
         name: 'John Doe'
         // Missing email
       };
-      
+
       // Act
       const result = validateUser(user);
-      
+
       // Assert
       expect(result).toBe(false);
     });
-    
+
     test('should reject invalid email format', () => {
       // Arrange
       const user = {
@@ -201,10 +208,10 @@ describe('Utils', () => {
         name: 'John Doe',
         email: 'invalid-email'
       };
-      
+
       // Act
       const result = validateUser(user);
-      
+
       // Assert
       expect(result).toBe(false);
     });
@@ -213,6 +220,7 @@ describe('Utils', () => {
 ```
 
 ### Async Function Testing
+
 ```javascript
 // Good: Testing async operations
 const { fetchUserData, saveUser } = require('./api');
@@ -224,7 +232,7 @@ describe('API Functions', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  
+
   describe('fetchUserData', () => {
     test('should fetch user data successfully', async () => {
       // Arrange
@@ -233,23 +241,23 @@ describe('API Functions', () => {
         ok: true,
         json: jest.fn().mockResolvedValue(mockUser)
       });
-      
+
       // Act
       const result = await fetchUserData(1);
-      
+
       // Assert
       expect(result).toEqual(mockUser);
       expect(fetch).toHaveBeenCalledWith('https://api.example.com/users/1');
     });
-    
+
     test('should handle network error', async () => {
       // Arrange
       fetch.mockRejectedValueOnce(new Error('Network error'));
-      
+
       // Act & Assert
       await expect(fetchUserData(1)).rejects.toThrow('Network error');
     });
-    
+
     test('should handle HTTP error response', async () => {
       // Arrange
       fetch.mockResolvedValueOnce({
@@ -257,37 +265,37 @@ describe('API Functions', () => {
         status: 404,
         statusText: 'Not Found'
       });
-      
+
       // Act & Assert
       await expect(fetchUserData(1)).rejects.toThrow('HTTP error! status: 404');
     });
-    
+
     test('should handle invalid JSON response', async () => {
       // Arrange
       fetch.mockResolvedValueOnce({
         ok: true,
         json: jest.fn().mockRejectedValue(new Error('Invalid JSON'))
       });
-      
+
       // Act & Assert
       await expect(fetchUserData(1)).rejects.toThrow('Invalid JSON');
     });
   });
-  
+
   describe('saveUser', () => {
     test('should save user successfully', async () => {
       // Arrange
       const user = { name: 'John Doe', email: 'john@example.com' };
       const mockResponse = { id: 1, ...user };
-      
+
       fetch.mockResolvedValueOnce({
         ok: true,
         json: jest.fn().mockResolvedValue(mockResponse)
       });
-      
+
       // Act
       const result = await saveUser(user);
-      
+
       // Assert
       expect(result).toEqual(mockResponse);
       expect(fetch).toHaveBeenCalledWith('https://api.example.com/users', {
@@ -303,6 +311,7 @@ describe('API Functions', () => {
 ```
 
 ### Mock Testing
+
 ```javascript
 // Good: Using mocks for external dependencies
 const { UserService } = require('./userService');
@@ -318,66 +327,66 @@ const database = require('./database');
 
 describe('UserService', () => {
   let userService;
-  
+
   beforeEach(() => {
     userService = new UserService();
     jest.clearAllMocks();
   });
-  
+
   describe('getUserById', () => {
     test('should return user when found', async () => {
       // Arrange
       const mockUser = { id: 1, name: 'John Doe' };
       database.findUserById.mockResolvedValue(mockUser);
-      
+
       // Act
       const result = await userService.getUserById(1);
-      
+
       // Assert
       expect(result).toEqual(mockUser);
       expect(database.findUserById).toHaveBeenCalledWith(1);
     });
-    
+
     test('should return null when user not found', async () => {
       // Arrange
       database.findUserById.mockResolvedValue(null);
-      
+
       // Act
       const result = await userService.getUserById(999);
-      
+
       // Assert
       expect(result).toBeNull();
       expect(database.findUserById).toHaveBeenCalledWith(999);
     });
-    
+
     test('should handle database error', async () => {
       // Arrange
       database.findUserById.mockRejectedValue(new Error('Database connection failed'));
-      
+
       // Act & Assert
       await expect(userService.getUserById(1)).rejects.toThrow('Database connection failed');
     });
   });
-  
+
   describe('createUser', () => {
     test('should create user successfully', async () => {
       // Arrange
       const userData = { name: 'John Doe', email: 'john@example.com' };
       const mockCreatedUser = { id: 1, ...userData, createdAt: new Date() };
       database.saveUser.mockResolvedValue(mockCreatedUser);
-      
+
       // Act
       const result = await userService.createUser(userData);
-      
+
       // Assert
       expect(result).toEqual(mockCreatedUser);
       expect(database.saveUser).toHaveBeenCalledWith(userData);
     });
-    
+
     test('should validate user data before saving', async () => {
       // Arrange
       const invalidUserData = { name: '', email: 'invalid-email' };
-      
+
       // Act & Assert
       await expect(userService.createUser(invalidUserData))
         .rejects.toThrow('Invalid user data');
@@ -388,6 +397,7 @@ describe('UserService', () => {
 ```
 
 ### Integration Testing
+
 ```javascript
 // Good: Integration tests for multiple components
 const request = require('supertest');
@@ -398,11 +408,11 @@ describe('User API Integration Tests', () => {
   beforeAll(async () => {
     await setupDatabase();
   });
-  
+
   afterAll(async () => {
     await cleanupDatabase();
   });
-  
+
   describe('POST /api/users', () => {
     test('should create user successfully', async () => {
       // Arrange
@@ -411,13 +421,13 @@ describe('User API Integration Tests', () => {
         email: 'john@example.com',
         password: 'password123'
       };
-      
+
       // Act
       const response = await request(app)
         .post('/api/users')
         .send(userData)
         .expect(201);
-      
+
       // Assert
       expect(response.body).toMatchObject({
         id: expect.any(Number),
@@ -426,26 +436,26 @@ describe('User API Integration Tests', () => {
       });
       expect(response.body).not.toHaveProperty('password');
     });
-    
+
     test('should return validation error for invalid data', async () => {
       // Arrange
       const invalidUserData = {
         name: '',
         email: 'invalid-email'
       };
-      
+
       // Act
       const response = await request(app)
         .post('/api/users')
         .send(invalidUserData)
         .expect(400);
-      
+
       // Assert
       expect(response.body).toHaveProperty('error');
       expect(response.body.error).toContain('validation');
     });
   });
-  
+
   describe('GET /api/users/:id', () => {
     test('should return user when found', async () => {
       // Arrange
@@ -456,12 +466,12 @@ describe('User API Integration Tests', () => {
           email: 'jane@example.com',
           password: 'password123'
         });
-      
+
       // Act
       const response = await request(app)
         .get(`/api/users/${createdUser.body.id}`)
         .expect(200);
-      
+
       // Assert
       expect(response.body).toMatchObject({
         id: createdUser.body.id,
@@ -469,13 +479,13 @@ describe('User API Integration Tests', () => {
         email: 'jane@example.com'
       });
     });
-    
+
     test('should return 404 when user not found', async () => {
       // Act
       const response = await request(app)
         .get('/api/users/99999')
         .expect(404);
-      
+
       // Assert
       expect(response.body).toHaveProperty('error', 'User not found');
     });
@@ -484,6 +494,7 @@ describe('User API Integration Tests', () => {
 ```
 
 ### E2E Testing with Playwright
+
 ```javascript
 // Good: E2E tests with Playwright
 const { test, expect } = require('@playwright/test');
@@ -492,42 +503,42 @@ test.describe('User Registration Flow', () => {
   test('should register new user successfully', async ({ page }) => {
     // Arrange
     await page.goto('/register');
-    
+
     // Act
     await page.fill('[data-testid=name-input]', 'John Doe');
     await page.fill('[data-testid=email-input]', 'john@example.com');
     await page.fill('[data-testid=password-input]', 'password123');
     await page.fill('[data-testid=confirm-password-input]', 'password123');
     await page.click('[data-testid=register-button]');
-    
+
     // Assert
     await expect(page.locator('[data-testid=success-message]')).toBeVisible();
     await expect(page.locator('[data-testid=success-message]')).toContainText(
       'Registration successful'
     );
-    
+
     // Verify user is logged in
     await expect(page.locator('[data-testid=user-menu]')).toContainText('John Doe');
   });
-  
+
   test('should show validation errors for invalid input', async ({ page }) => {
     // Arrange
     await page.goto('/register');
-    
+
     // Act
     await page.fill('[data-testid=name-input]', '');
     await page.fill('[data-testid=email-input]', 'invalid-email');
     await page.fill('[data-testid=password-input]', '123');
     await page.fill('[data-testid=confirm-password-input]', '456');
     await page.click('[data-testid=register-button]');
-    
+
     // Assert
     await expect(page.locator('[data-testid=name-error]')).toBeVisible();
     await expect(page.locator('[data-testid=email-error]')).toBeVisible();
     await expect(page.locator('[data-testid=password-error]')).toBeVisible();
     await expect(page.locator('[data-testid=confirm-password-error]')).toBeVisible();
   });
-  
+
   test('should handle duplicate email registration', async ({ page }) => {
     // Arrange - First register a user
     await page.goto('/register');
@@ -536,10 +547,10 @@ test.describe('User Registration Flow', () => {
     await page.fill('[data-testid=password-input]', 'password123');
     await page.fill('[data-testid=confirm-password-input]', 'password123');
     await page.click('[data-testid=register-button]');
-    
+
     // Wait for registration to complete
     await page.locator('[data-testid=success-message]').waitFor({ state: 'hidden' });
-    
+
     // Act - Try to register with same email
     await page.goto('/register');
     await page.fill('[data-testid=name-input]', 'Jane Smith');
@@ -547,7 +558,7 @@ test.describe('User Registration Flow', () => {
     await page.fill('[data-testid=password-input]', 'password456');
     await page.fill('[data-testid=confirm-password-input]', 'password456');
     await page.click('[data-testid=register-button]');
-    
+
     // Assert
     await expect(page.locator('[data-testid=email-error]')).toBeVisible();
     await expect(page.locator('[data-testid=email-error]')).toContainText(
@@ -558,6 +569,7 @@ test.describe('User Registration Flow', () => {
 ```
 
 ### Test Utilities and Helpers
+
 ```javascript
 // Good: Test utilities for common operations
 class TestUtils {
@@ -567,32 +579,32 @@ class TestUtils {
       email: 'test@example.com',
       password: 'password123'
     };
-    
+
     const user = { ...defaultUser, ...userData };
-    
+
     const response = await request(app)
       .post('/api/users')
       .send(user);
-    
+
     return response.body;
   }
-  
+
   static async createTestPost(userId, postData = {}) {
     const defaultPost = {
       title: 'Test Post',
       content: 'This is a test post',
       userId
     };
-    
+
     const post = { ...defaultPost, ...postData };
-    
+
     const response = await request(app)
       .post('/api/posts')
       .send(post);
-    
+
     return response.body;
   }
-  
+
   static async authenticateUser(user) {
     const response = await request(app)
       .post('/api/auth/login')
@@ -600,29 +612,29 @@ class TestUtils {
         email: user.email,
         password: user.password
       });
-    
+
     return response.body.token;
   }
-  
+
   static generateRandomEmail() {
     return `test-${Date.now()}@example.com`;
   }
-  
+
   static generateRandomString(length = 10) {
     return Math.random().toString(36).substring(2, 2 + length);
   }
-  
+
   static async delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
-  
+
   static expectValidUser(user) {
     expect(user).toHaveProperty('id');
     expect(user).toHaveProperty('name');
     expect(user).toHaveProperty('email');
     expect(user).not.toHaveProperty('password');
   }
-  
+
   static expectValidError(error, expectedMessage) {
     expect(error).toHaveProperty('error');
     if (expectedMessage) {
@@ -636,10 +648,10 @@ describe('User Service with TestUtils', () => {
   test('should create and retrieve user', async () => {
     // Arrange
     const user = await TestUtils.createTestUser();
-    
+
     // Act
     const retrievedUser = await userService.getUserById(user.id);
-    
+
     // Assert
     TestUtils.expectValidUser(retrievedUser);
     expect(retrievedUser.id).toBe(user.id);
@@ -650,6 +662,7 @@ describe('User Service with TestUtils', () => {
 ## Testing Configuration
 
 ### Jest Configuration
+
 ```javascript
 // jest.config.js
 module.exports = {
@@ -679,6 +692,7 @@ module.exports = {
 ```
 
 ## Verification
+
 1. ตรวจสอบว่ามี unit tests ที่ครอบคลุม
 2. ทดสอบว่า async operations ถูก test อย่างถูกต้อง
 3. ยืนยันว่ามี test coverage ที่เหมาะสม

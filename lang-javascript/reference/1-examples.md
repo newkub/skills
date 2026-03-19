@@ -13,6 +13,7 @@ npm install -D nodemon jest supertest
 ```
 
 **package.json**
+
 ```json
 {
   "name": "my-express-app",
@@ -27,6 +28,7 @@ npm install -D nodemon jest supertest
 ```
 
 **src/index.js**
+
 ```javascript
 const express = require('express');
 const cors = require('cors');
@@ -73,6 +75,7 @@ npm install axios react-router-dom
 ```
 
 **src/App.jsx**
+
 ```jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -101,6 +104,7 @@ export default App;
 ```
 
 **src/components/Navbar.jsx**
+
 ```jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -133,6 +137,7 @@ npm install axios vue-router
 ```
 
 **src/App.vue**
+
 ```vue
 <template>
   <div id="app">
@@ -186,6 +191,7 @@ npm install -D jest
 ```
 
 **bin/cli.js**
+
 ```javascript
 #!/usr/bin/env node
 
@@ -254,6 +260,7 @@ npm install -D rollup @rollup/plugin-node-resolve @rollup/plugin-commonjs rollup
 ```
 
 **src/index.js**
+
 ```javascript
 /**
  * My Library - A collection of utility functions
@@ -315,6 +322,7 @@ export default {
 ```
 
 **rollup.config.js**
+
 ```javascript
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
@@ -355,7 +363,8 @@ export default [
 ### 6. Full-Stack App (Express + React)
 
 **Backend Structure**
-```
+
+```text
 backend/
 ├── src/
 │   ├── controllers/
@@ -368,7 +377,8 @@ backend/
 ```
 
 **Frontend Structure**
-```
+
+```text
 frontend/
 ├── src/
 │   ├── components/
@@ -382,6 +392,7 @@ frontend/
 ```
 
 **Root package.json**
+
 ```json
 {
   "name": "fullstack-app",
@@ -403,7 +414,8 @@ frontend/
 ### Common Configuration Files
 
 **.gitignore**
-```
+
+```text
 node_modules/
 .env
 .env.local
@@ -418,6 +430,7 @@ coverage/
 ```
 
 **.eslintrc.js**
+
 ```javascript
 module.exports = {
   env: {
@@ -443,6 +456,7 @@ module.exports = {
 ```
 
 **.prettierrc**
+
 ```json
 {
   "semi": true,

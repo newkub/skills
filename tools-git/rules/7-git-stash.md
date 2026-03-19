@@ -1,9 +1,11 @@
 # Git Stash
 
 ## Description
+
 ใช้ stash สำหรับเก็บการเปลี่ยนแปลงชั่วคราว
 
 ## Examples
+
 ```bash
 # เก็บการเปลี่ยนแปลงปัจจุบัน
 git stash
@@ -28,6 +30,7 @@ git stash clear
 ```
 
 ## Anti-patterns
+
 ❌ ใช้ stash แทนการทำงานบน feature branch
 ❌ เก็บ stashes ไว้นานโดยไม่จำเป็น
 ❌ ไม่ตั้งชื่อ stash ที่สำคัญ

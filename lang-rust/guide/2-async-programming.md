@@ -3,6 +3,7 @@
 ## Async/Await Fundamentals
 
 ### Basic Async Syntax
+
 Understand the core async/await syntax:
 
 ```rust
@@ -23,6 +24,7 @@ async fn main() {
 ```
 
 ### Async Traits
+
 Work with async in trait definitions:
 
 ```rust
@@ -52,6 +54,7 @@ async fn trait_example() {
 ## Concurrency Patterns
 
 ### Running Multiple Futures
+
 Execute multiple async operations concurrently:
 
 ```rust
@@ -69,10 +72,10 @@ async fn concurrent_fetch() {
         fetch_data("source2"),
         fetch_data("source3"),
     ];
-    
+
     // Run all futures concurrently
     let results = futures::future::join_all(futures).await;
-    
+
     for (i, result) in results.into_iter().enumerate() {
         println!("Result {}: {}", i + 1, result);
     }
@@ -81,7 +84,7 @@ async fn concurrent_fetch() {
 async fn selective_fetch() {
     let future1 = fetch_data("source1");
     let future2 = fetch_data("source2");
-    
+
     // Wait for the first to complete
     match futures::future::select(future1, future2).await {
         futures::future::Either::Left((result, _)) => {
@@ -95,6 +98,7 @@ async fn selective_fetch() {
 ```
 
 ### Error Handling in Async
+
 Handle errors properly in async contexts:
 
 ```rust
@@ -111,7 +115,7 @@ enum AsyncError {
 async fn fetch_with_error() -> Result<String, AsyncError> {
     // Simulate network operation
     tokio::time::sleep(Duration::from_millis(100)).await;
-    
+
     // Simulate error
     Err(AsyncError::Network("Connection failed".to_string()))
 }
@@ -121,7 +125,7 @@ async fn error_handling_example() {
         Ok(data) => println!("Success: {}", data),
         Err(error) => println!("Error: {}", error),
     }
-    
+
     // Use ? operator in async functions
     async fn process_data() -> Result<String, AsyncError> {
         let data = fetch_with_error().await?;
@@ -133,6 +137,7 @@ async fn error_handling_example() {
 ## Async I/O Operations
 
 ### File Operations
+
 Perform async file operations:
 
 ```rust
@@ -144,19 +149,20 @@ async fn async_file_operations() -> Result<(), Box<dyn std::error::Error>> {
     let mut file = fs::File::create("async_data.txt").await?;
     file.write_all(b"Hello, async world!").await?;
     file.flush().await?;
-    
+
     // Read from file asynchronously
     let mut file = fs::File::open("async_data.txt").await?;
     let mut contents = String::new();
     file.read_to_string(&mut contents).await?;
-    
+
     println!("File contents: {}", contents);
-    
+
     Ok(())
 }
 ```
 
 ### Network Operations
+
 Create async network clients:
 
 ```rust
@@ -177,6 +183,7 @@ async fn network_example() -> Result<(), Box<dyn std::error::Error>> {
 ```
 
 ### TCP Server
+
 Build an async TCP server:
 
 ```rust
@@ -185,30 +192,30 @@ use tokio::io::{AsyncReadExt, AsyncWriteExt};
 
 async fn handle_client(mut stream: TcpStream) -> Result<(), Box<dyn std::error::Error>> {
     let mut buffer = [0; 1024];
-    
+
     loop {
         let bytes_read = stream.read(&mut buffer).await?;
-        
+
         if bytes_read == 0 {
             break;
         }
-        
+
         let response = format!("Echo: {}", String::from_utf8_lossy(&buffer[..bytes_read]));
         stream.write_all(response.as_bytes()).await?;
     }
-    
+
     Ok(())
 }
 
 async fn tcp_server() -> Result<(), Box<dyn std::error::Error>> {
     let listener = TcpListener::bind("127.0.0.1:8080").await?;
-    
+
     println!("Server listening on 127.0.0.1:8080");
-    
+
     loop {
         let (stream, addr) = listener.accept().await?;
         println!("New connection from: {}", addr);
-        
+
         tokio::spawn(async move {
             if let Err(e) = handle_client(stream).await {
                 eprintln!("Error handling client: {}", e);
@@ -221,6 +228,7 @@ async fn tcp_server() -> Result<(), Box<dyn std::error::Error>> {
 ## Streams and Iterators
 
 ### Async Streams
+
 Work with streams of data:
 
 ```rust
@@ -228,13 +236,13 @@ use futures::stream::{self, StreamExt};
 
 async fn stream_example() {
     let numbers = stream::iter(1..=10);
-    
+
     let processed = numbers
         .map(|x| x * 2)
         .filter(|&x| x > 10)
         .collect::<Vec<_>>()
         .await;
-    
+
     println!("Processed numbers: {:?}", processed);
 }
 
@@ -250,7 +258,7 @@ async fn infinite_stream() {
             }
         }
     });
-    
+
     stream.for_each(|num| async move {
         println!("Stream item: {}", num);
     }).await;
@@ -258,6 +266,7 @@ async fn infinite_stream() {
 ```
 
 ### Async Iterators
+
 Create custom async iterators:
 
 ```rust
@@ -276,7 +285,7 @@ impl AsyncCounter {
 
 impl Stream for AsyncCounter {
     type Item = u32;
-    
+
     fn poll_next(
         mut self: std::pin::Pin<&mut Self>,
         _cx: &mut std::task::Context<'_>,
@@ -293,7 +302,7 @@ impl Stream for AsyncCounter {
 
 async fn custom_stream_example() {
     let counter = AsyncCounter::new(5);
-    
+
     counter.for_each(|num| async move {
         println!("Counter: {}", num);
     }).await;
@@ -303,6 +312,7 @@ async fn custom_stream_example() {
 ## Advanced Patterns
 
 ### Cancellation
+
 Handle cancellation gracefully:
 
 ```rust
@@ -333,18 +343,18 @@ async fn long_running_operation() -> String {
 async fn cancellation_example() {
     let token = CancellationToken::new();
     let token_clone = token.clone();
-    
+
     // Start operation
     let operation_handle = tokio::spawn(async move {
         cancellable_operation(token_clone).await
     });
-    
+
     // Cancel after 2 seconds
     tokio::spawn(async move {
         sleep(Duration::from_secs(2)).await;
         token.cancel();
     });
-    
+
     match operation_handle.await.unwrap() {
         Ok(result) => println!("Success: {}", result),
         Err(error) => println!("Error: {}", error),
@@ -353,6 +363,7 @@ async fn cancellation_example() {
 ```
 
 ### Timeout Handling
+
 Implement timeouts for async operations:
 
 ```rust
@@ -363,7 +374,7 @@ async fn with_timeout() -> Result<String, Box<dyn std::error::Error>> {
         sleep(Duration::from_secs(3)).await;
         "Operation completed".to_string()
     };
-    
+
     match timeout(Duration::from_secs(2), operation).await {
         Ok(result) => {
             println!("Operation succeeded: {}", result);
@@ -378,6 +389,7 @@ async fn with_timeout() -> Result<String, Box<dyn std::error::Error>> {
 ```
 
 ### Resource Management
+
 Manage resources in async contexts:
 
 ```rust
@@ -386,19 +398,19 @@ use tokio::sync::Semaphore;
 async fn resource_management() {
     let semaphore = Arc::new(Semaphore::new(3)); // Limit to 3 concurrent operations
     let mut handles = vec![];
-    
+
     for i in 0..10 {
         let semaphore_clone = Arc::clone(&semaphore);
         let handle = tokio::spawn(async move {
             let _permit = semaphore_clone.acquire().await.unwrap();
-            
+
             println!("Task {} started", i);
             sleep(Duration::from_millis(1000)).await;
             println!("Task {} completed", i);
         });
         handles.push(handle);
     }
-    
+
     for handle in handles {
         handle.await.unwrap();
     }
@@ -408,6 +420,7 @@ async fn resource_management() {
 ## Performance Optimization
 
 ### Buffering and Batching
+
 Optimize async operations with buffering:
 
 ```rust
@@ -415,7 +428,7 @@ use futures::stream::{self, StreamExt};
 
 async fn buffered_processing() {
     let items = stream::iter(1..=100);
-    
+
     let processed = items
         .map(|i| async move {
             // Simulate async work
@@ -425,12 +438,13 @@ async fn buffered_processing() {
         .buffer_unordered(10) // Process up to 10 items concurrently
         .collect::<Vec<_>>()
         .await;
-    
+
     println!("Processed {} items", processed.len());
 }
 ```
 
 ### Connection Pooling
+
 Reuse connections efficiently:
 
 ```rust
@@ -446,10 +460,10 @@ impl ConnectionPool {
         let connections = Arc::new(Mutex::new(VecDeque::new()));
         Self { connections }
     }
-    
+
     async fn get_connection(&self) -> String {
         let mut connections = self.connections.lock().await;
-        
+
         if let Some(conn) = connections.pop_front() {
             conn
         } else {
@@ -457,7 +471,7 @@ impl ConnectionPool {
             format!("connection_{}", rand::random::<u32>())
         }
     }
-    
+
     async fn return_connection(&self, conn: String) {
         let mut connections = self.connections.lock().await;
         connections.push_back(conn);
@@ -467,21 +481,21 @@ impl ConnectionPool {
 async fn connection_pool_example() {
     let pool = Arc::new(ConnectionPool::new());
     let mut handles = vec![];
-    
+
     for i in 0..5 {
         let pool_clone = Arc::clone(&pool);
         let handle = tokio::spawn(async move {
             let conn = pool_clone.get_connection().await;
             println!("Task {} using {}", i, conn);
-            
+
             // Simulate work
             tokio::time::sleep(Duration::from_millis(100)).await;
-            
+
             pool_clone.return_connection(conn).await;
         });
         handles.push(handle);
     }
-    
+
     for handle in handles {
         handle.await.unwrap();
     }

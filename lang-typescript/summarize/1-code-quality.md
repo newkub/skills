@@ -16,6 +16,7 @@
 | **Error Handling** | ใช้ type guards | `function isString(value: unknown): value is string {}` | Runtime type checking |
 
 ### หลักการสำคัญ
+
 1. **Explicit is better than implicit** - กำหนด types ชัดเจนเสมอ
 2. **Consistency** - ใช้ naming conventions แบบเดียวกันทั้ง project
 3. **Type safety first** - ไม่ยอมละทิ้ง type safety เพื่อความสะดวก

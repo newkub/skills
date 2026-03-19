@@ -3,6 +3,7 @@
 Design patterns ที่พบบ่อยใน TypeScript
 
 ### Builder Pattern
+
 ```typescript
 // ✅ Good - Type-safe builder
 class QueryBuilder<T = {}> {
@@ -29,6 +30,7 @@ const query = new QueryBuilder<User>()
 ```
 
 ### Factory Pattern
+
 ```typescript
 // ✅ Good - Generic factory
 interface Constructor<T = {}> {
@@ -49,6 +51,7 @@ const userService = ServiceFactory.create(UserService, logger);
 ```
 
 ### Repository Pattern
+
 ```typescript
 // ✅ Good - Generic repository
 interface Repository<T, Id = string> {
@@ -76,6 +79,7 @@ class InMemoryRepository<T, Id = string> implements Repository<T, Id> {
 ```
 
 ### Observer Pattern
+
 ```typescript
 // ✅ Good - Type-safe events
 type EventMap = Record<string, any>;
@@ -108,6 +112,7 @@ emitter.on("created", user => console.log("User created:", user));
 ```
 
 ### Strategy Pattern
+
 ```typescript
 // ✅ Good - Strategy with types
 interface ValidationStrategy<T> {

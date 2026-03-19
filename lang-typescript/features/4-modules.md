@@ -3,6 +3,7 @@
 การจัดการ modules ใน TypeScript
 
 ### Import/Export
+
 ```typescript
 // Named exports
 export interface User {
@@ -17,7 +18,7 @@ export function createUser(name: string): User {
 // Default export
 export default class UserService {
   private users: User[] = [];
-  
+
   add(user: User): void {
     this.users.push(user);
   }
@@ -25,6 +26,7 @@ export default class UserService {
 ```
 
 ### Import Patterns
+
 ```typescript
 // Import named exports
 import { User, createUser } from "./user";
@@ -40,6 +42,7 @@ import { User as IUser, createUser as create } from "./user";
 ```
 
 ### Module Resolution
+
 ```typescript
 // tsconfig.json
 {
@@ -59,13 +62,14 @@ import { utils } from "@/helpers";
 ```
 
 ### Declaration Files
+
 ```typescript
 // Declaration file (.d.ts)
 declare module "my-library" {
   export interface Options {
     timeout?: number;
   }
-  
+
   export function initialize(options?: Options): void;
 }
 
@@ -80,6 +84,7 @@ declare global {
 ```
 
 ### Dynamic Imports
+
 ```typescript
 // Dynamic import
 async function loadModule() {
@@ -95,6 +100,7 @@ if (process.env.NODE_ENV === "development") {
 ```
 
 ### Re-exports
+
 ```typescript
 // Re-export from other modules
 export { User, Product } from "./types";

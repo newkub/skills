@@ -16,6 +16,7 @@
 | **Bundle Size** | Declaration files | Separate .d.ts files | ลับงาน runtime |
 
 ### Configuration สำหรับ Performance
+
 ```json
 {
   "compilerOptions": {
@@ -29,6 +30,7 @@
 ```
 
 ### Best Practices
+
 1. **Use incremental builds** สำหรับ development
 2. **Enable skipLibCheck** สำหรับ large projects
 3. **Split into multiple projects** ด้วย project references

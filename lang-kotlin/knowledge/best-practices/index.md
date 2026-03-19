@@ -1,9 +1,11 @@
 # Kotlin Best Practices
 
 ## Concepts
+
 Best practices สำหรับการพัฒนา Kotlin ที่ทำให้โค้ดมีคุณภาพ อ่านง่าย และบำรุงรักษาง่าย
 
 ## Best Practices
+
 1. **Immutability**: ใช้ `val` แทน `var` เสมอที่ทำได้
 2. **Null Safety**: หลีกเลี่ยง `!!` operator ใช้ `?` และ `?:` แทน
 3. **Extension Functions**: สร้าง utility functions ด้วย extension functions
@@ -16,16 +18,18 @@ Best practices สำหรับการพัฒนา Kotlin ที่ทำ
 10. **Default Parameters**: ใช้ default values แทน overloading
 
 ## Additional Topics
+
 - [Code Style](code-style.md) - มาตรฐานการเขียนโค้ด
 - [Performance](performance.md) - การปรับปรุงประสิทธิภาพ
 - [Testing](testing.md) - การเขียน tests ที่ดี
 
 ## Examples
+
 ```kotlin
 // Good: Immutability
 class UserRepository {
     private val users = mutableMapOf<Int, User>()
-    
+
     fun addUser(user: User) {
         users[user.id] = user
     }
@@ -71,6 +75,7 @@ val activeUsers = users
 ```
 
 ## Verification
+
 1. ตรวจสอบว่ามี concepts อย่างชัดเจน
 2. ตรวจสอบว่ามี best practices อย่างน้อย 3 ข้อ
 3. ตรวจสอบว่ามี examples อย่างน้อย 1 ตัวอย่าง

@@ -95,7 +95,7 @@ use std::thread;
 fn safe_shared_counter() {
     let counter = Arc::new(Mutex::new(0));
     let mut handles = vec![];
-    
+
     for _ in 0..10 {
         let counter_clone = Arc::clone(&counter);
         let handle = thread::spawn(move || {
@@ -104,11 +104,11 @@ fn safe_shared_counter() {
         });
         handles.push(handle);
     }
-    
+
     for handle in handles {
         handle.join().unwrap();
     }
-    
+
     println!("Final count: {}", *counter.lock().unwrap());
 }
 
@@ -118,7 +118,7 @@ use std::sync::atomic::{AtomicU64, Ordering};
 fn lock_free_counter() {
     let counter = Arc::new(AtomicU64::new(0));
     let mut handles = vec![];
-    
+
     for _ in 0..10 {
         let counter_clone = Arc::clone(&counter);
         let handle = thread::spawn(move || {
@@ -126,11 +126,11 @@ fn lock_free_counter() {
         });
         handles.push(handle);
     }
-    
+
     for handle in handles {
         handle.join().unwrap();
     }
-    
+
     println!("Final count: {}", counter.load(Ordering::SeqCst));
 }
 ```
@@ -152,21 +152,21 @@ pub fn safe_c_wrapper(input: &str) -> Result<String, CError> {
     if input.is_empty() {
         return Err(CError::InvalidInput);
     }
-    
+
     let result = unsafe {
         // Unsafe FFI call
         let c_string = std::ffi::CString::new(input).unwrap();
         let ptr = c_function(c_string.as_ptr());
-        
+
         if ptr.is_null() {
             return Err(CError::FunctionFailed);
         }
-        
+
         // Convert back to Rust string safely
         let c_str = std::ffi::CStr::from_ptr(ptr);
         c_str.to_string_lossy().into_owned()
     };
-    
+
     Ok(result)
 }
 
@@ -187,18 +187,18 @@ fn process_network_data(data: &[u8]) -> Result<Message, ValidationError> {
     if data.len() > MAX_MESSAGE_SIZE {
         return Err(ValidationError::TooLarge);
     }
-    
+
     // Validate format
     if data.len() < 4 {
         return Err(ValidationError::TooShort);
     }
-    
+
     // Validate checksum
     let checksum = calculate_checksum(data);
     if checksum != expected_checksum {
         return Err(ValidationError::InvalidChecksum);
     }
-    
+
     // Safe to parse now
     parse_message(data)
 }
@@ -218,15 +218,15 @@ Prevent string-related vulnerabilities:
 // Good - safe string operations
 fn safe_string_operations() {
     let input = "Hello, world!";
-    
+
     // Safe slicing
     let slice = input.get(0..5).unwrap_or("Hello");
-    
+
     // Safe concatenation with capacity
     let mut result = String::with_capacity(input.len() + 10);
     result.push_str(slice);
     result.push_str("!");
-    
+
     // Safe path operations
     use std::path::Path;
     let path = Path::new("/etc/passwd");
@@ -236,10 +236,10 @@ fn safe_string_operations() {
 // Bad - unsafe string operations
 fn unsafe_string_operations() {
     let input = "Hello, world!";
-    
+
     // Unsafe slicing - can panic
     let slice = &input[0..20]; // Panics if out of bounds
-    
+
     // Unsafe path operations
     use std::path::Path;
     let path = Path::new("/etc/passwd");
@@ -258,15 +258,15 @@ use std::collections::HashMap;
 fn safe_data_structures() {
     // Vec<T> - contiguous memory, bounds checked
     let numbers = vec![1, 2, 3, 4, 5];
-    
+
     // HashMap<K, V> - safe key-value storage
     let mut users = HashMap::new();
     users.insert(1, "Alice");
     users.insert(2, "Bob");
-    
+
     // Option<T> - safe nullable values
     let maybe_value = users.get(&3); // Returns Option<&str>
-    
+
     // Result<T, E> - explicit error handling
     let result = std::fs::read_to_string("config.txt");
 }
@@ -279,7 +279,7 @@ fn efficient_queue() {
     queue.push_back(1);
     queue.push_back(2);
     queue.push_front(0); // Efficient front insertion
-    
+
     while let Some(value) = queue.pop_front() {
         println!("Processing: {}", value);
     }
@@ -289,6 +289,7 @@ fn efficient_queue() {
 ## Impact
 
 Violating memory safety best practices leads to:
+
 - Buffer overflows and memory corruption
 - Use-after-free vulnerabilities
 - Data races in concurrent code

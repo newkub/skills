@@ -1,6 +1,7 @@
 # Git Security Best Practices
 
 ## Sensitive Data Protection
+
 ```gitignore
 # ข้อมูลสำคัญ
 .env
@@ -16,6 +17,7 @@ passwords.txt
 ```
 
 ## Pre-commit Hooks
+
 ```bash
 #!/bin/sh
 # .git/hooks/pre-commit
@@ -34,12 +36,14 @@ git diff --cached --stat | grep -E "\s+[0-9]{3,}" && {
 ```
 
 ## Branch Protection
+
 - **Protected Branches**: ป้องกันการ force push
 - **Required Reviews**: ต้องมีการ review ก่อน merge
 - **Status Checks**: ต้องผ่าน CI/CD tests
 - **Linear History**: ไม่อนุญาต merge commits
 
 ## Access Control
+
 ```bash
 # จำกัดการเข้าถึง
 git config --global --add safe.directory /path/to/repo
@@ -49,6 +53,7 @@ ssh-keygen -t ed25519 -C "your@email.com"
 ```
 
 ## Audit and Monitoring
+
 ```bash
 # ดูประวัติการเปลี่ยนแปลง
 git log --all --full-history -- <file>
@@ -61,6 +66,7 @@ git log --grep="password\|secret\|key"
 ```
 
 ## Clean History
+
 ```bash
 # ลบ sensitive data จาก history
 git filter-branch --force --index-filter \

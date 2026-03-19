@@ -65,12 +65,12 @@ Never violate borrowing rules:
 ```rust
 fn demonstrate_borrowing_rules() {
     let mut data = vec![1, 2, 3];
-    
+
     // Multiple immutable borrows are OK
     let r1 = &data;
     let r2 = &data;
     println!("r1: {:?}, r2: {:?}", r1, r2);
-    
+
     // Only one mutable borrow at a time
     let r3 = &mut data;
     r3.push(4);
@@ -86,26 +86,26 @@ Let the compiler infer lifetimes when possible:
 // Bad - unnecessary lifetime annotation
 fn first_word<'a>(s: &'a str) -> &'a str {
     let bytes = s.as_bytes();
-    
+
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
             return &s[0..i];
         }
     }
-    
+
     s
 }
 
 // Good - lifetime elision
 fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
-    
+
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
             return &s[0..i];
         }
     }
-    
+
     s
 }
 ```
@@ -136,10 +136,10 @@ Understand when values are moved:
 fn demonstrate_moves() {
     let s1 = String::from("hello");
     let s2 = s1; // s1 is moved to s1
-    
+
     // println!("{}", s1); // Error: s1 is no longer valid
     println!("{}", s2); // OK
-    
+
     // Copy types can be copied
     let x = 5;
     let y = x; // x is copied to y
@@ -202,6 +202,7 @@ fn process_data_good(data: &mut Vec<i32>) -> Vec<i32> {
 ## Impact
 
 Violating ownership and borrowing best practices leads to:
+
 - Performance issues from unnecessary cloning
 - Complex and hard-to-maintain code
 - Compilation errors and frustration

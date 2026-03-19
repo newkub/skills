@@ -3,6 +3,7 @@
 Design patterns ที่พบบ่อยใน TypeScript
 
 ### Singleton Pattern
+
 ```typescript
 class Database {
   private static instance: Database;
@@ -29,6 +30,7 @@ const db = Database.getInstance();
 ```
 
 ### Factory Pattern
+
 ```typescript
 interface Vehicle {
   drive(): void;
@@ -65,6 +67,7 @@ car.drive();
 ```
 
 ### Observer Pattern
+
 ```typescript
 interface Observer<T> {
   update(data: T): void;
@@ -104,6 +107,7 @@ emitter.subscribe(new UserObserver());
 ```
 
 ### Repository Pattern
+
 ```typescript
 interface Repository<T, Id = string> {
   findById(id: Id): Promise<T | null>;
@@ -144,6 +148,7 @@ const userRepo = new InMemoryRepository<User>();
 ```
 
 ### Strategy Pattern
+
 ```typescript
 interface ValidationStrategy<T> {
   validate(value: unknown): value is T;

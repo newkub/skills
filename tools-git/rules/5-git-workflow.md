@@ -1,9 +1,11 @@
 # Git Workflow
 
 ## Description
+
 ใช้ Git workflow ที่เหมาะสมกับขนาดทีมและประเภทโปรเจกต์
 
 ## Examples
+
 ```bash
 # Git Flow - สำหรับโปรเจกต์ใหญ่
 git checkout -b feature/user-authentication
@@ -20,6 +22,7 @@ git checkout -b feature/new-feature
 ```
 
 ## Anti-patterns
+
 ❌ ใช้ Git Flow กับโปรเจกต์เล็ก (overkill)
 ❌ ทำงานบน main branch โดยตรง
 ❌ ไม่มี workflow ที่ชัดเจน

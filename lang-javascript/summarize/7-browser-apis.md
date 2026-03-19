@@ -8,6 +8,7 @@ outcome: สามารถใช้ Fetch API, LocalStorage, SessionStorage, We
 # Browser APIs Best Practices
 
 ## Overview
+
 Best practices สำหรับการใช้ browser APIs ใน JavaScript รวมถึง HTTP requests, storage, real-time communication และ browser features
 
 ## Best Practices Summary
@@ -28,6 +29,7 @@ Best practices สำหรับการใช้ browser APIs ใน JavaScri
 ## Implementation Guidelines
 
 ### High Priority Practices
+
 1. **Use Fetch API** - Modern HTTP requests
 2. **Implement proper error handling** - Handle API failures
 3. **Use request timeouts** - Prevent hanging requests
@@ -35,6 +37,7 @@ Best practices สำหรับการใช้ browser APIs ใน JavaScri
 5. **Use Service Workers** - Offline functionality
 
 ### Medium Priority Practices
+
 1. **Use appropriate storage** - LocalStorage vs SessionStorage
 2. **Handle WebSocket errors** - Robust real-time communication
 3. **Implement retry logic** - Handle network failures
@@ -43,6 +46,7 @@ Best practices สำหรับการใช้ browser APIs ใน JavaScri
 ### Browser APIs Checklist
 
 #### HTTP Requests
+
 - [ ] Use Fetch API instead of XMLHttpRequest
 - [ ] Implement proper error handling
 - [ ] Use request timeouts
@@ -50,12 +54,14 @@ Best practices สำหรับการใช้ browser APIs ใน JavaScri
 - [ ] Implement retry logic
 
 #### Storage
+
 - [ ] Use appropriate storage type
 - [ ] Handle storage quota limits
 - [ ] Implement data validation
 - [ ] Handle storage errors
 
 #### Real-time Communication
+
 - [ ] Handle WebSocket errors
 - [ ] Implement reconnection logic
 - [ ] Use proper message formatting
@@ -76,6 +82,7 @@ Best practices สำหรับการใช้ browser APIs ใน JavaScri
 ## Browser API Examples
 
 ### Fetch API Best Practices
+
 ```javascript
 // Good: Comprehensive fetch with error handling
 class APIClient {
@@ -83,12 +90,12 @@ class APIClient {
     this.baseURL = baseURL;
     this.timeout = timeout;
   }
-  
+
   async request(endpoint, options = {}) {
     const url = `${this.baseURL}${endpoint}`;
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), this.timeout);
-    
+
     try {
       const response = await fetch(url, {
         ...options,
@@ -98,9 +105,9 @@ class APIClient {
           ...options.headers
         }
       });
-      
+
       clearTimeout(timeoutId);
-      
+
       if (!response.ok) {
         throw new APIError(
           `HTTP error! status: ${response.status}`,
@@ -108,7 +115,7 @@ class APIClient {
           response.statusText
         );
       }
-      
+
       const contentType = response.headers.get('content-type');
       if (contentType && contentType.includes('application/json')) {
         return await response.json();
@@ -117,33 +124,33 @@ class APIClient {
       }
     } catch (error) {
       clearTimeout(timeoutId);
-      
+
       if (error.name === 'AbortError') {
         throw new APIError('Request timeout', 408, 'Request Timeout');
       }
-      
+
       throw new APIError(error.message, 0, 'Network Error');
     }
   }
-  
+
   async get(endpoint) {
     return this.request(endpoint);
   }
-  
+
   async post(endpoint, data) {
     return this.request(endpoint, {
       method: 'POST',
       body: JSON.stringify(data)
     });
   }
-  
+
   async put(endpoint, data) {
     return this.request(endpoint, {
       method: 'PUT',
       body: JSON.stringify(data)
     });
   }
-  
+
   async delete(endpoint) {
     return this.request(endpoint, {
       method: 'DELETE'
@@ -176,23 +183,24 @@ try {
 ```
 
 ### Retry Logic with Exponential Backoff
+
 ```javascript
 // Good: Retry logic for network requests
 async function fetchWithRetry(url, options = {}, maxRetries = 3, baseDelay = 1000) {
   let lastError;
-  
+
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await fetch(url, options);
-      
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      
+
       return response.json();
     } catch (error) {
       lastError = error;
-      
+
       if (attempt < maxRetries) {
         const delay = baseDelay * Math.pow(2, attempt - 1);
         console.warn(`Attempt ${attempt} failed, retrying in ${delay}ms:`, error.message);
@@ -200,7 +208,7 @@ async function fetchWithRetry(url, options = {}, maxRetries = 3, baseDelay = 100
       }
     }
   }
-  
+
   throw lastError;
 }
 
@@ -214,6 +222,7 @@ try {
 ```
 
 ### Storage Best Practices
+
 ```javascript
 // Good: Safe storage operations with validation
 class StorageManager {
@@ -221,7 +230,7 @@ class StorageManager {
     this.isLocalStorageAvailable = this.checkStorageAvailability('localStorage');
     this.isSessionStorageAvailable = this.checkStorageAvailability('sessionStorage');
   }
-  
+
   checkStorageAvailability(type) {
     try {
       const storage = window[type];
@@ -234,13 +243,13 @@ class StorageManager {
       return false;
     }
   }
-  
+
   setLocal(key, value) {
     if (!this.isLocalStorageAvailable) {
       console.warn('LocalStorage not available');
       return false;
     }
-    
+
     try {
       const serialized = JSON.stringify(value);
       localStorage.setItem(key, serialized);
@@ -255,12 +264,12 @@ class StorageManager {
       return false;
     }
   }
-  
+
   getLocal(key, defaultValue = null) {
     if (!this.isLocalStorageAvailable) {
       return defaultValue;
     }
-    
+
     try {
       const item = localStorage.getItem(key);
       return item ? JSON.parse(item) : defaultValue;
@@ -269,12 +278,12 @@ class StorageManager {
       return defaultValue;
     }
   }
-  
+
   removeLocal(key) {
     if (!this.isLocalStorageAvailable) {
       return false;
     }
-    
+
     try {
       localStorage.removeItem(key);
       return true;
@@ -283,11 +292,11 @@ class StorageManager {
       return false;
     }
   }
-  
+
   cleanupOldStorage() {
     const keysToRemove = [];
     const cutoffTime = Date.now() - (7 * 24 * 60 * 60 * 1000); // 7 days ago
-    
+
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
       if (key && key.startsWith('cache_')) {
@@ -301,18 +310,18 @@ class StorageManager {
         }
       }
     }
-    
+
     keysToRemove.forEach(key => localStorage.removeItem(key));
     console.log(`Cleaned up ${keysToRemove.length} old storage items`);
   }
-  
+
   // Session storage methods
   setSession(key, value) {
     if (!this.isSessionStorageAvailable) {
       console.warn('SessionStorage not available');
       return false;
     }
-    
+
     try {
       sessionStorage.setItem(key, JSON.stringify(value));
       return true;
@@ -321,12 +330,12 @@ class StorageManager {
       return false;
     }
   }
-  
+
   getSession(key, defaultValue = null) {
     if (!this.isSessionStorageAvailable) {
       return defaultValue;
     }
-    
+
     try {
       const item = sessionStorage.getItem(key);
       return item ? JSON.parse(item) : defaultValue;
@@ -361,6 +370,7 @@ const currentPage = storage.getSession('currentPage', '/home');
 ```
 
 ### WebSocket Best Practices
+
 ```javascript
 // Good: Robust WebSocket implementation
 class WebSocketManager {
@@ -372,7 +382,7 @@ class WebSocketManager {
       messageTimeout: 10000,
       ...options
     };
-    
+
     this.socket = null;
     this.reconnectAttempts = 0;
     this.messageQueue = [];
@@ -380,14 +390,14 @@ class WebSocketManager {
     this.isConnecting = false;
     this.isDestroyed = false;
   }
-  
+
   connect() {
     if (this.isConnecting || this.isDestroyed) {
       return;
     }
-    
+
     this.isConnecting = true;
-    
+
     try {
       this.socket = new WebSocket(this.url);
       this.setupEventHandlers();
@@ -397,19 +407,19 @@ class WebSocketManager {
       this.scheduleReconnect();
     }
   }
-  
+
   setupEventHandlers() {
     this.socket.onopen = () => {
       console.log('WebSocket connected');
       this.isConnecting = false;
       this.reconnectAttempts = 0;
-      
+
       // Send queued messages
       this.flushMessageQueue();
-      
+
       this.emit('connected');
     };
-    
+
     this.socket.onmessage = (event) => {
       try {
         const message = JSON.parse(event.data);
@@ -419,72 +429,72 @@ class WebSocketManager {
         this.emit('error', { type: 'parse_error', error });
       }
     };
-    
+
     this.socket.onerror = (error) => {
       console.error('WebSocket error:', error);
       this.emit('error', { type: 'socket_error', error });
     };
-    
+
     this.socket.onclose = (event) => {
       console.log('WebSocket disconnected:', event.code, event.reason);
       this.isConnecting = false;
-      
+
       if (!this.isDestroyed && event.code !== 1000) {
         this.scheduleReconnect();
       }
-      
+
       this.emit('disconnected', { code: event.code, reason: event.reason });
     };
   }
-  
+
   send(data) {
     const message = typeof data === 'string' ? data : JSON.stringify(data);
-    
+
     if (this.socket && this.socket.readyState === WebSocket.OPEN) {
       this.socket.send(message);
     } else {
       // Queue message for when connection is restored
       this.messageQueue.push(message);
-      
+
       if (!this.isConnecting) {
         this.connect();
       }
     }
   }
-  
+
   flushMessageQueue() {
     while (this.messageQueue.length > 0) {
       const message = this.messageQueue.shift();
       this.socket.send(message);
     }
   }
-  
+
   scheduleReconnect() {
     if (this.reconnectAttempts >= this.options.maxReconnectAttempts) {
       console.error('Max reconnection attempts reached');
       this.emit('maxReconnectAttemptsReached');
       return;
     }
-    
+
     this.reconnectAttempts++;
     const delay = this.options.reconnectInterval * this.reconnectAttempts;
-    
+
     console.log(`Attempting to reconnect in ${delay}ms (attempt ${this.reconnectAttempts})`);
-    
+
     setTimeout(() => {
       if (!this.isDestroyed) {
         this.connect();
       }
     }, delay);
   }
-  
+
   on(event, handler) {
     if (!this.eventHandlers.has(event)) {
       this.eventHandlers.set(event, []);
     }
     this.eventHandlers.get(event).push(handler);
   }
-  
+
   off(event, handler) {
     const handlers = this.eventHandlers.get(event);
     if (handlers) {
@@ -494,7 +504,7 @@ class WebSocketManager {
       }
     }
   }
-  
+
   emit(event, data) {
     const handlers = this.eventHandlers.get(event);
     if (handlers) {
@@ -507,15 +517,15 @@ class WebSocketManager {
       });
     }
   }
-  
+
   destroy() {
     this.isDestroyed = true;
-    
+
     if (this.socket) {
       this.socket.close(1000, 'Client destroyed');
       this.socket = null;
     }
-    
+
     this.messageQueue = [];
     this.eventHandlers.clear();
   }
@@ -555,6 +565,7 @@ function sendMessage(text) {
 ```
 
 ### Service Worker for Caching
+
 ```javascript
 // Good: Service Worker for offline functionality
 const CACHE_NAME = 'app-cache-v1';
@@ -598,20 +609,20 @@ self.addEventListener('fetch', (event) => {
         if (response) {
           return response;
         }
-        
+
         // Network request
         return fetch(event.request).then((response) => {
           // Check if valid response
           if (!response || response.status !== 200 || response.type !== 'basic') {
             return response;
           }
-          
+
           // Clone response for caching
           const responseToCache = response.clone();
-          
+
           caches.open(CACHE_NAME)
             .then((cache) => cache.put(event.request, responseToCache));
-          
+
           return response;
         });
       })
@@ -620,6 +631,7 @@ self.addEventListener('fetch', (event) => {
 ```
 
 ## Verification
+
 1. ตรวจสอบว่าใช้ Fetch API แทน XMLHttpRequest
 2. ทดสอบว่ามี proper error handling
 3. ยืนยันว่ามี request timeouts

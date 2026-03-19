@@ -1,9 +1,11 @@
 # Git Setup
 
 ## Description
+
 ติดตั้งและตั้งค่า Git ให้พร้อมใช้งานบนเครื่อง
 
 ## Examples
+
 ```bash
 # ตรวจสอบว่าติดตั้ง Git แล้ว
 git --version
@@ -20,6 +22,7 @@ git config --global init.defaultBranch main
 ```
 
 ## Anti-patterns
+
 ❌ ไม่ตั้งค่า user.name และ user.email
 ❌ ใช้ editor ที่ไม่คุ้นเคย
 ❌ ใช้ branch name เป็น master ในโปรเจกต์ใหม่

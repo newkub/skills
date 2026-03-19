@@ -8,6 +8,7 @@ outcome: สามารถเขียน JavaScript code ที่ robust แ�
 # Error Handling Best Practices
 
 ## Overview
+
 Best practices สำหรับการจัดการ errors ใน JavaScript ทั้ง synchronous และ asynchronous operations
 
 ## Best Practices Summary
@@ -28,12 +29,14 @@ Best practices สำหรับการจัดการ errors ใน JavaS
 ## Implementation Guidelines
 
 ### High Priority Practices
+
 1. **Handle async operations properly** - Always use try-catch with async/await
 2. **Handle promise rejections** - Prevent unhandled rejections
 3. **Validate inputs early** - Fail fast principle
 4. **Use error boundaries** - Catch React component errors
 
 ### Medium Priority Practices
+
 1. **Use custom error classes** - Better error categorization
 2. **Log errors appropriately** - Monitor application health
 3. **Provide user feedback** - Inform users about errors
@@ -42,18 +45,21 @@ Best practices สำหรับการจัดการ errors ใน JavaS
 ### Error Handling Checklist
 
 #### Prevention
+
 - [ ] Validate all inputs
 - [ ] Check for null/undefined values
 - [ ] Verify required dependencies
 - [ ] Use TypeScript when possible
 
 #### Detection
+
 - [ ] Use try-catch blocks
 - [ ] Handle promise rejections
 - [ ] Implement error boundaries
 - [ ] Use global error handlers
 
 #### Recovery
+
 - [ ] Provide meaningful error messages
 - [ ] Implement fallback mechanisms
 - [ ] Log errors for debugging
@@ -72,6 +78,7 @@ Best practices สำหรับการจัดการ errors ใน JavaS
 ## Error Handling Patterns
 
 ### Try-Catch Pattern
+
 ```javascript
 // Good: Comprehensive error handling
 async function fetchUserData(userId) {
@@ -80,25 +87,25 @@ async function fetchUserData(userId) {
     if (!userId || typeof userId !== 'string') {
       throw new ValidationError('Invalid user ID');
     }
-    
+
     const response = await fetch(`/api/users/${userId}`);
-    
+
     if (!response.ok) {
       throw new NetworkError(`HTTP error! status: ${response.status}`);
     }
-    
+
     const userData = await response.json();
-    
+
     // Data validation
     if (!userData.id || !userData.name) {
       throw new ValidationError('Invalid user data structure');
     }
-    
+
     return userData;
   } catch (error) {
     // Log error for debugging
     console.error('Failed to fetch user data:', error);
-    
+
     // Re-throw with additional context
     throw new Error(`Failed to fetch user ${userId}: ${error.message}`);
   }
@@ -116,6 +123,7 @@ try {
 ```
 
 ### Custom Error Classes
+
 ```javascript
 // Custom error classes
 class AppError extends Error {
@@ -124,7 +132,7 @@ class AppError extends Error {
     this.name = this.constructor.name;
     this.statusCode = statusCode;
     this.isOperational = true;
-    
+
     Error.captureStackTrace(this, this.constructor);
   }
 }
@@ -168,6 +176,7 @@ try {
 ```
 
 ### Promise Error Handling
+
 ```javascript
 // Good: Promise error handling
 async function fetchMultipleData() {
@@ -186,7 +195,7 @@ async function fetchMultipleData() {
         return []; // Fallback to empty array
       })
     ]);
-    
+
     return { users, posts, comments };
   } catch (error) {
     console.error('Unexpected error:', error);
@@ -201,7 +210,7 @@ async function fetchMultipleDataSettled() {
     fetchPosts(),
     fetchComments()
   ]);
-  
+
   return {
     users: results[0].status === 'fulfilled' ? results[0].value : [],
     posts: results[1].status === 'fulfilled' ? results[1].value : [],
@@ -211,6 +220,7 @@ async function fetchMultipleDataSettled() {
 ```
 
 ### Global Error Handling
+
 ```javascript
 // Browser global error handling
 window.addEventListener('error', (event) => {
@@ -250,6 +260,7 @@ process.on('unhandledRejection', (reason, promise) => {
 ```
 
 ### React Error Boundaries
+
 ```javascript
 // React Error Boundary component
 class ErrorBoundary extends React.Component {
@@ -267,7 +278,7 @@ class ErrorBoundary extends React.Component {
       error: error,
       errorInfo: errorInfo
     });
-    
+
     logErrorToService({
       error: error.toString(),
       errorInfo: errorInfo.componentStack
@@ -306,6 +317,7 @@ function App() {
 ```
 
 ### Graceful Degradation
+
 ```javascript
 // Good: Graceful degradation with fallbacks
 function loadUserData(userId) {
@@ -318,7 +330,7 @@ function loadUserData(userId) {
   } catch (error) {
     console.warn('LocalStorage not available:', error);
   }
-  
+
   // Fallback to API call
   return fetchUserDataFromAPI(userId)
     .then(data => {
@@ -353,25 +365,26 @@ loadUserData('123')
 ```
 
 ### Retry Pattern
+
 ```javascript
 // Retry pattern with exponential backoff
 async function retryOperation(operation, maxRetries = 3, delay = 1000) {
   let lastError;
-  
+
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       return await operation();
     } catch (error) {
       lastError = error;
       console.warn(`Attempt ${attempt} failed:`, error.message);
-      
+
       if (attempt < maxRetries) {
         const backoffDelay = delay * Math.pow(2, attempt - 1);
         await new Promise(resolve => setTimeout(resolve, backoffDelay));
       }
     }
   }
-  
+
   throw lastError;
 }
 
@@ -390,6 +403,7 @@ async function fetchWithRetry(url) {
 ## Error Logging and Monitoring
 
 ### Structured Error Logging
+
 ```javascript
 // Structured error logging
 function logError(error, context = {}) {
@@ -405,10 +419,10 @@ function logError(error, context = {}) {
     },
     level: 'error'
   };
-  
+
   // Send to logging service
   sendToLoggingService(errorLog);
-  
+
   // Also log to console in development
   if (process.env.NODE_ENV === 'development') {
     console.error('Error:', errorLog);
@@ -428,6 +442,7 @@ try {
 ```
 
 ## Verification
+
 1. ตรวจสอบว่า async operations มี try-catch
 2. ทดสอบว่ามี input validation
 3. ยืนยันว่ามี custom error classes

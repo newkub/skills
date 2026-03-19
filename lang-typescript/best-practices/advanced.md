@@ -3,6 +3,7 @@
 เทคนิคขั้นสูงสำหรับ TypeScript development
 
 ### Advanced Type Patterns
+
 ```typescript
 // ✅ Good - Branded types for type safety
 type UserId = string & { readonly brand: unique symbol };
@@ -28,6 +29,7 @@ type DeepPartial<T> = T extends object
 ```
 
 ### Performance Optimization
+
 ```typescript
 // ✅ Good - Type guards for performance
 function isString(value: unknown): value is string {
@@ -52,6 +54,7 @@ function findById<T extends HasId>(items: T[], id: string | number): T | undefin
 ```
 
 ### Module Architecture
+
 ```typescript
 // ✅ Good - Barrel exports
 // types/index.ts
@@ -72,6 +75,7 @@ class UserService {
 ```
 
 ### Advanced Generics
+
 ```typescript
 // ✅ Good - Variadic generics
 function merge<T extends object[]>(...objects: T): T[number] {
@@ -89,6 +93,7 @@ interface EventHandlers {
 ```
 
 ### Runtime Validation
+
 ```typescript
 // ✅ Good - Type-safe runtime validation
 type Validator<T> = (value: unknown) => value is T;

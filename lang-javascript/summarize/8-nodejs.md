@@ -8,6 +8,7 @@ outcome: สามารถใช้ Node.js modules, file system, HTTP server �
 # Node.js Best Practices
 
 ## Overview
+
 Best practices สำหรับการพัฒนา Node.js applications รวมถึง file operations, HTTP servers, process management และ security
 
 ## Best Practices Summary
@@ -28,6 +29,7 @@ Best practices สำหรับการพัฒนา Node.js applications �
 ## Implementation Guidelines
 
 ### High Priority Practices
+
 1. **Use fs.promises** - Modern async file handling
 2. **Use path.join** - Cross-platform compatibility
 3. **Use environment variables** - Secure configuration
@@ -35,6 +37,7 @@ Best practices สำหรับการพัฒนา Node.js applications �
 5. **Use async/await** - Better than callbacks
 
 ### Medium Priority Practices
+
 1. **Handle process signals** - Graceful shutdown
 2. **Use streams** - Memory-efficient processing
 3. **Implement logging** - Monitor application health
@@ -44,6 +47,7 @@ Best practices สำหรับการพัฒนา Node.js applications �
 ### Node.js Checklist
 
 #### File Operations
+
 - [ ] Use fs.promises instead of callbacks
 - [ ] Use path.join for cross-platform paths
 - [ ] Handle file errors properly
@@ -51,6 +55,7 @@ Best practices สำหรับการพัฒนา Node.js applications �
 - [ ] Implement proper cleanup
 
 #### Server Development
+
 - [ ] Handle HTTP errors properly
 - [ ] Use proper middleware
 - [ ] Implement security headers
@@ -58,6 +63,7 @@ Best practices สำหรับการพัฒนา Node.js applications �
 - [ ] Use environment variables
 
 #### Process Management
+
 - [ ] Handle process signals
 - [ ] Implement proper logging
 - [ ] Monitor memory usage
@@ -77,6 +83,7 @@ Best practices สำหรับการพัฒนา Node.js applications �
 ## Node.js Examples
 
 ### Modern File Operations
+
 ```javascript
 // Good: Modern async file operations
 const fs = require('fs').promises;
@@ -86,7 +93,7 @@ class FileManager {
   constructor(basePath) {
     this.basePath = path.resolve(basePath);
   }
-  
+
   async readFile(filePath) {
     try {
       const fullPath = path.join(this.basePath, filePath);
@@ -102,21 +109,21 @@ class FileManager {
       }
     }
   }
-  
+
   async writeFile(filePath, content) {
     try {
       const fullPath = path.join(this.basePath, filePath);
-      
+
       // Ensure directory exists
       await fs.mkdir(path.dirname(fullPath), { recursive: true });
-      
+
       await fs.writeFile(fullPath, content, 'utf8');
       return true;
     } catch (error) {
       throw new Error(`Failed to write file: ${filePath} - ${error.message}`);
     }
   }
-  
+
   async appendFile(filePath, content) {
     try {
       const fullPath = path.join(this.basePath, filePath);
@@ -126,7 +133,7 @@ class FileManager {
       throw new Error(`Failed to append to file: ${filePath} - ${error.message}`);
     }
   }
-  
+
   async fileExists(filePath) {
     try {
       const fullPath = path.join(this.basePath, filePath);
@@ -136,7 +143,7 @@ class FileManager {
       return false;
     }
   }
-  
+
   async getFileStats(filePath) {
     try {
       const fullPath = path.join(this.basePath, filePath);
@@ -153,12 +160,12 @@ class FileManager {
       throw new Error(`Failed to get file stats: ${filePath} - ${error.message}`);
     }
   }
-  
+
   async listDirectory(dirPath) {
     try {
       const fullPath = path.join(this.basePath, dirPath);
       const items = await fs.readdir(fullPath);
-      
+
       const itemStats = await Promise.all(
         items.map(async (item) => {
           const itemPath = path.join(fullPath, item);
@@ -166,7 +173,7 @@ class FileManager {
           return { name: item, ...stats };
         })
       );
-      
+
       return itemStats;
     } catch (error) {
       throw new Error(`Failed to list directory: ${dirPath} - ${error.message}`);
@@ -180,10 +187,10 @@ const fileManager = new FileManager('./data');
 try {
   const content = await fileManager.readFile('config.json');
   console.log('Config:', content);
-  
+
   await fileManager.writeFile('output.txt', 'Hello, Node.js!');
   console.log('File written successfully');
-  
+
   const exists = await fileManager.fileExists('config.json');
   console.log('File exists:', exists);
 } catch (error) {
@@ -192,6 +199,7 @@ try {
 ```
 
 ### HTTP Server Best Practices
+
 ```javascript
 // Good: Modern HTTP server with proper error handling
 const http = require('http');
@@ -205,54 +213,54 @@ class HTTPServer {
     this.routes = new Map();
     this.middleware = [];
   }
-  
+
   use(middleware) {
     this.middleware.push(middleware);
   }
-  
+
   get(path, handler) {
     this.addRoute('GET', path, handler);
   }
-  
+
   post(path, handler) {
     this.addRoute('POST', path, handler);
   }
-  
+
   put(path, handler) {
     this.addRoute('PUT', path, handler);
   }
-  
+
   delete(path, handler) {
     this.addRoute('DELETE', path, handler);
   }
-  
+
   addRoute(method, path, handler) {
     const key = `${method}:${path}`;
     this.routes.set(key, handler);
   }
-  
+
   async handleRequest(req, res) {
     try {
       // Parse URL
       const parsedUrl = url.parse(req.url, true);
       const pathname = parsedUrl.pathname;
       const method = req.method;
-      
+
       // Set security headers
       res.setHeader('X-Content-Type-Options', 'nosniff');
       res.setHeader('X-Frame-Options', 'DENY');
       res.setHeader('X-XSS-Protection', '1; mode=block');
-      
+
       // Find route handler
       const routeKey = `${method}:${pathname}`;
       const handler = this.routes.get(routeKey);
-      
+
       if (handler) {
         // Execute middleware
         for (const middleware of this.middleware) {
           await middleware(req, res);
         }
-        
+
         await handler(req, res);
       } else {
         res.writeHead(404, { 'Content-Type': 'application/json' });
@@ -264,19 +272,19 @@ class HTTPServer {
       res.end(JSON.stringify({ error: 'Internal Server Error' }));
     }
   }
-  
+
   parseBody(req) {
     return new Promise((resolve, reject) => {
       let body = '';
-      
+
       req.on('data', chunk => {
         body += chunk.toString();
       });
-      
+
       req.on('end', () => {
         try {
           const contentType = req.headers['content-type'];
-          
+
           if (contentType && contentType.includes('application/json')) {
             resolve(JSON.parse(body));
           } else if (contentType && contentType.includes('application/x-www-form-urlencoded')) {
@@ -288,26 +296,26 @@ class HTTPServer {
           reject(error);
         }
       });
-      
+
       req.on('error', reject);
     });
   }
-  
+
   start() {
     this.server = http.createServer((req, res) => {
       this.handleRequest(req, res);
     });
-    
+
     this.server.listen(this.port, () => {
       console.log(`Server running on port ${this.port}`);
     });
-    
+
     // Handle server errors
     this.server.on('error', (error) => {
       console.error('Server error:', error);
     });
   }
-  
+
   stop() {
     return new Promise((resolve) => {
       if (this.server) {
@@ -358,7 +366,7 @@ server.post('/api/users', async (req, res) => {
   try {
     const userData = await server.parseBody(req);
     const newUser = await createUserInDatabase(userData);
-    
+
     res.writeHead(201, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify(newUser));
   } catch (error) {
@@ -385,6 +393,7 @@ process.on('SIGTERM', async () => {
 ```
 
 ### Process Management and Configuration
+
 ```javascript
 // Good: Process management with environment variables
 require('dotenv').config();
@@ -394,16 +403,16 @@ class AppConfig {
     this.validateEnvironment();
     this.config = this.loadConfig();
   }
-  
+
   validateEnvironment() {
     const required = ['NODE_ENV', 'PORT', 'DB_HOST', 'DB_PASSWORD'];
     const missing = required.filter(key => !process.env[key]);
-    
+
     if (missing.length > 0) {
       throw new Error(`Missing required environment variables: ${missing.join(', ')}`);
     }
   }
-  
+
   loadConfig() {
     return {
       env: process.env.NODE_ENV || 'development',
@@ -431,7 +440,7 @@ class AppConfig {
       }
     };
   }
-  
+
   get(key) {
     return key.split('.').reduce((obj, k) => obj?.[k], this.config);
   }
@@ -443,59 +452,59 @@ class ProcessManager {
     this.isShuttingDown = false;
     this.setupProcessHandlers();
   }
-  
+
   setupProcessHandlers() {
     // Handle uncaught exceptions
     process.on('uncaughtException', (error) => {
       console.error('Uncaught Exception:', error);
       this.gracefulShutdown(1);
     });
-    
+
     // Handle unhandled promise rejections
     process.on('unhandledRejection', (reason, promise) => {
       console.error('Unhandled Rejection at:', promise, 'reason:', reason);
       this.gracefulShutdown(1);
     });
-    
+
     // Handle termination signals
     process.on('SIGTERM', () => {
       console.log('Received SIGTERM');
       this.gracefulShutdown(0);
     });
-    
+
     process.on('SIGINT', () => {
       console.log('Received SIGINT');
       this.gracefulShutdown(0);
     });
-    
+
     // Handle warnings
     process.on('warning', (warning) => {
       console.warn('Process Warning:', warning);
     });
   }
-  
+
   async gracefulShutdown(exitCode = 0) {
     if (this.isShuttingDown) {
       console.log('Already shutting down...');
       return;
     }
-    
+
     this.isShuttingDown = true;
     console.log('Starting graceful shutdown...');
-    
+
     try {
       // Close database connections
       await this.closeDatabaseConnections();
-      
+
       // Close Redis connections
       await this.closeRedisConnections();
-      
+
       // Close HTTP server
       await this.closeHTTPServer();
-      
+
       // Flush logs
       await this.flushLogs();
-      
+
       console.log('Graceful shutdown completed');
       process.exit(exitCode);
     } catch (error) {
@@ -503,25 +512,25 @@ class ProcessManager {
       process.exit(1);
     }
   }
-  
+
   async closeDatabaseConnections() {
     // Implementation depends on your database library
     console.log('Closing database connections...');
   }
-  
+
   async closeRedisConnections() {
     // Implementation depends on your Redis library
     console.log('Closing Redis connections...');
   }
-  
+
   async closeHTTPServer() {
     console.log('Closing HTTP server...');
   }
-  
+
   async flushLogs() {
     console.log('Flushing logs...');
   }
-  
+
   getMemoryUsage() {
     const usage = process.memoryUsage();
     return {
@@ -531,12 +540,12 @@ class ProcessManager {
       external: Math.round(usage.external / 1024 / 1024 * 100) / 100
     };
   }
-  
+
   startHealthChecks() {
     setInterval(() => {
       const memory = this.getMemoryUsage();
       console.log('Memory usage:', memory);
-      
+
       // Alert if memory usage is high
       if (memory.heapUsed > 500) { // 500MB
         console.warn('High memory usage detected:', memory.heapUsed);
@@ -554,6 +563,7 @@ processManager.startHealthChecks();
 ```
 
 ### Stream Processing
+
 ```javascript
 // Good: Stream processing for large files
 const fs = require('fs');
@@ -564,51 +574,51 @@ class StreamProcessor {
   constructor() {
     this.processors = [];
   }
-  
+
   addProcessor(processor) {
     this.processors.push(processor);
     return this;
   }
-  
+
   processFile(inputPath, outputPath) {
     return new Promise((resolve, reject) => {
       const readStream = fs.createReadStream(inputPath);
       const writeStream = fs.createWriteStream(outputPath);
-      
+
       // Create transform stream
       const transformStream = new Transform({
         objectMode: false,
         transform(chunk, encoding, callback) {
           try {
             let processedData = chunk.toString();
-            
+
             // Apply all processors
             for (const processor of this.processors) {
               processedData = processor(processedData);
             }
-            
+
             callback(null, processedData);
           } catch (error) {
             callback(error);
           }
         }
       });
-      
+
       // Handle stream events
       readStream.on('error', reject);
       writeStream.on('error', reject);
       transformStream.on('error', reject);
-      
+
       writeStream.on('finish', () => {
         console.log(`File processed: ${inputPath} -> ${outputPath}`);
         resolve();
       });
-      
+
       // Pipe streams
       readStream.pipe(transformStream).pipe(writeStream);
     });
   }
-  
+
   processLargeFile(inputPath, processor) {
     return new Promise((resolve, reject) => {
       const readStream = fs.createReadStream(inputPath);
@@ -616,24 +626,24 @@ class StreamProcessor {
         input: readStream,
         crlfDelay: Infinity
       });
-      
+
       let lineNumber = 0;
-      
+
       rl.on('line', async (line) => {
         lineNumber++;
-        
+
         try {
           await processor(line, lineNumber);
         } catch (error) {
           console.error(`Error processing line ${lineNumber}:`, error);
         }
       });
-      
+
       rl.on('close', () => {
         console.log(`Processed ${lineNumber} lines`);
         resolve();
       });
-      
+
       rl.on('error', reject);
     });
   }
@@ -658,7 +668,7 @@ processor.processLargeFile('large-file.txt', async (line, lineNumber) => {
   if (lineNumber % 1000 === 0) {
     console.log(`Processed ${lineNumber} lines`);
   }
-  
+
   // Process each line
   if (line.includes('ERROR')) {
     console.log(`Found error on line ${lineNumber}:`, line);
@@ -667,6 +677,7 @@ processor.processLargeFile('large-file.txt', async (line, lineNumber) => {
 ```
 
 ## Verification
+
 1. ตรวจสอบว่าใช้ fs.promises แทน callbacks
 2. ทดสอบว่าใช้ path.join สำหรับ cross-platform paths
 3. ยืนยันว่ามี proper error handling

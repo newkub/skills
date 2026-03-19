@@ -16,6 +16,7 @@
 | **Concurrency** | Promise concurrency | `Promise.allSettled(promises)` | Handle multiple results |
 
 ### Async Patterns
+
 ```typescript
 // ✅ Type-safe async function
 async function fetchUser(id: number): Promise<User> {
@@ -69,6 +70,7 @@ async function* streamUsers(): AsyncGenerator<User> {
 ```
 
 ### Best Practices
+
 1. **Always type async function returns** ด้วย `Promise<T>`
 2. **Use Result types** สำหรับ async operations ที่อาจ fail
 3. **Handle errors properly** ใน async functions

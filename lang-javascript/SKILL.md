@@ -6,12 +6,14 @@ outcome: สามารถเขียน JavaScript code ที่ตรงต
 ---
 
 ## When to Execute
+
 - ต้องการพัฒนา web applications ด้วย JavaScript
 - ต้องการเขียน server-side code ด้วย Node.js
 - ต้องการสร้าง reusable JavaScript libraries
 - ต้องการปรับปรุง code quality และ maintainability
 
 ## Quick Start
+
 1. ติดตั้ง Node.js จาก official website
 2. สร้าง project folder และรัน `npm init -y`
 3. สร้างไฟล์ `index.js` สำหรับเริ่มต้น
@@ -26,7 +28,7 @@ outcome: สามารถเขียน JavaScript code ที่ตรงต
 | 2 | [Configuration](rules/2-configuration.md) | หลังจากตั้งค่าโปรเจกต์แล้ว |
 | 3 | [Usage](rules/3-usage.md) | เมื่อต้องการเรียนรู้รูปแบบการใช้งาน |
 | 4 | [Core Concept](knowledge/1-core-concept.md) | เมื่อต้องการทำความเข้าใจพื้นฐาน |
-| 5 | [CLI Commands](knowledge/cli.md) | เมื่อต้องการใช้ CLI commands (ถ้ามี) |
+| 5 | CLI Commands | เมื่อต้องการใช้ CLI commands (ถ้ามี) |
 | 6 | [ES6+ Features](features/1-es6-features.md) | เมื่อต้องการเรียนรู้ ES6+ features |
 | 7 | [Built-in Objects](features/2-built-in-objects.md) | เมื่อต้องการใช้ built-in objects |
 | 8 | [DOM Manipulation](features/3-dom-manipulation.md) | เมื่อต้องการจัดการ DOM |
@@ -50,8 +52,8 @@ outcome: สามารถเขียน JavaScript code ที่ตรงต
 | 26 | [Resources](reference/3-resources.md) | เมื่อต้องการแหล่งข้อมูลเพิ่มเติม |
 | 27 | [External Links](reference/4-external-links.md) | เมื่อต้องการลิงก์ภายนอก |
 
-
 ## Verification
+
 1. ตรวจสอบว่า Node.js ติดตั้งแล้วด้วย `node --version`
 2. ทดสอบ project setup ด้วยการรัน `npm test`
 3. ตรวจสอบ code quality ด้วย ESLint และ Prettier

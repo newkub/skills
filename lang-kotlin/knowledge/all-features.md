@@ -1,6 +1,7 @@
 # All Kotlin Features
 
 ## Concepts
+
 Kotlin มีฟีเจอร์ครบครันสำหรับการพัฒนาแอปพลิเคชันสมัยใหม่
 
 - **Type System**: Strong typing พร้อม type inference
@@ -20,6 +21,7 @@ Kotlin มีฟีเจอร์ครบครันสำหรับกา�
 - **Operator Overloading**: Custom operators สำหรับ types
 
 ## Best Practices
+
 1. ใช้ coroutines แทน callbacks สำหรับ async operations
 2. ใช้ sealed classes สำหรับ representing states
 3. ใช้ inline classes สำหรับ performance optimization
@@ -27,6 +29,7 @@ Kotlin มีฟีเจอร์ครบครันสำหรับกา�
 5. ใช้ smart casts แทน manual casting
 
 ## Examples
+
 ```kotlin
 // Coroutines
 suspend fun fetchData(): String {
@@ -58,6 +61,7 @@ val (name, age) = User("John", 30)
 ```
 
 ## Verification
+
 1. ตรวจสอบว่ามี concepts อย่างชัดเจน
 2. ตรวจสอบว่ามี best practices อย่างน้อย 3 ข้อ
 3. ตรวจสอบว่ามี examples อย่างน้อย 1 ตัวอย่าง

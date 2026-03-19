@@ -60,7 +60,7 @@ async function fetchUserAndPosts(userId) {
       fetch(`/api/users/${userId}`).then(r => r.json()),
       fetch(`/api/posts/${userId}`).then(r => r.json())
     ]);
-    
+
     return { user, posts };
   } catch (error) {
     console.error('Failed to fetch data:', error);
@@ -94,12 +94,12 @@ async function fetchMultipleData(urls) {
   const promises = urls.map(url => 
     fetch(url).then(r => r.json()).catch(error => ({ error, url }))
   );
-  
+
   const results = await Promise.allSettled(promises);
-  
+
   const successful = [];
   const failed = [];
-  
+
   results.forEach((result, index) => {
     if (result.status === 'fulfilled') {
       if (result.value.error) {
@@ -111,7 +111,7 @@ async function fetchMultipleData(urls) {
       failed.push({ url: urls[index], error: result.reason });
     }
   });
-  
+
   return { successful, failed };
 }
 
@@ -120,11 +120,11 @@ class AsyncErrorBoundary {
   constructor() {
     this.errorHandlers = new Map();
   }
-  
+
   register(operation, handler) {
     this.errorHandlers.set(operation, handler);
   }
-  
+
   async execute(operation, ...args) {
     try {
       return await operation(...args);
@@ -156,18 +156,18 @@ function asyncDebounce(fn, delay) {
   let timeoutId;
   let latestResolve;
   let latestReject;
-  
+
   return function(...args) {
     return new Promise((resolve, reject) => {
       // Cancel previous timeout
       if (timeoutId) {
         clearTimeout(timeoutId);
       }
-      
+
       // Store latest promise handlers
       latestResolve = resolve;
       latestReject = reject;
-      
+
       timeoutId = setTimeout(async () => {
         try {
           const result = await fn.apply(this, args);
@@ -185,14 +185,14 @@ function asyncThrottle(fn, limit) {
   let inThrottle = false;
   let lastResult;
   let lastError;
-  
+
   return async function(...args) {
     if (inThrottle) {
       return lastResult;
     }
-    
+
     inThrottle = true;
-    
+
     try {
       lastResult = await fn.apply(this, args);
       setTimeout(() => { inThrottle = false; }, limit);
@@ -213,24 +213,24 @@ async function retryAsync(fn, options = {}) {
     backoff = 2,
     shouldRetry = () => true
   } = options;
-  
+
   let lastError;
-  
+
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     try {
       return await fn();
     } catch (error) {
       lastError = error;
-      
+
       if (attempt === maxAttempts || !shouldRetry(error)) {
         throw error;
       }
-      
+
       const waitTime = delay * Math.pow(backoff, attempt - 1);
       await new Promise(resolve => setTimeout(resolve, waitTime));
     }
   }
-  
+
   throw lastError;
 }
 
@@ -275,13 +275,13 @@ const timedResult = await withTimeout(
 // Async generator for paginated data
 async function* fetchPaginatedData(url) {
   let nextPage = url;
-  
+
   while (nextPage) {
     const response = await fetch(nextPage);
     const data = await response.json();
-    
+
     yield data.items;
-    
+
     nextPage = data.nextPage;
   }
 }
@@ -299,14 +299,14 @@ async function* streamData(url) {
   const response = await fetch(url);
   const reader = response.body.getReader();
   const decoder = new TextDecoder();
-  
+
   while (true) {
     const { done, value } = await reader.read();
     if (done) break;
-    
+
     const chunk = decoder.decode(value);
     const lines = chunk.split('\n').filter(line => line.trim());
-    
+
     for (const line of lines) {
       try {
         yield JSON.parse(line);
@@ -337,16 +337,16 @@ class AsyncStateManager {
     this.loading = new Set();
     this.errors = new Map();
   }
-  
+
   subscribe(listener) {
     this.listeners.add(listener);
     return () => this.listeners.delete(listener);
   }
-  
+
   notify() {
     this.listeners.forEach(listener => listener(this.getState()));
   }
-  
+
   getState() {
     return {
       ...this.state,
@@ -354,12 +354,12 @@ class AsyncStateManager {
       errors: new Map(this.errors)
     };
   }
-  
+
   async load(key, asyncFn) {
     this.loading.add(key);
     this.errors.delete(key);
     this.notify();
-    
+
     try {
       const result = await asyncFn();
       this.state[key] = result;
@@ -372,13 +372,13 @@ class AsyncStateManager {
       this.notify();
     }
   }
-  
+
   async reload(key) {
     if (this.state[key] && this.state[key].reloadFn) {
       return this.load(key, this.state[key].reloadFn);
     }
   }
-  
+
   clearError(key) {
     this.errors.delete(key);
     this.notify();
@@ -413,7 +413,7 @@ class AsyncQueue {
     this.running = 0;
     this.queue = [];
   }
-  
+
   async add(asyncFn) {
     return new Promise((resolve, reject) => {
       this.queue.push({
@@ -424,15 +424,15 @@ class AsyncQueue {
       this.process();
     });
   }
-  
+
   async process() {
     if (this.running >= this.concurrency || this.queue.length === 0) {
       return;
     }
-    
+
     this.running++;
     const { asyncFn, resolve, reject } = this.queue.shift();
-    
+
     try {
       const result = await asyncFn();
       resolve(result);
@@ -453,21 +453,21 @@ class ConnectionPool {
     this.pool = [];
     this.waiting = [];
   }
-  
+
   async acquire() {
     if (this.pool.length > 0) {
       return this.pool.pop();
     }
-    
+
     if (this.pool.length + this.waiting.length < this.maxConnections) {
       return this.createConnection();
     }
-    
+
     return new Promise((resolve) => {
       this.waiting.push(resolve);
     });
   }
-  
+
   release(connection) {
     if (this.waiting.length > 0) {
       const resolve = this.waiting.shift();
@@ -476,12 +476,12 @@ class ConnectionPool {
       this.pool.push(connection);
     }
   }
-  
+
   async close() {
     const connections = [...this.pool];
     this.pool = [];
     this.waiting = [];
-    
+
     await Promise.all(connections.map(conn => conn.close()));
   }
 }
@@ -509,23 +509,23 @@ describe('Async operations', () => {
       ok: true,
       json: async () => mockUser
     });
-    
+
     const user = await fetchUser(1);
     expect(user).toEqual(mockUser);
     expect(fetch).toHaveBeenCalledWith('/api/users/1');
   });
-  
+
   test('should handle fetch errors', async () => {
     global.fetch = jest.fn().mockRejectedValue(new Error('Network error'));
-    
+
     await expect(fetchUser(1)).rejects.toThrow('Network error');
   });
-  
+
   test('should timeout long operations', async () => {
     const slowPromise = new Promise(resolve => 
       setTimeout(() => resolve('done'), 2000)
     );
-    
+
     await expect(withTimeout(slowPromise, 1000))
       .rejects.toThrow('Operation timed out');
   });
@@ -539,12 +539,12 @@ test('should handle async iterator', async () => {
       yield item;
     }
   };
-  
+
   const results = [];
   for await (const item of asyncGenerator()) {
     results.push(item);
   }
-  
+
   expect(results).toEqual(mockData);
 });
 ```

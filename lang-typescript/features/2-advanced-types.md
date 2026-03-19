@@ -3,6 +3,7 @@
 คุณสมบัติขั้นสูงของ TypeScript type system
 
 ### Conditional Types
+
 ```typescript
 // Basic conditional type
 type IsString<T> = T extends string ? true : false;
@@ -15,6 +16,7 @@ type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
 ```
 
 ### Mapped Types
+
 ```typescript
 // Basic mapped type
 type Readonly<T> = {
@@ -33,6 +35,7 @@ type Getters<T> = {
 ```
 
 ### Template Literal Types
+
 ```typescript
 // String manipulation
 type EventName<T extends string> = `on${Capitalize<T>}`;
@@ -50,6 +53,7 @@ type GetValue<T, P extends Path> = P extends `${infer K}.${infer Rest}`
 ```
 
 ### Utility Types
+
 ```typescript
 // Built-in utilities
 type Required<T> = { [P in keyof T]-?: T[P]; };
@@ -59,6 +63,7 @@ type Record<K extends keyof any, T> = { [P in K]: T; };
 ```
 
 ### Variadic Tuple Types
+
 ```typescript
 // Rest elements in tuples
 type Args<T extends any[]> = [...T];

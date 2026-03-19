@@ -7,7 +7,8 @@ This guide covers essential best practices. Write clean, efficient, and maintain
 ## Code Organization
 
 ### Project Structure
-```
+
+```text
 src/
 ├── main.rs          # Binary entry point
 ├── lib.rs           # Library entry point
@@ -24,6 +25,7 @@ src/
 ```
 
 ### Module Organization
+
 - Keep modules focused on single responsibility
 - Use pub use to re-export common items
 - Group related functionality in modules
@@ -32,6 +34,7 @@ src/
 ## Code Style
 
 ### Naming Conventions
+
 ```rust
 // Functions and variables: snake_case
 fn calculate_average(numbers: &[f64]) -> f64 {
@@ -56,12 +59,13 @@ impl UserProfile {
 ```
 
 ### Error Handling
+
 ```rust
 // Use Result for operations that can fail
 fn read_config(path: &str) -> Result<Config, ConfigError> {
     let content = std::fs::read_to_string(path)
         .map_err(ConfigError::IoError)?;
-    
+
     toml::from_str(&content)
         .map_err(ConfigError::ParseError)
 }
@@ -75,6 +79,7 @@ fn find_user_by_id(id: u64, users: &[User]) -> Option<&User> {
 ## Performance Best Practices
 
 ### Memory Management
+
 ```rust
 // Prefer borrowing over cloning
 fn process_data(data: &[u8]) -> Vec<u8> {
@@ -87,11 +92,11 @@ fn process_data(data: &[u8]) -> Vec<u8> {
 fn build_string(parts: &[&str]) -> String {
     let total_len: usize = parts.iter().map(|s| s.len()).sum();
     let mut result = String::with_capacity(total_len);
-    
+
     for part in parts {
         result.push_str(part);
     }
-    
+
     result
 }
 
@@ -108,6 +113,7 @@ fn normalize_text(text: &str) -> Cow<str> {
 ```
 
 ### Iterators and Collections
+
 ```rust
 // Use iterator methods instead of manual loops
 fn filter_and_transform(numbers: &[i32]) -> Vec<String> {
@@ -123,11 +129,11 @@ use std::collections::HashMap;
 
 fn count_words(text: &str) -> HashMap<String, u32> {
     let mut counts = HashMap::new();
-    
+
     for word in text.split_whitespace() {
         *counts.entry(word.to_string()).or_insert(0) += 1;
     }
-    
+
     counts
 }
 ```
@@ -135,6 +141,7 @@ fn count_words(text: &str) -> HashMap<String, u32> {
 ## Testing Best Practices
 
 ### Unit Tests
+
 ```rust
 #[cfg(test)]
 mod tests {
@@ -161,6 +168,7 @@ mod tests {
 ```
 
 ### Integration Tests
+
 ```rust
 // tests/integration_tests.rs
 use my_crate::*;
@@ -169,7 +177,7 @@ use my_crate::*;
 fn test_full_workflow() {
     let config = Config::from_file("test_config.toml").unwrap();
     let app = Application::new(config);
-    
+
     let result = app.process_data("test input");
     assert!(result.is_ok());
 }
@@ -178,6 +186,7 @@ fn test_full_workflow() {
 ## Documentation
 
 ### Code Documentation
+
 ```rust
 /// Calculates the factorial of a non-negative integer.
 ///
@@ -213,25 +222,27 @@ pub fn factorial(n: u32) -> u64 {
 ## Security Best Practices
 
 ### Input Validation
+
 ```rust
 fn validate_email(email: &str) -> Result<(), ValidationError> {
     if email.is_empty() {
         return Err(ValidationError::EmptyEmail);
     }
-    
+
     if !email.contains('@') {
         return Err(ValidationError::InvalidFormat);
     }
-    
+
     if email.len() > 254 {
         return Err(ValidationError::TooLong);
     }
-    
+
     Ok(())
 }
 ```
 
 ### Safe Concurrency
+
 ```rust
 use std::sync::{Arc, Mutex};
 use std::thread;
@@ -239,7 +250,7 @@ use std::thread;
 fn safe_shared_state() {
     let counter = Arc::new(Mutex::new(0));
     let mut handles = vec![];
-    
+
     for _ in 0..10 {
         let counter_clone = Arc::clone(&counter);
         let handle = thread::spawn(move || {
@@ -248,7 +259,7 @@ fn safe_shared_state() {
         });
         handles.push(handle);
     }
-    
+
     for handle in handles {
         handle.join().unwrap();
     }
@@ -258,6 +269,7 @@ fn safe_shared_state() {
 ## Tooling and Development
 
 ### Cargo Configuration
+
 ```toml
 # Cargo.toml
 [package]
@@ -281,6 +293,7 @@ harness = false
 ```
 
 ### CI/CD Configuration
+
 ```yaml
 # .github/workflows/ci.yml
 name: CI
@@ -296,20 +309,20 @@ jobs:
           - stable
           - beta
           - nightly
-    
+
     steps:
     - uses: actions/checkout@v2
     - uses: actions-rs/toolchain@v1
       with:
         toolchain: ${{ matrix.rust }}
         override: true
-    
+
     - name: Run tests
       run: cargo test --verbose
-    
+
     - name: Run clippy
       run: cargo clippy -- -D warnings
-    
+
     - name: Check formatting
       run: cargo fmt -- --check
 ```

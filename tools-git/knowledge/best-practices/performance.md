@@ -1,6 +1,7 @@
 # Git Performance Best Practices
 
 ## Repository Optimization
+
 ```bash
 # ลดขนาด repository
 git gc --aggressive --prune=now
@@ -13,11 +14,13 @@ git prune --expire now
 ```
 
 ## Large Files Management
+
 - ใช้ Git LFS สำหรับไฟล์ขนาดใหญ่ (>100MB)
 - กำหนด `.gitattributes` สำหรับ file types
 - หลีกเลี่ยงการ commit binaries โดยตรง
 
 ## Ignore Files Effectively
+
 ```gitignore
 # ขนาดใหญ่
 *.zip
@@ -35,6 +38,7 @@ build/
 ```
 
 ## Network Performance
+
 ```bash
 # ใช้ shallow clone สำหรับ large repos
 git clone --depth 1 <url>
@@ -48,6 +52,7 @@ git sparse-checkout set src/
 ```
 
 ## Command Performance
+
 - ใช้ `git status -s` สำหรับ output สั้น
 - ใช้ `git log --oneline` สำหรับประวัติสั้น
 - ใช้ `git diff --stat` สำหรับสรุปการเปลี่ยนแปลง

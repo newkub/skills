@@ -8,6 +8,7 @@ outcome: สามารถจัดการ DOM และ events ได้อ�
 # DOM Manipulation Best Practices
 
 ## Overview
+
 Best practices สำหรับการจัดการ DOM elements, events, และ performance optimization ใน JavaScript
 
 ## Best Practices Summary
@@ -28,6 +29,7 @@ Best practices สำหรับการจัดการ DOM elements, event
 ## Implementation Guidelines
 
 ### High Priority Practices
+
 1. **Use modern selectors** - querySelector/querySelectorAll
 2. **Minimize DOM manipulation** - Batch updates
 3. **Use event delegation** - Better performance
@@ -35,6 +37,7 @@ Best practices สำหรับการจัดการ DOM elements, event
 5. **Avoid layout thrashing** - Separate reads and writes
 
 ### Medium Priority Practices
+
 1. **Use classList** - Better class management
 2. **Use requestAnimationFrame** - Smooth animations
 3. **Use data attributes** - Store element data
@@ -43,6 +46,7 @@ Best practices สำหรับการจัดการ DOM elements, event
 ### DOM Manipulation Checklist
 
 #### Performance
+
 - [ ] Minimize DOM operations
 - [ ] Batch DOM updates
 - [ ] Avoid layout thrashing
@@ -50,12 +54,14 @@ Best practices สำหรับการจัดการ DOM elements, event
 - [ ] Remove unused event listeners
 
 #### Maintainability
+
 - [ ] Use meaningful selectors
 - [ ] Separate concerns (HTML/CSS/JS)
 - [ ] Use CSS classes instead of inline styles
 - [ ] Use data attributes for element data
 
 #### Best Practices
+
 - [ ] Use modern DOM APIs
 - [ ] Implement proper cleanup
 - [ ] Handle edge cases
@@ -74,6 +80,7 @@ Best practices สำหรับการจัดการ DOM elements, event
 ## DOM Manipulation Examples
 
 ### Modern Element Selection
+
 ```javascript
 // Good: Modern selectors
 const button = document.querySelector('#submitBtn');
@@ -100,6 +107,7 @@ if (element) {
 ```
 
 ### Event Delegation
+
 ```javascript
 // Good: Event delegation for dynamic content
 const list = document.querySelector('#dynamic-list');
@@ -114,7 +122,7 @@ list.addEventListener('click', (event) => {
 function handleListItemClick(item) {
   const itemId = item.dataset.id;
   const action = event.target.dataset.action;
-  
+
   switch (action) {
     case 'edit':
       editItem(itemId);
@@ -146,20 +154,21 @@ table.addEventListener('change', (event) => {
 ```
 
 ### Efficient DOM Updates
+
 ```javascript
 // Good: Batch DOM updates with document fragment
 function addMultipleItems(items) {
   const fragment = document.createDocumentFragment();
-  
+
   items.forEach(item => {
     const li = document.createElement('li');
     li.className = 'list-item';
     li.textContent = item.name;
     li.dataset.id = item.id;
-    
+
     fragment.appendChild(li);
   });
-  
+
   document.querySelector('#item-list').appendChild(fragment);
 }
 
@@ -178,13 +187,14 @@ function addMultipleItemsBad(items) {
     li.className = 'list-item';
     li.textContent = item.name;
     li.dataset.id = item.id;
-    
+
     document.querySelector('#item-list').appendChild(li); // Multiple reflows
   });
 }
 ```
 
 ### Avoiding Layout Thrashing
+
 ```javascript
 // Good: Separate reads and writes
 function updateElementPositions(elements) {
@@ -193,7 +203,7 @@ function updateElementPositions(elements) {
     element,
     rect: element.getBoundingClientRect()
   }));
-  
+
   // Then write all layout changes
   positions.forEach(({ element, rect }) => {
     element.style.left = `${rect.left}px`;
@@ -204,19 +214,19 @@ function updateElementPositions(elements) {
 // Good: Use requestAnimationFrame for animations
 function animateElement(element, from, to, duration) {
   const startTime = performance.now();
-  
+
   function update(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    
+
     const current = from + (to - from) * progress;
     element.style.transform = `translateX(${current}px)`;
-    
+
     if (progress < 1) {
       requestAnimationFrame(update);
     }
   }
-  
+
   requestAnimationFrame(update);
 }
 
@@ -231,6 +241,7 @@ function updateElementPositionsBad(elements) {
 ```
 
 ### Class Management
+
 ```javascript
 // Good: Using classList
 function toggleElementState(element, isActive) {
@@ -260,16 +271,17 @@ element.className = isActive ? 'active visible' : 'inactive hidden';
 ```
 
 ### Data Attributes
+
 ```javascript
 // Good: Using data attributes for element data
 function setupInteractiveElements() {
   const buttons = document.querySelectorAll('[data-action]');
-  
+
   buttons.forEach(button => {
     const action = button.dataset.action;
     const targetId = button.dataset.target;
     const params = JSON.parse(button.dataset.params || '{}');
-    
+
     button.addEventListener('click', () => {
       handleAction(action, targetId, params);
     });
@@ -278,7 +290,7 @@ function setupInteractiveElements() {
 
 function handleAction(action, targetId, params) {
   const target = document.getElementById(targetId);
-  
+
   switch (action) {
     case 'show':
       target.classList.remove('hidden');
@@ -301,6 +313,7 @@ function handleAction(action, targetId, params) {
 ```
 
 ### Modern DOM APIs
+
 ```javascript
 // Good: Using modern DOM APIs
 function findNearestParent(element, selector) {
@@ -323,7 +336,7 @@ function insertAfter(newElement, referenceElement) {
 // Good: Using Intersection Observer for lazy loading
 function setupLazyLoading() {
   const images = document.querySelectorAll('img[data-src]');
-  
+
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -334,7 +347,7 @@ function setupLazyLoading() {
       }
     });
   });
-  
+
   images.forEach(img => imageObserver.observe(img));
 }
 
@@ -351,17 +364,18 @@ function observeContainerChanges(container, callback) {
       }
     });
   });
-  
+
   observer.observe(container, {
     childList: true,
     subtree: true
   });
-  
+
   return observer;
 }
 ```
 
 ### Memory Management and Cleanup
+
 ```javascript
 // Good: Proper event listener cleanup
 class ComponentManager {
@@ -369,27 +383,27 @@ class ComponentManager {
     this.eventListeners = new Map();
     this.observers = [];
   }
-  
+
   addEventListener(element, event, handler) {
     element.addEventListener(event, handler);
-    
+
     const key = `${element.id || 'unnamed'}-${event}`;
     this.eventListeners.set(key, { element, event, handler });
   }
-  
+
   addIntersectionObserver(target, callback) {
     const observer = new IntersectionObserver(callback);
     observer.observe(target);
     this.observers.push(observer);
   }
-  
+
   cleanup() {
     // Remove all event listeners
     this.eventListeners.forEach(({ element, event, handler }) => {
       element.removeEventListener(event, handler);
     });
     this.eventListeners.clear();
-    
+
     // Disconnect all observers
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
@@ -408,13 +422,14 @@ manager.addIntersectionObserver(image, handleImageLoad);
 ## Performance Optimization
 
 ### Efficient DOM Queries
+
 ```javascript
 // Good: Cache frequently used elements
 class DOMCache {
   constructor() {
     this.cache = new Map();
   }
-  
+
   get(selector) {
     if (!this.cache.has(selector)) {
       const element = document.querySelector(selector);
@@ -422,7 +437,7 @@ class DOMCache {
     }
     return this.cache.get(selector);
   }
-  
+
   getAll(selector) {
     if (!this.cache.has(selector)) {
       const elements = document.querySelectorAll(selector);
@@ -430,7 +445,7 @@ class DOMCache {
     }
     return this.cache.get(selector);
   }
-  
+
   invalidate(selector) {
     this.cache.delete(selector);
   }
@@ -442,6 +457,7 @@ const allButtons = domCache.getAll('button');
 ```
 
 ## Verification
+
 1. ตรวจสอบว่าใช้ querySelector/querySelectorAll
 2. ทดสอบว่ามี event delegation สำหรับ dynamic content
 3. ยืนยันว่า DOM operations ถูก batch

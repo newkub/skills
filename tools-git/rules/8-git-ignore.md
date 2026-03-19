@@ -1,9 +1,11 @@
 # Git Ignore
 
 ## Description
+
 ตั้งค่า .gitignore ให้มีประสิทธิภาพและครอบคลุม
 
 ## Examples
+
 ```gitignore
 # Dependencies
 node_modules/
@@ -45,6 +47,7 @@ temp/
 ```
 
 ## Anti-patterns
+
 ❌ ไม่มี .gitignore ในโปรเจกต์
 ❌ commit sensitive files ลง repository
 ❌ ใช้ .gitignore ผิดพลาด (ignore ไฟล์ที่จำเป็น)

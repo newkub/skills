@@ -3,6 +3,7 @@
 การใช้งาน decorators ใน TypeScript
 
 ### Basic Decorators
+
 ```typescript
 // Class decorator
 function sealed(constructor: Function) {
@@ -15,6 +16,7 @@ class Greeter {}
 ```
 
 ### Method Decorators
+
 ```typescript
 // Method decorator
 function enumerable(value: boolean) {
@@ -32,16 +34,17 @@ class Person {
 ```
 
 ### Property Decorators
+
 ```typescript
 // Property decorator
 function format(target: any, propertyKey: string) {
   let value = target[propertyKey];
-  
+
   const getter = () => value;
   const setter = (newVal: string) => {
     value = newVal.trim();
   };
-  
+
   Object.defineProperty(target, propertyKey, {
     get: getter,
     set: setter,
@@ -55,6 +58,7 @@ class User {
 ```
 
 ### Parameter Decorators
+
 ```typescript
 // Parameter decorator
 function validate(target: any, methodName: string, parameterIndex: number) {
@@ -69,6 +73,7 @@ class Calculator {
 ```
 
 ### Decorator Factory
+
 ```typescript
 // Factory for creating decorators
 function decoratorFactory(options: { value: string }) {
@@ -82,6 +87,7 @@ class MyClass {}
 ```
 
 ### Metadata
+
 ```typescript
 // Using reflect-metadata
 import "reflect-metadata";

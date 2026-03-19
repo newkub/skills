@@ -8,9 +8,11 @@ outcome: สามารถใช้ Fetch API, LocalStorage, SessionStorage, �
 # Browser APIs
 
 ## Concepts
+
 Browser APIs คือ interfaces ที่ browser ให้มาให้ JavaScript สามารถ interact กับ browser features ต่างๆ เช่น HTTP requests, local storage, real-time communication
 
 ## Best Practices
+
 - ใช้ Fetch API แทน XMLHttpRequest สำหรับ HTTP requests
 - ใช้ LocalStorage สำหรับ persistent data
 - ใช้ SessionStorage สำหรับ session-based data
@@ -21,16 +23,17 @@ Browser APIs คือ interfaces ที่ browser ให้มาให้ Jav
 ## Examples
 
 ### Fetch API
+
 ```javascript
 // Basic GET request
 async function getData(url) {
   try {
     const response = await fetch(url);
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
+
     const data = await response.json();
     return data;
   } catch (error) {
@@ -54,11 +57,11 @@ async function postData(url, data) {
       },
       body: JSON.stringify(data),
     });
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
+
     const result = await response.json();
     return result;
   } catch (error) {
@@ -85,7 +88,7 @@ async function updateData(url, id, data) {
       },
       body: JSON.stringify(data),
     });
-    
+
     return await response.json();
   } catch (error) {
     console.error('Error updating data:', error);
@@ -99,11 +102,11 @@ async function deleteData(url, id) {
     const response = await fetch(`${url}/${id}`, {
       method: 'DELETE',
     });
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
+
     return 'Data deleted successfully';
   } catch (error) {
     console.error('Error deleting data:', error);
@@ -116,7 +119,7 @@ async function searchUsers(query, page = 1) {
   const url = new URL('https://api.example.com/users');
   url.searchParams.append('q', query);
   url.searchParams.append('page', page);
-  
+
   try {
     const response = await fetch(url);
     return await response.json();
@@ -128,6 +131,7 @@ async function searchUsers(query, page = 1) {
 ```
 
 ### LocalStorage
+
 ```javascript
 // Save data to LocalStorage
 function saveToLocalStorage(key, data) {
@@ -209,6 +213,7 @@ function removeTodo(index) {
 ```
 
 ### SessionStorage
+
 ```javascript
 // Save data to SessionStorage
 function saveToSessionStorage(key, data) {
@@ -271,11 +276,12 @@ function restoreFormData(formId) {
 ```
 
 ### WebSocket
+
 ```javascript
 // Create WebSocket connection
 function createWebSocket(url) {
   const socket = new WebSocket(url);
-  
+
   socket.onopen = (event) => {
     console.log('WebSocket connection opened:', event);
     // Send initial message
@@ -284,7 +290,7 @@ function createWebSocket(url) {
       data: 'Hello Server!'
     }));
   };
-  
+
   socket.onmessage = (event) => {
     try {
       const message = JSON.parse(event.data);
@@ -294,11 +300,11 @@ function createWebSocket(url) {
       console.error('Error parsing message:', error);
     }
   };
-  
+
   socket.onerror = (error) => {
     console.error('WebSocket error:', error);
   };
-  
+
   socket.onclose = (event) => {
     console.log('WebSocket connection closed:', event);
     if (event.code === 1000) {
@@ -308,7 +314,7 @@ function createWebSocket(url) {
       setTimeout(() => createWebSocket(url), 3000);
     }
   };
-  
+
   return socket;
 }
 
@@ -384,16 +390,17 @@ function updateCursor(data) {
 ```
 
 ### Error Handling and Best Practices
+
 ```javascript
 // Robust fetch with retry mechanism
 async function fetchWithRetry(url, options = {}, retries = 3) {
   try {
     const response = await fetch(url, options);
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
+
     return await response.json();
   } catch (error) {
     if (retries > 0) {
@@ -413,7 +420,7 @@ function safeLocalStorageOperation(operation, key, data) {
       console.warn('LocalStorage not available, using fallback');
       return fallbackStorage(operation, key, data);
     }
-    
+
     switch (operation) {
       case 'set':
         localStorage.setItem(key, JSON.stringify(data));
@@ -454,25 +461,25 @@ class WebSocketManager {
     this.maxReconnectAttempts = 5;
     this.reconnectInterval = 1000;
   }
-  
+
   connect() {
     this.socket = new WebSocket(this.url);
-    
+
     this.socket.onopen = () => {
       console.log('WebSocket connected');
       this.reconnectAttempts = 0;
     };
-    
+
     this.socket.onclose = () => {
       console.log('WebSocket disconnected');
       this.attemptReconnect();
     };
-    
+
     this.socket.onerror = (error) => {
       console.error('WebSocket error:', error);
     };
   }
-  
+
   attemptReconnect() {
     if (this.reconnectAttempts < this.maxReconnectAttempts) {
       this.reconnectAttempts++;
@@ -482,7 +489,7 @@ class WebSocketManager {
       }, this.reconnectInterval * this.reconnectAttempts);
     }
   }
-  
+
   send(data) {
     if (this.socket && this.socket.readyState === WebSocket.OPEN) {
       this.socket.send(JSON.stringify(data));
@@ -490,7 +497,7 @@ class WebSocketManager {
       console.error('WebSocket not ready');
     }
   }
-  
+
   close() {
     if (this.socket) {
       this.socket.close();
@@ -500,6 +507,7 @@ class WebSocketManager {
 ```
 
 ## Verification
+
 1. ตรวจสอบว่า Fetch API ทำงานได้
 2. ทดสอบ LocalStorage operations
 3. ยืนยันว่า SessionStorage ทำงานได้

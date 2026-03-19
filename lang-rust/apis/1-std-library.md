@@ -7,6 +7,7 @@ The Rust standard library provides essential functionality for Rust programs. Th
 ## Primitive Types
 
 ### Integer Types
+
 ```rust
 // Signed integers
 let x: i8 = 127;
@@ -26,6 +27,7 @@ let usize = 8; // Platform-dependent
 ```
 
 ### Floating Point Types
+
 ```rust
 let x: f32 = 3.14159;
 let y: f64 = 2.718281828459045;
@@ -38,6 +40,7 @@ let round = x.round();
 ```
 
 ### Boolean Type
+
 ```rust
 let is_true: bool = true;
 let is_false: bool = false;
@@ -49,6 +52,7 @@ let result = !is_true; // false
 ```
 
 ### Character Type
+
 ```rust
 let c: char = 'a';
 let emoji: char = '😊';
@@ -63,6 +67,7 @@ let to_upper = c.to_uppercase();
 ## Collections
 
 ### Vec<T> - Dynamic Array
+
 ```rust
 // Creation
 let mut vec = Vec::new();
@@ -98,6 +103,7 @@ let filtered: Vec<i32> = vec.iter().filter(|&&x| x > 3).cloned().collect();
 ```
 
 ### String - UTF-8 String
+
 ```rust
 // Creation
 let mut s = String::new();
@@ -127,6 +133,7 @@ let trimmed = s.trim();
 ```
 
 ### HashMap<K, V> - Key-Value Store
+
 ```rust
 use std::collections::HashMap;
 
@@ -406,6 +413,7 @@ impl From<std::io::Error> for MyError {
 ## Common Traits
 
 ### Clone
+
 ```rust
 #[derive(Clone)]
 struct Point {
@@ -418,6 +426,7 @@ let p2 = p1.clone(); // Deep copy
 ```
 
 ### Copy
+
 ```rust
 #[derive(Copy, Clone)]
 struct Point {
@@ -430,6 +439,7 @@ let p2 = p1; // Copy, not move
 ```
 
 ### Debug
+
 ```rust
 #[derive(Debug)]
 struct Point {
@@ -443,6 +453,7 @@ println!("{:#?}", p); // Pretty print
 ```
 
 ### PartialEq and Eq
+
 ```rust
 #[derive(PartialEq, Eq)]
 struct Point {
@@ -456,6 +467,7 @@ assert_eq!(p1, p2);
 ```
 
 ### Hash
+
 ```rust
 use std::collections::HashMap;
 use std::hash::{Hash, Hasher};

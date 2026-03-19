@@ -5,6 +5,7 @@
 ### ES2020 Features
 
 #### Optional Chaining (?.)
+
 ```javascript
 const user = {
   name: 'John',
@@ -22,6 +23,7 @@ const city = user?.address?.city?.toUpperCase(); // undefined if any is null/und
 ```
 
 #### Nullish Coalescing (??)
+
 ```javascript
 const settings = {
   theme: null,
@@ -39,6 +41,7 @@ const fontSize = settings.fontSize ?? 16; // 0 (preserves falsy values except nu
 ```
 
 #### BigInt
+
 ```javascript
 // Creating BigInt values
 const bigIntValue = 9007199254740991n;
@@ -53,6 +56,7 @@ const product = bigIntValue * 2n;
 ```
 
 #### Promise.allSettled()
+
 ```javascript
 const promises = [
   fetch('/api/user/1'),
@@ -72,6 +76,7 @@ results.forEach((result, index) => {
 ```
 
 #### String.prototype.matchAll()
+
 ```javascript
 const text = 'JavaScript is great. JavaScript is popular.';
 const regex = /JavaScript/g;
@@ -87,6 +92,7 @@ matches.forEach(match => {
 ### ES2021 Features
 
 #### Logical Assignment Operators
+
 ```javascript
 let user = { name: 'John' };
 
@@ -104,6 +110,7 @@ settings.fontSize ??= 16; // Only assigns if null/undefined
 ```
 
 #### Numeric Separators
+
 ```javascript
 const billion = 1_000_000_000;
 const bytes = 0xFF_FF_FF_FF;
@@ -115,6 +122,7 @@ const binary = 0b1010_1100_1111_0000;
 ```
 
 #### String.prototype.replaceAll()
+
 ```javascript
 const text = 'apple, banana, apple, orange';
 
@@ -128,6 +136,7 @@ const newText2 = text.replaceAll('apple', 'grape');
 ```
 
 #### Promise.any()
+
 ```javascript
 const promises = [
   fetch('/api/primary').catch(() => null),
@@ -146,6 +155,7 @@ try {
 ### ES2022 Features
 
 #### Array.prototype.at()
+
 ```javascript
 const arr = ['a', 'b', 'c', 'd', 'e'];
 
@@ -162,6 +172,7 @@ const lastItem = arr.at(-1);
 ```
 
 #### Object.hasOwn()
+
 ```javascript
 const obj = { name: 'John', age: 30 };
 
@@ -175,31 +186,32 @@ console.log(Object.hasOwn(obj, 'toString')); // false
 ```
 
 #### Class Fields
+
 ```javascript
 class Person {
   // Public fields
   name = 'Unknown';
   age = 0;
-  
+
   // Private fields
   #id = Math.random();
   #secrets = [];
-  
+
   // Static fields
   static species = 'Homo sapiens';
   static #count = 0;
-  
+
   constructor(name, age) {
     this.name = name;
     this.age = age;
     Person.#count++;
   }
-  
+
   // Private methods
   #generateId() {
     return `person_${Date.now()}_${this.#id}`;
   }
-  
+
   // Public methods
   getInfo() {
     return {
@@ -208,7 +220,7 @@ class Person {
       id: this.#generateId()
     };
   }
-  
+
   // Static methods
   static getCount() {
     return Person.#count;
@@ -217,6 +229,7 @@ class Person {
 ```
 
 #### Error Cause
+
 ```javascript
 async function fetchUserData(userId) {
   try {
@@ -245,6 +258,7 @@ try {
 ### ES2023 Features
 
 #### Array.prototype.findLast() and findLastIndex()
+
 ```javascript
 const numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
 
@@ -256,6 +270,7 @@ const lastEvenIndex = numbers.findLastIndex(num => num % 2 === 0); // 7
 ```
 
 #### Array.prototype.toReversed(), toSorted(), toSpliced()
+
 ```javascript
 const original = [3, 1, 4, 1, 5];
 
@@ -268,6 +283,7 @@ console.log(original); // [3, 1, 4, 1, 5] - unchanged
 ```
 
 #### Hashbang Syntax
+
 ```javascript
 #!/usr/bin/env node
 
@@ -280,6 +296,7 @@ console.log('Hello from executable script!');
 ### ES2024 Features (Proposed)
 
 #### Pipeline Operator (|)
+
 ```javascript
 // Proposed syntax
 const result = value
@@ -292,6 +309,7 @@ const result = toString(add(5, double(value)));
 ```
 
 #### Temporal API (Date replacement)
+
 ```javascript
 import { Temporal } from 'proposal-temporal';
 
@@ -308,6 +326,7 @@ const zonedNow = Temporal.Now.zonedDateTimeISO('America/New_York');
 ```
 
 #### Array.prototype.groupBy()
+
 ```javascript
 const people = [
   { name: 'Alice', age: 25, city: 'NYC' },
@@ -332,6 +351,7 @@ const groupedByAge = people.groupBy(person => person.age);
 ### Using Modern Features in Projects
 
 #### Babel Configuration
+
 ```json
 // .babelrc
 {
@@ -348,6 +368,7 @@ const groupedByAge = people.groupBy(person => person.age);
 ```
 
 #### TypeScript Support
+
 ```typescript
 // Optional chaining in TypeScript
 interface User {
@@ -366,6 +387,7 @@ const theme = user?.address?.city ?? 'Unknown';
 ```
 
 #### Browser Compatibility Check
+
 ```javascript
 // Feature detection
 const supportsOptionalChaining = () => {

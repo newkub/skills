@@ -3,6 +3,7 @@
 ตัวอย่างโค้ด TypeScript ที่ใช้บ่อย
 
 ### Basic Usage
+
 ```typescript
 // Interface definition
 interface User {
@@ -28,6 +29,7 @@ console.log(user.name);
 ```
 
 ### Generic Functions
+
 ```typescript
 // Generic repository
 interface Repository<T> {
@@ -55,6 +57,7 @@ class ApiClient {
 ```
 
 ### Advanced Types
+
 ```typescript
 // Branded types
 type UserId = string & { readonly brand: unique symbol };
@@ -74,6 +77,7 @@ type Required<T> = { [P in keyof T]-?: T[P] };
 ```
 
 ### Error Handling
+
 ```typescript
 // Result type
 type Result<T, E = Error> = 
@@ -99,6 +103,7 @@ if (result.success) {
 ```
 
 ### Validation
+
 ```typescript
 // Type guards
 function isString(value: unknown): value is string {
@@ -124,6 +129,7 @@ function processValue(value: unknown) {
 ```
 
 ### Decorators
+
 ```typescript
 // Method decorator
 function log(target: any, propertyKey: string, descriptor: PropertyDescriptor) {

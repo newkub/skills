@@ -3,6 +3,7 @@
 ## Common Issues & Solutions
 
 ### Merge Conflicts
+
 ```bash
 # ดู conflicts
 git status
@@ -15,6 +16,7 @@ git merge --abort
 ```
 
 ### Undo Changes
+
 ```bash
 # ยกเลิกการเปลี่ยนแปลงใน working directory
 git checkout -- <file>
@@ -30,6 +32,7 @@ git reset --hard HEAD~1
 ```
 
 ### Recovery
+
 ```bash
 # ดู commits ที่หายไป
 git reflog
@@ -42,6 +45,7 @@ git branch recovery <commit-hash>
 ```
 
 ### Remote Issues
+
 ```bash
 # แก้ไข upstream conflicts
 git fetch upstream
@@ -52,6 +56,7 @@ git push --force-with-lease origin feature-branch
 ```
 
 ### Performance Issues
+
 ```bash
 # ตรวจสอบ corrupted repository
 git fsck --full
@@ -64,6 +69,7 @@ du -sh .git/
 ```
 
 ## Debug Commands
+
 ```bash
 # ดู git config ทั้งหมด
 git config --list
