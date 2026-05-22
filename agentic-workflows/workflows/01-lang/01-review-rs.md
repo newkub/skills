@@ -3,7 +3,6 @@ title: Review Rust
 auto_execution_mode: 3
 description: ตรวจสอบและปรับปรุงคุณภาพ Rust code ตาม best practices และ coding standards
 ---
-
 ## 1. Precondition
 
 - มี Rust project หรือไฟล์ .rs ที่ต้องการตรวจสอบ
@@ -21,37 +20,33 @@ description: ตรวจสอบและปรับปรุงคุณภ�
 
 1. รัน formatter เพื่อตรวจสอบรูปแบบโค้ด
 
-   ```bash
-   cargo fmt --check
-   ```
+```bash
+cargo fmt --check
+```
 
-2. รัน linter เพื่อหาปัญหาทั่วไป
+1. รัน linter เพื่อหาปัญหาทั่วไป
 
-   ```bash
-   cargo clippy --all-targets --all-features
-   ```
+```bash
+cargo clippy --all-targets --all-features
+```
 
-3. ตรวจสอบว่าโค้ดสามารถ compile ได้
+1. ตรวจสอบว่าโค้ดสามารถ compile ได้
 
-   ```bash
-   cargo check
-   ```
+```bash
+cargo check
+```
 
-4. รัน tests เพื่อตรวจสอบความถูกต้อง
+1. รัน tests เพื่อตรวจสอบความถูกต้อง
 
-   ```bash
-   cargo test
-   ```
+```bash
+cargo test
+```
 
-5. ตรวจสอบ documentation
+1. ตรวจสอบ documentation
    - ยืนยันว่า public functions มี doc comments
    - ตรวจสอบว่า examples ใน doc comments สามารถรันได้
-
-   ```bash
-   cargo doc --no-deps
-   ```
-
-6. แก้ไขปัญหาที่พบ
+2. cargo doc --no-deps
+3. แก้ไขปัญหาที่พบ
    - แก้ไข formatting ด้วย `cargo fmt`
    - แก้ไข warnings จาก clippy
    - เพิ่ม doc comments ที่ขาดหาย

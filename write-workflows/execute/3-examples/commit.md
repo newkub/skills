@@ -104,4 +104,4 @@ Commit โค้ดด้วย conventional commits format พร้อม vali
 - [Git Best Practices](https://github.com/git/git/blob/master/Documentation/SubmittingPatches)
 - [Semantic Versioning](https://semver.org/)
 - Project-specific commit templates
-- Related workflows: `/create-git-tag`, `/merge-git-commit`
+- Related workflows: `/create-git-tag`, `/git-commit-merge`
