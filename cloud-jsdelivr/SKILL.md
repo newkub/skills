@@ -2,36 +2,38 @@
 
 jsDelivr เป็น Open Source CDN (Content Delivery Network) ที่ให้บริการฟรีสำหรับ npm packages และ GitHub repositories รองรับการส่งมอบไฟล์ที่ optimized สำหรับ JS และ ESM พร้อม features ครบครัน
 
-## โครงสร้าง Directory
+## Directory Structure
 
 ```text
-lib-jsdelivr/
-├── intro/
-│   ├── intro-overview.md
-│   ├── intro-key-concepts.md
-│   └── intro-when-to-use.md
-├── setup/
-│   ├── setup-installation.md
-│   └── setup-configuration.md
+cloud-jsdelivr/
 ├── guide/
-│   ├── guide-usage.md
-│   └── guide-best-practices.md
-├── apis/
-│   ├── api-reference.md
-│   └── api-examples.md
+│   ├── key-concept.md
+│   ├── how-it-works.md
+│   ├── features.md
+│   ├── installation.md
+│   ├── configuration.md
+│   ├── quick-start.md
+│   ├── best-practices.md
+│   ├── integration.md
+│   └── architecture.md
+├── key-concepts/
+├── principles/
+├── references/
+│   ├── website.md
+│   ├── api.md
+│   └── configuration.md
 ├── workflows/
 │   └── use-jsdelivr.md
-├── README.md
 └── SKILL.md
 ```
 
-## หมวดหมู่ไฟล์
+## File Categories
 
-- **intro/**: บทนำและแนวคิดพื้นฐานของ jsDelivr
-- **setup/**: การติดตั้งและการตั้งค่า
-- **guide/**: คู่มือการใช้งานและ best practices
-- **apis/**: เอกสารอ้างอิง API และตัวอย่าง
-- **workflows/**: workflows สำหรับการใช้งาน jsDelivr
+| Folder | Description |
+|--------|-------------|
+| **guide/** | คู่มือการใช้งานและ best practices |
+| **references/** | เอกสารอ้างอิง API และ configuration |
+| **workflows/** | Workflows สำหรับการใช้งาน jsDelivr |
 
 ## คุณสมบัติหลัก
 

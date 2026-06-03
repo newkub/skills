@@ -1,1 +1,0 @@
-ใช้ rg ast-grep

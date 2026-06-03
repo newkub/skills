@@ -1,1 +1,0 @@
-ทำตาม @write-markdown
