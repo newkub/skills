@@ -87,5 +87,6 @@ skill-name/
 
 ## Recent Updates
 
+- **README.md**: สร้าง README.md ใหม่พร้อมเนื้อหาครบถ้วน — Hero, Features, Key Concepts, Quick Start, Usage, Skills Catalog (120+ skills), Skill Structure, Reference, Notes
 - **runtime-bun**: อัปเดตโครงสร้างตาม /follow-write-skills, เพิ่มไฟล์ how-it-works, configuration, integration, architecture, website
 - **runtime-node**: อัปเดตโครงสร้างตาม /follow-write-skills, เพิ่มไฟล์ how-it-works, configuration, integration, architecture, website
