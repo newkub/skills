@@ -1,0 +1,73 @@
+# tool-nvim
+
+แนวทางการใช้งาน Neovim - Modern, extensible text editor ที่พัฒนาจาก Vim
+
+## Overview
+
+Neovim (nvim) เป็น modern fork ของ Vim ที่เน้น extensibility และ usability รองรับ Lua scripting, built-in terminal, และ async plugin system ทำให้เป็น editor ที่ power สำหรับ developers
+
+## File Structure
+
+```text
+tool-nvim/
+├── SKILL.md
+├── guide/
+│   ├── key-concept.md
+│   ├── how-it-works.md
+│   ├── features.md
+│   ├── installation.md
+│   ├── configuration.md
+│   └── best-practices.md
+└── references/
+    ├── cli.md
+    ├── configuration.md
+    └── api.md
+```
+
+## Content Summary
+
+| Folder | File | Description |
+|--------|------|-------------|
+| **Guide** | key-concept.md | แนวคิดหลัก - Modal editing, Registers, Macros |
+| **Guide** | how-it-works.md | สถาปัตยกรรม - Neovim architecture, Plugins, UI |
+| **Guide** | features.md | ฟีเจอร์ทั้งหมด - LSP, Treesitter, Terminal |
+| **Guide** | installation.md | การติดตั้ง - Various installation methods |
+| **Guide** | configuration.md | การตั้งค่า - init.lua, plugins, options |
+| **Guide** | best-practices.md | แนวทางปฏิบัติที่ดี |
+| **Reference** | cli.md | CLI commands - nvim, nvim --help |
+| **Reference** | configuration.md | Configuration - init.vim, init.lua |
+| **Reference** | [api.md](references/api.md) | Neovim API - :help, :lua |
+
+## Quick Start
+
+```bash
+# Open file
+nvim file.txt
+
+# Open with line number
+nvim +12 file.txt
+
+# Ex mode
+nvim -e file.txt
+
+# Diff mode
+nvim -d file1.txt file2.txt
+```
+
+## Key Features
+
+| Feature | Description |
+|---------|-------------|
+| **Modal Editing** | Normal, Insert, Visual, Command modes |
+| **LSP Native** | Built-in Language Server Protocol support |
+| **Treesitter** | Syntax highlighting with Treesitter |
+| **Terminal** | Built-in terminal emulator |
+| **Lua Plugins** | Modern plugin system with Lua |
+
+## Usage Order
+
+1. **Start**: Learn basic modes and commands
+2. **Configure**: Set up init.lua with basic options
+3. **Install Plugins**: Add essential plugins (lazy.nvim, telescope)
+4. **Learn Advanced**: Mappings, macros, registers
+5. **Reference**: `references/cli.md` for all commands

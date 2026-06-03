@@ -1,97 +1,72 @@
----
-name: bun-sdk
-description: พัฒนา SDK บน Bun runtime ด้วย TypeScript และ best practices
-goal: สร้าง SDK ที่เร็ว ปลอดภัย และใช้งานง่ายบน Bun runtime
-outcome: ได้ SDK ที่มีประสิทธิภาพสูง รองรับ TypeScript และพร้อมใช้งาน
----
+# runtime-bun
 
-# Bun SDK Development
+## Overview
 
-พัฒนา SDK บน Bun runtime ด้วย TypeScript integration, package management และ performance optimization
+Bun เป็น JavaScript runtime, package manager, bundler, และ test runner ที่เร็วกว่า Node.js ถึง 10-20 เท่า รองรับ TypeScript โดยตรงโดยไม่ต้อง compile
+
+## โครงสร้าง Directory
+
+```
+runtime-bun/
+├── SKILL.md
+├── guide/
+│   ├── key-concept.md
+│   ├── how-it-works.md
+│   ├── features.md
+│   ├── installation.md
+│   ├── configuration.md
+│   ├── quick-start.md
+│   ├── best-practices.md
+│   ├── integration.md
+│   └── architecture.md
+├── key-concepts/
+├── principles/
+└── references/
+    ├── api.md
+    ├── website.md
+    ├── cli.md
+    └── configuration.md
+```
+
+## หมวดหมู่ไฟล์
+
+### guide/
+
+| ไฟล์ | คำอธิบาย |
+|------|---------|
+| key-concept.md | พื้นฐานและหลักการสำคัญของ Bun |
+| how-it-works.md | อธิบายการทำงานของ Bun พร้อม diagram |
+| features.md | คุณสมบัติหลักของ Bun |
+| installation.md | วิธีการติดตั้ง Bun |
+| configuration.md | การตั้งค่าและ configuration |
+| quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| best-practices.md | แนวทางปฏิบัติที่ดี |
+| integration.md | การเชื่อมต่อกับ tools และ frameworks |
+| architecture.md | สถาปัตยกรรมของ Bun |
+
+### references/
+
+| ไฟล์ | คำอธิบาย |
+|------|---------|
+| api.md | API reference ของ Bun globals และ built-in modules |
+| website.md | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
+| cli.md | คำสั่ง CLI ของ Bun |
+| configuration.md | ตัวเลือก configuration ต่างๆ |
 
 ## When to Use
 
-- ต้องการสร้าง SDK สำหรับ API หรือ service
 - ต้องการประสิทธิภาพสูงกว่า Node.js
-- ต้องการ TypeScript support แบบ zero-config
-- ต้องการรองรับทั้ง Node.js และ browser environments
-- ต้องการลดขนาด bundle และเวลาติดตั้ง
+- ต้องการ TypeScript zero-config
+- ต้องการ package manager ที่เร็วกว่า npm
+- ต้องการ bundler ในตัว
+- ต้องการ test runner ในตัว
+- ต้องการ migrate จาก Node.js
 
-## Quick Start
+## Core Features
 
-1. **สร้างโปรเจกต์**
-
-   ```bash
-   mkdir my-sdk && cd my-sdk
-   bun init
-   ```
-
-2. **ติดตั้ง dependencies**
-
-   ```bash
-   bun add -d @types/bun typescript
-   ```
-
-3. **สร้างโครงสร้าง**
-
-   ```bash
-   mkdir -p src/{client,types,utils,errors} tests
-   ```
-
-4. **ตั้งค่า TypeScript**
-
-   ```bash
-   # ดู [rules/2-configuration.md](rules/2-configuration.md)
-   ```
-
-5. **เขียน SDK client**
-
-   ```typescript
-   // ดู [rules/3-usage.md](rules/3-usage.md)
-   ```
-
-## Rules
-
-- [Project Setup](rules/1-setup.md) - ตั้งค่าโปรเจกต์และ dependencies
-- [Configuration](rules/2-configuration.md) - ตั้งค่า TypeScript และ package.json
-- [Usage Patterns](rules/3-usage.md) - patterns สำหรับการพัฒนา SDK
-
-## Knowledge
-
-- [Core Concepts](knowledge/core-concept.md) - แนวคิดพื้นฐานของ Bun SDK
-- [All Features](knowledge/all-features.md) - ฟีเจอร์ทั้งหมดที่รองรับ
-- [Performance Best Practices](knowledge/best-practices/performance.md) - การปรับประสิทธิภาพ
-
-## Verification
-
-1. **ตรวจสอบโครงสร้างโปรเจกต์**
-
-   ```bash
-   ls -la src/ tests/ rules/ knowledge/
-   ```
-
-2. **ทดสอบ TypeScript compilation**
-
-   ```bash
-   bun run src/index.ts
-   ```
-
-3. **ตรวจสอบการติดตั้ง dependencies**
-
-   ```bash
-   bun install
-   ls node_modules/
-   ```
-
-4. **ทดสอบการ build**
-
-   ```bash
-   bun run build
-   ls dist/
-   ```
-
-5. **รัน tests**
-
-   ```bash
-   bun test
-   ```
+- **Fast Runtime**: เร็วกว่า Node.js 10-20 เท่า
+- **TypeScript Native**: รัน TypeScript ได้โดยตรง
+- **Package Manager**: ติดตั้งเร็วกว่า npm 20 เท่า
+- **Bundler**: รวม bundler ในตัว
+- **Test Runner**: รัน tests ได้เลย
+- **Hot Reload**: รองรับ HMR ในตัว

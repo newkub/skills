@@ -1,71 +1,73 @@
----
-name: node-sdk
-description: Best practices for SDK development with Node.js
-goal: พัฒนา SDKs ด้วย Node.js ตาม best practices
-outcome: SDKs มีคุณภาพและใช้งานง่าย
----
-
-# Node SDK Development
-
-## When to Apply
-
-ใช้ Skill นี้เมื่อพัฒนา SDKs ด้วย Node.js
-
-- เมื่อสร้าง SDKs ใหม่ด้วย Node.js
-- เมื่อต้องการ improve SDKs ที่มีอยู่
-- เมื่อต้องการ publish SDKs สำหรับ public use
-
-## Rules
-
-| Priority | Impact | Reference | Name | Description | Prefix | Condition |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-
-## Knowledge
-
-| Reference | Name | Description | Prefix |
-| :--- | :--- | :--- | :--- |
+# runtime-node
 
 ## Overview
 
-### Rules
+Node.js เป็น JavaScript runtime ที่ใช้ Chrome V8 engine สำหรับรัน JavaScript นอก browser รองรับ npm package manager, ระบบ module ที่หลากหลาย และมี ecosystem ใหญ่ที่สุด
 
-แต่ละไฟล์ Rule ประกอบด้วย:
+## โครงสร้าง Directory
 
-- เหตุผล (Why)
-- ตัวอย่างที่ไม่ดี (Anti-patterns)
-- ตัวอย่างที่ดี (Best practices)
-- กฎที่ต้องปฏิบัติตาม (Rules)
-- ผลกระทบถ้าไม่ทำตาม (Impact)
-- เอกสารอ้างอิง (References)
+```
+runtime-node/
+├── SKILL.md
+├── guide/
+│   ├── key-concept.md
+│   ├── how-it-works.md
+│   ├── features.md
+│   ├── installation.md
+│   ├── configuration.md
+│   ├── quick-start.md
+│   ├── best-practices.md
+│   ├── integration.md
+│   └── architecture.md
+├── key-concepts/
+├── principles/
+├── references/
+│   ├── api.md
+│   ├── website.md
+│   ├── cli.md
+│   └── configuration.md
+└── workflows/
+```
 
-### Knowledge
+## หมวดหมู่ไฟล์
 
-แต่ละไฟล์ Knowledge ประกอบด้วย:
+### guide/
 
-- Overview: ภาพรวมของ topic
-- Key Concepts: concepts สำคัญที่ต้องรู้
-- Examples: ตัวอย่างการใช้งาน
-- Best Practices: best practices ที่ควรทำตาม
-- References: ลิงก์ไปยังแหล่งข้อมูลต้นฉบับ
+| ไฟล์ | คำอธิบาย |
+|------|---------|
+| key-concept.md | พื้นฐานและหลักการสำคัญของ Node.js |
+| how-it-works.md | อธิบายการทำงานของ Node.js พร้อม diagram |
+| features.md | คุณสมบัติหลักของ Node.js |
+| installation.md | วิธีการติดตั้ง Node.js |
+| configuration.md | การตั้งค่าและ configuration |
+| quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| best-practices.md | แนวทางปฏิบัติที่ดี |
+| integration.md | การเชื่อมต่อกับ tools และ frameworks |
+| architecture.md | สถาปัตยกรรมของ Node.js |
 
-## How to Use
+### references/
 
-แต่ละไฟล์ Rule อธิบายถึง:
+| ไฟล์ | คำอธิบาย |
+|------|---------|
+| api.md | API reference ของ Node.js globals และ built-in modules |
+| website.md | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
+| cli.md | คำสั่ง CLI ของ Node.js |
+| configuration.md | ตัวเลือก configuration ต่างๆ |
 
-- เหตุผลที่ต้องทำตามกฎ
-- ตัวอย่างที่ไม่ดีและดี
-- กฎที่ต้องปฏิบัติตาม
-- ผลกระทบถ้าไม่ทำตาม
-- เอกสารอ้างอิง
+## When to Use
 
-แต่ละไฟล์ Knowledge อธิบายถึง:
+- Web servers และ APIs
+- CLI tools
+- Build tools และ automation
+- Microservices
+- Real-time applications
+- Desktop applications (Electron)
 
-- ภาพรวมของ topic
-- Concepts สำคัญที่ต้องรู้
-- ตัวอย่างการใช้งาน
-- Best practices ที่ควรทำตาม
-- เอกสารอ้างอิง
+## Core Features
 
-## References
-
-- [Node.js Documentation](https://nodejs.org/docs/)
+- **Chrome V8 Engine**: JavaScript execution engine ที่เร็ว
+- **npm Ecosystem**: Package manager ที่ใหญ่ที่สุด
+- **Event Loop**: Asynchronous non-blocking I/O
+- **Module System**: CommonJS และ ES Modules
+- **Cross-platform**: รันได้ทั้ง Windows, Linux, macOS
+- **Streams**: รองรับ streaming data

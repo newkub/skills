@@ -1,0 +1,34 @@
+# framework-next
+
+## Overview
+
+แนวทางการพัฒนา Next.js ตาม best practices สำหรับ React framework ที่มี SSR, SSG, ISR, และ App Router
+
+## File Structure
+
+| Folder | Description |
+|--------|-------------|
+| guide/ | คู่มือและ tutorials สำหรับการใช้งาน |
+| references/ | CLI commands และ configuration reference |
+| knowledge/ | ข้อมูลเพิ่มเติมเกี่ยวกับ concepts |
+
+## Guide Files
+
+| File | Description |
+|------|-------------|
+| [key-concept.md](guide/key-concept.md) | Core concepts ของ Next.js |
+| [how-it-works.md](guide/how-it-works.md) | หลักการทำงานของ Next.js |
+| [features.md](guide/features.md) | Features และ capabilities |
+| [installation.md](guide/installation.md) | การติดตั้งและ setup |
+| [configuration.md](guide/configuration.md) | การตั้งค่า configuration |
+| [quick-start.md](guide/quick-start.md) | Quick start guide |
+| [best-practices.md](guide/best-practices.md) | Best practices |
+| [integration.md](guide/integration.md) | การ integrate กับ tools อื่นๆ |
+| [architecture.md](guide/architecture.md) | Architecture และ structure |
+
+## Reference Files
+
+| File | Description |
+|------|-------------|
+| [cli.md](references/cli.md) | Next.js CLI commands |
+| [configuration.md](references/configuration.md) | Configuration options reference |
