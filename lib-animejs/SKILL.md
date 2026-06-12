@@ -1,90 +1,88 @@
-# lib-animejs
+---
+name: lib-animejs
+description: JavaScript animation library สำหรับสร้าง animation ที่รวดเร็ว มีประสิทธิภาพ และใช้งานง่าย
+---
 
-## Overview
+## When to use
 
-แนวทางการพัฒนา Anime.js ตาม best practices สำหรับ JavaScript animation library ที่มี simple API, high performance และ support หลาย targets
+- เมื่อต้องการ animation library ที่รวดเร็ว
+- เมื่อต้องการ animation ที่มีประสิทธิภาพ
+- เมื่อต้องการ animation ที่ใช้งานง่าย
+- เมื่อต้องการ CSS/JS animations
 
-## File Structure
+## Skills Related
 
-| Folder | Description |
-|--------|-------------|
-| guide/ | Guides และ tutorials สำหรับการใช้งาน |
-| reference/ | Official documentation links |
-| references/ | References สำหรับ API |
-| examples/ | ตัวอย่างการใช้งาน |
-| templates/ | Templates สำหรับเริ่มต้น |
-| rules/ | Rules และ conventions |
-| patterns/ | Design patterns |
-| usecase/ | Use cases |
-| workflows/ | Workflows |
-| integration/ | Integration กับ tools อื่นๆ |
-| changelog/ | Changelog และ version history |
+- `/lang-javascript` - JavaScript programming language
+- `/lang-typescript` - TypeScript programming language
 
-## Guide Files
+## โครงสร้าง Directory
 
-| File | Description |
-|------|-------------|
-| installation.md | การติดตั้งและ setup |
-| quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| key-concept.md | Core concepts |
-| best-practices.md | Best practices |
-| all-features.md | รายการ features ทั้งหมด |
-| configuration.md | การตั้งค่า configuration |
-| troubleshooting.md | การแก้ไขปัญหาที่พบบ่อย |
+```text
+lib-animejs/
+├── SKILL.md
+├── knowledge/
+│   ├── guide/
+│   │   ├── key-concept.md
+│   │   ├── how-it-works.md
+│   │   ├── features.md
+│   │   ├── installation.md
+│   │   ├── configuration.md
+│   │   ├── quick-start.md
+│   │   ├── best-practices.md
+│   │   ├── integration.md
+│   │   ├── architecture.md
+│   │   ├── structure.md
+│   │   ├── performance.md
+│   │   ├── security.md
+│   │   ├── migration.md
+│   │   ├── ecosystem.md
+│   │   ├── testing.md
+│   │   ├── patterns.md
+│   │   └── troubleshooting.md
+│   ├── key-concepts/
+│   │   ├── timeline.md
+│   │   ├── easing.md
+│   │   ├── staggering.md
+│   │   └── callbacks.md
+│   └── principles/
+│       ├── performance-first.md
+│       └── accessibility.md
+└── references/
+    ├── website.md
+    ├── sitemap.md
+    ├── api.md
+    └── configuration.md
+```
 
-## Rules Files
+## หมวดหมู่ไฟล
 
-| File | Description |
-|------|-------------|
-| setup.md | Setup และ initialization |
-| targets.md | Target selection |
-| properties.md | CSS properties |
-| timeline.md | Timeline patterns |
-| easing.md | Easing functions |
-| callbacks.md | Callback patterns |
-| naming-rules.md | Naming conventions |
-| structure-rules.md | โครงสร้างโปรเจกต์ |
-
-## References Files
-
-| File | Description |
-|------|-------------|
-| cli/index.md | CLI commands (if available) |
-| configuration/index.md | Configuration options |
-| api/index.md | Programmatic API reference |
-| web/index.md | Web documentation links |
-| official.md | Official documentation links |
-
-## Patterns Files
-
-| File | Description |
-|------|-------------|
-| optimize-patterns.md | Optimization patterns |
-| refactor-patterns.md | Refactoring patterns |
-
-## Integration Files
-
-| File | Description |
-|------|-------------|
-| tool-integration.md | Development tools integration |
-| ci-cd-integration.md | CI/CD pipeline integration |
-
-## Use Cases
-
-| File | Description |
-|------|-------------|
-| api-development.md | Web animation development |
-| web-application.md | Web application development |
-
-## Workflows
-
-| File | Description |
-|------|-------------|
-| development-workflow.md | Development workflow |
-| deployment-workflow.md | Deployment workflow |
-
-## Changelog
-
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial release |
+| No | File | Description |
+|----|------|-------------|
+| 1 | SKILL.md | Index file หลักของ skill |
+| 2 | knowledge/guide/key-concept.md | แนวคิดหลักของ Anime.js |
+| 3 | knowledge/guide/how-it-works.md | หลักการทำงานของ animation engine |
+| 4 | knowledge/guide/features.md | คุณสมบัติและฟีเจอร์ทั้งหมด |
+| 5 | knowledge/guide/installation.md | วิธีการติดตั้งและ setup |
+| 6 | knowledge/guide/configuration.md | การตั้งค่าและ configuration |
+| 7 | knowledge/guide/quick-start.md | คู่มือเริ่มต้นใช้งาน |
+| 8 | knowledge/guide/best-practices.md | best practices สำหรับการพัฒนา |
+| 9 | knowledge/guide/integration.md | การเชื่อมต่อกับ frameworks อื่นๆ |
+| 10 | knowledge/guide/architecture.md | สถาปัตยกรรมของ Anime.js |
+| 11 | knowledge/guide/structure.md | โครงสร้างโปรเจกต์ animation |
+| 12 | knowledge/guide/performance.md | เทคนิคการปรับปรุง performance |
+| 13 | knowledge/guide/security.md | ความปลอดภัยและ security considerations |
+| 14 | knowledge/guide/migration.md | วิธี migration จาก libraries อื่นๆ |
+| 15 | knowledge/guide/ecosystem.md | Ecosystem และ integrations |
+| 16 | knowledge/guide/testing.md | การทดสอบ animations |
+| 17 | knowledge/guide/patterns.md | Patterns ที่ใช้บ่อย |
+| 18 | knowledge/guide/troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
+| 19 | knowledge/key-concepts/timeline.md | แนวคิดเกี่ยวกับ timeline system |
+| 20 | knowledge/key-concepts/easing.md | แนวคิดเกี่ยวกับ easing functions |
+| 21 | knowledge/key-concepts/staggering.md | แนวคิดเกี่ยวกับ staggering animations |
+| 22 | knowledge/key-concepts/callbacks.md | แนวคิดเกี่ยวกับ callbacks และ events |
+| 23 | knowledge/principles/performance-first.md | หลักการ performance-first design |
+| 24 | knowledge/principles/accessibility.md | หลักการ accessibility สำหรับ animations |
+| 25 | references/website.md | เว็บไซต์และ documentation อย่างเป็นทางการ |
+| 26 | references/sitemap.md | Sitemap ของ documentation |
+| 27 | references/api.md | API reference และ methods |
+| 28 | references/configuration.md | Configuration options และ settings |

@@ -1,3 +1,8 @@
+---
+name: lib-zustand
+description: แนวทางการพัฒนา Zustand ตาม best practices สำหรับ React state management ที่มาพร้อม hooks-based API, middleware system และ devtools integration
+---
+
 # lib-zustand
 
 ## Overview

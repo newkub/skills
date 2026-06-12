@@ -15,7 +15,7 @@ Command-line interface reference สำหรับ Playwright
 ### playwright test
 
 ```bash
-npx playwright test [options] [test-filter...]
+bunx playwright test [options] [test-filter...]
 ```
 
 ### Options
@@ -38,22 +38,22 @@ npx playwright test [options] [test-filter...]
 
 ```bash
 # Run all tests
-npx playwright test
+bunx playwright test
 
 # Run specific file
-npx playwright test tests/example.spec.ts
+bunx playwright test tests/example.spec.ts
 
 # Run by name
-npx playwright test -g "homepage"
+bunx playwright test -g "homepage"
 
 # Run at line
-npx playwright test tests/example.spec.ts:42
+bunx playwright test tests/example.spec.ts:42
 
 # Debug
-npx playwright test --debug
+bunx playwright test --debug
 
 # UI mode
-npx playwright test --ui
+bunx playwright test --ui
 ```
 
 ### Common Options
@@ -88,16 +88,16 @@ npx playwright test --ui
 
 ```bash
 # Headed browser
-npx playwright test --headed
+bunx playwright test --headed
 
 # Debug with inspector
-npx playwright test --debug
+bunx playwright test --debug
 
 # Interactive UI
-npx playwright test --ui
+bunx playwright test --ui
 
 # Stop on first failure
-npx playwright test -x
+bunx playwright test -x
 ```
 
 ## Browser Commands
@@ -105,7 +105,7 @@ npx playwright test -x
 ### playwright install
 
 ```bash
-npx playwright install [options] [browser...]
+bunx playwright install [options] [browser...]
 ```
 
 ### Options
@@ -121,32 +121,32 @@ npx playwright install [options] [browser...]
 
 ```bash
 # Install all browsers
-npx playwright install
+bunx playwright install
 
 # Install chromium only
-npx playwright install chromium
+bunx playwright install chromium
 
 # Install specific browsers
-npx playwright install chromium firefox webkit
+bunx playwright install chromium firefox webkit
 
 # With dependencies
-npx playwright install --with-deps
+bunx playwright install --with-deps
 ```
 
 ### playwright install-deps
 
 ```bash
-npx playwright install-deps [options] [browser...]
+bunx playwright install-deps [options] [browser...]
 ```
 
 ### Examples
 
 ```bash
 # Install all dependencies
-npx playwright install-deps
+bunx playwright install-deps
 
 # Install chromium dependencies
-npx playwright install-deps chromium
+bunx playwright install-deps chromium
 ```
 
 ## Utility Commands
@@ -154,7 +154,7 @@ npx playwright install-deps chromium
 ### playwright show-report
 
 ```bash
-npx playwright show-report [report] [options]
+bunx playwright show-report [report] [options]
 ```
 
 ### Options
@@ -168,32 +168,32 @@ npx playwright show-report [report] [options]
 
 ```bash
 # Show latest report
-npx playwright show-report
+bunx playwright show-report
 
 # Custom port
-npx playwright show-report --port 8080
+bunx playwright show-report --port 8080
 ```
 
 ### playwright show-trace
 
 ```bash
-npx playwright show-trace [trace]
+bunx playwright show-trace [trace]
 ```
 
 ### Examples
 
 ```bash
 # Open trace viewer
-npx playwright show-trace
+bunx playwright show-trace
 
 # View specific trace
-npx playwright show-trace trace.zip
+bunx playwright show-trace trace.zip
 ```
 
 ### playwright codegen
 
 ```bash
-npx playwright codegen [options] [url]
+bunx playwright codegen [options] [url]
 ```
 
 ### Options
@@ -208,32 +208,32 @@ npx playwright codegen [options] [url]
 
 ```bash
 # Start codegen
-npx playwright codegen
+bunx playwright codegen
 
 # With URL
-npx playwright codegen https://example.com
+bunx playwright codegen https://example.com
 
 # Python output
-npx playwright codegen --target=python -o test.py
+bunx playwright codegen --target=python -o test.py
 ```
 
 ### playwright merge-reports
 
 ```bash
-npx playwright merge-reports <blob dir> [options]
+bunx playwright merge-reports <blob dir> [options]
 ```
 
 ### Examples
 
 ```bash
 # Merge reports
-npx playwright merge-reports ./reports
+bunx playwright merge-reports ./reports
 ```
 
 ### playwright clear-cache
 
 ```bash
-npx playwright clear-cache
+bunx playwright clear-cache
 ```
 
 ## Environment Variables
@@ -248,10 +248,10 @@ npx playwright clear-cache
 
 ```bash
 # Enable debugger
-PWDEBUG=1 npx playwright test
+PWDEBUG=1 bunx playwright test
 
 # With console
-PWDEBUG=console npx playwright test
+PWDEBUG=console bunx playwright test
 ```
 
 ## Help
@@ -259,15 +259,15 @@ PWDEBUG=console npx playwright test
 ### Show Help
 
 ```bash
-npx playwright --help
+bunx playwright --help
 
-npx playwright test --help
+bunx playwright test --help
 ```
 
 ### Show Version
 
 ```bash
-npx playwright --version
+bunx playwright --version
 ```
 
 ## Exit Codes

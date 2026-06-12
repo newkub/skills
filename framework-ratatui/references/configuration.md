@@ -2,61 +2,84 @@
 
 ## Cargo.toml
 
-### Dependencies
+### Basic Setup
 
 ```toml
 [dependencies]
 ratatui = "0.30"
+crossterm = "0.29"
 ```
 
-### Feature Flags
+### Using cargo add
+
+```bash
+cargo add ratatui
+cargo add crossterm@0.29
+```
+
+## Feature Flags
+
+### Backend Selection
 
 | Feature | Default | Description |
 |---------|---------|-------------|
-| `crossterm` | Yes | crossterm backend |
-| `termion` | No | termion backend |
-| `termwiz` | No | termwiz backend |
-| `unicode-width` | Yes | Unicode width calculation |
-| `box-drawing` | Yes | Box drawing characters |
+| `crossterm_0_29` | Yes | Crossterm 0.29 backend |
+| `crossterm_0_28` | No | Crossterm 0.28 backend |
+| `termion` | No | Termion backend (Unix only) |
+| `termwiz` | No | Termwiz backend |
+
+### Core Features
+
+| Feature | Default | Description |
+|---------|---------|-------------|
+| `std` | Yes | Standard library support |
+| `macros` | Yes | Utility macros (text!, line!, span!) |
+| `layout-cache` | Yes | Speed up layout calculations |
+| `underline-color` | Yes | Underline color (Crossterm/Termwiz) |
+| `all-widgets` | Yes | All built-in widgets |
+
+### Optional Features
+
+| Feature | Default | Description |
+|---------|---------|-------------|
+| `widget-calendar` | Yes | Calendar widget |
+| `serde` | No | Serialize Style/Color |
+| `palette` | No | Color conversions from palette crate |
+| `portable-atomic` | No | Atomic types for embedded |
+| `scrolling-regions` | No | Terminal scrolling regions |
+
+### Unstable Features
+
+| Feature | Description |
+|---------|-------------|
+| `unstable` | Enable all unstable features |
+| `unstable-rendered-line-info` | Paragraph::line_count/line_width |
+| `unstable-widget-ref` | WidgetRef and StatefulWidgetRef traits |
+| `unstable-backend-writer` | Access backend writers |
 
 ### Full Example
 
 ```toml
 [dependencies]
-ratatui = { version = "0.30", default-features = false, features = ["crossterm", "unicode-width", "box-drawing"] }
-crossterm = "0.28"
+ratatui = { version = "0.30", default-features = false, features = [
+    "crossterm_0_29",
+    "macros",
+    "widget-calendar",
+    "serde",
+] }
+crossterm = "0.29"
 ```
 
-## Backend Configuration
+## Application Configuration
 
-### Crossterm
-
-```rust
-use ratatui::backend::CrosstermBackend;
-use std::io::stdout;
-
-let backend = CrosstermBackend::new(stdout());
-let mut terminal = ratatui::Terminal::new(backend)?;
-```
-
-### Termion
-
-```rust
-use ratatui::backend::TermionBackend;
-use std::io::stdout;
-
-let backend = TermionBackend::new(stdout());
-let mut terminal = ratatui::Terminal::new(backend)?;
-```
-
-## Application State
-
-### Basic State
+### State Struct Pattern
 
 ```rust
 struct AppState {
     items: Vec<String>,
     selected: usize,
+    scroll_offset: usize,
+    should_quit: bool,
 }
 
 impl AppState {
@@ -64,19 +87,10 @@ impl AppState {
         Self {
             items: Vec::new(),
             selected: 0,
+            scroll_offset: 0,
+            should_quit: false,
         }
     }
-}
-```
-
-### State with Rendering Buffer
-
-```rust
-struct AppState {
-    items: Vec<String>,
-    selected: usize,
-    scroll_offset: usize,
-    render_buf: String,
 }
 ```
 
@@ -85,42 +99,30 @@ struct AppState {
 ### Vertical Layout
 
 ```rust
-use ratatui::layout::{Layout, Constraint, Direction};
+use ratatui::layout::{Layout, Constraint};
+use Constraint::{Fill, Length, Min};
 
-let chunks = Layout::default()
-    .direction(Direction::Vertical)
-    .constraints([
-        Constraint::Length(3),   // Header
-        Constraint::Min(0),      // Content (flexible)
-        Constraint::Length(1),   // Footer
-    ])
-    .split(frame.area());
+let [header, main, status] = Layout::vertical([
+    Length(1),  // Header
+    Min(0),     // Content (flexible)
+    Length(1),  // Status
+]).areas(frame.area());
 ```
 
 ### Horizontal Layout
 
 ```rust
-let chunks = Layout::default()
-    .direction(Direction::Horizontal)
-    .constraints([
-        Constraint::Percentage(20),  // Sidebar
-        Constraint::Percentage(80),  // Main content
-    ])
-    .split(frame.area());
+let [sidebar, content] = Layout::horizontal([
+    Constraint::Percentage(20),
+    Constraint::Percentage(80),
+]).areas(frame.area());
 ```
 
 ### Nested Layout
 
 ```rust
-let main_chunks = Layout::default()
-    .direction(Direction::Vertical)
-    .constraints([Constraint::Length(3), Constraint::Min(0)])
-    .split(area);
-
-let content_chunks = Layout::default()
-    .direction(Direction::Horizontal)
-    .constraints([Constraint::Percentage(50), Constraint::Percentage(50)])
-    .split(main_chunks[1]);
+let [top, bottom] = Layout::vertical([Length(3), Min(0)]).areas(area);
+let [left, right] = Layout::horizontal([Fill(1); 2]).areas(bottom);
 ```
 
 ## Style Configuration
@@ -135,42 +137,24 @@ let style = Style::default()
     .bg(Color::Black);
 ```
 
-### Using Stylize
+### Using Stylize Trait
 
 ```rust
 use ratatui::style::Stylize;
 
-let styled_text = "Hello".red().bold().on_black();
+let styled = "Hello".red().bold().on_black();
 ```
 
-## Terminal Setup
-
-### Raw Mode
+## Terminal Viewport
 
 ```rust
-use crossterm::{execute, style::ResetColor, terminal::{EnterAlternateScreen, LeaveAlternateScreen}};
+use ratatui::Viewport;
+use ratatui::layout::Rect;
 
-fn setup() -> Result<(), Box<dyn Error>> {
-    enable_raw_mode()?;
-    execute!(stdout(), EnterAlternateScreen)?;
-    Ok(())
-}
-
-fn cleanup() -> Result<(), Box<dyn Error>> {
-    disable_raw_mode()?;
-    execute!(stdout(), LeaveAlternateScreen, ResetColor)?;
-    Ok(())
-}
+let viewport = Viewport::Fullscreen;          // Default
+let viewport = Viewport::Inline(5);            // Inline 5 lines
+let viewport = Viewport::Fixed(Rect::new(0, 0, 80, 24));
 ```
-
-## Environment Variables
-
-| Variable | Description |
-|----------|-------------|
-| `TERM` | Terminal type |
-| `COLUMNS` | Terminal columns |
-| `LINES` | Terminal lines |
-| `RATATUI_LOG` | Log level (debug, info, warn, error) |
 
 ## Build Configuration
 
@@ -183,3 +167,12 @@ lto = true
 codegen-units = 1
 strip = true
 ```
+
+## Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| `TERM` | Terminal type |
+| `COLUMNS` | Terminal columns |
+| `LINES` | Terminal lines |
+| `RUST_LOG` | Tracing log filter |

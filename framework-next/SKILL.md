@@ -1,34 +1,36 @@
+---
+name: framework-next
+description: แนวทางการพัฒนา Next.js ตาม best practices สำหรับ React framework ที่มี SSR, SSG, ISR, และ App Router
+---
+
 # framework-next
 
-## Overview
+## When to use
 
-แนวทางการพัฒนา Next.js ตาม best practices สำหรับ React framework ที่มี SSR, SSG, ISR, และ App Router
+- เมื่อต้องการสร้าง React applications ด้วย SSR/SSG/ISR
+- เมื่อต้องการ SEO-friendly web applications
+- เมื่อต้องการ performance สูงและ optimized loading
+- เมื่อต้องการ App Router และ modern React features
 
-## File Structure
+## Skills Related
 
-| Folder | Description |
-|--------|-------------|
-| guide/ | คู่มือและ tutorials สำหรับการใช้งาน |
-| references/ | CLI commands และ configuration reference |
-| knowledge/ | ข้อมูลเพิ่มเติมเกี่ยวกับ concepts |
+- `lib-react` - React library
+- `lang-typescript` - TypeScript programming language
+- `runtime-bun` - Bun runtime สำหรับ web development
 
-## Guide Files
+## หมวดหมู่ไฟล์
 
-| File | Description |
-|------|-------------|
-| [key-concept.md](guide/key-concept.md) | Core concepts ของ Next.js |
-| [how-it-works.md](guide/how-it-works.md) | หลักการทำงานของ Next.js |
-| [features.md](guide/features.md) | Features และ capabilities |
-| [installation.md](guide/installation.md) | การติดตั้งและ setup |
-| [configuration.md](guide/configuration.md) | การตั้งค่า configuration |
-| [quick-start.md](guide/quick-start.md) | Quick start guide |
-| [best-practices.md](guide/best-practices.md) | Best practices |
-| [integration.md](guide/integration.md) | การ integrate กับ tools อื่นๆ |
-| [architecture.md](guide/architecture.md) | Architecture และ structure |
-
-## Reference Files
-
-| File | Description |
-|------|-------------|
-| [cli.md](references/cli.md) | Next.js CLI commands |
-| [configuration.md](references/configuration.md) | Configuration options reference |
+| No | File | Description |
+|----|------|-------------|
+| 1 | [knowledge/guide/key-concept.md](knowledge/guide/key-concept.md) | Core concepts ของ Next.js |
+| 2 | [knowledge/guide/how-it-works.md](knowledge/guide/how-it-works.md) | หลักการทำงานของ Next.js |
+| 3 | [knowledge/guide/features.md](knowledge/guide/features.md) | Features และ capabilities |
+| 4 | [knowledge/guide/installation.md](knowledge/guide/installation.md) | การติดตั้งและ setup |
+| 5 | [knowledge/guide/configuration.md](knowledge/guide/configuration.md) | การตั้งค่า configuration |
+| 6 | [knowledge/guide/quick-start.md](knowledge/guide/quick-start.md) | Quick start guide |
+| 7 | [knowledge/guide/best-practices.md](knowledge/guide/best-practices.md) | Best practices |
+| 8 | [knowledge/guide/integration.md](knowledge/guide/integration.md) | การ integrate กับ tools อื่นๆ |
+| 9 | [knowledge/guide/architecture.md](knowledge/guide/architecture.md) | Architecture และ structure |
+| 10 | [references/website.md](references/website.md) | Next.js official website และ resources |
+| 11 | [references/cli.md](references/cli.md) | Next.js CLI commands |
+| 12 | [references/configuration.md](references/configuration.md) | Configuration options reference |

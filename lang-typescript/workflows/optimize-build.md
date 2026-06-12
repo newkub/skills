@@ -10,7 +10,7 @@
 
 ```bash
 # Add build timing
-npx tsc --diagnostics
+bunx tsc --diagnostics
 ```
 
 ### 2. Configure Build Options
@@ -65,10 +65,10 @@ npx tsc --diagnostics
 
 ```bash
 # Install SWC
-npm install -D @swc/cli @swc/core
+bun add -D @swc/cli @swc/core
 
 # Use swc for building
-npx swc src -d dist
+bunx swc src -d dist
 ```
 
 ### 6. Caching
@@ -97,10 +97,10 @@ npx swc src -d dist
 
 ```bash
 # Check build time
-time npx tsc --build
+time bunx tsc --build
 
 # Profile
-NODE_OPTIONS="--inspect" npx tsc --build --profile
+NODE_OPTIONS="--inspect" bunx tsc --build --profile
 ```
 
 ## Related

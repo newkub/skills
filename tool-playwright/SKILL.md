@@ -1,3 +1,8 @@
+---
+name: tool-playwright
+description: แนวทางการใช้งาน Playwright - End-to-end testing สำหรับ web applications
+---
+
 # tool-playwright
 
 แนวทางการใช้งาน Playwright - End-to-end testing สำหรับ web applications
@@ -11,14 +16,16 @@ Playwright เป็น end-to-end testing framework ที่รองรับ
 ```
 tool-playwright/
 ├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   └── best-practices.md
+├── knowledge/
+│   └── guide/
+│       ├── key-concept.md
+│       ├── how-it-works.md
+│       ├── features.md
+│       ├── installation.md
+│       ├── configuration.md
+│       ├── quick-start.md
+│       ├── best-practices.md
+│       └── integration.md
 └── references/
     ├── website.md
     ├── cli.md
@@ -30,13 +37,14 @@ tool-playwright/
 
 | Folder | File | Description |
 |--------|------|-------------|
-| **Guide** | key-concept.md | แนวคิดหลัก - Locators, Assertions |
-| **Guide** | how-it-works.md | การทำงาน - Browser context, Page |
-| **Guide** | features.md | ฟีเจอร์ทั้งหมด - Auto-waiting, Tracing |
-| **Guide** | installation.md | การติดตั้ง - browsers, dependencies |
-| **Guide** | configuration.md | การตั้งค่า - playwright.config.ts |
-| **Guide** | quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| **Guide** | best-practices.md | แนวทางปฏิบัติที่ดี |
+| **Knowledge/Guide** | key-concept.md | แนวคิดหลัก - Locators, Assertions |
+| **Knowledge/Guide** | how-it-works.md | การทำงาน - Browser context, Page |
+| **Knowledge/Guide** | features.md | ฟีเจอร์ทั้งหมด - Auto-waiting, Tracing |
+| **Knowledge/Guide** | installation.md | การติดตั้ง - browsers, dependencies |
+| **Knowledge/Guide** | configuration.md | การตั้งค่า - playwright.config.ts |
+| **Knowledge/Guide** | quick-start.md | คู่มือเริ่มต้นใช้งาน |
+| **Knowledge/Guide** | best-practices.md | แนวทางปฏิบัติที่ดี |
+| **Knowledge/Guide** | integration.md | การเชื่อมต่อกับ frameworks อื่น |
 | **Reference** | website.md | Official links และ resources |
 | **Reference** | cli.md | CLI commands |
 | **Reference** | configuration.md | Configuration options reference |
@@ -46,19 +54,19 @@ tool-playwright/
 
 ```bash
 # Install
-npm init playwright@latest
+bunx create-playwright
 
 # Install browsers
-npx playwright install --with-deps
+bunx playwright install --with-deps
 
 # Run tests
-npx playwright test
+bunx playwright test
 
 # UI mode
-npx playwright test --ui
+bunx playwright test --ui
 
 # Debug
-npx playwright test --debug
+bunx playwright test --debug
 ```
 
 ## Key Features

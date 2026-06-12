@@ -1,33 +1,32 @@
-# tool-nextest
+---
+name: tool-nextest
+description: Next-generation test runner for Rust with faster execution, per-test isolation, and CI support
+---
 
-## Overview
+## When to use
 
-แนวทางการพัฒนา nextest ตาม best practices
+- เมื่อต้องการ test runner ที่เร็วกว่า cargo test
+- เมื่อต้องการ per-test isolation
+- เมื่อต้องการ CI support ระดับหนึ่ง
+- เมื่อต้องการ retry policies และ test groups
 
-## File Structure
+## Skills Related
 
-| Folder | Description |
-|--------|-------------|
-| project/ | ข้อมูลพื้นฐานเกี่ยวกับ nextest |
-| guide/ | Guides และ tutorials สำหรับการใช้งาน |
-| references/ | References และ links ภายนอก |
-| examples/ | ตัวอย่างการใช้งาน |
-| templates/ | Templates สำหรับเริ่มต้น |
-| rules/ | Rules และ conventions |
-| patterns/ | Design patterns |
-| usecase/ | Use cases |
-| workflows/ | Workflows |
-| integration/ | Integration กับ tools อื่นๆ |
-| changelog/ | Changelog และ version history |
+- `/lang-rust` - Rust programming language
+- `/tool-cargo` - Cargo package manager
 
-## Guide Files
+## หมวดหมู่ไฟล์
 
-| File | Description |
-|------|-------------|
-| guide/how-it-works.md | Architecture, workflow, และ key concepts ของ Nextest |
-
-## Reference Files
-
-| File | Description |
-|------|-------------|
-| references/api.md | CLI commands, configuration, test filtering, และ CI integration |
+| หมวดหมู่ | ไฟล์ | คำอธิบาย |
+|-----------|------|-----------|
+| **knowledge/guide/** | key-concept.md | แนวคิดหลักของ Nextest และความแตกต่างจาก cargo test |
+| | how-it-works.md | วิธีการทำงานของ Nextest พร้อม diagram |
+| | features.md | ฟีเจอร์หลัก เช่น test isolation, retry policies, test groups |
+| | installation.md | วิธีติดตั้งและ setup |
+| | configuration.md | การตั้งค่าผ่าน .config/nextest.toml |
+| | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| | best-practices.md | best practices สำหรับการใช้งาน Nextest |
+| | integration.md | การเชื่อมต่อกับ CI/CD และ tools อื่นๆ |
+| **references/** | website.md | เว็บไซต์อย่างเป็นทางการและเอกสาร |
+| | cli.md | CLI commands และ options |
+| | configuration.md | Configuration options และ profiles |

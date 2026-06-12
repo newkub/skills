@@ -1,50 +1,47 @@
+---
+name: lang-lua
+description: แนวทางการพัฒนา Lua ตาม best practices สำหรับ embedded scripting และ lightweight automation
+---
+
 # lang-lua
-
-## Overview
-
-แนวทางการพัฒนา Lua ตาม best practices
-
-## File Structure
-
-| Folder | Description |
-|--------|-------------|
-| guide/ | Guides และ tutorials สำหรับการใช้งาน |
-| references/ | References และ links ภายนอก |
-| reference/ | Official documentation links |
-| examples/ | ตัวอย่างการใช้งาน |
-| templates/ | Templates สำหรับเริ่มต้น |
-| rules/ | Rules และ conventions |
-| patterns/ | Design patterns |
-| usecase/ | Use cases |
-| workflows/ | Workflows |
-| integration/ | Integration กับ tools อื่นๆ |
-| changelog/ | Changelog และ version history |
-
-## Guide Files
-
-| key-concept.md | พื้นฐานและหลักการสำคัญ |
-| all-features.md | คุณสมบัติทั้งหมด |
-| best-practices.md | แนวทางปฏิบัติที่ดี |
-| installation.md | การติดตั้งและตั้งค่า |
-| quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| troubleshooting.md | การแก้ไขปัญหาที่พบบ่อย |
-
-## Reference Files
-
-| cli/index.md | Lua CLI commands |
-| configuration/index.md | Lua configuration options |
-| api/index.md | Lua programmatic API |
-| web/index.md | Lua web interface |
-| official.md | Official documentation |
 
 ## When to Use
 
-- Game development (Roblox, World of Warcraft)
+- Game development (Roblox, World of Warcraft, Love2D)
 - Embedded systems
 - Scripting within applications
 - Rapid prototyping
 - Configuration files
 - Lightweight automation
+
+## Skills Related
+
+- `lang-c` - C interoperability
+- `lang-cpp` - C++ interoperability
+
+## หมวดหมู่ไฟล์
+
+### knowledge/guide/
+
+| No | File | Description |
+|----|------|-------------|
+| 1 | key-concept.md | แนวคิดหลักของ Lua (tables, metatables, coroutines) |
+| 2 | how-it-works.md | วิธีการทำงานของ Lua VM และ garbage collection |
+| 3 | features.md | คุณสมบัติหลักของ Lua (tables, functions, modules) |
+| 4 | installation.md | วิธีติดตั้ง Lua และ tools ที่เกี่ยวข้อง |
+| 5 | configuration.md | การตั้งค่า Lua และ LuaRocks |
+| 6 | quick-start.md | เริ่มต้นใช้งาน Lua อย่างรวดเร็ว |
+| 7 | best-practices.md | best practices สำหรับ Lua (naming, patterns) |
+| 8 | integration.md | การเชื่อมต่อกับ C/C++ และ applications |
+| 9 | architecture.md | สถาปัตยกรรมของ Lua projects |
+
+### references/
+
+| No | File | Description |
+|----|------|-------------|
+| 1 | website.md | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
+| 2 | cli.md | Lua CLI commands และ options |
+| 3 | configuration.md | Lua configuration options |
 
 ## Core Features
 

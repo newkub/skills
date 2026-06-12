@@ -1,3 +1,8 @@
+---
+name: lib-elysia
+description: แนวทางการพัฒนา Elysia ตาม best practices สำหรับ ergonomic web framework สำหรับ Bun ที่มี type-safe, high performance และ plugin system
+---
+
 # lib-elysia
 
 ## Overview

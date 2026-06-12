@@ -2,8 +2,8 @@
 
 ## Reactive References
 
-| Function | Description | Example |
-|----------|-------------|---------|
+| Method | Description | Example |
+|--------|-------------|---------|
 | `ref()` | Create reactive reference | `const count = ref(0)` |
 | `reactive()` | Create reactive object | `const state = reactive({ count: 0 })` |
 | `shallowRef()` | Shallow reactive reference | `const arr = shallowRef([])` |
@@ -13,54 +13,54 @@
 
 ## Computed Values
 
-| Function | Description | Example |
-|----------|-------------|---------|
+| Method | Description | Example |
+|--------|-------------|---------|
 | `computed()` | Create computed value | `const doubled = computed(() => count.value * 2)` |
 
 ## Watchers
 
-| Function | Description | Example |
-|----------|-------------|---------|
+| Method | Description | Example |
+|--------|-------------|---------|
 | `watch()` | Watch specific source | `watch(count, (new, old) => {})` |
 | `watchEffect()` | Immediate watcher | `watchEffect(() => console.log(count.value))` |
 | `watchPostEffect()` | Post-render watcher | `watchEffect(() => {}, { flush: 'post' })` |
 
 ## Lifecycle Hooks
 
-| Hook | Description |
-|------|-------------|
-| `onMounted()` | After component mounts |
-| `onUpdated()` | After component updates |
-| `onUnmounted()` | Before component unmounts |
-| `onBeforeMount()` | Before mount |
-| `onBeforeUpdate()` | Before update |
-| `onBeforeUnmount()` | Before unmount |
-| `onErrorCaptured()` | On error |
-| `onRenderTracked()` | Dependency tracked |
-| `onRenderTriggered()` | Dependency triggers |
+| Method | Description | Example |
+|--------|-------------|---------|
+| `onMounted()` | After component mounts | `onMounted(() => {})` |
+| `onUpdated()` | After component updates | `onUpdated(() => {})` |
+| `onUnmounted()` | Before component unmounts | `onUnmounted(() => {})` |
+| `onBeforeMount()` | Before mount | `onBeforeMount(() => {})` |
+| `onBeforeUpdate()` | Before update | `onBeforeUpdate(() => {})` |
+| `onBeforeUnmount()` | Before unmount | `onBeforeUnmount(() => {})` |
+| `onErrorCaptured()` | On error | `onErrorCaptured(() => {})` |
+| `onRenderTracked()` | Dependency tracked | `onRenderTracked(() => {})` |
+| `onRenderTriggered()` | Dependency triggers | `onRenderTriggered(() => {})` |
 
 ## Dependency Injection
 
-| Function | Description |
-|----------|-------------|
-| `provide()` | Provide values to descendants |
-| `inject()` | Inject from ancestor |
+| Method | Description | Example |
+|--------|-------------|---------|
+| `provide()` | Provide values to descendants | `provide('key', value)` |
+| `inject()` | Inject from ancestor | `const value = inject('key')` |
 
 ## Template Refs
 
-| Function | Description |
-|----------|-------------|
-| `ref()` | Template ref binding |
-| `functionRef()` | Function-based ref |
+| Method | Description | Example |
+|--------|-------------|---------|
+| `ref()` | Template ref binding | `<div ref="el">` with `const el = ref()` |
+| `functionRef()` | Function-based ref | `functionRef((el) => {})` |
 
 ## Component Utilities
 
-| Function | Description |
-|----------|-------------|
-| `defineProps()` | Define component props |
-| `defineEmits()` | Define component emits |
-| `defineExpose()` | Expose component API |
-| `defineSlots()` | Define slots |
+| Method | Description | Example |
+|--------|-------------|---------|
+| `defineProps()` | Define component props | `defineProps<{ title: string }>()` |
+| `defineEmits()` | Define component emits | `defineEmits<{ update: [value: number] }>()` |
+| `defineExpose()` | Expose component API | `defineExpose({ method })` |
+| `defineSlots()` | Define slots | `defineSlots<{ default: {} }>()` |
 
 ## TypeScript Types
 

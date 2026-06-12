@@ -1,3 +1,8 @@
+---
+name: lib-effect-ts
+description: Effect คือ TypeScript library สำหรับ functional programming ที่มี type-safe error handling, dependency injection และ composable effects
+---
+
 # lib-effect-ts
 
 ## Overview

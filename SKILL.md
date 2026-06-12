@@ -1,92 +1,51 @@
 # Skills Workspace
 
-## Overview
+## Skill Types
 
-Windsurf Skills workspace เก็บ skill definitions สำหรับ Cascade AI assistant แต่ละ skill คือ collection ของ knowledge และ workflows สำหรับ specific domain
-
-## โครงสร้าง Directory
-
-```
-skills/
-├── SKILL.md
-├── AGENTS.md
-├── guide-*/          # Guides และ best practices
-├── lib-*/            # Libraries
-├── framework-*/      # Frameworks
-├── lang-*/           # Programming languages
-├── runtime-*/        # Runtime environments
-├── cli-*/            # CLI tools
-├── tui-*/            # TUI applications
-├── flow-*/           # Development flows
-└── general-*/        # General purpose
-```
-
-## หมวดหมู่ Skills
-
-### guide-
-
-Guides และ best practices สำหรับ development
-
-### lib-
-
-Libraries และ packages ต่างๆ
-
-### framework-
-
-Frameworks สำหรับ web, desktop, mobile
-
-### lang-
-
-Programming languages
-
-### runtime-
-
-Runtime environments (Bun, Node.js)
-
-### cli-
-
-CLI tools
-
-### tui-
-
-TUI applications
-
-### flow-
-
-Development flows (testing, debugging, refactoring)
-
-### general-
-
-General purpose skills
+| Type | Description |
+|------|-------------|
+| guide- | Guides และ best practices สำหรับ development |
+| lang- | Programming languages |
+| lib- | Libraries และ packages ต่างๆ |
+| framework- | Frameworks สำหรับ web, desktop, mobile |
+| runtime- | Runtime environments (Bun, Node.js) |
+| cloud- | Cloud platforms และ services |
+| create- | สร้าง extensions สำหรับ platforms ต่างๆ (browser, VSCode, Raycast) |
+| tool- | Development tools |
 
 ## Skill Structure
 
-แต่ละ skill มีโครงสร้างตาม /follow-write-skills:
-
-```
-skill-name/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   ├── best-practices.md
-│   ├── integration.md
-│   └── architecture.md
-├── key-concepts/
-├── principles/
-├── references/
-│   ├── website.md
-│   ├── cli.md
-│   └── configuration.md
-└── workflows/
-```
-
-## Recent Updates
-
-- **README.md**: สร้าง README.md ใหม่พร้อมเนื้อหาครบถ้วน — Hero, Features, Key Concepts, Quick Start, Usage, Skills Catalog (120+ skills), Skill Structure, Reference, Notes
-- **runtime-bun**: อัปเดตโครงสร้างตาม /follow-write-skills, เพิ่มไฟล์ how-it-works, configuration, integration, architecture, website
-- **runtime-node**: อัปเดตโครงสร้างตาม /follow-write-skills, เพิ่มไฟล์ how-it-works, configuration, integration, architecture, website
+| Path | Description |
+|------|-------------|
+| SKILL.md | Skill index และ overview |
+| knowledge/ | Knowledge base |
+| knowledge/guide/ | Guides และ best practices |
+| knowledge/guide/installation.md | วิธีติดตั้ง |
+| knowledge/guide/key-concept.md | Concept หลัก |
+| knowledge/guide/how-it-works.md | Internal mechanism |
+| knowledge/guide/features.md | รายการ features |
+| knowledge/guide/configuration.md | Configuration options |
+| knowledge/guide/quick-start.md | Quick start guide |
+| knowledge/guide/best-practices.md | Best practices |
+| knowledge/guide/integration.md | Integration patterns |
+| knowledge/guide/architecture.md | Architecture overview |
+| knowledge/guide/structure.md | Folder structure |
+| knowledge/guide/performance.md | Performance characteristics |
+| knowledge/guide/security.md | Security considerations |
+| knowledge/guide/migration.md | Migration guide |
+| knowledge/guide/ecosystem.md | Ecosystem overview |
+| knowledge/guide/testing.md | Testing strategies |
+| knowledge/guide/patterns.md | Design patterns |
+| knowledge/guide/troubleshooting.md | Troubleshooting guide |
+| knowledge/key-concepts/ | Key concepts (optional) |
+| knowledge/principles/ | Principles (optional) |
+| references/ | Reference documentation |
+| references/website.md | Official website resources |
+| references/sitemap.md | Documentation sitemap |
+| references/api.md | API reference |
+| references/cli.md | CLI commands |
+| references/tui-usage.md | TUI usage |
+| references/configuration.md | Configuration reference |
+| workflows/ | Workflow files |
+| templates/ | Code templates (optional) |
+| scripts/ | TypeScript scripts (optional) |

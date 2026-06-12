@@ -2,59 +2,59 @@
 
 ## Vue 3
 
-| Resource | URL |
-|----------|-----|
-| Official Website | https://vuejs.org |
-| Documentation | https://vuejs.org/guide |
-| API Reference | https://vuejs.org/api |
-| Style Guide | https://vuejs.org/style-guide |
-| Examples | https://examples.vuejs.org |
+| Name | URL | Description |
+|------|-----|-------------|
+| Official Website | https://vuejs.org | Vue.js official website |
+| Documentation | https://vuejs.org/guide | Official documentation and guides |
+| API Reference | https://vuejs.org/api | API reference for Vue 3 |
+| Style Guide | https://vuejs.org/style-guide | Official style guide |
+| Examples | https://examples.vuejs.org | Vue.js examples |
 
 ## Vue Router
 
-| Resource | URL |
-|----------|-----|
-| Documentation | https://router.vuejs.org |
-| API Reference | https://router.vuejs.org/api |
-| Migration Guide | https://router.vuejs.org/guide/migration |
+| Name | URL | Description |
+|------|-----|-------------|
+| Documentation | https://router.vuejs.org | Vue Router documentation |
+| API Reference | https://router.vuejs.org/api | Vue Router API reference |
+| Migration Guide | https://router.vuejs.org/guide/migration | Migration guide for Vue Router |
 
 ## Pinia
 
-| Resource | URL |
-|----------|-----|
-| Documentation | https://pinia.vuejs.org |
-| API Reference | https://pinia.vuejs.org/api |
-| Cookbook | https://pinia.vuejs.org/cookbook |
+| Name | URL | Description |
+|------|-----|-------------|
+| Documentation | https://pinia.vuejs.org | Pinia documentation |
+| API Reference | https://pinia.vuejs.org/api | Pinia API reference |
+| Cookbook | https://pinia.vuejs.org/cookbook | Pinia cookbook and examples |
 
 ## DevTools
 
-| Resource | URL |
-|----------|-----|
-| Vue DevTools | https://devtools.vuejs.org |
-| Chrome Extension | https://chrome.google.com/webstore/detail/vuejs-devtools |
-| Firefox Extension | https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools |
+| Name | URL | Description |
+|------|-----|-------------|
+| Vue DevTools | https://devtools.vuejs.org | Vue DevTools documentation |
+| Chrome Extension | https://chrome.google.com/webstore/detail/vuejs-devtools | Chrome extension for Vue DevTools |
+| Firefox Extension | https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools | Firefox extension for Vue DevTools |
 
 ## Tools
 
-| Tool | URL |
-|------|-----|
-| Vue CLI | https://cli.vuejs.org |
-| Vite | https://vitejs.dev |
-| Volar (VS Code) | https://marketplace.visualstudio.com/items?itemName=Vue.volar |
+| Name | URL | Description |
+|------|-----|-------------|
+| Vue CLI | https://cli.vuejs.org | Vue CLI documentation |
+| Vite | https://vitejs.dev | Vite build tool |
+| Volar (VS Code) | https://marketplace.visualstudio.com/items?itemName=Vue.volar | VS Code extension for Vue |
 
 ## Nuxt
 
-| Resource | URL |
-|----------|-----|
-| Documentation | https://nuxt.com |
-| Guide | https://nuxt.com/docs/getting-started |
-| Modules | https://nuxt.com/modules |
+| Name | URL | Description |
+|------|-----|-------------|
+| Documentation | https://nuxt.com | Nuxt documentation |
+| Guide | https://nuxt.com/docs/getting-started | Nuxt getting started guide |
+| Modules | https://nuxt.com/modules | Nuxt modules |
 
 ## Community
 
-| Resource | URL |
-|----------|-----|
-| GitHub | https://github.com/vuejs/core |
-| Discord | https://discord.gg/vue |
-| Forum | https://forum.vuejs.org |
-| Twitter | https://twitter.com/vuejs
+| Name | URL | Description |
+|------|-----|-------------|
+| GitHub | https://github.com/vuejs/core | Vue.js GitHub repository |
+| Discord | https://discord.gg/vue | Vue.js Discord community |
+| Forum | https://forum.vuejs.org | Vue.js forum |
+| Twitter | https://twitter.com/vuejs | Vue.js Twitter account |

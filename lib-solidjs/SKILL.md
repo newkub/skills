@@ -1,3 +1,8 @@
+---
+name: lib-solidjs
+description: แนวทางการพัฒนา SolidJS ตาม best practices สำหรับ declarative JavaScript library ที่มี fine-grained reactivity, no virtual DOM และ compile-time optimization
+---
+
 # lib-solidjs
 
 ## Overview

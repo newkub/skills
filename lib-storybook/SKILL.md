@@ -1,3 +1,8 @@
+---
+name: lib-storybook
+description: แนวทางการพัฒนา Storybook ตาม best practices สำหรับ component explorer ที่ช่วยให้สามารถ develop, test และ document UI components ได้อย่างมีประสิทธิภาพ
+---
+
 # lib-storybook
 
 ## Overview

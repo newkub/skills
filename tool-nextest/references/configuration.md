@@ -1,11 +1,4 @@
-# configuration
-
-## index.md
-
----
-title: Configuration Options
-description: ตัวเลือกการตั้งค่าทั้งหมด
----
+# Configuration Options
 
 ## Configuration File
 
@@ -14,6 +7,11 @@ description: ตัวเลือกการตั้งค่าทั้ง�
 ## Profile Options
 
 ### [profile.<name>]
+
+**retries**
+- Type: integer
+- Default: 0
+- Description: จำนวน retries สำหรับ test ที่ล้มเหลว
 
 **test-threads**
 - Type: string or integer
@@ -44,10 +42,50 @@ description: ตัวเลือกการตั้งค่าทั้ง�
 - Default: true
 - Description: หยุดเมื่อ test fail
 
+**final-status-level**
+- Type: string
+- Default: "flaky"
+- Description: final status level สำหรับ reporting
+- Values: "pass", "retry", "slow", "flaky", "skip"
+
 **hide-progress-bar**
 - Type: boolean
 - Default: false
 - Description: ซ่อน progress bar
+
+**junit**
+- Type: table
+- Description: JUnit XML output configuration
+- Fields:
+  - `path` (string): output path
+
+**archive-format**
+- Type: string
+- Default: "tar-zst"
+- Description: archive format
+- Values: "tar-zst", "tar-gz"
+
+## Test Groups
+
+### [groups.<name>]
+
+**max-fail**
+- Type: integer
+- Description: จำนวน test ที่ล้มเหลวสูงสุด ก่อนหยุด group
+
+**retries**
+- Type: integer
+- Description: จำนวน retries สำหรับ group
+
+### [[test-groups]]
+
+**name**
+- Type: string
+- Description: group name จาก [groups]
+
+**filter**
+- Type: string
+- Description: filter expression สำหรับ group
 
 ## Environment Variables
 
@@ -60,6 +98,15 @@ description: ตัวเลือกการตั้งค่าทั้ง�
 RUST_LOG = "debug"
 RUST_BACKTRACE = "1"
 MY_VAR = "value"
+```
+
+### [profile.<name>.env]
+
+ตั้งค่า environment variables สำหรับ profile เฉพาะ
+
+```toml
+[profile.ci.env]
+RUST_LOG = "info"
 ```
 
 ## Per-Test Overrides
@@ -78,32 +125,72 @@ MY_VAR = "value"
 - Type: integer
 - Description: override threads
 
+**retries**
+- Type: integer
+- Description: override retries
+
 ```toml
 [[profile.default.overrides]]
-filter = "test::slow::*"
+filter = "test(slow_)"
 slow-timeout = "300s"
+retries = 3
 ```
+
+## Archive Configuration
+
+### [profile.<name>.archive]
+
+**include-files**
+- Type: array of strings
+- Description: files ที่จะรวมใน archive
+
+**exclude-files**
+- Type: array of strings
+- Description: files ที่จะ exclude จาก archive
 
 ## Example Configuration
 
 ```toml
 [profile.default]
+retries = 2
 test-threads = "num-cpus"
 slow-timeout = "60s"
 success-output = "immediate"
 failure-output = "immediate-final"
+final-status-level = "flaky"
 
 [profile.ci]
+retries = 0
 test-threads = 4
 hide-progress-bar = true
-fail-fast = true
+fail-fast = false
+final-status-level = "pass"
+junit = { path = "junit.xml" }
+
+[groups]
+slow = { max_fail = 1, retries = 3 }
+integration = { max_fail = 2, retries = 1 }
+unit = { max_fail = 5, retries = 0 }
+
+[[test-groups]]
+name = "slow"
+filter = "test(slow_)"
+
+[[test-groups]]
+name = "integration"
+filter = "test(integration_)"
+
+[[test-groups]]
+name = "unit"
+filter = "not test(slow_) and not test(integration_)"
 
 [env]
 RUST_LOG = "info"
 
 [[profile.default.overrides]]
-filter = "test::integration::*"
+filter = "test(slow_)"
 slow-timeout = "300s"
+retries = 3
 ```
 
 

@@ -1,7 +1,3 @@
-# cli
-
-## index.md
-
 # CLI Reference - Bun
 
 ## bun

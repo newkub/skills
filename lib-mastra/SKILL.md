@@ -1,3 +1,8 @@
+---
+name: lib-mastra
+description: Comprehensive Mastra framework guide for building agents, workflows, tools, memory, workspaces, and storage with current APIs
+---
+
 # lib-mastra
 
 ## Overview

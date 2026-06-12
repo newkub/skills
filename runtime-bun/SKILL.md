@@ -1,57 +1,45 @@
-# runtime-bun
+---
+name: runtime-bun
+description: Bun JavaScript runtime - all-in-one toolkit สำหรับ JavaScript/TypeScript ที่เร็วกว่า Node.js 10-20 เท่า
+---
 
-## Overview
+## When to use
 
-Bun เป็น JavaScript runtime, package manager, bundler, และ test runner ที่เร็วกว่า Node.js ถึง 10-20 เท่า รองรับ TypeScript โดยตรงโดยไม่ต้อง compile
+- ต้องการประสิทธิภาพสูงกว่า Node.js
+- ต้องการ TypeScript zero-config
+- ต้องการ package manager ที่เร็วกว่า npm
+- ต้องการ bundler ในตัว
+- ต้องการ test runner ในตัว
+- ต้องการ migrate จาก Node.js
 
-## โครงสร้าง Directory
+## Skills Related
 
-```
-runtime-bun/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   ├── best-practices.md
-│   ├── integration.md
-│   └── architecture.md
-├── key-concepts/
-├── principles/
-└── references/
-    ├── api.md
-    ├── website.md
-    ├── cli.md
-    └── configuration.md
-```
+- `/runtime-node` - Node.js JavaScript runtime ที่ใช้ Chrome V8 engine
 
 ## หมวดหมู่ไฟล์
 
-### guide/
+### knowledge/guide/
 
-| ไฟล์ | คำอธิบาย |
-|------|---------|
-| key-concept.md | พื้นฐานและหลักการสำคัญของ Bun |
-| how-it-works.md | อธิบายการทำงานของ Bun พร้อม diagram |
-| features.md | คุณสมบัติหลักของ Bun |
-| installation.md | วิธีการติดตั้ง Bun |
-| configuration.md | การตั้งค่าและ configuration |
-| quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| best-practices.md | แนวทางปฏิบัติที่ดี |
-| integration.md | การเชื่อมต่อกับ tools และ frameworks |
-| architecture.md | สถาปัตยกรรมของ Bun |
+| No | File | Description |
+|----|------|-------------|
+| 1 | [key-concept.md](knowledge/guide/key-concept.md) | พื้นฐานและหลักการสำคัญของ Bun |
+| 2 | [how-it-works.md](knowledge/guide/how-it-works.md) | อธิบายการทำงานของ Bun พร้อม diagram |
+| 3 | [features.md](knowledge/guide/features.md) | คุณสมบัติหลักของ Bun |
+| 4 | [installation.md](knowledge/guide/installation.md) | วิธีการติดตั้ง Bun |
+| 5 | [configuration.md](knowledge/guide/configuration.md) | การตั้งค่าและ configuration |
+| 6 | [quick-start.md](knowledge/guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| 7 | [best-practices.md](knowledge/guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
+| 8 | [integration.md](knowledge/guide/integration.md) | การเชื่อมต่อกับ tools และ frameworks |
+| 9 | [architecture.md](knowledge/guide/architecture.md) | สถาปัตยกรรมของ Bun |
 
 ### references/
 
-| ไฟล์ | คำอธิบาย |
-|------|---------|
-| api.md | API reference ของ Bun globals และ built-in modules |
-| website.md | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-| cli.md | คำสั่ง CLI ของ Bun |
-| configuration.md | ตัวเลือก configuration ต่างๆ |
+| No | File | Description |
+|----|------|-------------|
+| 1 | [api.md](references/api.md) | API reference ของ Bun globals และ built-in modules |
+| 2 | [website.md](references/website.md) | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
+| 3 | [cli.md](references/cli.md) | คำสั่ง CLI ของ Bun |
+| 4 | [configuration.md](references/configuration.md) | ตัวเลือก configuration ต่างๆ
 
 ## When to Use
 
@@ -61,6 +49,10 @@ runtime-bun/
 - ต้องการ bundler ในตัว
 - ต้องการ test runner ในตัว
 - ต้องการ migrate จาก Node.js
+
+## Skills Related
+
+- `/runtime-node` - Node.js JavaScript runtime ที่ใช้ Chrome V8 engine
 
 ## Core Features
 

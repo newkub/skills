@@ -120,7 +120,7 @@ try {
 
 ## See Also
 
-- [CLI](./cli.md) - CLI commands
+- [Website](./website.md) - Official documentation
 - [Configuration](./configuration.md) - Config options
 
 ดูรายละเอียดเพิ่มเติมที่: [WorkOS Documentation](https://workos.com/docs)

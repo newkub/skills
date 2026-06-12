@@ -1,3 +1,8 @@
+---
+name: lib-svelte
+description: แนวทางการพัฒนา Svelte ตาม best practices สำหรับ compiler-based JavaScript framework ที่มี reactive declarations, stores และ no virtual DOM
+---
+
 # lib-svelte
 
 ## Overview

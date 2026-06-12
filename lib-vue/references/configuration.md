@@ -38,6 +38,19 @@ export default defineConfig({
 });
 ```
 
+### Vite Options
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| `plugins` | Vite plugins | - |
+| `resolve.alias` | Path aliases | - |
+| `server.port` | Dev server port | 5173 |
+| `server.host` | Dev server host | localhost |
+| `server.proxy` | Proxy configuration | - |
+| `build.target` | Build target | modules |
+| `build.sourcemap` | Generate sourcemap | false |
+| `build.rollupOptions.output.manualChunks` | Manual chunk splitting | - |
+
 ## Vue Config
 
 ```javascript
@@ -62,6 +75,17 @@ module.exports = {
   },
 };
 ```
+
+### Vue Options
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| `publicPath` | Base URL for deployment | / |
+| `outputDir` | Build output directory | dist |
+| `assetsDir` | Static assets directory | static |
+| `productionSourceMap` | Generate sourcemap in production | false |
+| `devServer.port` | Dev server port | 8080 |
+| `devServer.proxy` | Proxy configuration | - |
 
 ## TypeScript Config
 
@@ -89,6 +113,17 @@ module.exports = {
   "references": [{ "path": "./tsconfig.node.json" }]
 }
 ```
+
+### TypeScript Options
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| `target` | Target ECMAScript version | ESNext |
+| `module` | Module system | ESNext |
+| `moduleResolution` | Module resolution strategy | bundler |
+| `strict` | Enable strict type checking | true |
+| `jsx` | JSX transform | preserve |
+| `paths` | Path aliases | - |
 
 ## Environment Variables
 

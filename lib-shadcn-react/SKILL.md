@@ -1,3 +1,8 @@
+---
+name: lib-shadcn-react
+description: แนวทางการพัฒนาด้วย shadcn/ui ตาม best practices สำหรับ React 18+ component library ที่ใช้ copy-to-own pattern พร้อม Radix UI และ Tailwind CSS
+---
+
 # lib-shadcn-react
 
 ## Overview

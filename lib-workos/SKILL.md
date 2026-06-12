@@ -1,31 +1,21 @@
-# lib-workos
+---
+name: lib-workos
+description: Enterprise identity platform สำหรับ SSO, SAML, directory sync, audit logs และ admin portal
+---
 
-แนวทางการใช้งาน WorkOS - Enterprise identity platform สำหรับ SSO, SAML, directory sync และ audit logs
+## When to use
 
-## Overview
+- เมื่อต้องการ SSO (SAML/OIDC) สำหรับ enterprise
+- เมื่อต้องการ directory sync กับ identity providers
+- เมื่อต้องการ audit logs สำหรับ compliance
+- เมื่อต้องการ multi-tenant organization management
 
-WorkOS เป็น platform สำหรับสร้าง enterprise applications ที่รองรับ SSO (SAML/OIDC), Directory Sync, Audit Logs, และ Admin Portal ช่วยให้ developers สามารถเพิ่ม enterprise features ได้อย่างง่ายดาย
+## Skills Related
 
-## File Structure
+- `/lang-typescript` - TypeScript programming language
+- `/lang-javascript` - JavaScript programming language
 
-```text
-lib-workos/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   └── best-practices.md
-└── references/
-    ├── cli.md
-    ├── configuration.md
-    └── api.md
-```
-
-## Content Summary
+## หมวดหมู่ไฟล์
 
 | Folder | File | Description |
 |--------|------|-------------|
@@ -36,15 +26,17 @@ lib-workos/
 | **Guide** | configuration.md | การตั้งค่า - Environment variables, SDK |
 | **Guide** | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
 | **Guide** | best-practices.md | แนวทางปฏิบัติที่ดี - Security, Error handling |
-| **Reference** | cli.md | CLI commands - Framework integration |
+| **Guide** | integration.md | การเชื่อมต่อกับ frameworks และ systems |
+| **Guide** | architecture.md | สถาปัตยกรรมระบบ WorkOS |
+| **Reference** | website.md | Official website และ documentation |
+| **Reference** | api.md | Programmatic API - Node.js SDK |
 | **Reference** | configuration.md | Configuration options - SDK config |
-| **Reference** | [api.md](references/api.md) | Programmatic API - Node.js SDK |
 
 ## Quick Start
 
 ```bash
 # Install SDK
-npm install @workos-inc/node
+bun add @workos-inc/node
 
 # Configure environment
 WORKOS_API_KEY=sk_xxxxxxxx

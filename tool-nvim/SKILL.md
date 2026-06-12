@@ -1,4 +1,7 @@
-# tool-nvim
+---
+name: tool-nvim
+description: แนวทางการใช้งาน Neovim - Modern, extensible text editor ที่พัฒนาจาก Vim
+---
 
 แนวทางการใช้งาน Neovim - Modern, extensible text editor ที่พัฒนาจาก Vim
 
@@ -11,32 +14,40 @@ Neovim (nvim) เป็น modern fork ของ Vim ที่เน้น exten
 ```text
 tool-nvim/
 ├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   └── best-practices.md
-└── references/
-    ├── cli.md
-    ├── configuration.md
-    └── api.md
+├── knowledge/
+│   ├── guide/
+│   │   ├── key-concept.md
+│   │   ├── how-it-works.md
+│   │   ├── features.md
+│   │   ├── installation.md
+│   │   ├── configuration.md
+│   │   ├── quick-start.md
+│   │   ├── best-practices.md
+│   │   └── integration.md
+│   ├── key-concepts/
+│   └── principles/
+├── references/
+│   ├── website.md
+│   ├── cli.md
+│   └── configuration.md
+└── workflows/
 ```
 
 ## Content Summary
 
 | Folder | File | Description |
 |--------|------|-------------|
-| **Guide** | key-concept.md | แนวคิดหลัก - Modal editing, Registers, Macros |
-| **Guide** | how-it-works.md | สถาปัตยกรรม - Neovim architecture, Plugins, UI |
-| **Guide** | features.md | ฟีเจอร์ทั้งหมด - LSP, Treesitter, Terminal |
-| **Guide** | installation.md | การติดตั้ง - Various installation methods |
-| **Guide** | configuration.md | การตั้งค่า - init.lua, plugins, options |
-| **Guide** | best-practices.md | แนวทางปฏิบัติที่ดี |
-| **Reference** | cli.md | CLI commands - nvim, nvim --help |
-| **Reference** | configuration.md | Configuration - init.vim, init.lua |
-| **Reference** | [api.md](references/api.md) | Neovim API - :help, :lua |
+| **knowledge/guide** | key-concept.md | แนวคิดหลัก - Modal editing, Registers, Macros |
+| **knowledge/guide** | how-it-works.md | สถาปัตยกรรม - Neovim architecture, Plugins, UI |
+| **knowledge/guide** | features.md | ฟีเจอร์ทั้งหมด - LSP, Treesitter, Terminal |
+| **knowledge/guide** | installation.md | การติดตั้ง - Various installation methods |
+| **knowledge/guide** | configuration.md | การตั้งค่า - init.lua, plugins, options |
+| **knowledge/guide** | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| **knowledge/guide** | best-practices.md | แนวทางปฏิบัติที่ดี |
+| **knowledge/guide** | integration.md | การเชื่อมต่อกับ tools อื่นๆ |
+| **references** | website.md | Official website และ resources |
+| **references** | cli.md | CLI commands - nvim, nvim --help |
+| **references** | configuration.md | Configuration - init.vim, init.lua |
 
 ## Quick Start
 

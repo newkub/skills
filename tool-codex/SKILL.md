@@ -1,26 +1,19 @@
-# codex
+---
+name: tool-codex
+description: Codex coding agent จาก OpenAI ที่ทำงานบนเครื่องคอมพิวเตอร์ ช่วยในการเขียนโค้ด ทำความเข้าใจ codebase ตรวจสอบโค้ด แก้ไขบัก
+---
 
-## วัตถุประสงค์
+## When to use
 
-Codex เป็น coding agent จาก OpenAI ที่ทำงานบนเครื่องคอมพิวเตอร์ของคุณ ช่วยในการเขียนโค้ด ทำความเข้าใจ codebase ตรวจสอบโค้ด แก้ไขบัก และทำให้งานพัฒนาซอฟต์แวร์เป็นไปโดยอัตโนมัติ
+- เมื่อต้องการ coding agent ที่ทำงานบนเครื่องคอมพิวเตอร์
+- เมื่อต้องการทำความเข้าใจ codebase อัตโนมัติ
+- เมื่อต้องการตรวจสอบโค้ดและแก้ไขบัก
+- เมื่อต้องการทำให้งานพัฒนาซอฟต์แวร์เป็นไปโดยอัตโนมัติ
 
-## โครงสร้าง Directory
+## Skills Related
 
-```
-tool-codex/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   └── best-practices.md
-└── references/
-    ├── cli.md
-    ├── configuration.md
-    └── api.md
-```
+- `/lang-javascript` - JavaScript programming language
+- `/lang-typescript` - TypeScript programming language
 
 ## หมวดหมู่ไฟล์
 

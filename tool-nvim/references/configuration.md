@@ -93,6 +93,6 @@ vim.cmd('set tabstop=2')
 
 ## See Also
 
-- [Installation](../guide/installation.md) - Installation guide
+- [Installation](../knowledge/guide/installation.md) - Installation guide
 - [CLI](./cli.md) - CLI commands
-- [Programmatic API](./programmatic-api.md) - Lua API
+- [Configuration Guide](../knowledge/guide/configuration.md) - Configuration guide

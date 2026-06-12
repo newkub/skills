@@ -1,24 +1,37 @@
-# framework-tauri
+---
+name: framework-tauri
+description: Tauri framework สำหรับสร้าง desktop และ mobile applications ด้วย Rust backend และ web technologies frontend
+---
 
-## Overview
+## When to use
 
-Tauri เป็น framework สำหรับสร้าง desktop และ mobile applications ที่มีขนาดเล็กและเร็ว ใช้ Rust สำหรับ backend และ web technologies สำหรับ frontend รองรับ Windows, macOS, Linux, Android และ iOS
+- เมื่อต้องการ desktop applications ที่มีขนาดเล็กและเร็ว
+- เมื่อต้องการ Rust backend และ web technologies frontend
+- เมื่อต้องการ cross-platform (Windows, macOS, Linux, Android, iOS)
+- เมื่อต้องการ security และ performance สูง
 
-## Content Summary
+## Skills Related
+
+- `/lang-rust` - Rust programming language
+- `/lib-vite` - Vite build tool
+- `/lib-react` - React library
+
+## หมวดหมู่ไฟล์
 
 | Folder | File | Description |
 |--------|------|-------------|
-| **guide/** | [key-concept.md](guide/key-concept.md) | แนวคิดหลักของ Tauri |
-| | [how-it-works.md](guide/how-it-works.md) | การทำงานของ Tauri |
-| | [features.md](guide/features.md) | Features ทั้งหมด |
-| | [installation.md](guide/installation.md) | การติดตั้ง |
-| | [configuration.md](guide/configuration.md) | การตั้งค่า |
-| | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งาน |
-| | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-| | [integration.md](guide/integration.md) | การรวมกับ tools อื่น |
-| | [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ Tauri |
+| **knowledge/guide/** | [key-concept.md](knowledge/guide/key-concept.md) | แนวคิดหลักของ Tauri |
+| | [how-it-works.md](knowledge/guide/how-it-works.md) | การทำงานของ Tauri |
+| | [features.md](knowledge/guide/features.md) | Features ทั้งหมด |
+| | [installation.md](knowledge/guide/installation.md) | การติดตั้ง |
+| | [configuration.md](knowledge/guide/configuration.md) | การตั้งค่า |
+| | [quick-start.md](knowledge/guide/quick-start.md) | เริ่มต้นใช้งาน |
+| | [best-practices.md](knowledge/guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
+| | [integration.md](knowledge/guide/integration.md) | การรวมกับ tools อื่น |
+| | [architecture.md](knowledge/guide/architecture.md) | สถาปัตยกรรมของ Tauri |
 | **references/** | [website.md](references/website.md) | แหล่งข้อมูลอย่างเป็นทางการ |
 | | [api.md](references/api.md) | Rust API reference |
+| | [cli.md](references/cli.md) | CLI commands reference |
 | | [configuration.md](references/configuration.md) | Configuration reference |
 
 ## Quick Reference
@@ -42,23 +55,3 @@ Tauri เป็น framework สำหรับสร้าง desktop และ
 | **WebView** | Embedded web browser (Wry/TAO) |
 | **Plugins** | ระบบ plugin ขยาย functionality |
 
-## File Structure
-
-```
-framework-tauri/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   ├── best-practices.md
-│   ├── integration.md
-│   └── architecture.md
-└── references/
-    ├── website.md
-    ├── api.md
-    └── configuration.md
-```

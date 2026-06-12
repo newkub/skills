@@ -10,10 +10,10 @@
 
 ```bash
 # Install TypeScript
-npm install -D typescript @types/node
+bun add -D typescript @types/node
 
 # Initialize tsconfig
-npx tsc --init
+bunx tsc --init
 ```
 
 ### 2. Configure tsconfig
@@ -103,7 +103,7 @@ export type ApiResponse<T> = {
 
 ```bash
 # Check for errors
-npx tsc --noEmit
+bunx tsc --noEmit
 
 # Fix common issues:
 # - Add missing types

@@ -1,37 +1,43 @@
-# lib-pinia
+---
+name: lib-pinia
+description: แนวทางการพัฒนา Pinia ตาม best practices สำหรับ Vue 3 state management ที่มี type-safe, devtools integration และรองรับทั้ง Options API และ Composition API
+---
 
-## Overview
+## When to use
 
-แนวทางการพัฒนา Pinia ตาม best practices สำหรับ Vue 3 state management ที่มี type-safe, devtools integration และรองรับทั้ง Options API และ Composition API
+- เมื่อต้องการ state management สำหรับ Vue 3
+- เมื่อต้องการ type-safe state management
+- เมื่อต้องการ devtools integration
+- เมื่อต้องการรองรับทั้ง Options API และ Composition API
 
-## File Structure
+## Skills Related
 
-| Folder | Description |
-|--------|-------------|
-| guide/ | Guides และ tutorials สำหรับการใช้งาน |
-| references/ | References สำหรับ API, Configuration, Website |
+- `/lib-vue` - Vue.js framework
+- `/lang-typescript` - TypeScript programming language
 
-## Guide Files
+## หมวดหมู่ไฟล์
+
+### knowledge/guide/
 
 | File | Description |
 |------|-------------|
 | key-concept.md | Core concepts — Store, State, Getters, Actions, Plugins |
 | how-it-works.md | การทำงานภายใน — Reactivity, Lifecycle, Plugin Pipeline |
 | features.md | Features ทั้งหมด — Options/Setup Store, Subscriptions, Plugins |
-| installation.md | การติดตั้ง — npm/yarn/pnpm, Vue 3, Nuxt 3 |
+| installation.md | การติดตั้ง — bun add, Vue 3, Nuxt 3 |
 | configuration.md | การตั้งค่า — createPinia, store options, plugins, persist |
 | quick-start.md | คู่มือเริ่มต้นใช้งาน — สร้าง store แรกใน 5 นาที |
 | best-practices.md | Best practices — Store design, State management, Performance |
 | integration.md | การ integrate — Vue Router, Nuxt 3, Vite, Vitest, Persistence |
 | architecture.md | Architecture — Singleton pattern, Reactivity flow, Plugin system |
 
-## References Files
+### references/
 
 | File | Description |
 |------|-------------|
-| website.md | Official documentation links และ resources |
-| api.md | API reference — createPinia, defineStore, storeToRefs, plugins |
-| configuration.md | Configuration options — store options, plugins, TypeScript |
+| update-website.md | Official documentation links และ resources |
+| update-api.md | API reference — createPinia, defineStore, storeToRefs, plugins |
+| update-configuration.md | Configuration options — store options, plugins, TypeScript |
 
 ## Key Concepts Summary
 

@@ -1,3 +1,8 @@
+---
+name: lib-react
+description: แนวทางการพัฒนา React ตาม best practices สำหรับ JavaScript library สำหรับสร้าง UI ที่มี component-based architecture, virtual DOM และ extensive ecosystem
+---
+
 # lib-react
 
 ## Overview

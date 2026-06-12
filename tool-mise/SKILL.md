@@ -1,26 +1,20 @@
-# mise
+---
+name: tool-mise
+description: Mise - Development environment manager สำหรับ manage tools และ versions ต่างๆ
+---
 
-## วัตถุประสงค์
+## When to use
 
-Skill สำหรับ mise
+- เมื่อต้องการ manage multiple tool versions
+- เมื่อต้องการ switch tools ตาม project
+- เมื่อต้องการ automate environment setup
+- เมื่อต้องการ replace asdf, nvm, pyenv
 
-## โครงสร้าง Directory
+## Skills Related
 
-\	ext
-tool-mise/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   └── best-practices.md
-└── references/
-    ├── cli.md
-    ├── configuration.md
-    └── api.md
-\\n
+- `/runtime-bun` - Bun runtime
+- `/runtime-node` - Node.js runtime
+
 ## หมวดหมู่ไฟล์
 
 | หมวดหมู่ | ไฟล์ | คำอธิบาย |

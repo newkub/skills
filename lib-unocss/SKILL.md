@@ -1,3 +1,8 @@
+---
+name: lib-unocss
+description: UnoCSS is an instant, on-demand atomic CSS engine with the best performance. It provides fully customizable utilities, presets, shortcuts, and icon system for any web project.
+---
+
 # UnoCSS
 
 UnoCSS is an instant, on-demand atomic CSS engine with the best performance. It provides fully customizable utilities, presets, shortcuts, and icon system for any web project.
