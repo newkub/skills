@@ -4,6 +4,18 @@
 
 Remotion เป็น framework สำหรับสร้างวิดีโอแบบโปรแกรมมิ่งโดยใช้ React ช่วยให้สร้างวิดีโอด้วย component model เดียวกับ React โดยใช้ hooks เช่น `useCurrentFrame()` สำหรับ animations
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## Content Summary
 
 | Folder | File | Description |

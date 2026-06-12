@@ -6,6 +6,18 @@
 
 Windsurf เป็น AI-powered code assistant ที่ใช้ Agentic workflows สำหรับ pair programming ช่วยเขียน code, refactor, debug, และ explain code ผ่าน natural language commands
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## File Structure
 
 ```

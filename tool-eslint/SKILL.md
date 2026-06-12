@@ -22,6 +22,18 @@ tool-eslint/
 └── SKILL.md
 ```
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## File Categories
 
 | Folder | Description |

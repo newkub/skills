@@ -4,6 +4,18 @@
 
 Cursor เป็น AI-powered code editor ที่สร้างบน VS Code codebase พร้อมฟีเจอร์ AI สำหรับ autocomplete, chat, และ command generation ช่วยให้การเขียน code มีประสิทธิภาพมากขึ้น
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## Content Summary
 
 | Folder | File | Description |

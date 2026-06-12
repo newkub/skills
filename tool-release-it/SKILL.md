@@ -6,6 +6,18 @@
 
 Release It เป็น CLI tool สำหรับ automate versioning, git commit/tag/push, สร้าง GitHub/GitLab releases, generate changelog, และ publish ไปยัง npm รองรับ plugins และ hooks สำหรับ customize release workflow
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## File Structure
 
 ```

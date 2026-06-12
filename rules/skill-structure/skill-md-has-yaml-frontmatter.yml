@@ -1,0 +1,7 @@
+id: skill-md-has-yaml-frontmatter
+language: markdown
+message: SKILL.md ต้องมี YAML frontmatter ที่ถูกต้อง
+severity: error
+rule:
+  pattern:
+    regex: "^---\n[\s\S]*?\n---"

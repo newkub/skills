@@ -17,7 +17,7 @@ UnoCSS is an instant, on-demand atomic CSS engine with the best performance. It 
 - **Transformers** - CSS directives (@apply, @screen)
 - **Framework Agnostic** - Works with Vite, Webpack, CLI, etc.
 
-## When to Use
+## When to use
 
 Use UnoCSS when you need:
 - Atomic CSS with instant generation
@@ -26,6 +26,10 @@ Use UnoCSS when you need:
 - Easy integration with Vite
 - Icon system with 100+ collections
 - Fully customizable styling
+
+
+## Skills Related
+
 
 ## Quick Start
 

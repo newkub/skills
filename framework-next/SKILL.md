@@ -1,6 +1,6 @@
 ---
-name: framework-next
-description: แนวทางการพัฒนา Next.js ตาม best practices สำหรับ React framework ที่มี SSR, SSG, ISR, และ App Router
+name: next
+description: React framework for building web applications with SSR, SSG, ISR, and App Router. Includes server components, client components, routing, data fetching, and optimization features.
 ---
 
 # framework-next
@@ -14,23 +14,14 @@ description: แนวทางการพัฒนา Next.js ตาม best p
 
 ## Skills Related
 
-- `lib-react` - React library
-- `lang-typescript` - TypeScript programming language
-- `runtime-bun` - Bun runtime สำหรับ web development
+- lib-react
+- lang-typescript
+- runtime-bun
 
-## หมวดหมู่ไฟล์
+## References
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | [knowledge/guide/key-concept.md](knowledge/guide/key-concept.md) | Core concepts ของ Next.js |
-| 2 | [knowledge/guide/how-it-works.md](knowledge/guide/how-it-works.md) | หลักการทำงานของ Next.js |
-| 3 | [knowledge/guide/features.md](knowledge/guide/features.md) | Features และ capabilities |
-| 4 | [knowledge/guide/installation.md](knowledge/guide/installation.md) | การติดตั้งและ setup |
-| 5 | [knowledge/guide/configuration.md](knowledge/guide/configuration.md) | การตั้งค่า configuration |
-| 6 | [knowledge/guide/quick-start.md](knowledge/guide/quick-start.md) | Quick start guide |
-| 7 | [knowledge/guide/best-practices.md](knowledge/guide/best-practices.md) | Best practices |
-| 8 | [knowledge/guide/integration.md](knowledge/guide/integration.md) | การ integrate กับ tools อื่นๆ |
-| 9 | [knowledge/guide/architecture.md](knowledge/guide/architecture.md) | Architecture และ structure |
-| 10 | [references/website.md](references/website.md) | Next.js official website และ resources |
-| 11 | [references/cli.md](references/cli.md) | Next.js CLI commands |
-| 12 | [references/configuration.md](references/configuration.md) | Configuration options reference |
+| Resource | URL |
+|----------|-----|
+| Next.js Docs | https://nextjs.org/docs |
+| Next.js GitHub | https://github.com/vercel/next.js |
+| Next.js Examples | https://nextjs.org/examples |

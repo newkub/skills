@@ -3,90 +3,108 @@ name: lib-solidjs
 description: แนวทางการพัฒนา SolidJS ตาม best practices สำหรับ declarative JavaScript library ที่มี fine-grained reactivity, no virtual DOM และ compile-time optimization
 ---
 
-# lib-solidjs
+## When to use
 
-## Overview
+- เมื่อต้องการ reactive JavaScript library
+- เมื่อต้องการ fine-grained reactivity
+- เมื่อต้องการ no virtual DOM performance
+- เมื่อต้องการ compile-time optimization
 
-แนวทางการพัฒนา SolidJS ตาม best practices สำหรับ declarative JavaScript library ที่มี fine-grained reactivity, no virtual DOM และ compile-time optimization
+## Skills Related
 
-## File Structure
+- `/lang-typescript` - TypeScript programming language
+- `/lib-vite` - Vite build tool
 
-| Folder | Description |
-|--------|-------------|
-| guide/ | Guides และ tutorials สำหรับการใช้งาน |
-| reference/ | Official documentation links |
-| references/ | References สำหรับ API |
-| examples/ | ตัวอย่างการใช้งาน |
-| templates/ | Templates สำหรับเริ่มต้น |
-| rules/ | Rules และ conventions |
-| patterns/ | Design patterns |
-| usecase/ | Use cases |
-| workflows/ | Workflows |
-| integration/ | Integration กับ tools อื่นๆ |
-| changelog/ | Changelog และ version history |
 
-## Guide Files
+## References
 
-| File | Description |
-|------|-------------|
-| installation.md | การติดตั้งและ setup |
-| quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| key-concept.md | Core concepts |
-| best-practices.md | Best practices |
-| all-features.md | รายการ features ทั้งหมด |
-| configuration.md | การตั้งค่า configuration |
-| troubleshooting.md | การแก้ไขปัญหาที่พบบ่อย |
 
-## Rules Files
+## โครงสร้าง Directory
 
-| File | Description |
-|------|-------------|
-| setup.md | Setup และ initialization |
-| components.md | Component patterns |
-| signals.md | Signal patterns |
-| stores.md | Store patterns |
-| reactivity.md | Reactivity patterns |
-| typescript.md | TypeScript patterns |
+```text
+lib-solidjs/
+├── SKILL.md
+├── 
+│   ├── guide/
+│   │   ├── key-concept.md
+│   │   ├── how-it-works.md
+│   │   ├── features.md
+│   │   ├── installation.md
+│   │   ├── configuration.md
+│   │   ├── quick-start.md
+│   │   ├── best-practices.md
+│   │   ├── integration.md
+│   │   ├── architecture.md
+│   │   ├── structure.md
+│   │   ├── performance.md
+│   │   ├── security.md
+│   │   ├── migration.md
+│   │   ├── ecosystem.md
+│   │   ├── testing.md
+│   │   ├── patterns.md
+│   │   └── troubleshooting.md
+│   ├── key-concepts/
+│   │   ├── signals.md
+│   │   ├── reactivity.md
+│   │   ├── components.md
+│   │   └── effects.md
+│   └── principles/
+│       ├── fine-grained-reactivity.md
+│       └── minimal-runtime.md
+└── references/
+    ├── website.md
+    ├── sitemap.md
+    ├── api.md
+    ├── cli.md
+    └── configuration.md
+```
 
-## References Files
+## หมวดหมู่ไฟล
 
-| File | Description |
-|------|-------------|
-| cli/index.md | Solid CLI commands |
-| configuration/index.md | Configuration options |
-| api/index.md | Programmatic API reference |
-| web/index.md | Web documentation links |
-| official.md | Official documentation links |
+### guide/
 
-## Patterns Files
+| No | File | Description |
+|----|------|-------------|
+| 1 | key-concept.md | Core concepts ของ SolidJS |
+| 2 | how-it-works.md | การทำงานของ SolidJS reactivity |
+| 3 | features.md | Features ทั้งหมดของ SolidJS |
+| 4 | installation.md | การติดตั้งและ setup |
+| 5 | configuration.md | การตั้งค่าและ config options |
+| 6 | quick-start.md | คู่มือเริ่มต้นใช้งาน |
+| 7 | best-practices.md | Best practices ในการใช้งาน |
+| 8 | integration.md | การ integrate กับ tools และ frameworks อื่นๆ |
+| 9 | architecture.md | Architecture ของ SolidJS |
+| 10 | structure.md | โครงสร้างโปรเจกต์ SolidJS |
+| 11 | performance.md | เทคนิคการปรับปรุง performance |
+| 12 | security.md | ความปลอดภัยและ security considerations |
+| 13 | migration.md | วิธี migration จาก frameworks อื่นๆ |
+| 14 | ecosystem.md | Ecosystem และ integrations |
+| 15 | testing.md | การทดสอบ SolidJS applications |
+| 16 | patterns.md | Patterns ที่ใช้บ่อย |
+| 17 | troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
 
-| File | Description |
-|------|-------------|
-| optimize-patterns.md | Optimization patterns |
-| refactor-patterns.md | Refactoring patterns |
+### references/
 
-## Integration Files
+| No | File | Description |
+|----|------|-------------|
+| 1 | website.md | Official documentation links |
+| 2 | sitemap.md | แผนผังเอกสารและทรัพยากรที่เกี่ยวข้อง |
+| 3 | api.md | SolidJS API reference |
+| 4 | cli.md | Solid CLI commands และ usage |
+| 5 | configuration.md | Configuration options |
 
-| File | Description |
-|------|-------------|
-| tool-integration.md | Development tools integration |
-| ci-cd-integration.md | CI/CD pipeline integration |
+### key-concepts/
 
-## Use Cases
+| No | File | Description |
+|----|------|-------------|
+| 1 | signals.md | Signals และ reactive state management |
+| 2 | reactivity.md | Reactivity model และ automatic tracking |
+| 3 | components.md | Components และ JSX syntax |
+| 4 | effects.md | Effects และ side effects |
 
-| File | Description |
-|------|-------------|
-| web-application.md | Web application development |
+### principles/
 
-## Workflows
-
-| File | Description |
-|------|-------------|
-| development-workflow.md | Development workflow |
-| deployment-workflow.md | Deployment workflow |
-
-## Changelog
-
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial release |
+| No | File | Description |
+|----|------|-------------|
+| 1 | fine-grained-reactivity.md | Fine-grained reactivity principle |
+| 2 | minimal-runtime.md | Minimal runtime principle |

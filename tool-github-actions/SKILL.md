@@ -4,6 +4,18 @@
 
 แนวทางการใช้งาน GitHub Actions สำหรับ CI/CD
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## What is GitHub Actions?
 
 GitHub Actions เป็น CI/CD platform ที่ช่วย automate workflows ภายใน GitHub

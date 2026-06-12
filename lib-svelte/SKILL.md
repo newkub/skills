@@ -5,6 +5,14 @@ description: แนวทางการพัฒนา Svelte ตาม best pr
 
 # lib-svelte
 
+
+## When to use
+
+
+
+## Skills Related
+
+
 ## Overview
 
 แนวทางการพัฒนา Svelte ตาม best practices สำหรับ compiler-based JavaScript framework ที่มี reactive declarations, stores และ no virtual DOM
@@ -17,7 +25,6 @@ description: แนวทางการพัฒนา Svelte ตาม best pr
 | reference/ | Official documentation links |
 | references/ | References สำหรับ API |
 | examples/ | ตัวอย่างการใช้งาน |
-| templates/ | Templates สำหรับเริ่มต้น |
 | rules/ | Rules และ conventions |
 | patterns/ | Design patterns |
 | usecase/ | Use cases |

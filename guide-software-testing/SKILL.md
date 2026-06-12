@@ -23,20 +23,24 @@ description: Software Testing - คู่มือการทดสอบซอ
 - `guide-design-patterns` - สำหรับ design patterns ที่ testable
 - `guide-software-architecture` - สำหรับการออกแบบระบบที่ testable
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 | No | File | Description | Level |
 |----|------|-------------|-------|
-| 1 | [key-concept.md](knowledge/guide/key-concept.md) | แนวคิดหลักของการทดสอบซอฟต์แวร์ | Basic |
-| 2 | [how-it-works.md](knowledge/guide/how-it-works.md) | การทำงานของระบบทดสอบ | Basic |
-| 3 | [features.md](knowledge/guide/features.md) | Features และประเภทของการทดสอบ | Basic |
-| 4 | [configuration.md](knowledge/guide/configuration.md) | การตั้งค่า test configuration | Basic |
-| 5 | [quick-start.md](knowledge/guide/quick-start.md) | เริ่มต้นเขียน test | Basic |
-| 6 | [best-practices.md](knowledge/guide/best-practices.md) | แนวทางการทดสอบที่ดี | Intermediate |
-| 7 | [integration.md](knowledge/guide/integration.md) | การรวมกับ CI/CD | Intermediate |
-| 8 | [architecture.md](knowledge/guide/architecture.md) | สถาปัตยกรรมของระบบทดสอบ | Advanced |
+| 1 | [key-concept.md](guide/key-concept.md) | แนวคิดหลักของการทดสอบซอฟต์แวร์ | Basic |
+| 2 | [how-it-works.md](guide/how-it-works.md) | การทำงานของระบบทดสอบ | Basic |
+| 3 | [features.md](guide/features.md) | Features และประเภทของการทดสอบ | Basic |
+| 4 | [configuration.md](guide/configuration.md) | การตั้งค่า test configuration | Basic |
+| 5 | [quick-start.md](guide/quick-start.md) | เริ่มต้นเขียน test | Basic |
+| 6 | [best-practices.md](guide/best-practices.md) | แนวทางการทดสอบที่ดี | Intermediate |
+| 7 | [integration.md](guide/integration.md) | การรวมกับ CI/CD | Intermediate |
+| 8 | [architecture.md](guide/architecture.md) | สถาปัตยกรรมของระบบทดสอบ | Advanced |
 
 ### references/
 

@@ -4,6 +4,18 @@
 
 semantic-release เป็น fully automated version management และ package publishing tool ที่ใช้ conventional commits สำหรับ determine version bumps อัตโนมัติตาม semantic versioning รองรับ npm, GitHub Releases, GitLab Releases
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## Content Summary
 
 | Folder | File | Description |

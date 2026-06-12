@@ -5,7 +5,7 @@ description: แนวทางการพัฒนา Rust ตาม best prac
 
 # lang-rust
 
-## When to Use
+## When to use
 
 - Systems programming (OS, drivers, embedded systems)
 - WebAssembly development
@@ -20,67 +20,77 @@ description: แนวทางการพัฒนา Rust ตาม best prac
 - `lang-c` - C interoperability
 - `lang-cpp` - C++ interoperability
 
-## โครงสร้าง Directory
+
+## References
+
+### guide/
+
+| File | Description |
+|------|-------------|
+| installation.md | วิธีติดตั้ง Rust และ tools ที่เกี่ยวข้อง |
+| key-concept.md | แนวคิดหลักของ Rust (Ownership, Borrowing, Lifetimes) |
+| how-it-works.md | วิธีการทำงานของ Rust compiler และ borrow checker |
+| features.md | คุณสมบัติหลักของ Rust (Pattern Matching, Traits, Error Handling) |
+| configuration.md | การตั้งค่า Cargo.toml และ rustfmt |
+| quick-start.md | เริ่มต้นใช้งาน Rust อย่างรวดเร็ว |
+| best-practices.md | best practices สำหรับ Rust (naming, safety, patterns) |
+| integration.md | การเชื่อมต่อกับ C, WebAssembly และ tools |
+| architecture.md | สถาปัตยกรรมของ Rust projects |
+| troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน Rust |
+
+### key-concepts/
+
+| File | Description |
+|------|-------------|
+| ownership.md | Ownership system และ move semantics |
+| borrowing.md | Borrowing rules และ references |
+| lifetimes.md | Lifetime annotations และ subtyping |
+
+### references/
+
+| File | Description |
+|------|-------------|
+| website.md | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
+| sitemap.md | แผนผังเอกสารและทรัพยากรที่เกี่ยวข้อง |
+| api.md | Rust Standard Library API reference |
+| cli.md | Cargo CLI commands และ options |
+| configuration.md | Cargo.toml configuration options |
+
+### workflows/
+
+| File | Description |
+|------|-------------|
+| (empty) | Workflow templates สำหรับ Rust development |
+
+
+## Directory Structure
 
 ```text
 lang-rust/
 ├── SKILL.md
-├── knowledge/
-│   ├── guide/
-│   │   ├── key-concept.md
-│   │   ├── how-it-works.md
-│   │   ├── features.md
-│   │   ├── installation.md
-│   │   ├── configuration.md
-│   │   ├── quick-start.md
-│   │   ├── best-practices.md
-│   │   ├── integration.md
-│   │   ├── architecture.md
-│   │   └── troubleshooting.md
-│   └── key-concepts/
-│       ├── ownership.md
-│       ├── borrowing.md
-│       └── lifetimes.md
-└── references/
-    ├── website.md
-    ├── sitemap.md
-    ├── cli.md
-    └── configuration.md
+├── guide/
+│   ├── installation.md
+│   ├── key-concept.md
+│   ├── how-it-works.md
+│   ├── features.md
+│   ├── configuration.md
+│   ├── quick-start.md
+│   ├── best-practices.md
+│   ├── integration.md
+│   ├── architecture.md
+│   └── troubleshooting.md
+├── key-concepts/
+│   ├── ownership.md
+│   ├── borrowing.md
+│   └── lifetimes.md
+├── references/
+│   ├── website.md
+│   ├── sitemap.md
+│   ├── api.md
+│   ├── cli.md
+│   └── configuration.md
+└── workflows/
 ```
-
-## หมวดหมู่ไฟล์
-
-### knowledge/guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | key-concept.md | แนวคิดหลักของ Rust (Ownership, Borrowing, Lifetimes) |
-| 2 | how-it-works.md | วิธีการทำงานของ Rust compiler และ borrow checker |
-| 3 | features.md | คุณสมบัติหลักของ Rust (Pattern Matching, Traits, Error Handling) |
-| 4 | installation.md | วิธีติดตั้ง Rust และ tools ที่เกี่ยวข้อง |
-| 5 | configuration.md | การตั้งค่า Cargo.toml และ rustfmt |
-| 6 | quick-start.md | เริ่มต้นใช้งาน Rust อย่างรวดเร็ว |
-| 7 | best-practices.md | best practices สำหรับ Rust (naming, safety, patterns) |
-| 8 | integration.md | การเชื่อมต่อกับ C, WebAssembly และ tools |
-| 9 | architecture.md | สถาปัตยกรรมของ Rust projects |
-| 10 | troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน Rust |
-
-### knowledge/key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | ownership.md | Ownership system และ move semantics |
-| 2 | borrowing.md | Borrowing rules และ references |
-| 3 | lifetimes.md | Lifetime annotations และ subtyping |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-| 2 | sitemap.md | แผนผังเอกสารและทรัพยากรที่เกี่ยวข้อง |
-| 3 | cli.md | Cargo CLI commands และ options |
-| 4 | configuration.md | Cargo.toml configuration options |
 
 ## Core Features
 

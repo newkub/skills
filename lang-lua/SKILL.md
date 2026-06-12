@@ -5,7 +5,7 @@ description: แนวทางการพัฒนา Lua ตาม best pract
 
 # lang-lua
 
-## When to Use
+## When to use
 
 - Game development (Roblox, World of Warcraft, Love2D)
 - Embedded systems
@@ -16,38 +16,39 @@ description: แนวทางการพัฒนา Lua ตาม best pract
 
 ## Skills Related
 
-- `lang-c` - C interoperability
-- `lang-cpp` - C++ interoperability
+- `/lang-c` - C interoperability
+- `/lang-cpp` - C++ interoperability
 
-## หมวดหมู่ไฟล์
+## References
 
-### knowledge/guide/
+### guide/
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | key-concept.md | แนวคิดหลักของ Lua (tables, metatables, coroutines) |
-| 2 | how-it-works.md | วิธีการทำงานของ Lua VM และ garbage collection |
-| 3 | features.md | คุณสมบัติหลักของ Lua (tables, functions, modules) |
-| 4 | installation.md | วิธีติดตั้ง Lua และ tools ที่เกี่ยวข้อง |
-| 5 | configuration.md | การตั้งค่า Lua และ LuaRocks |
-| 6 | quick-start.md | เริ่มต้นใช้งาน Lua อย่างรวดเร็ว |
-| 7 | best-practices.md | best practices สำหรับ Lua (naming, patterns) |
-| 8 | integration.md | การเชื่อมต่อกับ C/C++ และ applications |
-| 9 | architecture.md | สถาปัตยกรรมของ Lua projects |
+| File | Description |
+|------|-------------|
+| [installation.md](guide/installation.md) | วิธีติดตั้ง Lua และ tools ที่เกี่ยวข้อง |
+| [key-concept.md](guide/key-concept.md) | แนวคิดหลักของ Lua (tables, metatables, coroutines) |
+| [how-it-works.md](guide/how-it-works.md) | วิธีการทำงานของ Lua VM และ garbage collection |
+| [features.md](guide/features.md) | คุณสมบัติหลักของ Lua (tables, functions, modules) |
+| [configuration.md](guide/configuration.md) | การตั้งค่า Lua และ LuaRocks |
+| [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งาน Lua อย่างรวดเร็ว |
+| [best-practices.md](guide/best-practices.md) | best practices สำหรับ Lua (naming, patterns) |
+| [integration.md](guide/integration.md) | การเชื่อมต่อกับ C/C++ และ applications |
+| [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ Lua projects |
+| [troubleshooting.md](guide/troubleshooting.md) | การแก้ปัญหาที่พบบ่อย |
 
 ### references/
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-| 2 | cli.md | Lua CLI commands และ options |
-| 3 | configuration.md | Lua configuration options |
+| File | Description |
+|------|-------------|
+| [website.md](references/website.md) | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
+| [sitemap.md](references/sitemap.md) | แผนที่เอกสารทั้งหมด |
+| [api.md](references/api.md) | API reference สำหรับ standard library |
+| [cli.md](references/cli.md) | Lua CLI commands และ options |
+| [configuration.md](references/configuration.md) | Lua configuration options reference |
 
-## Core Features
+### workflows/
 
-- **Simple Syntax**: Easy to learn and read
-- **Dynamic Typing**: Flexible type system
-- **First-class Functions**: Functions as values
-- **Coroutines**: Built-in cooperative multitasking
-- **Metatables**: Object-oriented programming via metatables
-- **Lightweight**: Small runtime footprint
+| File | Description |
+|------|-------------|
+| [setup-lua-project.md](workflows/setup-lua-project.md) | ตั้งค่าโปรเจกต์ Lua ตามมาตรฐาน |
+| [create-lua-module.md](workflows/create-lua-module.md) | สร้าง Lua module ตามมาตรฐาน |

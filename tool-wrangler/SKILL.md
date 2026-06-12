@@ -4,6 +4,18 @@
 
 Wrangler เป็น CLI tool อย่างเป็นทางการสำหรับ Cloudflare Workers ช่วยให้สามารถสร้าง, พัฒนา, deploy และจัดการ Workers, KV, R2, D1, Queues และ services อื่นๆ บน Cloudflare's edge network
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## Content Summary
 
 | Folder | File | Description |

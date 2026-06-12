@@ -7,6 +7,18 @@ description: แนวทางการใช้งาน Playwright - End-to-e
 
 แนวทางการใช้งาน Playwright - End-to-end testing สำหรับ web applications
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## Overview
 
 Playwright เป็น end-to-end testing framework ที่รองรับ Chromium, Firefox, และ WebKit ใช้สำหรับ test web applications, generate code, debug และทำ automation รองรับ auto-waiting, network interception, และ multi-browser testing
@@ -16,7 +28,7 @@ Playwright เป็น end-to-end testing framework ที่รองรับ
 ```
 tool-playwright/
 ├── SKILL.md
-├── knowledge/
+├── 
 │   └── guide/
 │       ├── key-concept.md
 │       ├── how-it-works.md

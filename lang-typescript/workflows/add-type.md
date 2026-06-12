@@ -67,5 +67,5 @@ async function fetchUser(id: string): Promise<AsyncState<User>> {
 
 ## Related
 
-- [principles/type-safety.md](/c:/Users/Veerapong/.codeium/windsurf/skills/lang-typescript/principles/type-safety.md)
-- [principles/naming-conventions.md](/c:/Users/Veerapong/.codeium/windsurf/skills/lang-typescript/principles/naming-conventions.md)
+- [principles/type-safety.md](../principles/type-safety.md)
+- [principles/naming-conventions.md](../principles/naming-conventions.md)

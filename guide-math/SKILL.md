@@ -23,18 +23,22 @@ Skill นี้ครอบคลุมความรู้ด้านคณ�
 - `guide-programming` - สำหรับการเขียนโปรแกรม
 - `guide-software-architecture` - สำหรับการออกแบบระบบ
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 | No | File | Description | Level |
 |----|------|-------------|-------|
-| 1 | [key-concept.md](knowledge/guide/key-concept.md) | แนวคิดหลักของทุกสาขา | Basic |
-| 2 | [how-it-works.md](knowledge/guide/how-it-works.md) | การเชื่อมโยงระหว่างสาขาต่างๆ | Basic |
-| 3 | [features.md](knowledge/guide/features.md) | Features ทั้งหมดของทุกสาขา | Basic |
-| 4 | [configuration.md](knowledge/guide/configuration.md) | การตั้งค่า libraries | Basic |
-| 5 | [quick-start.md](knowledge/guide/quick-start.md) | เริ่มต้นใช้งาน | Basic |
-| 6 | [best-practices.md](knowledge/guide/best-practices.md) | แนวทางปฏิบัติที่ดี | Intermediate |
+| 1 | [key-concept.md](guide/key-concept.md) | แนวคิดหลักของทุกสาขา | Basic |
+| 2 | [how-it-works.md](guide/how-it-works.md) | การเชื่อมโยงระหว่างสาขาต่างๆ | Basic |
+| 3 | [features.md](guide/features.md) | Features ทั้งหมดของทุกสาขา | Basic |
+| 4 | [configuration.md](guide/configuration.md) | การตั้งค่า libraries | Basic |
+| 5 | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งาน | Basic |
+| 6 | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี | Intermediate |
 
 ### references/
 

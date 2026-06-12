@@ -4,6 +4,18 @@
 
 JSPM เป็น ES Module Package Manager และ CDN ที่ใช้มาตรฐาน native ES modules พร้อม import maps สำหรับการพัฒนาเว็บแบบไม่ต้อง bundle
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## What is JSPM?
 
 - **Standards-Based**: ใช้ native ES modules โดยไม่ต้อง bundle

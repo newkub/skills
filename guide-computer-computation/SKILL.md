@@ -23,19 +23,23 @@ description: Computer Computation - คู่มือเกี่ยวกั�
 - `guide-math` - สำหรับคณิตศาสตร์ที่เกี่ยวข้อง
 - `guide-programming` - สำหรับการเขียนโปรแกรม
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 | No | File | Description | Level |
 |----|------|-------------|-------|
-| 1 | [key-concept.md](knowledge/guide/key-concept.md) | แนวคิดหลักและคำศัพท์สำคัญ | Basic |
-| 2 | [how-it-works.md](knowledge/guide/how-it-works.md) | ภาพรวมการทำงานของ computation | Basic |
-| 3 | [features.md](knowledge/guide/features.md) | Features และประเภทของ computation | Basic |
-| 4 | [configuration.md](knowledge/guide/configuration.md) | Models และ configurations | Basic |
-| 5 | [quick-start.md](knowledge/guide/quick-start.md) | เริ่มต้นศึกษา | Basic |
-| 6 | [best-practices.md](knowledge/guide/best-practices.md) | แนวทางการศึกษา | Intermediate |
-| 7 | [architecture.md](knowledge/guide/architecture.md) | สถาปัตยกรรมของ computational models | Intermediate |
+| 1 | [key-concept.md](guide/key-concept.md) | แนวคิดหลักและคำศัพท์สำคัญ | Basic |
+| 2 | [how-it-works.md](guide/how-it-works.md) | ภาพรวมการทำงานของ computation | Basic |
+| 3 | [features.md](guide/features.md) | Features และประเภทของ computation | Basic |
+| 4 | [configuration.md](guide/configuration.md) | Models และ configurations | Basic |
+| 5 | [quick-start.md](guide/quick-start.md) | เริ่มต้นศึกษา | Basic |
+| 6 | [best-practices.md](guide/best-practices.md) | แนวทางการศึกษา | Intermediate |
+| 7 | [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ computational models | Intermediate |
 
 ### references/
 

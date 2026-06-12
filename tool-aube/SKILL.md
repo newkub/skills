@@ -19,6 +19,18 @@ tool-aube/
     └── api.md
 ```
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## เนื้อหา
 
 | หมวด | ไฟล์ | คำอธิบาย |

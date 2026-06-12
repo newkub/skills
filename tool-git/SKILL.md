@@ -4,6 +4,18 @@
 
 แนวทางการใช้งาน Git สำหรับ version control และ collaborative development
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## What is Git?
 
 Git เป็น distributed version control system ที่ใช้ติดตามการเปลี่ยนแปลงของ code และประสานงานการทำงานระหว่าง developers
@@ -14,7 +26,7 @@ Git เป็น distributed version control system ที่ใช้ติด�
 |--------|-------------|
 | guide/ | Guides และ tutorials สำหรับการใช้งาน |
 | references/ | References สำหรับ CLI, configuration, และ website |
-| knowledge/ | Knowledge เกี่ยวกับ best practices |
+|  | Knowledge เกี่ยวกับ best practices |
 
 ## Quick Start
 

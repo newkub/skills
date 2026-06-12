@@ -105,5 +105,5 @@ NODE_OPTIONS="--inspect" bunx tsc --build --profile
 
 ## Related
 
-- [guide/configuration.md](/c:/Users/Veerapong/.codeium/windsurf/skills/lang-typescript/guide/configuration.md)
-- [guide/architecture.md](/c:/Users/Veerapong/.codeium/windsurf/skills/lang-typescript/guide/architecture.md)
+- [guide/configuration.md](../guide/configuration.md)
+- [guide/architecture.md](../guide/architecture.md)

@@ -4,6 +4,18 @@
 
 Renovate เป็น automated dependency update tool ที่สร้าง pull requests อัตโนมัติสำหรับ update dependencies, lock files และ configuration files รองรับหลาย platform เช่น GitHub, GitLab, Bitbucket
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## Content Summary
 
 | Folder | File | Description |

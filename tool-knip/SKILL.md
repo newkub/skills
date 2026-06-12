@@ -4,6 +4,18 @@
 
 แนวทางการใช้งาน Knip สำหรับหา unused files, dependencies และ exports
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## What is Knip?
 
 Knip เป็นเครื่องมือสำหรับหา unused files, dependencies และ exports ใน TypeScript/JavaScript projects

@@ -11,6 +11,14 @@ Cloudflare Email Service lets you send transactional emails and route incoming e
 
 **If there is any discrepancy between this skill and the sources below, always trust the original source.** The Cloudflare docs, REST API spec, `@cloudflare/workers-types`, and Agents SDK repo are the source of truth. This skill is a convenience guide — it may lag behind the latest changes. When in doubt, retrieve from the sources below and use what they say.
 
+
+## When to use
+
+
+
+## Skills Related
+
+
 ## Retrieval Sources
 
 | Source | How to retrieve | Use for |

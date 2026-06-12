@@ -16,49 +16,73 @@ description: Node.js JavaScript runtime ที่ใช้ Chrome V8 engine ส�
 
 - `/runtime-bun` - Bun JavaScript runtime ที่เร็วกว่า Node.js
 
+## โครงสร้าง Directory
+
+```
+runtime-node/
+├── SKILL.md
+├── guide/
+│   ├── installation.md
+│   ├── key-concept.md
+│   ├── how-it-works.md
+│   ├── features.md
+│   ├── configuration.md
+│   ├── quick-start.md
+│   ├── best-practices.md
+│   ├── integration.md
+│   ├── architecture.md
+│   ├── structure.md
+│   ├── performance.md
+│   ├── security.md
+│   ├── migration.md
+│   ├── ecosystem.md
+│   ├── testing.md
+│   ├── patterns.md
+│   └── troubleshooting.md
+├── references/
+│   ├── website.md
+│   ├── sitemap.md
+│   ├── api.md
+│   └── cli.md
+└── workflows/
+```
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 | No | File | Description |
 |----|------|-------------|
-| 1 | [key-concept.md](knowledge/guide/key-concept.md) | พื้นฐานและหลักการสำคัญของ Node.js |
-| 2 | [how-it-works.md](knowledge/guide/how-it-works.md) | อธิบายการทำงานของ Node.js พร้อม diagram |
-| 3 | [features.md](knowledge/guide/features.md) | คุณสมบัติหลักของ Node.js |
-| 4 | [installation.md](knowledge/guide/installation.md) | วิธีการติดตั้ง Node.js |
-| 5 | [configuration.md](knowledge/guide/configuration.md) | การตั้งค่าและ configuration |
-| 6 | [quick-start.md](knowledge/guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| 7 | [best-practices.md](knowledge/guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-| 8 | [integration.md](knowledge/guide/integration.md) | การเชื่อมต่อกับ tools และ frameworks |
-| 9 | [architecture.md](knowledge/guide/architecture.md) | สถาปัตยกรรมของ Node.js |
+| 1 | [installation.md](guide/installation.md) | วิธีการติดตั้ง Node.js |
+| 2 | [key-concept.md](guide/key-concept.md) | พื้นฐานและหลักการสำคัญของ Node.js |
+| 3 | [how-it-works.md](guide/how-it-works.md) | อธิบายการทำงานของ Node.js พร้อม diagram |
+| 4 | [features.md](guide/features.md) | คุณสมบัติหลักของ Node.js |
+| 5 | [configuration.md](guide/configuration.md) | การตั้งค่าและ configuration |
+| 6 | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| 7 | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
+| 8 | [integration.md](guide/integration.md) | การเชื่อมต่อกับ tools และ frameworks |
+| 9 | [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ Node.js |
+| 10 | [structure.md](guide/structure.md) | โครงสร้างโปรเจกต์และการจัดระเบียบไฟล์ |
+| 11 | [performance.md](guide/performance.md) | ประสิทธิภาพและการ optimize |
+| 12 | [security.md](guide/security.md) | ความปลอดภัยและ best practices |
+| 13 | [migration.md](guide/migration.md) | การ migrate ระหว่าง versions |
+| 14 | [ecosystem.md](guide/ecosystem.md) | เครื่องมือและ libraries ใน ecosystem |
+| 15 | [testing.md](guide/testing.md) | การทดสอบด้วย Node.js |
+| 16 | [patterns.md](guide/patterns.md) | Patterns และ best practices สำหรับ Node.js |
+| 17 | [troubleshooting.md](guide/troubleshooting.md) | การแก้ปัญหาที่พบบ่อย |
 
 ### references/
 
 | No | File | Description |
 |----|------|-------------|
-| 1 | [api.md](references/api.md) | API reference ของ Node.js globals และ built-in modules |
-| 2 | [website.md](references/website.md) | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-| 3 | [cli.md](references/cli.md) | คำสั่ง CLI ของ Node.js |
-| 4 | [configuration.md](references/configuration.md) | ตัวเลือก configuration ต่างๆ |
+| 1 | [website.md](references/website.md) | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
+| 2 | [sitemap.md](references/sitemap.md) | Sitemap ของเอกสาร Node.js |
+| 3 | [api.md](references/api.md) | API reference ของ Node.js globals และ built-in modules |
+| 4 | [cli.md](references/cli.md) | คำสั่ง CLI ของ Node.js |
 
-## When to Use
+### workflows/
 
-- Web servers และ APIs
-- CLI tools
-- Build tools และ automation
-- Microservices
-- Real-time applications
-- Desktop applications (Electron)
-
-## Skills Related
-
-- `/runtime-bun` - Bun JavaScript runtime ที่เร็วกว่า Node.js
-
-## Core Features
-
-- **Chrome V8 Engine**: JavaScript execution engine ที่เร็ว
-- **npm Ecosystem**: Package manager ที่ใหญ่ที่สุด
-- **Event Loop**: Asynchronous non-blocking I/O
-- **Module System**: CommonJS และ ES Modules
-- **Cross-platform**: รันได้ทั้ง Windows, Linux, macOS
-- **Streams**: รองรับ streaming data
+| No | File | Description |
+|----|------|-------------|
+| 1 | [setup-project.md](workflows/setup-project.md) | ตั้งค่าโปรเจกต์ด้วย Node.js |
+| 2 | [migrate-version.md](workflows/migrate-version.md) | migrate ระหว่าง Node.js versions |

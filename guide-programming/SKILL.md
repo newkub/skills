@@ -23,19 +23,23 @@ description: Programming - แนวทางการเขียนโปร�
 - `guide-software-testing` - สำหรับการทดสอบ
 - `guide-software-architecture` - สำหรับการออกแบบระบบ
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 | No | File | Description | Level |
 |----|------|-------------|-------|
-| 1 | [key-concept.md](knowledge/guide/key-concept.md) | Core concepts: paradigms, principles, techniques | Basic |
-| 2 | [how-it-works.md](knowledge/guide/how-it-works.md) | Programming mechanics and flow | Basic |
-| 3 | [features.md](knowledge/guide/features.md) | Language features and capabilities | Basic |
-| 4 | [configuration.md](knowledge/guide/configuration.md) | Code style and project configuration | Basic |
-| 5 | [quick-start.md](knowledge/guide/quick-start.md) | Quick start guide for programming | Basic |
-| 6 | [best-practices.md](knowledge/guide/best-practices.md) | Writing clean, maintainable code | Intermediate |
-| 7 | [integration.md](knowledge/guide/integration.md) | Integration with tools and workflows | Intermediate |
+| 1 | [key-concept.md](guide/key-concept.md) | Core concepts: paradigms, principles, techniques | Basic |
+| 2 | [how-it-works.md](guide/how-it-works.md) | Programming mechanics and flow | Basic |
+| 3 | [features.md](guide/features.md) | Language features and capabilities | Basic |
+| 4 | [configuration.md](guide/configuration.md) | Code style and project configuration | Basic |
+| 5 | [quick-start.md](guide/quick-start.md) | Quick start guide for programming | Basic |
+| 6 | [best-practices.md](guide/best-practices.md) | Writing clean, maintainable code | Intermediate |
+| 7 | [integration.md](guide/integration.md) | Integration with tools and workflows | Intermediate |
 
 ### references/
 

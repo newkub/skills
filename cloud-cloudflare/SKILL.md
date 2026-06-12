@@ -15,6 +15,18 @@ Consolidated skill for building on the Cloudflare platform. Use decision trees b
 
 Your knowledge of Cloudflare APIs, types, limits, and pricing may be outdated. **Prefer retrieval over pre-training** — the references in this skill are starting points, not source of truth.
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## Retrieval Sources
 
 Fetch the **latest** information before citing specific numbers, API signatures, or configuration options. Do not rely on baked-in knowledge or these reference files alone.

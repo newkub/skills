@@ -143,5 +143,5 @@ bunx tsc --noEmit
 
 ## Related
 
-- [principles/type-safety.md](/c:/Users/Veerapong/.codeium/windsurf/skills/lang-typescript/principles/type-safety.md)
-- [guide/configuration.md](/c:/Users/Veerapong/.codeium/windsurf/skills/lang-typescript/guide/configuration.md)
+- [principles/type-safety.md](../principles/type-safety.md)
+- [guide/configuration.md](../guide/configuration.md)

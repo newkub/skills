@@ -1,7 +1,9 @@
 ---
-name: framework-solid-start
-description: SolidStart framework meta-framework สำหรับ SolidJS สำหรับสร้าง web applications ด้วย CSR, SSR, SSG
+name: solid-start
+description: SolidJS meta-framework for building web applications with CSR, SSR, and SSG. Includes file-based routing, server functions, data fetching, and TypeScript support.
 ---
+
+# framework-solid-start
 
 ## When to use
 
@@ -12,21 +14,14 @@ description: SolidStart framework meta-framework สำหรับ SolidJS ส�
 
 ## Skills Related
 
-- `/lib-solidjs` - SolidJS library
-- `/lib-vite` - Vite build tool
-- `/lib-nitro` - Nitro framework
+- lib-solidjs
+- lib-vite
+- lib-nitro
 
-## หมวดหมู่ไฟล์
+## References
 
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|------------|------|------------|
-| **knowledge/guide/** | key-concept.md | แนวคิดหลักของ SolidStart |
-| | how-it-works.md | หลักการทำงานของ framework |
-| | features.md | ฟีเจอร์หลักและ capabilities |
-| | installation.md | วิธีการติดตั้งและ setup |
-| | configuration.md | การตั้งค่าและ configuration |
-| | quick-start.md | เริ่มต้นใช้งานเบื้องต้น |
-| | best-practices.md | best practices และ conventions |
-| | integration.md | การเชื่อมต่อกับ libraries อื่นๆ |
-| | architecture.md | สถาปัตยกรรมและโครงสร้าง |
-| **references/** | website.md | เอกสารและ resources ออนไลน์ |
+| Resource | URL |
+|----------|-----|
+| SolidStart Docs | https://start.solidjs.com |
+| SolidJS Docs | https://www.solidjs.com |
+| SolidStart GitHub | https://github.com/solidjs/solid-start |

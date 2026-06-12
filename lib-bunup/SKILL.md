@@ -15,12 +15,16 @@ description: แนวทางการใช้งาน Bunup สำหรั
 - `/runtime-bun` - Bun runtime
 - `/lang-typescript` - TypeScript programming language
 
+
+## References
+
+
 ## โครงสร้าง Directory
 
 ```text
 lib-bunup/
 ├── SKILL.md
-├── knowledge/
+├── 
 │   ├── guide/
 │   │   ├── key-concept.md
 │   │   ├── how-it-works.md
@@ -59,29 +63,29 @@ lib-bunup/
 | No | File | Description |
 |----|------|-------------|
 | 1 | SKILL.md | Index file หลักของ skill |
-| 2 | knowledge/guide/key-concept.md | แนวคิดหลักของ Bunup |
-| 3 | knowledge/guide/how-it-works.md | วิธีการทำงานของ Bunup |
-| 4 | knowledge/guide/features.md | ฟีเจอร์ทั้งหมด |
-| 5 | knowledge/guide/installation.md | การติดตั้ง |
-| 6 | knowledge/guide/configuration.md | การตั้งค่า |
-| 7 | knowledge/guide/quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| 8 | knowledge/guide/best-practices.md | แนวปฏิบัติที่ดีที่สุด |
-| 9 | knowledge/guide/integration.md | การรวมกับเครื่องมืออื่น |
-| 10 | knowledge/guide/architecture.md | สถาปัตยกรรมภายใน |
-| 11 | knowledge/guide/structure.md | โครงสร้างโปรเจกต์ |
-| 12 | knowledge/guide/performance.md | เทคนิคการปรับปรุง performance |
-| 13 | knowledge/guide/security.md | ความปลอดภัยและ security considerations |
-| 14 | knowledge/guide/migration.md | วิธี migration จาก tools อื่นๆ |
-| 15 | knowledge/guide/ecosystem.md | Ecosystem และ integrations |
-| 16 | knowledge/guide/testing.md | การทดสอบ bundles |
-| 17 | knowledge/guide/patterns.md | Patterns ที่ใช้บ่อย |
-| 18 | knowledge/guide/troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
-| 19 | knowledge/key-concepts/rolldown.md | แนวคิดเกี่ยวกับ Rolldown bundler |
-| 20 | knowledge/key-concepts/entry-point-detection.md | การ detect entry points อัตโนมัติ |
-| 21 | knowledge/key-concepts/bundle-formats.md | รูปแบบ bundle ที่รองรับ |
-| 22 | knowledge/key-concepts/type-declarations.md | การ generate TypeScript declarations |
-| 23 | knowledge/principles/zero-config.md | หลักการ zero-config |
-| 24 | knowledge/principles/bun-native.md | การ integration กับ Bun runtime |
+| 2 | guide/key-concept.md | แนวคิดหลักของ Bunup |
+| 3 | guide/how-it-works.md | วิธีการทำงานของ Bunup |
+| 4 | guide/features.md | ฟีเจอร์ทั้งหมด |
+| 5 | guide/installation.md | การติดตั้ง |
+| 6 | guide/configuration.md | การตั้งค่า |
+| 7 | guide/quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| 8 | guide/best-practices.md | แนวปฏิบัติที่ดีที่สุด |
+| 9 | guide/integration.md | การรวมกับเครื่องมืออื่น |
+| 10 | guide/architecture.md | สถาปัตยกรรมภายใน |
+| 11 | guide/structure.md | โครงสร้างโปรเจกต์ |
+| 12 | guide/performance.md | เทคนิคการปรับปรุง performance |
+| 13 | guide/security.md | ความปลอดภัยและ security considerations |
+| 14 | guide/migration.md | วิธี migration จาก tools อื่นๆ |
+| 15 | guide/ecosystem.md | Ecosystem และ integrations |
+| 16 | guide/testing.md | การทดสอบ bundles |
+| 17 | guide/patterns.md | Patterns ที่ใช้บ่อย |
+| 18 | guide/troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
+| 19 | key-concepts/rolldown.md | แนวคิดเกี่ยวกับ Rolldown bundler |
+| 20 | key-concepts/entry-point-detection.md | การ detect entry points อัตโนมัติ |
+| 21 | key-concepts/bundle-formats.md | รูปแบบ bundle ที่รองรับ |
+| 22 | key-concepts/type-declarations.md | การ generate TypeScript declarations |
+| 23 | principles/zero-config.md | หลักการ zero-config |
+| 24 | principles/bun-native.md | การ integration กับ Bun runtime |
 | 25 | references/website.md | เว็บไซต์และทรัพยากร |
 | 26 | references/sitemap.md | Sitemap ของ documentation |
 | 27 | references/api.md | API Reference |

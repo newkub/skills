@@ -47,5 +47,5 @@
 | references/tui-usage.md | TUI usage |
 | references/configuration.md | Configuration reference |
 | workflows/ | Workflow files |
-| templates/ | Code templates (optional) |
+| examples/ | Code examples (optional) |
 | scripts/ | TypeScript scripts (optional) |

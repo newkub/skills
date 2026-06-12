@@ -15,9 +15,13 @@ description: Shadcn UI registry สำหรับ SolidJS - collection ขอ�
 - `/lib-solidjs` - SolidJS library
 - `/lib-shadcn-solid` - Shadcn UI for SolidJS
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 - **key-concept.md** - แนวคิดหลักของ Zaidan UI, Shadcn UI pattern, และ component registry
 - **how-it-works.md** - วิธีการทำงานของ Kobalte, Corvu, และ Tailwind CSS integration

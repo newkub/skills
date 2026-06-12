@@ -112,5 +112,5 @@ describe("UserCard", () => {
 
 ## Related
 
-- [principles/testing.md](/c:/Users/Veerapong/.codeium/windsurf/skills/lang-typescript/principles/testing.md)
-- [principles/type-safety.md](/c:/Users/Veerapong/.codeium/windsurf/skills/lang-typescript/principles/type-safety.md)
+- [principles/testing.md](../principles/testing.md)
+- [principles/type-safety.md](../principles/type-safety.md)

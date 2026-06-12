@@ -23,19 +23,23 @@ description: Computer Architecture - คู่มือและแนวคิ�
 - `guide-programming` - สำหรับการเขียนโปรแกรมที่ดี
 - `guide-computer-computation` - สำหรับทฤษฎี computation
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 | No | File | Description | Level |
 |----|------|-------------|-------|
-| 1 | [key-concept.md](knowledge/guide/key-concept.md) | แนวคิดหลัก CPU, Memory, ISA, Pipelining, Parallelism | Basic |
-| 2 | [how-it-works.md](knowledge/guide/how-it-works.md) | ภาพรวมการทำงานของ Computer Architecture | Basic |
-| 3 | [features.md](knowledge/guide/features.md) | คุณสมบัติและความสามารถของ Computer Architecture | Basic |
-| 4 | [configuration.md](knowledge/guide/configuration.md) | การตั้งค่าและการปรับแต่งสำหรับการศึกษา | Basic |
-| 5 | [quick-start.md](knowledge/guide/quick-start.md) | เริ่มต้นเรียนรู้อย่างรวดเร็ว | Basic |
-| 6 | [best-practices.md](knowledge/guide/best-practices.md) | แนวทางและ best practices สำหรับการศึกษา | Intermediate |
-| 7 | [integration.md](knowledge/guide/integration.md) | การผนวกเข้ากับการพัฒนาซอฟต์แวร์ | Intermediate |
+| 1 | [key-concept.md](guide/key-concept.md) | แนวคิดหลัก CPU, Memory, ISA, Pipelining, Parallelism | Basic |
+| 2 | [how-it-works.md](guide/how-it-works.md) | ภาพรวมการทำงานของ Computer Architecture | Basic |
+| 3 | [features.md](guide/features.md) | คุณสมบัติและความสามารถของ Computer Architecture | Basic |
+| 4 | [configuration.md](guide/configuration.md) | การตั้งค่าและการปรับแต่งสำหรับการศึกษา | Basic |
+| 5 | [quick-start.md](guide/quick-start.md) | เริ่มต้นเรียนรู้อย่างรวดเร็ว | Basic |
+| 6 | [best-practices.md](guide/best-practices.md) | แนวทางและ best practices สำหรับการศึกษา | Intermediate |
+| 7 | [integration.md](guide/integration.md) | การผนวกเข้ากับการพัฒนาซอฟต์แวร์ | Intermediate |
 
 ### references/
 

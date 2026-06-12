@@ -15,9 +15,13 @@ description: Turborepo - High-performance build system สำหรับ JavaSc
 - `/lib-nitro` - Nitro framework สำหรับ server-side
 - `/tool-moonrepo` - Moonrepo สำหรับ monorepo management
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 - **key-concept.md** - แนวคิดหลักและการทำงานของ Turborepo
 - **how-it-works.md** - สถาปัตยกรรมและ workflow การทำงาน

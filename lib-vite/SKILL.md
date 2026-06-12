@@ -3,7 +3,7 @@ name: lib-vite
 description: แนวทางการใช้งาน Vite ในฐานะ build library สำหรับ frontend development ด้วย Native ESM, HMR ที่รวดเร็ว, Plugin API และ Rollup-based production build
 ---
 
-# knowledge/guide/
+# guide/
 
 - key-concept.md - Core concepts ของ Vite - Native ESM, Dependency Pre-bundling, HMR, Rollup Build, Plugin System
 - how-it-works.md - การทำงานภายในของ Vite - Dev Server Flow, Build Pipeline, Module Graph, HMR Update Propagation
@@ -20,3 +20,15 @@ description: แนวทางการใช้งาน Vite ในฐาน�
 - website.md - Official links และ resources
 - api.md - Programmatic API reference
 - configuration.md - Configuration options reference
+
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+

@@ -23,19 +23,23 @@ description: Design Patterns - แนวทางการเลือกแล�
 - `guide-programming` - สำหรับการเขียนโปรแกรมที่ดี
 - `guide-software-testing` - สำหรับการทดสอบซอฟต์แวร์
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 | No | File | Description | Level |
 |----|------|-------------|-------|
-| 1 | [key-concept.md](knowledge/guide/key-concept.md) | Core concepts: pattern classification, design principles | Basic |
-| 2 | [how-it-works.md](knowledge/guide/how-it-works.md) | Pattern mechanics with UML-like diagrams | Basic |
-| 3 | [features.md](knowledge/guide/features.md) | All 23 GoF patterns overview | Basic |
-| 4 | [configuration.md](knowledge/guide/configuration.md) | Pattern selection criteria | Basic |
-| 5 | [quick-start.md](knowledge/guide/quick-start.md) | Quick pattern selection guide | Basic |
-| 6 | [best-practices.md](knowledge/guide/best-practices.md) | When to use patterns, anti-patterns | Intermediate |
-| 7 | [integration.md](knowledge/guide/integration.md) | Combining patterns, architectural patterns | Intermediate |
+| 1 | [key-concept.md](guide/key-concept.md) | Core concepts: pattern classification, design principles | Basic |
+| 2 | [how-it-works.md](guide/how-it-works.md) | Pattern mechanics with UML-like diagrams | Basic |
+| 3 | [features.md](guide/features.md) | All 23 GoF patterns overview | Basic |
+| 4 | [configuration.md](guide/configuration.md) | Pattern selection criteria | Basic |
+| 5 | [quick-start.md](guide/quick-start.md) | Quick pattern selection guide | Basic |
+| 6 | [best-practices.md](guide/best-practices.md) | When to use patterns, anti-patterns | Intermediate |
+| 7 | [integration.md](guide/integration.md) | Combining patterns, architectural patterns | Intermediate |
 
 ### references/
 

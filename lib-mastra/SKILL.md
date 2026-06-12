@@ -5,6 +5,14 @@ description: Comprehensive Mastra framework guide for building agents, workflows
 
 # lib-mastra
 
+
+## When to use
+
+
+
+## Skills Related
+
+
 ## Overview
 
 แนวทางการพัฒนา Mastra ตาม best practices สำหรับ AI Agent framework ที่ใช้สร้าง agents, workflows, tools, memory และ storage ด้วย TypeScript
@@ -17,7 +25,6 @@ description: Comprehensive Mastra framework guide for building agents, workflows
 | reference/ | Official documentation links |
 | references/ | References สำหรับ CLI, API, Configuration |
 | examples/ | ตัวอย่างการใช้งาน |
-| templates/ | Templates สำหรับเริ่มต้น |
 | rules/ | Rules และ conventions |
 | patterns/ | Design patterns |
 | usecase/ | Use cases |

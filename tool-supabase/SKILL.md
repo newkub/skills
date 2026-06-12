@@ -6,6 +6,18 @@
 
 Supabase เป็น open source Firebase alternative ที่ใช้ PostgreSQL ให้ database, authentication, storage, edge functions, realtime subscriptions, และ vector embeddings CLI ช่วยให้ develop ท้องถิ่นและ deploy ไปยัง Supabase Platform ได้
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## File Structure
 
 ```

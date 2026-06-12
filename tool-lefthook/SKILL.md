@@ -4,6 +4,18 @@
 
 แนวทางการใช้งาน Lefthook สำหรับจัดการ Git hooks อย่างมีประสิทธิภาพ
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## What is Lefthook?
 
 Lefthook เป็น Git hooks manager ที่รวดเร็วและทรงพลัง เขียนด้วย Go สามารถรัน commands แบบ parallel และรองรับหลายภาษา (Node.js, Ruby, Python, Go, etc.)

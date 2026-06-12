@@ -7,7 +7,7 @@ outcome: Reliable integration with AWS cloud services
 
 # AWS SDK Library
 
-## When to Use
+## When to use
 
 Use this library when:
 
@@ -17,6 +17,10 @@ Use this library when:
 - Building serverless applications on AWS
 - Need to manage AWS resources via code
 - Building cloud-native applications
+
+
+## Skills Related
+
 
 ## Quick Start
 

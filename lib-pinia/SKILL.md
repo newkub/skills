@@ -15,9 +15,13 @@ description: แนวทางการพัฒนา Pinia ตาม best pra
 - `/lib-vue` - Vue.js framework
 - `/lang-typescript` - TypeScript programming language
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 | File | Description |
 |------|-------------|

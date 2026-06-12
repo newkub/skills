@@ -15,9 +15,13 @@ description: แนวทางการใช้งาน Zod สำหรั�
 - `/lang-typescript` - TypeScript programming language
 - `/lib-effect-ts` - Effect สำหรับ functional programming
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 - **key-concept.md** - Core concepts: schemas, type inference, parsing
 - **how-it-works.md** - Internal workings: parsing pipeline, error handling

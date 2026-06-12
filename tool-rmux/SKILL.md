@@ -13,13 +13,24 @@ Terminal multiplexer สำหรับ automation ที่เขียนด�
 | references/api.md | Rust SDK API |
 | references/web.md | Web resources |
 | examples/ | ตัวอย่างการใช้งาน |
-| templates/ | Templates สำหรับเริ่มต้น |
 | rules/ | Rules และ conventions |
 | patterns/ | Design patterns |
 | usecase/ | Use cases |
 | workflows/ | Workflows |
 | integration/ | Integration กับ tools อื่นๆ |
 | changelog/ | Changelog และ version history |
+
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
 
 ## Usage Order
 

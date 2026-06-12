@@ -409,7 +409,7 @@ skill-name/
 │   ├── tui-usage.md      # TUI interface reference
 │   └── configuration.md  # Configuration reference
 ├── workflows/            # Step-by-step task workflows
-├── templates/            # Code templates and snippets
+├── examples/            # Code examples and snippets
 └── scripts/              # TypeScript automation scripts
 ```
 

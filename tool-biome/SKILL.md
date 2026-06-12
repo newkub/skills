@@ -4,6 +4,18 @@
 
 Guide for using Biome - a fast, all-in-one toolchain for web development with formatting, linting, and code analysis capabilities.
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## What is Biome?
 
 Biome is a high-performance toolchain for web projects built with Rust. It provides:

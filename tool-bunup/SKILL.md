@@ -4,6 +4,18 @@
 
 แนวทางการใช้งาน bunup สำหรับ build TypeScript/React libraries ด้วยความเร็วสูง สร้างบน Bun's native bundler
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## What is bunup?
 
 bunup เป็นเครื่องมือสำหรับ build และ publish TypeScript/React libraries อย่างรวดเร็ว รองรับ:
@@ -23,7 +35,6 @@ bunup เป็นเครื่องมือสำหรับ build แล�
 | references/ | References และ links ภายนอก (CLI, configuration, API, web) |
 | reference/ | Official links |
 | examples/ | ตัวอย่างการใช้งาน |
-| templates/ | Templates สำหรับเริ่มต้น |
 | rules/ | Rules และ conventions |
 | patterns/ | Design patterns |
 | usecase/ | Use cases |

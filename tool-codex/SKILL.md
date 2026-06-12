@@ -15,6 +15,10 @@ description: Codex coding agent จาก OpenAI ที่ทำงานบน�
 - `/lang-javascript` - JavaScript programming language
 - `/lang-typescript` - TypeScript programming language
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
 | หมวดหมู่ | ไฟล์ | คำอธิบาย |

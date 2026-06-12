@@ -9,12 +9,24 @@ description: แนวทางการใช้งาน Neovim - Modern, exte
 
 Neovim (nvim) เป็น modern fork ของ Vim ที่เน้น extensibility และ usability รองรับ Lua scripting, built-in terminal, และ async plugin system ทำให้เป็น editor ที่ power สำหรับ developers
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## File Structure
 
 ```text
 tool-nvim/
 ├── SKILL.md
-├── knowledge/
+├── 
 │   ├── guide/
 │   │   ├── key-concept.md
 │   │   ├── how-it-works.md
@@ -37,14 +49,14 @@ tool-nvim/
 
 | Folder | File | Description |
 |--------|------|-------------|
-| **knowledge/guide** | key-concept.md | แนวคิดหลัก - Modal editing, Registers, Macros |
-| **knowledge/guide** | how-it-works.md | สถาปัตยกรรม - Neovim architecture, Plugins, UI |
-| **knowledge/guide** | features.md | ฟีเจอร์ทั้งหมด - LSP, Treesitter, Terminal |
-| **knowledge/guide** | installation.md | การติดตั้ง - Various installation methods |
-| **knowledge/guide** | configuration.md | การตั้งค่า - init.lua, plugins, options |
-| **knowledge/guide** | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| **knowledge/guide** | best-practices.md | แนวทางปฏิบัติที่ดี |
-| **knowledge/guide** | integration.md | การเชื่อมต่อกับ tools อื่นๆ |
+| **guide** | key-concept.md | แนวคิดหลัก - Modal editing, Registers, Macros |
+| **guide** | how-it-works.md | สถาปัตยกรรม - Neovim architecture, Plugins, UI |
+| **guide** | features.md | ฟีเจอร์ทั้งหมด - LSP, Treesitter, Terminal |
+| **guide** | installation.md | การติดตั้ง - Various installation methods |
+| **guide** | configuration.md | การตั้งค่า - init.lua, plugins, options |
+| **guide** | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| **guide** | best-practices.md | แนวทางปฏิบัติที่ดี |
+| **guide** | integration.md | การเชื่อมต่อกับ tools อื่นๆ |
 | **references** | website.md | Official website และ resources |
 | **references** | cli.md | CLI commands - nvim, nvim --help |
 | **references** | configuration.md | Configuration - init.vim, init.lua |

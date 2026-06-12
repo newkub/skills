@@ -1,33 +1,31 @@
-# create-raycast-extensions
+---
+name: raycast-extensions
+description: Guidelines for creating Raycast extensions using React, TypeScript, and Node.js. Includes commands, views, lists, forms, actions, hooks, and publishing workflows for the Raycast productivity tool.
+---
 
-## Overview
+# create-raycast-extensions
 
 แนวทางการสร้าง Raycast extensions ด้วย React, TypeScript และ Node.js
 
-## File Structure
+## When to use
 
-| Folder | Description |
-|--------|-------------|
-| guide/ | คู่มือและ tutorials สำหรับการพัฒนา Raycast extensions |
-| references/ | API และ configuration reference |
+- ต้องการสร้าง extension สำหรับ Raycast
+- ต้องการ add commands ให้ Raycast
+- ต้องการ integrate กับ external APIs
+- ต้องการ automate workflows
+- ต้องการ create custom UI components
 
-## Guide Files
+## Skills Related
 
-| File | Description |
-|------|-------------|
-| [key-concept.md](guide/key-concept.md) | Core concepts ของ Raycast extensions |
-| [how-it-works.md](guide/how-it-works.md) | หลักการทำงานของ Raycast extensions |
-| [features.md](guide/features.md) | Features และ capabilities |
-| [installation.md](guide/installation.md) | การติดตั้งและ setup |
-| [configuration.md](guide/configuration.md) | การตั้งค่า extension configuration |
-| [quick-start.md](guide/quick-start.md) | Quick start guide |
-| [best-practices.md](guide/best-practices.md) | Best practices |
-| [integration.md](guide/integration.md) | การ integrate กับ tools อื่นๆ |
-| [architecture.md](guide/architecture.md) | Architecture และ project structure |
+- lang-typescript
+- lang-javascript
+- lib-react
 
-## Reference Files
+## References
 
-| File | Description |
-|------|-------------|
-| [website.md](references/website.md) | เว็บไซต์และแหล่งเรียนรู้ที่เกี่ยวข้อง |
-| [api.md](references/api.md) | Raycast API reference |
+| Resource | URL |
+|----------|-----|
+| Raycast API Docs | https://developers.raycast.com |
+| Raycast Extensions | https://www.raycast.com/store |
+| Raycast GitHub | https://github.com/raycast |
+| Raycast CLI | https://developers.raycast.com/cli |

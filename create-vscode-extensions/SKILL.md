@@ -1,33 +1,30 @@
-# create-vscode-extensions
+---
+name: vscode-extensions
+description: Guidelines for creating VS Code extensions using TypeScript and VS Code API. Includes commands, window, workspace, editor, and UI APIs, along with publishing workflows for the VS Code Marketplace.
+---
 
-## Overview
+# create-vscode-extensions
 
 แนวทางการสร้าง VS Code extensions ด้วย TypeScript และ VS Code API
 
-## File Structure
+## When to use
 
-| Folder | Description |
-|--------|-------------|
-| guide/ | คู่มือและ tutorials สำหรับการพัฒนา VS Code extensions |
-| references/ | API และ configuration reference |
+- ต้องการสร้าง extension สำหรับ VS Code
+- ต้องการ add commands ให้ VS Code
+- ต้องการ extend editor functionality
+- ต้องการ integrate กับ external tools
+- ต้องการ create language support
 
-## Guide Files
+## Skills Related
 
-| File | Description |
-|------|-------------|
-| [key-concept.md](guide/key-concept.md) | Core concepts ของ VS Code extensions |
-| [how-it-works.md](guide/how-it-works.md) | หลักการทำงานของ VS Code extensions |
-| [features.md](guide/features.md) | Features และ capabilities |
-| [installation.md](guide/installation.md) | การติดตั้งและ setup |
-| [configuration.md](guide/configuration.md) | การตั้งค่า package.json |
-| [quick-start.md](guide/quick-start.md) | Quick start guide |
-| [best-practices.md](guide/best-practices.md) | Best practices |
-| [integration.md](guide/integration.md) | การ integrate กับ tools อื่นๆ |
-| [architecture.md](guide/architecture.md) | Architecture และ project structure |
+- lang-typescript
+- lang-javascript
 
-## Reference Files
+## References
 
-| File | Description |
-|------|-------------|
-| [website.md](references/website.md) | เว็บไซต์และแหล่งเรียนรู้ที่เกี่ยวข้อง |
-| [api.md](references/api.md) | VS Code API reference |
+| Resource | URL |
+|----------|-----|
+| VS Code API Docs | https://code.visualstudio.com/api |
+| Extension API | https://code.visualstudio.com/api/extension-capabilities/overview |
+| VS Code Marketplace | https://marketplace.visualstudio.com |
+| vsce CLI | https://code.visualstudio.com/api/working-with-extensions/publishing-extension |

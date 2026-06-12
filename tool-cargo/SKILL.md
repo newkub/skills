@@ -4,6 +4,18 @@
 
 แนวทางการใช้งาน Cargo สำหรับ Rust package management และ build tool
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## What is Cargo?
 
 Cargo เป็น Rust's package manager และ build tool ที่ช่วยจัดการ:
@@ -21,7 +33,6 @@ Cargo เป็น Rust's package manager และ build tool ที่ช่�
 | references/ | References และ links ภายนอก (CLI, configuration, API, web) |
 | reference/ | Official links |
 | examples/ | ตัวอย่างการใช้งาน |
-| templates/ | Templates สำหรับเริ่มต้น |
 | rules/ | Rules และ conventions |
 | patterns/ | Design patterns |
 | usecase/ | Use cases |

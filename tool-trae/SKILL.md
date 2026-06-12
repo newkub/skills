@@ -6,6 +6,18 @@
 
 Trae (The Real AI Engineer) เป็น AI-powered code editor ที่พัฒนาโดย ByteDance ผู้สร้าง TikTok มาพร้อม Builder Mode สำหรับ planning-first development และ free access ไปยัง Claude 3.5 Sonnet และ Claude 3.7
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## File Structure
 
 ```

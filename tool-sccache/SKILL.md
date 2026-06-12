@@ -6,6 +6,18 @@
 
 sccache เป็น ccache-like compiler caching tool สำหรับ accelerate compilation ของ C/C++, Rust, และ nvcc รองรับ local cache และ remote cache (S3, Redis, Memcached) ช่วยลดเวลา build อย่างมากสำหรับ CI/CD pipelines
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## File Structure
 
 ```

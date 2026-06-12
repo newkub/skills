@@ -1,33 +1,32 @@
-# create-browser-extensions
+---
+name: browser-extensions
+description: Guidelines for creating browser extensions for Chrome, Firefox, Edge, and other browsers following Manifest V3 standard. Includes architecture, permissions, background scripts, content scripts, and publishing workflows.
+---
 
-## Overview
+# create-browser-extensions
 
 แนวทางการสร้าง browser extensions สำหรับ Chrome, Firefox, Edge และ browsers อื่นๆ ตาม Manifest V3 standard
 
-## File Structure
+## When to use
 
-| Folder | Description |
-|--------|-------------|
-| guide/ | คู่มือและ tutorials สำหรับการพัฒนา browser extensions |
-| references/ | CLI commands และ configuration reference |
+- ต้องการสร้าง extension สำหรับ Chrome, Firefox, Edge
+- ต้องการ modify web pages ด้วย content scripts
+- ต้องการ add functionality ให้ browser
+- ต้องการ integrate กับ web services
+- ต้องการ automate browser tasks
 
-## Guide Files
+## Skills Related
 
-| File | Description |
-|------|-------------|
-| [key-concept.md](guide/key-concept.md) | Core concepts ของ browser extensions |
-| [how-it-works.md](guide/how-it-works.md) | หลักการทำงานของ browser extensions |
-| [features.md](guide/features.md) | Features และ capabilities |
-| [installation.md](guide/installation.md) | การติดตั้งและ setup |
-| [configuration.md](guide/configuration.md) | การตั้งค่า manifest.json |
-| [quick-start.md](guide/quick-start.md) | Quick start guide |
-| [best-practices.md](guide/best-practices.md) | Best practices |
-| [integration.md](guide/integration.md) | การ integrate กับ tools อื่นๆ |
-| [architecture.md](guide/architecture.md) | Architecture และ project structure |
+- lang-javascript
+- lang-typescript
+- tool-wxt
 
-## Reference Files
+## References
 
-| File | Description |
-|------|-------------|
-| [website.md](references/website.md) | เว็บไซต์และแหล่งเรียนรู้ที่เกี่ยวข้อง |
-| [configuration.md](references/configuration.md) | Manifest V3 configuration options |
+| Resource | URL |
+|----------|-----|
+| Chrome Extensions Docs | https://developer.chrome.com/docs/extensions |
+| Firefox Add-ons Docs | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons |
+| MDN Web Extensions | https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions |
+| Chrome Web Store | https://chrome.google.com/webstore |
+| Firefox Add-ons | https://addons.mozilla.org |

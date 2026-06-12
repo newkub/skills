@@ -5,7 +5,7 @@ description: แนวทางการใช้งาน Scalar API Designer �
 
 # lang-scalar
 
-## When to Use
+## When to use
 
 - ออกแบบ GraphQL APIs แบบ visual
 - ทดสอบ API ด้วย Mock Server
@@ -17,27 +17,39 @@ description: แนวทางการใช้งาน Scalar API Designer �
 
 - `lib-graphql` - GraphQL best practices
 
-## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+## References
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | key-concept.md | หลักการและแนวคิดพื้นฐาน |
-| 2 | how-it-works.md | การทำงานของ Scalar พร้อม diagrams |
-| 3 | features.md | คุณสมบัติทั้งหมดของ Scalar |
-| 4 | installation.md | การติดตั้งและตั้งค่า |
-| 5 | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| 6 | best-practices.md | แนวทางปฏิบัติที่ดีในการออกแบบ |
-| 7 | integration.md | การรวมกับเครื่องมืออื่นๆ |
+### guide/
+
+| File | Description |
+|------|-------------|
+| installation.md | วิธีติดตั้ง Scalar และเครื่องมือที่เกี่ยวข้อง |
+| key-concept.md | หลักการและแนวคิดพื้นฐานของ Scalar |
+| how-it-works.md | การทำงานของ Scalar พร้อม diagrams |
+| features.md | คุณสมบัติทั้งหมดของ Scalar |
+| configuration.md | การตั้งค่า Scalar สำหรับโปรเจกต์ |
+| quick-start.md | เริ่มต้นใช้งาน Scalar อย่างรวดเร็ว |
+| best-practices.md | แนวทางปฏิบัติที่ดีในการออกแบบ |
+| integration.md | การรวมกับเครื่องมืออื่นๆ |
+| architecture.md | สถาปัตยกรรมของ Scalar projects |
+| troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน Scalar |
 
 ### references/
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | cli.md | Scalar CLI commands และ options |
-| 2 | configuration.md | Configuration options ทั้งหมด |
-| 3 | website.md | เว็บไซต์และทรัพยากรที่เกี่ยวข้อง |
+| File | Description |
+|------|-------------|
+| website.md | เว็บไซต์และทรัพยากรที่เกี่ยวข้อง |
+| sitemap.md | แผนผังเอกสารและทรัพยากร |
+| api.md | Scalar API reference |
+| cli.md | Scalar CLI commands และ options |
+| configuration.md | Configuration options ทั้งหมด |
+
+### workflows/
+
+| File | Description |
+|------|-------------|
+| (empty) | Workflow templates สำหรับ Scalar development |
 
 ## Core Features
 

@@ -5,6 +5,14 @@ description: แนวทางการพัฒนา React ตาม best pra
 
 # lib-react
 
+
+## When to use
+
+
+
+## Skills Related
+
+
 ## Overview
 
 แนวทางการพัฒนา React ตาม best practices สำหรับ JavaScript library สำหรับสร้าง UI ที่มี component-based architecture, virtual DOM และ extensive ecosystem
@@ -17,7 +25,6 @@ description: แนวทางการพัฒนา React ตาม best pra
 | reference/ | Official documentation links |
 | references/ | References สำหรับ API |
 | examples/ | ตัวอย่างการใช้งาน |
-| templates/ | Templates สำหรับเริ่มต้น |
 | rules/ | Rules และ conventions |
 | patterns/ | Design patterns |
 | usecase/ | Use cases |

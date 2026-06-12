@@ -18,9 +18,13 @@ description: WXT - Next-gen Web Extension Framework สำหรับสร้�
 - `/lib-vue` - Vue.js framework
 - `/lib-react` - React library
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 - **key-concept.md** - แนวคิดพื้นฐานของ WXT
 - **how-it-works.md** - วิธีการทำงานของ WXT

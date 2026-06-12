@@ -5,6 +5,14 @@ description: แนวทางการพัฒนา Storybook ตาม best
 
 # lib-storybook
 
+
+## When to use
+
+
+
+## Skills Related
+
+
 ## Overview
 
 แนวทางการพัฒนา Storybook ตาม best practices สำหรับ component explorer ที่ช่วยให้สามารถ develop, test และ document UI components ได้อย่างมีประสิทธิภาพ
@@ -17,7 +25,6 @@ description: แนวทางการพัฒนา Storybook ตาม best
 | reference/ | Official documentation links |
 | references/ | References สำหรับ API |
 | examples/ | ตัวอย่างการใช้งาน |
-| templates/ | Templates สำหรับเริ่มต้น |
 | rules/ | Rules และ conventions |
 | patterns/ | Design patterns |
 | usecase/ | Use cases |

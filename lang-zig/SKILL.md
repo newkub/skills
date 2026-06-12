@@ -5,7 +5,7 @@ description: แนวทางการพัฒนา Zig ตาม best pract
 
 # lang-zig
 
-## When to Use
+## When to use
 
 - Systems programming (OS, drivers, embedded systems)
 - Game development และ game engines
@@ -20,45 +20,25 @@ description: แนวทางการพัฒนา Zig ตาม best pract
 - `lang-c` - C interoperability
 - `lang-cpp` - C++ interoperability
 
-## หมวดหมู่ไฟล์
+## References
 
-### knowledge/guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | key-concept.md | แนวคิดหลักของ Zig (comptime, defer, allocator, error handling) |
-| 2 | how-it-works.md | วิธีการทำงานของ Zig compiler และ build system |
-| 3 | features.md | คุณสมบัติหลักของ Zig (optional, unions, slices, errors) |
-| 4 | installation.md | วิธีติดตั้ง Zig และ tools ที่เกี่ยวข้อง |
-| 5 | configuration.md | การตั้งค่า build.zig และ Zig Language Server |
-| 6 | quick-start.md | เริ่มต้นใช้งาน Zig อย่างรวดเร็ว |
-| 7 | best-practices.md | best practices สำหรับ Zig (naming, safety, patterns) |
-| 8 | integration.md | การเชื่อมต่อกับ C/C++ และ tools |
-| 9 | architecture.md | สถาปัตยกรรมของ Zig projects |
-
-### knowledge/key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | comptime.md | Comptime programming และ compile-time execution |
-| 2 | allocator.md | Memory allocation patterns และ allocators |
-| 3 | error-handling.md | Error handling patterns และ unions |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-| 2 | cli.md | Zig CLI commands และ options |
-| 3 | configuration.md | build.zig configuration options |
-
-## Core Features
-
-- **No Hidden Control Flow**: ทุกอย่างเขียนอย่างชัดเจน
-- **Comptime**: Compile-time code execution และ metaprogramming
-- **Explicit Memory Allocation**: ควบคุม memory allocation ได้เอง
-- **Optional Types**: `?T` สำหรับ nullable types
-- **Error Unions**: `anyerror!T` สำหรับ error handling
-- **Defer**: Resource cleanup ที่ชัดเจน
-- **Cross-compilation**: รองรับหลาย platforms โดยไม่ต้อง setup ยุ่งยาก
-- **C Interop**: เรียก C libraries ได้โดยตรง
+| Category | File |
+|----------|------|
+| guide | [installation.md](guide/installation.md) |
+| guide | [key-concept.md](guide/key-concept.md) |
+| guide | [how-it-works.md](guide/how-it-works.md) |
+| guide | [features.md](guide/features.md) |
+| guide | [configuration.md](guide/configuration.md) |
+| guide | [quick-start.md](guide/quick-start.md) |
+| guide | [best-practices.md](guide/best-practices.md) |
+| guide | [integration.md](guide/integration.md) |
+| guide | [architecture.md](guide/architecture.md) |
+| guide | [troubleshooting.md](guide/troubleshooting.md) |
+| key-concepts | [comptime.md](key-concepts/comptime.md) |
+| key-concepts | [allocator.md](key-concepts/allocator.md) |
+| key-concepts | [error-handling.md](key-concepts/error-handling.md) |
+| references | [website.md](references/website.md) |
+| references | [sitemap.md](references/sitemap.md) |
+| references | [cli.md](references/cli.md) |
+| references | [configuration.md](references/configuration.md) |
+| workflows | [setup-zig-project.md](workflows/setup-zig-project.md) |

@@ -15,6 +15,10 @@ description: แนวทางการพัฒนา ArkType ตาม best p
 - `/lang-typescript` - TypeScript programming language
 - `/lib-zod` - Zod validation library
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
 ### guide/

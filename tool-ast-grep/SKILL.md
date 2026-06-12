@@ -4,6 +4,18 @@
 
 แนวทางการใช้งาน ast-grep สำหรับ code structural search, lint และ rewriting โดยใช้ AST patterns
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## What is ast-grep?
 
 ast-grep (sg) เป็น CLI tool สำหรับค้นหาและแก้ไข code โดยอาศัย Abstract Syntax Tree (AST) แทนการ search แบบ text ธรรมดา ทำให้สามารถเขียน patterns ได้เหมือนเขียน code ตามปกติ

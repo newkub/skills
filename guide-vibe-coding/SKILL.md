@@ -23,19 +23,23 @@ description: Vibe Coding - แนวทางการเขียนโค้�
 - `guide-software-architecture` - สำหรับการออกแบบระบบ
 - `guide-software-testing` - สำหรับการทดสอบซอฟต์แวร์
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
-### knowledge/guide/
+### guide/
 
 | No | File | Description | Level |
 |----|------|-------------|-------|
-| 1 | [key-concept.md](knowledge/guide/key-concept.md) | แนวคิดหลักของ vibe coding และ flow state | Basic |
-| 2 | [how-it-works.md](knowledge/guide/how-it-works.md) | ภาพรวมการทำงานของ vibe coding | Basic |
-| 3 | [features.md](knowledge/guide/features.md) | Features และเทคนิคของ vibe coding | Basic |
-| 4 | [configuration.md](knowledge/guide/configuration.md) | การตั้งค่า environment สำหรับ coding | Basic |
-| 5 | [quick-start.md](knowledge/guide/quick-start.md) | เริ่มต้นเขียนโค้ดแบบ vibe | Basic |
-| 6 | [best-practices.md](knowledge/guide/best-practices.md) | แนวทางปฏิบัติที่ดี | Intermediate |
-| 7 | [integration.md](knowledge/guide/integration.md) | การรวมกับ tools และ workflows | Intermediate |
+| 1 | [key-concept.md](guide/key-concept.md) | แนวคิดหลักของ vibe coding และ flow state | Basic |
+| 2 | [how-it-works.md](guide/how-it-works.md) | ภาพรวมการทำงานของ vibe coding | Basic |
+| 3 | [features.md](guide/features.md) | Features และเทคนิคของ vibe coding | Basic |
+| 4 | [configuration.md](guide/configuration.md) | การตั้งค่า environment สำหรับ coding | Basic |
+| 5 | [quick-start.md](guide/quick-start.md) | เริ่มต้นเขียนโค้ดแบบ vibe | Basic |
+| 6 | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี | Intermediate |
+| 7 | [integration.md](guide/integration.md) | การรวมกับ tools และ workflows | Intermediate |
 
 ### references/
 

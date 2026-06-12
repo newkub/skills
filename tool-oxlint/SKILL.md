@@ -6,6 +6,18 @@
 
 Oxlint เป็น high-performance linter สำหรับ JavaScript/TypeScript ที่ใช้ Oxc compiler stack (Rust) ให้ความเร็ว 50-100x กว่า ESLint พร้อมรองรับ 800+ rules และ ESLint compatibility
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## File Structure
 
 ```text

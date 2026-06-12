@@ -4,6 +4,18 @@
 
 CLI skills for command-line tools and utilities that help increase productivity in development workflow. This skill documents essential CLI tools organized by category.
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## File Structure
 
 | Folder | Description |

@@ -15,11 +15,15 @@ description: Next-generation test runner for Rust with faster execution, per-tes
 - `/lang-rust` - Rust programming language
 - `/tool-cargo` - Cargo package manager
 
+
+## References
+
+
 ## หมวดหมู่ไฟล์
 
 | หมวดหมู่ | ไฟล์ | คำอธิบาย |
 |-----------|------|-----------|
-| **knowledge/guide/** | key-concept.md | แนวคิดหลักของ Nextest และความแตกต่างจาก cargo test |
+| **guide/** | key-concept.md | แนวคิดหลักของ Nextest และความแตกต่างจาก cargo test |
 | | how-it-works.md | วิธีการทำงานของ Nextest พร้อม diagram |
 | | features.md | ฟีเจอร์หลัก เช่น test isolation, retry policies, test groups |
 | | installation.md | วิธีติดตั้งและ setup |

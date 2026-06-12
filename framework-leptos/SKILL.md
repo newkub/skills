@@ -1,6 +1,6 @@
 ---
-name: framework-leptos
-description: แนวทางการพัฒนา Leptos ตาม best practices สำหรับ Rust framework ที่รองรับ SSR, CSR และ reactive web applications
+name: leptos
+description: Rust framework for building reactive web applications with SSR and CSR support. Includes component system, signals, reactive system, routing, and server-side rendering capabilities.
 ---
 
 # framework-leptos
@@ -14,22 +14,13 @@ description: แนวทางการพัฒนา Leptos ตาม best pr
 
 ## Skills Related
 
-- `lang-rust` - Rust programming language
-- `runtime-bun` - Bun runtime สำหรับ web development
+- lang-rust
+- runtime-bun
 
-## หมวดหมู่ไฟล์
+## References
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | [knowledge/guide/key-concept.md](knowledge/guide/key-concept.md) | Core concepts ของ Leptos |
-| 2 | [knowledge/guide/how-it-works.md](knowledge/guide/how-it-works.md) | หลักการทำงานของ Leptos |
-| 3 | [knowledge/guide/features.md](knowledge/guide/features.md) | Features และ capabilities |
-| 4 | [knowledge/guide/installation.md](knowledge/guide/installation.md) | การติดตั้งและ setup |
-| 5 | [knowledge/guide/configuration.md](knowledge/guide/configuration.md) | การตั้งค่า configuration |
-| 6 | [knowledge/guide/quick-start.md](knowledge/guide/quick-start.md) | Quick start guide |
-| 7 | [knowledge/guide/best-practices.md](knowledge/guide/best-practices.md) | Best practices |
-| 8 | [knowledge/guide/integration.md](knowledge/guide/integration.md) | การ integrate กับ tools อื่นๆ |
-| 9 | [knowledge/guide/architecture.md](knowledge/guide/architecture.md) | Architecture และ structure |
-| 10 | [references/website.md](references/website.md) | Official website และ resources |
-| 11 | [references/cli.md](references/cli.md) | Leptos CLI commands |
-| 12 | [references/configuration.md](references/configuration.md) | Configuration options reference |
+| Resource | URL |
+|----------|-----|
+| Leptos Docs | https://leptos.dev |
+| Leptos GitHub | https://github.com/leptos-rs/leptos |
+| Leptos Book | https://book.leptos.dev |

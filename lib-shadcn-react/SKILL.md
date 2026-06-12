@@ -5,6 +5,18 @@ description: แนวทางการพัฒนาด้วย shadcn/ui �
 
 # lib-shadcn-react
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## Overview
 
 แนวทางการพัฒนาด้วย shadcn/ui ตาม best practices สำหรับ React 18+ component library ที่ใช้ copy-to-own pattern พร้อม Radix UI และ Tailwind CSS

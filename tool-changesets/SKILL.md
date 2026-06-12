@@ -4,6 +4,18 @@
 
 แนวทางการใช้งาน Changesets สำหรับ version management และ release automation ใน monorepos ใช้โดยโปรเจกต์ชั้นนำ เช่น Astro, Vite, Remix, SvelteKit
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## Content Summary
 
 | Folder | File | Description |

@@ -6,6 +6,18 @@
 
 Qoder เป็น agentic coding platform ที่ออกแบบมาสำหรับ real software development ผสมผสาน enhanced context engineering กับ intelligent agents เพื่อให้เข้าใจ codebase อย่างครอบคลุม และทำ development tasks ได้อย่างเป็นระบบ มี 2 workspaces หลักคือ **Editor** และ **Quest** รองรับทั้ง Editor extensions และ CLI
 
+
+## When to use
+
+
+
+## Skills Related
+
+
+
+## References
+
+
 ## File Structure
 
 ```
