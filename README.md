@@ -390,17 +390,16 @@ Every skill follows a consistent folder structure for predictable navigation.
 ```
 skill-name/
 ├── SKILL.md              # Entry point — skill overview and metadata
-├── knowledge/            # Knowledge base
-│   ├── guide/            # Learning-oriented documentation
-│   │   ├── key-concept.md    # Core concepts and mental models
-│   │   ├── features.md       # Feature breakdown and usage
-│   │   ├── quick-start.md    # Getting started guide
-│   │   ├── best-practices.md # Recommended patterns and anti-patterns
-│   │   ├── configuration.md  # Configuration options
-│   │   ├── integration.md    # Integration with other tools
-│   │   └── architecture.md   # Internal architecture overview
-│   ├── key-concepts/     # Deep dive into specific concepts
-│   └── principles/       # Design principles and patterns
+├── guide/                # Learning-oriented documentation
+│   ├── key-concept.md    # Core concepts and mental models
+│   ├── features.md       # Feature breakdown and usage
+│   ├── quick-start.md    # Getting started guide
+│   ├── best-practices.md # Recommended patterns and anti-patterns
+│   ├── configuration.md  # Configuration options
+│   ├── integration.md    # Integration with other tools
+│   └── architecture.md   # Internal architecture overview
+├── key-concepts/         # Deep dive into specific concepts
+├── principles/           # Design principles and patterns
 ├── references/           # Lookup-oriented material
 │   ├── website.md        # Official website and docs links
 │   ├── sitemap.md        # Complete documentation sitemap
