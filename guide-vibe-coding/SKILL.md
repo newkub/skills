@@ -1,31 +1,37 @@
 ---
-name: vibe-coding
+title: Guide Vibe Coding
 description: Vibe coding guide covering mental models, workflows, and best practices for enjoyable and efficient coding with AI assistance.
+auto_execution_mode: 3
 ---
 
-# Vibe Coding
+## Goal
 
-แนวทางการเขียนโค้ดแบบสนุกสนานและไหลลื่น ครอบคลุม mental models, workflows, และ best practices สำหรับการเขียนโค้ดที่มีความสุขและมีประสิทธิภาพ
+ให้ผู้ใช้เข้าใจและสามารถเขียนโค้ดแบบสนุกสนานและไหลลื่นได้อย่างมีประสิทธิภาพ
 
-## When to use
+## Scope
 
-ใช้เมื่อต้องการ:
-- เรียนรู้วิธีเขียนโค้ดแบบสนุกสนาน
-- เข้าใจ flow state ในการเขียนโค้ด
-- ปรับปรุง mental models สำหรับ coding
-- เขียน skills และ workflows สำหรับ AI assistants
-- แก้ปัญหาอย่างมีระบบ
-- เขียนโค้ดที่ maintainable และ enjoyable
+ใช้สำหรับเรียนรู้วิธีเขียนโค้ดแบบสนุกสนาน, เข้าใจ flow state ในการเขียนโค้ด, ปรับปรุง mental models สำหรับ coding, เขียน skills และ workflows สำหรับ AI assistants, แก้ปัญหาอย่างมีระบบ, และเขียนโค้ดที่ maintainable และ enjoyable
 
-## Skills Related
+## Execute
 
-- guide-programming
-- guide-software-architecture
-- guide-software-testing
+- อ่าน guide/ เพื่อเข้าใจ concepts และ best practices
+- ศึกษา references/ สำหรับ documentation และ resources
+- ปฏิบัติตาม workflows/ สำหรับการทำงานเฉพาะทาง
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-## References
+## Rules
 
-| Resource | URL |
-|----------|-----|
-| AI Coding Tools | Various platforms |
-| Prompt Engineering | Online guides |
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
+
+## Expected Outcome
+
+- เข้าใจ mental models สำหรับ coding
+- สามารถเขียนโค้ดแบบสนุกสนานได้
+- สามารถเขียน skills และ workflows ได้
+- สามารถแก้ปัญหาอย่างมีระบบได้

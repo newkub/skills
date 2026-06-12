@@ -1,69 +1,48 @@
-# ESLint
+---
+title: Tool ESLint
+description: ESLint เป็น linting tool สำหรับ JavaScript และ TypeScript ที่ช่วยตรวจสอบ code quality, find bugs, และ enforce coding conventions
+auto_execution_mode: 3
+---
 
-ESLint เป็น linting tool สำหรับ JavaScript และ TypeScript ที่ช่วยตรวจสอบ code quality, find bugs, และ enforce coding conventions รองรับ plugin system และ auto-fix capabilities
+## Goal
 
-## Directory Structure
+ใช้งาน ESLint สำหรับ linting JavaScript และ TypeScript
 
-```text
-tool-eslint/
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   ├── best-practices.md
-│   └── integration.md
-├── references/
-│   ├── website.md
-│   ├── cli.md
-│   └── configuration.md
-└── SKILL.md
-```
+## Scope
 
+ใช้สำหรับ static analysis ของ code, auto-fix ปัญหา, plugin system, ESLint Flat Config, extends จาก preset configs, severity levels, cache สำหรับ performance, และ output formats หลายแบบ
 
-## When to use
+## Execute
 
+- ติดตั้ง ESLint
+- Initialize ESLint
+- Lint files
+- Auto-fix ปัญหา
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ tool integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+## Rules
 
-## Skills Related
+- ใช้ `bun add -D eslint` สำหรับ installation
+- ใช้ `bunx eslint --init` สำหรับ initialize
+- ใช้ `bunx eslint ./src` สำหรับ lint
+- ใช้ `bunx eslint ./src --fix` สำหรับ auto-fix
+- ใช้ backticks สำหรับ commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
+## Expected Outcome
 
-
-## References
-
-
-## File Categories
-
-| Folder | Description |
-|--------|-------------|
-| **guide/** | คู่มือการใช้งานและ best practices |
-| **references/** | เอกสารอ้างอิง CLI และ configuration |
-
-## คุณสมบัติหลัก
-
-- **Static Analysis**: วิเคราะห์ code โดยไม่ต้อง run
-- **Auto-fix**: แก้ไขปัญหาอัตโนมัติเมื่อทำได้
-- **Plugin System**: รองรับ plugins มากมาย (TypeScript, React, Vue)
-- **ESLint Flat Config**: รูปแบบ config ใหม่ที่ยืดหยุ่นกว่า
-- **Extends**: สามารถ extends จาก preset configs
-- **Severity Levels**: กำหนด severity ได้ (off, warn, error)
-- **Cache**: เร่งความเร็วด้วยการ cache ผลลัพธ์
-- **Output Formats**: รองรับหลาย output formats
-
-## เมื่อใดควรใช้
-
-- ต้องการ maintain code quality ใน project
-- ต้องการ enforce coding standards
-- ต้องการ catch bugs ก่อน commit
-- ต้องการ auto-format code
-- ต้องการ integrate กับ CI/CD
-
-## ลิงก์อ้างอิง
-
-- [หน้าเว็บหลัก](https://eslint.org)
-- [เอกสาร](https://eslint.org/docs/)
-- [Config Guide](https://eslint.org/docs/latest/use/configure/)
-- [Plugin List](https://eslint.org/community/)
-- [Playground](https://eslint.org/play/)
+- Code quality ที่ improved
+- Bugs ที่ detected early
+- Coding conventions ที่ enforced
+- Auto-fix ที่ efficient

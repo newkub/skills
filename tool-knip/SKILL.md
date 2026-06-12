@@ -1,76 +1,46 @@
-# tool-knip
+---
+title: Tool Knip
+description: แนวทางการใช้งาน Knip สำหรับหา unused files, dependencies และ exports
+auto_execution_mode: 3
+---
 
-## Overview
+## Goal
 
-แนวทางการใช้งาน Knip สำหรับหา unused files, dependencies และ exports
+ใช้งาน Knip สำหรับหา unused files, dependencies และ exports
 
+## Scope
 
-## When to use
+ใช้สำหรับหา unused files, หา unused dependencies, หา unused exports, และ TypeScript/JavaScript projects
 
+## Execute
 
+- ติดตั้ง Knip
+- รัน Knip
+- รันใน watch mode
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ tool integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-## Skills Related
+## Rules
 
+- ใช้ `bun add -D knip` สำหรับติดตั้ง
+- ใช้ `bunx knip` สำหรับรัน
+- ใช้ `--watch` สำหรับ watch mode
+- ใช้ backticks สำหรับ commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
+## Expected Outcome
 
-## References
-
-
-## What is Knip?
-
-Knip เป็นเครื่องมือสำหรับหา unused files, dependencies และ exports ใน TypeScript/JavaScript projects
-
-## File Structure
-
-| Folder | Description |
-|--------|-------------|
-| guide/ | Guides และ tutorials สำหรับการใช้งาน |
-| references/ | References และ links ภายนอก (CLI, configuration, API) |
-
-## Quick Start
-
-```bash
-# Install
-npm install -D knip
-
-# Run
-bunx knip
-
-# Watch mode
-bunx knip --watch
-```
-
-## Core Features
-
-| Feature | Description |
-|---------|-------------|
-| **Unused Files** | หาไฟล์ที่ไม่มี import |
-| **Unused Dependencies** | หา dependencies ที่ไม่ได้ใช้ |
-| **Unused Exports** | หา exports ที่ไม่มีใครใช้ |
-| **TypeScript** | รองรับ TypeScript เต็มรูปแบบ |
-
-## Guide Files
-
-| File | Description |
-|------|-------------|
-| [guide/installation.md](guide/installation.md) | วิธีติดตั้ง Knip |
-| [guide/quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งาน Knip |
-| [guide/key-concept.md](guide/key-concept.md) | แนวคิดหลักและหลักการทำงาน |
-| [guide/how-it-works.md](guide/how-it-works.md) | วิธีการทำงานของ Knip |
-| [guide/features.md](guide/features.md) | Features ทั้งหมดของ Knip |
-| [guide/configuration.md](guide/configuration.md) | การตั้งค่า Knip |
-| [guide/best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-
-## Reference Files
-
-| Folder | Files |
-|--------|-------|
-| [references/cli.md](references/cli.md) | CLI commands reference |
-| [references/configuration.md](references/configuration.md) | Configuration options |
-| [api.md](references/api.md) | Programmatic API |
-
-## Version
-
-- Current: v2.x
-- GitHub: https://github.com/webpro-nl/knip
-- npm: knip
+- Unused files ที่ถูกค้นหา
+- Unused dependencies ที่ detected
+- Unused exports ที่ identified
+- Codebase ที่ clean และ maintainable

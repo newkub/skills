@@ -1,7 +1,0 @@
-id: markdown-heading-spacing
-language: markdown
-message: Heading ควรมี blank line ก่อนและหลัง
-severity: warning
-rule:
-  pattern:
-    regex: "^#+[^\n]+\n\n"

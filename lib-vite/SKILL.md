@@ -1,53 +1,53 @@
 ---
-name: lib-vite
+title: Vite
 description: แนวทางการใช้งาน Vite ในฐานะ build library สำหรับ frontend development ด้วย Native ESM, HMR ที่รวดเร็ว, Plugin API และ Rollup-based production build
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ build tool ที่เร็วสำหรับ frontend development
-- เมื่อต้องการ HMR (Hot Module Replacement) ที่รวดเร็ว
-- เมื่อต้องการใช้ Native ESM ใน development
-- เมื่อต้องการ Plugin API ที่ flexible
-- เมื่อต้องการ build ด้วย Rollup สำหรับ production
-- เมื่อต้องการ support frameworks อย่าง Vue, React, Svelte, SolidJS
-- เมื่อต้องการ TypeScript และ JSX support
-- เมื่อต้องการ CSS preprocessors และ asset optimization
+ใช้ Vite สำหรับ frontend build tool ด้วย Native ESM, HMR ที่รวดเร็ว, Plugin API, และ Rollup-based production build
 
-## Skills Related
+## Scope
 
-- `lib-vitest` - Testing framework ที่ built-in กับ Vite
-- `lib-react` - React framework สำหรับใช้กับ Vite
-- `lib-vue` - Vue framework สำหรับใช้กับ Vite
-- `lib-svelte` - Svelte framework สำหรับใช้กับ Vite
-- `lib-solidjs` - SolidJS framework สำหรับใช้กับ Vite
-- `lang-typescript` - TypeScript สำหรับ type safety
+ใช้สำหรับ build และ development ของ frontend projects ด้วย Vite
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง Vite ด้วย `bun add -D vite`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/` สำหรับแนวคิดเฉพาะทาง
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า `vite.config.ts`
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ Plugin API สำหรับ extend functionality
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- ใช้ Rollup-based production build
+- ใช้ proper build optimization
+- อ่าน `guide/integration.md` สำหรับ framework integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-```
-lib-vite/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add -D vite` สำหรับ installation
+- ใช้ backticks สำหรับ `vite`, commands, plugins
+- ใช้ code blocks สำหรับ configuration examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ Native ESM เสมอ
+- ใช้ HMR สำหรับ development
+- ใช้ Plugin API สำหรับ extend functionality
+- ใช้ Rollup-based production build
+
+## Expected Outcome
+
+- Development ที่รวดเร็วด้วย HMR
+- Build ที่ optimized ด้วย Rollup
+- Plugin system ที่ flexible
+- Integration ที่ smooth กับ frameworks

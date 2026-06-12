@@ -1,55 +1,47 @@
-# aube
+---
+title: Tool Aube
+description: Package manager สำหรับ Node.js ที่เร็วที่สุด รองรับ lockfiles หลายรูปแบบ มี security defaults ที่ดีที่สุด และใช้ disk น้อยกว่าด้วย global content-addressable store
+auto_execution_mode: 3
+---
 
-Package manager สำหรับ Node.js ที่เร็วที่สุด รองรับ lockfiles หลายรูปแบบ มี security defaults ที่ดีที่สุด และใช้ disk น้อยกว่าด้วย global content-addressable store
+## Goal
 
-## โครงสร้าง
+ใช้งาน Aube สำหรับ package management ใน Node.js projects
 
-```
-tool-aube/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   └── best-practices.md
-└── references/
-    ├── cli.md
-    └── api.md
-```
+## Scope
 
+ใช้สำหรับ package management สำหรับ Node.js, จัดการ lockfiles หลายรูปแบบ, security defaults ที่ดีที่สุด, และ global content-addressable store
 
-## When to use
+## Execute
 
+- ติดตั้ง Aube ด้วย `bunx`
+- จัดการ dependencies
+- รัน scripts ด้วย auto-install
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ tool integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+## Rules
 
-## Skills Related
+- ใช้ `aube add` สำหรับเพิ่ม dependencies
+- ใช้ `aube install` สำหรับติดตั้ง dependencies
+- ใช้ `aube ci` สำหรับ CI mode
+- ใช้ `aube test` สำหรับรัน scripts พร้อม auto-install
+- ใช้ backticks สำหรับ commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
+## Expected Outcome
 
-
-## References
-
-
-## เนื้อหา
-
-| หมวด | ไฟล์ | คำอธิบาย |
-|------|------|----------|
-| **Core** | SKILL.md | Index หลัก |
-| **Guide** | guide/key-concept.md | แนวคิดหลัก |
-| **Guide** | guide/how-it-works.md | วิธีการทำงาน |
-| **Guide** | guide/features.md | ฟีเจอร์ทั้งหมด |
-| **Guide** | guide/installation.md | วิธีติดตั้ง |
-| **Guide** | guide/configuration.md | การตั้งค่า |
-| **Guide** | guide/best-practices.md | แนวทางปฏิบัติ |
-| **Ref** | references/cli.md | CLI reference |
-| **Ref** | [api.md](references/api.md) | Programmatic API |
-
-## คำสั่งพื้นฐาน
-
-```bash
-aubr test       # run script + auto-install
-aube add react  # เพิ่ม dependency
-aube install    # install เฉยๆ
-aube ci         # CI mode
-```
+- Package management ที่รวดเร็ว
+- Lockfiles ที่ compatible หลายรูปแบบ
+- Security defaults ที่ดีที่สุด
+- Disk usage ที่น้อย

@@ -1,88 +1,55 @@
 ---
-name: lib-wxt
+title: WXT
 description: WXT - Next-gen Web Extension Framework สำหรับสร้าง browser extensions ที่รองรับหลาย browser และทั้ง Manifest V2/V3
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-ใช้ skill นี้เมื่อ:
-- สร้าง web extensions สำหรับ Chrome, Firefox, Edge, Safari
-- ต้องการ cross-browser support จาก codebase เดียว
-- ต้องการ TypeScript support และ type safety
-- ต้องการ fast HMR สำหรับ development
-- ต้องการ auto-imports แบบ Nuxt
-- ต้องการ automated publishing ไปยัง extension stores
-- ต้องการ Manifest V2 และ V3 support
-- ต้องการ module system สำหรับ reusable code
+ใช้ WXT สร้าง browser extensions ที่รองรับหลาย browser ด้วย TypeScript, HMR, และ Manifest V2/V3 support
 
-## Skills Related
+## Scope
 
-- `lib-vite` - Vite build tool ที่ WXT ใช้ภายใน
-- `lib-vue` - Vue.js framework integration
-- `lib-react` - React framework integration
-- `lib-svelte` - Svelte framework integration
-- `lib-solidjs` - SolidJS framework integration
-- `create-browser-extensions` - แนวทางการสร้าง browser extensions ทั่วไป
+ใช้สำหรับสร้าง web extensions สำหรับ Chrome, Firefox, Edge, Safari ด้วย WXT framework
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง WXT ด้วย `bun add -D wxt`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- ใช้ `workflows/setup-wxt.md` สำหรับ setup project
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/` สำหรับแนวคิดเฉพาะทาง
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า `wxt.config.ts`
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `workflows/create-extension.md` สำหรับสร้าง extension
+- ใช้ `workflows/add-framework.md` สำหรับ framework integration
+- อ่าน `workflows/build-extension.md` สำหรับ build และ package
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- ใช้ proper build optimization
+- อ่าน `workflows/publish-extension.md` สำหรับ publishing
+- อ่าน `guide/integration.md` สำหรับ framework integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-```
-lib-wxt/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add -D wxt` สำหรับ installation
+- ใช้ backticks สำหรับ commands, manifest keys
+- ใช้ code blocks สำหรับ extension examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ TypeScript เสมอ
+- ใช้ HMR สำหรับ development
+- รองรับ Manifest V2/V3
+- ใช้ proper build optimization
 
-### guide/
+## Expected Outcome
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | installation.md | วิธีติดตั้งและตั้งค่า WXT ในโปรเจกต์ |
-| 2 | key-concept.md | แนวคิดพื้นฐานของ WXT และ web extensions |
-| 3 | how-it-works.md | วิธีการทำงานของ WXT และ build process |
-| 4 | features.md | รายการ features ทั้งหมดของ WXT |
-| 5 | configuration.md | การตั้งค่า configuration และ options |
-| 6 | quick-start.md | คู่มือเริ่มต้นใช้งานอย่างรวดเร็ว |
-| 7 | best-practices.md | แนวทางปฏิบัติที่ดีสำหรับการพัฒนา |
-| 8 | integration.md | การรวมกับ frameworks และ tools อื่นๆ |
-| 9 | architecture.md | สถาปัตยกรรมของ WXT และ project structure |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | เว็บไซต์และเอกสารอย่างเป็นทางการ |
-| 2 | sitemap.md | แผนผังเอกสารและ resources |
-| 3 | api.md | WXT programmatic API และ functions |
-| 4 | cli.md | WXT CLI commands และ options |
-| 5 | configuration.md | WXT configuration options และ types |
-
-### workflows/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | setup-wxt.md | ตั้งค่า WXT ในโปรเจกต์ใหม่ |
-| 2 | create-extension.md | สร้าง web extension ด้วย WXT |
-| 3 | add-framework.md | เพิ่ม framework integration (Vue, React, Svelte, Solid) |
-| 4 | build-extension.md | Build และ package extension สำหรับ production |
-| 5 | publish-extension.md | Publish extension ไปยัง stores |
+- Browser extensions ที่ cross-browser compatible
+- Development ที่รวดเร็วด้วย HMR
+- Build ที่ optimized สำหรับ production
+- Publishing ที่ streamlined

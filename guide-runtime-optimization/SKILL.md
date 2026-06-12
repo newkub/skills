@@ -1,44 +1,37 @@
 ---
-name: guide-runtime-optimization
+title: Guide Runtime Optimization
 description: คู่มือการ optimize runtime รวมถึง JIT compilation, memory management, hot path optimization, และ profile-guided optimization
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการเข้าใจวิธีการทำงานของ runtime systems
-- เมื่อต้องการ optimize performance ของ runtime
-- เมื่อต้องการ implement JIT compiler
-- เมื่อต้องการปรับปรุง memory management
-- เมื่อต้องการใช้ profile-guided optimization
+ให้ผู้ใช้เข้าใจและสามารถ optimize runtime systems ได้อย่างมีประสิทธิภาพ
 
-## Skills Related
+## Scope
 
-- `/guide-compiler-design` - การออกแบบ compiler
-- `/guide-performance-engineering` - การ optimize performance โดยรวม
-- `/guide-algorithms-data-structures` - algorithms และ data structures
-- `/lang-rust` - ภาษาที่เน้น performance
-- `/runtime-bun` - runtime ที่ optimize แล้ว
+ใช้สำหรับ JIT compiler implementation, memory management optimization, hot path optimization, profile-guided optimization, และ runtime performance tuning
 
-## References
+## Execute
 
-### guide/
+- อ่าน guide/ เพื่อเข้าใจ concepts และ best practices
+- ศึกษา references/ สำหรับ documentation และ resources
+- ปฏิบัติตาม workflows/ สำหรับการทำงานเฉพาะทาง
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | installation.md | วิธีติดตั้งและเตรียม environment สำหรับ runtime optimization |
-| 2 | key-concept.md | concept หลักของ runtime optimization |
-| 3 | how-it-works.md | วิธีการทำงานของ runtime optimization techniques |
-| 4 | features.md | features และ capabilities ของ runtime optimization |
-| 5 | configuration.md | การตั้งค่าและ configure runtime optimization |
-| 6 | quick-start.md | เริ่มต้น optimize runtime อย่างรวดเร็ว |
-| 7 | best-practices.md | best practices สำหรับ runtime optimization |
-| 8 | architecture.md | architecture ของ runtime systems |
-| 9 | performance.md | การวัดและ benchmark performance |
-| 10 | troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน runtime optimization |
+## Rules
 
-### references/
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | เว็บไซต์และ resources สำหรับ runtime optimization |
-| 2 | sitemap.md | แผนผังเนื้อหาและ resources |
+## Expected Outcome
+
+- เข้าใจ runtime optimization techniques
+- สามารถ implement JIT compiler ได้
+- สามารถ optimize memory management ได้
+- สามารถใช้ profile-guided optimization ได้

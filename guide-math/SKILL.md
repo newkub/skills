@@ -1,32 +1,37 @@
 ---
-name: math
+title: Guide Math
 description: Mathematics guide for software development covering computation, discrete mathematics, information theory, linear algebra, and set theory.
+auto_execution_mode: 3
 ---
 
-# Math
+## Goal
 
-Skill นี้ครอบคลุมความรู้ด้านคณิตศาสตร์ที่จำเป็นสำหรับการพัฒนาซอฟต์แวร์ รวมถึง Computation, Discrete Mathematics, Information Theory, Linear Algebra และ Set Theory
+ให้ผู้ใช้เข้าใจและสามารถประยุกต์ใช้คณิตศาสตร์ในการพัฒนาซอฟต์แวร์ได้อย่างมีประสิทธิภาพ
 
-## When to use
+## Scope
 
-ใช้เมื่อต้องการ:
-- เข้าใจคณิตศาสตร์ที่ใช้ใน algorithms
-- เรียนรู้ discrete math สำหรับ data structures
-- เข้าใจ linear algebra สำหรับ ML และ graphics
-- เรียนรู้ information theory สำหรับ data compression
-- เข้าใจ set theory สำหรับ database และ logic
-- วิเคราะห์ algorithm complexity
+ใช้สำหรับเข้าใจคณิตศาสตร์ที่ใช้ใน algorithms, เรียนรู้ discrete math สำหรับ data structures, เข้าใจ linear algebra สำหรับ ML และ graphics, เรียนรู้ information theory สำหรับ data compression, เข้าใจ set theory สำหรับ database และ logic, และวิเคราะห์ algorithm complexity
 
-## Skills Related
+## Execute
 
-- guide-computer-computation
-- guide-programming
-- guide-software-architecture
+- อ่าน guide/ เพื่อเข้าใจ concepts และ best practices
+- ศึกษา references/ สำหรับ documentation และ resources
+- ปฏิบัติตาม workflows/ สำหรับการทำงานเฉพาะทาง
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-## References
+## Rules
 
-| Resource | URL |
-|----------|-----|
-| Math Textbooks | Various academic texts |
-| Online Courses | Khan Academy, Coursera |
-| Wolfram MathWorld | https://mathworld.wolfram.com |
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
+
+## Expected Outcome
+
+- เข้าใจ discrete mathematics สำหรับ algorithms
+- สามารถใช้ linear algebra ใน ML และ graphics ได้
+- สามารถประยุกต์ใช้ information theory ได้
+- สามารถวิเคราะห์ algorithm complexity ได้

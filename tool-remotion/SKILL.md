@@ -1,52 +1,116 @@
-# tool-remotion
+---
+title: Remotion
+description: Framework สำหรับสร้างวิดีโอแบบโปรแกรมมิ่งโดยใช้ React
+auto_execution_mode: 3
+---
 
-## Overview
+## Goal
 
-Remotion เป็น framework สำหรับสร้างวิดีโอแบบโปรแกรมมิ่งโดยใช้ React ช่วยให้สร้างวิดีโอด้วย component model เดียวกับ React โดยใช้ hooks เช่น `useCurrentFrame()` สำหรับ animations
+ใช้งาน Remotion สำหรับสร้างวิดีโอแบบโปรแกรมมิ่งด้วย React
 
+## Scope
 
-## When to use
+ใช้สำหรับ:
+- สร้างวิดีโอแบบโปรแกรมมิ่งด้วย React
+- Video generation ด้วย component model
+- Animations ด้วย hooks เช่น useCurrentFrame()
+- Programmatic video creation
 
+## Execute
 
+### 1. Create Project
+
+สร้างโปรเจกต์ใหม่:
+```bash
+bunx create-video@latest
+```
+
+### 2. Start Preview
+
+เริ่มต้น preview:
+```bash
+npm start
+```
+
+### 3. Render Video
+
+Render วิดีโอ:
+```bash
+bunx remotion render MyComposition
+```
+
+### 4. Render GIF
+
+Render เป็น GIF:
+```bash
+bunx remotion render MyComposition --output.gif
+```
+
+## Rules
+
+- ใช้ `useCurrentFrame()` เสมอ - ไม่ใช้ CSS animations
+- ใช้ Zod สำหรับ props - ทำให้ parameters มี type ที่ปลอดภัย
+- แปลงวินาทีเป็น frames - ใช้ `time * fps`
+- ใช้ `staticFile()` สำหรับ assets - path แบบ relative ไม่รองรับ
+
+## Expected Outcome
+
+- วิดีโอแบบโปรแกรมมิ่งด้วย React
+- Animations ที่ smooth และ consistent
+- Video generation ที่ automated
+- Programmatic video creation ที่ flexible
 
 ## Skills Related
 
+- `/lib-react` - React library
+- `/follow-react` - React best practices
 
+## โครงสร้าง Directory
 
-## References
-
-
-## Content Summary
-
-| Folder | File | Description |
-|--------|------|-------------|
-| **guide/** | [key-concept.md](guide/key-concept.md) | แนวคิดหลักและสถาปัตยกรรม |
-| | [how-it-works.md](guide/how-it-works.md) | วิธีการทำงานของ Remotion |
-| | [features.md](guide/features.md) | ฟีเจอร์หลักที่สำคัญ |
-| | [installation.md](guide/installation.md) | การติดตั้งและข้อกำหนด |
-| | [configuration.md](guide/configuration.md) | การตั้งค่า remotion.config.ts |
-| | [quick-start.md](guide/quick-start.md) | เริ่มต้นสร้างวิดีโอ |
-| | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-| **references/** | [website.md](references/website.md) | เว็บไซต์และเอกสารอย่างเป็นทางการ |
-| | [cli.md](references/cli.md) | คำสั่ง CLI สำหรับ render |
-| | [configuration.md](references/configuration.md) | ตัวเลือก configuration ทั้งหมด |
-| | [api.md](references/api.md) | React hooks และ API reference |
-
-## Quick Reference
-
-```bash
-# สร้างโปรเจกต์ใหม่
-bunx create-video@latest
-
-# เริ่มต้น preview
-npm start
-
-# render วิดีโอ
-bunx remotion render MyComposition
-
-# render เป็น GIF
-bunx remotion render MyComposition --output.gif
 ```
+tool-remotion/
+├── SKILL.md
+├── guide/              (Guides และ best practices)
+├── key-concepts/       (แนวคิดหลัก)
+├── principles/         (หลักการ)
+├── references/         (CLI, configuration, API reference)
+├── workflows/          (Workflows สำหรับการใช้งาน)
+├── templates/          (Templates สำหรับ remotion.config.ts)
+└── scripts/            (Scripts สำหรับ automation)
+```
+
+## หมวดหมู่ไฟล์
+
+| Folder | Files | Description |
+|--------|-------|-------------|
+| [guide/](guide/) | 0 files | Guides และ best practices สำหรับการใช้งาน |
+| [key-concepts/](key-concepts/) | 0 files | แนวคิดหลักของ Remotion |
+| [principles/](principles/) | 0 files | หลักการในการใช้งาน Remotion |
+| [references/](references/) | 4 files | CLI, configuration, API reference |
+| [workflows/](workflows/) | 0 files | Workflows สำหรับการใช้งาน |
+| [templates/](templates/) | 0 files | Templates สำหรับ remotion.config.ts |
+| [scripts/](scripts/) | 0 files | Scripts สำหรับ automation |
+
+## Guide Files
+
+| File | Description |
+|------|-------------|
+| [guide/key-concept.md](guide/key-concept.md) | แนวคิดหลักและสถาปัตยกรรม |
+| [guide/how-it-works.md](guide/how-it-works.md) | วิธีการทำงานของ Remotion |
+| [guide/features.md](guide/features.md) | ฟีเจอร์หลักที่สำคัญ |
+| [guide/installation.md](guide/installation.md) | การติดตั้งและข้อกำหนด |
+| [guide/configuration.md](guide/configuration.md) | การตั้งค่า remotion.config.ts |
+| [guide/quick-start.md](guide/quick-start.md) | เริ่มต้นสร้างวิดีโอ |
+| [guide/best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
+
+## Reference Files
+
+| File | Description |
+|------|-------------|
+| [references/website.md](references/website.md) | เว็บไซต์และเอกสารอย่างเป็นทางการ |
+| [references/cli.md](references/cli.md) | คำสั่ง CLI สำหรับ render |
+| [references/configuration.md](references/configuration.md) | ตัวเลือก configuration ทั้งหมด |
+| [references/api.md](references/api.md) | React hooks และ API reference |
 
 ## Key Rules
 
@@ -56,23 +120,3 @@ bunx remotion render MyComposition --output.gif
 | **2** | ใช้ Zod สำหรับ props - ทำให้ parameters มี type ที่ปลอดภัย |
 | **3** | แปลงวินาทีเป็น frames - ใช้ `time * fps` |
 | **4** | ใช้ `staticFile()` สำหรับ assets - path แบบ relative ไม่รองรับ |
-
-## File Structure
-
-```
-tool-remotion/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   └── best-practices.md
-└── references/
-    ├── website.md
-    ├── cli.md
-    ├── configuration.md
-    └── api.md
-```

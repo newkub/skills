@@ -6,12 +6,16 @@
 
 - `guide-` - guides และ best practices สำหรับ topics ต่างๆ
 - `lang-` - programming languages และ best practices
-- `lib-` - libraries และ frameworks สำหรับ development
-- `framework-` - frameworks สำหรับ web, desktop, mobile และ TUI
-- `runtime-` - runtime environments สำหรับ execution
+- `lib-` - libraries
+- `framework-` - frameworks
+- `runtime-` - runtime environments
 - `cloud-` - cloud platforms และ services
 - `create-` - สร้าง extensions สำหรับ platforms ต่างๆ
-- `tool-` - development tools และ utilities
+- `tool-` - development tools
+- `cli-` - CLI tools
+- `tui-` - TUI applications
+- `flow-` - development flows
+- `general-` - general purpose
 
 ## Type-Specific Structure
 
@@ -25,3 +29,7 @@
 - **cloud-**: เน้น services, APIs, และ deployment targets
 - **create-**: เน้น scaffolding, build process, และ publishing
 - **tool-**: เน้น CLI usage, configuration, และ automation
+- **cli-**: เน้น CLI commands และ usage
+- **tui-**: เน้น terminal UI components และ interactions
+- **flow-**: เน้น development workflows และ processes
+- **general-**: เน้น general purpose utilities และ helpers

@@ -1,75 +1,54 @@
 ---
-name: lib-workos
+title: WorkOS
 description: Enterprise identity platform สำหรับ SSO, SAML, directory sync, audit logs และ admin portal
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ SSO (SAML/OIDC) สำหรับ enterprise
-- เมื่อต้องการ directory sync กับ identity providers
-- เมื่อต้องการ audit logs สำหรับ compliance
-- เมื่อต้องการ multi-tenant organization management
+ใช้ WorkOS สำหรับ enterprise identity platform ด้วย SSO, SAML, directory sync, audit logs, และ admin portal
 
-## Skills Related
+## Scope
 
-- `lang-typescript` - TypeScript programming language
-- `lang-javascript` - JavaScript programming language
+ใช้สำหรับ SSO (SAML/OIDC), directory sync, audit logs, และ multi-tenant organization management
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง WorkOS SDK ด้วย `bun add @workos-inc/node`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/` สำหรับแนวคิดเฉพาะทาง
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า environment variables และ SDK
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ SSO (SAML/OIDC) สำหรับ authentication
+- อ่าน `guide/integration.md` สำหรับ integration
+- ใช้ directory sync สำหรับ sync users และ groups
+- ใช้ webhooks สำหรับ real-time events
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- ใช้ audit logs สำหรับ compliance
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-```
-lib-workos/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── references/                   # เอกสารอ้างอิง
-└── workflows/                    # Workflows สำหรับ automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add @workos-inc/node` สำหรับ installation
+- ใช้ backticks สำหรับ API endpoints, commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ SSO สำหรับ authentication
+- ใช้ directory sync สำหรับ user management
+- ใช้ audit logs สำหรับ compliance
+- ใช้ webhooks สำหรับ real-time events
 
-| Folder | File | Description |
-|--------|------|-------------|
-| **Guide** | key-concept.md | แนวคิดหลัก - SSO, Directory Sync, Audit Logs |
-| **Guide** | how-it-works.md | สถาปัตยกรรม - SDK, OAuth, Webhooks |
-| **Guide** | features.md | ฟีเจอร์ทั้งหมด - SSO, Magic Link, MFA |
-| **Guide** | installation.md | การติดตั้ง - npm, environment setup |
-| **Guide** | configuration.md | การตั้งค่า - Environment variables, SDK |
-| **Guide** | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| **Guide** | best-practices.md | แนวทางปฏิบัติที่ดี - Security, Error handling |
-| **Guide** | integration.md | การเชื่อมต่อกับ frameworks และ systems |
-| **Guide** | architecture.md | สถาปัตยกรรมระบบ WorkOS |
-| **Reference** | website.md | Official website และ documentation |
-| **Reference** | api.md | Programmatic API - Node.js SDK |
-| **Reference** | configuration.md | Configuration options - SDK config |
+## Expected Outcome
 
-## Quick Start
-
-```bash
-# Install SDK
-bun add @workos-inc/node
-
-# Configure environment
-WORKOS_API_KEY=sk_xxxxxxxx
-WORKOS_CLIENT_ID=client_xxxxxx
-```
-
-## Key Features
-
-| Feature | Description |
-|---------|-------------|
-| **SSO (SAML/OIDC)** | Single sign-on with identity providers |
-| **Directory Sync** | Sync users and groups from IdP |
-| **Audit Logs** | Track user actions for compliance |
-| **Organizations** | Multi-tenant organization management |
-| **Admin Portal** | Built-in admin dashboard |
-| **Webhooks** | Real-time event notifications |
-
-## Usage Order
-
-1. **Start**: `guide/installation.md` → `guide/quick-start.md`
-2. **Learn**: `guide/key-concept.md` → `guide/how-it-works.md` → `guide/features.md`
-3. **Configure**: `guide/configuration.md`
-4. **Reference**: `references/cli.md` → `references/api.md`
-5. **Best Practices**: `guide/best-practices.md`
+- SSO ที่ configured อย่างถูกต้อง
+- Directory sync ที่ automated
+- Audit logs ที่ comprehensive
+- Compliance ที่ meets requirements

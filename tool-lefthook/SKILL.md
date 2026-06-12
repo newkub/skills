@@ -1,79 +1,47 @@
-# tool-lefthook
+---
+title: Tool Lefthook
+description: แนวทางการใช้งาน Lefthook สำหรับจัดการ Git hooks อย่างมีประสิทธิภาพ
+auto_execution_mode: 3
+---
 
-## Overview
+## Goal
 
-แนวทางการใช้งาน Lefthook สำหรับจัดการ Git hooks อย่างมีประสิทธิภาพ
+ใช้งาน Lefthook สำหรับจัดการ Git hooks อย่างมีประสิทธิภาพ
 
+## Scope
 
-## When to use
+ใช้สำหรับจัดการ Git hooks อย่างมีประสิทธิภาพ, automate code quality checks, enforce commit message standards, และ run tests ก่อน push
 
+## Execute
 
+- ติดตั้ง Lefthook
+- Initialize ใน project
+- รัน hooks ด้วยตนเอง
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ tool integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-## Skills Related
+## Rules
 
+- ใช้ `bun add -D lefthook` สำหรับติดตั้ง
+- ใช้ `bunx lefthook install` สำหรับ initialize
+- ใช้ `bunx lefthook run` สำหรับรัน hooks
+- กำหนด hooks ใน `lefthook.yml`
+- ใช้ backticks สำหรับ commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
+## Expected Outcome
 
-## References
-
-
-## What is Lefthook?
-
-Lefthook เป็น Git hooks manager ที่รวดเร็วและทรงพลัง เขียนด้วย Go สามารถรัน commands แบบ parallel และรองรับหลายภาษา (Node.js, Ruby, Python, Go, etc.)
-
-## File Structure
-
-| Folder | Description |
-|--------|-------------|
-| guide/ | Guides และ tutorials สำหรับการใช้งาน |
-| references/ | References สำหรับ CLI, configuration และ API |
-
-## Quick Start
-
-```bash
-# Install lefthook
-npm install lefthook
-
-# Initialize in project
-npx lefthook install
-
-# Run hooks manually
-npx lefthook run pre-commit
-```
-
-## Core Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Hooks** | Scripts ที่รันเมื่อ Git events เกิดขึ้น |
-| **lefthook.yml** | Configuration file สำหรับกำหนด hooks |
-| **Parallel Execution** | รันหลาย commands พร้อมกัน |
-| **Remote Configs** | รองรับ extends จาก remote configs |
-
-## Guide Files
-
-| File | Description |
-|------|-------------|
-| [installation.md](guide/installation.md) | วิธีติดตั้ง Lefthook |
-| [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งาน Lefthook อย่างรวดเร็ว |
-| [key-concept.md](guide/key-concept.md) | แนวคิดหลักของ Lefthook |
-| [how-it-works.md](guide/how-it-works.md) | หลักการทำงานและ architecture |
-| [features.md](guide/features.md) | Features ทั้งหมดของ Lefthook |
-| [configuration.md](guide/configuration.md) | การตั้งค่า Lefthook |
-| [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-| [integration.md](guide/integration.md) | การรวมกับ tools อื่นๆ |
-| [architecture.md](guide/architecture.md) | Architecture ของ Lefthook |
-
-## Reference Files
-
-| Folder | Files |
-|--------|-------|
-| references/ | [cli.md](references/cli.md) - Lefthook CLI commands |
-| references/ | [configuration.md](references/configuration.md) - Configuration options |
-| references/ | [api.md](references/api.md) - Programmatic API |
-| references/ | [website.md](references/website.md) - Official website และ resources |
-
-## Version
-
-- Current: v1.x (latest stable)
-- Website: https://lefthook.dev
-- GitHub: https://github.com/evilmartians/lefthook
+- Git hooks ที่ automated
+- Code quality ที่ enforced
+- Commit messages ที่ standardized
+- Tests ที่ run ก่อน push

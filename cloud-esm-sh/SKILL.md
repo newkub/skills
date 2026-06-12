@@ -1,35 +1,67 @@
 ---
-name: esm.sh
+title: esm.sh
 description: CDN สำหรับ ES Modules ที่ให้บริการโหลด npm packages ผ่าน ESM format โดยตรงบน browser รองรับ tree-shaking, การ bundle และ optimize อัตโนมัติ
+auto_execution_mode: 3
 ---
 
-# esm.sh
+## Goal
 
-esm.sh เป็น CDN สำหรับ ES Modules ที่ให้บริการโหลด npm packages ผ่าน ESM format โดยตรงบน browser รองรับ tree-shaking, การ bundle และ optimize อัตโนมัติ
+ใช้ esm.sh CDN สำหรับโหลด ES Modules บน browser โดยไม่ต้อง bundler
 
-## When to use
+## Scope
 
-- ต้องการใช้ ES Modules บน browser โดยไม่ต้อง bundler
-- ต้องการ tree-shaking เพื่อลด bundle size
-- ต้องการ import จาก npm โดยตรง
-- ต้องการ TypeScript support
-- ต้องการโหลด modules แบบ lazy loading
+ใช้สำหรับการโหลด npm packages ผ่าน ESM format บน browser ด้วย tree-shaking และ optimization อัตโนมัติ
 
-## Skills Related
+## Execute
+
+- Import modules ด้วย URL format: `import React from 'https://esm.sh/react@18'`
+- ใช้ query parameters สำหรับ configuration เช่น `?dev` สำหรับ development mode
+- ใช้ `?deps` สำหรับ external dependencies
+- Pin version เสมอเพื่อ stability
+- ใช้ `?external` สำหรับ peer dependencies
+- Test ใน production ก่อน deploy
+
+## Rules
+
+- ใช้ URL format: `https://esm.sh/package@version`
+- ใช้ `?dev` สำหรับ development mode
+- ใช้ `?deps` สำหรับ external dependencies
+- Pin version เสมอเพื่อ stability
+- ใช้ `?external` สำหรับ peer dependencies
+- Test ใน production ก่อน deploy
+
+## Expected Outcome
+
+- Bundle size ที่เล็กลงด้วย tree-shaking
+- Loading performance ที่ดีขึ้น
+- Development workflow ที่ง่ายขึ้น
+
+## โครงสร้าง Directory
+
+```
+cloud-esm-sh/
+├── SKILL.md
+├── guide/
+├── key-concepts/
+├── principles/
+├── references/
+├── workflows/
+├── templates/
+└── scripts/
+```
+
+## หมวดหมู่ไฟล์
+
+- `SKILL.md` - ไฟล์หลักของ skill
+- `guide/` - คู่มือการใช้งานและ best practices
+- `key-concepts/` - แนวคิดสำคัญเกี่ยวกับ esm.sh CDN
+- `principles/` - หลักการในการใช้ esm.sh
+- `references/` - เอกสารอ้างอิงและ API documentation
+- `workflows/` - workflows สำหรับ automation
+- `templates/` - templates สำหรับเริ่มต้น
+- `scripts/` - scripts สำหรับ automation
 
 ## References
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | [guide/key-concept.md](guide/key-concept.md) | Concept หลักของ esm.sh |
-| 2 | [guide/how-it-works.md](guide/how-it-works.md) | วิธีการทำงานภายใน |
-| 3 | [guide/features.md](guide/features.md) | คุณสมบัติต่างๆ |
-| 4 | [guide/installation.md](guide/installation.md) | วิธีติดตั้งและใช้งาน |
-| 5 | [guide/configuration.md](guide/configuration.md) | ตัวเลือกการตั้งค่า |
-| 6 | [guide/quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| 7 | [guide/best-practices.md](guide/best-practices.md) | Best practices และคำแนะนำ |
-| 8 | [guide/integration.md](guide/integration.md) | การเชื่อมต่อกับระบบอื่น |
-| 9 | [references/website.md](references/website.md) | เว็บไซต์และเอกสารอ้างอิง |
-| 10 | [references/sitemap.md](references/sitemap.md) | แผนผังเอกสาร |
-| 11 | [references/api.md](references/api.md) | เอกสาร API |
-| 12 | [workflows/setup-esm-sh.md](workflows/setup-esm-sh.md) | Workflow สำหรับตั้งค่า esm.sh |
+- [esm.sh Website](https://esm.sh)
+- [Documentation](https://esm.sh/docs)

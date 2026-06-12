@@ -1,40 +1,54 @@
 ---
-name: lib-zaidan-ui
+title: Zaidian UI
 description: Shadcn UI registry สำหรับ SolidJS - collection ของ accessible, customizable components ที่ built with Kobalte, Corvu และ Tailwind CSS
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ UI components สำหรับ SolidJS
-- เมื่อต้องการ accessible components
-- เมื่อต้องการ customizable components
-- เมื่อต้องการ copy-paste components
+ใช้ Zaidian UI สำหรับ UI components สำหรับ SolidJS ด้วย accessible, customizable components ที่ built with Kobalte, Corvu, และ Tailwind CSS
 
-## Skills Related
+## Scope
 
-- `/lib-solidjs` - SolidJS library
-- `/lib-shadcn-solid` - Shadcn UI for SolidJS
+ใช้สำหรับสร้าง UI components ด้วย Zaidan UI registry บน SolidJS
 
+## Execute
 
-## References
+- ติดตั้ง Zaidian UI สำหรับ SolidJS
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/` สำหรับแนวคิดเฉพาะทาง
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ registry สำหรับ add components
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- Customize components ตามความต้องการ
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `principles/` สำหรับหลักการ
+- ใช้ accessible components
+- อ่าน `guide/integration.md` สำหรับ SolidJS integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ registry สำหรับ add components
+- ใช้ copy-to-own pattern เสมอ
+- ใช้ Kobalte และ Corvu สำหรับ accessible primitives
+- ใช้ Tailwind CSS สำหรับ styling
+- ใช้ backticks สำหรับ commands, components
+- ใช้ code blocks สำหรับ component examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ accessible components เสมอ
+- Customize components ตามความต้องการ
 
-### guide/
+## Expected Outcome
 
-- **key-concept.md** - แนวคิดหลักของ Zaidan UI, Shadcn UI pattern, และ component registry
-- **how-it-works.md** - วิธีการทำงานของ Kobalte, Corvu, และ Tailwind CSS integration
-- **features.md** - ฟีเจอร์หลักของ Zaidan UI
-- **installation.md** - วิธีการติดตั้งและ setup
-- **configuration.md** - การตั้งค่าและ customization
-- **quick-start.md** - เริ่มต้นใช้งานอย่างรวดเร็ว
-- **best-practices.md** - best practices สำหรับการใช้งาน
-- **integration.md** - การเชื่อมต่อกับ SolidJS projects
-- **architecture.md** - สถาปัตยกรรมของ Zaidan UI
-
-### references/
-
-- **website.md** - เอกสารและ resources จากเว็บไซต์
-- **api.md** - API reference และ component props
-- **configuration.md** - ตัวเลือกการตั้งค่า
+- UI components ที่ accessible และ customizable
+- Code ที่ copy-to-own และ maintainable
+- Integration ที่ smooth กับ SolidJS
+- Components ที่ follow accessibility best practices

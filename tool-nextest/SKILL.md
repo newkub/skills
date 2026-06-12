@@ -1,36 +1,45 @@
 ---
-name: tool-nextest
+title: Tool Nextest
 description: Next-generation test runner for Rust with faster execution, per-test isolation, and CI support
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ test runner ที่เร็วกว่า cargo test
-- เมื่อต้องการ per-test isolation
-- เมื่อต้องการ CI support ระดับหนึ่ง
-- เมื่อต้องการ retry policies และ test groups
+ใช้งาน Nextest สำหรับ test runner ที่เร็วกว่า cargo test
 
-## Skills Related
+## Scope
 
-- `/lang-rust` - Rust programming language
-- `/tool-cargo` - Cargo package manager
+ใช้สำหรับ test runner ที่เร็วกว่า cargo test, per-test isolation, CI support ระดับหนึ่ง, retry policies และ test groups
 
+## Execute
 
-## References
+- ติดตั้ง Nextest ตาม guide/installation.md
+- รัน tests ด้วย Nextest
+- ตั้งค่า Nextest ตาม guide/configuration.md
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ tool integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ Nextest แทน cargo test สำหรับ performance
+- ใช้ per-test isolation สำหรับ reliability
+- ใช้ retry policies สำหรับ flaky tests
+- ใช้ test groups สำหรับ organization
+- ใช้ backticks สำหรับ commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|-----------|------|-----------|
-| **guide/** | key-concept.md | แนวคิดหลักของ Nextest และความแตกต่างจาก cargo test |
-| | how-it-works.md | วิธีการทำงานของ Nextest พร้อม diagram |
-| | features.md | ฟีเจอร์หลัก เช่น test isolation, retry policies, test groups |
-| | installation.md | วิธีติดตั้งและ setup |
-| | configuration.md | การตั้งค่าผ่าน .config/nextest.toml |
-| | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| | best-practices.md | best practices สำหรับการใช้งาน Nextest |
-| | integration.md | การเชื่อมต่อกับ CI/CD และ tools อื่นๆ |
-| **references/** | website.md | เว็บไซต์อย่างเป็นทางการและเอกสาร |
-| | cli.md | CLI commands และ options |
-| | configuration.md | Configuration options และ profiles |
+## Expected Outcome
+
+- Test runner ที่เร็วกว่า cargo test
+- Per-test isolation สำหรับ reliability
+- CI support ระดับหนึ่ง
+- Retry policies และ test groups ที่ efficient

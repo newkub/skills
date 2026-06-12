@@ -1,82 +1,47 @@
 ---
-name: runtime-bun
+title: Runtime Bun
 description: Bun JavaScript runtime - all-in-one toolkit สำหรับ JavaScript/TypeScript ที่เร็วกว่า Node.js 10-20 เท่า
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- ต้องการประสิทธิภาพสูงกว่า Node.js
-- ต้องการ TypeScript zero-config
-- ต้องการ package manager ที่เร็วกว่า npm
-- ต้องการ bundler ในตัว
-- ต้องการ test runner ในตัว
-- ต้องการ migrate จาก Node.js
+ใช้ Bun JavaScript runtime สำหรับพัฒนาและรันโปรเจกต์ JavaScript/TypeScript ด้วยประสิทธิภาพสูง
 
-## Skills Related
+## Scope
 
-- `/runtime-node` - Node.js JavaScript runtime ที่ใช้ Chrome V8 engine
+ใช้สำหรับโปรเจกต์ที่ต้องการประสิทธิภาพสูงกว่า Node.js หรือต้องการ all-in-one toolkit
 
-## โครงสร้าง Directory
+## Execute
 
-```
-runtime-bun/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ
-├── principles/                   # หลักการ
-├── references/                   # เอกสารอ้างอิง
-└── workflows/                    # Workflows สำหรับ automation
-```
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/installation.md` สำหรับวิธีการติดตั้ง
+- อ่าน `key-concepts/key-concepts.md` สำหรับพื้นฐาน
+- ทำตาม `workflows/setup-project.md` สำหรับตั้งค่าโปรเจกต์
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `guide/structure.md` สำหรับโครงสร้างโปรเจกต์
+- อ่าน `guide/features.md` สำหรับคุณสมบัติหลัก
+- อ่าน `guide/best-practices.md` สำหรับแนวทางปฏิบัติที่ดี
+- อ่าน `principles/` สำหรับหลักการต่างๆ
+- อ่าน `guide/performance.md` สำหรับประสิทธิภาพและการ optimize
+- อ่าน `principles/performance.md` สำหรับ performance principles
+- ทำตาม `workflows/migrate-from-node.md` สำหรับ migrate จาก Node.js
+- อ่าน `guide/migration.md` สำหรับรายละเอียดการ migrate
+- ดู `references/api.md` สำหรับ API reference
+- ดู `references/cli.md` สำหรับคำสั่ง CLI
+- ดู `references/website.md` สำหรับเอกสารอย่างเป็นทางการ
 
-## หมวดหมู่ไฟล์
+## Rules
 
-### guide/
+- ใช้ `bun` สำหรับ run scripts
+- ใช้ `bun add` สำหรับ install dependencies
+- ใช้ `bunx` สำหรับ run packages
+- ใช้ TypeScript เสมอ
+- ใช้ native APIs อย่างเหมาะสม
+- ใช้ performance optimization techniques
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ Bun |
-| 2 | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-| 3 | [configuration.md](guide/configuration.md) | การตั้งค่าและ configuration |
-| 4 | [ecosystem.md](guide/ecosystem.md) | Ecosystem และ tools |
-| 5 | [features.md](guide/features.md) | คุณสมบัติหลักของ Bun |
-| 6 | [how-it-works.md](guide/how-it-works.md) | อธิบายการทำงานของ Bun พร้อม diagram |
-| 7 | [installation.md](guide/installation.md) | วิธีการติดตั้ง Bun |
-| 8 | [integration.md](guide/integration.md) | การเชื่อมต่อกับ tools และ frameworks |
-| 9 | [migration.md](guide/migration.md) | การ migrate จาก Node.js ไป Bun |
-| 10 | [patterns.md](guide/patterns.md) | Patterns และ best practices สำหรับ Bun |
-| 11 | [performance.md](guide/performance.md) | ประสิทธิภาพและการ optimize |
-| 12 | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| 13 | [security.md](guide/security.md) | ความปลอดภัยและ best practices |
-| 14 | [structure.md](guide/structure.md) | โครงสร้างโปรเจกต์และการจัดระเบียบไฟล์ |
-| 15 | [testing.md](guide/testing.md) | การทดสอบด้วย Bun test runner |
-| 16 | [troubleshooting.md](guide/troubleshooting.md) | การแก้ปัญหาที่พบบ่อย |
+## Expected Outcome
 
-### key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [key-concepts.md](key-concepts/key-concepts.md) | Core concepts และพื้นฐานของ Bun |
-
-### principles/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [error-handling.md](principles/error-handling.md) | Error handling patterns |
-| 2 | [naming-conventions.md](principles/naming-conventions.md) | Naming conventions |
-| 3 | [performance.md](principles/performance.md) | Performance principles |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [api.md](references/api.md) | API reference ของ Bun globals และ built-in modules |
-| 2 | [cli.md](references/cli.md) | คำสั่ง CLI ของ Bun |
-| 3 | [sitemap.md](references/sitemap.md) | Sitemap ของเอกสาร Bun |
-| 4 | [website.md](references/website.md) | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-
-### workflows/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [setup-project.md](workflows/setup-project.md) | ตั้งค่าโปรเจกต์ด้วย Bun |
-| 2 | [migrate-from-node.md](workflows/migrate-from-node.md) | migrate จาก Node.js ไป Bun |
+- Projects ที่ run ได้รวดเร็ว
+- Development ที่ efficient ด้วย all-in-one toolkit
+- Migration จาก Node.js ที่ smooth

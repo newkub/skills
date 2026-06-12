@@ -1,104 +1,66 @@
 ---
-name: lib-mastra
+title: Mastra
 description: Comprehensive Mastra framework guide for building agents, workflows, tools, memory, workspaces, and storage with current APIs
+auto_execution_mode: 3
 ---
 
-# lib-mastra
+## Goal
 
-## When to use
+ใช้ Mastra framework สร้าง AI agents, workflows, tools, memory, workspaces, และ storage ด้วย TypeScript
 
-- เมื่อต้องการสร้าง AI agents ด้วย TypeScript
-- เมื่อต้องการใช้งาน Mastra framework สำหรับ building agents, workflows, tools, memory, workspaces, และ storage
-- เมื่อต้องการใช้งาน Mastra API สำหรับ documentation lookup, API verification, TypeScript setup, common errors, migrations, และ `mastra api` CLI tasks
-- เมื่อต้องการเชื่อมต่อ external APIs หรือ services ผ่าน Mastra
+## Scope
 
-## Skills Related
+ใช้สำหรับ building AI agents, workflows, tools, memory, workspaces, และ storage ด้วย Mastra framework
 
-- `lib-agents-sdk` - Build AI agents on Cloudflare Workers (similar concept but different platform)
+## Execute
 
-## โครงสร้าง Directory
+- ติดตั้ง Mastra ด้วย `bun add @mastra/core`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/agent.md` สำหรับ agent concept
+- อ่าน `key-concepts/workflow.md` สำหรับ workflow concept
+- อ่าน `key-concepts/tool.md` สำหรับ tool concept
+- อ่าน `key-concepts/memory.md` สำหรับ memory concept
+- อ่าน `key-concepts/workspace.md` สำหรับ workspace concept
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า Mastra configuration
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `principles/agent-design.md` สำหรับ agent design
+- ใช้ `workflows/create-agent.md` สำหรับสร้าง agent
+- อ่าน `principles/workflow-orchestration.md` สำหรับ workflow orchestration
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ `workflows/create-workflow.md` สำหรับสร้าง workflow
+- อ่าน `principles/tool-integration.md` สำหรับ tool integration
+- อ่าน `guide/integration.md` สำหรับ service integration
+- ใช้ `workflows/integrate-tool.md` สำหรับ integration tool
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/performance.md` สำหรับ performance optimization
+- อ่าน `guide/security.md` สำหรับ security considerations
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+- อ่าน `references/api.md` สำหรับ API reference
+- อ่าน `references/cli.md` สำหรับ CLI commands
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+## Rules
 
-```
-lib-mastra/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+- ใช้ `bun add @mastra/core` สำหรับ core library
+- ติดตั้ง dependencies ที่จำเป็นตาม documentation
+- ใช้ TypeScript สำหรับ type safety
+- ใช้ backticks สำหรับ `Agent`, `Workflow`, `Tool`, commands
+- ใช้ code blocks สำหรับ agent examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ agent design principles ตาม best practices
+- ใช้ workflows สำหรับ complex orchestration
+- ใช้ tools สำหรับ external integrations
+- ใช้ memory สำหรับ context management
+- ใช้ storage สำหรับ persistent data
+- หลีกเลี่ยง unnecessary API calls
 
-## หมวดหมู่ไฟล์
+## Expected Outcome
 
-### guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [installation.md](guide/installation.md) | วิธีติดตั้ง Mastra และ dependencies ที่จำเป็น |
-| 2 | [key-concept.md](guide/key-concept.md) | Core concepts หลักของ Mastra (Agent, Workflow, Tool, Memory, Storage) |
-| 3 | [how-it-works.md](guide/how-it-works.md) | กลไกภายในของ Mastra framework |
-| 4 | [features.md](guide/features.md) | รายการ features ทั้งหมดของ Mastra |
-| 5 | [configuration.md](guide/configuration.md) | การตั้งค่า configuration และ options ต่างๆ |
-| 6 | [quick-start.md](guide/quick-start.md) | คู่มือเริ่มต้นใช้งานอย่างรวดเร็ว |
-| 7 | [best-practices.md](guide/best-practices.md) | Best practices สำหรับการพัฒนาด้วย Mastra |
-| 8 | [integration.md](guide/integration.md) | วิธี integration กับ tools และ services อื่นๆ |
-| 9 | [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ Mastra framework |
-| 10 | [structure.md](guide/structure.md) | โครงสร้าง project และ folder layout |
-| 11 | [performance.md](guide/performance.md) | ประสิทธิภาพและการ optimize |
-| 12 | [security.md](guide/security.md) | ความปลอดภัยและ security considerations |
-| 13 | [migration.md](guide/migration.md) | วิธี migration จาก version เก่า |
-| 14 | [ecosystem.md](guide/ecosystem.md) | Ecosystem และ tools ที่เกี่ยวข้อง |
-| 15 | [testing.md](guide/testing.md) | วิธี testing สำหรับ Mastra applications |
-| 16 | [patterns.md](guide/patterns.md) | Design patterns สำหรับ Mastra |
-| 17 | [troubleshooting.md](guide/troubleshooting.md) | การแก้ไขปัญหาที่พบบ่อย |
-
-### key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [agent.md](key-concepts/agent.md) | Agent concept และการใช้งาน |
-| 2 | [workflow.md](key-concepts/workflow.md) | Workflow concept และ orchestration |
-| 3 | [tool.md](key-concepts/tool.md) | Tool concept และ integration |
-| 4 | [memory.md](key-concepts/memory.md) | Memory concept และ storage |
-| 5 | [workspace.md](key-concepts/workspace.md) | Workspace concept และ organization |
-
-### principles/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [agent-design.md](principles/agent-design.md) | หลักการออกแบบ agents |
-| 2 | [workflow-orchestration.md](principles/workflow-orchestration.md) | หลักการ orchestration workflows |
-| 3 | [tool-integration.md](principles/tool-integration.md) | หลักการ integration tools |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [website.md](references/website.md) | Official website และ documentation |
-| 2 | [sitemap.md](references/sitemap.md) | Sitemap ของ documentation |
-| 3 | [api.md](references/api.md) | API reference และ documentation |
-| 4 | [cli.md](references/cli.md) | Mastra CLI commands และ usage |
-| 5 | [configuration.md](references/configuration.md) | Configuration options และ reference |
-
-### workflows/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [create-agent.md](workflows/create-agent.md) | สร้าง AI agent ใหม่ |
-| 2 | [create-workflow.md](workflows/create-workflow.md) | สร้าง workflow ใหม่ |
-| 3 | [integrate-tool.md](workflows/integrate-tool.md) | Integration tool เข้ากับ agent |
+- AI agents ที่ well-designed และ maintainable
+- Workflows ที่ orchestrated อย่าง efficient
+- Tools ที่ integrated อย่าง seamless
+- Memory และ storage ที่ managed อย่าง proper

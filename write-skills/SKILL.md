@@ -4,77 +4,115 @@ description: มาตรฐานการเขียนและจัดโ�
 auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-ใช้ workflow นี้เมื่อต้องสร้างหรือแก้ไข Devin Skills ให้เป็นมาตรฐานเดียวกัน
+สร้างหรือแก้ไข Devin Skills ให้เป็นมาตรฐานเดียวกัน เพื่อให้ maintainable และ consistent ทั่วทั้ง workspace
 
-- สร้าง skill ใหม่
-- แก้ไข skill ที่มีอยู่ให้ตรงกับมาตรฐานใหม่
-- อัปเดต skill ให้มี folder structure ที่ consistent
-- เขียน content ตามมาตรฐาน quality
-- ปรับปรุงคุณภาพ skill ที่มีอยู่
+## Scope
 
-## Skills Related
-
-- `/write-windsurf-global-workflows` - เขียน global workflows
-- `/follow-content-quality` - เขียน content ตามมาตรฐาน
-- `/follow-principles-engineering` - เขียนโค้ดตาม software engineering principles
-- `/follow-architecture` - จัดโครงสร้างตาม architecture pattern
-- `/follow-ts` - เขียน TypeScript ตาม best practices
+ใช้สำหรับสร้างหรือแก้ไข Devin Skills ทุกประเภท
 
 ## Execute
 
-ทำตาม execute steps ใน `.devin/execute.md` โดยอ้างอิง rules จาก `.devin/rules/`
+### 1. Determine Skill Type
 
-## References
+ระบุ skill type จาก prefix ชื่อ folder
 
-### key-concepts/
+- Skill types: `guide-`, `lang-`, `lib-`, `framework-`, `runtime-`, `cloud-`, `create-`, `tool-`, `cli-`, `tui-`, `flow-`, `general-`
+- ใช้ skill type เพื่อกำหนด folder และ file ที่ต้องการ
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | skill-types.md | Skill type classification และ structure |
+### 2. Research Before Writing
 
-### principles/
+ค้นหาข้อมูลเกี่ยวกับ skill ที่จะเขียน
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | single-responsibility.md | Single responsibility principle สำหรับ files |
+- ใช้ CRW สำหรับ web research และ documentation
+- ค้นหาใน package registries ตามภาษาที่เกี่ยวข้อง
+- ใช้ DeepWiki สำหรับ GitHub repositories
+- ใช้ Context7 สำหรับ library documentation
+- ตรวจสอบ source reputation และ information freshness
+- สรุป findings ที่สำคัญก่อนเขียน
 
-### guide/
+### 3. Create Directory Structure
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | best-practices.md | Best practices สำหรับการเขียน skills |
-| 2 | architecture.md | โครงสร้างของ skills |
-| 3 | configuration.md | การตั้งค่า skills |
+สร้าง folders ตามมาตรฐาน
 
-### references/
+- `SKILL.md` - REQUIRED (index file)
+- `guide/` - OPTIONAL (guides และ best practices)
+- `key-concepts/` - OPTIONAL (แนวคิดสำคัญ)
+- `principles/` - OPTIONAL (หลักการ)
+- `references/` - OPTIONAL (references และ API docs)
+- `workflows/` - OPTIONAL (workflows สำหรับ automation)
+- `templates/` - OPTIONAL (templates สำหรับเริ่มต้น)
+- `scripts/` - OPTIONAL (scripts สำหรับ automation)
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | api.md | API documentation สำหรับ skill types |
-| 2 | cli.md | CLI commands และ usage |
-| 3 | website.md | Link ไปยัง official documentation |
-| 4 | sitemap.md | Sitemap ของ documentation |
+### 4. Write SKILL.md Index
 
-### workflows/
+เขียน index file ตามมาตรฐาน `/write-windsurf-global-workflows`
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | write-skills.md | สร้าง skill ใหม่ |
-| 2 | update-skills.md | อัปเดต skill ที่มีอยู่ |
-| 3 | improve-skills.md | ปรับปรุงคุณภาพ skill ตามมาตรฐาน |
+### 5. Write Content Files
 
-### .devin/
+เขียน content files ตามมาตรฐาน
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | goal.md | Goal ของ skill |
-| 2 | scope.md | Scope และ execute steps |
-| 3 | execute.md | Execute steps ทั้งหมด |
-| 4 | expected.md | Expected outcome |
-| 5 | rules/always-on/ | Structure files ที่ต้องมีเสมอ |
-| 6 | rules/model_decision/ | Template files ที่ model ตัดสินใช้ |
-| 7 | rules/glob/ | Files ที่ใช้ glob patterns |
-| 8 | workflows/ | Workflow files สำหรับ task automation |
+- ทำตามมาตรฐาน `/write-markdown` สำหรับทุกไฟล์ `.md`
+- เนื้อหาครอบคลุมและอ่านง่าย ใช้ format ที่เหมาะสม
+- เวลาเขียนเกี่ยวกับการติดตั้ง ให้ใช้ `bun add` หรือ `bun add -D` แทน `npm install` เสมอ
+- ใช้ภาษาไทยสำหรับ `key-concepts/`, `principles/`, `workflows/`
+- ปรับปรุง spacing, indentation, headings ให้สม่ำเสมอ
+- ปรับปรุง headings เป็น Title Case (EN) และรายการเป็น TH
+- ตรวจสอบความถูกต้องของข้อมูล
+
+### 6. Validate And Verify
+
+ตรวจสอบความถูกต้อง
+
+- ตรวจสอบ references ถูกต้อง
+- ตรวจสอบว่าไม่มี conflicts ระหว่าง skills
+- ตรวจสอบโครงสร้างตรงกับมาตรฐาน
+
+## Rules
+
+### Structure And Consistency
+
+- ทุก `SKILL.md` ต้องมี frontmatter: `title`, `description`, `auto_execution_mode: 3`
+- ทุก `SKILL.md` ต้องมี sections: `## Goal`, `## Scope`, `## Execute`, `## Rules`, `## Expected Outcome`
+- `## โครงสร้าง Directory` ต้องอยู่ก่อน `## หมวดหมู่ไฟล์`
+- Goal สอดคล้องกับ skill name, Execute สอดคล้องกับ Goal และ Rules
+- Expected Outcome สอดคล้องกับ Goal
+- ใช้คำศัพท์สม่ำเสมอ
+
+### Content And Style
+
+- หัวข้อภาษาอังกฤษ Title Case, รายการภาษาไทย
+- ใช้ bullet points (-) ชิดซ้ายใน Rules
+- ไฟล์ไม่เกิน 250 บรรทัด
+- ใช้ backticks สำหรับ `tools`, `commands`, `file paths`, `/workflow-name`
+- เขียนเป็นหลักการ how-to
+- ใน Rules สามารถใช้ table, code block ได้
+- terminal commands, architecture ใส่ใน code block
+- examples ต้องสั้นกระชับ
+
+### File Organization
+
+- `key-concepts/` - เขียนเป็นภาษาไทย แต่ละ concept อยู่ในไฟล์แยกกัน
+- `principles/` - เขียนเป็นภาษาไทย แต่ละ principle อยู่ในไฟล์แยกกัน
+- ใช้ตารางสรุปข้อมูลที่เปรียบเทียบได้
+- ใช้ `codeblock` สำหรับ code examples, configuration, หรือ commands
+- ใช้ `ansi markdown diagrams` สำหรับ flow, architecture, หรือ how-it-works
+- ใช้ชื่อสื่อความหมายโดยตรง ไม่ใช้ prefix ชื่อ skill
+- ใช้ `kebab-case` เสมอ ชื่อไฟล์ต้องสอดคล้องกับเนื้อหา
+- แต่ละไฟล์ต้องไม่เกิน 250 บรรทัด ถ้าเกินให้ refactor แยกไฟล์
+- ทำตาม Execute ตามลำดับเสมอ
+- ใช้ backticks สำหรับ technical terms, file names, commands, หรือ code references
+
+## Expected Outcome
+
+- Devin Skills ที่มีโครงสร้างสม่ำเสมอตามมาตรฐาน
+- Folder structure ที่เป็นระบบและ deterministic
+- SKILL.md index ที่ครบถ้วนและอ่านง่าย
+- File naming ที่สอดคล้องกันทั่วทั้ง skill
+- Content ที่มีคุณภาพและถูกต้องตามมาตรฐาน
+- References ที่ถูกต้องและอ้างอิงไปยังไฟล์ที่มีอยู่จริง
+- Skills ที่ maintainable และ easy to navigate
+
+
 

@@ -1,110 +1,61 @@
 ---
-name: lib-cloudflare-email-service
+title: Cloudflare Email Service
 description: Cloudflare Email Routing and Email Security services for handling incoming and outgoing emails. Load when implementing email routing, forwarding, filtering, security rules, DKIM/SPF/DMARC setup, or email-to-worker integrations. Covers Email Routing API, security rules, address masking, and integration with Workers. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการตั้งค่า Email Routing บน Cloudflare
-- เมื่อต้องการ forward emails ไปยัง external addresses
-- เมื่อต้องการ filter และ process emails ด้วย Workers
-- เมื่อต้องการตั้งค่า email security rules
-- เมื่อต้องการตั้งค่า DKIM, SPF, DMARC
-- เมื่อต้องการ address masking หรือ email aliases
-- เมื่อต้องการ integrate email กับ Cloudflare Workers
+ใช้ Cloudflare Email Service สำหรับจัดการ incoming และ outgoing emails ด้วย Email Routing, Email Security, และ Workers integration
 
-## Skills Related
+## Scope
 
-- `cloud-cloudflare` - Cloudflare platform and services
-- `tool-wrangler` - Cloudflare Workers CLI tool
-- `lang-typescript` - TypeScript programming language
+ใช้สำหรับ Email Routing, forwarding, filtering, security rules, DKIM/SPF/DMARC setup, และ email-to-worker integrations
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ตั้งค่า Email Routing บน Cloudflare dashboard
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/email-routing.md` สำหรับ email routing fundamentals
+- อ่าน `key-concepts/dns-records.md` สำหรับ DNS records
+- อ่าน `key-concepts/security-protocols.md` สำหรับ DKIM, SPF, DMARC
+- อ่าน `guide/configuration.md` สำหรับ DNS configuration
+- อ่าน `references/rules.md` สำหรับ routing rules
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- อ่าน `guide/security.md` สำหรับ security considerations
+- อ่าน `references/security.md` สำหรับ security features
+- ตั้งค่า DKIM, SPF, DMARC ตาม best practices
+- อ่าน `guide/integration.md` สำหรับ Workers integration
+- อ่าน `references/workers-integration.md` สำหรับ integration reference
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `references/api.md` สำหรับ API documentation
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ API สำหรับ programmatic management
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+- อ่าน `principles/email-hygiene.md` สำหรับ email hygiene
+- อ่าน `principles/privacy-first.md` สำหรับ privacy principles
 
-```
-lib-cloudflare-email-service/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ Cloudflare dashboard สำหรับ initial setup
+- ใช้ API สำหรับ programmatic management
+- ตั้งค่า DNS records (MX, TXT, CNAME) อย่างถูกต้อง
+- ตั้งค่า DKIM, SPF, DMARC เสมอ
+- ใช้ security rules สำหรับ filtering
+- ใช้ address masking สำหรับ privacy
+- ใช้ backticks สำหรับ API endpoints, commands, file paths
+- ใช้ code blocks สำหรับ configuration examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ Workers สำหรับ email processing
+- ใช้ caching สำหรับ repeated operations
+- หลีกเลี่ยง unnecessary email forwarding
 
-| Topic | Docs URL | Use for |
-|-------|----------|---------|
-| Email Routing overview | [Email Routing](https://developers.cloudflare.com/email-routing/) | Setup, configuration, concepts |
-| Getting started | [Quick start](https://developers.cloudflare.com/email-routing/get-started/) | First email routing setup |
-| Rules | [Routing rules](https://developers.cloudflare.com/email-routing/configuration/rules/) | Forwarding, catch-all, custom rules |
-| Security | [Email security](https://developers.cloudflare.com/email-routing/security/) | DKIM, SPF, DMARC, security rules |
-| API | [Email Routing API](https://developers.cloudflare.com/api/resources/email-routing/) | Programmatic management |
-| Workers integration | [Email with Workers](https://developers.cloudflare.com/email-routing/email-with-workers/) | Process emails with Workers |
-| Address masking | [Address masking](https://developers.cloudflare.com/email-routing/address-masking/) | Privacy-focused email aliases |
+## Expected Outcome
 
-## หมวดหมู่ไฟล์
-
-### guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | installation.md | Installation and setup of Email Routing |
-| 2 | quick-start.md | Quick start guide for first email routing |
-| 3 | configuration.md | DNS configuration and routing setup |
-| 4 | key-concept.md | Core concepts overview |
-| 5 | how-it-works.md | How Email Routing works internally |
-| 6 | features.md | Available features and capabilities |
-| 7 | architecture.md | System architecture and components |
-| 8 | best-practices.md | Development best practices |
-| 9 | integration.md | Integration with Workers and other services |
-| 10 | migration.md | Migration from other email providers |
-| 11 | patterns.md | Common patterns and recipes |
-| 12 | performance.md | Performance optimization |
-| 13 | security.md | Security considerations |
-| 14 | structure.md | Project structure and organization |
-| 15 | testing.md | Testing strategies |
-| 16 | troubleshooting.md | Common issues and solutions |
-| 17 | ecosystem.md | Related tools and services |
-
-### key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | email-routing.md | Email routing fundamentals |
-| 2 | dns-records.md | DNS records for email (MX, TXT, CNAME) |
-| 3 | security-protocols.md | DKIM, SPF, DMARC protocols |
-
-### principles/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | email-hygiene.md | Email hygiene and deliverability principles |
-| 2 | privacy-first.md | Privacy-first email handling |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | api.md | Complete API documentation |
-| 2 | website.md | Official documentation links |
-| 3 | sitemap.md | Documentation sitemap |
-| 4 | configuration.md | Configuration reference |
-| 5 | rules.md | Routing rules reference |
-| 6 | security.md | Security features reference |
-| 7 | workers-integration.md | Workers integration reference |
+- Email routing ที่ configured อย่างถูกต้อง
+- Security ที่ robust ด้วย DKIM/SPF/DMARC
+- Integration ที่ smooth กับ Workers
+- Email hygiene ที่ดีและ deliverability สูง

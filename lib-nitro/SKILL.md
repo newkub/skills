@@ -1,104 +1,63 @@
 ---
-name: lib-nitro
+title: Nitro
 description: คู่มือการใช้งาน Nitro - full-stack server framework สำหรับ JavaScript/TypeScript ที่รองรับทุก runtime และ deploy target
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ full-stack server framework
-- เมื่อต้องการรองรับทุก runtime (Node.js, Bun, Deno, Edge)
-- เมื่อต้องการ deploy ไปยังหลาย platform
-- เมื่อต้องการ universal rendering
+ใช้ Nitro สร้าง full-stack server applications ที่รองรับทุก runtime (Node.js, Bun, Deno, Edge) และ deploy target
 
-## Skills Related
+## Scope
 
-- `framework-nuxt` - Nuxt framework
-- `runtime-bun` - Bun runtime
-- `runtime-node` - Node.js runtime
+ใช้สำหรับสร้าง server applications, APIs, และ backend services ด้วย Nitro framework
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง Nitro ด้วย `bun add nitropack`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- ใช้ `workflows/setup-nitro.md` สำหรับ setup project ใหม่
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/server-routes.md` สำหรับ server routes
+- อ่าน `key-concepts/middleware.md` สำหรับ middleware
+- อ่าน `key-concepts/storage.md` สำหรับ storage abstraction
+- อ่าน `key-concepts/deployment-presets.md` สำหรับ deployment presets
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า Nitro configuration
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ `workflows/create-nitro-app.md` สำหรับสร้าง application
+- อ่าน `principles/platform-agnostic.md` สำหรับ platform-agnostic design
+- อ่าน `principles/serverless-first.md` สำหรับ serverless-first design
+- อ่าน `guide/performance.md` สำหรับ performance optimization
+- อ่าน `guide/integration.md` สำหรับ framework integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `workflows/deploy-nitro.md` สำหรับ deployment
+- อ่าน `guide/security.md` สำหรับ security considerations
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-```
-lib-nitro/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add nitropack` สำหรับ installation
+- ใช้ `bun add -D @types/node` สำหรับ Node.js types
+- รองรับทุก runtime (Node.js, Bun, Deno, Edge)
+- ใช้ backticks สำหรับ `defineEventHandler()`, `useStorage()`, commands
+- ใช้ code blocks สำหรับ server examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- เขียน code ที่ platform-agnostic เสมอ
+- ใช้ storage abstraction สำหรับ data persistence
+- หลีกเลี่ยง runtime-specific APIs
+- ใช้ serverless deployment presets เมื่อเป็นไปได้
+- ใช้ edge functions สำหรับ low-latency responses
+- หลีกเลี่ยง long-running processes
 
-## หมวดหมู่ไฟล์
+## Expected Outcome
 
-### guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | key-concept.md | Core concepts ของ Nitro |
-| 2 | how-it-works.md | การทำงานภายใน Request lifecycle |
-| 3 | features.md | Features ทั้งหมดของ Nitro |
-| 4 | installation.md | การติดตั้งและ setup โปรเจกต์ |
-| 5 | configuration.md | การตั้งค่า configuration |
-| 6 | quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| 7 | best-practices.md | Best practices สำหรับ production |
-| 8 | integration.md | การ integrate กับ frameworks อื่นๆ |
-| 9 | architecture.md | Architecture และ design decisions |
-| 10 | structure.md | โครงสร้างโปรเจกต์ Nitro |
-| 11 | performance.md | เทคนิคการปรับปรุง performance |
-| 12 | security.md | ความปลอดภัยและ security considerations |
-| 13 | migration.md | วิธี migration จาก frameworks อื่นๆ |
-| 14 | ecosystem.md | Ecosystem และ integrations |
-| 15 | testing.md | การทดสอบ Nitro applications |
-| 16 | patterns.md | Patterns ที่ใช้บ่อย |
-| 17 | troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | Official documentation links |
-| 2 | sitemap.md | แผนผังเอกสารและทรัพยากรที่เกี่ยวข้อง |
-| 3 | api.md | API functions และ utilities |
-| 4 | cli.md | CLI commands |
-| 5 | configuration.md | Configuration options reference |
-
-### key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | server-routes.md | Server routes และ file-based routing |
-| 2 | middleware.md | Middleware และ request processing |
-| 3 | storage.md | Storage abstraction และ drivers |
-| 4 | deployment-presets.md | Deployment presets สำหรับ platforms ต่างๆ |
-
-### principles/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | platform-agnostic.md | Platform-agnostic design principle |
-| 2 | serverless-first.md | Serverless-first design principle |
-
-### workflows/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | setup-nitro.md | ตั้งค่า Nitro framework สำหรับโปรเจกต์ใหม่ |
-| 2 | create-nitro-app.md | สร้าง Nitro application ใหม่ด้วย template |
-| 3 | deploy-nitro.md | Deploy Nitro application ไปยังต่างๆ platform |
+- Server applications ที่ platform-agnostic
+- Code ที่ deploy ได้ทุกที่
+- Performance ที่ optimized สำหรับ serverless
+- Integration ที่ smooth กับ frameworks อื่นๆ

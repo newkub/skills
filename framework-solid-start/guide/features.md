@@ -8,6 +8,11 @@
 | **Multiple Rendering Modes** | รองรับ CSR, SSR, SSG | เลือก rendering ตาม use case ได้อย่างยืดหยุ่น |
 | **Isomorphic Code** | Code เดียวทำงานได้ทั้ง client/server | ลด code duplication และ maintenance |
 | **Vinxi Bundler** | รวม Vite + Nitro | Fast development และ production-ready |
+| **Seroval Serializer** | High-performance serializer | ทำให้ client/server communication เร็วขึ้น |
+| **Server Actions** | Form actions บน server ด้วย code co-location | Full-stack forms ที่ง่ายและปลอดภัย |
+| **Single-Flight Mutations** | ป้องกัน waterfalls เมื่อ update data | Performance ดีขึ้นเมื่อ mutate data |
+| **Request & Resource Deduplication** | ไม่ส่ง requests ซ้ำ | ลด network load และปรับปรุง performance |
+| **Data (pre-)Loading** | Parallel data loading พร้อม preloading strategies | UX ที่ snappy และ responsive |
 | **Unopinionated** | ไม่บังคับ tools ใดๆ เฉพาะ | ใช้ libraries ที่ชอบได้อย่างอิสระ |
 | **API Routes** | Server functions ในไฟล์ routes | Full-stack development ใน project เดียว |
 | **Nested Routes** | Layouts และ nested routing | สร้าง UI ที่ซับซ้อนได้ง่าย |

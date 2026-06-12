@@ -1,32 +1,37 @@
 ---
-name: software-testing
+title: Guide Software Testing
 description: Software testing guide covering testing principles, types, strategies, tools, and best practices for building quality software.
+auto_execution_mode: 3
 ---
 
-# Software Testing
+## Goal
 
-คู่มือการทดสอบซอฟต์แวร์ครอบคลุมหลักการ ประเภทของการทดสอบ เครื่องมือ และแนวทางปฏิบัติที่ดีในการสร้างซอฟต์แวร์ที่มีคุณภาพ
+ให้ผู้ใช้เข้าใจและสามารถทดสอบ software ได้อย่างมีประสิทธิภาพ
 
-## When to use
+## Scope
 
-ใช้เมื่อต้องการ:
-- เรียนรู้หลักการทดสอบซอฟต์แวร์
-- เขียน tests ที่มีคุณภาพ
-- เข้าใจ test pyramid และ test strategies
-- ตั้งค่า testing framework
-- รวม testing เข้ากับ CI/CD
-- ปรับปรุง test coverage
+ใช้สำหรับเรียนรู้หลักการทดสอบซอฟต์แวร์, เขียน tests ที่มีคุณภาพ, เข้าใจ test pyramid และ test strategies, ตั้งค่า testing framework, และรวม testing เข้ากับ CI/CD
 
-## Skills Related
+## Execute
 
-- guide-programming
-- guide-design-patterns
-- guide-software-architecture
+- อ่าน guide/ เพื่อเข้าใจ concepts และ best practices
+- ศึกษา references/ สำหรับ documentation และ resources
+- ปฏิบัติตาม workflows/ สำหรับการทำงานเฉพาะทาง
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-## References
+## Rules
 
-| Resource | URL |
-|----------|-----|
-| Testing Books | Various texts |
-| Testing Blogs | Various platforms |
-| Tool Documentation | Various tools |
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
+
+## Expected Outcome
+
+- เข้าใจ testing principles และ strategies
+- สามารถเขียน tests ที่มีคุณภาพได้
+- สามารถตั้งค่า testing framework ได้
+- สามารถรวม testing เข้ากับ CI/CD ได้

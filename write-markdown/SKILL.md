@@ -1,87 +1,96 @@
 ---
-name: write-markdown
+title: Write Markdown
 description: Markdown templates and formatting guide with 30 templates for writing quality documentation using basic syntax, extended syntax, GitHub Flavored Markdown, and CommonMark.
+auto_execution_mode: 3
 ---
 
-## โครงสร้าง Directory
+## Goal
 
-โครงสร้างโฟลเดอร์สำหรับ Write-Markdown Skill
+เขียนเอกสารด้วย Markdown ที่มีคุณภาพและเป็นมาตรฐาน โดยใช้ templates และ best practices ที่กำหนดไว้
 
-```
-write-markdown/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ
-├── principles/                   # หลักการ
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-write-markdown.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Scope
 
-## หมวดหมู่ไฟล์
+ใช้สำหรับเขียนเอกสารด้วย Markdown ทุกประเภท รวมถึง:
+- เอกสารโปรเจกต์และ documentation
+- README และ guides
+- Blog posts และ articles
+- Technical documentation
 
-### guide/
-ไฟล์เนื้อหาแนะนำสำหรับ Markdown
+## Execute
 
-- `best-practices.md` - Best practices สำหรับ Markdown
-- `features.md` - Features และ syntax ของ Markdown
-- `patterns.md` - Patterns และ document structures
+### 1. Choose Template
 
-### key-concepts/
-ไฟล์แนวคิดสำคัญของ Markdown
+เลือก template ที่เหมาะสมจาก `templates/`
 
-- `syntax.md` - Markdown syntax ทั้ง basic และ extended
-- `formatting.md` - Formatting rules และ conventions
-- `structure.md` - Document structure และ organization
+- ดูรายการ templates ทั้งหมดใน `templates/`
+- เลือก template ตามประเภทเนื้อหาที่ต้องการ
+- คัดลอก template มาใช้เป็นพื้นฐาน
 
-### principles/
-ไฟล์หลักการสำหรับ Markdown
+### 2. Apply Formatting Rules
 
-- `consistency.md` - Consistency principles
-- `clarity.md` - Clarity principles
-- `simplicity.md` - Simplicity principles
+ทำตาม formatting rules จาก `key-concepts/` และ `principles/`
 
-### references/
-ไฟล์เอกสารอ้างอิง
+- อ่าน `key-concepts/syntax.md` สำหรับ basic syntax
+- อ่าน `key-concepts/formatting.md` สำหรับ formatting rules
+- อ่าน `principles/` สำหรับ best practices
+- ใช้ backticks สำหรับ `tools`, `commands`, `file paths`, `/workflow-name`
 
-- `api.md` - API reference สำหรับ Markdown syntax
-- `sitemap.md` - Sitemap ของ documentation
-- `website.md` - Link ไปยัง official websites และ resources
+### 3. Structure Document
 
-### workflows/
-ไฟล์ workflows สำหรับ automation tasks
+จัดโครงสร้างเอกสารตาม `key-concepts/structure.md`
 
-- `write-markdown.md` - Workflow สำหรับเขียน Markdown
+- ใช้ headings ที่เป็น Title Case (EN)
+- ใช้ bullet points สำหรับรายการภาษาไทย
+- จัดเนื้อหาเป็น sections ที่ชัดเจน
+- ใช้ table สำหรับข้อมูลที่เปรียบเทียบได้
 
-## When to use
+### 4. Use Extended Syntax
 
-- เมื่อต้องการเขียนเอกสารด้วย Markdown
-- เมื่อต้องการใช้ templates สำหรับ Markdown elements
-- เมื่อต้องการ standardize Markdown formatting ในทีม
-- เมื่อต้องการเรียนรู้รูปแบบ Markdown ขั้นสูง
-- เมื่อต้องการสร้าง Markdown ด้วยรูปแบบที่ถูกต้อง
-- เมื่อต้องการปรับปรุงคุณภาพของเอกสาร Markdown
+ใช้ extended syntax จาก templates เมื่อจำเป็น
 
-## Skills Related
+- ใช้ code blocks สำหรับ code examples
+- ใช้ diagrams สำหรับ flow หรือ architecture
+- ใช้ admonitions สำหรับ notes และ warnings
+- ใช้ tabs สำหรับ content หลายรูปแบบ
 
-- write-skills
+### 5. Validate Content
 
-## References
+ตรวจสอบคุณภาพเอกสาร
 
-| Resource | URL |
-|----------|-----|
-| Markdown Guide | https://www.markdownguide.org |
-| CommonMark Spec | https://spec.commonmark.org |
-| GitHub Flavored Markdown | https://github.github.com/gfm/ |
+- ตรวจสอบว่าไฟล์ไม่เกิน 250 บรรทัด
+- ตรวจสอบว่าใช้คำศัพท์สม่ำเสมอ
+- ตรวจสอบว่า headings เป็น Title Case (EN)
+- ตรวจสอบว่ารายการเป็นภาษาไทย
+
+## Rules
+
+### Structure And Formatting
+
+- ไฟล์ไม่เกิน 250 บรรทัด
+- Headings เป็น Title Case (EN)
+- รายการเป็นภาษาไทย
+- ใช้ backticks สำหรับ `tools`, `commands`, `file paths`, `/workflow-name`
+- ใช้ bullet points (-) ชิดซ้ายใน Rules
+
+### Content Quality
+
+- เขียนเป็นภาษาไทยสำหรับ `key-concepts/`, `principles/`, `workflows/`
+- Examples ต้องสั้นกระชับ
+- Terminal commands ใส่ใน code block
+- Architecture ใส่ใน code block
+- ใช้คำศัพท์สม่ำเสมอ
+
+### File Organization
+
+- ใช้ `kebab-case` เสมอ
+- ชื่อไฟล์ต้องสอดคล้องกับเนื้อหา
+- ใช้ชื่อสื่อความหมายโดยตรง ไม่ใช้ prefix ชื่อ skill
+- แต่ละไฟล์ต้องไม่เกิน 200 บรรทัด
+
+## Expected Outcome
+
+- เอกสาร Markdown ที่มีคุณภาพและเป็นมาตรฐาน
+- การใช้ templates ที่ถูกต้องและเป็นประโยชน์
+- Formatting ที่สม่ำเสมอทั่วทั้ง workspace
+- เอกสารที่อ่านง่ายและ maintainable
+- การใช้ extended syntax ที่เหมาะสม

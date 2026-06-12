@@ -1,35 +1,52 @@
 ---
-name: tool-mise
+title: Tool Mise
 description: Mise - Development environment manager สำหรับ manage tools และ versions ต่างๆ
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ manage multiple tool versions
-- เมื่อต้องการ switch tools ตาม project
-- เมื่อต้องการ automate environment setup
-- เมื่อต้องการ replace asdf, nvm, pyenv
+จัดการ development environment และ tool versions อย่างมีประสิทธิภาพด้วย mise
 
-## Skills Related
+## Scope
 
-- `/runtime-bun` - Bun runtime
-- `/runtime-node` - Node.js runtime
+ใช้สำหรับจัดการ multiple tool versions, environment setup, และ automation สำหรับ development
 
+## Execute
 
-## References
+- ติดตั้ง mise ตาม guide/installation.md
+- ตั้งค่า configuration ตาม guide/configuration.md
+- ตรวจสอบ installation ด้วย `mise --version`
+- สร้าง `.mise.toml` ใน project root
+- กำหนด tools และ versions ที่ต้องการ
+- ใช้ `mise use <tool>@<version>` สำหรับ quick setup
+- ติดตั้ง tools ด้วย `mise install`
+- ตรวจสอบ versions ด้วย `mise list`
+- Switch versions ด้วย `mise use <tool>@<version>`
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ tool integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `.mise.toml` สำหรับ project config
+- ใช้ `~/.config/mise/config.toml` สำหรับ global config
+- กำหนด tools ใน `.mise.toml` สำหรับ consistency
+- ใช้ `mise exec -- <command>` สำหรับรันใน mise environment
+- ใช้ `mise env` สำหรับดู environment variables
+- ใช้ backticks สำหรับ commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|-----------|------|-----------|
-| **Core** | SKILL.md | Skill index |
-| **Guide** | guide/key-concept.md | แนวคิดหลัก |
-| **Guide** | guide/how-it-works.md | วิธีการทำงาน |
-| **Guide** | guide/features.md | ฟีเจอร์ต่างๆ |
-| **Guide** | guide/installation.md | วิธีติดตั้ง |
-| **Guide** | guide/configuration.md | การตั้งค่า |
-| **Guide** | guide/best-practices.md | แนวทางปฏิบัติที่ดี |
-| **Reference** | references/cli.md | CLI reference |
-| **Reference** | references/configuration.md | Configuration reference |
-| **Reference** | [api.md](references/api.md) | Programmatic API |
+## Expected Outcome
+
+- Development environment ที่ consistent ทั้ง team
+- Tool versions ที่จัดการได้อัตโนมัติ
+- Environment setup ที่รวดเร็วและ repeatable
+- การจัดการ multiple versions ที่ง่ายและปลอดภัย

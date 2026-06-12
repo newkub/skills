@@ -1,102 +1,58 @@
 ---
-name: lib-pinia
+title: Pinia
 description: แนวทางการพัฒนา Pinia ตาม best practices สำหรับ Vue 3 state management ที่มี type-safe, devtools integration และรองรับทั้ง Options API และ Composition API
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ state management สำหรับ Vue 3
-- เมื่อต้องการ type-safe state management
-- เมื่อต้องการ devtools integration
-- เมื่อต้องการรองรับทั้ง Options API และ Composition API
+ใช้ Pinia สำหรับ Vue 3 state management ที่ type-safe, integrate กับ devtools, และรองรับทั้ง Options API และ Composition API
 
-## Skills Related
+## Scope
 
-- `lib-vue` - Vue.js framework
-- `lang-typescript` - TypeScript programming language
+ใช้สำหรับ state management ใน Vue 3 applications ด้วย Pinia
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง Pinia ด้วย `bun add pinia`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/` สำหรับแนวคิดเฉพาะทาง
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า Pinia และ stores
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ Options Store หรือ Setup Store
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- ใช้ state, getters, actions อย่างเหมาะสม
+- ใช้ plugins สำหรับ extend functionality
+- อ่าน `guide/integration.md` สำหรับ Vue integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+- อ่าน `references/api.md` สำหรับ API reference
 
-```
-lib-pinia/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add pinia` สำหรับ installation
+- ใช้ `createPinia()` สำหรับ setup
+- ใช้ Vue 3 เสมอ
+- ใช้ backticks สำหรับ `defineStore()`, `useStore()`, commands
+- ใช้ code blocks สำหรับ store examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ TypeScript สำหรับ type-safe stores
+- ใช้ `storeToRefs()` สำหรับ maintain reactivity
+- ใช้ proper typing สำหรับ state, getters, actions
+- ใช้ computed getters สำหรับ derived state
+- หลีกเลี่ยง unnecessary reactivity
+- ใช้ plugins อย่างเหมาะสม
 
+## Expected Outcome
 
-## หมวดหมู่ไฟล์
-
-### guide/
-
-| File | Description |
-|------|-------------|
-| key-concept.md | Core concepts — Store, State, Getters, Actions, Plugins |
-| how-it-works.md | การทำงานภายใน — Reactivity, Lifecycle, Plugin Pipeline |
-| features.md | Features ทั้งหมด — Options/Setup Store, Subscriptions, Plugins |
-| installation.md | การติดตั้ง — bun add, Vue 3, Nuxt 3 |
-| configuration.md | การตั้งค่า — createPinia, store options, plugins, persist |
-| quick-start.md | คู่มือเริ่มต้นใช้งาน — สร้าง store แรกใน 5 นาที |
-| best-practices.md | Best practices — Store design, State management, Performance |
-| integration.md | การ integrate — Vue Router, Nuxt 3, Vite, Vitest, Persistence |
-| architecture.md | Architecture — Singleton pattern, Reactivity flow, Plugin system |
-
-### references/
-
-| File | Description |
-|------|-------------|
-| update-website.md | Official documentation links และ resources |
-| update-api.md | API reference — createPinia, defineStore, storeToRefs, plugins |
-| update-configuration.md | Configuration options — store options, plugins, TypeScript |
-
-## Key Concepts Summary
-
-| Concept | Description |
-|---------|-------------|
-| **Options Store** | สร้าง store ด้วย `{ state, getters, actions }` |
-| **Setup Store** | สร้าง store ด้วย Composition API (`ref`, `computed`, `function`) |
-| **State** | ข้อมูล reactive ของ store |
-| **Getters** | Computed properties จาก state |
-| **Actions** | Methods สำหรับแก้ไข state (sync/async) |
-| **Plugins** | ขยายความสามารถของทุก store |
-
-## Quick Reference
-
-```typescript
-// Setup Pinia
-import { createPinia } from 'pinia'
-app.use(createPinia())
-
-// Define Store (Setup)
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() { count.value++ }
-  return { count, doubleCount, increment }
-})
-
-// Use in Component
-const store = useCounterStore()
-const { count } = storeToRefs(store)  // keep reactivity
-store.increment()  // call action
-```
+- State management ที่ type-safe และ maintainable
+- Stores ที่ well-organized และ scalable
+- Integration ที่ smooth กับ Vue 3 ecosystem
+- Devtools integration ที่ seamless

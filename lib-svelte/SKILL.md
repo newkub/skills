@@ -1,110 +1,61 @@
 ---
-name: lib-svelte
+title: Svelte
 description: แนวทางการพัฒนา Svelte ตาม best practices สำหรับ compiler-based JavaScript framework ที่มี reactive declarations, stores และ no virtual DOM
+auto_execution_mode: 3
 ---
 
-# lib-svelte
+## Goal
 
-## When to use
+ใช้ Svelte สร้าง web applications ด้วย compiler-based framework, reactive declarations, stores, และ no virtual DOM
 
-- เมื่อต้องการพัฒนา web applications ด้วย Svelte framework
-- เมื่อต้องการใช้ compiler-based framework ที่ไม่มี virtual DOM
-- เมื่อต้องการ reactive programming ด้วย declarations และ stores
-- เมื่อต้องการเขียน components ที่มี performance สูงและ bundle size เล็ก
-- เมื่อต้องการใช้ Svelte กับ TypeScript, Vite, หรือ build tools อื่นๆ
+## Scope
 
-## Skills Related
+ใช้สำหรับสร้าง UI และ web applications ด้วย Svelte framework
 
-- `framework-svelte-kit` - SvelteKit framework
-- `lib-vite` - Vite build tool
-- `lang-typescript` - TypeScript programming language
-- `lang-javascript` - JavaScript programming language
+## Execute
 
-## โครงสร้าง Directory
+- ติดตั้ง Svelte ด้วย `bun add svelte`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- ใช้ `workflows/setup-svelte.md` สำหรับ setup project
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/reactivity.md` สำหรับ reactivity system
+- อ่าน `key-concepts/components.md` สำหรับ component architecture
+- อ่าน `key-concepts/stores.md` สำหรับ state management
+- อ่าน `key-concepts/lifecycle.md` สำหรับ component lifecycle
+- อ่าน `key-concepts/compilation.md` สำหรับ compilation process
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า Svelte configuration
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ `workflows/create-component.md` สำหรับสร้าง components
+- อ่าน `principles/reactive-programming.md` สำหรับ reactive programming
+- อ่าน `principles/component-design.md` สำหรับ component design
+- ใช้ `workflows/use-stores.md` สำหรับ state management
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ framework integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+## Rules
 
-```
-lib-svelte/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+- ใช้ `bun add svelte` สำหรับ installation
+- ใช้ reactive declarations เสมอ
+- ใช้ stores สำหรับ state management
+- ใช้ backticks สำหรับ `$state`, `$derived`, commands
+- ใช้ code blocks สำหรับ component examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- หลีกเลี่ยง virtual DOM
+- ใช้ compile-time optimization
+- ใช้ proper reactivity patterns
+- ใช้ component lifecycle อย่างเหมาะสม
 
-## หมวดหมู่ไฟล์
+## Expected Outcome
 
-### guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | installation.md | การติดตั้งและ setup |
-| 2 | key-concept.md | Core concepts หลัก |
-| 3 | how-it-works.md | วิธีการทำงานของ Svelte |
-| 4 | features.md | Features ทั้งหมด |
-| 5 | configuration.md | การตั้งค่า configuration |
-| 6 | quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| 7 | best-practices.md | Best practices สำหรับการพัฒนา |
-| 8 | integration.md | การเชื่อมต่อกับ tools อื่นๆ |
-| 9 | architecture.md | สถาปัตยกรรมของ Svelte |
-| 10 | structure.md | โครงสร้างโปรเจกต์ |
-| 11 | performance.md | การปรับปรุง performance |
-| 12 | security.md | Security best practices |
-| 13 | migration.md | การ migrate จาก frameworks อื่น |
-| 14 | ecosystem.md | Ecosystem และ tools |
-| 15 | testing.md | การทดสอบ Svelte applications |
-| 16 | patterns.md | Design patterns สำหรับ Svelte |
-| 17 | troubleshooting.md | การแก้ไขปัญหาที่พบบ่อย |
-
-### key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | reactivity.md | Reactivity system ของ Svelte |
-| 2 | components.md | Component architecture |
-| 3 | stores.md | State management ด้วย stores |
-| 4 | lifecycle.md | Component lifecycle |
-| 5 | compilation.md | Compilation process |
-
-### principles/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | reactive-programming.md | Reactive programming principles |
-| 2 | component-design.md | Component design principles |
-| 3 | performance-first.md | Performance optimization principles |
-| 4 | type-safety.md | TypeScript integration principles |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | Official website |
-| 2 | sitemap.md | Sitemap ของ documentation |
-| 3 | api.md | API reference |
-| 4 | cli.md | CLI commands |
-| 5 | configuration.md | Configuration options |
-
-### workflows/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | setup-svelte.md | ตั้งค่า Svelte project |
-| 2 | create-component.md | สร้าง Svelte component |
-| 3 | use-stores.md | ใช้งาน stores |
-| 4 | migrate-to-svelte.md | Migrate จาก frameworks อื่น |
+- Web applications ที่ performant
+- Code ที่ใช้ reactive declarations
+- Performance ที่ optimized ด้วย no virtual DOM
+- State management ที่ clean ด้วย stores

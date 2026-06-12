@@ -12,54 +12,40 @@ auto_execution_mode: 3
 
 ใช้สำหรับการพัฒนา SolidJS applications ที่ต้องการ TypeScript support, server functions และ multi-platform deployment
 
-## โครงสร้าง Directory
+## Directory Structure
 
 ```
 framework-solid-start/
 ├── SKILL.md
 ├── guide/
+│   ├── architecture.md
+│   ├── best-practices.md
+│   ├── configuration.md
+│   └── ...
 ├── key-concepts/
 ├── principles/
 ├── references/
-├── rules/
+│   ├── cli.md
+│   ├── configuration.md
+│   ├── sitemap.md
+│   └── website.md
 └── workflows/
+    └── create-solidstart-app.md
 ```
 
-## หมวดหมู่ไฟล์
+## File Categories
 
 | หมวดหมู่ | ไฟล์ | คำอธิบาย |
 |-----------|------|-----------|
 | Root Files | SKILL.md | Index file สำหรับ Solid Start skill |
-| guide/ | installation.md | วิธีติดตั้ง SolidStart และ dependencies ที่จำเป็น |
-| guide/ | quick-start.md | เริ่มต้นใช้งาน SolidStart อย่างรวดเร็ว |
-| guide/ | key-concept.md | concept หลักของ SolidStart |
-| guide/ | how-it-works.md | วิธีการทำงานของ SolidStart |
-| guide/ | features.md | features และ capabilities ของ SolidStart |
-| guide/ | configuration.md | การตั้งค่าและ configuration ต่างๆ |
-| guide/ | best-practices.md | best practices สำหรับการพัฒนาด้วย SolidStart |
-| guide/ | integration.md | การเชื่อมต่อกับ libraries และ services อื่นๆ |
-| guide/ | architecture.md | architecture และโครงสร้างของ SolidStart |
-| guide/ | structure.md | โครงสร้าง project และ file organization |
-| guide/ | performance.md | การปรับปรุง performance และ optimization |
-| guide/ | security.md | security best practices และ protection |
-| guide/ | migration.md | การ migrate จาก frameworks อื่นๆ |
-| guide/ | ecosystem.md | libraries และ tools ใน SolidStart ecosystem |
-| guide/ | testing.md | การทดสอบ unit, integration, และ E2E |
-| guide/ | patterns.md | design patterns สำหรับ SolidStart |
-| guide/ | troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
-| key-concepts/ | file-based-routing.md | แนวคิด file-based routing และ route types |
-| key-concepts/ | rendering-modes.md | rendering modes (CSR, SSR, SSG) และการเลือกใช้ |
-| key-concepts/ | server-functions.md | server functions และ API routes |
-| principles/ | single-responsibility.md | หลักการ single responsibility สำหรับ components |
-| principles/ | composition-over-inheritance.md | ใช้ composition แทน inheritance |
-| principles/ | explicit-over-implicit.md | ทำให้ dependencies และ behavior ชัดเจน |
-| references/ | website.md | เว็บไซต์และ resources หลักของ SolidStart |
-| references/ | sitemap.md | sitemap ของ documentation |
-| references/ | api.md | API reference สำหรับ SolidStart |
-| references/ | cli.md | CLI commands และ options |
-| references/ | configuration.md | Configuration reference สำหรับ app.config.ts |
-| rules/ | structure-framework.md | โครงสร้างและ organization ของ framework |
-| workflows/ | create-solidstart-app.md | สร้าง SolidStart application ใหม่ |
+| guide/ | architecture.md | Architecture ของ Solid Start |
+| guide/ | best-practices.md | Best practices สำหรับ development |
+| guide/ | configuration.md | Configuration และ setup |
+| references/ | cli.md | CLI documentation |
+| references/ | configuration.md | Configuration reference |
+| references/ | sitemap.md | Sitemap ของ documentation |
+| references/ | website.md | เว็บไซต์และ resources |
+| workflows/ | create-solidstart-app.md | Workflow สำหรับสร้าง Solid Start app |
 
 ## When to use
 
@@ -82,7 +68,7 @@ framework-solid-start/
 ### 1. Create Project
 
 ```bash
-bun create solid-start
+bun create solid@latest
 ```
 
 ### 2. Develop Pages

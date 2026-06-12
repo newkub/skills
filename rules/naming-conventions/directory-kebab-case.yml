@@ -1,9 +1,0 @@
-id: directory-kebab-case
-language: generic
-message: Directory names ควรใช้ kebab-case
-severity: warning
-rule:
-  pattern:
-    regex: "[A-Z]"
-  constraints:
-    isDirectory: true

@@ -1,45 +1,37 @@
 ---
-name: guide-distributed-systems
+title: Guide Distributed Systems
 description: คู่มือ distributed systems รวมถึง CAP theorem, consensus algorithms, distributed transactions, event sourcing, CQRS, และ service mesh
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการเข้าใจ distributed systems concepts
-- เมื่อต้องการ implement consensus algorithms
-- เมื่อต้องการ handle distributed transactions
-- เมื่อต้องการ implement event sourcing หรือ CQRS
-- เมื่อต้องการ design service mesh
+ให้ผู้ใช้เข้าใจและสามารถ design และ implement distributed systems ได้อย่างมีประสิทธิภาพ
 
-## Skills Related
+## Scope
 
-- `/guide-software-design` - distributed architecture
-- `/guide-concurrency-parallelism` - distributed concurrency
-- `/guide-database-design` - distributed databases
-- `/guide-network-programming` - distributed communication
-- `/cloud-cloudflare` - distributed platform
+ใช้สำหรับเข้าใจ distributed systems concepts, implement consensus algorithms, handle distributed transactions, implement event sourcing หรือ CQRS, และ design service mesh
 
-## References
+## Execute
 
-### guide/
+- อ่าน guide/ เพื่อเข้าใจ concepts และ best practices
+- ศึกษา references/ สำหรับ documentation และ resources
+- ปฏิบัติตาม workflows/ สำหรับการทำงานเฉพาะทาง
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | installation.md | วิธีติดตั้งและเตรียม environment สำหรับ distributed systems |
-| 2 | key-concept.md | concept หลักของ distributed systems |
-| 3 | how-it-works.md | วิธีการทำงานของ distributed algorithms |
-| 4 | features.md | features และ capabilities ของ distributed systems |
-| 5 | configuration.md | การตั้งค่าและ configure distributed tools |
-| 6 | quick-start.md | เริ่มต้น distributed systems อย่างรวดเร็ว |
-| 7 | best-practices.md | best practices สำหรับ distributed systems |
-| 8 | cap-theorem.md | CAP theorem และ consistency models |
-| 9 | consensus.md | consensus algorithms (Paxos, Raft) |
-| 10 | patterns.md | distributed patterns (event sourcing, CQRS) |
-| 11 | troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน distributed systems |
+## Rules
 
-### references/
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | เว็บไซต์และ resources สำหรับ distributed systems |
-| 2 | sitemap.md | แผนผังเนื้อหาและ resources |
+## Expected Outcome
+
+- เข้าใจ distributed systems concepts
+- สามารถ implement consensus algorithms ได้
+- สามารถ handle distributed transactions ได้
+- สามารถ design scalable distributed systems ได้

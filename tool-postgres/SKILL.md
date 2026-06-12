@@ -1,84 +1,48 @@
-# tool-postgres
+---
+title: Tool Postgres
+description: แนวทางการใช้งาน PostgreSQL ซึ่งเป็น world's most advanced open source relational database system
+auto_execution_mode: 3
+---
 
-## Overview
+## Goal
 
-แนวทางการใช้งาน PostgreSQL ซึ่งเป็น world's most advanced open source relational database system ที่รองรับ SQL, ACID transactions, MVCC, extensions, JSON support, และ replication
+ใช้งาน PostgreSQL สำหรับ relational database
 
+## Scope
 
-## When to use
+ใช้สำหรับ relational database ที่ powerful, ACID transactions, complex queries, extensions (PostGIS, pgvector, ฯลฯ), และ data integrity และ reliability
 
+## Execute
 
+- เชื่อมต่อ database
+- สร้าง database
+- สร้าง table
+- Insert data
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ tool integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-## Skills Related
+## Rules
 
+- ใช้ `psql` สำหรับ command-line interface
+- ใช้ SQL สำหรับ queries
+- ใช้ transactions สำหรับ ACID compliance
+- ใช้ extensions สำหรับ extend functionality
+- ใช้ backticks สำหรับ commands, SQL keywords
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
+## Expected Outcome
 
-## References
-
-
-## Content Summary
-
-| Folder | File | Description |
-|--------|------|-------------|
-| **guide/** | [key-concept.md](guide/key-concept.md) | แนวคิดพื้นฐาน - ACID, MVCC, Data Types |
-| | [how-it-works.md](guide/how-it-works.md) | หลักการทำงาน - Client/Server, Query Processing |
-| | [features.md](guide/features.md) | Features ทั้งหมด - Indexing, Partitioning |
-| | [installation.md](guide/installation.md) | การติดตั้ง - หลายวิธี |
-| | [configuration.md](guide/configuration.md) | การตั้งค่า - postgresql.conf |
-| | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดีที่สุด |
-| **references/** | [website.md](references/website.md) | เว็บไซต์และแหล่งข้อมูล |
-| | [cli.md](references/cli.md) | psql commands และ utilities |
-| | [configuration.md](references/configuration.md) | ตัวเลือก configuration ทั้งหมด |
-| | [api.md](references/api.md) | Client libraries API |
-
-## Quick Reference
-
-```bash
-# Connect
-psql -U username -d database_name
-
-# Create database
-CREATE DATABASE mydb;
-
-# Connect to database
-\c mydb
-
-# Create table
-CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(100));
-
-# Insert data
-INSERT INTO users (name) VALUES ('John');
-```
-
-## Key Features
-
-| Feature | Description |
-|---------|-------------|
-| **ACID** | Atomicity, Consistency, Isolation, Durability |
-| **MVCC** | Multi-Version Concurrency Control |
-| **Extensions** | PostGIS, pgvector, full-text search |
-| **Replication** | Streaming replication, logical replication |
-| **JSON/JSONB** | JSON support with indexing |
-| **CTE** | Common Table Expressions |
-| **Window Functions** | Analytical queries |
-
-## File Structure
-
-```
-tool-postgres/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   └── best-practices.md
-└── references/
-    ├── website.md
-    ├── cli.md
-    ├── configuration.md
-    └── api.md
-```
+- Database ที่ configured อย่างถูกต้อง
+- Queries ที่ optimized
+- Data integrity ที่ maintained
+- Extensions ที่ integrated อย่างเหมาะสม

@@ -1,133 +1,59 @@
 ---
-name: lib-vitest
+title: Vitest
 description: Vitest - Next Generation Unit Testing Framework สำหรับ Vite ที่รองรับ TypeScript, HMR, และ Jest-compatible API
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ unit testing framework สำหรับ Vite projects
-- เมื่อต้องการ TypeScript support และ HMR
-- เมื่อต้องการ Jest-compatible API
-- เมื่อต้องการ fast test runner
+ใช้ Vitest สำหรับ unit testing ด้วย TypeScript support, HMR, และ Jest-compatible API
 
-## Skills Related
+## Scope
 
-- `lib-vite` - Vite build tool
-- `lang-typescript` - TypeScript programming language
+ใช้สำหรับ unit testing ของ Vite projects ด้วย Vitest framework
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง Vitest ด้วย `bun add -D vitest`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- ใช้ `workflows/setup-vitest.md` สำหรับ setup project
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/test-suite.md` สำหรับ test suite
+- อ่าน `key-concepts/matchers.md` สำหรับ matchers
+- อ่าน `key-concepts/mocking.md` สำหรับ mocking
+- อ่าน `key-concepts/hooks.md` สำหรับ test hooks
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า `vitest.config.ts`
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `workflows/write-test.md` สำหรับการเขียน tests
+- ใช้ `workflows/mock-dependencies.md` สำหรับ mocking
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `principles/test-isolation.md` สำหรับ test isolation
+- อ่าน `principles/arrange-act-assert.md` สำหรับ AAA pattern
+- อ่าน `principles/test-naming.md` สำหรับ test naming
+- อ่าน `guide/integration.md` สำหรับ framework integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-```
-lib-vitest/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add -D vitest` สำหรับ installation
+- ใช้ backticks สำหรับ `describe()`, `it()`, `expect()`, commands
+- ใช้ code blocks สำหรับ test examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ AAA pattern (Arrange, Act, Assert)
+- ใช้ test isolation เสมอ
+- ใช้ proper test naming
+- ใช้ mocking อย่างเหมาะสม
+- ใช้ HMR สำหรับ development
 
-### guide/
+## Expected Outcome
 
-| No | ไฟล์ | คำอธิบาย |
-|----|------|-------------|
-| 1 | installation.md | การติดตั้ง — bun add, Vite, React/Vue |
-| 2 | quick-start.md | คู่มือเริ่มต้นใช้งาน — สร้าง test แรกใน 5 นาที |
-| 3 | key-concepts.md | Core concepts — Test, Suite, Matcher, Mock, Spy |
-| 4 | how-it-works.md | การทำงานภายใน — Vite Integration, Watch Mode, Pool Workers |
-| 5 | features.md | Features ทั้งหมด — Test Types, Matchers, Hooks, Mocking |
-| 6 | configuration.md | การตั้งค่า — vitest.config.ts, environments, coverage |
-| 7 | best-practices.md | Best practices — Test structure, Naming, Organization |
-| 8 | integration.md | การ integrate — Vue, React, TypeScript, Vite |
-| 9 | architecture.md | Architecture — Pool System, Watch Mode, Coverage Engine |
-| 10 | structure.md | โครงสร้าง test files และ organization |
-| 11 | performance.md | Performance characteristics และ optimization |
-| 12 | security.md | Security considerations สำหรับ testing |
-| 13 | migration.md | Migration จาก Jest หรือ testing frameworks อื่น |
-| 14 | ecosystem.md | Ecosystem และ tools ที่เกี่ยวข้องกับ Vitest |
-| 15 | testing.md | Testing strategies และ approaches |
-| 16 | patterns.md | Testing patterns ที่ใช้บ่อย |
-| 17 | troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน Vitest |
-
-### key-concepts/
-
-| No | ไฟล์ | คำอธิบาย |
-|----|------|-------------|
-| 1 | test-suite.md | Test และ Test Suite ใน Vitest |
-| 2 | matchers.md | Matchers สำหรับ assertions ใน Vitest |
-| 3 | mocking.md | Mocking ใน Vitest |
-| 4 | hooks.md | Test Hooks ใน Vitest |
-
-### principles/
-
-| No | ไฟล์ | คำอธิบาย |
-|----|------|-------------|
-| 1 | test-isolation.md | Test Isolation - แต่ละ test ควรเป็นอิสระจากกัน |
-| 2 | arrange-act-assert.md | Arrange-Act-Assert Pattern - โครงสร้าง test ที่ชัดเจน |
-| 3 | test-naming.md | Test Naming - ตั้งชื่อ test ที่ชัดเจนและอธิบาย behavior |
-| 4 | single-responsibility.md | Single Responsibility - แต่ละ test ควร test สิ่งเดียว |
-
-### references/
-
-| No | ไฟล์ | คำอธิบาย |
-|----|------|-------------|
-| 1 | website.md | Official documentation links และ resources |
-| 2 | sitemap.md | Sitemap ของ Vitest documentation |
-| 3 | api.md | API reference — describe, it, expect, vi, mocking |
-| 4 | cli.md | CLI commands และ options |
-| 5 | configuration.md | Configuration options — test config, environments |
-
-### workflows/
-
-| No | ไฟล์ | คำอธิบาย |
-|----|------|-------------|
-| 1 | setup-vitest.md | ติดตั้งและตั้งค่า Vitest ใน project |
-| 2 | write-test.md | เขียน unit tests ด้วย Vitest |
-| 3 | mock-dependencies.md | Mock dependencies สำหรับ unit testing |
-
-## Key Concepts Summary
-
-| Concept | Description |
-|---------|-------------|
-| **Test File** | ไฟล์ที่มี `.test.ts` หรือ `.spec.ts` suffix |
-| **describe** | จัดกลุ่ม tests เป็น test suite |
-| **it/test** | สร้าง individual test case |
-| **expect** | Assertion function สำหรับตรวจสอบค่า |
-| **vi** | Vitest utility functions (mock, spy, stub) |
-| **Matchers** | Functions สำหรับเปรียบเทียบค่า |
-
-## Quick Commands
-
-```bash
-# Run tests in watch mode
-vitest
-
-# Run tests once (CI mode)
-vitest run
-
-# Run with coverage
-vitest run --coverage
-
-# Run specific file
-vitest run src/components/Button.test.ts
-
-# UI mode
-vitest --ui
-```
+- Tests ที่ comprehensive และ maintainable
+- Test isolation ที่ proper
+- Development ที่รวดเร็วด้วย HMR
+- Integration ที่ smooth กับ Vite

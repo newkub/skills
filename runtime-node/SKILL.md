@@ -1,57 +1,46 @@
 ---
-name: runtime-node
+title: Runtime Node
 description: Node.js JavaScript runtime ที่ใช้ Chrome V8 engine สำหรับรัน JavaScript นอก browser รองรับ npm package manager, ระบบ module ที่หลากหลาย และมี ecosystem ใหญ่ที่สุด
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- Web servers และ APIs
-- CLI tools
-- Build tools และ automation
-- Microservices
-- Real-time applications
-- Desktop applications (Electron)
+ใช้ Node.js JavaScript runtime สำหรับพัฒนาและรันโปรเจกต์ JavaScript/TypeScript ด้วย ecosystem ที่ใหญ่ที่สุด
 
-## Skills Related
+## Scope
 
-- `/runtime-bun` - Bun JavaScript runtime ที่เร็วกว่า Node.js
+ใช้สำหรับโปรเจกต์ที่ต้องการ ecosystem ที่ใหญ่และ mature หรือต้องการ compatibility สูง
 
-## หมวดหมู่ไฟล์
+## Execute
 
-### guide/
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/installation.md` สำหรับวิธีการติดตั้ง
+- อ่าน `guide/key-concept.md` สำหรับพื้นฐาน
+- ทำตาม `workflows/setup-project.md` สำหรับตั้งค่าโปรเจกต์
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `guide/structure.md` สำหรับโครงสร้างโปรเจกต์
+- อ่าน `guide/features.md` สำหรับคุณสมบัติหลัก
+- อ่าน `guide/best-practices.md` สำหรับแนวทางปฏิบัติที่ดี
+- อ่าน `guide/integration.md` สำหรับการเชื่อมต่อกับ tools และ frameworks
+- อ่าน `guide/performance.md` สำหรับประสิทธิภาพและการ optimize
+- ทำตาม `workflows/migrate-version.md` สำหรับ migrate ระหว่าง versions
+- อ่าน `guide/migration.md` สำหรับรายละเอียดการ migrate
+- ดู `references/api.md` สำหรับ API reference
+- ดู `references/cli.md` สำหรับคำสั่ง CLI
+- ดู `references/website.md` สำหรับเอกสารอย่างเป็นทางการ
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | [installation.md](guide/installation.md) | วิธีการติดตั้ง Node.js |
-| 2 | [key-concept.md](guide/key-concept.md) | พื้นฐานและหลักการสำคัญของ Node.js |
-| 3 | [how-it-works.md](guide/how-it-works.md) | อธิบายการทำงานของ Node.js พร้อม diagram |
-| 4 | [features.md](guide/features.md) | คุณสมบัติหลักของ Node.js |
-| 5 | [configuration.md](guide/configuration.md) | การตั้งค่าและ configuration |
-| 6 | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| 7 | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-| 8 | [integration.md](guide/integration.md) | การเชื่อมต่อกับ tools และ frameworks |
-| 9 | [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ Node.js |
-| 10 | [structure.md](guide/structure.md) | โครงสร้างโปรเจกต์และการจัดระเบียบไฟล์ |
-| 11 | [performance.md](guide/performance.md) | ประสิทธิภาพและการ optimize |
-| 12 | [security.md](guide/security.md) | ความปลอดภัยและ best practices |
-| 13 | [migration.md](guide/migration.md) | การ migrate ระหว่าง versions |
-| 14 | [ecosystem.md](guide/ecosystem.md) | เครื่องมือและ libraries ใน ecosystem |
-| 15 | [testing.md](guide/testing.md) | การทดสอบด้วย Node.js |
-| 16 | [patterns.md](guide/patterns.md) | Patterns และ best practices สำหรับ Node.js |
-| 17 | [troubleshooting.md](guide/troubleshooting.md) | การแก้ปัญหาที่พบบ่อย |
+## Rules
 
-### references/
+- ใช้ `npm` สำหรับ package management
+- ใช้ `npx` สำหรับ run packages
+- ใช้ CommonJS หรือ ES Modules ตามความเหมาะสม
+- ใช้ TypeScript เสมอ
+- ใช้ proper error handling
+- ใช้ async/await สำหรับ async operations
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | [website.md](references/website.md) | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-| 2 | [sitemap.md](references/sitemap.md) | Sitemap ของเอกสาร Node.js |
-| 3 | [api.md](references/api.md) | API reference ของ Node.js globals และ built-in modules |
-| 4 | [cli.md](references/cli.md) | คำสั่ง CLI ของ Node.js |
+## Expected Outcome
 
-### workflows/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [setup-project.md](workflows/setup-project.md) | ตั้งค่าโปรเจกต์ด้วย Node.js |
-| 2 | [migrate-version.md](workflows/migrate-version.md) | migrate ระหว่าง Node.js versions |
+- Projects ที่ compatible กับ ecosystem ที่ใหญ่
+- Development ที่ stable ด้วย mature runtime
+- Integration ที่ smooth กับ npm ecosystem

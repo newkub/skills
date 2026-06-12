@@ -1,67 +1,51 @@
-# tool-biome
+---
+title: Tool Biome
+description: Guide for using Biome - a fast, all-in-one toolchain for web development with formatting, linting, and code analysis capabilities
+auto_execution_mode: 3
+---
 
-## Overview
+## Goal
 
-Guide for using Biome - a fast, all-in-one toolchain for web development with formatting, linting, and code analysis capabilities.
+ใช้งาน Biome สำหรับ formatting, linting, และ code analysis ใน web projects
 
+## Scope
 
-## When to use
+ใช้สำหรับ setting up formatting และ linting สำหรับ web projects, migrating จาก ESLint + Prettier, fast code quality tools, และ automating code quality ใน CI/CD
 
+## Execute
 
+- ติดตั้ง Biome ด้วย `bun add -D @biomejs/biome`
+- Format source files
+- Lint source files
+- รัน format และ lint พร้อมกัน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `key-concepts/formatter.md` สำหรับแนวคิด formatter
+- อ่าน `key-concepts/linter.md` สำหรับแนวคิด linter
+- อ่าน `key-concepts/import-organization.md` สำหรับแนวคิด import organization
+- อ่าน `principles/performance.md` สำหรับหลักการ performance
+- อ่าน `principles/safety.md` สำหรับหลักการ safety
+- อ่าน `principles/simplicity.md` สำหรับหลักการ simplicity
+- อ่าน `workflows/setup-biome.md` สำหรับการ setup
+- อ่าน `workflows/use-biome.md` สำหรับการใช้งาน
+- อ่าน `references/cli.md` สำหรับ CLI commands
+- อ่าน `references/configuration.md` สำหรับ configuration options
+- อ่าน `references/website.md` สำหรับ official documentation
 
-## Skills Related
+## Rules
 
+- ใช้ `bun add -D @biomejs/biome` สำหรับ installation
+- ใช้ `bunx biome format --write` สำหรับ formatting
+- ใช้ `bunx biome lint` สำหรับ linting
+- ใช้ `bunx biome check --write` สำหรับ format + lint
+- ใช้ backticks สำหรับ commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
+## Expected Outcome
 
-## References
-
-
-## What is Biome?
-
-Biome is a high-performance toolchain for web projects built with Rust. It provides:
-- **Formatter** for JavaScript, TypeScript, JSX, TSX, JSON, CSS, HTML, and GraphQL
-- **Linter** with 200+ rules to catch common mistakes and enforce best practices
-- **Editor integration** via LSP for real-time feedback
-
-## Quick Start
-
-```bash
-# Install Biome
-npm install --save-dev @biomejs/biome
-
-# Format files
-npx biome format --write ./src
-
-# Lint files
-npx biome lint ./src
-
-# Check (format + lint)
-npx biome check --write ./src
-
-# CI mode (read-only, no write)
-npx biome ci ./src
-```
-
-## Core Commands
-
-| Command | Description |
-|---------|-------------|
-| `biome format` | Format source files |
-| `biome lint` | Lint source files |
-| `biome check` | Run format + lint together |
-| `biome ci` | Run in CI mode (non-interactive) |
-
-## Supported Languages
-
-- JavaScript / TypeScript
-- JSX / TSX
-- JSON
-- CSS
-- HTML
-- GraphQL
-
-## Resources
-
-- Website: https://biomejs.dev/
-- GitHub: https://github.com/biomejs/biome
-- npm: `@biomejs/biome`
+- Code formatting ที่ consistent
+- Linting ที่ fast
+- Code quality ที่ automated
+- Migration จาก ESLint + Prettier ที่ smooth

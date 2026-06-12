@@ -4,54 +4,111 @@ description: Fast JavaScript bundler ที่เขียนด้วย Rust �
 auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-ใช้ skill นี้เมื่อต้องการ:
+ใช้งาน Rolldown สำหรับ bundle JavaScript/TypeScript ด้วยความเร็วสูง
+
+## Scope
+
+ใช้สำหรับ:
 - Bundle JavaScript/TypeScript ด้วยความเร็วสูง
 - Migration จาก Rollup ไปยัง Rust-based bundler
 - Code splitting และ tree-shaking
 - Plugin system ที่ compatible กับ Rollup
+
+## Execute
+
+### 1. Install Rolldown
+
+ติดตั้ง Rolldown:
+```bash
+bun add -D rolldown
+```
+
+### 2. Build
+
+Build:
+```bash
+bunx rolldown
+```
+
+### 3. Watch Mode
+
+Watch mode:
+```bash
+bunx rolldown --watch
+```
+
+### 4. Config
+
+Config:
+```bash
+bunx rolldown --config rolldown.config.js
+```
+
+## Rules
+
+- ใช้ `bun add -D rolldown` สำหรับติดตั้ง
+- ใช้ `bunx rolldown` สำหรับ build
+- ใช้ `--watch` สำหรับ watch mode
+- ใช้ `--config` สำหรับ config file
+
+## Expected Outcome
+
+- JavaScript/TypeScript ที่ bundled ด้วยความเร็วสูง
+- Migration จาก Rollup ที่ smooth
+- Code splitting ที่ efficient
+- Tree-shaking ที่ effective
+- Plugin system ที่ compatible
 
 ## Skills Related
 
 - `/lib-vite` - Vite build tool
 - `/follow-vite` - Vite best practices
 
-## References
+## โครงสร้าง Directory
 
-### guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | key-concept.md | แนวคิดหลัก - Rust-based, Rollup compatible |
-| 2 | how-it-works.md | สถาปัตยกรรม - Module resolution, Plugin system |
-| 3 | features.md | ฟีเจอร์ทั้งหมด - Code splitting, Tree-shaking |
-| 4 | installation.md | การติดตั้ง - npm, pnpm |
-| 5 | configuration.md | การตั้งค่า - rolldown.config.js |
-| 6 | quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| 7 | best-practices.md | แนวทางปฏิบัติที่ดี |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | Official links และ resources |
-| 2 | cli.md | CLI commands - rolldown, rolldown --watch |
-| 3 | configuration.md | Configuration options reference |
-| 4 | api.md | Programmatic API reference |
-
-## Quick Start
-
-```bash
-# Install
-npm install -D rolldown
-
-# Build
-npx rolldown
-
-# Watch mode
-npx rolldown --watch
-
-# Config
-npx rolldown --config rolldown.config.js
 ```
+tool-rolldown/
+├── SKILL.md
+├── guide/              (Guides และ best practices)
+├── key-concepts/       (แนวคิดหลัก)
+├── principles/         (หลักการ)
+├── references/         (CLI, configuration, API reference)
+├── workflows/          (Workflows สำหรับการใช้งาน)
+├── templates/          (Templates สำหรับ rolldown.config.js)
+└── scripts/            (Scripts สำหรับ automation)
+```
+
+## หมวดหมู่ไฟล์
+
+| Folder | Files | Description |
+|--------|-------|-------------|
+| [guide/](guide/) | 0 files | Guides และ best practices สำหรับการใช้งาน |
+| [key-concepts/](key-concepts/) | 0 files | แนวคิดหลักของ Rolldown |
+| [principles/](principles/) | 0 files | หลักการในการใช้งาน Rolldown |
+| [references/](references/) | 4 files | CLI, configuration, API reference |
+| [workflows/](workflows/) | 0 files | Workflows สำหรับการใช้งาน |
+| [templates/](templates/) | 0 files | Templates สำหรับ rolldown.config.js |
+| [scripts/](scripts/) | 0 files | Scripts สำหรับ automation |
+
+## Guide Files
+
+| File | Description |
+|------|-------------|
+| [guide/key-concept.md](guide/key-concept.md) | แนวคิดหลัก - Rust-based, Rollup compatible |
+| [guide/how-it-works.md](guide/how-it-works.md) | สถาปัตยกรรม - Module resolution, Plugin system |
+| [guide/features.md](guide/features.md) | ฟีเจอร์ทั้งหมด - Code splitting, Tree-shaking |
+| [guide/installation.md](guide/installation.md) | การติดตั้ง - npm, pnpm |
+| [guide/configuration.md](guide/configuration.md) | การตั้งค่า - rolldown.config.js |
+| [guide/quick-start.md](guide/quick-start.md) | คู่มือเริ่มต้นใช้งาน |
+| [guide/best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
+
+## Reference Files
+
+| File | Description |
+|------|-------------|
+| [references/website.md](references/website.md) | Official links และ resources |
+| [references/cli.md](references/cli.md) | CLI commands - rolldown, rolldown --watch |
+| [references/configuration.md](references/configuration.md) | Configuration options reference |
+| [references/api.md](references/api.md) | Programmatic API reference |

@@ -1,9 +1,51 @@
 ---
-name: tauri
+title: Tauri
 description: Framework for building desktop and mobile applications with Rust backend and web technologies frontend. Includes WebView, IPC, system APIs, and cross-platform deployment.
+auto_execution_mode: 3
 ---
 
-# framework-tauri
+## Goal
+
+สร้าง desktop และ mobile applications ด้วย Rust backend และ web technologies frontend
+
+## Scope
+
+ใช้สำหรับการพัฒนา applications ที่ต้องการ performance สูง, security และ cross-platform deployment
+
+## Directory Structure
+
+```
+framework-tauri/
+├── SKILL.md
+├── guide/
+│   ├── architecture.md
+│   ├── best-practices.md
+│   ├── configuration.md
+│   └── ...
+├── key-concepts/
+├── principles/
+├── references/
+│   ├── cli.md
+│   ├── configuration.md
+│   ├── sitemap.md
+│   └── website.md
+└── workflows/
+    └── create-tauri-app.md
+```
+
+## File Categories
+
+| หมวดหมู่ | ไฟล์ | คำอธิบาย |
+|-----------|------|-----------|
+| Root Files | SKILL.md | Index file สำหรับ Tauri skill |
+| guide/ | architecture.md | Architecture ของ Tauri |
+| guide/ | best-practices.md | Best practices สำหรับ development |
+| guide/ | configuration.md | Configuration และ setup |
+| references/ | cli.md | CLI documentation |
+| references/ | configuration.md | Configuration reference |
+| references/ | sitemap.md | Sitemap ของ documentation |
+| references/ | website.md | เว็บไซต์และ resources |
+| workflows/ | create-tauri-app.md | Workflow สำหรับสร้าง Tauri app |
 
 ## When to use
 
@@ -14,46 +56,56 @@ description: Framework for building desktop and mobile applications with Rust ba
 
 ## Skills Related
 
-- `/lang-rust`
-- `/lib-vite`
-- `/lib-react`
+- `/write-skills` - มาตรฐานการเขียน skills
+- lang-rust
+- lib-vite
+- lib-react
+
+## Execute
+
+### 1. Create Project
+
+```bash
+bun create tauri-app
+```
+
+### 2. Configure Rust Backend
+
+ตั้งค่า Rust backend ใน `src-tauri/`
+
+### 3. Implement Frontend
+
+Develop UI ด้วย web technologies (React, Vue, Svelte, etc.)
+
+### 4. Setup IPC
+
+Configure IPC สำหรับ communication ระหว่าง Rust และ frontend
+
+## Rules
+
+### Development
+- ใช้ Rust สำหรับ backend logic
+- ใช้ web technologies สำหรับ frontend
+- ใช้ IPC สำหรับ secure communication
+
+### Security
+- ใช้ proper IPC validation
+- ไม่ hardcode secrets
+- Follow security best practices
+
+### Best Practices
+- Optimize bundle size
+- Test บน target platforms
+- Use Tauri plugins สำหรับ common tasks
+
+## Expected Outcome
+
+- Desktop และ mobile applications ที่มีขนาดเล็กและเร็ว
+- Rust backend และ web technologies frontend
+- Cross-platform deployment
 
 ## References
 
-### guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | installation.md | วิธีติดตั้ง Tauri และ dependencies ที่จำเป็น |
-| 2 | key-concept.md | concept หลักของ Tauri เช่น WebView, IPC, System APIs |
-| 3 | how-it-works.md | อธิบายวิธีการทำงานของ Tauri architecture |
-| 4 | features.md | features หลักของ Tauri |
-| 5 | configuration.md | การตั้งค่า Tauri configuration |
-| 6 | quick-start.md | เริ่มต้นใช้งาน Tauri อย่างรวดเร็ว |
-| 7 | best-practices.md | best practices สำหรับการพัฒนา Tauri applications |
-| 8 | integration.md | การเชื่อมต่อกับ libraries และ frameworks อื่นๆ |
-| 9 | architecture.md | โครงสร้างของ Tauri applications |
-| 10 | structure.md | โครงสร้างโฟลเดอร์และไฟล์ใน Tauri projects |
-| 11 | performance.md | การปรับปรุง performance ของ Tauri applications |
-| 12 | security.md | security best practices สำหรับ Tauri |
-| 13 | migration.md | วิธี migration จาก version เก่า |
-| 14 | ecosystem.md | ecosystem และ plugins ของ Tauri |
-| 15 | testing.md | วิธีทดสอบ Tauri applications |
-| 16 | patterns.md | design patterns ที่ใช้กับ Tauri |
-| 17 | troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | เว็บไซต์ official ของ Tauri |
-| 2 | sitemap.md | sitemap ของ Tauri documentation |
-| 3 | api.md | API documentation ของ Tauri |
-| 4 | cli.md | CLI commands ของ Tauri |
-| 5 | configuration.md | configuration options ทั้งหมด |
-
-### workflows/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | create-tauri-app.md | สร้าง Tauri application ใหม่ |
+- [Tauri Docs](https://tauri.app)
+- [Tauri GitHub](https://github.com/tauri-apps/tauri)
+- [Tauri Plugins](https://tauri.app/plugins)

@@ -1,82 +1,71 @@
 ---
-name: aws-sdk
+title: AWS SDK
 description: AWS SDK for JavaScript. Use for interacting with AWS services like S3, Lambda, DynamoDB, and more from Node.js and browser applications.
-goal: Use AWS SDK following best practices
-outcome: Reliable integration with AWS cloud services
+auto_execution_mode: 3
 ---
 
-# AWS SDK Library
+## Goal
 
-## When to use
+ใช้ AWS SDK ตาม best practices สำหรับการเชื่อมต่อกับ AWS cloud services
 
-Use this library when:
+## Scope
 
-- Interacting with AWS services programmatically
-- Uploading files to S3
-- Using DynamoDB, Lambda, or other AWS services
-- Building serverless applications on AWS
-- Need to manage AWS resources via code
-- Building cloud-native applications
+ใช้สำหรับการพัฒนา applications ที่ต้องการ interact กับ AWS services เช่น S3, Lambda, DynamoDB และอื่นๆ
 
+## Execute
 
-## Skills Related
+- Install SDK ด้วย `bun add @aws-sdk/client-s3` สำหรับ service ที่ต้องการ
+- Configure credentials ด้วย IAM roles สำหรับ production หรือ environment variables สำหรับ development
+- Create client instance ด้วย `new S3Client({ region: 'us-east-1' })`
+- Make API calls ด้วย command pattern เช่น `await client.send(new PutObjectCommand(...))`
+- Handle errors ด้วย try-catch และใช้ built-in retry logic
+- ใช้ TypeScript สำหรับ type safety และ autocomplete
 
+## Rules
 
-## Quick Start
+- ใช้ `bun add` หรือ `bun add -D` แทน `npm install`
+- Install เฉพาะ clients ที่ต้องการ (modular v3)
+- ใช้ IAM roles สำหรับ production
+- ใช้ environment variables สำหรับ development
+- ไม่ hardcode credentials ใน code
+- Handle AWS SDK errors อย่างเหมาะสม
+- Implement retry logic ด้วย built-in retries
+- Log errors สำหรับ debugging
+- ใช้ TypeScript สำหรับ type safety
+- ใช้ streaming สำหรับ large files
+- ใช้ pagination helpers สำหรับ large datasets
 
-1. Install SDK v3: `npm install @aws-sdk/client-s3`
-2. Configure credentials (IAM role or env vars)
-3. Create client and make API calls
-4. Handle responses and errors
+## Expected Outcome
 
-## Summary Table
+- Integration กับ AWS services ที่ reliable
+- Code ที่ follow best practices
+- Error handling ที่ robust
+- Security ที่เหมาะสม
 
-| Category | File | Purpose | Condition |
-|---|---|---|---|
-| **Knowledge** | Core Concepts | AWS SDK fundamentals | Understanding the basics |
-| **Knowledge** | Best Practices | Security and patterns | Using AWS services |
-| **Rules** | Setup | Credentials and config | New project setup |
-| **Rules** | S3 | File storage operations | Object storage |
-| **Rules** | DynamoDB | NoSQL database operations | Database access |
-| **Rules** | Lambda | Serverless functions | Compute services |
-| **Rules** | SQS/SNS | Queue and messaging | Async communication |
-| **Rules** | IAM | Permissions and roles | Security |
-| **Rules** | Error Handling | AWS SDK errors | Resilience |
+## โครงสร้าง Directory
 
-## Core Features
-
-- **Modular**: Install only the clients you need (v3)
-- **TypeScript**: Full TypeScript support
-- **Streaming**: Support for streaming operations
-- **Pagination**: Automatic pagination helpers
-- **Middleware**: Custom request/response handling
-- **Retries**: Built-in retry logic with backoff
-
-## Quick Reference
-
-```bash
-# Install specific client
-npm install @aws-sdk/client-s3
-npm install @aws-sdk/client-dynamodb
-
-# S3 example
-const client = new S3Client({ region: 'us-east-1' })
-const command = new PutObjectCommand({
-  Bucket: 'my-bucket',
-  Key: 'file.txt',
-  Body: content
-})
-const response = await client.send(command)
+```
+cloud-aws-sdk/
+├── SKILL.md
+├── guide/
+├── key-concepts/
+├── principles/
+├── references/
+├── workflows/
+├── templates/
+└── scripts/
 ```
 
-## Verification
+## หมวดหมู่ไฟล์
 
-1. Check AWS SDK installation
-2. Verify credential configuration
-3. Test service connection
-4. Validate API calls
-5. Check error handling
-6. Ensure proper cleanup
+- `SKILL.md` - ไฟล์หลักของ skill
+- `guide/` - คู่มือการใช้งานและ best practices
+- `key-concepts/` - แนวคิดสำคัญเกี่ยวกับ AWS SDK
+- `principles/` - หลักการในการใช้ AWS SDK
+- `references/` - เอกสารอ้างอิงและ API documentation
+- `workflows/` - workflows สำหรับ automation
+- `templates/` - templates สำหรับเริ่มต้น
+- `scripts/` - scripts สำหรับ automation
 
 ## References
 

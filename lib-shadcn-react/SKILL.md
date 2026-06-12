@@ -1,44 +1,55 @@
 ---
-name: lib-shadcn-react
+title: Shadcn UI React
 description: แนวทางการพัฒนาด้วย shadcn/ui ตาม best practices สำหรับ React 18+ component library ที่ใช้ copy-to-own pattern พร้อม Radix UI และ Tailwind CSS
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ UI components สำหรับ React
-- เมื่อต้องการ accessible components
-- เมื่อต้องการ customizable components
-- เมื่อต้องการ copy-paste components
+ใช้ shadcn/ui สำหรับ React 18+ component library ด้วย copy-to-own pattern, Radix UI, และ Tailwind CSS
 
-## Skills Related
+## Scope
 
-- `lib-react` - React library
+ใช้สำหรับสร้าง UI components ด้วย shadcn/ui บน React 18+
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง shadcn/ui ด้วย CLI init
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/` สำหรับแนวคิดเฉพาะทาง
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ CLI สำหรับ add components
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- Customize components ตามความต้องการ
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `principles/` สำหรับหลักการ
+- ใช้ accessible components
+- อ่าน `guide/integration.md` สำหรับ React integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-```
-lib-shadcn-react/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ CLI init สำหรับ initial setup
+- ใช้ copy-to-own pattern เสมอ
+- ใช้ Radix UI สำหรับ accessible primitives
+- ใช้ Tailwind CSS สำหรับ styling
+- ใช้ backticks สำหรับ commands, components
+- ใช้ code blocks สำหรับ component examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ accessible components เสมอ
+- Customize components ตามความต้องการ
+- หลีกเลี่ยง modifying core components
+
+## Expected Outcome
+
+- UI components ที่ accessible และ customizable
+- Code ที่ copy-to-own และ maintainable
+- Integration ที่ smooth กับ React 18+
+- Components ที่ follow Radix UI best practices

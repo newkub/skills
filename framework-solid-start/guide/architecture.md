@@ -153,11 +153,18 @@ routes/                        │                 │
 └─────────────────────────────────────────────────────────────┘
 ```
 
+**Build Components:**
+- **Vinxi**: Framework bundler ที่รวม Vite + Nitro
+- **Seroval**: High-performance serializer สำหรับ client/server communication
+- **Vite**: Development environment และ bundler
+- **Nitro**: Server APIs และ deployment presets
+
 **Build Features:**
 - **Code Splitting**: Automatic route-based splitting
 - **Tree Shaking**: Remove unused code
 - **Asset Optimization**: Images, fonts, CSS
 - **Minification**: Production builds
+- **Serialization**: Seroval สำหรับ efficient data transfer
 
 ## Data Flow Architecture
 

@@ -1,70 +1,64 @@
 ---
-name: lang-scalar
+title: Lang Scalar
 description: แนวทางการใช้งาน Scalar API Designer สำหรับออกแบบ ทดสอบ และจัดทำเอกสาร GraphQL APIs แบบครบวงจร
+auto_execution_mode: 3
 ---
 
-# lang-scalar
+## Goal
 
-## When to use
+ใช้งาน Scalar API Designer สำหรับออกแบบ ทดสอบ และจัดทำเอกสาร GraphQL APIs แบบครบวงจร
 
-- ออกแบบ GraphQL APIs แบบ visual
-- ทดสอบ API ด้วย Mock Server
-- จัดทำเอกสาร API
-- สร้าง API reference อัตโนมัติ
-- ทำงานร่วมกับทีม
+## Scope
 
-## Skills Related
+ใช้สำหรับการทำงานกับ Scalar ทุกประเภท เช่น ออกแบบ GraphQL APIs, ทดสอบ API, จัดทำเอกสาร API, สร้าง API reference, และทำงานร่วมกับทีม
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
+- ทำความเข้าใจ GraphQL schema design
+- เรียนรู้ Scalar interface และ features
+- ศึกษา mock server capabilities
+- ทำความเข้าใจ documentation generation
+- ติดตั้ง Scalar CLI หรือ desktop app
+- ตั้งค่า Scalar project
+- เชื่อมต่อกับ Git repository
+- ตั้งค่า integration กับ tools อื่นๆ
+- ใช้ visual editor สำหรับ schema design
+- ใช้ mock server สำหรับ testing
+- ใช้ auto documentation สำหรับ docs
+- ใช้ collaboration features สำหรับ teamwork
+- จัดการ API versions อย่างเหมาะสม
+- ทดสอบ APIs ด้วย built-in playground
+- ตรวจสอบ schema validity
+- deploy documentation
+- monitor API usage
 
-```
-lang-scalar/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── references/                   # เอกสารอ้างอิง
-└── workflows/                    # Workflows สำหรับ automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ descriptive names สำหรับ types และ fields
+- ใช้ consistent naming conventions
+- ใช้ interfaces สำหรับ shared fields
+- ใช้ enums สำหรับ fixed values
+- ใช้ input types สำหรับ mutations
+- ใช้ descriptions สำหรับทุก types และ fields
+- ใช้ examples สำหรับ complex queries
+- ใช้ deprecation warnings สำหรับ obsolete fields
+- ใช้ custom directives สำหรับ metadata
+- ให้ clear error messages
+- ใช้ mock server สำหรับ development
+- ทดสอบ queries และ mutations
+- ทดสอบ error scenarios
+- ทดสอบ performance
+- ใช้ live playground สำหรับ interactive testing
+- ใช้ version control สำหรับ schema changes
+- ใช้ code review สำหรับ schema updates
+- ใช้ branching strategy ที่เหมาะสม
+- สื่อสาร changes อย่างชัดเจน
+- ใช้ permissions อย่างเหมาะสม
 
-### guide/
+## Expected Outcome
 
-| File | Description |
-|------|-------------|
-| installation.md | วิธีติดตั้ง Scalar และเครื่องมือที่เกี่ยวข้อง |
-| key-concept.md | หลักการและแนวคิดพื้นฐานของ Scalar |
-| how-it-works.md | การทำงานของ Scalar พร้อม diagrams |
-| features.md | คุณสมบัติทั้งหมดของ Scalar |
-| configuration.md | การตั้งค่า Scalar สำหรับโปรเจกต์ |
-| quick-start.md | เริ่มต้นใช้งาน Scalar อย่างรวดเร็ว |
-| best-practices.md | แนวทางปฏิบัติที่ดีในการออกแบบ |
-| integration.md | การรวมกับเครื่องมืออื่นๆ |
-| architecture.md | สถาปัตยกรรมของ Scalar projects |
-| troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน Scalar |
-
-### references/
-
-| File | Description |
-|------|-------------|
-| website.md | เว็บไซต์และทรัพยากรที่เกี่ยวข้อง |
-| sitemap.md | แผนผังเอกสารและทรัพยากร |
-| api.md | Scalar API reference |
-| cli.md | Scalar CLI commands และ options |
-| configuration.md | Configuration options ทั้งหมด |
-
-### workflows/
-
-| File | Description |
-|------|-------------|
-| (empty) | Workflow templates สำหรับ Scalar development |
-
-## Core Features
-
-- **Visual Editor**: ตัวออกแบบ schema แบบ WYSIWYG
-- **Live Playground**: ทดสอบ API แบบ interactive
-- **Mock Server**: สร้าง mock data อัตโนมัติ
-- **Auto Documentation**: สร้างเอกสารจาก schema
-- **Theme Support**: รองรับ light/dark mode
-- **Team Collaboration**: แชร์และทำงานร่วมกัน
+- GraphQL APIs ที่ออกแบบอย่างเป็นระบบ
+- Documentation ที่ครบถ้วนและอัตโนมัติ
+- Mock server ที่ทำงานได้
+- Collaboration ที่มีประสิทธิภาพ
+- APIs ที่ผ่านการทดสอบแล้ว

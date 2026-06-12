@@ -1,51 +1,105 @@
 ---
 title: Trae
-description: AI-powered code editor จาก ByteDance พร้อม Builder Mode และ free Claude access
+description: AI-powered coding agent สำหรับ automate tasks ด้วย intelligent agents และ context understanding
 auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-ใช้ skill นี้เมื่อต้องการ:
-- AI-powered code editing
-- Planning-first development ด้วย Builder Mode
-- Free access ไปยัง Claude 3.5 Sonnet และ 3.7
-- MCP support สำหรับ external tools
-- VS Code-based development
+ใช้งาน Trae สำหรับ AI-powered coding agent
+
+## Scope
+
+ใช้สำหรับ:
+- AI-powered coding agent สำหรับ automate tasks
+- Intelligent agents ด้วย context understanding
+- Code generation และ editing
+- Project-wide context analysis
+
+## Execute
+
+### 1. Install Trae
+
+ติดตั้ง Trae ตาม guide/installation.md
+
+### 2. Configure Trae
+
+ตั้งค่า Trae ตาม guide/configuration.md
+
+### 3. Use Trae
+
+ใช้ Trae สำหรับ code generation, editing, และ automation
+
+## Rules
+
+- ติดตั้ง Trae ตาม guide/installation.md
+- ตั้งค่า Trae ตาม guide/configuration.md
+- ใช้ context understanding สำหรับ project-wide analysis
+- ใช้ intelligent agents สำหรับ automate tasks
+
+## Expected Outcome
+
+- AI-powered coding agent ที่ efficient
+- Intelligent agents ที่ autonomous
+- Code generation ที่ fast
+- Project-wide context understanding ที่ comprehensive
 
 ## Skills Related
 
 - `/tool-windsurf` - Windsurf AI assistant
 - `/vibe-coding` - Vibe coding practices
 
-## References
+## โครงสร้าง Directory
 
-### guide/
+```
+tool-trae/
+├── SKILL.md
+├── guide/              (Guides และ best practices)
+├── key-concepts/       (แนวคิดหลัก)
+├── principles/         (หลักการ)
+├── references/         (CLI, configuration, API reference)
+├── workflows/          (Workflows สำหรับการใช้งาน)
+├── templates/          (Templates สำหรับ configuration)
+└── scripts/            (Scripts สำหรับ automation)
+```
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | key-concept.md | แนวคิดหลักของ Trae IDE |
-| 2 | how-it-works.md | การทำงานของระบบพร้อม diagram |
-| 3 | features.md | ฟีเจอร์หลักทั้งหมด |
-| 4 | installation.md | คู่มือติดตั้งทุก OS |
-| 5 | configuration.md | การตั้งค่า IDE |
-| 6 | quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| 7 | best-practices.md | แนวทางปฏิบัติที่ดี |
+## หมวดหมู่ไฟล์
 
-### references/
+| Folder | Files | Description |
+|--------|-------|-------------|
+| [guide/](guide/) | 0 files | Guides และ best practices สำหรับการใช้งาน |
+| [key-concepts/](key-concepts/) | 0 files | แนวคิดหลักของ Trae |
+| [principles/](principles/) | 0 files | หลักการในการใช้งาน Trae |
+| [references/](references/) | 4 files | CLI, configuration, API reference |
+| [workflows/](workflows/) | 0 files | Workflows สำหรับการใช้งาน |
+| [templates/](templates/) | 0 files | Templates สำหรับ configuration |
+| [scripts/](scripts/) | 0 files | Scripts สำหรับ automation |
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | Official links และ resources |
-| 2 | cli.md | Terminal commands และ shortcuts |
-| 3 | configuration.md | Configuration options ฉบับเต็ม |
-| 4 | api.md | Extension API และ types |
+## Guide Files
 
-## Quick Start
+| File | Description |
+|------|-------------|
+| [guide/key-concept.md](guide/key-concept.md) | แนวคิดหลัก - Agent, Context, Task |
+| [guide/how-it-works.md](guide/how-it-works.md) | การทำงาน - Context Engineering, Tool Integration |
+| [guide/features.md](guide/features.md) | ฟีเจอร์ทั้งหมด - Code Generation, Automation |
+| [guide/installation.md](guide/installation.md) | การติดตั้ง - Editor Plugin, CLI |
+| [guide/configuration.md](guide/configuration.md) | การตั้งค่า - MCP, Rules, Preferences |
+| [guide/quick-start.md](guide/quick-start.md) | คู่มือเริ่มต้นใช้งาน |
+| [guide/best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
 
-| Step | Action |
-|------|--------|
-| 1. Download | https://trae.ai |
-| 2. Install | รัน installer |
-| 3. Sign In | สมัคร free account |
-| 4. Code | เริ่มพัฒนา! |
+## Reference Files
+
+| File | Description |
+|------|-------------|
+| [references/website.md](references/website.md) | Official links และ resources |
+| [references/api.md](references/api.md) | API reference |
+| [references/cli.md](references/cli.md) | CLI commands reference |
+| [references/configuration.md](references/configuration.md) | Configuration options reference |
+
+## Usage Order
+
+1. **Start**: `guide/installation.md` → `guide/key-concept.md`
+2. **Learn**: `guide/how-it-works.md` → `guide/features.md`
+3. **Configure**: `guide/configuration.md`
+4. **Reference**: `references/cli.md` → `references/configuration.md`
+5. **Best Practices**: `guide/best-practices.md`

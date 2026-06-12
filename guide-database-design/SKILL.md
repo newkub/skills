@@ -1,45 +1,37 @@
 ---
-name: guide-database-design
+title: Guide Database Design
 description: คู่มือการออกแบบ database รวมถึง relational vs NoSQL, schema design, indexing, query optimization, และ distributed databases
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการออกแบบ database schema
-- เมื่อต้องการเลือกระหว่าง relational และ NoSQL
-- เมื่อต้องการ optimize queries และ indexing
-- เมื่อต้องการ design distributed databases
-- เมื่อต้องการเข้าใจ ACID และ consistency models
+ให้ผู้ใช้เข้าใจและสามารถออกแบบ database ได้อย่างมีประสิทธิภาพ
 
-## Skills Related
+## Scope
 
-- `/guide-software-design` - software architecture
-- `/guide-distributed-systems` - distributed databases
-- `/guide-performance-engineering` - query optimization
-- `/lib-drizzle` - ORM สำหรับ TypeScript
-- `/lib-prisma` - ORM ยอดนิยม
+ใช้สำหรับออกแบบ database schema, เลือกระหว่าง relational และ NoSQL, optimize queries และ indexing, design distributed databases, และเข้าใจ ACID และ consistency models
 
-## References
+## Execute
 
-### guide/
+- อ่าน guide/ เพื่อเข้าใจ concepts และ best practices
+- ศึกษา references/ สำหรับ documentation และ resources
+- ปฏิบัติตาม workflows/ สำหรับการทำงานเฉพาะทาง
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | installation.md | วิธีติดตั้งและเตรียม environment สำหรับ database design |
-| 2 | key-concept.md | concept หลักของ database design |
-| 3 | how-it-works.md | วิธีการทำงานของ database systems |
-| 4 | features.md | features และ capabilities ของ database types |
-| 5 | configuration.md | การตั้งค่าและ configure databases |
-| 6 | quick-start.md | เริ่มต้น design database อย่างรวดเร็ว |
-| 7 | best-practices.md | best practices สำหรับ database design |
-| 8 | schema-design.md | schema design principles |
-| 9 | indexing.md | indexing strategies |
-| 10 | query-optimization.md | query optimization techniques |
-| 11 | troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน database |
+## Rules
 
-### references/
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | เว็บไซต์และ resources สำหรับ database design |
-| 2 | sitemap.md | แผนผังเนื้อหาและ resources |
+## Expected Outcome
+
+- เข้าใจ database types และ when to use
+- สามารถออกแบบ schema ที่ดีได้
+- สามารถ optimize queries และ indexing ได้
+- สามารถ design distributed databases ได้

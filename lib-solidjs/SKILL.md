@@ -1,99 +1,59 @@
 ---
-name: lib-solidjs
+title: SolidJS
 description: แนวทางการพัฒนา SolidJS ตาม best practices สำหรับ declarative JavaScript library ที่มี fine-grained reactivity, no virtual DOM และ compile-time optimization
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ reactive JavaScript library
-- เมื่อต้องการ fine-grained reactivity
-- เมื่อต้องการ no virtual DOM performance
-- เมื่อต้องการ compile-time optimization
+ใช้ SolidJS สร้าง reactive applications ด้วย fine-grained reactivity, no virtual DOM, และ compile-time optimization
 
-## Skills Related
+## Scope
 
-- `lang-typescript` - TypeScript programming language
-- `lib-vite` - Vite build tool
+ใช้สำหรับสร้าง UI และ reactive applications ด้วย SolidJS library
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง SolidJS ด้วย `bun add solid-js`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- ใช้ `workflows/setup-solidjs.md` สำหรับ setup project
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/signals.md` สำหรับ signals
+- อ่าน `key-concepts/reactivity.md` สำหรับ reactivity model
+- อ่าน `key-concepts/components.md` สำหรับ components
+- อ่าน `key-concepts/effects.md` สำหรับ effects
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า SolidJS configuration
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ fine-grained reactivity
+- อ่าน `principles/fine-grained-reactivity.md` สำหรับ fine-grained reactivity
+- อ่าน `principles/minimal-runtime.md` สำหรับ minimal runtime
+- อ่าน `guide/performance.md` สำหรับ performance optimization
+- อ่าน `guide/integration.md` สำหรับ framework integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-```
-lib-solidjs/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add solid-js` สำหรับ installation
+- ใช้ signals สำหรับ state management
+- ใช้ fine-grained reactivity เสมอ
+- ใช้ backticks สำหรับ `createSignal()`, `createEffect()`, commands
+- ใช้ code blocks สำหรับ component examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- หลีกเลี่ยง virtual DOM
+- ใช้ compile-time optimization
+- ใช้ proper reactivity patterns
+- หลีกเลี่ยง unnecessary re-renders
 
-### guide/
+## Expected Outcome
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | key-concept.md | Core concepts ของ SolidJS |
-| 2 | how-it-works.md | การทำงานของ SolidJS reactivity |
-| 3 | features.md | Features ทั้งหมดของ SolidJS |
-| 4 | installation.md | การติดตั้งและ setup |
-| 5 | configuration.md | การตั้งค่าและ config options |
-| 6 | quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| 7 | best-practices.md | Best practices ในการใช้งาน |
-| 8 | integration.md | การ integrate กับ tools และ frameworks อื่นๆ |
-| 9 | architecture.md | Architecture ของ SolidJS |
-| 10 | structure.md | โครงสร้างโปรเจกต์ SolidJS |
-| 11 | performance.md | เทคนิคการปรับปรุง performance |
-| 12 | security.md | ความปลอดภัยและ security considerations |
-| 13 | migration.md | วิธี migration จาก frameworks อื่นๆ |
-| 14 | ecosystem.md | Ecosystem และ integrations |
-| 15 | testing.md | การทดสอบ SolidJS applications |
-| 16 | patterns.md | Patterns ที่ใช้บ่อย |
-| 17 | troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | Official documentation links |
-| 2 | sitemap.md | แผนผังเอกสารและทรัพยากรที่เกี่ยวข้อง |
-| 3 | api.md | SolidJS API reference |
-| 4 | cli.md | Solid CLI commands และ usage |
-| 5 | configuration.md | Configuration options |
-
-### key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | signals.md | Signals และ reactive state management |
-| 2 | reactivity.md | Reactivity model และ automatic tracking |
-| 3 | components.md | Components และ JSX syntax |
-| 4 | effects.md | Effects และ side effects |
-
-### principles/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | fine-grained-reactivity.md | Fine-grained reactivity principle |
-| 2 | minimal-runtime.md | Minimal runtime principle |
-
-### workflows/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | setup-solidjs.md | ติดตั้งและตั้งค่า SolidJS ใน project |
+- Reactive applications ที่ performant
+- Code ที่ใช้ fine-grained reactivity
+- Performance ที่ optimized ด้วย no virtual DOM
+- Integration ที่ smooth กับ SolidJS ecosystem

@@ -2,22 +2,30 @@
 
 ## วิธีการติดตั้ง
 
+### Prerequisites
+
+- **Node.js 22** หรือสูงกว่า (จำเป็นสำหรับ SolidStart 1.0)
+- **Bun** หรือ package manager อื่นๆ (npm, pnpm, yarn)
+- **Vinxi** - จะถูกติดตั้งอัตโนมัติเป็น peer dependency
+
 ### 1. สร้าง Project ใหม่
 
-ใช้คำสั่ง `bun create solid` สำหรับสร้าง project ใหม่:
+ใช้คำสั่ง `bun create solid@latest` สำหรับสร้าง project ใหม่:
 
 ```bash
-bun create solid
+bun create solid@latest
 ```
 
 หรือใช้ package managers อื่นๆ:
 
 ```bash
-npm init solid
 pnpm create solid
+npm init solid@latest
 yarn create solid
 deno init --npm solid
 ```
+
+**แนะนำให้ใช้ Bun สำหรับ performance ที่ดีกว่า**
 
 ### 2. เลือก Template
 

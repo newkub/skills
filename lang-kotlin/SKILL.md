@@ -1,85 +1,65 @@
 ---
-name: lang-kotlin
+title: Lang Kotlin
 description: แนวทางการพัฒนาด้วย Kotlin ตาม best practices สำหรับ modern software development ที่เน้น null safety, coroutines และ concise syntax
+auto_execution_mode: 3
 ---
 
-# lang-kotlin
+## Goal
 
-## When to use
+พัฒนา Kotlin ตาม best practices สำหรับ modern software development ที่เน้น null safety, coroutines และ concise syntax
 
-- Android development (primary language)
-- Server-side development (Ktor, Spring Boot)
-- Multiplatform development (Kotlin Multiplatform)
-- Scripting and automation
-- Desktop applications (Compose Desktop, TornadoFX)
-- โปรเจกต์ที่ต้องการ concise syntax และ null safety
+## Scope
 
-## Skills Related
+ใช้สำหรับการพัฒนา Kotlin ทุกประเภท เช่น Android development, server-side development, multiplatform development, scripting and automation, และ desktop applications
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
+- ทำความเข้าใจ null safety และ safe calls
+- เรียนรู้ coroutines และ async programming
+- ศึกษา data classes และ sealed classes
+- ทำความเข้าใจ extension functions
+- ติดตั้ง Kotlin compiler และ toolchain
+- ตั้งค่า Gradle หรือ Maven build system
+- ตั้งค่า `build.gradle.kts` สำหรับ project
+- ติดตั้ง IDE plugins (IntelliJ IDEA, Android Studio)
+- ใช้ null safety features (safe calls, Elvis operator)
+- ใช้ coroutines สำหรับ async operations
+- ใช้ data classes สำหรับ data models
+- ใช้ extension functions สำหรับ extending functionality
+- ใช้ sealed classes สำหรับ state management
+- จัดการ errors อย่างเหมาะสม
+- เขียน unit tests ด้วย Kotlin Test
+- ใช้ debugging tools ใน IntelliJ IDEA
+- ตรวจสอบ performance และ memory usage
 
-```
-lang-kotlin/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญของภาษา
-├── principles/                   # หลักการของภาษา
-├── references/                   # เอกสารอ้างอิง
-└── workflows/                    # Workflows สำหรับ automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `val` สำหรับ immutable variables
+- ใช้ `var` เฉพาะเมื่อจำเป็น
+- ใช้ expression body สำหรับ functions สั้นๆ
+- ใช้ string templates สำหรับ string interpolation
+- ใช้ data classes สำหรับ data holders
+- ใช้ safe call operator `?.`
+- ใช้ Elvis operator `?:`
+- หลีกเลี่ยง `!!` operator
+- ใช้ nullable types เฉพาะเมื่อจำเป็น
+- ใช้ `lateinit` สำหรับ dependency injection
+- ใช้ `suspend` functions สำหรับ async operations
+- ใช้ coroutine scopes อย่างเหมาะสม
+- ใช้ structured concurrency
+- จัดการ exceptions ใน coroutines
+- ใช้ Flow สำหรับ data streams
+- ใช้ `try/catch` สำหรับ exceptions
+- ใช้ `Result` type สำหรับ error handling
+- ใช้ sealed classes สำหรับ error types
+- log errors อย่างเหมาะสม
+- ให้ error messages ที่ชัดเจน
 
-### guide/
+## Expected Outcome
 
-| File | Description |
-|------|-------------|
-| installation.md | วิธีติดตั้ง Kotlin และ tools ที่เกี่ยวข้อง |
-| key-concept.md | แนวคิดหลักของ Kotlin (JVM, null safety, coroutines) |
-| how-it-works.md | วิธีการทำงานของ Kotlin compiler และ bytecode generation |
-| features.md | คุณสมบัติหลักของ Kotlin (data classes, sealed classes, extensions) |
-| configuration.md | การตั้งค่า build.gradle.kts และ Kotlin options |
-| quick-start.md | เริ่มต้นใช้งาน Kotlin อย่างรวดเร็ว |
-| best-practices.md | best practices สำหรับ Kotlin (naming, null safety, coroutines) |
-| integration.md | การเชื่อมต่อกับ frameworks และ tools |
-| architecture.md | สถาปัตยกรรมของ Kotlin projects |
-| troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
-
-### key-concepts/
-
-| File | Description |
-|------|-------------|
-| null-safety.md | Null safety, safe calls, Elvis operator, not-null assertion |
-| coroutines.md | Coroutines, suspend functions, Flow, channels |
-| data-classes.md | Data classes, component functions, copy, equals/hashCode |
-| extension-functions.md | Extension functions, extension properties |
-| sealed-classes.md | Sealed classes, sealed interfaces, exhaustive when |
-
-### principles/
-
-| File | Description |
-|------|-------------|
-| idiomatic-kotlin.md | Idiom การเขียน Kotlin ที่ดี (DRY, KISS, expressiveness) |
-| solid-for-kotlin.md | SOLID principles ใน Kotlin (SRP, OCP, LSP, ISP, DIP) |
-
-### references/
-
-| File | Description |
-|------|-------------|
-| website.md | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-| sitemap.md | แผนผังโครงสร้างเอกสารทั้งหมด |
-| api.md | API reference และ standard library |
-| cli.md | Kotlin CLI tools (kotlinc, kotlin) |
-| configuration.md | Gradle configuration และ Kotlin compiler options |
-
-### workflows/
-
-| File | Description |
-|------|-------------|
-| setup-project.md | การตั้งค่าโปรเจกต์ Kotlin ใหม่ |
-| add-dependency.md | การเพิ่ม dependencies ใน Gradle |
-| write-test.md | การเขียน unit tests ด้วย Kotlin Test |
-| debug-code.md | การ debug โค้ด Kotlin |
-| optimize-performance.md | การปรับปรุงประสิทธิภาพโค้ด |
+- Kotlin code ที่เป็นมาตรฐานและ maintainable
+- การใช้ null safety อย่างถูกต้อง
+- Async programming ที่มีประสิทธิภาพด้วย coroutines
+- Code ที่ concise และ expressive
+- Error handling ที่เหมาะสม
+- Code ที่ผ่านการทดสอบและ debug แล้ว

@@ -1,96 +1,67 @@
 ---
-name: lib-drizzle
+title: Drizzle ORM
 description: แนวทางการพัฒนา Drizzle ORM ตาม best practices สำหรับ TypeScript database ORM ที่มี type safety, SQL-like API และรองรับหลาย database (PostgreSQL, MySQL, SQLite)
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ TypeScript database ORM
-- เมื่อต้องการ type-safe database operations
-- เมื่อต้องการ SQL-like API
-- เมื่อต้องการรองรับหลาย database (PostgreSQL, MySQL, SQLite)
+ใช้ Drizzle ORM สำหรับ TypeScript database operations ด้วย type safety และ SQL-like API
 
-## Skills Related
+## Scope
 
-- `lang-typescript` - TypeScript programming language
-- `lib-nitro` - Nitro framework
+ใช้สำหรับ database operations ด้วย Drizzle ORM บน PostgreSQL, MySQL, และ SQLite
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง Drizzle ORM ด้วย `bun add drizzle-orm`
+- ติดตั้ง Drizzle Kit ด้วย `bun add -D drizzle-kit`
+- ติดตั้ง database driver ตามที่ต้องการ
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/schema-definition.md` สำหรับ schema definitions
+- อ่าน `key-concepts/query-builder.md` สำหรับ query builder
+- อ่าน `key-concepts/migrations.md` สำหรับ migrations
+- อ่าน `key-concepts/relations.md` สำหรับ relations
+- อ่าน `guide/configuration.md` สำหรับ drizzle.config.ts setup
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า database credentials และ environment
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ schema definitions ตาม best practices
+- อ่าน `references/cli.md` สำหรับ Drizzle Kit CLI
+- ใช้ `drizzle-kit generate` สำหรับ generate migrations
+- ใช้ `drizzle-kit push` สำหรับ push schema changes
+- อ่าน `references/api.md` สำหรับ API documentation
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- ใช้ query builder สำหรับ database operations
+- อ่าน `guide/integration.md` สำหรับ framework integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+- อ่าน `principles/type-safety.md` สำหรับ type safety
+- อ่าน `principles/sql-like-syntax.md` สำหรับ SQL-like syntax
 
-```
-lib-drizzle/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add drizzle-orm` สำหรับ core library
+- ใช้ `bun add -D drizzle-kit` สำหรับ dev tools
+- ติดตั้ง database driver ตามที่ต้องการ
+- ใช้ backticks สำหรับ `db.select()`, `db.insert()`, commands
+- ใช้ code blocks สำหรับ schema examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ TypeScript types จาก schema definitions เสมอ
+- หลีกเลี่ยง type assertions ที่ไม่จำเป็น
+- ใช้ Zod integration สำหรับ validation
+- ใช้ indexes สำหรับ frequently queried columns
+- ใช้ transactions สำหรับ multiple operations
+- หลีกเลี่ยง N+1 queries ด้วย proper relations
 
+## Expected Outcome
 
-## หมวดหมู่ไฟล์
-
-### guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | key-concept.md | Core concepts: schema, queries, relations, migrations, SQL-like API |
-| 2 | how-it-works.md | Internal workings: query flow, migration pipeline, relation loading |
-| 3 | features.md | All features: CRUD, relations, transactions, indexes, enums, views |
-| 4 | installation.md | Installation for drizzle-orm, drizzle-kit, and database drivers |
-| 5 | configuration.md | drizzle.config.ts setup for all dialects and credentials |
-| 6 | quick-start.md | Step-by-step guide from install to first query and migration |
-| 7 | best-practices.md | Schema organization, type safety, query patterns, performance |
-| 8 | integration.md | Integration with Next.js, Hono, Express, Zod, tRPC, serverless |
-| 9 | architecture.md | Core architecture layers, dialects, drivers, Drizzle Kit |
-| 10 | structure.md | โครงสร้างโปรเจกต์ Drizzle |
-| 11 | performance.md | เทคนิคการปรับปรุง performance |
-| 12 | security.md | ความปลอดภัยและ security considerations |
-| 13 | migration.md | วิธี migration จาก ORMs อื่นๆ |
-| 14 | ecosystem.md | Ecosystem และ integrations |
-| 15 | testing.md | การทดสอบ Drizzle applications |
-| 16 | patterns.md | Patterns ที่ใช้บ่อย |
-| 17 | troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | Official links: docs, GitHub, npm, Discord, community resources |
-| 2 | sitemap.md | แผนผังเอกสารและทรัพยากรที่เกี่ยวข้อง |
-| 3 | api.md | Query methods, schema helpers, operators, relations API, aggregation |
-| 4 | cli.md | Drizzle Kit CLI commands: generate, push, pull, studio, check, drop |
-| 5 | configuration.md | drizzle.config.ts options, dialect credentials, SSL, environment |
-
-### key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | schema-definition.md | Schema definitions และ TypeScript types |
-| 2 | query-builder.md | Query builder API และ operations |
-| 3 | migrations.md | Database migrations และ version control |
-| 4 | relations.md | Table relations และ relationships |
-
-### principles/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | type-safety.md | Type safety principle และ TypeScript support |
-| 2 | sql-like-syntax.md | SQL-like syntax principle และ familiar patterns |
+- Database operations ที่ type-safe
+- Schema definitions ที่ maintainable
+- Migrations ที่ version-controlled
+- Query performance ที่ optimized

@@ -1,102 +1,58 @@
 ---
-name: lib-animejs
+title: Anime.js
 description: JavaScript animation library สำหรับสร้าง animation ที่รวดเร็ว มีประสิทธิภาพ และใช้งานง่าย
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ animation library ที่รวดเร็ว
-- เมื่อต้องการ animation ที่มีประสิทธิภาพ
-- เมื่อต้องการ animation ที่ใช้งานง่าย
-- เมื่อต้องการ CSS/JS animations
+ใช้ Anime.js สร้าง animation ที่รวดเร็ว มีประสิทธิภาพ และใช้งานง่ายในโปรเจกต์
 
-## Skills Related
+## Scope
 
-- `lang-javascript` - JavaScript programming language
-- `lang-typescript` - TypeScript programming language
+ใช้สำหรับสร้าง CSS/JS animations ด้วย Anime.js
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง Anime.js ด้วย `bun add animejs`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `key-concepts/timeline.md` สำหรับระบบ timeline
+- อ่าน `key-concepts/easing.md` สำหรับ easing functions
+- อ่าน `key-concepts/staggering.md` สำหรับ staggering animations
+- อ่าน `key-concepts/callbacks.md` สำหรับ callbacks และ event handling
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `principles/performance-first.md` สำหรับ performance
+- อ่าน `principles/accessibility.md` สำหรับ accessibility
+- อ่าน `guide/performance.md` สำหรับ optimization techniques
+- อ่าน `guide/integration.md` สำหรับการ integrate กับ frameworks
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+- อ่าน `references/api.md` สำหรับ API documentation
+- อ่าน `references/configuration.md` สำหรับ configuration reference
 
-```
-lib-animejs/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add animejs` สำหรับ installation
+- ใช้ `bun add -D animejs` สำหรับ dev dependencies
+- ใช้ backticks สำหรับ `anime()`, `timeline()`, commands
+- ใช้ code blocks สำหรับ animation examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ `transform` แทน `position` เมื่อเป็นไปได้
+- ใช้ `will-change` สำหรับ elements ที่จะ animate
+- หลีกเลี่ยง animate properties ที่ trigger layout
+- ให้ผู้ใช้ปิด animations ได้ด้วย `prefers-reduced-motion`
+- ใช้ animations เพื่อเสริม UX ไม่ใช่ distraction
+- ให้ feedback ชัดเจนเมื่อ animation เสร็จ
 
-| Topic | Docs URL | Use for |
-|-------|----------|---------|
-| Documentation | [Anime.js Documentation](https://animejs.com/documentation/) | Official documentation and API reference |
-| GitHub | [Anime.js GitHub](https://github.com/juliangarnier/anime/) | Source code, issues, and examples |
-| Installation | [Installation Guide](https://animejs.com/documentation/#installation) | CDN, npm, and setup instructions |
-| API Reference | [API Reference](https://animejs.com/documentation/) | Complete API methods and parameters |
-| Examples | [Examples](https://animejs.com/examples/) | Code examples and demos |
+## Expected Outcome
 
-## หมวดหมู่ไฟล์
-
-### guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | installation.md | Installation and setup of Anime.js |
-| 2 | key-concept.md | Core concepts overview |
-| 3 | how-it-works.md | How the animation engine works internally |
-| 4 | features.md | Available features and capabilities |
-| 5 | configuration.md | Configuration options and settings |
-| 6 | quick-start.md | Quick start guide for first animation |
-| 7 | best-practices.md | Development best practices |
-| 8 | integration.md | Integration with frameworks and libraries |
-| 9 | architecture.md | System architecture and components |
-| 10 | structure.md | Project structure and organization |
-| 11 | performance.md | Performance optimization techniques |
-| 12 | security.md | Security considerations |
-| 13 | migration.md | Migration guides from other libraries |
-| 14 | ecosystem.md | Related tools and community resources |
-| 15 | testing.md | Testing strategies for animations |
-| 16 | patterns.md | Common patterns and recipes |
-| 17 | troubleshooting.md | Common issues and solutions |
-
-### key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | timeline.md | Timeline system for sequencing animations |
-| 2 | easing.md | Easing functions and animation curves |
-| 3 | staggering.md | Staggering animations for sequences |
-| 4 | callbacks.md | Callbacks and event handling |
-
-### principles/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | performance-first.md | Performance-first design principle |
-| 2 | accessibility.md | Accessibility for animations |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | Official documentation links |
-| 2 | sitemap.md | Documentation sitemap |
-| 3 | api.md | Complete API documentation |
-| 4 | configuration.md | Configuration reference |
+- Animation ที่รวดเร็วและมีประสิทธิภาพ
+- Code ที่ maintainable และ consistent
+- UX ที่ดีและ accessible
+- Performance ที่ optimized

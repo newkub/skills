@@ -1,63 +1,54 @@
 ---
-name: lib-zod
+title: Zod
 description: แนวทางการใช้งาน Zod สำหรับ TypeScript-first schema validation พร้อม runtime type checking และ static type inference
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ schema validation ใน TypeScript
-- เมื่อต้องการ runtime type checking พร้อม static type inference
-- เมื่อต้องการ validate API requests, forms, environment variables
-- เมื่อต้องการ type-safe data parsing และ transformation
+ใช้ Zod สำหรับ TypeScript-first schema validation ด้วย runtime type checking และ static type inference
 
-## Skills Related
+## Scope
 
-- `lang-typescript` - TypeScript programming language
-- `lib-effect-ts` - Effect สำหรับ functional programming
+ใช้สำหรับ schema validation, runtime type checking, และ type-safe data parsing
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง Zod ด้วย `bun add zod`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/` สำหรับแนวคิดเฉพาะทาง
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ schemas สำหรับ validation
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า error maps และ coercion
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- ใช้ runtime type checking
+- ใช้ proper error handling
+- อ่าน `guide/integration.md` สำหรับ framework integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-```
-lib-zod/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add zod` สำหรับ installation
+- ใช้ backticks สำหรับ `z.object()`, `z.string()`, commands
+- ใช้ code blocks สำหรับ schema examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ TypeScript-first เสมอ
+- ใช้ runtime type checking
+- ใช้ static type inference
+- ใช้ proper error handling
+- ใช้ schemas สำหรับ validation
 
-### guide/
+## Expected Outcome
 
-- **key-concept.md** - Core concepts: schemas, type inference, parsing
-- **how-it-works.md** - Internal workings: parsing pipeline, error handling
-- **features.md** - All features: primitives, objects, unions, transforms
-- **installation.md** - Installation for npm, yarn, pnpm, bun, Deno
-- **configuration.md** - Schema configuration, error maps, coercion
-- **quick-start.md** - Step-by-step guide from install to first schema
-- **best-practices.md** - Schema organization, error handling, testing
-- **integration.md** - Integration with Express, React Hook Form, tRPC
-- **architecture.md** - Core architecture: ZodType, parsing pipeline
-
-### references/
-
-- **website.md** - Official links: docs, GitHub, npm, Discord
-- **api.md** - Schema methods, string/number validators, transforms
-- **configuration.md** - tsconfig, error maps, coercion options
+- Schema validation ที่ type-safe
+- Runtime type checking ที่ robust
+- Static type inference ที่ accurate
+- Error handling ที่ clear

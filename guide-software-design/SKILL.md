@@ -1,44 +1,37 @@
 ---
-name: guide-software-design
+title: Guide Software Design
 description: คู่มือการออกแบบ software รวมถึง SOLID principles, DDD, clean architecture, microservices, และ event-driven architecture
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการออกแบบ software architecture
-- เมื่อต้องการ apply SOLID principles
-- เมื่อต้องการ implement Domain-Driven Design
-- เมื่อต้องการเลือกระหว่าง microservices และ monolith
-- เมื่อต้องการ design API และ systems
+ให้ผู้ใช้เข้าใจและสามารถออกแบบ software ได้อย่างมีประสิทธิภาพ
 
-## Skills Related
+## Scope
 
-- `/guide-software-architecture` - software architecture โดยรวม
-- `/guide-design-patterns` - design patterns พื้นฐาน
-- `/guide-distributed-systems` - distributed systems
-- `/guide-database-design` - database design
-- `/lib-react` - component design patterns
+ใช้สำหรับออกแบบ software architecture, apply SOLID principles, implement Domain-Driven Design, เลือกระหว่าง microservices และ monolith, และ design API และ systems
 
-## References
+## Execute
 
-### guide/
+- อ่าน guide/ เพื่อเข้าใจ concepts และ best practices
+- ศึกษา references/ สำหรับ documentation และ resources
+- ปฏิบัติตาม workflows/ สำหรับการทำงานเฉพาะทาง
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | installation.md | วิธีติดตั้งและเตรียม environment สำหรับ software design |
-| 2 | key-concept.md | concept หลักของ software design |
-| 3 | how-it-works.md | วิธีการทำงานของ design patterns และ principles |
-| 4 | features.md | features และ capabilities ของ software design approaches |
-| 5 | configuration.md | การตั้งค่าและ configure design tools |
-| 6 | quick-start.md | เริ่มต้น design software อย่างรวดเร็ว |
-| 7 | best-practices.md | best practices สำหรับ software design |
-| 8 | architecture.md | architecture patterns และ styles |
-| 9 | patterns.md | design patterns ที่ใช้บ่อย |
-| 10 | troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน software design |
+## Rules
 
-### references/
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | เว็บไซต์และ resources สำหรับ software design |
-| 2 | sitemap.md | แผนผังเนื้อหาและ resources |
+## Expected Outcome
+
+- เข้าใจ software design principles
+- สามารถ apply SOLID principles ได้
+- สามารถ implement DDD ได้
+- สามารถเลือก architecture ที่เหมาะสมได้

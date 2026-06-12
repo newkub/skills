@@ -1,72 +1,49 @@
-# tool-changesets
+---
+title: Tool Changesets
+description: แนวทางการใช้งาน Changesets สำหรับ version management และ release automation ใน monorepos
+auto_execution_mode: 3
+---
 
-## Overview
+## Goal
 
-แนวทางการใช้งาน Changesets สำหรับ version management และ release automation ใน monorepos ใช้โดยโปรเจกต์ชั้นนำ เช่น Astro, Vite, Remix, SvelteKit
+ใช้งาน Changesets สำหรับ version management และ release automation ใน monorepos
 
+## Scope
 
-## When to use
+ใช้สำหรับ version management ใน monorepos, automated changelog generation, release automation, และ semantic versioning
 
+## Execute
 
+- ติดตั้ง Changesets
+- Initialize Changesets
+- สร้าง changeset
+- Version packages
+- Publish
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ tool integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-## Skills Related
+## Rules
 
+- ใช้ `bun add -D @changesets/cli` สำหรับ installation
+- ใช้ `bunx changeset init` สำหรับ initialize
+- ใช้ `bunx changeset` สำหรับ create changeset
+- ใช้ `bunx changeset version` สำหรับ version packages
+- ใช้ backticks สำหรับ commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
+## Expected Outcome
 
-## References
-
-
-## Content Summary
-
-| Folder | File | Description |
-|--------|------|-------------|
-| **guide/** | [key-concept.md](guide/key-concept.md) | แนวคิดพื้นฐานและ key terms |
-| | [how-it-works.md](guide/how-it-works.md) | หลักการทำงานและ workflow |
-| | [features.md](guide/features.md) | Features ทั้งหมดของ Changesets |
-| | [installation.md](guide/installation.md) | การติดตั้งและ setup |
-| | [configuration.md](guide/configuration.md) | การตั้งค่า config.json |
-| | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดีที่สุด |
-| **references/** | [website.md](references/website.md) | เว็บไซต์และแหล่งข้อมูลที่เป็นประโยชน์ |
-| | [cli.md](references/cli.md) | Changesets CLI commands |
-| | [configuration.md](references/configuration.md) | ตัวเลือก configuration ทั้งหมด |
-| | [api.md](references/api.md) | Programmatic API |
-
-## Quick Reference
-
-```bash
-# Install
-npm install -D @changesets/cli
-
-# Initialize
-bunx changeset init
-
-# Create changeset
-bunx changeset
-
-# Version packages
-bunx changeset version
-
-# Publish
-bunx changeset publish
-```
-
-## File Structure
-
-```
-tool-changesets/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   └── best-practices.md
-└── references/
-    ├── website.md
-    ├── cli.md
-    ├── configuration.md
-    └── api.md
-```
+- Version management ที่ automated
+- Changelog generation ที่ consistent
+- Release automation ที่ streamlined
+- Semantic versioning ที่ proper

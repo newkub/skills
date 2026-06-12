@@ -1,84 +1,66 @@
 ---
-name: lang-rust
+title: Lang Rust
 description: แนวทางการพัฒนา Rust ตาม best practices สำหรับ systems programming ที่เน้น memory safety, performance และ concurrency โดยไม่ต้องมี garbage collector
+auto_execution_mode: 3
 ---
 
-# lang-rust
+## Goal
 
-## When to use
+พัฒนา Rust ตาม best practices สำหรับ systems programming ที่เน้น memory safety, performance และ concurrency โดยไม่ต้องมี garbage collector
 
-- Systems programming (OS, drivers, embedded systems)
-- WebAssembly development
-- CLI tools และ command-line applications
-- Network services และ high-performance servers
-- Game development
-- Blockchain และ cryptocurrency projects
-- โปรเจกต์ที่ต้องการ memory safety และ zero-cost abstractions
+## Scope
 
-## Skills Related
+ใช้สำหรับการพัฒนา Rust ทุกประเภท เช่น systems programming, WebAssembly development, CLI tools, network services, game development, และ blockchain projects
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
+- ทำความเข้าใจ ownership system
+- เรียนรู้ borrowing และ lifetimes
+- ศึกษา traits และ generics
+- ทำความเข้าใจ error handling ด้วย Result
+- ติดตั้ง Rust toolchain ด้วย rustup
+- ตั้งค่า Cargo package manager
+- ตั้งค่า `Cargo.toml` สำหรับ project
+- ติดตั้ง IDE plugins (rust-analyzer)
+- ใช้ ownership system อย่างถูกต้อง
+- ใช้ borrowing และ lifetimes อย่างเหมาะสม
+- ใช้ traits สำหรับ polymorphism
+- ใช้ generics สำหรับ reusable code
+- ใช้ Result สำหรับ error handling
+- ใช้ pattern matching อย่างเหมาะสม
+- เขียน unit tests ด้วย built-in test framework
+- ใช้ cargo test สำหรับ running tests
+- ใช้ debugging tools (gdb, lldb)
+- ตรวจสอบ memory safety ด้วย compiler
 
-```
-lang-rust/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญของภาษา
-├── references/                   # เอกสารอ้างอิง
-└── workflows/                    # Workflows สำหรับ automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `let` สำหรับ immutable variables
+- ใช้ `let mut` เฉพาะเมื่อจำเป็น
+- ใช้ snake_case สำหรับ variables และ functions
+- ใช้ PascalCase สำหรับ types
+- ใช้ SCREAMING_SNAKE_CASE สำหรับ constants
+- ใช้ ownership rules อย่างเคร่งครัด
+- ใช้ borrowing สำหรับ temporary access
+- ใช้ lifetimes annotations เมื่อจำเป็น
+- หลีกเลี่ยง cloning เมื่อเป็นไปได้
+- ใช้ references แทน ownership transfer
+- ใช้ `Result<T, E>` สำหรับ recoverable errors
+- ใช้ `Option<T>` สำหรับ optional values
+- ใช้ `?` operator สำหรับ error propagation
+- ใช้ `unwrap()` เฉพาะใน tests
+- ใช้ custom error types สำหรับ specific errors
+- ใช้ threads สำหรับ parallel execution
+- ใช้ channels สำหรับ message passing
+- ใช้ mutex สำหรับ shared state
+- ใช้ atomic types สำหรับ lock-free programming
+- หลีกเลี่ยง data races
 
-### guide/
+## Expected Outcome
 
-| File | Description |
-|------|-------------|
-| installation.md | วิธีติดตั้ง Rust และ tools ที่เกี่ยวข้อง |
-| key-concept.md | แนวคิดหลักของ Rust (Ownership, Borrowing, Lifetimes) |
-| how-it-works.md | วิธีการทำงานของ Rust compiler และ borrow checker |
-| features.md | คุณสมบัติหลักของ Rust (Pattern Matching, Traits, Error Handling) |
-| configuration.md | การตั้งค่า Cargo.toml และ rustfmt |
-| quick-start.md | เริ่มต้นใช้งาน Rust อย่างรวดเร็ว |
-| best-practices.md | best practices สำหรับ Rust (naming, safety, patterns) |
-| integration.md | การเชื่อมต่อกับ C, WebAssembly และ tools |
-| architecture.md | สถาปัตยกรรมของ Rust projects |
-| troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน Rust |
-
-### key-concepts/
-
-| File | Description |
-|------|-------------|
-| ownership.md | Ownership system และ move semantics |
-| borrowing.md | Borrowing rules และ references |
-| lifetimes.md | Lifetime annotations และ subtyping |
-
-### references/
-
-| File | Description |
-|------|-------------|
-| website.md | Official Rust website และ documentation |
-| sitemap.md | Documentation sitemap และ navigation |
-| api.md | Rust API reference และ standard library |
-| cli.md | Cargo commands และ tools |
-| configuration.md | Cargo.toml configuration options |
-
-### workflows/
-
-| File | Description |
-|------|-------------|
-| setup-rust-project.md | สร้าง Rust project ใหม่ด้วย Cargo |
-| use-rust-features.md | ใช้ Rust features อย่างถูกต้อง
-
-## Core Features
-
-- **Memory Safety**: Ownership, borrowing, lifetimes
-- **Zero-Cost Abstractions**: High-level features without runtime overhead
-- **Pattern Matching**: Powerful pattern matching with exhaustiveness checking
-- **Traits**: Interface-like system for polymorphism
-- **Algebraic Data Types**: Enums with data (like sum types)
-- **Concurrency**: Fearless parallelism with ownership model
-- **Crate Ecosystem**: Cargo package manager
-- **Fearless Refactoring**: Compiler guarantees correctness
+- Rust code ที่เป็นมาตรฐานและ maintainable
+- Memory safety ที่รับประกันโดย compiler
+- High performance ด้วย zero-cost abstractions
+- Fearless concurrency
+- Error handling ที่เหมาะสม
+- Code ที่ผ่านการทดสอบและ debug แล้ว

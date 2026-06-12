@@ -1,32 +1,37 @@
 ---
-name: design-patterns
+title: Guide Design Patterns
 description: Design patterns guide covering creational, structural, and behavioral patterns with examples and best practices for maintainable and extensible software design.
+auto_execution_mode: 3
 ---
 
-# Design Patterns
+## Goal
 
-แนวทางการเลือกและใช้ Design Patterns ต่างๆ สำหรับการออกแบบซอฟต์แวร์ที่ดี — ครอบคลุม Creational, Structural, และ Behavioral patterns พร้อมตัวอย่างและ best practices
+ให้ผู้ใช้เข้าใจและสามารถใช้ design patterns ได้อย่างมีประสิทธิภาพ
 
-## When to use
+## Scope
 
-ใช้เมื่อต้องการ:
-- เลือก pattern ที่เหมาะสมกับปัญหา
-- เข้าใจและใช้งาน GoF patterns
-- ออกแบบซอฟต์แวร์ที่ maintainable และ extensible
-- หลีกเลี่ยง anti-patterns
-- ปรับปรุง code quality ผ่าน patterns
-- เรียนรู้ best practices ในการออกแบบ
+ใช้สำหรับเลือก pattern ที่เหมาะสมกับปัญหา, เข้าใจและใช้งาน GoF patterns, ออกแบบซอฟต์แวร์ที่ maintainable และ extensible, หลีกเลี่ยง anti-patterns, ปรับปรุง code quality ผ่าน patterns, และเรียนรู้ best practices ในการออกแบบ
 
-## Skills Related
+## Execute
 
-- guide-software-architecture
-- guide-programming
-- guide-software-testing
+- อ่าน guide/ เพื่อเข้าใจ concepts และ best practices
+- ศึกษา references/ สำหรับ documentation และ resources
+- ปฏิบัติตาม workflows/ สำหรับการทำงานเฉพาะทาง
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-## References
+## Rules
 
-| Resource | URL |
-|----------|-----|
-| GoF Design Patterns | Book: Design Patterns: Elements of Reusable Object-Oriented Software |
-| Refactoring Guru | https://refactoring.guru/design-patterns |
-| Source Making | https://sourcemaking.com/design-patterns |
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
+
+## Expected Outcome
+
+- เข้าใจ GoF design patterns
+- สามารถเลือก pattern ที่เหมาะสมได้
+- สามารถ implement patterns ได้อย่างถูกต้อง
+- สามารถหลีกเลี่ยง anti-patterns ได้

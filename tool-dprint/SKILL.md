@@ -1,83 +1,48 @@
-# tool-dprint
+---
+title: Tool Dprint
+description: Dprint เป็น pluggable and configurable code formatting platform ที่รวดเร็วมาก ใช้ Rust และ WebAssembly
+auto_execution_mode: 3
+---
 
-## Overview
+## Goal
 
-dprint เป็น pluggable and configurable code formatting platform ที่รวดเร็วมาก ใช้ Rust และ WebAssembly รองรับหลายภาษา (TypeScript, JavaScript, JSON, Markdown, TOML, Rust)
+ใช้งาน Dprint สำหรับ code formatting ที่รวดเร็วและ configurable
 
+## Scope
 
-## When to use
+ใช้สำหรับ code formatting ที่รวดเร็ว, pluggable and configurable formatting, รองรับหลายภาษา (TypeScript, JavaScript, JSON, Markdown, TOML, Rust), และ Rust และ WebAssembly
 
+## Execute
 
+- ติดตั้ง Dprint
+- Initialize Dprint
+- Format ทุกไฟล์
+- ตรวจสอบ formatting
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ tool integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-## Skills Related
+## Rules
 
+- ใช้ `bun add -D dprint` สำหรับ installation
+- ใช้ `dprint init` สำหรับ initialize
+- ใช้ `dprint fmt` สำหรับ format
+- ใช้ `dprint check` สำหรับ check formatting
+- ใช้ backticks สำหรับ commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
+## Expected Outcome
 
-## References
-
-
-## File Structure
-
-| Folder | Files | Description |
-|--------|-------|-------------|
-| guide/ | 8 files | Guides และ tutorials |
-| references/ | 3 files | CLI, configuration, API references |
-
-## Guide Files
-
-| File | Description |
-|------|-------------|
-| [installation.md](guide/installation.md) | วิธีติดตั้ง dprint |
-| [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งาน |
-| [key-concept.md](guide/key-concept.md) | แนวคิดหลัก |
-| [how-it-works.md](guide/how-it-works.md) | หลักการทำงาน + diagram |
-| [features.md](guide/features.md) | Features ทั้งหมด |
-| [configuration.md](guide/configuration.md) | การตั้งค่า |
-| [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-| [integration.md](guide/integration.md) | การรวมกับ tools อื่น |
-| [architecture.md](guide/architecture.md) | สถาปัตยกรรมภายใน |
-
-## Reference Files
-
-| File | Description |
-|------|-------------|
-| [cli.md](references/cli.md) | CLI commands |
-| [configuration.md](references/configuration.md) | Configuration options |
-| [api.md](references/api.md) | Programmatic API |
-| [website.md](references/website.md) | Official links |
-
-## Quick Start
-
-```bash
-# Install
-npm install -D dprint
-
-# Initialize
-dprint init
-
-# Format all files
-dprint fmt
-
-# Check formatting
-dprint check
-```
-
-## Supported Languages
-
-| Language | Extensions |
-|----------|------------|
-| TypeScript | .ts, .tsx |
-| JavaScript | .js, .jsx, .mjs |
-| JSON | .json, .jsonc |
-| Markdown | .md |
-| Rust | .rs |
-| TOML | .toml |
-| CSS | .css, .scss |
-| Go | .go |
-| Python | .py |
-
-## Version
-
-- Current: v0.38+
-- GitHub: https://github.com/dprint/dprint
-- Website: https://dprint.dev
+- Code formatting ที่ consistent
+- Performance ที่รวดเร็ว
+- Configuration ที่ flexible
+- Multi-language support ที่ comprehensive

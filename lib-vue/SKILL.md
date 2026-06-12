@@ -1,85 +1,58 @@
 ---
-name: lib-vue
+title: Vue.js
 description: แนวทางการพัฒนา Vue.js ตาม best practices สำหรับ progressive JavaScript framework ที่มี reactive data binding และ component system
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการพัฒนา web applications ด้วย Vue.js
-- เมื่อต้องการเรียนรู้ best practices สำหรับการพัฒนา Vue.js
+ใช้ Vue.js สร้าง web applications ด้วย progressive framework, reactive data binding, และ component system
 
-## Skills Related
+## Scope
 
-- `lib-pinia` - State management สำหรับ Vue
-- `lib-vite` - Build tool สำหรับ Vue applications
+ใช้สำหรับสร้าง UI และ web applications ด้วย Vue.js framework
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง Vue.js ด้วย `bun add vue`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/reactivity.md` สำหรับ reactivity system
+- อ่าน `key-concepts/components.md` สำหรับ components
+- อ่าน `key-concepts/state.md` สำหรับ state management
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า Vue.js configuration
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- ใช้ Composition API และ Options API
+- อ่าน `principles/single-responsibility.md` สำหรับ single responsibility
+- อ่าน `principles/dr.md` สำหรับ DRY principle
+- ใช้ Pinia สำหรับ state management
+- อ่าน `guide/performance.md` สำหรับ performance optimization
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ framework integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-```
-lib-vue/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add vue` สำหรับ installation
+- ใช้ Composition API เป็นหลัก
+- ใช้ backticks สำหรับ `ref()`, `reactive()`, commands
+- ใช้ code blocks สำหรับ component examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ reactive data binding เสมอ
+- ใช้ component-based architecture
+- ใช้ proper state management
+- ใช้ Pinia สำหรับ global state
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | [key-concept.md](guide/key-concept.md) | Core concepts ของ Vue และหลักการพื้นฐาน |
-| 2 | [how-it-works.md](guide/how-it-works.md) | วิธีการทำงานของ Vue.js ระบบ reactivity และ rendering |
-| 3 | [features.md](guide/features.md) | Features และ capabilities ของ Vue.js |
-| 4 | [configuration.md](guide/configuration.md) | การตั้งค่า configuration และ options |
-| 5 | [quick-start.md](guide/quick-start.md) | คู่มือเริ่มต้นใช้งานอย่างรวดเร็ว (รวม installation) |
-| 6 | [best-practices.md](guide/best-practices.md) | Best practices สำหรับการพัฒนา Vue.js |
-| 7 | [integration.md](guide/integration.md) | Integration กับ tools และ libraries อื่นๆ |
-| 8 | [architecture.md](guide/architecture.md) | โครงสร้าง architecture ของ Vue.js |
-| 9 | [structure.md](guide/structure.md) | โครงสร้าง file และ folder ของ Vue project |
-| 10 | [performance.md](guide/performance.md) | Optimization และ performance tuning |
-| 11 | [security.md](guide/security.md) | Security best practices สำหรับ Vue applications |
-| 12 | [migration.md](guide/migration.md) | Migration จาก Vue 2 ไป Vue 3 |
-| 13 | [ecosystem.md](guide/ecosystem.md) | Tools และ libraries ใน Vue ecosystem |
-| 14 | [testing.md](guide/testing.md) | การทดสอบ Vue applications |
-| 15 | [patterns.md](guide/patterns.md) | Design patterns ที่ใช้กับ Vue |
-| 16 | [troubleshooting.md](guide/troubleshooting.md) | แก้ปัญหาที่พบบ่อย |
+## Expected Outcome
 
-## key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [reactivity.md](key-concepts/reactivity.md) | ระบบ reactivity ของ Vue |
-| 2 | [components.md](key-concepts/components.md) | Vue Components และ lifecycle |
-| 3 | [state.md](key-concepts/state.md) | State management ใน Vue |
-
-## principles/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [single-responsibility.md](principles/single-responsibility.md) | Single Responsibility Principle ใน Vue |
-| 2 | [dr.md](principles/dr.md) | Don't Repeat Yourself ใน Vue |
-
-## references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [website.md](references/website.md) | Official documentation links และ resources |
-| 2 | [api.md](references/api.md) | Vue Composition API reference และ methods |
-| 3 | [configuration.md](references/configuration.md) | Configuration options และ API reference |
+- Web applications ที่ reactive และ performant
+- Components ที่ reusable และ maintainable
+- State management ที่ clean ด้วย Pinia
+- Integration ที่ smooth กับ Vue ecosystem

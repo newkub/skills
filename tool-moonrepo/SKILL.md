@@ -1,53 +1,44 @@
-# tool-moonrepo
+---
+title: Tool Moonrepo
+description: แนวทางการใช้งาน moonrepo สำหรับ monorepo management และ task running
+auto_execution_mode: 3
+---
 
-## Overview
+## Goal
 
-แนวทางการใช้งาน moonrepo สำหรับ monorepo management และ task running
+ใช้งาน moonrepo สำหรับ monorepo management และ task running
 
+## Scope
 
-## When to use
+ใช้สำหรับจัดการ monorepo อย่างมีประสิทธิภาพ, run tasks ข้าม multiple projects, ใช้ smart hashing และ caching, และตรวจสอบ affected projects
 
+## Execute
 
+- ติดตั้ง moonrepo ตาม guide/installation.md
+- ตั้งค่า moonrepo ตาม guide/configuration.md
+- รัน tasks ข้าม multiple projects
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ tool integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-## Skills Related
+## Rules
 
+- ใช้ smart hashing สำหรับ efficiency
+- ใช้ caching เพื่อ performance
+- จัดกลุ่ม projects สำหรับ organization
+- ใช้ backticks สำหรับ commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
+## Expected Outcome
 
-## References
-
-
-## What is Moonrepo?
-
-moonrepo เป็น build system สำหรับ monorepos ที่เขียนด้วย Rust พร้อม native toolchain, smart hashing และ remote caching
-
-## File Structure
-
-| Folder | Description |
-|--------|-------------|
-| guide/ | Guides และ tutorials สำหรับการใช้งาน |
-| references/ | References และ links ภายนอก (CLI, configuration, API) |
-
-## Guide Files
-
-| File | Description |
-|------|-------------|
-| [guide/installation.md](guide/installation.md) | วิธีติดตั้ง moonrepo |
-| [guide/quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งาน moonrepo |
-| [guide/key-concept.md](guide/key-concept.md) | แนวคิดหลักและหลักการทำงาน |
-| [guide/how-it-works.md](guide/how-it-works.md) | วิธีการทำงานของ moonrepo |
-| [guide/features.md](guide/features.md) | Features ทั้งหมดของ moonrepo |
-| [guide/configuration.md](guide/configuration.md) | การตั้งค่า moonrepo |
-| [guide/best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-
-## Reference Files
-
-| Folder | Files |
-|--------|-------|
-| [references/cli.md](references/cli.md) | CLI commands reference |
-| [references/configuration.md](references/configuration.md) | Configuration options |
-| [api.md](references/api.md) | Programmatic API |
-
-## Version
-
-- Documentation: https://moonrepo.dev/docs
-- GitHub: https://github.com/moonrepo/moon
+- Monorepo ที่จัดการอย่างมีประสิทธิภาพ
+- Tasks ที่รันข้าม multiple projects
+- Smart hashing และ caching ที่ optimized
+- Affected projects ที่ตรวจสอบได้

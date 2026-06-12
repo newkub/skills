@@ -49,9 +49,9 @@
 ```markdown
 `inline code`
 ```
-language
+
+```language
 code block
-```
 ```
 
 ### Blockquotes

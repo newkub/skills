@@ -1,67 +1,115 @@
 ---
 title: Supabase
-description: Open source Firebase alternative สำหรับ build applications ด้วย PostgreSQL, Auth, Storage
+description: Open source Firebase alternative สำหรับ build backend ด้วย PostgreSQL, Auth, Edge Functions, และ Realtime
 auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-ใช้ skill นี้เมื่อต้องการ:
-- Build applications ด้วย PostgreSQL database
+ใช้งาน Supabase สำหรับ build backend ด้วย PostgreSQL, Auth, Edge Functions, และ Realtime
+
+## Scope
+
+ใช้สำหรับ:
+- Build backend ด้วย PostgreSQL, Auth, Edge Functions, Realtime
+- Database management ด้วย PostgreSQL
 - Authentication และ authorization
-- File storage และ edge functions
 - Realtime subscriptions
-- Vector embeddings ด้วย pgvector
+- Edge functions ด้วย Deno
+
+## Execute
+
+### 1. Install Supabase CLI
+
+ติดตั้ง Supabase CLI:
+```bash
+bunx supabase --version
+```
+
+### 2. Initialize Project
+
+Initialize project:
+```bash
+bunx supabase init
+```
+
+### 3. Start Local Development
+
+Start local development:
+```bash
+bunx supabase start
+```
+
+### 4. Generate Types
+
+Generate types:
+```bash
+bunx supabase gen types typescript
+```
+
+## Rules
+
+- ใช้ `bunx supabase init` สำหรับ initialize project
+- ใช้ `bunx supabase start` สำหรับ start local development
+- ใช้ `bunx supabase gen types` สำหรับ generate types
+- ใช้ migrations สำหรับ database schema
+
+## Expected Outcome
+
+- Backend ที่ built ด้วย Supabase
+- PostgreSQL database ที่ managed
+- Authentication ที่ integrated
+- Realtime subscriptions ที่ enabled
+- Edge functions ที่ deployed
 
 ## Skills Related
 
-- `/cloudflare` - Cloudflare Workers integration
-- `/guide-database-design` - Database design principles
+- `/tool-postgres` - PostgreSQL database
+- `/lang-typescript` - TypeScript programming
 
-## References
+## โครงสร้าง Directory
 
-### guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | key-concept.md | แนวคิดหลัก - Postgres, Auth, Storage |
-| 2 | how-it-works.md | การทำงาน - Local dev stack |
-| 3 | features.md | ฟีเจอร์ทั้งหมด - Database, Auth |
-| 4 | installation.md | การติดตั้ง - CLI, Docker |
-| 5 | configuration.md | การตั้งค่า - config.toml |
-| 6 | quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| 7 | best-practices.md | แนวทางปฏิบัติที่ดี |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | Official links และ resources |
-| 2 | cli.md | CLI commands |
-| 3 | configuration.md | Configuration options reference |
-| 4 | api.md | API reference |
-
-## Quick Start
-
-```bash
-# Install
-npm install -g supabase
-
-# Login
-supabase login
-
-# Initialize
-supabase init
-
-# Start local dev
-supabase start
-
-# Link to project
-supabase link --project-ref your-project-ref
-
-# Push migrations
-supabase db push
-
-# Generate types
-supabase gen types typescript --linked
 ```
+tool-supabase/
+├── SKILL.md
+├── guide/              (Guides และ best practices)
+├── key-concepts/       (แนวคิดหลัก)
+├── principles/         (หลักการ)
+├── references/         (CLI, configuration, API reference)
+├── workflows/          (Workflows สำหรับการใช้งาน)
+├── templates/          (Templates สำหรับ configuration)
+└── scripts/            (Scripts สำหรับ automation)
+```
+
+## หมวดหมู่ไฟล์
+
+| Folder | Files | Description |
+|--------|-------|-------------|
+| [guide/](guide/) | 0 files | Guides และ best practices สำหรับการใช้งาน |
+| [key-concepts/](key-concepts/) | 0 files | แนวคิดหลักของ Supabase |
+| [principles/](principles/) | 0 files | หลักการในการใช้งาน Supabase |
+| [references/](references/) | 4 files | CLI, configuration, API reference |
+| [workflows/](workflows/) | 0 files | Workflows สำหรับการใช้งาน |
+| [templates/](templates/) | 0 files | Templates สำหรับ configuration |
+| [scripts/](scripts/) | 0 files | Scripts สำหรับ automation |
+
+## Guide Files
+
+| File | Description |
+|------|-------------|
+| [guide/key-concept.md](guide/key-concept.md) | แนวคิดหลัก - PostgreSQL, Auth, Realtime |
+| [guide/how-it-works.md](guide/how-it-works.md) | สถาปัตยกรรม - Client, Database, Edge |
+| [guide/features.md](guide/features.md) | ฟีเจอร์ทั้งหมด - Auth, Storage, Functions |
+| [guide/installation.md](guide/installation.md) | การติดตั้ง - CLI, Docker |
+| [guide/configuration.md](guide/configuration.md) | การตั้งค่า - supabase/config.toml |
+| [guide/quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| [guide/best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
+
+## Reference Files
+
+| File | Description |
+|------|-------------|
+| [references/website.md](references/website.md) | Official links และ resources |
+| [references/cli.md](references/cli.md) | CLI commands - supabase start, stop |
+| [references/configuration.md](references/configuration.md) | Configuration options reference |
+| [references/api.md](references/api.md) | Client SDK API reference |

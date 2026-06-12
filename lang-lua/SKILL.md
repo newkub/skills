@@ -1,63 +1,64 @@
 ---
-name: lang-lua
+title: Lang Lua
 description: แนวทางการพัฒนา Lua ตาม best practices สำหรับ embedded scripting และ lightweight automation
+auto_execution_mode: 3
 ---
 
-# lang-lua
+## Goal
 
-## When to use
+พัฒนา Lua ตาม best practices สำหรับ embedded scripting และ lightweight automation
 
-- Game development (Roblox, World of Warcraft, Love2D)
-- Embedded systems
-- Scripting within applications
-- Rapid prototyping
-- Configuration files
-- Lightweight automation
+## Scope
 
-## Skills Related
+ใช้สำหรับการพัฒนา Lua ทุกประเภท เช่น game development, embedded systems, scripting within applications, rapid prototyping, configuration files, และ lightweight automation
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
+- ทำความเข้าใจ tables และ metatables
+- เรียนรู้ coroutines สำหรับ cooperative multitasking
+- ศึกษา Lua VM และ garbage collection
+- ทำความเข้าใจ module system
+- ติดตั้ง Lua interpreter
+- ติดตั้ง LuaRocks package manager
+- ตั้งค่า environment variables
+- ติดตั้ง dependencies ด้วย LuaRocks
+- ใช้ tables สำหรับ data structures
+- ใช้ metatables สำหรับ OOP
+- ใช้ coroutines สำหรับ async operations
+- ใช้ modules สำหรับ code organization
+- จัดการ errors อย่างเหมาะสม
+- เขียน unit tests สำหรับ functions สำคัญ
+- ใช้ debugging tools
+- ตรวจสอบ memory usage และ performance
 
-```
-lang-lua/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── references/                   # เอกสารอ้างอิง
-└── workflows/                    # Workflows สำหรับ automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ local variables เสมอที่เป็นไปได้
+- ใช้ meaningful variable names
+- ใช้ consistent indentation
+- ใช้ comments อย่างเหมาะสม
+- หลีกเลี่ยง global variables
+- ใช้ tables สำหรับ arrays, objects, และ modules
+- ใช้ metatables สำหรับ OOP patterns
+- ใช้ `__index` สำหรับ inheritance
+- ใช้ `__call` สำหรับ callable objects
+- ใช้ `__tostring` สำหรับ string representation
+- ใช้ coroutines สำหรับ cooperative multitasking
+- ใช้ `coroutine.create()` สำหรับสร้าง coroutines
+- ใช้ `coroutine.resume()` สำหรับ execute
+- ใช้ `coroutine.yield()` สำหรับ yielding
+- จัดการ coroutine states อย่างเหมาะสม
+- ใช้ `pcall` และ `xpcall` สำหรับ error handling
+- ใช้ `error()` สำหรับ throw errors
+- ใช้ custom error types
+- log errors อย่างเหมาะสม
+- ให้ error messages ที่ชัดเจน
 
-### guide/
+## Expected Outcome
 
-| File | Description |
-|------|-------------|
-| [installation.md](guide/installation.md) | วิธีติดตั้ง Lua และ tools ที่เกี่ยวข้อง |
-| [key-concept.md](guide/key-concept.md) | แนวคิดหลักของ Lua (tables, metatables, coroutines) |
-| [how-it-works.md](guide/how-it-works.md) | วิธีการทำงานของ Lua VM และ garbage collection |
-| [features.md](guide/features.md) | คุณสมบัติหลักของ Lua (tables, functions, modules) |
-| [configuration.md](guide/configuration.md) | การตั้งค่า Lua และ LuaRocks |
-| [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งาน Lua อย่างรวดเร็ว |
-| [best-practices.md](guide/best-practices.md) | best practices สำหรับ Lua (naming, patterns) |
-| [integration.md](guide/integration.md) | การเชื่อมต่อกับ C/C++ และ applications |
-| [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ Lua projects |
-| [troubleshooting.md](guide/troubleshooting.md) | การแก้ปัญหาที่พบบ่อย |
-
-### references/
-
-| File | Description |
-|------|-------------|
-| [website.md](references/website.md) | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-| [sitemap.md](references/sitemap.md) | แผนที่เอกสารทั้งหมด |
-| [api.md](references/api.md) | API reference สำหรับ standard library |
-| [cli.md](references/cli.md) | Lua CLI commands และ options |
-| [configuration.md](references/configuration.md) | Lua configuration options reference |
-
-### workflows/
-
-| File | Description |
-|------|-------------|
-| [setup-lua-project.md](workflows/setup-lua-project.md) | ตั้งค่าโปรเจกต์ Lua ตามมาตรฐาน |
-| [create-lua-module.md](workflows/create-lua-module.md) | สร้าง Lua module ตามมาตรฐาน |
+- Lua code ที่เป็นมาตรฐานและ maintainable
+- การใช้ tables และ metatables อย่างถูกต้อง
+- Async programming ที่มีประสิทธิภาพด้วย coroutines
+- Code ที่ lightweight และ fast
+- Error handling ที่เหมาะสม
+- Code ที่ผ่านการทดสอบและ debug แล้ว

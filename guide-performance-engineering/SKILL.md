@@ -1,45 +1,37 @@
 ---
-name: guide-performance-engineering
+title: Guide Performance Engineering
 description: คู่มือ performance engineering รวมถึง profiling, benchmarking, memory profiling, CPU optimization, I/O optimization, และ load testing
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ profile และ benchmark applications
-- เมื่อต้องการ optimize CPU performance
-- เมื่อต้องการ optimize I/O operations
-- เมื่อต้องการ implement caching strategies
-- เมื่อต้องการทำ load testing
+ให้ผู้ใช้เข้าใจและสามารถ optimize performance ของ applications ได้อย่างมีประสิทธิภาพ
 
-## Skills Related
+## Scope
 
-- `/guide-runtime-optimization` - runtime optimization
-- `/guide-concurrency-parallelism` - parallel performance
-- `/guide-algorithms-data-structures` - algorithm performance
-- `/guide-network-programming` - network performance
-- `/lib-vite` - build performance optimization
+ใช้สำหรับ profile และ benchmark applications, optimize CPU performance, optimize I/O operations, implement caching strategies, และทำ load testing
 
-## References
+## Execute
 
-### guide/
+- อ่าน guide/ เพื่อเข้าใจ concepts และ best practices
+- ศึกษา references/ สำหรับ documentation และ resources
+- ปฏิบัติตาม workflows/ สำหรับการทำงานเฉพาะทาง
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | installation.md | วิธีติดตั้งและเตรียม environment สำหรับ performance engineering |
-| 2 | key-concept.md | concept หลักของ performance engineering |
-| 3 | how-it-works.md | วิธีการทำงานของ profiling tools |
-| 4 | features.md | features และ capabilities ของ performance tools |
-| 5 | configuration.md | การตั้งค่าและ configure performance tools |
-| 6 | quick-start.md | เริ่มต้น performance engineering อย่างรวดเร็ว |
-| 7 | best-practices.md | best practices สำหรับ performance optimization |
-| 8 | profiling.md | profiling และ benchmarking |
-| 9 | memory.md | memory profiling และ optimization |
-| 10 | caching.md | caching strategies |
-| 11 | troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน performance |
+## Rules
 
-### references/
+- ใช้ภาษาไทยในการอธิบาย
+- ให้ code examples ที่ชัดเจนและใช้งานได้จริง
+- อ้างอิง sources ที่เชื่อถือได้
+- อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | เว็บไซต์และ resources สำหรับ performance engineering |
-| 2 | sitemap.md | แผนผังเนื้อหาและ resources |
+## Expected Outcome
+
+- เข้าใจ profiling และ benchmarking techniques
+- สามารถ optimize CPU performance ได้
+- สามารถ optimize I/O operations ได้
+- สามารถ implement caching strategies ได้

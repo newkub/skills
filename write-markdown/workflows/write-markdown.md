@@ -1,21 +1,21 @@
 # Write Markdown
 
-Workflow for writing markdown documents.
+Workflow สำหรับเขียนเอกสาร Markdown
 
-## Steps
+## ขั้นตอน
 
-1. **Plan the structure**
-   - Outline sections
-   - Organize content
-   - Plan formatting
+1. **วางแผนโครงสร้าง**
+   - ร่าง sections
+   - จัดเรียง content
+   - วางแผน formatting
 
-2. **Write content**
-   - Use proper headers
-   - Format text correctly
-   - Add code blocks
-   - Include links and images
+2. **เขียนเนื้อหา**
+   - ใช้ headers ที่ถูกต้อง
+   - format text อย่างเหมาะสม
+   - เพิ่ม code blocks
+   - ใส่ links และ images
 
-3. **Review and format**
-   - Check syntax
-   - Validate links
-   - Ensure consistency
+3. **ตรวจสอบและจัดรูปแบบ**
+   - ตรวจสอบ syntax
+   - ตรวจสอบ links
+   - ให้มั่นใจว่า consistent

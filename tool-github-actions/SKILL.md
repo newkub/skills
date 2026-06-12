@@ -1,79 +1,60 @@
-# tool-github-actions
+---
+title: Tool GitHub Actions
+description: แนวทางการใช้งาน GitHub Actions สำหรับ CI/CD
+auto_execution_mode: 3
+---
 
-## Overview
+## Goal
 
-แนวทางการใช้งาน GitHub Actions สำหรับ CI/CD
+แนวทางการใช้งาน GitHub Actions สำหรับ CI/CD และ automation ภายใน GitHub
 
+## Scope
 
-## When to use
+ใช้สำหรับตั้งค่าและใช้งาน GitHub Actions ในโปรเจกต์
 
+## Execute
 
+- สร้าง `.github/workflows/` folder ใน root ของ repository
+- สร้าง workflow files ด้วยนามสกุล `.yml` หรือ `.yaml`
+- กำหนด triggers (on: push, pull_request, etc.)
+- กำหนด jobs และ steps
+- กำหนด `runs-on` (ubuntu-latest, windows-latest, macos-latest)
+- เพิ่ม steps สำหรับ checkout, install, test, build
+- ใช้ actions จาก GitHub Marketplace
+- กำหนด dependencies ระหว่าง jobs ด้วย `needs`
+- เพิ่ม secrets ใน repository settings
+- ใช้ `${{ secrets.SECRET_NAME }}` ใน workflow
+- ใช้ environment variables สำหรับค่าที่ไม่ sensitive
+- ใช้ caching สำหรับ dependencies
+- ใช้ matrix strategy สำหรับ test หลาย platforms
+- ใช้ reusable workflows สำหรับ sharing logic
+- ตรวจสอบ security ด้วย Dependabot
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ tool integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-## Skills Related
+## Rules
 
+- ใช้ `bun add` หรือ `bun add -D` แทน `npm install` เสมอ
+- ใช้ actions เวอร์ชันล่าสุด (v4, v5)
+- ตั้งค่า permissions อย่างเหมาะสม
+- ใช้ caching สำหรับ dependencies เสมอ
+- ตรวจสอบ security vulnerabilities ด้วย Dependabot
+- ใช้ backticks สำหรับ commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
+## Expected Outcome
 
-## References
-
-
-## What is GitHub Actions?
-
-GitHub Actions เป็น CI/CD platform ที่ช่วย automate workflows ภายใน GitHub
-
-## File Structure
-
-| Folder | Description |
-|--------|-------------|
-| guide/ | Guides และ tutorials สำหรับการใช้งาน |
-| references/ | References และ links ภายนอก (CLI, configuration, API) |
-
-## Quick Start
-
-```yaml
-name: CI
-
-on: [push, pull_request]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: npm install
-      - run: npm test
-```
-
-## Core Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Workflow** | ไฟล์ YAML ที่กำหนด automation |
-| **Job** | กลุ่มของ steps ที่รันบน runner |
-| **Step** | งานเดียวที่รัน command หรือ action |
-| **Action** | reusable unit ของ code |
-| **Runner** | server ที่รัน jobs |
-
-## Guide Files
-
-| File | Description |
-|------|-------------|
-| [guide/installation.md](guide/installation.md) | วิธีติดตั้ง GitHub Actions |
-| [guide/quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งาน GitHub Actions |
-| [guide/key-concept.md](guide/key-concept.md) | แนวคิดหลักและหลักการทำงาน |
-| [guide/how-it-works.md](guide/how-it-works.md) | วิธีการทำงานของ GitHub Actions |
-| [guide/features.md](guide/features.md) | Features ทั้งหมดของ GitHub Actions |
-| [guide/configuration.md](guide/configuration.md) | การตั้งค่า GitHub Actions |
-| [guide/best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-
-## Reference Files
-
-| Folder | Files |
-|--------|-------|
-| [references/cli.md](references/cli.md) | CLI commands reference |
-| [references/configuration.md](references/configuration.md) | Configuration options |
-| [api.md](references/api.md) | Programmatic API |
-
-## Version
-
-- Documentation: https://docs.github.com/en/actions
-- GitHub: https://github.com/features/actions
+- CI/CD ที่ automated
+- Testing ที่ comprehensive
+- Deployment ที่ streamlined
+- Security ที่ monitored

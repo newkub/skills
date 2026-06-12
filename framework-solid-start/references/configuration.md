@@ -159,7 +159,7 @@ export default {
 
 ```json
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "bun run build",
   "outputDirectory": "dist/public",
   "framework": null
 }
@@ -179,7 +179,7 @@ export default {
 
 ```toml
 [build]
-  command = "npm run build"
+  command = "bun run build"
   publish = "dist/public"
 
 [functions]

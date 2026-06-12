@@ -2,13 +2,13 @@
 
 ## Overview
 
-SolidStart CLI ใช้สำหรับสร้างและจัดการ SolidStart projects โดยใช้ `npm create solid-start@latest` หรือ `pnpm create solid-start@latest`
+SolidStart CLI ใช้สำหรับสร้างและจัดการ SolidStart projects โดยใช้ `bun create solid-start@latest`
 
 ## Installation
 
 ```bash
 # สร้าง project ใหม่
-npm create solid-start@latest my-app
+bun create solid-start@latest my-app
 # หรือ
 pnpm create solid-start@latest my-app
 # หรือ
@@ -22,7 +22,7 @@ bunx create-solid-start my-app
 สร้าง SolidStart project ใหม่ด้วย interactive prompts
 
 ```bash
-npm create solid-start@latest [project-name] [options]
+bun create solid-start@latest [project-name] [options]
 ```
 
 **Options**
@@ -35,13 +35,13 @@ npm create solid-start@latest [project-name] [options]
 **Examples**
 ```bash
 # สร้าง project ด้วย default settings
-npm create solid-start@latest my-app
+bun create solid-start@latest my-app
 
 # สร้าง project ด้วย TypeScript และ Vercel
-npm create solid-start@latest my-app --server vercel
+bun create solid-start@latest my-app --server vercel
 
 # สร้าง project โดยไม่ติดตั้ง dependencies
-npm create solid-start@latest my-app --no-install
+bun create solid-start@latest my-app --no-install
 ```
 
 ### dev
@@ -49,10 +49,6 @@ npm create solid-start@latest my-app --no-install
 รัน development server
 
 ```bash
-npm run dev
-# หรือ
-pnpm dev
-# หรือ
 bun run dev
 ```
 
@@ -62,8 +58,8 @@ bun run dev
 
 **Examples**
 ```bash
-npm run dev -- --port 4000
-npm run dev -- --host 0.0.0.0
+bun run dev -- --port 4000
+bun run dev -- --host 0.0.0.0
 ```
 
 ### build
@@ -71,10 +67,6 @@ npm run dev -- --host 0.0.0.0
 สร้าง production build
 
 ```bash
-npm run build
-# หรือ
-pnpm build
-# หรือ
 bun run build
 ```
 
@@ -84,8 +76,8 @@ bun run build
 
 **Examples**
 ```bash
-npm run build -- --analyze
-npm run build -- --mode production
+bun run build -- --analyze
+bun run build -- --mode production
 ```
 
 ### start
@@ -93,11 +85,7 @@ npm run build -- --mode production
 รัน production server
 
 ```bash
-npm run start
-# หรือ
-pnpm start
-# หรือ
-bun run start
+bun start
 ```
 
 ### preview
@@ -105,10 +93,6 @@ bun run start
 Preview production build ใน development mode
 
 ```bash
-npm run preview
-# หรือ
-pnpm preview
-# หรือ
 bun run preview
 ```
 
@@ -153,9 +137,8 @@ VITE_PUBLIC_KEY=your-public-key
 
 SolidStart รองรับ package managers หลายตัว:
 
-- **npm** - Default
-- **pnpm** - Recommended (faster, less disk space)
-- **bun** - Fastest runtime
+- **bun** - Recommended (fastest, less disk space)
+- **pnpm** - Supported (faster than npm)
 - **yarn** - Supported
 
 ## Deployment Presets

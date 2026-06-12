@@ -1,53 +1,65 @@
 ---
-name: lang-zig
+title: Lang Zig
 description: แนวทางการพัฒนา Zig ตาม best practices สำหรับ systems programming ที่เน้นความเรียบง่าย, performance และ memory safety โดยไม่มี hidden control flow หรือ hidden allocations
+auto_execution_mode: 3
 ---
 
-# lang-zig
+## Goal
 
-## When to use
+พัฒนา Zig ตาม best practices สำหรับ systems programming ที่เน้นความเรียบง่าย, performance และ memory safety โดยไม่มี hidden control flow หรือ hidden allocations
 
-- Systems programming (OS, drivers, embedded systems)
-- Game development และ game engines
-- CLI tools และ command-line applications
-- WebAssembly development
-- C/C++ interoperability
-- โปรเจกต์ที่ต้องการ control สูงและ zero hidden costs
-- Cross-compilation ที่ไม่ต้องการ dependencies มากมาย
+## Scope
 
-## Skills Related
+ใช้สำหรับการพัฒนา Zig ทุกประเภท เช่น systems programming, game development, CLI tools, WebAssembly development, และ C/C++ interoperability
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
+- ทำความเข้าใจ comptime evaluation
+- เรียนรู้ allocators และ memory management
+- ศึกษา error handling ด้วย error unions
+- ทำความเข้าใจ Zig build system
+- ติดตั้ง Zig compiler
+- ตั้งค่า `build.zig` สำหรับ project
+- ตั้งค่า environment variables
+- ติดตั้ง IDE plugins
+- ใช้ comptime สำหรับ compile-time computation
+- ใช้ allocators อย่างเหมาะสม
+- ใช้ error unions สำหรับ error handling
+- ใช้ defer สำหรับ cleanup
+- จัดการ memory อย่างชัดเจน
+- เขียน unit tests ด้วย built-in test framework
+- ใช้ `zig test` สำหรับ running tests
+- ใช้ debugging tools
+- ตรวจสอบ memory leaks
 
-```
-lang-zig/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── references/                   # เอกสารอ้างอิง
-└── workflows/                    # Workflows สำหรับ automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ snake_case สำหรับ variables และ functions
+- ใช้ PascalCase สำหรับ types
+- ใช้ consistent indentation
+- ใช้ comments อย่างเหมาะสม
+- หลีกเลี่ยง hidden allocations
+- ใช้ comptime สำหรับ compile-time computation
+- ใช้ comptime สำหรับ type generation
+- หลีกเลี่ยง runtime overhead
+- ใช้ inline functions เมื่อเหมาะสม
+- ใช้ generic types ด้วย comptime
+- ใช้ allocators อย่างชัดเจน
+- ใช้ stack allocation เมื่อเป็นไปได้
+- ใช้ defer สำหรับ cleanup
+- หลีกเลี่ยง memory leaks
+- ใช้ arena allocators สำหรับ temporary allocations
+- ใช้ error unions สำหรับ error handling
+- ใช้ try สำหรับ error propagation
+- ใช้ catch สำหรับ error handling
+- ใช้ custom error types
+- ให้ error messages ที่ชัดเจน
 
-| Category | File |
-|----------|------|
-| guide | [installation.md](guide/installation.md) |
-| guide | [key-concept.md](guide/key-concept.md) |
-| guide | [how-it-works.md](guide/how-it-works.md) |
-| guide | [features.md](guide/features.md) |
-| guide | [configuration.md](guide/configuration.md) |
-| guide | [quick-start.md](guide/quick-start.md) |
-| guide | [best-practices.md](guide/best-practices.md) |
-| guide | [integration.md](guide/integration.md) |
-| guide | [architecture.md](guide/architecture.md) |
-| guide | [troubleshooting.md](guide/troubleshooting.md) |
-| key-concepts | [comptime.md](key-concepts/comptime.md) |
-| key-concepts | [allocator.md](key-concepts/allocator.md) |
-| key-concepts | [error-handling.md](key-concepts/error-handling.md) |
-| references | [website.md](references/website.md) |
-| references | [sitemap.md](references/sitemap.md) |
-| references | [cli.md](references/cli.md) |
-| references | [configuration.md](references/configuration.md) |
-| workflows | [setup-zig-project.md](workflows/setup-zig-project.md) |
+## Expected Outcome
+
+- Zig code ที่เป็นมาตรฐานและ maintainable
+- Memory safety ที่ชัดเจน
+- High performance ด้วย zero-cost abstractions
+- No hidden control flow หรือ allocations
+- Error handling ที่เหมาะสม
+- Code ที่ผ่านการทดสอบและ debug แล้ว

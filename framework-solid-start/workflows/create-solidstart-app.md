@@ -6,7 +6,7 @@ Workflow for creating a SolidStart application.
 
 1. **Create new project**
    ```bash
-   npm create solid-start@latest my-app
+   bun create solid-start@latest my-app
    ```
 
 2. **Choose options**
@@ -27,13 +27,13 @@ Workflow for creating a SolidStart application.
 5. **Run development**
    ```bash
    cd my-app
-   npm run dev
+   bun run dev
    ```
 
 6. **Build for production**
    ```bash
-   npm run build
-   npm start
+   bun run build
+   bun start
    ```
 
 ## Example: Simple Route

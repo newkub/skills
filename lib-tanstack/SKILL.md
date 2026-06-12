@@ -1,85 +1,58 @@
 ---
-name: TanStack
+title: TanStack
 description: Collection ของ libraries สำหรับ data fetching, state management, routing, และ form handling ที่ทำงานได้ดีกับ React และ frameworks อื่นๆ
+auto_execution_mode: 3
 ---
 
-## When to use
+## Goal
 
-- เมื่อต้องการ data fetching ที่มี caching, synchronization, และ error handling ที่ดี (TanStack Query)
-- เมื่อต้องการ table component ที่มี sorting, filtering, pagination และ virtualization (TanStack Table)
-- เมื่อต้องการ routing ที่ type-safe และมี data loading ที่ดี (TanStack Router)
-- เมื่อต้องการ form handling ที่มี validation และ type safety (TanStack Form)
-- เมื่อต้องการ full-stack framework สำหรับ React (TanStack Start)
-- เมื่อต้องการ state management ที่เรียบง่ายและมีประสิทธิภาพ (TanStack Store)
+ใช้ TanStack libraries สำหรับ data fetching, state management, routing, table components, และ form handling
 
-## Skills Related
+## Scope
 
-- lib-react
-- lib-vue
-- lib-solidjs
-- lib-svelte
-- lib-zod
+ใช้สำหรับ TanStack Query, Table, Router, Form, Start, และ Store
 
-## โครงสร้าง Directory
+## Execute
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+- ติดตั้ง TanStack libraries ตามที่ต้องการ
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/query-caching.md` สำหรับ caching
+- อ่าน `key-concepts/data-synchronization.md` สำหรับ data sync
+- อ่าน `key-concepts/table-virtualization.md` สำหรับ virtualization
+- อ่าน `key-concepts/type-safe-routing.md` สำหรับ routing
+- อ่าน `key-concepts/form-validation.md` สำหรับ validation
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `workflows/use-tanstack-query.md` สำหรับ data fetching
+- ใช้ caching และ synchronization
+- อ่าน `workflows/use-tanstack-table.md` สำหรับ table component
+- ใช้ sorting, filtering, pagination
+- ใช้ virtualization สำหรับ large tables
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- ใช้ type-safe routing
+- ใช้ data loading
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ framework integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-```
-lib-tanstack/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+## Rules
 
-## หมวดหมู่ไฟล์
+- ใช้ `bun add @tanstack/*` สำหรับ installation
+- ใช้ backticks สำหรับ `useQuery()`, `useTable()`, commands
+- ใช้ code blocks สำหรับ examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ caching สำหรับ data fetching
+- ใช้ type-safe routing เสมอ
+- ใช้ proper error handling
+- ใช้ virtualization สำหรับ large datasets
 
-| No | File | Description |
-|----|------|-------------|
-| 1 | SKILL.md | Index file หลักของ skill |
-| 2 | guide/installation.md | วิธีติดตั้ง TanStack libraries |
-| 3 | guide/key-concept.md | แนวคิดหลักของ TanStack |
-| 4 | guide/how-it-works.md | อธิบายวิธีการทำงานของแต่ละ library |
-| 5 | guide/features.md | ฟีเจอร์หลักของ TanStack collection |
-| 6 | guide/configuration.md | การตั้งค่าและ configuration |
-| 7 | guide/quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| 8 | guide/best-practices.md | Best practices สำหรับการใช้งาน |
-| 9 | guide/integration.md | การเชื่อมต่อกับ frameworks อื่นๆ |
-| 10 | guide/architecture.md | สถาปัตยกรรมของ TanStack |
-| 11 | guide/structure.md | โครงสร้างโปรเจกต์ TanStack |
-| 12 | guide/performance.md | เทคนิคการปรับปรุง performance |
-| 13 | guide/security.md | ความปลอดภัยและ security considerations |
-| 14 | guide/migration.md | วิธี migration จาก libraries อื่นๆ |
-| 15 | guide/ecosystem.md | Ecosystem และ integrations |
-| 16 | guide/testing.md | การทดสอบ TanStack applications |
-| 17 | guide/patterns.md | Patterns ที่ใช้บ่อย |
-| 18 | guide/troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
-| 19 | key-concepts/query-caching.md | แนวคิด caching ใน TanStack Query |
-| 20 | key-concepts/data-synchronization.md | การ synchronize data ระหว่าง client และ server |
-| 21 | key-concepts/table-virtualization.md | Virtualization สำหรับ large tables |
-| 22 | key-concepts/type-safe-routing.md | Type-safe routing ใน TanStack Router |
-| 23 | key-concepts/form-validation.md | Validation ใน TanStack Form |
-| 24 | principles/separation-of-concerns.md | การแยก concerns ใน TanStack |
-| 25 | principles/type-safety.md | Type safety ใน TanStack libraries |
-| 26 | references/website.md | เว็บไซต์อย่างเป็นทางการ |
-| 27 | references/sitemap.md | Sitemap ของ documentation |
-| 28 | references/api.md | API reference |
-| 29 | references/cli.md | CLI commands และ tools |
-| 30 | references/configuration.md | Configuration options ครบถ้วน |
-| 31 | workflows/use-tanstack-query.md | ใช้งาน TanStack Query สำหรับ data fetching |
-| 32 | workflows/use-tanstack-table.md | ใช้งาน TanStack Table สำหรับ table component
+## Expected Outcome
+
+- Data fetching ที่ efficient ด้วย caching
+- Table components ที่ performant ด้วย virtualization
+- Routing ที่ type-safe
+- Form handling ที่ robust

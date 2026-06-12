@@ -1,98 +1,62 @@
 ---
-name: lang-javascript
+title: Lang Javascript
 description: แนวทางการพัฒนา JavaScript ตาม best practices สำหรับ modern web development ที่เน้น ES6+ features, async programming และ module systems
+auto_execution_mode: 3
 ---
 
-# lang-javascript
+## Goal
 
-## When to use
+พัฒนา JavaScript ตาม best practices สำหรับ modern web development ที่เน้น ES6+ features, async programming และ module systems
 
-- Web development (Frontend และ Backend)
-- Server-side development (Node.js, Deno, Bun)
-- Mobile applications (React Native, Cordova)
-- Desktop applications (Electron, Tauri)
-- API development (REST, GraphQL, WebSocket)
-- Full-stack development
-- โปรเจกต์ที่ต้องการ rapid development และ flexibility
+## Scope
 
-## Skills Related
+ใช้สำหรับการพัฒนา JavaScript ทุกประเภท เช่น web development, server-side development, mobile applications, desktop applications, API development, และ full-stack development
 
-- `lang-typescript` - TypeScript for type-safe JavaScript
-- `lib-vue` - Vue.js framework
-- `lib-react` - React framework
+## Execute
 
-## โครงสร้าง Directory
+- ทำความเข้าใจ ES6+ syntax และ features
+- เรียนรู้ async programming (Promises, async/await)
+- ศึกษา module systems (CommonJS, ES Modules)
+- ทำความเข้าใจ JavaScript engine และ event loop
+- ติดตั้ง Node.js หรือ Bun runtime
+- ตั้งค่า `package.json` สำหรับ project
+- ติดตั้ง dependencies ด้วย `bun add`
+- ตั้งค่า linting และ formatting tools
+- ใช้ ES6+ syntax (arrow functions, destructuring, spread operators)
+- ใช้ async/await สำหรับ asynchronous operations
+- ใช้ ES Modules (import/export)
+- ใช้ classes สำหรับ OOP
+- ใช้ closures สำหรับ lexical scoping และ privacy
+- จัดการ errors อย่างเหมาะสม
+- เขียน unit tests สำหรับ functions สำคัญ
+- ใช้ debugging tools (Chrome DevTools, Node.js debugger)
+- ตรวจสอบ memory leaks และ performance issues
 
-โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
+## Rules
 
-```
-lang-javascript/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญของภาษา
-├── principles/                   # หลักการของภาษา
-├── references/                   # เอกสารอ้างอิง
-└── workflows/                    # Workflows สำหรับ automation
-```
+- ใช้ `const` และ `let` แทน `var`
+- ใช้ arrow functions สำหรับ callbacks
+- ใช้ template literals แทน string concatenation
+- ใช้ destructuring สำหรับ objects และ arrays
+- ใช้ default parameters สำหรับ functions
+- ใช้ `async/await` แทน callback hell
+- ใช้ `Promise.all()` สำหรับ parallel operations
+- จัดการ errors ด้วย `try/catch`
+- หลีกเลี่ยง blocking operations
+- ใช้ ES Modules (import/export)
+- ใช้ named exports สำหรับ multiple exports
+- ใช้ default exports สำหรับ main export
+- หลีกเลี่ยง circular dependencies
+- ใช้ `try/catch` สำหรับ async operations
+- ใช้ custom error classes สำหรับ specific errors
+- log errors อย่างเหมาะสม
+- ให้ error messages ที่ชัดเจน
 
-## หมวดหมู่ไฟล์
+## Expected Outcome
 
-### guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | key-concept.md | แนวคิดหลักของ JavaScript (ES6+, Modules, Closures) |
-| 2 | how-it-works.md | วิธีการทำงานของ JavaScript engine และ event loop |
-| 3 | features.md | คุณสมบัติหลักของ JavaScript (Async, Classes, Proxy) |
-| 4 | installation.md | วิธีติดตั้ง Node.js และ tools ที่เกี่ยวข้อง |
-| 5 | configuration.md | การตั้งค่า package.json สำหรับ JavaScript |
-| 6 | quick-start.md | เริ่มต้นใช้งาน JavaScript อย่างรวดเร็ว |
-| 7 | best-practices.md | best practices สำหรับ JavaScript (naming, patterns) |
-| 8 | integration.md | การเชื่อมต่อกับ frameworks และ tools |
-| 9 | architecture.md | สถาปัตยกรรมของ JavaScript projects |
-| 10 | troubleshooting.md | การแก้ปัญหาที่พบบ่อยใน JavaScript |
-
-### key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | closures.md | Closures และ lexical scoping |
-| 2 | hoisting.md | Hoisting และ variable declarations |
-| 3 | prototypes.md | Prototypes และ inheritance |
-
-### principles/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | error-handling.md | การจัดการ errors อย่างเหมาะสม |
-| 2 | naming-conventions.md | กฎการตั้งชื่อที่ดี |
-| 3 | solid-principles.md | SOLID principles สำหรับ JavaScript |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | website.md | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-| 2 | sitemap.md | แผนผังเอกสารและทรัพยากรที่เกี่ยวข้อง |
-| 3 | api.md | JavaScript API reference และ built-in objects |
-| 4 | configuration.md | package.json configuration options |
-
-### workflows/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | create-module.md | วิธีสร้าง JavaScript modules |
-| 2 | handle-async.md | วิธีจัดการ async operations |
-| 3 | debug-code.md | วิธี debugging JavaScript code |
-
-## Core Features
-
-- **ES6+ Syntax**: Arrow functions, destructuring, spread operators
-- **Async/Await**: Modern asynchronous programming
-- **Modules**: ES Modules (import/export)
-- **Classes**: OOP with prototypes
-- **Promises**: Async operations with error handling
-- **Closures**: Lexical scoping and privacy
-- **Event Loop**: Non-blocking I/O operations
-- **TypeScript Integration**: Optional static typing
-- **NPM Ecosystem**: Largest package registry
+- JavaScript code ที่เป็นมาตรฐานและ maintainable
+- การใช้ ES6+ features อย่างถูกต้อง
+- Async programming ที่มีประสิทธิภาพ
+- Module system ที่เป็นระบบ
+- Error handling ที่เหมาะสม
+- Code ที่ผ่านการทดสอบและ debug แล้ว

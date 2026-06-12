@@ -1,149 +1,65 @@
 ---
-name: lib-elysia
+title: Elysia
 description: แนวทางการพัฒนา Elysia ตาม best practices สำหรับ ergonomic web framework สำหรับ Bun ที่มี type-safe, high performance และ plugin system
+auto_execution_mode: 3
 ---
 
-# lib-elysia
+## Goal
 
-## When to use
+ใช้ Elysia สร้าง web applications ด้วย Bun runtime ที่มี type-safe, high performance, และ ergonomic API
 
-- เมื่อต้องการสร้าง web applications ด้วย Bun runtime
-- เมื่อต้องการ type-safe ตั้งแต่ server ถึง client
-- เมื่อต้องการ performance สูงด้วย minimal overhead
-- เมื่อต้องการ ergonomic API ที่เขียนง่าย
-- เมื่อต้องการ plugin system ที่ flexible
-- เมื่อต้องการ validation ด้วย TypeBox schemas
-- เมื่อต้องการ WebSocket support แบบ native
+## Scope
 
-## Skills Related
+ใช้สำหรับสร้าง web applications, APIs, และ microservices ด้วย Elysia framework บน Bun runtime
 
-- `runtime-bun` - Bun runtime สำหรับ run Elysia
-- `lib-effect-ts` - Effect programming patterns
-- `lib-zod` - Schema validation alternatives
-- `lib-drizzle` - Database ORM integration
-- `cloud-vercel` - Deployment บน Vercel
-- `cloud-cloudflare` - Deployment บน Cloudflare Workers
+## Execute
 
-## โครงสร้าง Directory
+- ติดตั้ง Elysia ด้วย `bun add elysia`
+- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/routing.md` สำหรับ routing system
+- อ่าน `key-concepts/plugins.md` สำหรับ plugin system
+- อ่าน `key-concepts/lifecycle.md` สำหรับ request lifecycle
+- อ่าน `key-concepts/validation.md` สำหรับ validation
+- อ่าน `key-concepts/type-safety.md` สำหรับ type safety
+- อ่าน `guide/configuration.md` สำหรับ server options
+- อ่าน `references/configuration.md` สำหรับ configuration reference
+- ตั้งค่า context extension และ plugins
+- อ่าน `guide/features.md` สำหรับ features ที่มี
+- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+- อ่าน `principles/ergonomic-design.md` สำหรับ ergonomic design
+- อ่าน `workflows/create-plugin.md` สำหรับสร้าง custom plugin
+- ใช้ plugin system สำหรับ reusable logic
+- อ่าน `principles/performance-first.md` สำหรับ performance first
+- อ่าน `guide/performance.md` สำหรับ performance optimization
+- อ่าน `guide/best-practices.md` สำหรับ best practices
+- อ่าน `guide/integration.md` สำหรับ service integration
+- อ่าน `guide/architecture.md` สำหรับ system architecture
+- อ่าน `guide/structure.md` สำหรับ project structure
+- อ่าน `workflows/deploy-elysia.md` สำหรับ deployment
+- อ่าน `guide/security.md` สำหรับ security considerations
+- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-โครงสร้างโฟลเดอร์สำหรับ Library Skills
+## Rules
 
-```
-lib-elysia/
-├── SKILL.md                      # ไฟล์ index หลัก
-├── guide/                        # เนื้อหาแนะนำและ best practices
-├── key-concepts/                 # แนวคิดสำคัญ (optional)
-├── principles/                   # หลักการ (optional)
-├── references/                   # เอกสารอ้างอิง
-├── workflows/                    # Workflows สำหรับ automation
-├── templates/                    # Templates สำหรับเริ่มต้น (optional)
-├── scripts/                      # Scripts สำหรับ automation (optional)
-└── .devin/                       # Rules และ configurations
-    ├── goal.md                  # เป้าหมายของ skill
-    ├── scope.md                 # Scope และ execute steps
-    ├── execute.md               # Execute steps ทั้งหมด
-    ├── expected.md              # Expected outcome
-    ├── rules/
-    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
-    │   │   └── structure-lib.md
-    │   ├── glob/                # Files ที่ใช้ glob patterns
-    │   └── model_decision/      # Template files สำหรับ model decision
-    └── workflows/               # Workflow files สำหรับ task automation
-```
+- ใช้ `bun add elysia` สำหรับ installation
+- ใช้ `bun add @elysiajs/*` สำหรับ official plugins
+- ใช้ Bun runtime เสมอ
+- ใช้ backticks สำหรับ `Elysia`, `.get()`, `.post()`, commands
+- ใช้ code blocks สำหรับ server examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+- ใช้ TypeScript types จาก Elysia เสมอ
+- ใช้ TypeBox schemas สำหรับ validation
+- ใช้ Eden Treaty สำหรับ type-safe client
+- ใช้ Trie tree routing สำหรับ fast routing
+- ใช้ lifecycle hooks อย่างเหมาะสม
+- หลีกเลี่ยง unnecessary middleware
 
-## หมวดหมู่ไฟล์
+## Expected Outcome
 
-### guide/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [installation.md](guide/installation.md) | วิธีติดตั้งและ setup Elysia |
-| 2 | [key-concept.md](guide/key-concept.md) | Concepts หลัก: Routing, Plugin, Lifecycle, Validation, Type Safety |
-| 3 | [how-it-works.md](guide/how-it-works.md) | Request lifecycle, plugin composition, type inference |
-| 4 | [features.md](guide/features.md) | Features ทั้งหมด: Routing, Validation, WebSocket, Eden Treaty |
-| 5 | [configuration.md](guide/configuration.md) | Server options, context extension, plugins |
-| 6 | [quick-start.md](guide/quick-start.md) | Quick start guide จาก install ถึง REST API |
-| 7 | [best-practices.md](guide/best-practices.md) | Code organization, performance, security, error handling |
-| 8 | [integration.md](guide/integration.md) | Database, auth, frontend, deployment integration |
-| 9 | [architecture.md](guide/architecture.md) | Framework architecture และ project structure |
-| 10 | [structure.md](guide/structure.md) | โครงสร้างโปรเจกต์ที่เหมาะสม |
-| 11 | [performance.md](guide/performance.md) | Performance optimization และ benchmarks |
-| 12 | [security.md](guide/security.md) | Security best practices และ vulnerability prevention |
-| 13 | [migration.md](guide/migration.md) | Migration จาก frameworks อื่น (Express, Fastify, Hono) |
-| 14 | [ecosystem.md](guide/ecosystem.md) | Ecosystem: plugins, tools, community resources |
-| 15 | [testing.md](guide/testing.md) | Testing strategies และ tools |
-| 16 | [patterns.md](guide/patterns.md) | Design patterns สำหรับ Elysia |
-| 17 | [troubleshooting.md](guide/troubleshooting.md) | การแก้ปัญหาที่พบบบ่อย |
-
-### key-concepts/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [routing.md](key-concepts/routing.md) | ระบบ routing ด้วย Trie tree |
-| 2 | [plugins.md](key-concepts/plugins.md) | Plugin system สำหรับ reusable logic |
-| 3 | [lifecycle.md](key-concepts/lifecycle.md) | Request lifecycle hooks |
-| 4 | [validation.md](key-concepts/validation.md) | Validation ด้วย TypeBox schemas |
-| 5 | [type-safety.md](key-concepts/type-safety.md) | Type safety ด้วย TypeScript และ Eden Treaty |
-
-### principles/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [ergonomic-design.md](principles/ergonomic-design.md) | หลักการ ergonomic design |
-| 2 | [performance-first.md](principles/performance-first.md) | หลักการ performance first |
-
-### references/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [website.md](references/website.md) | Official documentation links |
-| 2 | [sitemap.md](references/sitemap.md) | โครงสร้าง documentation |
-| 3 | [api.md](references/api.md) | API reference ครบถ้วน |
-| 4 | [cli.md](references/cli.md) | Bun CLI commands สำหรับ Elysia |
-| 5 | [configuration.md](references/configuration.md) | Full configuration reference |
-
-### workflows/
-
-| No | File | Description |
-|----|------|-------------|
-| 1 | [setup-elysia.md](workflows/setup-elysia.md) | ติดตั้งและ setup Elysia project ใหม่ |
-| 2 | [use-elysia.md](workflows/use-elysia.md) | การใช้งาน Elysia พื้นฐาน |
-| 3 | [create-plugin.md](workflows/create-plugin.md) | สร้าง custom plugin |
-| 4 | [deploy-elysia.md](workflows/deploy-elysia.md) | Deployment ไปยัง platforms ต่างๆ |
-
-## Quick Reference
-
-### Basic Server
-
-```typescript
-import { Elysia } from 'elysia'
-
-new Elysia()
-  .get('/', () => 'Hello')
-  .listen(3000)
-```
-
-### With Validation
-
-```typescript
-import { Elysia, t } from 'elysia'
-
-new Elysia()
-  .post('/user', ({ body }) => body, {
-    body: t.Object({
-      name: t.String(),
-      email: t.String(),
-    })
-  })
-```
-
-### With Plugin
-
-```typescript
-import { cors } from '@elysia/cors'
-
-new Elysia()
-  .use(cors())
-  .get('/', () => 'Hello')
-  .listen(3000)
-```
+- Web applications ที่ type-safe และ performant
+- Code ที่ ergonomic และ maintainable
+- Plugin system ที่ flexible และ reusable
+- Integration ที่ smooth กับ Bun ecosystem
