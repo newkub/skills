@@ -12,12 +12,20 @@ description: Enterprise identity platform สำหรับ SSO, SAML, director
 
 ## Skills Related
 
-- `/lang-typescript` - TypeScript programming language
-- `/lang-javascript` - JavaScript programming language
+- `lang-typescript` - TypeScript programming language
+- `lang-javascript` - JavaScript programming language
 
+## โครงสร้าง Directory
 
-## References
+โครงสร้างโฟลเดอร์สำหรับ Library Skills
 
+```
+lib-workos/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── references/                   # เอกสารอ้างอิง
+└── workflows/                    # Workflows สำหรับ automation
+```
 
 ## หมวดหมู่ไฟล์
 

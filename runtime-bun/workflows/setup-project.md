@@ -1,14 +1,4 @@
----
-description: ตั้งค่าโปรเจกต์ด้วย Bun ตาม best practices
----
-
-## Goal
-
-ตั้งค่าโปรเจกต์ JavaScript/TypeScript ด้วย Bun ตาม best practices
-
-## Scope
-
-สำหรับโปรเจกต์ใหม่ที่ต้องการใช้ Bun เป็น runtime หลัก
+# Setup Project
 
 ## Execute
 

@@ -12,53 +12,39 @@ description: Effect คือ TypeScript library สำหรับ functional p
 
 ## Skills Related
 
-- `/lang-typescript` - TypeScript programming language
-
-
-## References
-
+- `lang-typescript` - TypeScript programming language
 
 ## โครงสร้าง Directory
 
-```text
+โครงสร้างโฟลเดอร์สำหรับ Library Skills
+
+```
 lib-effect-ts/
-├── SKILL.md
-├── 
-│   ├── guide/
-│   │   ├── key-concept.md
-│   │   ├── how-it-works.md
-│   │   ├── features.md
-│   │   ├── installation.md
-│   │   ├── configuration.md
-│   │   ├── quick-start.md
-│   │   ├── best-practices.md
-│   │   ├── integration.md
-│   │   ├── architecture.md
-│   │   ├── structure.md
-│   │   ├── performance.md
-│   │   ├── security.md
-│   │   ├── migration.md
-│   │   ├── ecosystem.md
-│   │   ├── testing.md
-│   │   ├── patterns.md
-│   │   └── troubleshooting.md
-│   ├── key-concepts/
-│   │   ├── effect.md
-│   │   ├── service.md
-│   │   ├── runtime.md
-│   │   └── error-handling.md
-│   └── principles/
-│       ├── functional-programming.md
-│       └── error-first.md
-└── references/
-    ├── website.md
-    ├── sitemap.md
-    ├── api.md
-    ├── cli.md
-    └── configuration.md
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญ (optional)
+├── principles/                   # หลักการ (optional)
+├── references/                   # เอกสารอ้างอิง
+├── workflows/                    # Workflows สำหรับ automation
+├── templates/                    # Templates สำหรับเริ่มต้น (optional)
+├── scripts/                      # Scripts สำหรับ automation (optional)
+└── .devin/                       # Rules และ configurations
+    ├── goal.md                  # เป้าหมายของ skill
+    ├── scope.md                 # Scope และ execute steps
+    ├── execute.md               # Execute steps ทั้งหมด
+    ├── expected.md              # Expected outcome
+    ├── rules/
+    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
+    │   │   └── structure-lib.md
+    │   ├── glob/                # Files ที่ใช้ glob patterns
+    │   └── model_decision/      # Template files สำหรับ model decision
+    └── workflows/               # Workflow files สำหรับ task automation
 ```
 
-## หมวดหมู่ไฟล
+## หมวดหมู่ไฟล์
+
+
+## หมวดหมู่ไฟล์
 
 ### guide/
 

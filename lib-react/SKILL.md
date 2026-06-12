@@ -5,95 +5,90 @@ description: แนวทางการพัฒนา React ตาม best pra
 
 # lib-react
 
-
 ## When to use
 
-
+- เมื่อต้องการสร้าง web applications ด้วย component-based architecture
+- เมื่อต้องการใช้ virtual DOM สำหรับ performance ที่ดี
+- เมื่อต้องการใช้ ecosystem ที่กว้างขวางและ active community
+- เมื่อต้องการใช้ hooks สำหรับ state management และ side effects
+- เมื่อต้องการใช้ TypeScript สำหรับ type safety
 
 ## Skills Related
 
+- `lib-solidjs` - Alternative JavaScript library ด้วย fine-grained reactivity
+- `lib-vue` - Progressive JavaScript framework สำหรับ building UI
+- `lib-svelte` - Compiler-based framework สำหรับ building UI
+- `framework-next` - React framework สำหรับ SSR/SSG
+- `framework-nuxt` - Vue framework สำหรับ SSR/SSG
+- `lib-tanstack` - Collection ของ libraries สำหรับ data fetching และ state management
+- `lib-zustand` - State management library สำหรับ React
 
-## Overview
+## โครงสร้าง Directory
 
-แนวทางการพัฒนา React ตาม best practices สำหรับ JavaScript library สำหรับสร้าง UI ที่มี component-based architecture, virtual DOM และ extensive ecosystem
+โครงสร้างโฟลเดอร์สำหรับ Library Skills
 
-## File Structure
+```
+lib-react/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญ (optional)
+├── principles/                   # หลักการ (optional)
+├── references/                   # เอกสารอ้างอิง
+├── workflows/                    # Workflows สำหรับ automation
+├── templates/                    # Templates สำหรับเริ่มต้น (optional)
+├── scripts/                      # Scripts สำหรับ automation (optional)
+└── .devin/                       # Rules และ configurations
+    ├── goal.md                  # เป้าหมายของ skill
+    ├── scope.md                 # Scope และ execute steps
+    ├── execute.md               # Execute steps ทั้งหมด
+    ├── expected.md              # Expected outcome
+    ├── rules/
+    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
+    │   │   └── structure-lib.md
+    │   ├── glob/                # Files ที่ใช้ glob patterns
+    │   └── model_decision/      # Template files สำหรับ model decision
+    └── workflows/               # Workflow files สำหรับ task automation
+```
 
-| Folder | Description |
-|--------|-------------|
-| guide/ | Guides และ tutorials สำหรับการใช้งาน |
-| reference/ | Official documentation links |
-| references/ | References สำหรับ API |
-| examples/ | ตัวอย่างการใช้งาน |
-| rules/ | Rules และ conventions |
-| patterns/ | Design patterns |
-| usecase/ | Use cases |
-| workflows/ | Workflows |
-| integration/ | Integration กับ tools อื่นๆ |
-| changelog/ | Changelog และ version history |
+## หมวดหมู่ไฟล์
 
-## Guide Files
+### guide/
 
-| File | Description |
-|------|-------------|
-| installation.md | การติดตั้งและ setup |
-| quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| key-concept.md | Core concepts |
-| best-practices.md | Best practices |
-| all-features.md | รายการ features ทั้งหมด |
-| configuration.md | การตั้งค่า configuration |
-| troubleshooting.md | การแก้ไขปัญหาที่พบบ่อย |
+| No | File | Description |
+|----|------|-------------|
+| 1 | installation.md | การติดตั้งและ setup React project |
+| 2 | quick-start.md | คู่มือเริ่มต้นใช้งาน React อย่างรวดเร็ว |
+| 3 | key-concept.md | Core concepts ของ React |
+| 4 | how-it-works.md | วิธีการทำงานของ React (Virtual DOM, Reconciliation) |
+| 5 | features.md | Features และ capabilities ของ React |
+| 6 | configuration.md | การตั้งค่า configuration ต่างๆ |
+| 7 | best-practices.md | Best practices สำหรับการพัฒนา React |
+| 8 | integration.md | Integration กับ tools และ libraries อื่นๆ |
+| 9 | architecture.md | Architecture patterns สำหรับ React applications |
+| 10 | structure.md | Project structure และ file organization |
+| 11 | performance.md | Performance optimization techniques |
+| 12 | security.md | Security best practices สำหรับ React applications |
+| 13 | migration.md | Migration guide ระหว่าง React versions |
+| 14 | ecosystem.md | React ecosystem และ libraries ที่น่าสนใจ |
+| 15 | testing.md | Testing strategies และ tools สำหรับ React |
+| 16 | patterns.md | Design patterns สำหรับ React components |
+| 17 | troubleshooting.md | การแก้ไขปัญหาที่พบบ่อยใน React |
 
-## Rules Files
+### references/
 
-| File | Description |
-|------|-------------|
-| setup.md | Setup และ initialization |
-| components.md | Component patterns |
-| hooks.md | Hook patterns |
-| state.md | State management |
-| context.md | Context patterns |
-| typescript.md | TypeScript patterns |
+| No | File | Description |
+|----|------|-------------|
+| 1 | website.md | Official React website และ documentation |
+| 2 | sitemap.md | Documentation sitemap และ navigation |
+| 3 | api.md | React API reference และ hooks documentation |
+| 4 | cli.md | CLI commands และ tools |
+| 5 | configuration.md | Configuration options และ settings |
 
-## References Files
+### workflows/
 
-| File | Description |
-|------|-------------|
-| cli/index.md | React CLI commands |
-| configuration/index.md | Configuration options |
-| api/index.md | Programmatic API reference |
-| web/index.md | Web documentation links |
-| official.md | Official documentation links |
-
-## Patterns Files
-
-| File | Description |
-|------|-------------|
-| optimize-patterns.md | Optimization patterns |
-| refactor-patterns.md | Refactoring patterns |
-
-## Integration Files
-
-| File | Description |
-|------|-------------|
-| tool-integration.md | Development tools integration |
-| ci-cd-integration.md | CI/CD pipeline integration |
-
-## Use Cases
-
-| File | Description |
-|------|-------------|
-| web-application.md | Web application development |
-
-## Workflows
-
-| File | Description |
-|------|-------------|
-| development-workflow.md | Development workflow |
-| deployment-workflow.md | Deployment workflow |
-
-## Changelog
-
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial release |
+| No | File | Description |
+|----|------|-------------|
+| 1 | setup-react-project.md | สร้าง React project ใหม่ด้วย Vite และ TypeScript |
+| 2 | use-react-hooks.md | ใช้ React hooks อย่างถูกต้องและมีประสิทธิภาพ |
+| 3 | optimize-react-app.md | Optimize React application สำหรับ performance ที่ดีขึ้น |
+| 4 | migrate-to-react-18.md | Migrate React project ไป React 18 |

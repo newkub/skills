@@ -1,14 +1,4 @@
----
-description: การแก้ปัญหาที่พบบ่อยใน Bun
----
-
-## Goal
-
-อธิบายปัญหาที่พบบ่อยและวิธีแก้ไข
-
-## Scope
-
-สำหรับโปรเจกต์ที่ใช้ Bun เป็น runtime
+# Troubleshooting
 
 ## Common Issues
 

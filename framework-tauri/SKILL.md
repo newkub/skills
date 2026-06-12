@@ -1,7 +1,9 @@
 ---
-name: framework-tauri
-description: Tauri framework สำหรับสร้าง desktop และ mobile applications ด้วย Rust backend และ web technologies frontend
+name: tauri
+description: Framework for building desktop and mobile applications with Rust backend and web technologies frontend. Includes WebView, IPC, system APIs, and cross-platform deployment.
 ---
+
+# framework-tauri
 
 ## When to use
 
@@ -12,50 +14,46 @@ description: Tauri framework สำหรับสร้าง desktop และ
 
 ## Skills Related
 
-- `/lang-rust` - Rust programming language
-- `/lib-vite` - Vite build tool
-- `/lib-react` - React library
-
+- `/lang-rust`
+- `/lib-vite`
+- `/lib-react`
 
 ## References
 
+### guide/
 
-## หมวดหมู่ไฟล์
+| No | File | Description |
+|----|------|-------------|
+| 1 | installation.md | วิธีติดตั้ง Tauri และ dependencies ที่จำเป็น |
+| 2 | key-concept.md | concept หลักของ Tauri เช่น WebView, IPC, System APIs |
+| 3 | how-it-works.md | อธิบายวิธีการทำงานของ Tauri architecture |
+| 4 | features.md | features หลักของ Tauri |
+| 5 | configuration.md | การตั้งค่า Tauri configuration |
+| 6 | quick-start.md | เริ่มต้นใช้งาน Tauri อย่างรวดเร็ว |
+| 7 | best-practices.md | best practices สำหรับการพัฒนา Tauri applications |
+| 8 | integration.md | การเชื่อมต่อกับ libraries และ frameworks อื่นๆ |
+| 9 | architecture.md | โครงสร้างของ Tauri applications |
+| 10 | structure.md | โครงสร้างโฟลเดอร์และไฟล์ใน Tauri projects |
+| 11 | performance.md | การปรับปรุง performance ของ Tauri applications |
+| 12 | security.md | security best practices สำหรับ Tauri |
+| 13 | migration.md | วิธี migration จาก version เก่า |
+| 14 | ecosystem.md | ecosystem และ plugins ของ Tauri |
+| 15 | testing.md | วิธีทดสอบ Tauri applications |
+| 16 | patterns.md | design patterns ที่ใช้กับ Tauri |
+| 17 | troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
 
-| Folder | File | Description |
-|--------|------|-------------|
-| **guide/** | [key-concept.md](guide/key-concept.md) | แนวคิดหลักของ Tauri |
-| | [how-it-works.md](guide/how-it-works.md) | การทำงานของ Tauri |
-| | [features.md](guide/features.md) | Features ทั้งหมด |
-| | [installation.md](guide/installation.md) | การติดตั้ง |
-| | [configuration.md](guide/configuration.md) | การตั้งค่า |
-| | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งาน |
-| | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-| | [integration.md](guide/integration.md) | การรวมกับ tools อื่น |
-| | [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ Tauri |
-| **references/** | [website.md](references/website.md) | แหล่งข้อมูลอย่างเป็นทางการ |
-| | [api.md](references/api.md) | Rust API reference |
-| | [cli.md](references/cli.md) | CLI commands reference |
-| | [configuration.md](references/configuration.md) | Configuration reference |
+### references/
 
-## Quick Reference
+| No | File | Description |
+|----|------|-------------|
+| 1 | website.md | เว็บไซต์ official ของ Tauri |
+| 2 | sitemap.md | sitemap ของ Tauri documentation |
+| 3 | api.md | API documentation ของ Tauri |
+| 4 | cli.md | CLI commands ของ Tauri |
+| 5 | configuration.md | configuration options ทั้งหมด |
 
-| Command | Description |
-|---------|-------------|
-| `npm run tauri init` | Initialize project |
-| `npm run tauri dev` | Run in dev mode |
-| `npm run tauri build` | Build release |
-| `npm run tauri add <plugin>` | Add plugin |
-| `cargo tauri dev` | Run with Cargo |
-| `cargo tauri build` | Build with Cargo |
+### workflows/
 
-## Key Concepts
-
-| Concept | คำอธิบาย |
-|---------|----------|
-| **IPC** | Inter-Process Communication ระหว่าง Rust และ Frontend |
-| **Commands** | Rust functions ที่เรียกจาก Frontend |
-| **Capabilities** | ระบบ permission สำหรับ Tauri v2 |
-| **WebView** | Embedded web browser (Wry/TAO) |
-| **Plugins** | ระบบ plugin ขยาย functionality |
-
+| No | File | Description |
+|----|------|-------------|
+| 1 | create-tauri-app.md | สร้าง Tauri application ใหม่ |

@@ -3,108 +3,45 @@ name: lib-unocss
 description: UnoCSS is an instant, on-demand atomic CSS engine with the best performance. It provides fully customizable utilities, presets, shortcuts, and icon system for any web project.
 ---
 
-# UnoCSS
-
-UnoCSS is an instant, on-demand atomic CSS engine with the best performance. It provides fully customizable utilities, presets, shortcuts, and icon system for any web project.
-
-## Features
-
-- **Instant On-demand** - Generate CSS only when used
-- **Fully Customizable** - Custom presets, rules, shortcuts
-- **Attributify Mode** - Use HTML attributes instead of classes
-- **Icons Integration** - 100+ icon collections from Iconify
-- **Theme System** - Design tokens (colors, spacing, fonts)
-- **Transformers** - CSS directives (@apply, @screen)
-- **Framework Agnostic** - Works with Vite, Webpack, CLI, etc.
-
 ## When to use
 
-Use UnoCSS when you need:
-- Atomic CSS with instant generation
-- Tailwind/Windi-compatible utilities
-- High performance (faster than Tailwind)
-- Easy integration with Vite
-- Icon system with 100+ collections
-- Fully customizable styling
-
+- เมื่อต้องการ atomic CSS ที่ generate ทันที
+- เมื่อต้องการ utilities ที่ compatible กับ Tailwind/Windi
+- เมื่อต้องการ performance สูงกว่า Tailwind
+- เมื่อต้องการ integration กับ Vite
+- เมื่อต้องการ icon system ที่มี 100+ collections
+- เมื่อต้องการ styling ที่ fully customizable
 
 ## Skills Related
 
+- lib-vite - Vite build tool
+- lang-typescript - TypeScript programming language
 
-## Quick Start
+## โครงสร้าง Directory
 
-```bash
-npm install -D unocss
+โครงสร้างโฟลเดอร์สำหรับ Library Skills
+
+```
+lib-unocss/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญ (optional)
+├── principles/                   # หลักการ (optional)
+├── references/                   # เอกสารอ้างอิง
+├── workflows/                    # Workflows สำหรับ automation
+├── templates/                    # Templates สำหรับเริ่มต้น (optional)
+├── scripts/                      # Scripts สำหรับ automation (optional)
+└── .devin/                       # Rules และ configurations
+    ├── goal.md                  # เป้าหมายของ skill
+    ├── scope.md                 # Scope และ execute steps
+    ├── execute.md               # Execute steps ทั้งหมด
+    ├── expected.md              # Expected outcome
+    ├── rules/
+    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
+    │   │   └── structure-lib.md
+    │   ├── glob/                # Files ที่ใช้ glob patterns
+    │   └── model_decision/      # Template files สำหรับ model decision
+    └── workflows/               # Workflow files สำหรับ task automation
 ```
 
-```typescript
-// uno.config.ts
-import { defineConfig, presetUno, presetAttributify, presetIcons } from 'unocss'
-
-export default defineConfig({
-  presets: [presetUno(), presetAttributify(), presetIcons()],
-})
-```
-
-```typescript
-// vite.config.ts
-import UnoCSS from 'unocss/vite'
-
-export default {
-  plugins: [UnoCSS()],
-}
-```
-
-```typescript
-// src/main.ts
-import 'virtual:uno.css'
-```
-
-## File Structure
-
-| Folder | Files | Description |
-|--------|-------|-------------|
-| **Guide** | [Installation](guide/installation.md) | Installation and setup |
-| | [Quick Start](guide/quick-start.md) | Step-by-step guide |
-| | [Key Concepts](guide/key-concept.md) | Core concepts |
-| | [How It Works](guide/how-it-works.md) | Engine pipeline |
-| | [Features](guide/features.md) | All features |
-| | [Configuration](guide/configuration.md) | Configuration guide |
-| | [Best Practices](guide/best-practices.md) | Best practices |
-| | [Integration](guide/integration.md) | Framework integrations |
-| | [Architecture](guide/architecture.md) | Internal architecture |
-| **References** | [Website](references/website.md) | Official resources |
-| | [API](references/api.md) | API reference |
-| | [CLI](references/cli.md) | CLI commands |
-| | [Configuration](references/configuration.md) | Config options |
-| | [Templates](references/templates/) | Setup templates |
-
-## Guide (TH)
-
-| File | Description |
-|------|-------------|
-| [installation.md](guide/installation.md) | การติดตั้งและ setup |
-| [quick-start.md](guide/quick-start.md) | คู่มือเริ่มต้นใช้งาน |
-| [key-concept.md](guide/key-concept.md) | Core concepts ของ UnoCSS |
-| [how-it-works.md](guide/how-it-works.md) | UnoCSS engine pipeline |
-| [features.md](guide/features.md) | Features ทั้งหมด |
-| [configuration.md](guide/configuration.md) | การตั้งค่า configuration |
-| [best-practices.md](guide/best-practices.md) | แนวทางการใช้งาน |
-| [integration.md](guide/integration.md) | การใช้กับ frameworks |
-| [architecture.md](guide/architecture.md) | สถาปัตยกรรมภายใน |
-
-## References (EN)
-
-| File | Description |
-|------|-------------|
-| [website.md](references/website.md) | Official docs & resources links |
-| [api.md](references/api.md) | defineConfig, presets, rules API |
-| [cli.md](references/cli.md) | CLI commands reference |
-| [configuration.md](references/configuration.md) | All configuration options |
-
-### Templates
-
-| File | Description |
-|------|-------------|
-| [basic-setup.md](references/templates/basic-setup.md) | Setup templates for Vite, Nuxt, Next, etc. |
-| [component-patterns.md](references/templates/component-patterns.md) | Common component patterns |
+## หมวดหมู่ไฟล์

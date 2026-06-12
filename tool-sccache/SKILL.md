@@ -1,58 +1,44 @@
-# tool-sccache
-
-แนวทางการใช้งาน sccache - Compiler cache สำหรับ accelerate compilation
-
-## Overview
-
-sccache เป็น ccache-like compiler caching tool สำหรับ accelerate compilation ของ C/C++, Rust, และ nvcc รองรับ local cache และ remote cache (S3, Redis, Memcached) ช่วยลดเวลา build อย่างมากสำหรับ CI/CD pipelines
-
+---
+title: sccache
+description: Compiler cache สำหรับ accelerate compilation ของ C/C++, Rust, และ nvcc
+auto_execution_mode: 3
+---
 
 ## When to use
 
-
+ใช้ skill นี้เมื่อต้องการ:
+- Accelerate compilation ของ C/C++, Rust, nvcc
+- Reduce build time ใน CI/CD pipelines
+- Distributed cache สำหรับ teams
+- Remote cache ด้วย S3, Redis, Memcached
 
 ## Skills Related
 
-
+- `/lang-rust` - Rust programming
+- `/guide-performance-engineering` - Performance optimization
 
 ## References
 
+### guide/
 
-## File Structure
+| No | File | Description |
+|----|------|-------------|
+| 1 | key-concept.md | แนวคิดหลัก - Compiler wrapper, Cache |
+| 2 | how-it-works.md | การทำงาน - Hash, Store, Retrieve |
+| 3 | features.md | ฟีเจอร์ทั้งหมด - Remote storage |
+| 4 | installation.md | การติดตั้ง - cargo, binary |
+| 5 | configuration.md | การตั้งค่า - env, config |
+| 6 | quick-start.md | คู่มือเริ่มต้นใช้งาน |
+| 7 | best-practices.md | แนวทางปฏิบัติที่ดี |
 
-```
-tool-sccache/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   └── best-practices.md
-└── references/
-    ├── website.md
-    ├── cli.md
-    ├── configuration.md
-    └── api.md
-```
+### references/
 
-## Content Summary
-
-| Folder | File | Description |
-|--------|------|-------------|
-| **Guide** | key-concept.md | แนวคิดหลัก - Compiler wrapper, Cache |
-| **Guide** | how-it-works.md | การทำงาน - Hash, Store, Retrieve |
-| **Guide** | features.md | ฟีเจอร์ทั้งหมด - Remote storage |
-| **Guide** | installation.md | การติดตั้ง - cargo, binary |
-| **Guide** | configuration.md | การตั้งค่า - env, config |
-| **Guide** | quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| **Guide** | best-practices.md | แนวทางปฏิบัติที่ดี |
-| **Reference** | website.md | Official links และ resources |
-| **Reference** | cli.md | CLI commands |
-| **Reference** | configuration.md | Configuration options reference |
-| **Reference** | api.md | Server API |
+| No | File | Description |
+|----|------|-------------|
+| 1 | website.md | Official links และ resources |
+| 2 | cli.md | CLI commands |
+| 3 | configuration.md | Configuration options reference |
+| 4 | api.md | Server API |
 
 ## Quick Start
 
@@ -73,21 +59,3 @@ make
 sccache --start-server
 sccache -z
 ```
-
-## Key Features
-
-| Feature | Description |
-|---------|-------------|
-| **Multi-language** | C/C++, Rust, nvcc |
-| **Local Cache** | File-based cache |
-| **Remote Cache** | S3, Redis, Memcached |
-| **Distributed** | sccache-dist for CI |
-| **Stats** | Hit/miss statistics |
-
-## Usage Order
-
-1. **Start**: `guide/installation.md` → `guide/key-concept.md`
-2. **Learn**: `guide/how-it-works.md` → `guide/features.md`
-3. **Configure**: `guide/configuration.md`
-4. **Reference**: `references/cli.md`
-5. **Best Practices**: `guide/best-practices.md`

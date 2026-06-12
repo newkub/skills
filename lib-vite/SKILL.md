@@ -3,32 +3,51 @@ name: lib-vite
 description: แนวทางการใช้งาน Vite ในฐานะ build library สำหรับ frontend development ด้วย Native ESM, HMR ที่รวดเร็ว, Plugin API และ Rollup-based production build
 ---
 
-# guide/
-
-- key-concept.md - Core concepts ของ Vite - Native ESM, Dependency Pre-bundling, HMR, Rollup Build, Plugin System
-- how-it-works.md - การทำงานภายในของ Vite - Dev Server Flow, Build Pipeline, Module Graph, HMR Update Propagation
-- features.md - Features ทั้งหมดของ Vite - TypeScript & JSX, CSS Preprocessors, Static Assets, SSR, Library Mode
-- installation.md - การติดตั้ง Vite พร้อม framework plugins และ dependencies
-- configuration.md - การตั้งค่า Vite configuration ด้วย vite.config.ts
-- quick-start.md - คู่มือเริ่มต้นใช้งาน Vite
-- best-practices.md - Best practices สำหรับการใช้งาน Vite
-- integration.md - Integration กับ frameworks และ tools
-- architecture.md - Architecture ของ Vite
-
-# references/
-
-- website.md - Official links และ resources
-- api.md - Programmatic API reference
-- configuration.md - Configuration options reference
-
-
 ## When to use
 
-
+- เมื่อต้องการ build tool ที่เร็วสำหรับ frontend development
+- เมื่อต้องการ HMR (Hot Module Replacement) ที่รวดเร็ว
+- เมื่อต้องการใช้ Native ESM ใน development
+- เมื่อต้องการ Plugin API ที่ flexible
+- เมื่อต้องการ build ด้วย Rollup สำหรับ production
+- เมื่อต้องการ support frameworks อย่าง Vue, React, Svelte, SolidJS
+- เมื่อต้องการ TypeScript และ JSX support
+- เมื่อต้องการ CSS preprocessors และ asset optimization
 
 ## Skills Related
 
+- `lib-vitest` - Testing framework ที่ built-in กับ Vite
+- `lib-react` - React framework สำหรับใช้กับ Vite
+- `lib-vue` - Vue framework สำหรับใช้กับ Vite
+- `lib-svelte` - Svelte framework สำหรับใช้กับ Vite
+- `lib-solidjs` - SolidJS framework สำหรับใช้กับ Vite
+- `lang-typescript` - TypeScript สำหรับ type safety
 
+## โครงสร้าง Directory
 
-## References
+โครงสร้างโฟลเดอร์สำหรับ Library Skills
 
+```
+lib-vite/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญ (optional)
+├── principles/                   # หลักการ (optional)
+├── references/                   # เอกสารอ้างอิง
+├── workflows/                    # Workflows สำหรับ automation
+├── templates/                    # Templates สำหรับเริ่มต้น (optional)
+├── scripts/                      # Scripts สำหรับ automation (optional)
+└── .devin/                       # Rules และ configurations
+    ├── goal.md                  # เป้าหมายของ skill
+    ├── scope.md                 # Scope และ execute steps
+    ├── execute.md               # Execute steps ทั้งหมด
+    ├── expected.md              # Expected outcome
+    ├── rules/
+    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
+    │   │   └── structure-lib.md
+    │   ├── glob/                # Files ที่ใช้ glob patterns
+    │   └── model_decision/      # Template files สำหรับ model decision
+    └── workflows/               # Workflow files สำหรับ task automation
+```
+
+## หมวดหมู่ไฟล์

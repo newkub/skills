@@ -15,10 +15,19 @@ description: แนวทางการใช้งาน Scalar API Designer �
 
 ## Skills Related
 
-- `lib-graphql` - GraphQL best practices
+## โครงสร้าง Directory
 
+โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
 
-## References
+```
+lang-scalar/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── references/                   # เอกสารอ้างอิง
+└── workflows/                    # Workflows สำหรับ automation
+```
+
+## หมวดหมู่ไฟล์
 
 ### guide/
 

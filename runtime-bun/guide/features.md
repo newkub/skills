@@ -13,7 +13,7 @@
 
 ## Built-in APIs
 
-### Bun物件
+### Bun Objects
 
 ```typescript
 // HTTP Server

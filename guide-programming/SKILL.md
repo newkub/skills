@@ -1,6 +1,6 @@
 ---
 name: programming
-description: Programming - แนวทางการเขียนโปรแกรมที่ดี — ครอบคลุมหลักการพื้นฐาน การเขียนโค้ดที่อ่านง่าย การจัดการ errors และ testing สำหรับทุกภาษาโปรแกรม
+description: Programming guide covering fundamentals, clean code, error handling, testing, and programming paradigms for all programming languages.
 ---
 
 # Programming
@@ -19,38 +19,14 @@ description: Programming - แนวทางการเขียนโปร�
 
 ## Skills Related
 
-- `guide-design-patterns` - สำหรับ design patterns
-- `guide-software-testing` - สำหรับการทดสอบ
-- `guide-software-architecture` - สำหรับการออกแบบระบบ
-
+- guide-design-patterns
+- guide-software-testing
+- guide-software-architecture
 
 ## References
 
-
-## หมวดหมู่ไฟล์
-
-### guide/
-
-| No | File | Description | Level |
-|----|------|-------------|-------|
-| 1 | [key-concept.md](guide/key-concept.md) | Core concepts: paradigms, principles, techniques | Basic |
-| 2 | [how-it-works.md](guide/how-it-works.md) | Programming mechanics and flow | Basic |
-| 3 | [features.md](guide/features.md) | Language features and capabilities | Basic |
-| 4 | [configuration.md](guide/configuration.md) | Code style and project configuration | Basic |
-| 5 | [quick-start.md](guide/quick-start.md) | Quick start guide for programming | Basic |
-| 6 | [best-practices.md](guide/best-practices.md) | Writing clean, maintainable code | Intermediate |
-| 7 | [integration.md](guide/integration.md) | Integration with tools and workflows | Intermediate |
-
-### references/
-
-| No | File | Description | Language |
-|----|------|-------------|----------|
-| 8 | [website.md](references/website.md) | Official links: tutorials, documentation | English |
-
-## หัวข้อหลัก
-
-- **Programming Paradigms**: Imperative, Functional, OOP
-- **Code Quality**: Readability, Maintainability, Testability
-- **Error Handling**: Exceptions, Error propagation
-- **Testing**: Unit tests, Integration tests
-- **Code Style**: Naming conventions, Formatting
+| Resource | URL |
+|----------|-----|
+| Clean Code | Book: Clean Code by Robert C. Martin |
+| Programming Books | Various texts |
+| Online Tutorials | Various platforms |

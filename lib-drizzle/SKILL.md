@@ -12,52 +12,38 @@ description: แนวทางการพัฒนา Drizzle ORM ตาม be
 
 ## Skills Related
 
-- `/lang-typescript` - TypeScript programming language
-- `/lib-nitro` - Nitro framework
-
-
-## References
-
+- `lang-typescript` - TypeScript programming language
+- `lib-nitro` - Nitro framework
 
 ## โครงสร้าง Directory
 
-```text
-lib-drizzle/
-├── SKILL.md
-├── 
-│   ├── guide/
-│   │   ├── update-key-concept.md
-│   │   ├── update-how-it-works.md
-│   │   ├── update-features.md
-│   │   ├── update-installation.md
-│   │   ├── update-configuration.md
-│   │   ├── update-quick-start.md
-│   │   ├── update-best-practices.md
-│   │   ├── update-integration.md
-│   │   ├── update-architecture.md
-│   │   ├── update-structure.md
-│   │   ├── update-performance.md
-│   │   ├── update-security.md
-│   │   ├── update-migration.md
-│   │   ├── update-ecosystem.md
-│   │   ├── update-testing.md
-│   │   ├── update-patterns.md
-│   │   └── update-troubleshooting.md
-│   ├── key-concepts/
-│   │   ├── schema-definition.md
-│   │   ├── query-builder.md
-│   │   ├── migrations.md
-│   │   └── relations.md
-│   └── principles/
-│       ├── type-safety.md
-│       └── sql-like-syntax.md
-└── references/
-    ├── update-website.md
-    ├── update-sitemap.md
-    ├── update-api.md
-    ├── update-cli.md
-    └── update-configuration.md
+โครงสร้างโฟลเดอร์สำหรับ Library Skills
+
 ```
+lib-drizzle/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญ (optional)
+├── principles/                   # หลักการ (optional)
+├── references/                   # เอกสารอ้างอิง
+├── workflows/                    # Workflows สำหรับ automation
+├── templates/                    # Templates สำหรับเริ่มต้น (optional)
+├── scripts/                      # Scripts สำหรับ automation (optional)
+└── .devin/                       # Rules และ configurations
+    ├── goal.md                  # เป้าหมายของ skill
+    ├── scope.md                 # Scope และ execute steps
+    ├── execute.md               # Execute steps ทั้งหมด
+    ├── expected.md              # Expected outcome
+    ├── rules/
+    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
+    │   │   └── structure-lib.md
+    │   ├── glob/                # Files ที่ใช้ glob patterns
+    │   └── model_decision/      # Template files สำหรับ model decision
+    └── workflows/               # Workflow files สำหรับ task automation
+```
+
+## หมวดหมู่ไฟล์
+
 
 ## หมวดหมู่ไฟล์
 
@@ -65,33 +51,33 @@ lib-drizzle/
 
 | No | File | Description |
 |----|------|-------------|
-| 1 | update-key-concept.md | Core concepts: schema, queries, relations, migrations, SQL-like API |
-| 2 | update-how-it-works.md | Internal workings: query flow, migration pipeline, relation loading |
-| 3 | update-features.md | All features: CRUD, relations, transactions, indexes, enums, views |
-| 4 | update-installation.md | Installation for drizzle-orm, drizzle-kit, and database drivers |
-| 5 | update-configuration.md | drizzle.config.ts setup for all dialects and credentials |
-| 6 | update-quick-start.md | Step-by-step guide from install to first query and migration |
-| 7 | update-best-practices.md | Schema organization, type safety, query patterns, performance |
-| 8 | update-integration.md | Integration with Next.js, Hono, Express, Zod, tRPC, serverless |
-| 9 | update-architecture.md | Core architecture layers, dialects, drivers, Drizzle Kit |
-| 10 | update-structure.md | โครงสร้างโปรเจกต์ Drizzle |
-| 11 | update-performance.md | เทคนิคการปรับปรุง performance |
-| 12 | update-security.md | ความปลอดภัยและ security considerations |
-| 13 | update-migration.md | วิธี migration จาก ORMs อื่นๆ |
-| 14 | update-ecosystem.md | Ecosystem และ integrations |
-| 15 | update-testing.md | การทดสอบ Drizzle applications |
-| 16 | update-patterns.md | Patterns ที่ใช้บ่อย |
-| 17 | update-troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
+| 1 | key-concept.md | Core concepts: schema, queries, relations, migrations, SQL-like API |
+| 2 | how-it-works.md | Internal workings: query flow, migration pipeline, relation loading |
+| 3 | features.md | All features: CRUD, relations, transactions, indexes, enums, views |
+| 4 | installation.md | Installation for drizzle-orm, drizzle-kit, and database drivers |
+| 5 | configuration.md | drizzle.config.ts setup for all dialects and credentials |
+| 6 | quick-start.md | Step-by-step guide from install to first query and migration |
+| 7 | best-practices.md | Schema organization, type safety, query patterns, performance |
+| 8 | integration.md | Integration with Next.js, Hono, Express, Zod, tRPC, serverless |
+| 9 | architecture.md | Core architecture layers, dialects, drivers, Drizzle Kit |
+| 10 | structure.md | โครงสร้างโปรเจกต์ Drizzle |
+| 11 | performance.md | เทคนิคการปรับปรุง performance |
+| 12 | security.md | ความปลอดภัยและ security considerations |
+| 13 | migration.md | วิธี migration จาก ORMs อื่นๆ |
+| 14 | ecosystem.md | Ecosystem และ integrations |
+| 15 | testing.md | การทดสอบ Drizzle applications |
+| 16 | patterns.md | Patterns ที่ใช้บ่อย |
+| 17 | troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
 
 ### references/
 
 | No | File | Description |
 |----|------|-------------|
-| 1 | update-website.md | Official links: docs, GitHub, npm, Discord, community resources |
-| 2 | update-sitemap.md | แผนผังเอกสารและทรัพยากรที่เกี่ยวข้อง |
-| 3 | update-api.md | Query methods, schema helpers, operators, relations API, aggregation |
-| 4 | update-cli.md | Drizzle Kit CLI commands: generate, push, pull, studio, check, drop |
-| 5 | update-configuration.md | drizzle.config.ts options, dialect credentials, SSL, environment |
+| 1 | website.md | Official links: docs, GitHub, npm, Discord, community resources |
+| 2 | sitemap.md | แผนผังเอกสารและทรัพยากรที่เกี่ยวข้อง |
+| 3 | api.md | Query methods, schema helpers, operators, relations API, aggregation |
+| 4 | cli.md | Drizzle Kit CLI commands: generate, push, pull, studio, check, drop |
+| 5 | configuration.md | drizzle.config.ts options, dialect credentials, SSL, environment |
 
 ### key-concepts/
 

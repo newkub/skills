@@ -15,36 +15,6 @@ description: สร้าง .devin structure ครบถ้วนสำหร�
 - `/write-skills` - มาตรฐานการเขียน Devin Skills
 - `/write-windsurf-global-workflows` - มาตรฐานการเขียน Workflows
 
-## โครงสร้าง Directory
-
-```text
-tool-write-dot-devin/
-├── SKILL.md
-├── guide/
-│   ├── installation.md
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   └── best-practices.md
-├── key-concepts/
-│   ├── devin-structure.md
-│   ├── rules.md
-│   └── hooks.md
-├── principles/
-│   ├── minimal-config.md
-│   └── consistency.md
-├── references/
-│   ├── project-rules.md
-│   ├── project-hooks.md
-│   ├── configuration.md
-│   └── website.md
-└── workflows/
-    ├── write-devin-project-rules.md
-    └── write-devin-project-hooks.md
-```
-
 ## Guide
 
 | No | File | Description |

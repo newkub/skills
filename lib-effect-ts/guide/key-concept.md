@@ -20,7 +20,7 @@ const failure: Effect.Effect<never, Error, never> = Effect.fail(new Error('Oops'
 // Effect requiring some environment
 const withEnv: Effect.Effect<string, never, { config: string }> = Effect.gen(
   function* () {
-    const config = yield* Effect.servicezi(Config); // ดึง config จาก environment
+    const config = yield* Effect.service(Config); // ดึง config จาก environment
     return `Loaded: ${config}`;
   }
 );

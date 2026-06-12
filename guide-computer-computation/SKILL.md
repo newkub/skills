@@ -1,6 +1,6 @@
 ---
 name: computer-computation
-description: Computer Computation - คู่มือเกี่ยวกับ Computer Computation และ Theory of Computation ครอบคลุม topics ต่างๆ เกี่ยวกับ computational models, complexity theory, algorithms และ formal languages
+description: Computer computation and theory of computation guide covering computational models, complexity theory, algorithms, and formal languages.
 ---
 
 # Computer Computation
@@ -19,38 +19,13 @@ description: Computer Computation - คู่มือเกี่ยวกั�
 
 ## Skills Related
 
-- `guide-computer-arhitecture` - สำหรับการออกแบบ hardware และ systems
-- `guide-math` - สำหรับคณิตศาสตร์ที่เกี่ยวข้อง
-- `guide-programming` - สำหรับการเขียนโปรแกรม
-
+- guide-computer-arhitecture
+- guide-math
+- guide-programming
 
 ## References
 
-
-## หมวดหมู่ไฟล์
-
-### guide/
-
-| No | File | Description | Level |
-|----|------|-------------|-------|
-| 1 | [key-concept.md](guide/key-concept.md) | แนวคิดหลักและคำศัพท์สำคัญ | Basic |
-| 2 | [how-it-works.md](guide/how-it-works.md) | ภาพรวมการทำงานของ computation | Basic |
-| 3 | [features.md](guide/features.md) | Features และประเภทของ computation | Basic |
-| 4 | [configuration.md](guide/configuration.md) | Models และ configurations | Basic |
-| 5 | [quick-start.md](guide/quick-start.md) | เริ่มต้นศึกษา | Basic |
-| 6 | [best-practices.md](guide/best-practices.md) | แนวทางการศึกษา | Intermediate |
-| 7 | [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ computational models | Intermediate |
-
-### references/
-
-| No | File | Description | Language |
-|----|------|-------------|----------|
-| 8 | [website.md](references/website.md) | แหล่งข้อมูลอย่างเป็นทางการ | English |
-
-## หัวข้อหลัก
-
-- **Turing Machine**: Universal computation model
-- **Lambda Calculus**: Alternative formal system
-- **Complexity Classes**: P, NP, PSPACE, EXPTIME
-- **Automata**: DFA, NFA, PDA
-- **Formal Languages**: Regular, CFL, CSL, RE
+| Resource | URL |
+|----------|-----|
+| Academic Papers | IEEE, ACM |
+| Textbooks | Various academic texts |

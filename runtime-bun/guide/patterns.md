@@ -1,14 +1,4 @@
----
-description: Patterns และ best practices สำหรับ Bun
----
-
-## Goal
-
-อธิบาย patterns และ best practices สำหรับการพัฒนาด้วย Bun
-
-## Scope
-
-สำหรับโปรเจกต์ที่ใช้ Bun เป็น runtime
+# Patterns
 
 ## Common Patterns
 

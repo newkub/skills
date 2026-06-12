@@ -18,27 +18,26 @@
 | Path | Description |
 |------|-------------|
 | SKILL.md | Skill index และ overview |
-| knowledge/ | Knowledge base |
-| knowledge/guide/ | Guides และ best practices |
-| knowledge/guide/installation.md | วิธีติดตั้ง |
-| knowledge/guide/key-concept.md | Concept หลัก |
-| knowledge/guide/how-it-works.md | Internal mechanism |
-| knowledge/guide/features.md | รายการ features |
-| knowledge/guide/configuration.md | Configuration options |
-| knowledge/guide/quick-start.md | Quick start guide |
-| knowledge/guide/best-practices.md | Best practices |
-| knowledge/guide/integration.md | Integration patterns |
-| knowledge/guide/architecture.md | Architecture overview |
-| knowledge/guide/structure.md | Folder structure |
-| knowledge/guide/performance.md | Performance characteristics |
-| knowledge/guide/security.md | Security considerations |
-| knowledge/guide/migration.md | Migration guide |
-| knowledge/guide/ecosystem.md | Ecosystem overview |
-| knowledge/guide/testing.md | Testing strategies |
-| knowledge/guide/patterns.md | Design patterns |
-| knowledge/guide/troubleshooting.md | Troubleshooting guide |
-| knowledge/key-concepts/ | Key concepts (optional) |
-| knowledge/principles/ | Principles (optional) |
+| guide/ | Guides และ best practices |
+| guide/installation.md | วิธีติดตั้ง |
+| guide/key-concept.md | Concept หลัก |
+| guide/how-it-works.md | Internal mechanism |
+| guide/features.md | รายการ features |
+| guide/configuration.md | Configuration options |
+| guide/quick-start.md | Quick start guide |
+| guide/best-practices.md | Best practices |
+| guide/integration.md | Integration patterns |
+| guide/architecture.md | Architecture overview |
+| guide/structure.md | Folder structure |
+| guide/performance.md | Performance characteristics |
+| guide/security.md | Security considerations |
+| guide/migration.md | Migration guide |
+| guide/ecosystem.md | Ecosystem overview |
+| guide/testing.md | Testing strategies |
+| guide/patterns.md | Design patterns |
+| guide/troubleshooting.md | Troubleshooting guide |
+| key-concepts/ | Key concepts (optional) |
+| principles/ | Principles (optional) |
 | references/ | Reference documentation |
 | references/website.md | Official website resources |
 | references/sitemap.md | Documentation sitemap |
@@ -47,5 +46,5 @@
 | references/tui-usage.md | TUI usage |
 | references/configuration.md | Configuration reference |
 | workflows/ | Workflow files |
-| examples/ | Code examples (optional) |
+| templates/ | Templates (optional) |
 | scripts/ | TypeScript scripts (optional) |

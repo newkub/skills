@@ -1,14 +1,4 @@
----
-description: เครื่องมือและ libraries ใน ecosystem ของ Bun
----
-
-## Goal
-
-อธิบาย ecosystem ของ Bun และ tools ที่รองรับ
-
-## Scope
-
-สำหรับการพัฒนาด้วย Bun และ integration กับ tools อื่นๆ
+# Ecosystem
 
 ## Core Tools
 

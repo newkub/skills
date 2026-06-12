@@ -1,27 +1,35 @@
 # Installation
 
+วิธีติดตั้ง SolidJS ใน project ของคุณ
+
 ## Vite
 
+สร้าง project ใหม่ด้วย Vite template:
+
 ```bash
-npm create vite@latest my-app -- --template solid-ts
+bun create vite my-app --template solid-ts
 cd my-app
-npm install
+bun install
 ```
 
 ## Solid Playground
 
+ใช้ template จาก SolidJS:
+
 ```bash
 bunx degit solidjs/templates/ts my-app
 cd my-app
-npm install
+bun install
 ```
 
 ## Manual Setup
 
+ติดตั้งใน project ที่มีอยู่:
+
 ```bash
-npm init -y
-npm install solid-js
-npm install -D vite vite-plugin-solid typescript
+bun init -y
+bun add solid-js
+bun add -D vite vite-plugin-solid typescript
 ```
 
 ## Vite Config

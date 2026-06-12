@@ -1,14 +1,4 @@
----
-description: การทดสอบด้วย Bun test runner
----
-
-## Goal
-
-อธิบายวิธีการทดสอบด้วย Bun test runner
-
-## Scope
-
-สำหรับโปรเจกต์ที่ใช้ Bun เป็น runtime
+# Testing
 
 ## Bun Test Runner
 

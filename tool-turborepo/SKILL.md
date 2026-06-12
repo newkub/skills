@@ -1,44 +1,47 @@
 ---
-name: tool-turborepo
-description: Turborepo - High-performance build system สำหรับ JavaScript/TypeScript monorepos ด้วย intelligent caching และ task scheduling
+title: Turborepo
+description: High-performance build system สำหรับ JavaScript/TypeScript monorepos ด้วย intelligent caching และ task scheduling
+auto_execution_mode: 3
 ---
 
 ## When to use
 
-- เมื่อต้องการ build system สำหรับ monorepos
-- เมื่อต้องการ intelligent caching และ task scheduling
-- เมื่อต้องการ remote cache สำหรับ CI/CD
-- เมื่อต้องการ faster builds ด้วย parallel execution
+ใช้ skill นี้เมื่อต้องการ:
+- Build system สำหรับ monorepos
+- Intelligent caching และ task scheduling
+- Remote cache สำหรับ CI/CD
+- Faster builds ด้วย parallel execution
 
 ## Skills Related
 
 - `/lib-nitro` - Nitro framework สำหรับ server-side
 - `/tool-moonrepo` - Moonrepo สำหรับ monorepo management
-
+- `/follow-turborepo` - Turborepo best practices
 
 ## References
 
-
-## หมวดหมู่ไฟล์
-
 ### guide/
 
-- **key-concept.md** - แนวคิดหลักและการทำงานของ Turborepo
-- **how-it-works.md** - สถาปัตยกรรมและ workflow การทำงาน
-- **features.md** - ฟีเจอร์หลักที่สำคัญ
-- **installation.md** - การติดตั้งและข้อกำหนด
-- **configuration.md** - การตั้งค่า turbo.json
-- **quick-start.md** - เริ่มต้นใช้งานอย่างรวดเร็ว
-- **best-practices.md** - แนวทางปฏิบัติที่ดี
-- **integration.md** - การเชื่อมต่อกับเครื่องมือและ workflow ต่างๆ
-- **architecture.md** - สถาปัตยกรรมระบบโดยละเอียด
+| No | File | Description |
+|----|------|-------------|
+| 1 | key-concept.md | แนวคิดหลักและการทำงานของ Turborepo |
+| 2 | how-it-works.md | สถาปัตยกรรมและ workflow การทำงาน |
+| 3 | features.md | ฟีเจอร์หลักที่สำคัญ |
+| 4 | installation.md | การติดตั้งและข้อกำหนด |
+| 5 | configuration.md | การตั้งค่า turbo.json |
+| 6 | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| 7 | best-practices.md | แนวทางปฏิบัติที่ดี |
+| 8 | integration.md | การเชื่อมต่อกับเครื่องมือและ workflow ต่างๆ |
+| 9 | architecture.md | สถาปัตยกรรมระบบโดยละเอียด |
 
 ### references/
 
-- **website.md** - เว็บไซต์และเอกสารอย่างเป็นทางการ
-- **cli.md** - คำสั่ง CLI สำหรับ Turborepo
-- **configuration.md** - ตัวเลือก configuration ทั้งหมด
-- **api.md** - Remote cache และ API options
+| No | File | Description |
+|----|------|-------------|
+| 1 | website.md | เว็บไซต์และเอกสารอย่างเป็นทางการ |
+| 2 | cli.md | คำสั่ง CLI สำหรับ Turborepo |
+| 3 | configuration.md | ตัวเลือก configuration ทั้งหมด |
+| 4 | api.md | Remote cache และ API options |
 
 ## Quick Reference
 

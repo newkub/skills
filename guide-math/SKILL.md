@@ -1,6 +1,6 @@
 ---
 name: math
-description: Math - คู่มือคณิตศาสตร์สำหรับการพัฒนาซอฟต์แวร์ ครอบคลุม Computation, Discrete Mathematics, Information Theory, Linear Algebra และ Set Theory
+description: Mathematics guide for software development covering computation, discrete mathematics, information theory, linear algebra, and set theory.
 ---
 
 # Math
@@ -19,37 +19,14 @@ Skill นี้ครอบคลุมความรู้ด้านคณ�
 
 ## Skills Related
 
-- `guide-computer-computation` - สำหรับทฤษฎี computation
-- `guide-programming` - สำหรับการเขียนโปรแกรม
-- `guide-software-architecture` - สำหรับการออกแบบระบบ
-
+- guide-computer-computation
+- guide-programming
+- guide-software-architecture
 
 ## References
 
-
-## หมวดหมู่ไฟล์
-
-### guide/
-
-| No | File | Description | Level |
-|----|------|-------------|-------|
-| 1 | [key-concept.md](guide/key-concept.md) | แนวคิดหลักของทุกสาขา | Basic |
-| 2 | [how-it-works.md](guide/how-it-works.md) | การเชื่อมโยงระหว่างสาขาต่างๆ | Basic |
-| 3 | [features.md](guide/features.md) | Features ทั้งหมดของทุกสาขา | Basic |
-| 4 | [configuration.md](guide/configuration.md) | การตั้งค่า libraries | Basic |
-| 5 | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งาน | Basic |
-| 6 | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี | Intermediate |
-
-### references/
-
-| No | File | Description | Language |
-|----|------|-------------|----------|
-| 7 | [website.md](references/website.md) | แหล่งข้อมูลอย่างเป็นทางการ | English |
-
-## หัวข้อหลัก
-
-- **Computation**: Big O, Recursion, Dynamic Programming
-- **Discrete Math**: Graph Theory, Logic, Combinatorics
-- **Information Theory**: Entropy, Compression
-- **Linear Algebra**: Vectors, Matrices, Eigenvalues
-- **Set Theory**: Sets, Relations, Functions
+| Resource | URL |
+|----------|-----|
+| Math Textbooks | Various academic texts |
+| Online Courses | Khan Academy, Coursera |
+| Wolfram MathWorld | https://mathworld.wolfram.com |

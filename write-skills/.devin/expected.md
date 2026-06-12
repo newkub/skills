@@ -1,0 +1,8 @@
+- Devin Skills ที่มีโครงสร้างสม่ำเสมอตามมาตรฐาน
+- Folder structure ที่เป็นระบบและ deterministic
+- SKILL.md index ที่ครบถ้วนและอ่านง่าย
+- File naming ที่สอดคล้องกันทั่วทั้ง skill
+- Content ที่มีคุณภาพและถูกต้องตามมาตรฐาน
+- .devin/ folder ที่มี rules และ workflows ที่เหมาะสม
+- References ที่ถูกต้องและอ้างอิงไปยังไฟล์ที่มีอยู่จริง
+- Skills ที่ maintainable และ easy to navigate

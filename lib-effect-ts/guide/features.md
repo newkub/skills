@@ -1,14 +1,19 @@
-# All Features
+# Features
 
 ## Core Features
 
-| Feature | Description |
-|---------|-------------|
-| Layer | Effect computation |
-| Effect | Async effect |
-| Ref | Mutable state |
-| Context | Dependency injection |
-| Scope | Resource management |
+| Feature | Description | Use Case |
+|---------|-------------|----------|
+| Effect | Effect computation ที่ type-safe | จัดการ async operations และ error handling |
+| Layer | Dependency injection และ service composition | จัดการ dependencies และ mock สำหรับ testing |
+| Ref | Mutable state ที่ thread-safe | State management ใน concurrent environments |
+| Context | Type-safe dependency injection | ส่ง services ผ่าน environment |
+| Scope | Resource management และ cleanup | จัดการ resources ที่ต้อง cleanup เช่น database connections |
+| Stream | Lazy async sequences | จัดการ data streams และ infinite sequences |
+| Channel | Producer-consumer pattern | สื่อสารระหว่าง concurrent processes |
+| Fiber | Lightweight async tasks | Parallel execution และ cancellation |
+| Schedule | Time-based operations | Retry logic และ recurring tasks |
+| Queue | Async queue operations | Rate limiting และ backpressure |
 
 ## Layer
 

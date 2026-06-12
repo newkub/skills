@@ -16,11 +16,38 @@ description: Build AI agents on Cloudflare Workers using the Agents SDK. Load wh
 
 ## Skills Related
 
-- `/cloud-cloudflare` - Cloudflare platform and services
-- `/tool-wrangler` - Cloudflare Workers CLI tool
-- `/lang-typescript` - TypeScript programming language
+- `cloud-cloudflare` - Cloudflare platform and services
+- `tool-wrangler` - Cloudflare Workers CLI tool
+- `lang-typescript` - TypeScript programming language
 
-## References
+## โครงสร้าง Directory
+
+โครงสร้างโฟลเดอร์สำหรับ Library Skills
+
+```
+lib-agents-sdk/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญ (optional)
+├── principles/                   # หลักการ (optional)
+├── references/                   # เอกสารอ้างอิง
+├── workflows/                    # Workflows สำหรับ automation
+├── templates/                    # Templates สำหรับเริ่มต้น (optional)
+├── scripts/                      # Scripts สำหรับ automation (optional)
+└── .devin/                       # Rules และ configurations
+    ├── goal.md                  # เป้าหมายของ skill
+    ├── scope.md                 # Scope และ execute steps
+    ├── execute.md               # Execute steps ทั้งหมด
+    ├── expected.md              # Expected outcome
+    ├── rules/
+    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
+    │   │   └── structure-lib.md
+    │   ├── glob/                # Files ที่ใช้ glob patterns
+    │   └── model_decision/      # Template files สำหรับ model decision
+    └── workflows/               # Workflow files สำหรับ task automation
+```
+
+## หมวดหมู่ไฟล์
 
 | Topic | Docs URL | Use for |
 |-------|----------|---------|
@@ -34,64 +61,6 @@ description: Build AI agents on Cloudflare Workers using the Agents SDK. Load wh
 | Client SDK | [Client SDK](https://developers.cloudflare.com/agents/api-reference/client-sdk/) | `useAgent`, `useAgentChat`, React hooks |
 | MCP | [MCP client](https://developers.cloudflare.com/agents/api-reference/mcp-client-api/) | Connecting to MCP servers |
 | Durable execution | [Durable execution](https://developers.cloudflare.com/agents/api-reference/durable-execution/) | `runFiber()`, `stash()`, surviving DO eviction |
-
-## โครงสร้าง Directory
-
-```text
-lib-agents-sdk/
-├── SKILL.md
-├── guide/
-│   ├── installation.md
-│   ├── quick-start.md
-│   ├── configuration.md
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── architecture.md
-│   ├── best-practices.md
-│   ├── integration.md
-│   ├── migration.md
-│   ├── patterns.md
-│   ├── performance.md
-│   ├── security.md
-│   ├── structure.md
-│   ├── testing.md
-│   ├── troubleshooting.md
-│   └── ecosystem.md
-├── key-concepts/
-│   ├── agent-class.md
-│   ├── state-management.md
-│   ├── callable-methods.md
-│   └── durable-execution.md
-├── principles/
-│   ├── state-immutability.md
-│   └── single-responsibility.md
-└── references/
-    ├── api.md
-    ├── cli.md
-    ├── sitemap.md
-    ├── website.md
-    ├── tui.md
-    ├── configuration.md
-    ├── browse-the-web.md
-    ├── callable.md
-    ├── client-sdk.md
-    ├── codemode.md
-    ├── durable-execution.md
-    ├── email.md
-    ├── human-in-the-loop.md
-    ├── mcp.md
-    ├── observability.md
-    ├── queue-retries.md
-    ├── routing.md
-    ├── server-driven-messages.md
-    ├── state-scheduling.md
-    ├── streaming-chat.md
-    ├── think.md
-    ├── voice.md
-    ├── webhooks-push.md
-    └── workflows.md
-```
 
 ## หมวดหมู่ไฟล์
 

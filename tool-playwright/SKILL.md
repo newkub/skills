@@ -16,7 +16,7 @@ description: แนวทางการใช้งาน Playwright - End-to-e
 
 
 
-## References
+## referencess
 
 
 ## Overview
@@ -38,7 +38,7 @@ tool-playwright/
 │       ├── quick-start.md
 │       ├── best-practices.md
 │       └── integration.md
-└── references/
+└── referencess/
     ├── website.md
     ├── cli.md
     ├── configuration.md
@@ -49,18 +49,18 @@ tool-playwright/
 
 | Folder | File | Description |
 |--------|------|-------------|
-| **Knowledge/Guide** | key-concept.md | แนวคิดหลัก - Locators, Assertions |
-| **Knowledge/Guide** | how-it-works.md | การทำงาน - Browser context, Page |
-| **Knowledge/Guide** | features.md | ฟีเจอร์ทั้งหมด - Auto-waiting, Tracing |
-| **Knowledge/Guide** | installation.md | การติดตั้ง - browsers, dependencies |
-| **Knowledge/Guide** | configuration.md | การตั้งค่า - playwright.config.ts |
-| **Knowledge/Guide** | quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| **Knowledge/Guide** | best-practices.md | แนวทางปฏิบัติที่ดี |
-| **Knowledge/Guide** | integration.md | การเชื่อมต่อกับ frameworks อื่น |
-| **Reference** | website.md | Official links และ resources |
-| **Reference** | cli.md | CLI commands |
-| **Reference** | configuration.md | Configuration options reference |
-| **Reference** | api.md | API reference |
+| **guide** | key-concept.md | แนวคิดหลัก - Locators, Assertions |
+| **guide** | how-it-works.md | การทำงาน - Browser context, Page |
+| **guide** | features.md | ฟีเจอร์ทั้งหมด - Auto-waiting, Tracing |
+| **guide** | installation.md | การติดตั้ง - browsers, dependencies |
+| **guide** | configuration.md | การตั้งค่า - playwright.config.ts |
+| **guide** | quick-start.md | คู่มือเริ่มต้นใช้งาน |
+| **guide** | best-practices.md | แนวทางปฏิบัติที่ดี |
+| **guide** | integration.md | การเชื่อมต่อกับ frameworks อื่น |
+| **references** | website.md | Official links และ resources |
+| **references** | cli.md | CLI commands |
+| **references** | configuration.md | Configuration options references |
+| **references** | api.md | API references |
 
 ## Quick Start
 
@@ -97,5 +97,5 @@ bunx playwright test --debug
 1. **Start**: `guide/installation.md` → `guide/key-concept.md`
 2. **Learn**: `guide/how-it-works.md` → `guide/features.md`
 3. **Configure**: `guide/configuration.md`
-4. **Reference**: `references/cli.md` → `references/api.md`
+4. **references**: `referencess/cli.md` → `referencess/api.md`
 5. **Best Practices**: `guide/best-practices.md`

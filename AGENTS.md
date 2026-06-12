@@ -16,58 +16,58 @@ auto_execution_mode: 3
 
 ### 1. Prepare
 
-1. ทำ `/ship-run` เพื่อ ship code ครบวงจร ทดสอบคุณภาพ และรัน development server
-2. ตั้งค่า workspace ด้วย `/setup-tasks`
-3. ดู reference ก่อน setup ด้วย `/follow-windsurf-global-workflows`
-4. ดู tech stack ด้วย `/follow-my-tech-stack`
-5. เปลี่ยน config หรือใช้ workflows `run-` ด้วย `/follow-config`
-6. File operation ใดๆ ต้องทำ `/edit-relative`
-7. `"."` = `/continue` หรือ `/try-again`
+1. ทำ `ship-run` เพื่อ ship code ครบวงจร ทดสอบคุณภาพ และรัน development server
+2. ตั้งค่า workspace ด้วย `setup-tasks`
+3. ดู reference ก่อน setup ด้วย `follow-windsurf-global-workflows`
+4. ดู tech stack ด้วย `follow-my-tech-stack`
+5. เปลี่ยน config หรือใช้ workflows `run-` ด้วย `follow-config`
+6. File operation ใดๆ ต้องทำ `edit-relative`
+7. `"."` = `continue` หรือ `try-again`
 
 ### 2. Analyze
 
-1. ทำ `/analyze-project` ด้วย `/use-scripts`
-2. เมื่อได้รับ error ทำตาม `/error`
+1. ทำ `analyze-project` ด้วย `use-scripts`
+2. เมื่อได้รับ error ทำตาม `error`
 3. ถ้า error มาจากคำสั่งที่ผู้ใช้รันเอง แก้ไขเฉพาะ error นั้น
-4. ถ้าแค่ส่ง errors โดยไม่บอกอะไรเพิ่มเติม หรือไม่ได้เกิดจากการรัน workflows ให้ทำ `/only-fix-errors` เท่านั้น
+4. ถ้าแค่ส่ง errors โดยไม่บอกอะไรเพิ่มเติม หรือไม่ได้เกิดจากการรัน workflows ให้ทำ `only-fix-errors` เท่านั้น
 
 ### 3. Read Reference
 
 1. เมื่อได้รับ user prompt อ่าน reference ก่อนเสมอ (workflows, skills, global rules)
-2. ทำ `/read-related-workflows` เพื่ออ่านและสรุป workflows ที่เกี่ยวข้องแบบ recursive
+2. ทำ `read-related-workflows` เพื่ออ่านและสรุป workflows ที่เกี่ยวข้องแบบ recursive
 3. วิเคราะห์และ planning ตาม reference
 4. ลดเวลาโดยไม่ต้องค้นหาข้อมูลซ้ำ
 
 ### 4. Search Code
 
-1. เมื่อต้องค้นหา code patterns, symbols, หรือ references ทำ `/search-code`
+1. เมื่อต้องค้นหา code patterns, symbols, หรือ references ทำ `search-code`
 2. ใช้ `Grep` สำหรับ text search และ `find_by_name` สำหรับ file search
 3. กำหนด scope ด้วย `type`, `glob`, หรือ `path`
 4. วิเคราะห์และ verify ผลลัพธ์
 
 ### 5. Planning
 
-1. แก้ไข workflows ด้วย `/follow-write-workflows`
-2. แก้ไข skills ด้วย `/follow-write-skills`
+1. แก้ไข workflows ด้วย `follow-write-workflows`
+2. แก้ไข skills ด้วย `follow-write-skills`
 
 ### 6. Write
 
-1. ก่อนเขียน code ทำ `/follow-principles-engineering`
-2. แก้ไขอะไร ทำ `/follow-architecture`
-3. แก้ไขไฟล์จำนวนมาก ทำ `/plan` ก่อน
+1. ก่อนเขียน code ทำ `follow-principles-engineering`
+2. แก้ไขอะไร ทำ `follow-architecture`
+3. แก้ไขไฟล์จำนวนมาก ทำ `plan` ก่อน
 4. Mock ให้ comment `// MOCK` และแยกไฟล์ไป `mock/`
 5. ยังทำไม่เสร็จ comment `// TODO`
 6. ไม่ mock หรือ TODO โดย default
 
 ### 7. Reflex
 
-1. ทำ `/loop-until-complete` ทำซ้ำจน implement เสร็จ
+1. ทำ `loop-until-complete` ทำซ้ำจน implement เสร็จ
 2. กลับไป check planning เรื่อยๆ
 
 ### 8. Report
 
-1. ทำตาม `/report`
-2. เมื่อจบ task รัน `/suggest-next-action`
+1. ทำตาม `report`
+2. เมื่อจบ task รัน `suggest-next-action`
 3. คุยกับผู้ใช้เป็นภาษาไทย
 4. คำตอบกระชับ ตรงประเด็น
 

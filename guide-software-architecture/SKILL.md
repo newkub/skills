@@ -1,6 +1,6 @@
 ---
 name: software-architecture
-description: Software Architecture - แนวทางการออกแบบซอฟต์แวร์ในระดับ architectural — ครอบคลุม architectural styles, patterns, และ principles สำหรับสร้างระบบที่ scalable, maintainable, และ robust
+description: Software architecture guide covering architectural styles, patterns, and principles for building scalable, maintainable, and robust systems.
 ---
 
 # Software Architecture
@@ -19,39 +19,14 @@ description: Software Architecture - แนวทางการออกแบ�
 
 ## Skills Related
 
-- `guide-design-patterns` - สำหรับ design patterns ในระดับ code
-- `guide-programming` - สำหรับการเขียนโปรแกรมที่ดี
-- `guide-software-testing` - สำหรับการทดสอบระบบ
-
+- guide-design-patterns
+- guide-programming
+- guide-software-testing
 
 ## References
 
-
-## หมวดหมู่ไฟล์
-
-### guide/
-
-| No | File | Description | Level |
-|----|------|-------------|-------|
-| 1 | [key-concept.md](guide/key-concept.md) | Core concepts: architectural styles, quality attributes | Basic |
-| 2 | [how-it-works.md](guide/how-it-works.md) | Architecture mechanics and decision flow | Basic |
-| 3 | [features.md](guide/features.md) | Architectural patterns and styles overview | Basic |
-| 4 | [configuration.md](guide/configuration.md) | Architecture patterns selection | Basic |
-| 5 | [quick-start.md](guide/quick-start.md) | Quick architecture selection guide | Basic |
-| 6 | [best-practices.md](guide/best-practices.md) | Architecture best practices and pitfalls | Intermediate |
-| 7 | [integration.md](guide/integration.md) | Cross-cutting concerns and system integration | Intermediate |
-| 8 | [architecture.md](guide/architecture.md) | Architectural patterns and decision-making | Advanced |
-
-### references/
-
-| No | File | Description | Language |
-|----|------|-------------|----------|
-| 9 | [website.md](references/website.md) | Official links: architecture resources | English |
-
-## หัวข้อหลัก
-
-- **Architectural Styles**: Monolith, Microservices, Event-Driven
-- **Quality Attributes**: Scalability, Maintainability, Availability
-- **Architectural Patterns**: Layered, Hexagonal, Clean Architecture
-- **Cross-Cutting Concerns**: Security, Logging, Monitoring
-- **Architecture Decision Records**: Documenting decisions
+| Resource | URL |
+|----------|-----|
+| Architecture Books | Various texts |
+| System Design Interviews | Online resources |
+| Blog Posts | Various platforms |

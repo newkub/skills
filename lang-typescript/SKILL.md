@@ -16,13 +16,27 @@ description: แนวทางการพัฒนา TypeScript ตาม bes
 
 ## Skills Related
 
-- `/lang-javascript` - JavaScript base language
-- `/lib-vue` - Vue.js framework with TypeScript
-- `/lib-react` - React framework with TypeScript
-- `/framework-next` - Next.js framework with TypeScript
-- `/framework-nuxt` - Nuxt.js framework with TypeScript
+- `lang-javascript` - JavaScript base language
+- `lib-vue` - Vue.js framework with TypeScript
+- `lib-react` - React framework with TypeScript
+- `framework-next` - Next.js framework with TypeScript
+- `framework-nuxt` - Nuxt.js framework with TypeScript
 
-## References
+## โครงสร้าง Directory
+
+โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
+
+```
+lang-typescript/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญของภาษา
+├── principles/                   # หลักการของภาษา
+├── references/                   # เอกสารอ้างอิง
+└── workflows/                    # Workflows สำหรับ automation
+```
+
+## หมวดหมู่ไฟล์
 
 ### guide/
 

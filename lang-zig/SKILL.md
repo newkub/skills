@@ -17,10 +17,19 @@ description: แนวทางการพัฒนา Zig ตาม best pract
 
 ## Skills Related
 
-- `lang-c` - C interoperability
-- `lang-cpp` - C++ interoperability
+## โครงสร้าง Directory
 
-## References
+โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
+
+```
+lang-zig/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── references/                   # เอกสารอ้างอิง
+└── workflows/                    # Workflows สำหรับ automation
+```
+
+## หมวดหมู่ไฟล์
 
 | Category | File |
 |----------|------|

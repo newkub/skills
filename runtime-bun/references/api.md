@@ -196,6 +196,6 @@ bun add -d @types/bun
 ---
 
 **See also:**
-- [Official API Docs](https://bun.com/docs/runtime/bun-apis)
-- [HTTP Server](/runtime/http/server)
-- [SQLite](/runtime/sqlite)
+- [Official API Docs](https://bun.sh/docs/runtime/bun-apis)
+- [HTTP Server](https://bun.sh/docs/api/http)
+- [SQLite](https://bun.sh/docs/runtime/sqlite)

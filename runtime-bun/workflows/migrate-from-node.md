@@ -1,14 +1,4 @@
----
-description: migrate โปรเจกต์จาก Node.js ไป Bun
----
-
-## Goal
-
-migrate โปรเจกต์ที่มีอยู่จาก Node.js ไปใช้ Bun
-
-## Scope
-
-สำหรับโปรเจกต์ Node.js ที่ต้องการ migrate ไป Bun
+# Migrate from Node.js
 
 ## Execute
 

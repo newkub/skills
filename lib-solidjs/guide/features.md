@@ -1,5 +1,18 @@
 # All Features
 
+ฟีเจอร์ทั้งหมดของ SolidJS สำหรับสร้าง reactive applications
+
+## Feature Summary
+
+| Feature | Description | Use Case |
+|---------|-------------|----------|
+| Signals | Reactive state ด้วย getter/setter pattern | State management พื้นฐาน |
+| Stores | Reactive state สำหรับ objects ที่ซับซ้อน | State ที่มีหลาย levels |
+| Effects | Side effects ที่ทำงานเมื่อ dependencies เปลี่ยน | API calls, subscriptions |
+| Memos | Computed values ที่ cache ไว้ | Derived state, calculations |
+| Context | State sharing ระหว่าง components | Global state, theming |
+| Resources | Async data fetching พร้อม loading states | API calls, data fetching |
+
 ## Signals
 
 ```tsx

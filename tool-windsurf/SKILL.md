@@ -1,58 +1,45 @@
-# tool-windsurf
-
-แนวทางการใช้งาน Windsurf - AI Code Assistant สำหรับ IDE
-
-## Overview
-
-Windsurf เป็น AI-powered code assistant ที่ใช้ Agentic workflows สำหรับ pair programming ช่วยเขียน code, refactor, debug, และ explain code ผ่าน natural language commands
-
+---
+title: Windsurf
+description: AI Code Assistant สำหรับ IDE ด้วย Agentic workflows สำหรับ pair programming
+auto_execution_mode: 3
+---
 
 ## When to use
 
-
+ใช้ skill นี้เมื่อต้องการ:
+- AI-powered code assistant
+- Pair programming ด้วย AI
+- Code generation, refactor, debug
+- Natural language commands
+- Project-wide context understanding
 
 ## Skills Related
 
-
+- `/tool-trae` - Trae IDE
+- `/vibe-coding` - Vibe coding practices
 
 ## References
 
+### guide/
 
-## File Structure
+| No | File | Description |
+|----|------|-------------|
+| 1 | key-concept.md | แนวคิดหลัก - AI, Workflows |
+| 2 | how-it-works.md | การทำงาน - Agent, Context |
+| 3 | features.md | ฟีเจอร์ทั้งหมด - Code generation |
+| 4 | installation.md | การติดตั้ง - Extension |
+| 5 | configuration.md | การตั้งค่า - Settings |
+| 6 | quick-start.md | คู่มือเริ่มต้นใช้งาน |
+| 7 | best-practices.md | แนวทางปฏิบัติที่ดี |
 
-```
-tool-windsurf/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   └── best-practices.md
-└── references/
-    ├── website.md
-    ├── cli.md
-    ├── configuration.md
-    └── api.md
-```
+### references/
 
-## Content Summary
-
-| Folder | File | Description |
-|--------|------|-------------|
-| **Guide** | key-concept.md | แนวคิดหลัก - AI, Workflows |
-| **Guide** | how-it-works.md | การทำงาน - Agent, Context |
-| **Guide** | features.md | ฟีเจอร์ทั้งหมด - Code generation |
-| **Guide** | installation.md | การติดตั้ง - Extension |
-| **Guide** | configuration.md | การตั้งค่า - Settings |
-| **Guide** | quick-start.md | คู่มือเริ่มต้นใช้งาน |
-| **Guide** | best-practices.md | แนวทางปฏิบัติที่ดี |
-| **Reference** | website.md | Official links และ resources |
-| **Reference** | cli.md | CLI commands |
-| **Reference** | configuration.md | Configuration options |
-| **Reference** | api.md | API reference |
+| No | File | Description |
+|----|------|-------------|
+| 1 | website.md | Official links และ resources |
+| 2 | cli.md | CLI commands |
+| 3 | configuration.md | Configuration options |
+| 4 | api.md | API reference |
 
 ## Quick Start
 
@@ -63,20 +50,3 @@ windsurf
 # Or use keyboard shortcut
 Ctrl+Shift+W
 ```
-
-## Key Features
-
-| Feature | Description |
-|---------|-------------|
-| **AI Completion** | Inline code suggestions |
-| **Agent Mode** | Autonomous code generation |
-| **Workflow** | AI-powered development |
-| **Context** | Project-wide understanding |
-| **Commands** | Natural language interface |
-
-## Usage Order
-
-1. **Start**: `guide/installation.md` → `guide/key-concept.md`
-2. **Learn**: `guide/how-it-works.md` → `guide/features.md`
-3. **Configure**: `guide/configuration.md`
-4. **Best Practices**: `guide/best-practices.md`

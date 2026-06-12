@@ -17,11 +17,20 @@ description: แนวทางการพัฒนา Rust ตาม best prac
 
 ## Skills Related
 
-- `lang-c` - C interoperability
-- `lang-cpp` - C++ interoperability
+## โครงสร้าง Directory
 
+โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
 
-## References
+```
+lang-rust/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญของภาษา
+├── references/                   # เอกสารอ้างอิง
+└── workflows/                    # Workflows สำหรับ automation
+```
+
+## หมวดหมู่ไฟล์
 
 ### guide/
 
@@ -50,47 +59,18 @@ description: แนวทางการพัฒนา Rust ตาม best prac
 
 | File | Description |
 |------|-------------|
-| website.md | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-| sitemap.md | แผนผังเอกสารและทรัพยากรที่เกี่ยวข้อง |
-| api.md | Rust Standard Library API reference |
-| cli.md | Cargo CLI commands และ options |
+| website.md | Official Rust website และ documentation |
+| sitemap.md | Documentation sitemap และ navigation |
+| api.md | Rust API reference และ standard library |
+| cli.md | Cargo commands และ tools |
 | configuration.md | Cargo.toml configuration options |
 
 ### workflows/
 
 | File | Description |
 |------|-------------|
-| (empty) | Workflow templates สำหรับ Rust development |
-
-
-## Directory Structure
-
-```text
-lang-rust/
-├── SKILL.md
-├── guide/
-│   ├── installation.md
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   ├── best-practices.md
-│   ├── integration.md
-│   ├── architecture.md
-│   └── troubleshooting.md
-├── key-concepts/
-│   ├── ownership.md
-│   ├── borrowing.md
-│   └── lifetimes.md
-├── references/
-│   ├── website.md
-│   ├── sitemap.md
-│   ├── api.md
-│   ├── cli.md
-│   └── configuration.md
-└── workflows/
-```
+| setup-rust-project.md | สร้าง Rust project ใหม่ด้วย Cargo |
+| use-rust-features.md | ใช้ Rust features อย่างถูกต้อง
 
 ## Core Features
 

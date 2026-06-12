@@ -3,11 +3,11 @@
 ## Installation
 
 ```bash
-# Install Effect
-npm install effect
+# ติดตั้ง Effect
+bun add effect
 
-# For development
-npm install -D typescript tsx
+# สำหรับ development
+bun add -D typescript tsx
 ```
 
 ## Basic Program

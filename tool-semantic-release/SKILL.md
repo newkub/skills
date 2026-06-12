@@ -1,36 +1,44 @@
-# tool-semantic-release
-
-## Overview
-
-semantic-release เป็น fully automated version management และ package publishing tool ที่ใช้ conventional commits สำหรับ determine version bumps อัตโนมัติตาม semantic versioning รองรับ npm, GitHub Releases, GitLab Releases
-
+---
+title: Semantic Release
+description: Fully automated version management และ package publishing tool ที่ใช้ conventional commits
+auto_execution_mode: 3
+---
 
 ## When to use
 
-
+ใช้ skill นี้เมื่อต้องการ:
+- Automated version management
+- Semantic versioning อัตโนมัติ
+- Automated changelog generation
+- Package publishing ไปยัง npm, GitHub, GitLab
 
 ## Skills Related
 
-
+- `/follow-auto-it` - Auto สำหรับ automated releases
+- `/follow-changelogen` - Changelog generation
 
 ## References
 
+### guide/
 
-## Content Summary
+| No | File | Description |
+|----|------|-------------|
+| 1 | key-concept.md | แนวคิดหลัก - Semver, Commits, Plugins |
+| 2 | how-it-works.md | สถาปัตยกรรม - Commit analysis, Version bump |
+| 3 | features.md | ฟีเจอร์ทั้งหมด - Plugins, CI, Changelog |
+| 4 | installation.md | การติดตั้ง - npm, CI setup |
+| 5 | configuration.md | การตั้งค่า - .releaserc |
+| 6 | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| 7 | best-practices.md | แนวทางปฏิบัติที่ดี |
 
-| Folder | File | Description |
-|--------|------|-------------|
-| **guide/** | [key-concept.md](guide/key-concept.md) | แนวคิดหลัก - Semver, Commits, Plugins |
-| | [how-it-works.md](guide/how-it-works.md) | สถาปัตยกรรม - Commit analysis, Version bump |
-| | [features.md](guide/features.md) | ฟีเจอร์ทั้งหมด - Plugins, CI, Changelog |
-| | [installation.md](guide/installation.md) | การติดตั้ง - npm, CI setup |
-| | [configuration.md](guide/configuration.md) | การตั้งค่า - .releaserc |
-| | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
-| **references/** | [website.md](references/website.md) | เว็บไซต์และเอกสารอย่างเป็นทางการ |
-| | [cli.md](references/cli.md) | CLI commands สำหรับ semantic-release |
-| | [configuration.md](references/configuration.md) | ตัวเลือก configuration ทั้งหมด |
-| | [api.md](references/api.md) | Programmatic API และ commit types |
+### references/
+
+| No | File | Description |
+|----|------|-------------|
+| 1 | website.md | เว็บไซต์และเอกสารอย่างเป็นทางการ |
+| 2 | cli.md | CLI commands สำหรับ semantic-release |
+| 3 | configuration.md | ตัวเลือก configuration ทั้งหมด |
+| 4 | api.md | Programmatic API และ commit types |
 
 ## Quick Reference
 
@@ -46,33 +54,4 @@ npx semantic-release --dry-run
 
 # Debug mode
 DEBUG=semantic-release:* npx semantic-release
-```
-
-## Key Concepts
-
-| Concept | คำอธิบาย |
-|---------|----------|
-| **Semver** | major.minor.patch versioning |
-| **Conventional Commits** | `feat:`, `fix:`, `docs:` prefixes |
-| **Plugins** | analyze, generate, publish |
-| **CI Integration** | รันหลัง build สำเร็จ |
-
-## File Structure
-
-```
-tool-semantic-release/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   └── best-practices.md
-└── references/
-    ├── website.md
-    ├── cli.md
-    ├── configuration.md
-    └── api.md
 ```

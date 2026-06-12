@@ -12,81 +12,101 @@ description: แนวทางการใช้งาน Bunup สำหรั
 
 ## Skills Related
 
-- `/runtime-bun` - Bun runtime
-- `/lang-typescript` - TypeScript programming language
-
-
-## References
-
+- `runtime-bun` - Bun runtime
+- `lang-typescript` - TypeScript programming language
 
 ## โครงสร้าง Directory
 
-```text
+โครงสร้างโฟลเดอร์สำหรับ Library Skills
+
+```
 lib-bunup/
-├── SKILL.md
-├── 
-│   ├── guide/
-│   │   ├── key-concept.md
-│   │   ├── how-it-works.md
-│   │   ├── features.md
-│   │   ├── installation.md
-│   │   ├── configuration.md
-│   │   ├── quick-start.md
-│   │   ├── best-practices.md
-│   │   ├── integration.md
-│   │   ├── architecture.md
-│   │   ├── structure.md
-│   │   ├── performance.md
-│   │   ├── security.md
-│   │   ├── migration.md
-│   │   ├── ecosystem.md
-│   │   ├── testing.md
-│   │   ├── patterns.md
-│   │   └── troubleshooting.md
-│   ├── key-concepts/
-│   │   ├── rolldown.md
-│   │   ├── entry-point-detection.md
-│   │   ├── bundle-formats.md
-│   │   └── type-declarations.md
-│   └── principles/
-│       ├── zero-config.md
-│       └── bun-native.md
-└── references/
-    ├── website.md
-    ├── sitemap.md
-    ├── api.md
-    └── configuration.md
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญ (optional)
+├── principles/                   # หลักการ (optional)
+├── references/                   # เอกสารอ้างอิง
+├── workflows/                    # Workflows สำหรับ automation
+├── templates/                    # Templates สำหรับเริ่มต้น (optional)
+├── scripts/                      # Scripts สำหรับ automation (optional)
+└── .devin/                       # Rules และ configurations
+    ├── goal.md                  # เป้าหมายของ skill
+    ├── scope.md                 # Scope และ execute steps
+    ├── execute.md               # Execute steps ทั้งหมด
+    ├── expected.md              # Expected outcome
+    ├── rules/
+    │   ├── always-on/           # Structure files ที่ต้องมีเสมอ
+    │   │   └── structure-lib.md
+    │   ├── glob/                # Files ที่ใช้ glob patterns
+    │   └── model_decision/      # Template files สำหรับ model decision
+    └── workflows/               # Workflow files สำหรับ task automation
 ```
 
-## หมวดหมู่ไฟล
+## หมวดหมู่ไฟล์
+
+| Topic | Docs URL | Use for |
+|-------|----------|---------|
+| Getting started | [Homepage](https://bunup.dev) | Quick start, overview |
+| Documentation | [Docs](https://bunup.dev/docs) | Complete documentation |
+| GitHub | [Repository](https://github.com/unjs/bunup) | Source code, issues |
+| Config file | [Config file](https://bunup.dev/docs/guide/config-file.md) | `bunup.config.ts` setup |
+| Options | [Options](https://bunup.dev/docs/guide/options.md) | All configuration options |
+| CLI options | [CLI options](https://bunup.dev/docs/guide/cli-options.md) | Command-line usage |
+| TypeScript declarations | [TypeScript declarations](https://bunup.dev/docs/guide/typescript-declarations.md) | `.d.ts` generation |
+| Plugins | [Plugins](https://bunup.dev/docs/guide/plugins.md) | Plugin system |
+| Workspaces | [Workspaces](https://bunup.dev/docs/guide/workspaces.md) | Monorepo support |
+
+## หมวดหมู่ไฟล์
+
+### guide/
 
 | No | File | Description |
 |----|------|-------------|
-| 1 | SKILL.md | Index file หลักของ skill |
-| 2 | guide/key-concept.md | แนวคิดหลักของ Bunup |
-| 3 | guide/how-it-works.md | วิธีการทำงานของ Bunup |
-| 4 | guide/features.md | ฟีเจอร์ทั้งหมด |
-| 5 | guide/installation.md | การติดตั้ง |
-| 6 | guide/configuration.md | การตั้งค่า |
-| 7 | guide/quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| 8 | guide/best-practices.md | แนวปฏิบัติที่ดีที่สุด |
-| 9 | guide/integration.md | การรวมกับเครื่องมืออื่น |
-| 10 | guide/architecture.md | สถาปัตยกรรมภายใน |
-| 11 | guide/structure.md | โครงสร้างโปรเจกต์ |
-| 12 | guide/performance.md | เทคนิคการปรับปรุง performance |
-| 13 | guide/security.md | ความปลอดภัยและ security considerations |
-| 14 | guide/migration.md | วิธี migration จาก tools อื่นๆ |
-| 15 | guide/ecosystem.md | Ecosystem และ integrations |
-| 16 | guide/testing.md | การทดสอบ bundles |
-| 17 | guide/patterns.md | Patterns ที่ใช้บ่อย |
-| 18 | guide/troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
-| 19 | key-concepts/rolldown.md | แนวคิดเกี่ยวกับ Rolldown bundler |
-| 20 | key-concepts/entry-point-detection.md | การ detect entry points อัตโนมัติ |
-| 21 | key-concepts/bundle-formats.md | รูปแบบ bundle ที่รองรับ |
-| 22 | key-concepts/type-declarations.md | การ generate TypeScript declarations |
-| 23 | principles/zero-config.md | หลักการ zero-config |
-| 24 | principles/bun-native.md | การ integration กับ Bun runtime |
-| 25 | references/website.md | เว็บไซต์และทรัพยากร |
-| 26 | references/sitemap.md | Sitemap ของ documentation |
-| 27 | references/api.md | API Reference |
-| 28 | references/configuration.md | Configuration Options |
+| 1 | installation.md | Installation and setup of Bunup |
+| 2 | quick-start.md | Quick start guide for first bundle |
+| 3 | configuration.md | Configuration options and setup |
+| 4 | key-concept.md | Core concepts overview |
+| 5 | how-it-works.md | How Bunup works internally |
+| 6 | features.md | Available features and capabilities |
+| 7 | architecture.md | System architecture and components |
+| 8 | best-practices.md | Development best practices |
+| 9 | integration.md | Integration with other tools |
+| 10 | migration.md | Migration guides from other bundlers |
+| 11 | patterns.md | Common patterns and recipes |
+| 12 | performance.md | Performance optimization |
+| 13 | security.md | Security considerations |
+| 14 | structure.md | Project structure and organization |
+| 15 | testing.md | Testing strategies |
+| 16 | troubleshooting.md | Common issues and solutions |
+| 17 | ecosystem.md | Related tools and services |
+
+### key-concepts/
+
+| No | File | Description |
+|----|------|-------------|
+| 1 | rolldown.md | Rolldown bundler foundation |
+| 2 | entry-point-detection.md | Automatic entry point detection |
+| 3 | bundle-formats.md | Supported bundle formats |
+| 4 | type-declarations.md | TypeScript declaration generation |
+
+### principles/
+
+| No | File | Description |
+|----|------|-------------|
+| 1 | zero-config.md | Zero-configuration principle |
+| 2 | bun-native.md | Bun runtime integration |
+
+### references/
+
+| No | File | Description |
+|----|------|-------------|
+| 1 | website.md | Official documentation links |
+| 2 | sitemap.md | Documentation sitemap |
+| 3 | api.md | API reference |
+| 4 | configuration.md | Configuration reference |
+
+### workflows/
+
+| No | File | Description |
+|----|------|-------------|
+| 1 | bundle-library.md | Bundle TypeScript library workflow |

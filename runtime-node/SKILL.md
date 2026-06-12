@@ -16,37 +16,6 @@ description: Node.js JavaScript runtime ที่ใช้ Chrome V8 engine ส�
 
 - `/runtime-bun` - Bun JavaScript runtime ที่เร็วกว่า Node.js
 
-## โครงสร้าง Directory
-
-```
-runtime-node/
-├── SKILL.md
-├── guide/
-│   ├── installation.md
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   ├── best-practices.md
-│   ├── integration.md
-│   ├── architecture.md
-│   ├── structure.md
-│   ├── performance.md
-│   ├── security.md
-│   ├── migration.md
-│   ├── ecosystem.md
-│   ├── testing.md
-│   ├── patterns.md
-│   └── troubleshooting.md
-├── references/
-│   ├── website.md
-│   ├── sitemap.md
-│   ├── api.md
-│   └── cli.md
-└── workflows/
-```
-
 ## หมวดหมู่ไฟล์
 
 ### guide/

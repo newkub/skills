@@ -20,31 +20,12 @@ description: Bun JavaScript runtime - all-in-one toolkit สำหรับ Java
 
 ```
 runtime-bun/
-├── SKILL.md
-├── guide/
-│   ├── installation.md
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   ├── best-practices.md
-│   ├── integration.md
-│   ├── architecture.md
-│   ├── structure.md
-│   ├── performance.md
-│   ├── security.md
-│   ├── migration.md
-│   ├── ecosystem.md
-│   ├── testing.md
-│   ├── patterns.md
-│   └── troubleshooting.md
-├── references/
-│   ├── website.md
-│   ├── sitemap.md
-│   ├── api.md
-│   └── cli.md
-└── workflows/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญ
+├── principles/                   # หลักการ
+├── references/                   # เอกสารอ้างอิง
+└── workflows/                    # Workflows สำหรับ automation
 ```
 
 ## หมวดหมู่ไฟล์
@@ -53,32 +34,45 @@ runtime-bun/
 
 | No | File | Description |
 |----|------|-------------|
-| 1 | [installation.md](guide/installation.md) | วิธีการติดตั้ง Bun |
-| 2 | [key-concept.md](guide/key-concept.md) | พื้นฐานและหลักการสำคัญของ Bun |
-| 3 | [how-it-works.md](guide/how-it-works.md) | อธิบายการทำงานของ Bun พร้อม diagram |
-| 4 | [features.md](guide/features.md) | คุณสมบัติหลักของ Bun |
-| 5 | [configuration.md](guide/configuration.md) | การตั้งค่าและ configuration |
-| 6 | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| 7 | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
+| 1 | [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ Bun |
+| 2 | [best-practices.md](guide/best-practices.md) | แนวทางปฏิบัติที่ดี |
+| 3 | [configuration.md](guide/configuration.md) | การตั้งค่าและ configuration |
+| 4 | [ecosystem.md](guide/ecosystem.md) | Ecosystem และ tools |
+| 5 | [features.md](guide/features.md) | คุณสมบัติหลักของ Bun |
+| 6 | [how-it-works.md](guide/how-it-works.md) | อธิบายการทำงานของ Bun พร้อม diagram |
+| 7 | [installation.md](guide/installation.md) | วิธีการติดตั้ง Bun |
 | 8 | [integration.md](guide/integration.md) | การเชื่อมต่อกับ tools และ frameworks |
-| 9 | [architecture.md](guide/architecture.md) | สถาปัตยกรรมของ Bun |
-| 10 | [structure.md](guide/structure.md) | โครงสร้างโปรเจกต์และการจัดระเบียบไฟล์ |
+| 9 | [migration.md](guide/migration.md) | การ migrate จาก Node.js ไป Bun |
+| 10 | [patterns.md](guide/patterns.md) | Patterns และ best practices สำหรับ Bun |
 | 11 | [performance.md](guide/performance.md) | ประสิทธิภาพและการ optimize |
-| 12 | [security.md](guide/security.md) | ความปลอดภัยและ best practices |
-| 13 | [migration.md](guide/migration.md) | การ migrate จาก Node.js ไป Bun |
-| 14 | [ecosystem.md](guide/ecosystem.md) | เครื่องมือและ libraries ใน ecosystem |
+| 12 | [quick-start.md](guide/quick-start.md) | เริ่มต้นใช้งานอย่างรวดเร็ว |
+| 13 | [security.md](guide/security.md) | ความปลอดภัยและ best practices |
+| 14 | [structure.md](guide/structure.md) | โครงสร้างโปรเจกต์และการจัดระเบียบไฟล์ |
 | 15 | [testing.md](guide/testing.md) | การทดสอบด้วย Bun test runner |
-| 16 | [patterns.md](guide/patterns.md) | Patterns และ best practices สำหรับ Bun |
-| 17 | [troubleshooting.md](guide/troubleshooting.md) | การแก้ปัญหาที่พบบ่อย |
+| 16 | [troubleshooting.md](guide/troubleshooting.md) | การแก้ปัญหาที่พบบ่อย |
+
+### key-concepts/
+
+| No | File | Description |
+|----|------|-------------|
+| 1 | [key-concepts.md](key-concepts/key-concepts.md) | Core concepts และพื้นฐานของ Bun |
+
+### principles/
+
+| No | File | Description |
+|----|------|-------------|
+| 1 | [error-handling.md](principles/error-handling.md) | Error handling patterns |
+| 2 | [naming-conventions.md](principles/naming-conventions.md) | Naming conventions |
+| 3 | [performance.md](principles/performance.md) | Performance principles |
 
 ### references/
 
 | No | File | Description |
 |----|------|-------------|
-| 1 | [website.md](references/website.md) | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
-| 2 | [sitemap.md](references/sitemap.md) | Sitemap ของเอกสาร Bun |
-| 3 | [api.md](references/api.md) | API reference ของ Bun globals และ built-in modules |
-| 4 | [cli.md](references/cli.md) | คำสั่ง CLI ของ Bun |
+| 1 | [api.md](references/api.md) | API reference ของ Bun globals และ built-in modules |
+| 2 | [cli.md](references/cli.md) | คำสั่ง CLI ของ Bun |
+| 3 | [sitemap.md](references/sitemap.md) | Sitemap ของเอกสาร Bun |
+| 4 | [website.md](references/website.md) | ลิงก์ไปยังเว็บไซต์และเอกสารอย่างเป็นทางการ |
 
 ### workflows/
 

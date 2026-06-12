@@ -1,14 +1,4 @@
----
-description: ความปลอดภัยและ best practices สำหรับ Bun
----
-
-## Goal
-
-อธิบายความปลอดภัยและ best practices สำหรับการพัฒนาด้วย Bun
-
-## Scope
-
-สำหรับโปรเจกต์ที่ต้องการความปลอดภัยสูง
+# Security
 
 ## Security Features
 

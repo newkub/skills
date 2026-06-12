@@ -1,14 +1,4 @@
----
-description: การ migrate จาก Node.js ไป Bun
----
-
-## Goal
-
-อธิบายขั้นตอนการ migrate โปรเจกต์จาก Node.js ไป Bun
-
-## Scope
-
-สำหรับโปรเจกต์ Node.js ที่ต้องการ migrate ไป Bun
+# Migration from Node.js
 
 ## Prerequisites
 

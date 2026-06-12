@@ -16,10 +16,21 @@ description: แนวทางการพัฒนาด้วย Kotlin ต�
 
 ## Skills Related
 
-- `lang-java` - Java interoperability
-- `lang-javascript` - Kotlin/JS for web
+## โครงสร้าง Directory
 
-## References
+โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
+
+```
+lang-kotlin/
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญของภาษา
+├── principles/                   # หลักการของภาษา
+├── references/                   # เอกสารอ้างอิง
+└── workflows/                    # Workflows สำหรับ automation
+```
+
+## หมวดหมู่ไฟล์
 
 ### guide/
 

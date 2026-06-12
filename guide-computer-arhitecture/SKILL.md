@@ -1,6 +1,6 @@
 ---
-name: computer-arhitecture
-description: Computer Architecture - คู่มือและแนวคิดเกี่ยวกับ Computer Architecture ครอบคลุม topics ตั้งแต่พื้นฐานจนถึง concepts ขั้นสูงเกี่ยวกับการออกแบบและทำงานของระบบคอมพิวเตอร์
+name: computer-architecture
+description: Computer architecture guide covering CPU design, memory hierarchy, instruction sets, pipelining, parallel processing, and performance optimization.
 ---
 
 # Computer Architecture
@@ -19,39 +19,34 @@ description: Computer Architecture - คู่มือและแนวคิ�
 
 ## Skills Related
 
-- `guide-software-architecture` - สำหรับการออกแบบระบบในระดับสูง
-- `guide-programming` - สำหรับการเขียนโปรแกรมที่ดี
-- `guide-computer-computation` - สำหรับทฤษฎี computation
-
+- guide-software-architecture
+- guide-programming
+- guide-computer-computation
 
 ## References
 
-
-## หมวดหมู่ไฟล์
-
 ### guide/
 
-| No | File | Description | Level |
-|----|------|-------------|-------|
-| 1 | [key-concept.md](guide/key-concept.md) | แนวคิดหลัก CPU, Memory, ISA, Pipelining, Parallelism | Basic |
-| 2 | [how-it-works.md](guide/how-it-works.md) | ภาพรวมการทำงานของ Computer Architecture | Basic |
-| 3 | [features.md](guide/features.md) | คุณสมบัติและความสามารถของ Computer Architecture | Basic |
-| 4 | [configuration.md](guide/configuration.md) | การตั้งค่าและการปรับแต่งสำหรับการศึกษา | Basic |
-| 5 | [quick-start.md](guide/quick-start.md) | เริ่มต้นเรียนรู้อย่างรวดเร็ว | Basic |
-| 6 | [best-practices.md](guide/best-practices.md) | แนวทางและ best practices สำหรับการศึกษา | Intermediate |
-| 7 | [integration.md](guide/integration.md) | การผนวกเข้ากับการพัฒนาซอฟต์แวร์ | Intermediate |
+| No | File | Description |
+|----|------|-------------|
+| 1 | installation.md | วิธีติดตั้งและเตรียมความพร้อมสำหรับการศึกษา |
+| 2 | key-concept.md | concept หลักและพื้นฐานของ Computer Architecture |
+| 3 | how-it-works.md | ภาพรวมการทำงานของระบบคอมพิวเตอร์ |
+| 4 | features.md | คุณสมบัติและ components สำคัญของ architecture |
+| 5 | configuration.md | การตั้งค่าและการปรับแต่งสำหรับการศึกษา |
+| 6 | quick-start.md | เริ่มต้นศึกษาอย่างรวดเร็ว |
+| 7 | best-practices.md | แนวทางและ best practices สำหรับการศึกษาและประยุกต์ใช้ |
+| 8 | integration.md | การเชื่อมต่อกับ concepts อื่นๆ และ application |
 
 ### references/
 
-| No | File | Description | Language |
-|----|------|-------------|----------|
-| 8 | [website.md](references/website.md) | แหล่งข้อมูลและเอกสารอ้างอิง | English |
+| No | File | Description |
+|----|------|-------------|
+| 1 | website.md | เว็บไซต์และแหล่งข้อมูลอ้างอิงหลัก |
+| 2 | sitemap.md | แผนผังเว็บไซต์และโครงสร้างเนื้อหา |
 
-## หัวข้อหลัก
+### workflows/
 
-- **CPU Design**: การออกแบบ processor, ALU, registers
-- **Memory Hierarchy**: Cache, RAM, Storage
-- **Instruction Set Architecture**: RISC vs CISC
-- **Pipelining**: Instruction pipeline, hazards
-- **Parallelism**: Superscalar, multi-core, SIMD
-- **Performance Optimization**: CPI, throughput, latency
+| No | File | Description |
+|----|------|-------------|
+| 1 | study-computer-architecture.md | workflow สำหรับการศึกษา Computer Architecture อย่างเป็นระบบ |

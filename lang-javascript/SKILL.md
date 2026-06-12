@@ -20,70 +20,19 @@ description: แนวทางการพัฒนา JavaScript ตาม bes
 - `lang-typescript` - TypeScript for type-safe JavaScript
 - `lib-vue` - Vue.js framework
 - `lib-react` - React framework
-- `runtime-node` - Node.js runtime
-- `runtime-bun` - Bun runtime
-
-## References
-
-| File | Description |
-|------|-------------|
-| guide/key-concept.md | แนวคิดหลักของ JavaScript |
-| guide/how-it-works.md | วิธีการทำงานของ JavaScript |
-| guide/features.md | คุณสมบัติหลักของ JavaScript |
-| guide/installation.md | วิธีติดตั้งและ setup |
-| guide/configuration.md | การตั้งค่าและ configuration |
-| guide/quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| guide/best-practices.md | Best practices สำหรับ JavaScript |
-| guide/integration.md | การเชื่อมต่อกับ tools อื่นๆ |
-| guide/architecture.md | สถาปัตยกรรมของ JavaScript projects |
-| guide/troubleshooting.md | การแก้ปัญหาที่พบบ่อย |
-| key-concepts/closures.md | Closures และ lexical scoping |
-| key-concepts/hoisting.md | Hoisting และ variable declarations |
-| key-concepts/prototypes.md | Prototypes และ inheritance |
-| principles/error-handling.md | การจัดการ errors อย่างเหมาะสม |
-| principles/naming-conventions.md | กฎการตั้งชื่อที่ดี |
-| principles/solid-principles.md | SOLID principles สำหรับ JavaScript |
-| references/website.md | เว็บไซต์และเอกสารอย่างเป็นทางการ |
-| references/sitemap.md | แผนผังเอกสารและทรัพยากร |
-| references/api.md | JavaScript API reference |
-| references/configuration.md | Configuration options |
-| workflows/create-module.md | วิธีสร้าง JavaScript modules |
-| workflows/handle-async.md | วิธีจัดการ async operations |
-| workflows/debug-code.md | วิธี debugging JavaScript code |
 
 ## โครงสร้าง Directory
 
-```text
+โครงสร้างโฟลเดอร์สำหรับ Programming Language Skills
+
+```
 lang-javascript/
-├── SKILL.md
-├── guide/
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── quick-start.md
-│   ├── best-practices.md
-│   ├── integration.md
-│   ├── architecture.md
-│   └── troubleshooting.md
-├── key-concepts/
-│   ├── closures.md
-│   ├── hoisting.md
-│   └── prototypes.md
-├── principles/
-│   ├── error-handling.md
-│   ├── naming-conventions.md
-│   └── solid-principles.md
-├── references/
-│   ├── website.md
-│   ├── sitemap.md
-│   ├── api.md
-│   └── configuration.md
-└── workflows/
-    ├── create-module.md
-    ├── handle-async.md
-    └── debug-code.md
+├── SKILL.md                      # ไฟล์ index หลัก
+├── guide/                        # เนื้อหาแนะนำและ best practices
+├── key-concepts/                 # แนวคิดสำคัญของภาษา
+├── principles/                   # หลักการของภาษา
+├── references/                   # เอกสารอ้างอิง
+└── workflows/                    # Workflows สำหรับ automation
 ```
 
 ## หมวดหมู่ไฟล์

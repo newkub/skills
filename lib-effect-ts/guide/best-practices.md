@@ -7,7 +7,7 @@
 ```typescript
 // ถูกต้อง - มี type annotation
 const program: Effect.Effect<string, Error, Logger> = Effect.gen(function* () {
-  yield* Effect.servicezi(Logger);
+  yield* Effect.service(Logger);
   return 'Hello';
 });
 
