@@ -19,6 +19,7 @@
 - ทำ /follow-typescript สำหรับการพัฒนา TypeScript ด้วย type safety
 - ทำ /follow-oxlint สำหรับการตั้งค่า eslint-plugin-oxlint
 - ทำ /follow-bun สำหรับการใช้งาน Bun runtime และ native APIs
+- ทำ /follow-slidev สำหรับการสร้าง presentation slides ด้วย Slidev
 
 ## Skills
 

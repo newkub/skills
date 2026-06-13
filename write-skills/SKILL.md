@@ -2,6 +2,9 @@
 title: Write Windsurf Skills
 description: มาตรฐานการเขียนและจัดโครงสร้าง Devin Skills
 auto_execution_mode: 3
+related_workflows:
+  - /deep-research
+  - /write-windsurf-global-workflows
 ---
 
 ## Goal
@@ -14,54 +17,81 @@ auto_execution_mode: 3
 
 ## Execute
 
-### 1. Determine Skill Type
+### 1. Create Directory Structure
 
-ระบุ skill type จาก prefix ชื่อ folder
+สร้าง folders ตามมาตรฐาน
 
-- Skill types: `guide-`, `lang-`, `lib-`, `framework-`, `runtime-`, `cloud-`, `create-`, `tool-`, `cli-`, `tui-`, `flow-`, `general-`
-- ใช้ skill type เพื่อกำหนด folder และ file ที่ต้องการ
+```
+skill-name/
+├── SKILL.md                   (required)
+├── guide/                     (optional)
+│   ├── overview.md            (optional)
+│   ├── installation.md        (optional)
+│   ├── quick-start.md         (optional)
+│   ├── features.md            (optional)
+│   ├── architecture.md        (optional)
+│   ├── file-structure.md      (optional)
+│   ├── how-it-works.md        (optional)
+│   ├── configuration.md       (optional)
+│   ├── best-practices.md      (optional)
+│   ├── usecases.md            (optional)
+│   ├── comparison.md          (optional)
+│   ├── integration.md         (optional)
+│   ├── performance.md         (optional)
+│   ├── security.md            (optional)
+│   ├── testing.md             (optional)
+│   ├── troubleshooting.md     (optional)
+│   ├── limitations.md         (optional)
+│   ├── glossary.md            (optional)
+│   └── ...                    (optional)
+├── key-concepts/              (optional)
+│   └── ...                    (optional)
+├── principles/                (optional)
+│   └── ...                    (optional)
+├── references/                (optional)
+│   ├── api.md                 (optional)
+│   ├── cli.md                 (optional)
+│   ├── tui.md                 (optional)
+│   ├── configuration.md       (optional)
+│   ├── website.md             (optional)
+│   ├── sitemap.md             (optional)
+│   └── ...                    (optional)
+├── workflows/                 (optional)
+│   └── ...                    (optional)
+├── templates/                 (optional)
+│   └── ...                    (optional)
+└── scripts/                   (optional)
+    └── ...                    (optional)
+```
 
-### 2. Research Before Writing
+### 2. Write SKILL.md Index
+
+เขียน index file ตามมาตรฐาน `/write-windsurf-global-workflows`
+
+### 3. Research Before Writing
 
 ค้นหาข้อมูลเกี่ยวกับ skill ที่จะเขียน
 
-- ใช้ CRW สำหรับ web research และ documentation
+- ทำตาม workflow `/deep-research` สำหรับค้นหาข้อมูลจาก multiple sources
 - ค้นหาใน package registries ตามภาษาที่เกี่ยวข้อง
 - ใช้ DeepWiki สำหรับ GitHub repositories
 - ใช้ Context7 สำหรับ library documentation
 - ตรวจสอบ source reputation และ information freshness
 - สรุป findings ที่สำคัญก่อนเขียน
 
-### 3. Create Directory Structure
-
-สร้าง folders ตามมาตรฐาน
-
-- `SKILL.md` - REQUIRED (index file)
-- `guide/` - OPTIONAL (guides และ best practices)
-- `key-concepts/` - OPTIONAL (แนวคิดสำคัญ)
-- `principles/` - OPTIONAL (หลักการ)
-- `references/` - OPTIONAL (references และ API docs)
-- `workflows/` - OPTIONAL (workflows สำหรับ automation)
-- `templates/` - OPTIONAL (templates สำหรับเริ่มต้น)
-- `scripts/` - OPTIONAL (scripts สำหรับ automation)
-
-### 4. Write SKILL.md Index
-
-เขียน index file ตามมาตรฐาน `/write-windsurf-global-workflows`
-
-### 5. Write Content Files
+### 4. Write Content Files
 
 เขียน content files ตามมาตรฐาน
 
-- ทำตามมาตรฐาน `/write-markdown` สำหรับทุกไฟล์ `.md`
+- ทำตามมาตรฐาน `/write-windsurf-global-workflows` สำหรับทุกไฟล์
 - เนื้อหาครอบคลุมและอ่านง่าย ใช้ format ที่เหมาะสม
 - เวลาเขียนเกี่ยวกับการติดตั้ง ให้ใช้ `bun add` หรือ `bun add -D` แทน `npm install` เสมอ
-- ใช้ภาษาไทยสำหรับ `key-concepts/`, `principles/`, `workflows/`
+- ทุกไฟล์ `.md` เขียนเป็นภาษาไทย ยกเว้น headings และศัพท์เทคนิค
 - ปรับปรุง spacing, indentation, headings ให้สม่ำเสมอ
 - ปรับปรุง headings เป็น Title Case (EN) และรายการเป็น TH
 - ตรวจสอบความถูกต้องของข้อมูล
 
-### 6. Validate And Verify
+### 5. Validate And Verify
 
 ตรวจสอบความถูกต้อง
 
@@ -75,7 +105,6 @@ auto_execution_mode: 3
 
 - ทุก `SKILL.md` ต้องมี frontmatter: `title`, `description`, `auto_execution_mode: 3`
 - ทุก `SKILL.md` ต้องมี sections: `## Goal`, `## Scope`, `## Execute`, `## Rules`, `## Expected Outcome`
-- `## โครงสร้าง Directory` ต้องอยู่ก่อน `## หมวดหมู่ไฟล์`
 - Goal สอดคล้องกับ skill name, Execute สอดคล้องกับ Goal และ Rules
 - Expected Outcome สอดคล้องกับ Goal
 - ใช้คำศัพท์สม่ำเสมอ
@@ -90,19 +119,26 @@ auto_execution_mode: 3
 - ใน Rules สามารถใช้ table, code block ได้
 - terminal commands, architecture ใส่ใน code block
 - examples ต้องสั้นกระชับ
+- ทุกไฟล์ `.md` เขียนเป็นภาษาไทย ยกเว้น headings และศัพท์เทคนิค
 
 ### File Organization
 
-- `key-concepts/` - เขียนเป็นภาษาไทย แต่ละ concept อยู่ในไฟล์แยกกัน
-- `principles/` - เขียนเป็นภาษาไทย แต่ละ principle อยู่ในไฟล์แยกกัน
 - ใช้ตารางสรุปข้อมูลที่เปรียบเทียบได้
 - ใช้ `codeblock` สำหรับ code examples, configuration, หรือ commands
 - ใช้ `ansi markdown diagrams` สำหรับ flow, architecture, หรือ how-it-works
 - ใช้ชื่อสื่อความหมายโดยตรง ไม่ใช้ prefix ชื่อ skill
 - ใช้ `kebab-case` เสมอ ชื่อไฟล์ต้องสอดคล้องกับเนื้อหา
 - แต่ละไฟล์ต้องไม่เกิน 250 บรรทัด ถ้าเกินให้ refactor แยกไฟล์
+- ถ้าไฟล์ยาวเกิน ให้แยกเป็น folder และไฟล์ย่อย (เช่น `best-practices/` พร้อม `index.md`)
 - ทำตาม Execute ตามลำดับเสมอ
 - ใช้ backticks สำหรับ technical terms, file names, commands, หรือ code references
+
+### Scripts
+
+- สร้าง scripts ใน `scripts/temp/` ที่ root workspace เท่านั้น
+- ใช้ Bun native APIs, pwsh, หรือ ast-grep ตามความเหมาะสม
+- ทำตามมาตรฐาน `/use-scripts`
+- ลบ scripts หลังใช้งาน
 
 ## Expected Outcome
 
