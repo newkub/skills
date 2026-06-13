@@ -12,68 +12,101 @@ auto_execution_mode: 3
 
 ใช้สำหรับการพัฒนา applications ที่ต้องการ performance สูง, security และ cross-platform deployment
 
-## โครงสร้าง Directory
-
-```
-tauri/
-├── SKILL.md
-├── guide/
-│   ├── architecture.md
-│   ├── best-practices.md
-│   ├── configuration.md
-│   └── ...
-├── key-concepts/
-├── principles/
-├── references/
-│   ├── cli.md
-│   ├── configuration.md
-│   ├── sitemap.md
-│   └── website.md
-└── workflows/
-    └── create-tauri-app.md
-```
-
-## หมวดหมู่ไฟล์
-
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|-----------|------|-----------|
-| Root Files | SKILL.md | Index file สำหรับ Tauri skill |
-| guide/ | architecture.md | Architecture ของ Tauri |
-| guide/ | best-practices.md | Best practices สำหรับ development |
-| guide/ | configuration.md | Configuration และ setup |
-| references/ | cli.md | CLI documentation |
-| references/ | configuration.md | Configuration reference |
-| references/ | sitemap.md | Sitemap ของ documentation |
-| references/ | website.md | เว็บไซต์และ resources |
-| workflows/ | create-tauri-app.md | Workflow สำหรับสร้าง Tauri app |
-
 ## Execute
 
-- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
-- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
-- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
-- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
-- อ่าน `key-concepts/` สำหรับแนวคิดเฉพาะทาง (IPC, WebView, System APIs)
-- อ่าน `guide/architecture.md` สำหรับ system architecture
-- อ่าน `guide/structure.md` สำหรับ project structure
-- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
-- อ่าน `references/configuration.md` สำหรับ configuration reference
-- ตั้งค่า `tauri.conf.json`
-- อ่าน `guide/features.md` สำหรับ features ที่มี
-- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
-- อ่าน `guide/best-practices.md` สำหรับ best practices
-- อ่าน `principles/` สำหรับหลักการพัฒนา
-- อ่าน `guide/security.md` สำหรับ security best practices
-- อ่าน `guide/performance.md` สำหรับ performance optimization
-- อ่าน `guide/testing.md` สำหรับ testing strategies
-- อ่าน `guide/integration.md` สำหรับ framework integration
-- อ่าน `guide/ecosystem.md` สำหรับ Tauri ecosystem
-- อ่าน `guide/migration.md` สำหรับ migration guide
-- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
-- อ่าน `workflows/create-tauri-app.md` สำหรับสร้าง Tauri app
-- อ่าน `references/cli.md` สำหรับ CLI documentation
-- อ่าน `references/api.md` สำหรับ API reference
-- อ่าน `references/website.md` สำหรับ resources
+### 1. Installation
+
+อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+
+### 2. Quick Start
+
+อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+
+### 3. Learn Concepts
+
+อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+
+### 4. Understand Workflow
+
+อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+
+### 5. Key Concepts
+
+อ่าน `key-concepts/` สำหรับแนวคิดเฉพาะทาง (IPC, WebView, System APIs)
+
+### 6. Architecture
+
+อ่าน `guide/architecture.md` สำหรับ system architecture
+
+### 7. Project Structure
+
+อ่าน `guide/structure.md` สำหรับ project structure
+
+### 8. Configuration
+
+อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+อ่าน `references/configuration.md` สำหรับ configuration reference
+ตั้งค่า `tauri.conf.json`
+
+### 9. Features
+
+อ่าน `guide/features.md` สำหรับ features ที่มี
+
+### 10. Patterns
+
+อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+
+### 11. Best Practices
+
+อ่าน `guide/best-practices.md` สำหรับ best practices
+
+### 12. Principles
+
+อ่าน `principles/` สำหรับหลักการพัฒนา
+
+### 13. Security
+
+อ่าน `guide/security.md` สำหรับ security best practices
+
+### 14. Performance
+
+อ่าน `guide/performance.md` สำหรับ performance optimization
+
+### 15. Testing
+
+อ่าน `guide/testing.md` สำหรับ testing strategies
+
+### 16. Integration
+
+อ่าน `guide/integration.md` สำหรับ framework integration
+
+### 17. Ecosystem
+
+อ่าน `guide/ecosystem.md` สำหรับ Tauri ecosystem
+
+### 18. Migration
+
+อ่าน `guide/migration.md` สำหรับ migration guide
+
+### 19. Troubleshooting
+
+อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+
+### 20. Create App
+
+อ่าน `workflows/create-tauri-app.md` สำหรับสร้าง Tauri app
+
+### 21. CLI
+
+อ่าน `references/cli.md` สำหรับ CLI documentation
+
+### 22. API
+
+อ่าน `references/api.md` สำหรับ API reference
+
+### 23. Resources
+
+อ่าน `references/website.md` สำหรับ resources
 
 ## Rules
 

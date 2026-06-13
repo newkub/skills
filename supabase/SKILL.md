@@ -19,10 +19,21 @@ auto_execution_mode: 3
 
 ## Execute
 
-- อ่าน `references/cli.md` สำหรับ CLI commands
-- อ่าน `references/configuration.md` สำหรับ configuration reference
-- อ่าน `references/api.md` สำหรับ Client SDK API reference
-- อ่าน `references/website.md` สำหรับ official links และ resources
+### 1. CLI Commands
+
+อ่าน `references/cli.md` สำหรับ CLI commands
+
+### 2. Configuration
+
+อ่าน `references/configuration.md` สำหรับ configuration reference
+
+### 3. API Reference
+
+อ่าน `references/api.md` สำหรับ Client SDK API reference
+
+### 4. Resources
+
+อ่าน `references/website.md` สำหรับ official links และ resources
 
 ## Rules
 
@@ -37,44 +48,3 @@ auto_execution_mode: 3
 - PostgreSQL database ที่ managed
 - Authentication ที่ integrated
 - Realtime subscriptions ที่ enabled
-- Edge functions ที่ deployed
-
-## Skills Related
-
-- `/tool-postgres` - PostgreSQL database
-- `/lang-typescript` - TypeScript programming
-
-## โครงสร้าง Directory
-
-```
-tool-supabase/
-├── SKILL.md
-├── guide/              (Guides และ best practices)
-├── key-concepts/       (แนวคิดหลัก)
-├── principles/         (หลักการ)
-├── references/         (CLI, configuration, API reference)
-├── workflows/          (Workflows สำหรับการใช้งาน)
-├── templates/          (Templates สำหรับ configuration)
-└── scripts/            (Scripts สำหรับ automation)
-```
-
-## หมวดหมู่ไฟล์
-
-| Folder | Files | Description |
-|--------|-------|-------------|
-| [guide/](guide/) | 0 files | Guides และ best practices สำหรับการใช้งาน |
-| [key-concepts/](key-concepts/) | 0 files | แนวคิดหลักของ Supabase |
-| [principles/](principles/) | 0 files | หลักการในการใช้งาน Supabase |
-| [references/](references/) | 4 files | CLI, configuration, API reference |
-| [workflows/](workflows/) | 0 files | Workflows สำหรับการใช้งาน |
-| [templates/](templates/) | 0 files | Templates สำหรับ configuration |
-| [scripts/](scripts/) | 0 files | Scripts สำหรับ automation |
-
-## Reference Files
-
-| File | Description |
-|------|-------------|
-| [references/website.md](references/website.md) | Official links และ resources |
-| [references/cli.md](references/cli.md) | CLI commands - supabase start, stop |
-| [references/configuration.md](references/configuration.md) | Configuration options reference |
-| [references/api.md](references/api.md) | Client SDK API reference |

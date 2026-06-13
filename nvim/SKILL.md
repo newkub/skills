@@ -14,60 +14,69 @@ auto_execution_mode: 3
 
 ## Execute
 
-- ติดตั้ง Neovim ตาม `workflows/install-neovim.md`
-- ตั้งค่า Neovim ตาม `workflows/configure-neovim.md`
-- อ่าน `guide/installation.md` สำหรับวิธีติดตั้ง
-- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
-- อ่าน `guide/best-practices.md` สำหรับ best practices
-- อ่าน `guide/features.md` สำหรับ features ที่มี
-- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
-- อ่าน `key-concepts/modal-editing.md` สำหรับ modal editing
-- อ่าน `key-concepts/macros.md` สำหรับ macros
-- อ่าน `key-concepts/registers.md` สำหรับ registers
-- อ่าน `principles/key-mappings.md` สำหรับ key mappings
-- อ่าน `principles/plugin-management.md` สำหรับ plugin management
-- อ่าน `references/api.md` สำหรับ Lua API
-- อ่าน `references/cli.md` สำหรับ CLI commands
-- อ่าน `references/configuration.md` สำหรับ configuration options
-- อ่าน `references/website.md` สำหรับ official website
+### 1. Installation
 
-## โครงสร้าง Directory
+ติดตั้ง Neovim ตาม `workflows/install-neovim.md`
 
-```
-nvim/
-├── SKILL.md
-├── guide/
-│   ├── installation.md
-│   ├── configuration.md
-│   ├── best-practices.md
-│   ├── features.md
-│   └── how-it-works.md
-├── key-concepts/
-│   ├── modal-editing.md
-│   ├── macros.md
-│   └── registers.md
-├── principles/
-│   ├── key-mappings.md
-│   └── plugin-management.md
-├── references/
-│   ├── api.md
-│   ├── cli.md
-│   ├── configuration.md
-│   └── website.md
-└── workflows/
-    ├── install-neovim.md
-    └── configure-neovim.md
-```
+### 2. Configuration
 
-## หมวดหมู่ไฟล์
+ตั้งค่า Neovim ตาม `workflows/configure-neovim.md`
 
-| หมวดหมู่ | คำอธิบาย |
-|-----------|-----------|
-| `guide/` | คู่มือการใช้งานและ best practices |
-| `key-concepts/` | แนวคิดสำคัญ (เขียนเป็นภาษาไทย) |
-| `principles/` | หลักการ (เขียนเป็นภาษาไทย) |
-| `references/` | API docs, CLI commands, configuration |
-| `workflows/` | Workflows สำหรับ automation |
+### 3. Installation Guide
+
+อ่าน `guide/installation.md` สำหรับวิธีติดตั้ง
+
+### 4. Configuration Guide
+
+อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+
+### 5. Best Practices
+
+อ่าน `guide/best-practices.md` สำหรับ best practices
+
+### 6. Features
+
+อ่าน `guide/features.md` สำหรับ features ที่มี
+
+### 7. How It Works
+
+อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+
+### 8. Modal Editing
+
+อ่าน `key-concepts/modal-editing.md` สำหรับ modal editing
+
+### 9. Macros
+
+อ่าน `key-concepts/macros.md` สำหรับ macros
+
+### 10. Registers
+
+อ่าน `key-concepts/registers.md` สำหรับ registers
+
+### 11. Key Mappings
+
+อ่าน `principles/key-mappings.md` สำหรับ key mappings
+
+### 12. Plugin Management
+
+อ่าน `principles/plugin-management.md` สำหรับ plugin management
+
+### 13. Lua API
+
+อ่าน `references/api.md` สำหรับ Lua API
+
+### 14. CLI Commands
+
+อ่าน `references/cli.md` สำหรับ CLI commands
+
+### 15. Configuration Options
+
+อ่าน `references/configuration.md` สำหรับ configuration options
+
+### 16. Official Website
+
+อ่าน `references/website.md` สำหรับ official website
 
 ## Rules
 

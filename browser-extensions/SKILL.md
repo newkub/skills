@@ -12,56 +12,6 @@ auto_execution_mode: 3
 
 ใช้สำหรับการสร้าง extensions ที่ modify web pages, add functionality, integrate กับ web services และ automate browser tasks
 
-## โครงสร้าง Directory
-
-```
-create-browser-extensions/
-├── SKILL.md
-├── guide/
-│   ├── architecture.md
-│   ├── best-practices.md
-│   ├── configuration.md
-│   └── ...
-├── key-concepts/
-├── principles/
-├── references/
-│   ├── configuration.md
-│   ├── sitemap.md
-│   └── website.md
-├── workflows/
-│   └── create-browser-extension.md
-├── templates/
-└── scripts/
-```
-
-## หมวดหมู่ไฟล์
-
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|-----------|------|-----------|
-| Root Files | SKILL.md | Index file สำหรับ browser extensions skill |
-| guide/ | architecture.md | Architecture ของ browser extensions |
-| guide/ | best-practices.md | Best practices สำหรับ development |
-| guide/ | configuration.md | Configuration และ manifest.json |
-| references/ | configuration.md | Configuration reference |
-| references/ | sitemap.md | Sitemap ของ documentation |
-| references/ | website.md | เว็บไซต์และ resources |
-| workflows/ | create-browser-extension.md | Workflow สำหรับสร้าง extension |
-
-## When to use
-
-- ต้องการสร้าง extension สำหรับ Chrome, Firefox, Edge
-- ต้องการ modify web pages ด้วย content scripts
-- ต้องการ add functionality ให้ browser
-- ต้องการ integrate กับ web services
-- ต้องการ automate browser tasks
-
-## Skills Related
-
-- `/write-skills` - มาตรฐานการเขียน skills
-- `lang-javascript`
-- `lang-typescript`
-- `tool-wxt`
-
 ## Execute
 
 ### 1. Create Project

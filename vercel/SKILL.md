@@ -14,15 +14,41 @@ auto_execution_mode: 3
 
 ## Execute
 
-- Install Vercel CLI ด้วย `bun add -D vercel`
-- Login ด้วย `bun vercel login`
-- Deploy ด้วย `bun vercel`
-- ใช้ Git integration สำหรับ automatic deployments
-- ใช้ preview deployments สำหรับ testing
-- Configure environment variables ใน dashboard
-- ใช้ edge functions สำหรับ low latency
-- ใช้ image optimization สำหรับ performance
-- Monitor deployments ใน dashboard
+### 1. Installation
+
+Install Vercel CLI ด้วย `bun add -D vercel`
+
+### 2. Login
+
+Login ด้วย `bun vercel login`
+
+### 3. Deploy
+
+Deploy ด้วย `bun vercel`
+
+### 4. Git Integration
+
+ใช้ Git integration สำหรับ automatic deployments
+
+### 5. Preview Deployments
+
+ใช้ preview deployments สำหรับ testing
+
+### 6. Environment Variables
+
+Configure environment variables ใน dashboard
+
+### 7. Edge Functions
+
+ใช้ edge functions สำหรับ low latency
+
+### 8. Image Optimization
+
+ใช้ image optimization สำหรับ performance
+
+### 9. Monitor
+
+Monitor deployments ใน dashboard
 
 ## Rules
 
@@ -40,37 +66,3 @@ auto_execution_mode: 3
 - Instant deployments ด้วย Git integration
 - Preview deployments สำหรับ collaboration
 - Global edge network สำหรับ performance
-
-## โครงสร้าง Directory
-
-```
-cloud-vercel/
-├── SKILL.md
-├── guide/
-├── key-concepts/
-├── principles/
-├── references/
-├── workflows/
-├── templates/
-└── scripts/
-```
-
-## หมวดหมู่ไฟล์
-
-- `SKILL.md` - ไฟล์หลักของ skill
-- `guide/` - คู่มือการใช้งานและ best practices
-- `key-concepts/` - แนวคิดสำคัญเกี่ยวกับ Vercel platform
-- `principles/` - หลักการในการใช้ Vercel
-- `references/` - เอกสารอ้างอิงและ API documentation
-- `workflows/` - workflows สำหรับ automation
-- `templates/` - templates สำหรับเริ่มต้น
-- `scripts/` - scripts สำหรับ automation
-
-## References
-
-- [Official Website](https://vercel.com)
-- [Documentation](https://vercel.com/docs)
-- [CLI](https://vercel.com/cli)
-- [Dashboard](https://vercel.com/dashboard)
-- [Templates](https://vercel.com/templates)
-- [Integrations](https://vercel.com/integrations)

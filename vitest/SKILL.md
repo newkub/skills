@@ -12,90 +12,117 @@ auto_execution_mode: 3
 
 ใช้สำหรับ unit testing ของ Vite projects ด้วย Vitest framework
 
-## โครงสร้าง Directory
-
-```
-vitest/
-├── SKILL.md
-├── guide/
-│   ├── installation.md
-│   ├── quick-start.md
-│   ├── key-concepts.md
-│   ├── how-it-works.md
-│   ├── configuration.md
-│   ├── features.md
-│   ├── patterns.md
-│   ├── performance.md
-│   ├── best-practices.md
-│   ├── integration.md
-│   ├── architecture.md
-│   ├── structure.md
-│   ├── testing.md
-│   ├── migration.md
-│   ├── ecosystem.md
-│   ├── security.md
-│   └── troubleshooting.md
-├── key-concepts/
-│   ├── test-suite.md
-│   ├── matchers.md
-│   ├── mocking.md
-│   └── hooks.md
-├── principles/
-│   ├── test-isolation.md
-│   ├── arrange-act-assert.md
-│   ├── test-naming.md
-│   └── single-responsibility.md
-├── references/
-│   ├── api.md
-│   ├── cli.md
-│   ├── configuration.md
-│   ├── sitemap.md
-│   └── website.md
-└── workflows/
-    ├── setup-vitest.md
-    ├── write-test.md
-    └── mock-dependencies.md
-```
-
-## หมวดหมู่ไฟล์
-
-- **guide/** - คู่มือการใช้งานและ best practices
-- **key-concepts/** - แนวคิดสำคัญของ Vitest
-- **principles/** - หลักการในการเขียน tests
-- **references/** - เอกสารอ้างอิง API และ configuration
-- **workflows/** - workflows สำหรับ automation
-
 ## Execute
 
-1. ติดตั้ง Vitest ด้วย `bun add -D vitest`
-2. อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
-3. อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
-4. ใช้ `workflows/setup-vitest.md` สำหรับ setup project
-5. อ่าน `guide/key-concepts.md` สำหรับแนวคิดหลัก
-6. อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
-7. อ่าน `key-concepts/test-suite.md` สำหรับ test suite
-8. อ่าน `key-concepts/matchers.md` สำหรับ matchers
-9. อ่าน `key-concepts/mocking.md` สำหรับ mocking
-10. อ่าน `key-concepts/hooks.md` สำหรับ test hooks
-11. อ่าน `guide/configuration.md` สำหรับการตั้งค่า
-12. อ่าน `references/configuration.md` สำหรับ configuration reference
-13. ตั้งค่า `vitest.config.ts`
-14. อ่าน `guide/features.md` สำหรับ features ที่มี
-15. อ่าน `workflows/write-test.md` สำหรับการเขียน tests
-16. ใช้ `workflows/mock-dependencies.md` สำหรับ mocking
-17. อ่าน `guide/best-practices.md` สำหรับ best practices
-18. อ่าน `principles/test-isolation.md` สำหรับ test isolation
-19. อ่าน `principles/arrange-act-assert.md` สำหรับ AAA pattern
-20. อ่าน `principles/test-naming.md` สำหรับ test naming
-21. อ่าน `principles/single-responsibility.md` สำหรับ single responsibility
-22. อ่าน `guide/integration.md` สำหรับ framework integration
-23. อ่าน `guide/architecture.md` สำหรับ system architecture
-24. อ่าน `guide/structure.md` สำหรับ project structure
-25. อ่าน `guide/testing.md` สำหรับ testing strategies
-26. อ่าน `guide/migration.md` สำหรับ migration จาก test frameworks อื่น
-27. อ่าน `guide/ecosystem.md` สำหรับ ecosystem และ plugins
-28. อ่าน `guide/security.md` สำหรับ security considerations
-29. อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+### 1. Installation
+
+ติดตั้ง Vitest ด้วย `bun add -D vitest`
+
+### 2. Setup
+
+อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+
+### 3. Quick Start
+
+อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+
+### 4. Setup Project
+
+ใช้ `workflows/setup-vitest.md` สำหรับ setup project
+
+### 5. Learn Concepts
+
+อ่าน `guide/key-concepts.md` สำหรับแนวคิดหลัก
+
+### 6. Understand Workflow
+
+อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+
+### 7. Test Suite
+
+อ่าน `key-concepts/test-suite.md` สำหรับ test suite
+
+### 8. Matchers
+
+อ่าน `key-concepts/matchers.md` สำหรับ matchers
+
+### 9. Mocking
+
+อ่าน `key-concepts/mocking.md` สำหรับ mocking
+
+### 10. Test Hooks
+
+อ่าน `key-concepts/hooks.md` สำหรับ test hooks
+
+### 11. Configuration
+
+อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+อ่าน `references/configuration.md` สำหรับ configuration reference
+ตั้งค่า `vitest.config.ts`
+
+### 12. Features
+
+อ่าน `guide/features.md` สำหรับ features ที่มี
+
+### 13. Write Tests
+
+อ่าน `workflows/write-test.md` สำหรับการเขียน tests
+
+### 14. Mock Dependencies
+
+ใช้ `workflows/mock-dependencies.md` สำหรับ mocking
+
+### 15. Best Practices
+
+อ่าน `guide/best-practices.md` สำหรับ best practices
+
+### 16. Test Isolation
+
+อ่าน `principles/test-isolation.md` สำหรับ test isolation
+
+### 17. AAA Pattern
+
+อ่าน `principles/arrange-act-assert.md` สำหรับ AAA pattern
+
+### 18. Test Naming
+
+อ่าน `principles/test-naming.md` สำหรับ test naming
+
+### 19. Single Responsibility
+
+อ่าน `principles/single-responsibility.md` สำหรับ single responsibility
+
+### 20. Integration
+
+อ่าน `guide/integration.md` สำหรับ framework integration
+
+### 21. Architecture
+
+อ่าน `guide/architecture.md` สำหรับ system architecture
+
+### 22. Project Structure
+
+อ่าน `guide/structure.md` สำหรับ project structure
+
+### 23. Testing Strategies
+
+อ่าน `guide/testing.md` สำหรับ testing strategies
+
+### 24. Migration
+
+อ่าน `guide/migration.md` สำหรับ migration จาก test frameworks อื่น
+
+### 25. Ecosystem
+
+อ่าน `guide/ecosystem.md` สำหรับ ecosystem และ plugins
+
+### 26. Security
+
+อ่าน `guide/security.md` สำหรับ security considerations
+
+### 27. Troubleshooting
+
+อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
 ## Rules
 

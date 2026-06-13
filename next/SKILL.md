@@ -12,69 +12,67 @@ auto_execution_mode: 3
 
 ใช้สำหรับการพัฒนา React applications ที่ต้องการ SEO-friendly, performance สูง และ optimized loading
 
-## โครงสร้าง Directory
-
-```
-next/
-├── SKILL.md
-├── guide/
-│   ├── architecture.md
-│   ├── best-practices.md
-│   ├── configuration.md
-│   ├── features.md
-│   ├── how-it-works.md
-│   ├── installation.md
-│   ├── integration.md
-│   ├── key-concept.md
-│   └── quick-start.md
-├── key-concepts/
-├── principles/
-├── references/
-│   ├── cli.md
-│   ├── configuration.md
-│   ├── sitemap.md
-│   └── website.md
-└── workflows/
-    └── create-nextjs-app.md
-```
-
-## หมวดหมู่ไฟล์
-
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|-----------|------|-----------|
-| Root Files | SKILL.md | Index file สำหรับ Next.js skill |
-| guide/ | architecture.md | Architecture ของ Next.js |
-| guide/ | best-practices.md | Best practices สำหรับ development |
-| guide/ | configuration.md | Configuration และ setup |
-| guide/ | features.md | Features ที่มีใน Next.js |
-| guide/ | how-it-works.md | วิธีการทำงานของ Next.js |
-| guide/ | installation.md | การติดตั้ง Next.js |
-| guide/ | integration.md | Integration กับ tools อื่นๆ |
-| guide/ | key-concept.md | แนวคิดหลักของ Next.js |
-| guide/ | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| references/ | cli.md | CLI documentation |
-| references/ | configuration.md | Configuration reference |
-| references/ | sitemap.md | Sitemap ของ documentation |
-| references/ | website.md | เว็บไซต์และ resources |
-| workflows/ | create-nextjs-app.md | Workflow สำหรับสร้าง Next.js app |
-
 ## Execute
 
-- สร้าง project ด้วย `bun create next-app`
-- อ่าน `guide/architecture.md` สำหรับ architecture ของ Next.js
-- อ่าน `guide/best-practices.md` สำหรับ best practices
-- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
-- อ่าน `guide/features.md` สำหรับ features ที่มี
-- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
-- อ่าน `guide/installation.md` สำหรับการติดตั้ง
-- อ่าน `guide/integration.md` สำหรับ integration
-- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
-- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
-- อ่าน `references/cli.md` สำหรับ CLI documentation
-- อ่าน `references/configuration.md` สำหรับ configuration reference
-- อ่าน `references/sitemap.md` สำหรับ sitemap ของ documentation
-- อ่าน `references/website.md` สำหรับเว็บไซต์และ resources
-- อ่าน `workflows/create-nextjs-app.md` สำหรับ workflow สร้าง Next.js app
+### 1. Create Project
+
+สร้าง project ด้วย `bun create next-app`
+
+### 2. Architecture
+
+อ่าน `guide/architecture.md` สำหรับ architecture ของ Next.js
+
+### 3. Best Practices
+
+อ่าน `guide/best-practices.md` สำหรับ best practices
+
+### 4. Configuration
+
+อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+
+### 5. Features
+
+อ่าน `guide/features.md` สำหรับ features ที่มี
+
+### 6. How It Works
+
+อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+
+### 7. Installation
+
+อ่าน `guide/installation.md` สำหรับการติดตั้ง
+
+### 8. Integration
+
+อ่าน `guide/integration.md` สำหรับ integration
+
+### 9. Key Concept
+
+อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+
+### 10. Quick Start
+
+อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+
+### 11. CLI Documentation
+
+อ่าน `references/cli.md` สำหรับ CLI documentation
+
+### 12. Configuration Reference
+
+อ่าน `references/configuration.md` สำหรับ configuration reference
+
+### 13. Sitemap
+
+อ่าน `references/sitemap.md` สำหรับ sitemap ของ documentation
+
+### 14. Website
+
+อ่าน `references/website.md` สำหรับเว็บไซต์และ resources
+
+### 15. Create Next.js App
+
+อ่าน `workflows/create-nextjs-app.md` สำหรับ workflow สร้าง Next.js app
 
 ## Rules
 

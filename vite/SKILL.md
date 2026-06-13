@@ -12,82 +12,101 @@ auto_execution_mode: 3
 
 ใช้สำหรับ build และ development ของ frontend projects ด้วย Vite
 
-## โครงสร้าง Directory
-
-```
-vite/
-├── SKILL.md
-├── guide/
-│   ├── installation.md
-│   ├── quick-start.md
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── configuration.md
-│   ├── features.md
-│   ├── patterns.md
-│   ├── performance.md
-│   ├── best-practices.md
-│   ├── integration.md
-│   ├── architecture.md
-│   ├── structure.md
-│   ├── testing.md
-│   ├── migration.md
-│   ├── ecosystem.md
-│   ├── security.md
-│   └── troubleshooting.md
-├── key-concepts/
-│   ├── native-esm.md
-│   ├── hmr.md
-│   └── dependency-pre-bundling.md
-├── principles/
-│   ├── performance-first.md
-│   └── convention-over-configuration.md
-├── references/
-│   ├── api.md
-│   ├── configuration.md
-│   ├── sitemap.md
-│   └── website.md
-└── workflows/
-    ├── setup-vite-project.md
-    ├── add-plugin.md
-    └── optimize-build.md
-```
-
-## หมวดหมู่ไฟล์
-
-- **guide/** - คู่มือการใช้งานและ best practices
-- **key-concepts/** - แนวคิดสำคัญของ Vite
-- **principles/** - หลักการในการพัฒนาด้วย Vite
-- **references/** - เอกสารอ้างอิง API และ configuration
-- **workflows/** - workflows สำหรับ automation
-
 ## Execute
 
-1. ติดตั้ง Vite ด้วย `bun add -D vite`
-2. อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
-3. อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
-4. ใช้ `workflows/setup-vite-project.md` สำหรับ setup project
-5. อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
-6. อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
-7. อ่าน `key-concepts/native-esm.md` สำหรับ Native ESM
-8. อ่าน `key-concepts/hmr.md` สำหรับ HMR
-9. อ่าน `key-concepts/dependency-pre-bundling.md` สำหรับ dependency pre-bundling
-10. อ่าน `guide/configuration.md` สำหรับการตั้งค่า
-11. อ่าน `references/configuration.md` สำหรับ configuration reference
-12. ตั้งค่า `vite.config.ts`
-13. อ่าน `guide/features.md` สำหรับ features ที่มี
-14. อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
-15. ใช้ Plugin API สำหรับ extend functionality
-16. ใช้ `workflows/add-plugin.md` สำหรับเพิ่ม plugins
-17. อ่าน `guide/best-practices.md` สำหรับ best practices
-18. อ่าน `principles/performance-first.md` สำหรับ performance principles
-19. อ่าน `principles/convention-over-configuration.md` สำหรับ convention principles
-20. ใช้ Rollup-based production build
-21. ใช้ `workflows/optimize-build.md` สำหรับ build optimization
-22. อ่าน `guide/integration.md` สำหรับ framework integration
-23. อ่าน `guide/architecture.md` สำหรับ system architecture
-24. อ่าน `guide/structure.md` สำหรับ project structure
-25. อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+### 1. Installation
+
+ติดตั้ง Vite ด้วย `bun add -D vite`
+
+### 2. Setup
+
+อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+
+### 3. Quick Start
+
+อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+
+### 4. Setup Project
+
+ใช้ `workflows/setup-vite-project.md` สำหรับ setup project
+
+### 5. Learn Concepts
+
+อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+
+### 6. Understand Workflow
+
+อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+
+### 7. Native ESM
+
+อ่าน `key-concepts/native-esm.md` สำหรับ Native ESM
+
+### 8. HMR
+
+อ่าน `key-concepts/hmr.md` สำหรับ HMR
+
+### 9. Dependency Pre-bundling
+
+อ่าน `key-concepts/dependency-pre-bundling.md` สำหรับ dependency pre-bundling
+
+### 10. Configuration
+
+อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+อ่าน `references/configuration.md` สำหรับ configuration reference
+ตั้งค่า `vite.config.ts`
+
+### 11. Features
+
+อ่าน `guide/features.md` สำหรับ features ที่มี
+
+### 12. Patterns
+
+อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+
+### 13. Plugin API
+
+ใช้ Plugin API สำหรับ extend functionality
+
+### 14. Add Plugin
+
+ใช้ `workflows/add-plugin.md` สำหรับเพิ่ม plugins
+
+### 15. Best Practices
+
+อ่าน `guide/best-practices.md` สำหรับ best practices
+
+### 16. Performance Principles
+
+อ่าน `principles/performance-first.md` สำหรับ performance principles
+
+### 17. Convention Principles
+
+อ่าน `principles/convention-over-configuration.md` สำหรับ convention principles
+
+### 18. Production Build
+
+ใช้ Rollup-based production build
+
+### 19. Build Optimization
+
+ใช้ `workflows/optimize-build.md` สำหรับ build optimization
+
+### 20. Integration
+
+อ่าน `guide/integration.md` สำหรับ framework integration
+
+### 21. Architecture
+
+อ่าน `guide/architecture.md` สำหรับ system architecture
+
+### 22. Project Structure
+
+อ่าน `guide/structure.md` สำหรับ project structure
+
+### 23. Troubleshooting
+
+อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
 ## Rules
 

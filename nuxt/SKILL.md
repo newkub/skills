@@ -12,75 +12,75 @@ auto_execution_mode: 3
 
 ใช้สำหรับการพัฒนา Vue.js applications ที่ต้องการ SEO-friendly, auto-imports, file-based routing และ TypeScript support
 
-## โครงสร้าง Directory
-
-```
-nuxt/
-├── SKILL.md
-├── guide/
-│   ├── architecture.md
-│   ├── best-practices.md
-│   ├── configuration.md
-│   ├── features.md
-│   ├── how-it-works.md
-│   ├── installation.md
-│   ├── integration.md
-│   ├── key-concept.md
-│   └── quick-start.md
-├── key-concepts/
-├── principles/
-├── references/
-│   ├── api.md
-│   ├── configuration.md
-│   ├── sitemap.md
-│   └── website.md
-└── workflows/
-    ├── create-component.md
-    ├── create-page.md
-    └── setup-project.md
-```
-
-## หมวดหมู่ไฟล์
-
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|-----------|------|-----------|
-| Root Files | SKILL.md | Index file สำหรับ Nuxt skill |
-| guide/ | architecture.md | Architecture ของ Nuxt |
-| guide/ | best-practices.md | Best practices สำหรับ development |
-| guide/ | configuration.md | Configuration และ setup |
-| guide/ | features.md | Features ที่มีใน Nuxt |
-| guide/ | how-it-works.md | วิธีการทำงานของ Nuxt |
-| guide/ | installation.md | การติดตั้ง Nuxt |
-| guide/ | integration.md | Integration กับ tools อื่นๆ |
-| guide/ | key-concept.md | แนวคิดหลักของ Nuxt |
-| guide/ | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| references/ | api.md | API documentation |
-| references/ | configuration.md | Configuration reference |
-| references/ | sitemap.md | Sitemap ของ documentation |
-| references/ | website.md | เว็บไซต์และ resources |
-| workflows/ | create-component.md | Workflow สำหรับสร้าง components |
-| workflows/ | create-page.md | Workflow สำหรับสร้าง pages |
-| workflows/ | setup-project.md | Workflow สำหรับ setup project |
-
 ## Execute
 
-- สร้าง project ด้วย `bun create nuxt-app`
-- อ่าน `guide/architecture.md` สำหรับ architecture ของ Nuxt
-- อ่าน `guide/best-practices.md` สำหรับ best practices
-- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
-- อ่าน `guide/features.md` สำหรับ features ที่มี
-- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
-- อ่าน `guide/installation.md` สำหรับการติดตั้ง
-- อ่าน `guide/integration.md` สำหรับ integration
-- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
-- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
-- อ่าน `references/api.md` สำหรับ API documentation
-- อ่าน `references/configuration.md` สำหรับ configuration reference
-- อ่าน `references/sitemap.md` สำหรับ sitemap ของ documentation
-- อ่าน `references/website.md` สำหรับเว็บไซต์และ resources
-- อ่าน `workflows/create-component.md` สำหรับ workflow สร้าง components
-- อ่าน `workflows/create-page.md` สำหรับ workflow สร้าง pages
-- อ่าน `workflows/setup-project.md` สำหรับ workflow setup project
+### 1. Create Project
+
+สร้าง project ด้วย `bun create nuxt-app`
+
+### 2. Architecture
+
+อ่าน `guide/architecture.md` สำหรับ architecture ของ Nuxt
+
+### 3. Best Practices
+
+อ่าน `guide/best-practices.md` สำหรับ best practices
+
+### 4. Configuration
+
+อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+
+### 5. Features
+
+อ่าน `guide/features.md` สำหรับ features ที่มี
+
+### 6. How It Works
+
+อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+
+### 7. Installation
+
+อ่าน `guide/installation.md` สำหรับการติดตั้ง
+
+### 8. Integration
+
+อ่าน `guide/integration.md` สำหรับ integration
+
+### 9. Key Concept
+
+อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+
+### 10. Quick Start
+
+อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+
+### 11. API Documentation
+
+อ่าน `references/api.md` สำหรับ API documentation
+
+### 12. Configuration Reference
+
+อ่าน `references/configuration.md` สำหรับ configuration reference
+
+### 13. Sitemap
+
+อ่าน `references/sitemap.md` สำหรับ sitemap ของ documentation
+
+### 14. Website
+
+อ่าน `references/website.md` สำหรับเว็บไซต์และ resources
+
+### 15. Create Component
+
+อ่าน `workflows/create-component.md` สำหรับ workflow สร้าง components
+
+### 16. Create Page
+
+อ่าน `workflows/create-page.md` สำหรับ workflow สร้าง pages
+
+### 17. Setup Project
+
+อ่าน `workflows/setup-project.md` สำหรับ workflow setup project
 
 ## Rules
 

@@ -12,56 +12,6 @@ auto_execution_mode: 3
 
 ใช้สำหรับการสร้าง extensions ที่ add commands, integrate กับ external APIs, automate workflows และ create custom UI components
 
-## โครงสร้าง Directory
-
-```
-create-raycast-extensions/
-├── SKILL.md
-├── guide/
-│   ├── architecture.md
-│   ├── best-practices.md
-│   ├── configuration.md
-│   └── ...
-├── key-concepts/
-├── principles/
-├── references/
-│   ├── api.md
-│   ├── sitemap.md
-│   └── website.md
-├── workflows/
-│   └── create-raycast-extension.md
-├── templates/
-└── scripts/
-```
-
-## หมวดหมู่ไฟล์
-
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|-----------|------|-----------|
-| Root Files | SKILL.md | Index file สำหรับ Raycast extensions skill |
-| guide/ | architecture.md | Architecture ของ Raycast extensions |
-| guide/ | best-practices.md | Best practices สำหรับ development |
-| guide/ | configuration.md | Configuration และ package.json |
-| references/ | api.md | API documentation |
-| references/ | sitemap.md | Sitemap ของ documentation |
-| references/ | website.md | เว็บไซต์และ resources |
-| workflows/ | create-raycast-extension.md | Workflow สำหรับสร้าง extension |
-
-## When to use
-
-- ต้องการสร้าง extension สำหรับ Raycast
-- ต้องการ add commands ให้ Raycast
-- ต้องการ integrate กับ external APIs
-- ต้องการ automate workflows
-- ต้องการ create custom UI components
-
-## Skills Related
-
-- `/write-skills` - มาตรฐานการเขียน skills
-- `lang-typescript`
-- `lang-javascript`
-- `lib-react`
-
 ## Execute
 
 ### 1. Create Project

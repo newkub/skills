@@ -5,6 +5,8 @@ auto_execution_mode: 3
 related_workflows:
   - /deep-research
   - /write-windsurf-global-workflows
+  - /write-content-coverage
+  - /improve-correctness
 ---
 
 ## Goal
@@ -54,7 +56,6 @@ skill-name/
 │   ├── tui.md                 (optional)
 │   ├── configuration.md       (optional)
 │   ├── website.md             (optional)
-│   ├── sitemap.md             (optional)
 │   └── ...                    (optional)
 ├── workflows/                 (optional)
 │   └── ...                    (optional)
@@ -91,13 +92,33 @@ skill-name/
 - ปรับปรุง headings เป็น Title Case (EN) และรายการเป็น TH
 - ตรวจสอบความถูกต้องของข้อมูล
 
-### 5. Validate And Verify
+### 5. Write Content Coverage
+
+เขียน content ครอบคลุมทุก features, APIs, และ use cases
+
+- ทำตาม workflow `/write-content-coverage` สำหรับเขียน content ครอบคลุม
+- วิเคราะห์ features ที่ยังไม่มี content
+- เขียน guides สำหรับ features ที่ขาด
+- ตรวจสอบ content ครอบคลุมทุก aspects
+
+### 6. Improve Correctness
+
+ปรับปรุงความถูกต้องของ content
+
+- ทำตาม workflow `/improve-correctness` สำหรับตรวจสอบและปรับปรุง
+- ตรวจสอบความถูกต้องของข้อมูล
+- แก้ไข issues ตาม priority (Critical, High, Medium, Low)
+- ตรวจสอบว่าไม่มี regressions
+- อัปเดต references ที่เกี่ยวข้อง
+
+### 7. Validate And Verify
 
 ตรวจสอบความถูกต้อง
 
 - ตรวจสอบ references ถูกต้อง
 - ตรวจสอบว่าไม่มี conflicts ระหว่าง skills
 - ตรวจสอบโครงสร้างตรงกับมาตรฐาน
+- ตรวจสอบ content ครอบคลุมทุก aspects
 
 ## Rules
 

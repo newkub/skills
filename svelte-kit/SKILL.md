@@ -12,61 +12,6 @@ auto_execution_mode: 3
 
 ใช้สำหรับการพัฒนา Svelte applications ที่ต้องการ full-stack framework ด้วย Vite-powered HMR
 
-## โครงสร้าง Directory
-
-```
-svelte-kit/
-├── SKILL.md
-├── guide/
-│   ├── architecture.md
-│   ├── best-practices.md
-│   ├── configuration.md
-│   ├── features.md
-│   ├── how-it-works.md
-│   ├── installation.md
-│   ├── integration.md
-│   ├── quick-start.md
-│   └── ...
-├── key-concepts/
-│   └── key-concept.md
-├── principles/
-│   ├── progressive-enhancement.md
-│   ├── zero-js-by-default.md
-│   ├── file-based-magic.md
-│   └── server-first.md
-├── references/
-│   ├── api.md
-│   ├── cli.md
-│   ├── sitemap.md
-│   └── website.md
-└── workflows/
-    └── create-sveltekit-app.md
-```
-
-## หมวดหมู่ไฟล์
-
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|-----------|------|-----------|
-| Root Files | SKILL.md | Index file สำหรับ SvelteKit skill |
-| guide/ | architecture.md | Architecture ของ SvelteKit |
-| guide/ | best-practices.md | Best practices สำหรับ development |
-| guide/ | configuration.md | Configuration และ setup |
-| guide/ | features.md | Features ที่สำคัญ |
-| guide/ | how-it-works.md | วิธีการทำงาน |
-| guide/ | installation.md | วิธีการติดตั้ง |
-| guide/ | integration.md | การเชื่อมต่อกับ tools อื่น |
-| guide/ | quick-start.md | เริ่มต้นอย่างรวดเร็ว |
-| key-concepts/ | key-concept.md | แนวคิดสำคัญของ SvelteKit |
-| principles/ | progressive-enhancement.md | หลักการ Progressive Enhancement |
-| principles/ | zero-js-by-default.md | หลักการ Zero JS by Default |
-| principles/ | file-based-magic.md | หลักการ File-based Magic |
-| principles/ | server-first.md | หลักการ Server-First |
-| references/ | api.md | API documentation |
-| references/ | cli.md | CLI documentation |
-| references/ | sitemap.md | Sitemap ของ documentation |
-| references/ | website.md | เว็บไซต์และ resources |
-| workflows/ | create-sveltekit-app.md | Workflow สำหรับสร้าง SvelteKit app |
-
 ## Execute
 
 ### 1. Create Project
