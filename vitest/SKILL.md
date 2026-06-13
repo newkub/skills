@@ -87,10 +87,15 @@ vitest/
 18. อ่าน `principles/test-isolation.md` สำหรับ test isolation
 19. อ่าน `principles/arrange-act-assert.md` สำหรับ AAA pattern
 20. อ่าน `principles/test-naming.md` สำหรับ test naming
-21. อ่าน `guide/integration.md` สำหรับ framework integration
-22. อ่าน `guide/architecture.md` สำหรับ system architecture
-23. อ่าน `guide/structure.md` สำหรับ project structure
-24. อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+21. อ่าน `principles/single-responsibility.md` สำหรับ single responsibility
+22. อ่าน `guide/integration.md` สำหรับ framework integration
+23. อ่าน `guide/architecture.md` สำหรับ system architecture
+24. อ่าน `guide/structure.md` สำหรับ project structure
+25. อ่าน `guide/testing.md` สำหรับ testing strategies
+26. อ่าน `guide/migration.md` สำหรับ migration จาก test frameworks อื่น
+27. อ่าน `guide/ecosystem.md` สำหรับ ecosystem และ plugins
+28. อ่าน `guide/security.md` สำหรับ security considerations
+29. อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
 ## Rules
 

@@ -63,9 +63,6 @@ it('validates user input', () => {
 // ใช้ structure: "should [expected behavior]"
 it('should return positive sum when adding positive numbers', () => {})
 it('should throw error when dividing by zero', () => {})
-
-// หรือใช้ "it" ตามด้วย past tense
-it('returned 3 when adding 1 and 2', () => {})
 ```
 
 ### Describe Structure
@@ -76,10 +73,6 @@ describe('UserService', () => {
   describe('createUser', () => {
     it('should create user with valid data', () => {})
     it('should throw error with invalid email', () => {})
-  })
-
-  describe('deleteUser', () => {
-    it('should remove user from database', () => {})
   })
 })
 ```
@@ -93,11 +86,6 @@ describe('Array', () => {
   describe('map', () => {
     it('transforms each element', () => {})
     it('does not modify original array', () => {})
-  })
-
-  describe('filter', () => {
-    it('returns filtered elements', () => {})
-    it('returns empty array when none match', () => {})
   })
 })
 ```
@@ -138,28 +126,6 @@ vi.mock('./api', () => ({
 const user = await fetchUserFromRealAPI()
 ```
 
-### Mock Module at Top Level
-
-```typescript
-// วาง vi.mock ไว้บนสุดของ file
-import { vi } from 'vitest'
-
-vi.mock('./api')
-
-import { fetchUser } from './api'
-import { getUserProfile } from './user-profile'
-
-describe('getUserProfile', () => {
-  it('fetches user data', async () => {
-    vi.mocked(fetchUser).mockResolvedValue({ id: 1, name: 'John' })
-    
-    const profile = await getUserProfile(1)
-    
-    expect(profile.name).toBe('John')
-  })
-})
-```
-
 ### Reset Mocks Between Tests
 
 ```typescript
@@ -167,7 +133,6 @@ beforeEach(() => {
   vi.clearAllMocks()
 })
 
-// หรือ restore
 afterEach(() => {
   vi.restoreAllMocks()
 })
@@ -204,36 +169,15 @@ it.only('specific test', () => {
 })
 ```
 
-### Parallel Test Execution
-
-```typescript
-// vitest.config.ts
-export default defineConfig({
-  test: {
-    pool: 'threads',  // Run tests in parallel
-    poolOptions: {
-      threads: {
-        maxThreads: 4,
-      },
-    },
-  },
-})
-```
-
 ## Common Pitfalls
 
-### 1. Test Order Dependencies
+### Test Order Dependencies
 
 ```typescript
 // BAD - Tests depend on each other
 it('creates user', () => {
   createUser()
   expect(users.length).toBe(1)
-})
-
-it('modifies user', () => {
-  // ต้องอาศัย test ก่อนหน้า
-  modifyUser()
 })
 
 // GOOD - Independent tests
@@ -248,33 +192,28 @@ describe('User Operations', () => {
     const newUser = createUser()
     expect(newUser).toBeDefined()
   })
-
-  it('modifies user', () => {
-    const modified = modifyUser(user)
-    expect(modified).toBeDefined()
-  })
 })
 ```
 
-### 2. Testing Implementation Details
+### Testing Implementation Details
 
 ```typescript
 // BAD - Testing how, not what
 it('uses array.push', () => {
   const arr = []
   addItem(arr, 'test')
-  expect(arr.length).toBe(1)  // เช็ค implementation
+  expect(arr.length).toBe(1)
 })
 
 // GOOD - Testing behavior
 it('adds item to collection', () => {
   const collection = new Collection()
   collection.add('test')
-  expect(collection.has('test')).toBe(true)  // เช็ค behavior
+  expect(collection.has('test')).toBe(true)
 })
 ```
 
-### 3. Forgetting to Test Edge Cases
+### Forgetting to Test Edge Cases
 
 ```typescript
 // MUST have - Empty, null, zero cases

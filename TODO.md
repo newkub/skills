@@ -1,1 +1,0 @@
-- เปลี่ยน file prefix ทั้งหมด ไมต้องมี prefix แล้ว แก้ไขโดยใช้ use-scripts
