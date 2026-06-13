@@ -1,5 +1,7 @@
 ---
+title: Write Test
 description: เขียน unit tests ด้วย Vitest
+auto_execution_mode: 3
 ---
 
 ## Goal
@@ -14,7 +16,7 @@ description: เขียน unit tests ด้วย Vitest
 - Mock functions และ modules
 - Test async code
 
-## Steps
+## Execute
 
 ### 1. Test Structure
 
@@ -154,9 +156,17 @@ import { fetchData } from './api'
 vi.mocked(fetchData).mockResolvedValue('data')
 ```
 
-## Notes
+## Rules
 
 - ใช้ `describe` จัดกลุ่ม tests ที่เกี่ยวข้องกัน
 - ใช้ `beforeEach` สำหรับ setup ที่ต้องการทุก test
 - ใช้ `vi.fn()` สำหรับ mock functions
 - ใช้ `vi.mock()` สำหรับ mock modules
+
+## Expected Outcome
+
+- Unit tests ที่มีโครงสร้างชัดเจน
+- Test cases ที่ใช้ matchers ที่เหมาะสม
+- Hooks สำหรับ setup และ cleanup ที่ proper
+- Mock functions และ modules ที่ทำงานได้
+- Async code ที่ test ได้อย่างถูกต้อง

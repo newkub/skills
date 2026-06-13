@@ -1,5 +1,7 @@
 ---
+title: Setup Vitest
 description: ติดตั้งและตั้งค่า Vitest ใน project
+auto_execution_mode: 3
 ---
 
 ## Goal
@@ -14,7 +16,7 @@ description: ติดตั้งและตั้งค่า Vitest ใน p
 - ตั้งค่า TypeScript support
 - ตั้งค่า coverage
 
-## Steps
+## Execute
 
 ### 1. ติดตั้ง Vitest
 
@@ -102,8 +104,15 @@ describe('Example', () => {
 bun run test
 ```
 
-## Notes
+## Rules
 
 - ใช้ `globals: true` เพื่อให้ใช้ `describe`, `it`, `expect` โดยไม่ต้อง import
 - ใช้ `environment: 'node'` สำหรับ backend หรือ `environment: 'jsdom'` สำหรับ frontend
 - Coverage provider `v8` เร็วกว่า `istanbul`
+
+## Expected Outcome
+
+- Vitest ติดตั้งและตั้งค่าใน project
+- Scripts สำหรับ run tests และ coverage พร้อมใช้งาน
+- TypeScript support ตั้งค่าเรียบร้อย
+- Test แรกสามารถรันได้สำเร็จ

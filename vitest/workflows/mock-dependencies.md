@@ -1,5 +1,7 @@
 ---
+title: Mock Dependencies
 description: Mock dependencies สำหรับ unit testing
+auto_execution_mode: 3
 ---
 
 ## Goal
@@ -14,7 +16,7 @@ Mock dependencies และ external services สำหรับ unit testing
 - Mock timers
 - Mock file system
 
-## Steps
+## Execute
 
 ### 1. Mock Functions
 
@@ -111,8 +113,16 @@ import { readFileSync as mockedRead } from 'fs'
 expect(mockedRead('file.txt')).toBe('mocked content')
 ```
 
-## Notes
+## Rules
 
 - ใช้ `vi.mocked()` สำหรับ type-safe mocking
 - ใช้ `vi.useFakeTimers()` สำหรับ test timer-dependent code
 - ใช้ `vi.restoreAllMocks()` ใน afterEach เพื่อ cleanup
+
+## Expected Outcome
+
+- Functions ที่ mock ได้อย่างถูกต้อง
+- Modules ที่ mock ได้อย่างเหมาะสม
+- API calls ที่ mock ได้สำเร็จ
+- Timers ที่ test ได้อย่างถูกต้อง
+- File system ที่ mock ได้เพื่อ isolated testing
