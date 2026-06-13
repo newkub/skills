@@ -85,12 +85,13 @@ skill-name/
 เขียน content files ตามมาตรฐาน
 
 - ทำตามมาตรฐาน `/write-windsurf-global-workflows` สำหรับทุกไฟล์
-- เนื้อหาครอบคลุมและอ่านง่าย ใช้ format ที่เหมาะสม
 - เวลาเขียนเกี่ยวกับการติดตั้ง ให้ใช้ `bun add` หรือ `bun add -D` แทน `npm install` เสมอ
-- ทุกไฟล์ `.md` เขียนเป็นภาษาไทย ยกเว้น headings และศัพท์เทคนิค
-- ปรับปรุง spacing, indentation, headings ให้สม่ำเสมอ
-- ปรับปรุง headings เป็น Title Case (EN) และรายการเป็น TH
-- ตรวจสอบความถูกต้องของข้อมูล
+- **แต่ละ .md ใต้ heading ต่างๆ ต้องเขียนอธิบายให้เข้าใจ**
+  - อธิบายความหมายของแต่ละ heading อย่างชัดเจน
+  - ให้ตัวอย่างที่เข้าใจง่ายเมื่อจำเป็น
+  - ใช้ประโยคที่สั้น กระชับ และตรงประเด็น
+  - หลีกเลี่ยงการใช้คำศัพท์ที่ซับซ้อนโดยไม่จำเป็น
+  - อธิบาย "ทำไม" และ "อย่างไร" ให้เข้าใจ
 
 ### 5. Write Content Coverage
 
@@ -124,6 +125,7 @@ skill-name/
 
 ### Structure And Consistency
 
+- ทำตามมาตรฐาน `/write-windsurf-global-workflows` สำหรับโครงสร้างและ consistency
 - ทุก `SKILL.md` ต้องมี frontmatter: `title`, `description`, `auto_execution_mode: 3`
 - ทุก `SKILL.md` ต้องมี sections: `## Goal`, `## Scope`, `## Execute`, `## Rules`, `## Expected Outcome`
 - Goal สอดคล้องกับ skill name, Execute สอดคล้องกับ Goal และ Rules
@@ -132,27 +134,18 @@ skill-name/
 
 ### Content And Style
 
-- หัวข้อภาษาอังกฤษ Title Case, รายการภาษาไทย
-- ใช้ bullet points (-) ชิดซ้ายใน Rules
-- ไฟล์ไม่เกิน 250 บรรทัด
-- ใช้ backticks สำหรับ `tools`, `commands`, `file paths`, `/workflow-name`
-- เขียนเป็นหลักการ how-to
-- ใน Rules สามารถใช้ table, code block ได้
-- terminal commands, architecture ใส่ใน code block
-- examples ต้องสั้นกระชับ
 - ทุกไฟล์ `.md` เขียนเป็นภาษาไทย ยกเว้น headings และศัพท์เทคนิค
+- ใช้ตารางสรุปข้อมูลที่เปรียบเทียบได้เมื่อเหมาะสม
+- ใช้ `codeblock` สำหรับ code examples, configuration, หรือ commands
+- ใช้ `ansi markdown diagrams` สำหรับ flow, architecture, หรือ how-it-works
 
 ### File Organization
 
-- ใช้ตารางสรุปข้อมูลที่เปรียบเทียบได้
-- ใช้ `codeblock` สำหรับ code examples, configuration, หรือ commands
-- ใช้ `ansi markdown diagrams` สำหรับ flow, architecture, หรือ how-it-works
 - ใช้ชื่อสื่อความหมายโดยตรง ไม่ใช้ prefix ชื่อ skill
 - ใช้ `kebab-case` เสมอ ชื่อไฟล์ต้องสอดคล้องกับเนื้อหา
 - แต่ละไฟล์ต้องไม่เกิน 250 บรรทัด ถ้าเกินให้ refactor แยกไฟล์
 - ถ้าไฟล์ยาวเกิน ให้แยกเป็น folder และไฟล์ย่อย (เช่น `best-practices/` พร้อม `index.md`)
 - ทำตาม Execute ตามลำดับเสมอ
-- ใช้ backticks สำหรับ technical terms, file names, commands, หรือ code references
 
 ### Scripts
 
