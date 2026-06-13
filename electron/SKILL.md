@@ -15,20 +15,27 @@ auto_execution_mode: 3
 ## Directory Structure
 
 ```
-framework-electron/
+electron/
 ├── SKILL.md
 ├── guide/
 │   ├── architecture.md
 │   ├── best-practices.md
 │   ├── configuration.md
-│   └── ...
+│   ├── features.md
+│   ├── how-it-works.md
+│   ├── installation.md
+│   ├── integration.md
+│   └── quick-start.md
 ├── key-concepts/
+│   └── key-concept.md
 ├── principles/
 ├── references/
 │   ├── cli.md
 │   ├── configuration.md
 │   ├── sitemap.md
 │   └── website.md
+├── scripts/
+├── templates/
 └── workflows/
     └── create-electron-app.md
 ```
@@ -41,6 +48,12 @@ framework-electron/
 | guide/ | architecture.md | Architecture ของ Electron |
 | guide/ | best-practices.md | Best practices สำหรับ development |
 | guide/ | configuration.md | Configuration และ setup |
+| guide/ | features.md | Features ของ Electron |
+| guide/ | how-it-works.md | วิธีการทำงานของ Electron |
+| guide/ | installation.md | วิธีการติดตั้ง |
+| guide/ | integration.md | Integration กับ frameworks อื่น |
+| guide/ | quick-start.md | Quick start guide |
+| key-concepts/ | key-concept.md | Key concepts พื้นฐาน |
 | references/ | cli.md | CLI documentation |
 | references/ | configuration.md | Configuration reference |
 | references/ | sitemap.md | Sitemap ของ documentation |
