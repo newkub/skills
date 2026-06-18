@@ -183,6 +183,15 @@ Migration จาก test frameworks อื่น
 - ใช้ `vi.stubEnv` และ `vi.stubGlobal` สำหรับ environment mocking
 - ใช้ coverage (v8 หรือ istanbul) สำหรับ code coverage
 - ใช้ `vitest.config.ts` หรือ `vite.config.ts` สำหรับ configuration
+- ใช้ chainable modifiers (.skip, .only, .todo, .concurrent, .each, .runIf, .skipIf) สำหรับ test execution control
+- ใช้ `onTestFailed` และ `onTestFinished` สำหรับ fine-grained cleanup
+- ใช้ `expect.soft()` สำหรับ soft assertions
+- ใช้ `expect.poll()` สำหรับ polling assertions
+- ใช้ `expectTypeOf` และ `assertType` สำหรับ type-level assertions
+- ใช้ `vi.hoisted()` สำหรับ hoisting variables
+- ใช้ `__mocks__` folders สำหรับ automatic mocking
+- ใช้ `--ui` flag สำหรับ Vitest UI
+- ใช้ `bench()` สำหรับ benchmarking tests
 
 ## Expected Outcome
 
@@ -194,3 +203,7 @@ Migration จาก test frameworks อื่น
 - Browser Mode สำหรับ component testing
 - Test Context และ fixtures สำหรับ reusable test logic
 - Tags สำหรับ test categorization และ filtering
+- Benchmarking tests สำหรับ performance measurement
+- In-source testing สำหรับ tests ที่อยู่ใกล้ implementation
+- Type-level assertions สำหรับ type safety
+- Soft assertions และ polling assertions สำหรับ advanced testing scenarios

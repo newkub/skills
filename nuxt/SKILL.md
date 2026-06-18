@@ -43,6 +43,9 @@ nuxt/
 | | nuxt-app-instance.md | Nuxt App instance และ lifecycle |
 | | rendering-modes.md | Rendering modes (SSR, SSG, ISR, SPA) |
 | | app-directory.md | app/ directory structure ใน Nuxt v4 |
+| | create-use-fetch.md | createUseFetch และ createUseAsyncData factory functions (4.4+) |
+| | use-announcer.md | useAnnouncer composable สำหรับ accessibility (4.4+) |
+| | typed-layout-props.md | Typed layout props ใน definePageMeta (4.4+) |
 | **principles/** | component-design.md | Component design principles |
 | | data-fetching.md | Data fetching best practices |
 | | performance.md | Performance optimization |
@@ -53,6 +56,7 @@ nuxt/
 | | website.md | Official documentation |
 | | hooks.md | Nuxt hooks system สำหรับ build และ runtime |
 | | migration.md | Migration guide จาก Nuxt 2 ไป Nuxt 3 |
+| | nuxt-5-preparation.md | Nuxt 5 preparation และ breaking changes |
 | **workflows/** | setup-project.md | ตั้งค่าโปรเจกต์ |
 | | create-page.md | สร้างหน้าเว็บด้วย file-based routing |
 | | create-component.md | สร้างคอมโพเนนต์ |
