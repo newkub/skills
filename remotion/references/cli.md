@@ -5,11 +5,14 @@
 ### Development
 
 ```bash
-# Start preview server
+# Start preview server (Studio)
 bunx remotion studio
 
 # Start with specific port
 bunx remotion studio --port 3000
+
+# Start with specific composition
+bunx remotion studio --composition=MyComposition
 ```
 
 ### Rendering
@@ -26,6 +29,12 @@ bunx remotion render <composition-id> --frames=0-100
 
 # Render with props
 bunx remotion render <composition-id> --props='{"title":"Hello"}'
+
+# Render with custom config
+bunx remotion render <composition-id> --config=remotion.config.ts
+
+# Render with environment variables
+bunx remotion render <composition-id> --env="MY_VAR=value"
 ```
 
 ### Project Management
@@ -39,6 +48,12 @@ bunx remotion upgrade
 
 # Create new project
 bunx create-video@latest
+
+# List compositions
+bunx remotion compositions
+
+# Validate project
+bunx remotion validate
 ```
 
 ## Options
@@ -76,6 +91,39 @@ bunx remotion render MyComposition --output=webm --codec=vp9
 | `REMOTION_PUBLIC_FOLDER` | Public folder path |
 | `REMOTION_AUDIO_CODEC` | Audio codec |
 | `REMOTION_VIDEO_CODEC` | Video codec |
+
+### Still Rendering
+
+```bash
+# Render single frame
+bunx remotion still <composition-id> --frame=30
+
+# Render with scale
+bunx remotion still <composition-id> --frame=30 --scale=0.25
+
+# Render as PNG
+bunx remotion still <composition-id> --frame=30 --output=image.png
+```
+
+### FFmpeg Tools
+
+```bash
+# Run FFmpeg command
+bunx remotion ffmpeg -i input.mp4 -c:v libx264 output.mp4
+
+# Run FFprobe
+bunx remotion ffprobe input.mp4
+```
+
+### Cache Management
+
+```bash
+# Clear cache
+bunx remotion cache clear
+
+# List cache
+bunx remotion cache list
+```
 
 ---
 

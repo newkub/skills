@@ -6,9 +6,9 @@ Official documentation and useful resources for Changesets
 
 | Resource | URL |
 |----------|-----|
-| **Changesets Docs** | https://pnpm.io/using-changesets |
+| **Changesets Docs** | https://bun.io/using-changesets |
 | **GitHub Repository** | https://github.com/changesets/changesets |
-| **npm Package** | https://www.npmjs.com/package/@changesets/cli |
+| **bun Package** | https://www.bunjs.com/package/@changesets/cli |
 | **Changelog Git** | https://github.com/changesets/changelog-git |
 | **Changelog GitHub** | https://github.com/changesets/changelog-github |
 
@@ -23,7 +23,7 @@ Official documentation and useful resources for Changesets
 
 | Tool | Description | URL |
 |------|-------------|-----|
-| **pnpm** | Package manager with workspaces | https://pnpm.io |
+| **bun** | Package manager with workspaces | https://bun.io |
 | **Turborepo** | Build system for monorepos | https://turbo.build/repo |
 | **Nx** | Smart monorepo tools | https://nx.dev |
 | **Lerna** | Multi-package repositories | https://lerna.js.org |
@@ -47,7 +47,7 @@ Official documentation and useful resources for Changesets
 
 | Resource | Description |
 |----------|-------------|
-| **pnpm Workspaces Guide** | https://pnpm.io/workspaces |
+| **bun Workspaces Guide** | https://bun.io/workspaces |
 | **Semver Explainer** | https://semver.org |
 | **Monorepo Best Practices** | https://nx.dev/guides/monorepo-nx-enterprise |
 

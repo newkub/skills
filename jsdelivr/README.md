@@ -1,6 +1,6 @@
 # jsDelivr
 
-jsDelivr เป็น Open Source CDN ฟรีสำหรับ npm packages และ GitHub repositories ให้บริการส่งมอบ JavaScript libraries, CSS frameworks และ static assets ที่ optimized สำหรับการใช้งานบน web
+jsDelivr เป็น Open Source CDN ฟรีสำหรับ bun packages และ GitHub repositories ให้บริการส่งมอบ JavaScript libraries, CSS frameworks และ static assets ที่ optimized สำหรับการใช้งานบน web
 
 ## Features
 
@@ -15,10 +15,10 @@ jsDelivr เป็น Open Source CDN ฟรีสำหรับ npm packages �
 
 ## Quick Start
 
-### npm Package
+### bun Package
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+<script src="https://cdn.jsdelivr.net/bun/vue@3/dist/vue.global.js"></script>
 ```
 
 ### ES Modules
@@ -38,7 +38,7 @@ jsDelivr เป็น Open Source CDN ฟรีสำหรับ npm packages �
 ### CSS
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/bootstrap@5/dist/css/bootstrap.min.css">
 ```
 
 ## Documentation
@@ -95,7 +95,7 @@ lib-jsdelivr/
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/bulma@0/css/bulma.min.css">
 </head>
 <body>
   <div id="app">
@@ -107,7 +107,7 @@ lib-jsdelivr/
     </ul>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/bun/vue@3/dist/vue.global.js"></script>
   <script>
     const { createApp, ref } = Vue;
 

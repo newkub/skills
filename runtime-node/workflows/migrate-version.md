@@ -16,7 +16,7 @@ migrate โปรเจกต์จาก Node.js version เดิมไป ver
 
 ```bash
 node --version
-npm --version
+bun --version
 ```
 
 ### 2. Install New Version
@@ -43,14 +43,14 @@ n 20
 ### 3. Update Dependencies
 
 ```bash
-# อัปเดต npm
-npm install -g npm@latest
+# อัปเดต bun
+bun install -g bun@latest
 
 # ลบ node_modules และ package-lock.json
 rm -rf node_modules package-lock.json
 
 # ติดตั้ง dependencies ใหม่
-npm install
+bun install
 ```
 
 ### 4. Check Breaking Changes
@@ -61,8 +61,8 @@ npm install
 ### 5. Test Application
 
 ```bash
-npm test
-npm run dev
+bun test
+bun run dev
 ```
 
 ### 6. Update Dependencies
@@ -70,8 +70,8 @@ npm run dev
 ตรวจสอบ dependencies ที่อาจไม่รองรับ:
 
 ```bash
-npm outdated
-npm update
+bun outdated
+bun update
 ```
 
 ## Common Issues

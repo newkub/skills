@@ -49,7 +49,7 @@ const result = await releaseIt({
     commitMessage: 'chore: release v${version}',
     tagName: 'v${version}',
   },
-  npm: {
+  bun: {
     publish: true,
   },
 })
@@ -104,8 +104,8 @@ interface ConfigOptions {
     changelog?: string
   }
   
-  // npm
-  npm?: {
+  // bun
+  bun?: {
     publish?: boolean
     access?: string
     distTag?: string
@@ -218,7 +218,7 @@ import releaseIt from 'release-it'
 
 const result = await releaseIt({
   increment: 'patch',
-  npm: {
+  bun: {
     publish: true,
   },
   git: {
@@ -236,7 +236,7 @@ import releaseIt from 'release-it'
 
 const result = await releaseIt({
   preRelease: 'beta',
-  npm: {
+  bun: {
     publish: true,
   },
 })
@@ -261,7 +261,7 @@ const result = await releaseIt({
   git: {
     push: false,
   },
-  npm: {
+  bun: {
     publish: false,
   },
   github: {
@@ -281,7 +281,7 @@ const result = await releaseIt({
 | Option | Purpose |
 |--------|---------|
 | `git` | Git operations |
-| `npm` | npm publishing |
+| `bun` | bun publishing |
 | `github` | GitHub releases |
 | `plugins` | Custom plugins |
 | `hooks` | Custom commands |

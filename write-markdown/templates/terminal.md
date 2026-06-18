@@ -15,7 +15,7 @@ output
 
 ```markdown
 ```bash
-$ npm install
+$ bun install
 added 1 package in 0.5s
 ```
 ```

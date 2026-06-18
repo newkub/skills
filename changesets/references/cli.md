@@ -6,9 +6,9 @@ Complete reference for Changesets CLI commands
 
 | Command | Description |
 |---------|-------------|
-| `npm install -D @changesets/cli` | Install as dev dependency |
+| `bun install -D @changesets/cli` | Install as dev dependency |
 | `bunx changeset init` | Initialize changesets config |
-| `npx changeset init` | Initialize (npm/pnpm) |
+| `npx changeset init` | Initialize (bun/bun) |
 
 ## Core Commands
 
@@ -17,7 +17,7 @@ Complete reference for Changesets CLI commands
 | `bunx changeset` | Create new changeset (interactive) |
 | `bunx changeset add` | Add changeset (non-interactive) |
 | `bunx changeset version` | Apply version bumps |
-| `bunx changeset publish` | Publish to npm registry |
+| `bunx changeset publish` | Publish to bun registry |
 
 ## Init Command
 
@@ -127,5 +127,5 @@ Add to `package.json`:
 bunx changeset version && bunx changeset publish
 
 # With build
-npm run build && bunx changeset version && bunx changeset publish
+bun run build && bunx changeset version && bunx changeset publish
 ```

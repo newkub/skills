@@ -9,7 +9,7 @@ Official documentation and resources for tsdown.
 | **Homepage** | https://tsdown.dev/ |
 | **Documentation** | https://tsdown.dev/guide/ |
 | **GitHub** | https://github.com/rolldown/tsdown |
-| **npm** | https://www.npmjs.com/package/tsdown |
+| **bun** | https://www.bunjs.com/package/tsdown |
 
 ## Core Docs
 

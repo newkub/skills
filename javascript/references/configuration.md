@@ -12,7 +12,7 @@
 | `main` | string | Entry point |
 | `type` | string | Module type (commonjs/module) |
 | `exports` | object | Package exports configuration |
-| `scripts` | object | NPM scripts |
+| `scripts` | object | bun scripts |
 | `dependencies` | object | Production dependencies |
 | `devDependencies` | object | Development dependencies |
 | `peerDependencies` | object | Peer dependencies |
@@ -61,5 +61,5 @@
 
 | Name | URL | Description |
 |------|-----|-------------|
-| package.json docs | https://docs.npmjs.com/cli/v9/configuring-npm/package-json | Official package.json documentation |
+| package.json docs | https://docs.bunjs.com/cli/v9/configuring-bun/package-json | Official package.json documentation |
 | Node.js ESM | https://nodejs.org/api/esm.html | ECMAScript Modules in Node.js |

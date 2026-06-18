@@ -8,7 +8,7 @@ Configuration options reference สำหรับ Release It
 
 - Top-level Options
 - Git Options
-- npm Options
+- bun Options
 - GitHub Options
 - GitLab Options
 - Plugin Options
@@ -21,7 +21,7 @@ Configuration options reference สำหรับ Release It
 {
   "$schema": "https://unpkg.com/release-it@20/schema/release-it.json",
   "git": {},
-  "npm": {},
+  "bun": {},
   "github": {},
   "gitlab": {}
 }
@@ -32,7 +32,7 @@ Configuration options reference สำหรับ Release It
 | Property | Type | Description |
 |----------|------|-------------|
 | `git` | object | Git configuration |
-| `npm` | object | npm configuration |
+| `bun` | object | bun configuration |
 | `github` | object | GitHub configuration |
 | `gitlab` | object | GitLab configuration |
 | `plugins` | object | Plugin configuration |
@@ -79,23 +79,23 @@ Configuration options reference สำหรับ Release It
 }
 ```
 
-## npm Options
+## bun Options
 
-### Basic npm
+### Basic bun
 
 ```json
 {
-  "npm": {
+  "bun": {
     "publish": true
   }
 }
 ```
 
-### npm Properties
+### bun Properties
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
-| `publish` | boolean | `true` | Publish to npm |
+| `publish` | boolean | `true` | Publish to bun |
 | `access` | string | `public` | public/restricted |
 | `otp` | string | - | One-time password |
 | `distTag` | string | `latest` | Distribution tag |
@@ -108,7 +108,7 @@ Configuration options reference สำหรับ Release It
 
 ```json
 {
-  "npm": {
+  "bun": {
     "publish": true,
     "access": "public"
   }
@@ -242,8 +242,8 @@ Configuration options reference สำหรับ Release It
 ```json
 {
   "hooks": {
-    "before:init": ["npm run lint", "npm test"],
-    "after:bump": "npm run build",
+    "before:init": ["bun run lint", "bun test"],
+    "after:bump": "bun run build",
     "after:release": "echo Released v${version}"
   }
 }
@@ -265,8 +265,8 @@ Configuration options reference สำหรับ Release It
 | `after:git:tag` | After git tag |
 | `before:git:push` | Before git push |
 | `after:git:push` | After git push |
-| `before:npm:publish` | Before npm publish |
-| `after:npm:publish` | After npm publish |
+| `before:bun:publish` | Before bun publish |
+| `after:bun:publish` | After bun publish |
 | `before:github:release` | Before GitHub release |
 | `after:github:release` | After GitHub release |
 | `after:release` | After everything |
@@ -290,7 +290,7 @@ Configuration options reference สำหรับ Release It
 | Category | Options |
 |----------|---------|
 | **Git** | commitMessage, tagName, push, changelog |
-| **npm** | publish, access, distTag, skipChecks |
+| **bun** | publish, access, distTag, skipChecks |
 | **GitHub** | release, releaseName, assets, draft |
 | **GitLab** | release, releaseName, assets |
 | **Plugins** | conventional-changelog, keep-a-changelog |

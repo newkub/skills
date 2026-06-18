@@ -58,7 +58,7 @@ framework-dioxus/
 
 - `/write-skills` - มาตรฐานการเขียน skills
 - lang-rust
-- runtime-bun
+- bun
 
 ## Execute
 

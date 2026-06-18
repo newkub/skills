@@ -5,7 +5,7 @@ Command-line interface สำหรับ Electron development
 ## Installation
 
 ```bash
-npm install electron --save-dev
+bun install electron --save-dev
 ```
 
 ## Core Commands

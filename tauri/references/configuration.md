@@ -72,6 +72,93 @@
 | `wix` | object | WiX installer config |
 | `webviewInstallMode` | object | WebView installation |
 
+### Plugin Configurations
+
+```json
+{
+  "plugins": {
+    "fs": {
+      "scope": ["$APPDATA/*", "$DOCUMENT/*"]
+    },
+    "dialog": {
+      "all": true
+    },
+    "http": {
+      "all": true,
+      "requestHeaders": true,
+      "requestBody": true
+    },
+    "shell": {
+      "all": true,
+      "open": true
+    },
+    "store": {
+      "all": true
+    }
+  }
+}
+```
+
+### Updater Configuration
+
+```json
+{
+  "bundle": {
+    "publisher": "github",
+    "updater": {
+      "active": true,
+      "endpoints": [
+        "https://github.com/user/repo/releases/latest/download/latest.json"
+      ],
+      "dialog": true,
+      "pubkey": "PUBLIC_KEY"
+    }
+  }
+}
+```
+
+### macOS Bundle Options
+
+| Key | Type | Description |
+|-----|------|-------------|
+| `signingIdentity` | string | Code signing identity |
+| `entitlements` | string | Path to entitlements file |
+| `hardenedRuntime` | boolean | Enable hardened runtime |
+| `minimumSystemVersion` | string | Minimum macOS version |
+
+### Linux Bundle Options
+
+| Key | Type | Description |
+|-----|------|-------------|
+| `deb` | object | Debian package config |
+| `appimage` | object | AppImage config |
+| `rpm` | object | RPM package config |
+
+### Android Configuration
+
+```json
+{
+  "bundle": {
+    "android": {
+      "minSdkVersion": 24,
+      "versionCode": 1
+    }
+  }
+}
+```
+
+### iOS Configuration
+
+```json
+{
+  "bundle": {
+    "ios": {
+      "minimumSystemVersion": "13.0"
+    }
+  }
+}
+```
+
 ## Cargo.toml
 
 ### Dependencies

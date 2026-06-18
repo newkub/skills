@@ -4,10 +4,10 @@
 
 ```bash
 # Install globally
-npm install -g @unocss/cli
+bun install -g @unocss/cli
 
 # Install locally (recommended)
-npm install -D unocss
+bun install -D unocss
 
 # Use via npx/bunx (no install required)
 npx unocss "src/**/*.html" -o dist/uno.css

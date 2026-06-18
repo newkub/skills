@@ -1,7 +1,3 @@
-# configuration
-
-## index.md
-
 # Configuration Reference
 
 ## svelte.config.js

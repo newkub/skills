@@ -13,15 +13,15 @@ node --watch file.js      # Watch mode
 node --inspect file.js    # Debug mode
 ```
 
-## npm
+## bun
 
 ```bash
-npm init                   # Initialize project
-npm install                # Install deps
-npm install <pkg>          # Add package
-npm install -D <pkg>       # Dev dependency
-npm test                   # Run tests
-npm run <script>           # Run script
+bun init                   # Initialize project
+bun install                # Install deps
+bun install <pkg>          # Add package
+bun install -D <pkg>       # Dev dependency
+bun test                   # Run tests
+bun run <script>           # Run script
 ```
 
 ## bunx
@@ -36,9 +36,9 @@ bunx create-react-app
 | Command | Description |
 |---------|-------------|
 | `node -v` | Version |
-| `npm -v` | npm Version |
-| `npm init -y` | Quick init |
-| `npm install` | Install deps |
+| `bun -v` | bun Version |
+| `bun init -y` | Quick init |
+| `bun install` | Install deps |
 
 
 ---

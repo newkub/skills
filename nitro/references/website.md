@@ -7,7 +7,7 @@
 | Official Website | https://nitro.build |
 | Documentation | https://nitro.unjs.io |
 | GitHub Repository | https://github.com/nitrojs/nitro |
-| npm Package | https://www.npmjs.com/package/nitro |
+| bun Package | https://www.bunjs.com/package/nitro |
 | Discord Community | https://chat.unjs.io |
 
 ## Getting Started

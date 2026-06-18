@@ -3,7 +3,7 @@
 ## nitro.config.ts
 
 ```typescript
-import { defineConfig } from "nitro";
+import { defineConfig } from "nitro/config";
 
 export default defineConfig({
   preset: "node_server",
@@ -39,7 +39,7 @@ export default defineConfig({
 ใช้งานใน handler:
 
 ```typescript
-import { useRuntimeConfig } from "nitro";
+import { useRuntimeConfig } from "nitro/runtime-config";
 
 export default defineHandler(() => {
   const config = useRuntimeConfig();
@@ -66,7 +66,7 @@ export default defineConfig({
 | `headers` | กำหนด response headers |
 | `redirect` | Redirect rules |
 
-## Storage Config
+## Storage Config (unstorage)
 
 ```typescript
 export default defineConfig({
@@ -77,10 +77,13 @@ export default defineConfig({
 });
 ```
 
-## Database Config
+## Database Config (db0)
 
 ```typescript
 export default defineConfig({
+  experimental: {
+    database: true
+  },
   database: {
     default: {
       connector: "sqlite",

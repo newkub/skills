@@ -4,19 +4,19 @@
 
 ## CDN URLs
 
-### npm Packages
+### bun Packages
 
 #### Basic Format
 
 ```text
-https://cdn.jsdelivr.net/npm/{package}@{version}/{path}
+https://cdn.jsdelivr.net/bun/{package}@{version}/{path}
 ```
 
 #### Parameters
 
 | Parameter | Required | Description | Example |
 |-----------|----------|-------------|---------|
-| `package` | ✅ | npm package name | `lodash`, `vue`, `react` |
+| `package` | ✅ | bun package name | `lodash`, `vue`, `react` |
 | `version` | ❌ | Version or tag | `4.17.21`, `3.4.21`, `latest`, `next` |
 | `path` | ❌ | File path within package | `dist/vue.global.js` |
 
@@ -29,25 +29,25 @@ https://cdn.jsdelivr.net/npm/{package}@{version}/{path}
 | Major | `vue@3` | Latest minor/patch of major |
 | Minor | `vue@3.4` | Latest patch of minor |
 | Range | `vue@^3.0.0` | Semver range |
-| Tag | `vue@next` | npm/dist tag |
+| Tag | `vue@next` | bun/dist tag |
 
 #### Examples
 
 ```text
 # Exact version
-https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js
+https://cdn.jsdelivr.net/bun/lodash@4.17.21/lodash.min.js
 
 # Latest of major version
-https://cdn.jsdelivr.net/npm/lodash@4/lodash.min.js
+https://cdn.jsdelivr.net/bun/lodash@4/lodash.min.js
 
 # Default entry point (from package.json main/unpkg/jsdelivr)
-https://cdn.jsdelivr.net/npm/lodash
+https://cdn.jsdelivr.net/bun/lodash
 
 # Specific file
-https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.esm-browser.js
+https://cdn.jsdelivr.net/bun/vue@3.4.21/dist/vue.esm-browser.js
 
 # CSS file
-https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+https://cdn.jsdelivr.net/bun/bootstrap@5.3.2/dist/css/bootstrap.min.css
 ```
 
 ### GitHub Repositories
@@ -111,7 +111,7 @@ https://esm.run/{package}@{version}
 
 | Parameter | Required | Description | Example |
 |-----------|----------|-------------|---------|
-| `package` | ✅ | npm package name | `vue`, `preact` |
+| `package` | ✅ | bun package name | `vue`, `preact` |
 | `version` | ❌ | Version or tag | `@3`, `@3.4.21` |
 
 ### Features
@@ -150,13 +150,13 @@ https://cdn.jsdelivr.net/combine/{url1},{url2},{url3},...
 
 ```text
 # Combine JS files
-https://cdn.jsdelivr.net/combine/npm/vue@3/dist/vue.global.js,npm/lodash@4/lodash.min.js
+https://cdn.jsdelivr.net/combine/bun/vue@3/dist/vue.global.js,bun/lodash@4/lodash.min.js
 
 # Combine CSS files
-https://cdn.jsdelivr.net/combine/npm/bootstrap@5/dist/css/bootstrap.min.css,npm/@fortawesome/fontawesome-free@6/css/all.min.css
+https://cdn.jsdelivr.net/combine/bun/bootstrap@5/dist/css/bootstrap.min.css,bun/@fortawesome/fontawesome-free@6/css/all.min.css
 
 # Mixed
-https://cdn.jsdelivr.net/combine/npm/normalize.css,npm/skeleton-css/css/skeleton.css
+https://cdn.jsdelivr.net/combine/bun/normalize.css,bun/skeleton-css/css/skeleton.css
 ```
 
 ## Data API
@@ -166,14 +166,14 @@ https://cdn.jsdelivr.net/combine/npm/normalize.css,npm/skeleton-css/css/skeleton
 #### Get Package Info
 
 ```text
-GET https://data.jsdelivr.com/v1/package/npm/{package}
+GET https://data.jsdelivr.com/v1/package/bun/{package}
 ```
 
 Response:
 
 ```json
 {
-  "type": "npm",
+  "type": "bun",
   "name": "vue",
   "versions": ["3.4.21", "3.4.20", "3.4.19", "3.3.13", "2.7.16"],
   "tags": {
@@ -186,14 +186,14 @@ Response:
 #### Get Version Info
 
 ```text
-GET https://data.jsdelivr.com/v1/package/npm/{package}@{version}
+GET https://data.jsdelivr.com/v1/package/bun/{package}@{version}
 ```
 
 Response:
 
 ```json
 {
-  "type": "npm",
+  "type": "bun",
   "name": "vue",
   "version": "3.4.21",
   "default": "/dist/vue.global.js",
@@ -216,7 +216,7 @@ Response:
 #### Get File List
 
 ```text
-GET https://data.jsdelivr.com/v1/package/npm/{package}@{version}/tree
+GET https://data.jsdelivr.com/v1/package/bun/{package}@{version}/tree
 ```
 
 Query Parameters:
@@ -248,7 +248,7 @@ Response:
 #### Resolve Entry Point
 
 ```text
-GET https://data.jsdelivr.com/v1/package/resolve/npm/{package}@{version}
+GET https://data.jsdelivr.com/v1/package/resolve/bun/{package}@{version}
 ```
 
 Response:
@@ -256,7 +256,7 @@ Response:
 ```json
 {
   "entry": "/dist/vue.global.js",
-  "url": "https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.js"
+  "url": "https://cdn.jsdelivr.net/bun/vue@3.4.21/dist/vue.global.js"
 }
 ```
 
@@ -279,7 +279,7 @@ GET https://data.jsdelivr.com/v1/package/gh/{user}/{repo}@{ref}
 #### Package Stats
 
 ```text
-GET https://data.jsdelivr.com/v1/stats/packages/npm/{package}
+GET https://data.jsdelivr.com/v1/stats/packages/bun/{package}
 ```
 
 Response:
@@ -402,7 +402,7 @@ Access-Control-Allow-Headers: *
 
 ```bash
 # Using openssl
-curl -s https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.js | \
+curl -s https://cdn.jsdelivr.net/bun/vue@3.4.21/dist/vue.global.js | \
   openssl dgst -sha384 -binary | \
   openssl base64 -A
 ```
@@ -410,7 +410,7 @@ curl -s https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.js | \
 ### Usage
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.js"
+<script src="https://cdn.jsdelivr.net/bun/vue@3.4.21/dist/vue.global.js"
         integrity="sha384-..."
         crossorigin="anonymous"></script>
 ```
@@ -418,7 +418,7 @@ curl -s https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.js | \
 ### Get Hash from API
 
 ```text
-GET https://data.jsdelivr.com/v1/package/npm/{package}@{version}
+GET https://data.jsdelivr.com/v1/package/bun/{package}@{version}
 ```
 
 Response includes `hash` field for each file (SHA-256).
@@ -428,7 +428,7 @@ Response includes `hash` field for each file (SHA-256).
 ### Purge Cache
 
 ```text
-POST https://purge.jsdelivr.net/npm/{package}@{version}
+POST https://purge.jsdelivr.net/bun/{package}@{version}
 POST https://purge.jsdelivr.net/gh/{user}/{repo}@{version}
 ```
 

@@ -1,8 +1,17 @@
-# cli
+# CLI
 
-## index.md
+## Purpose
 
-# CLI Reference
+CLI reference สำหรับ Vitest commands และ options
+
+## Scope
+
+- Commands (vitest, vitest run, etc.)
+- Options (--config, --coverage, etc.)
+- Environment Variables
+- Examples
+
+## CLI Reference
 
 ## Commands
 

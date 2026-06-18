@@ -83,8 +83,8 @@ STORAGE_PROVIDER=postgres
 ## Local Development
 
 ```bash
-npm run dev    # Studio at localhost:4111
-npm run build  # Production build
+bun run dev    # Studio at localhost:4111
+bun run build  # Production build
 ```
 
 ---

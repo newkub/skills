@@ -6,7 +6,7 @@ Knip มี CLI สำหรับ detect unused files, dependencies และ e
 
 ```bash
 # Install knip
-npm install -D knip
+bun install -D knip
 
 # Analyze project (check only)
 knip

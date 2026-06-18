@@ -1,6 +1,14 @@
----
-description: Arrange-Act-Assert Pattern - โครงสร้าง test ที่ชัดเจน
----
+# Arrange-Act-Assert
+
+## Purpose
+
+อธิบายหลักการ Arrange-Act-Assert Pattern - โครงสร้าง test ที่ชัดเจน
+
+## Scope
+
+- หลักการ AAA Pattern
+- ตัวอย่างการใช้งาน
+- Tips สำหรับการเขียน test
 
 ## Principle
 

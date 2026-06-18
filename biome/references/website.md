@@ -20,8 +20,8 @@
 
 ## Package Registry
 
-- **npm**: https://www.npmjs.com/package/@biomejs/biome
-- **npm (CLI)**: https://www.npmjs.com/package/@biomejs/cli-data)
+- **bun**: https://www.bunjs.com/package/@biomejs/biome
+- **bun (CLI)**: https://www.bunjs.com/package/@biomejs/cli-data)
 
 ## Community
 

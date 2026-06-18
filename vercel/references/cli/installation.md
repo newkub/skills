@@ -1,5 +1,5 @@
 # Installation
 
 ```bash
-npm install -g vercel
+bun install -g vercel
 ```

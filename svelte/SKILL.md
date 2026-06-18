@@ -68,79 +68,87 @@ auto_execution_mode: 3
 
 อ่าน `guide/features.md` สำหรับ features ที่มี
 
-### 14. Patterns
+### 14. Ecosystem
+
+อ่าน `guide/ecosystem.md` สำหรับ ecosystem และ tools
+
+### 15. Patterns
 
 อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
 
-### 15. Create Component
+### 16. Create Component
 
 ใช้ `workflows/create-component.md` สำหรับสร้าง components
 
-### 16. Reactive Programming
+### 17. Reactive Programming
 
 อ่าน `principles/reactive-programming.md` สำหรับ reactive programming
 
-### 17. Component Design
+### 18. Component Design
 
 อ่าน `principles/component-design.md` สำหรับ component design
 
-### 18. State Management
+### 19. Performance First
+
+อ่าน `principles/performance-first.md` สำหรับ performance optimization
+
+### 20. Type Safety
+
+อ่าน `principles/type-safety.md` สำหรับ TypeScript integration
+
+### 21. State Management
 
 ใช้ `workflows/use-stores.md` สำหรับ state management
 
-### 19. Best Practices
+### 22. Best Practices
 
 อ่าน `guide/best-practices.md` สำหรับ best practices
 
-### 20. Integration
+### 23. Integration
 
 อ่าน `guide/integration.md` สำหรับ framework integration
 
-### 21. Architecture
+### 24. Architecture
 
 อ่าน `guide/architecture.md` สำหรับ system architecture
 
-### 22. Project Structure
+### 25. Project Structure
 
 อ่าน `guide/structure.md` สำหรับ project structure
 
-### 23. Performance
+### 26. Performance
 
 อ่าน `guide/performance.md` สำหรับ performance optimization
 
-### 24. Security
+### 27. Security
 
 อ่าน `guide/security.md` สำหรับ security best practices
 
-### 25. Testing
+### 28. Testing
 
 อ่าน `guide/testing.md` สำหรับ testing
 
-### 26. Troubleshooting
+### 29. Troubleshooting
 
 อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
-### 27. Migration
+### 30. Migration
 
 อ่าน `guide/migration.md` สำหรับ migration guide
 
-### 28. Migrate
+### 31. Migrate
 
 ใช้ `workflows/migrate-to-svelte.md` สำหรับ migration
 
-### 29. API Reference
+### 32. API Reference
 
 อ่าน `references/api.md` สำหรับ API reference
 
-### 30. CLI
+### 33. CLI
 
 อ่าน `references/cli.md` สำหรับ CLI commands
 
-### 31. Sitemap
-
-อ่าน `references/sitemap.md` สำหรับ documentation sitemap
-
-### 32. Website
+### 34. Website
 
 อ่าน `references/website.md` สำหรับ official website
 

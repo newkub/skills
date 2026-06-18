@@ -6,7 +6,7 @@ Programmatic usage of semantic-release
 
 ```bash
 # Install semantic-release
-npm install -D semantic-release
+bun install -D semantic-release
 
 # Run semantic-release
 npx semantic-release
@@ -26,7 +26,7 @@ npx semantic-release --branches main
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/npm",
+    "@semantic-release/bun",
     "@semantic-release/github"
   ]
 }
@@ -72,8 +72,8 @@ git commit -m "feat(api): add new endpoint"
 # GitHub token
 GITHUB_TOKEN=ghp_xxxx
 
-# npm token
-NPM_TOKEN=xxxx
+# bun token
+bun_TOKEN=xxxx
 
 # Debug mode
 DEBUG=semantic-release:*

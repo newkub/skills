@@ -13,22 +13,22 @@
 
 ## Package Installation
 
-### npm
+### bun (Recommended)
 
 ```bash
-npm install arktype
+bun add arktype
+```
+
+### bun
+
+```bash
+bun install arktype
 ```
 
 ### yarn
 
 ```bash
 yarn add arktype
-```
-
-### pnpm
-
-```bash
-pnpm add arktype
 ```
 
 ### bun
@@ -59,9 +59,24 @@ import { type } from "jsr:@arktype/arktype";
 {
   "compilerOptions": {
     "strict": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "exactOptionalPropertyTypes": true,
     "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "bundler"
+  }
+}
+```
+
+### VSCode Settings
+
+สำหรับ autocomplete ที่ดีขึ้น ให้ตั้งค่าใน `.vscode/settings.json`:
+
+```json
+{
+  "editor.quickSuggestions": {
+    "strings": "on"
   }
 }
 ```

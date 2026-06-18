@@ -3,19 +3,19 @@
 ## Vue CLI
 
 ```bash
-npm install -g @vue/cli
+bun install -g @vue/cli
 vue create my-project
 cd my-project
-npm run serve
+bun run serve
 ```
 
 ## Vite (Recommended)
 
 ```bash
-npm create vite@latest my-project -- --template vue-ts
+bun create vite@latest my-project -- --template vue-ts
 cd my-project
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 ## Nuxt.js
@@ -23,16 +23,16 @@ npm run dev
 ```bash
 npx nuxi@latest init my-project
 cd my-project
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 ## Manual Setup
 
 ```bash
-npm init -y
-npm install vue
-npm install -D vite @vitejs/plugin-vue typescript vue-tsc
+bun init -y
+bun install vue
+bun install -D vite @vitejs/plugin-vue typescript vue-tsc
 ```
 
 ## Vite Config

@@ -5,7 +5,7 @@
 ### React
 
 ```bash
-npm install @tauri-apps/api @tauri-apps/plugin-fs
+bun install @tauri-apps/api @tauri-apps/plugin-fs
 ```
 
 ```tsx
@@ -39,7 +39,7 @@ function App() {
 ### Vue
 
 ```bash
-npm install @tauri-apps/api @tauri-apps/plugin-dialog
+bun install @tauri-apps/api @tauri-apps/plugin-dialog
 ```
 
 ```vue
@@ -65,7 +65,7 @@ async function greet() {
 ### Svelte
 
 ```bash
-npm install @tauri-apps/api
+bun install @tauri-apps/api
 ```
 
 ```svelte
@@ -88,7 +88,7 @@ npm install @tauri-apps/api
 ### Database (SQLite)
 
 ```bash
-npm run tauri add sql
+bun run tauri add sql
 ```
 
 ```rust
@@ -116,7 +116,7 @@ pub fn run() {
 ### HTTP Client
 
 ```bash
-npm run tauri add http
+bun run tauri add http
 ```
 
 ```javascript
@@ -131,7 +131,7 @@ const data = await response.json();
 ### File System
 
 ```bash
-npm run tauri add fs
+bun run tauri add fs
 ```
 
 ```javascript

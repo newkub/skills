@@ -8,7 +8,9 @@
 | Documentation | https://vuejs.org/guide | Official documentation and guides |
 | API Reference | https://vuejs.org/api | API reference for Vue 3 |
 | Style Guide | https://vuejs.org/style-guide | Official style guide |
-| Examples | https://examples.vuejs.org | Vue.js examples |
+| Examples | https://play.vuejs.org | Vue.js playground |
+| Migration Guide | https://vuejs.org/guide/migration/ | Vue 2 to Vue 3 migration guide |
+| Reusability | https://vuejs.org/guide/reusability/composables | Composables guide |
 
 ## Vue Router
 
@@ -26,13 +28,6 @@
 | API Reference | https://pinia.vuejs.org/api | Pinia API reference |
 | Cookbook | https://pinia.vuejs.org/cookbook | Pinia cookbook and examples |
 
-## DevTools
-
-| Name | URL | Description |
-|------|-----|-------------|
-| Vue DevTools | https://devtools.vuejs.org | Vue DevTools documentation |
-| Chrome Extension | https://chrome.google.com/webstore/detail/vuejs-devtools | Chrome extension for Vue DevTools |
-| Firefox Extension | https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools | Firefox extension for Vue DevTools |
 
 ## Tools
 
@@ -45,9 +40,10 @@
 ## Nuxt
 
 | Name | URL | Description |
-|------|-----|-------------|
-| Documentation | https://nuxt.com | Nuxt documentation |
-| Guide | https://nuxt.com/docs/getting-started | Nuxt getting started guide |
+|--it-----|-------it-|devitbuil tol (reomded)
+| DuuUsementation | utus/.orguxt.ue composcoion  tNui iesumentation |
+| Guide | https://nuxt.com/docs/getting-started | Nuxt getting started guide |or Vue |
+| Vue DevTools | https://devtools.vuejs.g |ue DevTools docmntation
 | Modules | https://nuxt.com/modules | Nuxt modules |
 
 ## Community
@@ -58,3 +54,4 @@
 | Discord | https://discord.gg/vue | Vue.js Discord community |
 | Forum | https://forum.vuejs.org | Vue.js forum |
 | Twitter | https://twitter.com/vuejs | Vue.js Twitter account |
+| Blog | https://blog.vuejs.org | Vue.js official blog |

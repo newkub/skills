@@ -72,7 +72,7 @@ electron/
 - `/write-skills` - มาตรฐานการเขียน skills
 - lang-javascript
 - lang-typescript
-- runtime-bun
+- bun
 
 ## Execute
 

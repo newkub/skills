@@ -3,7 +3,7 @@
 ## nitro.config.ts
 
 ```typescript
-import { defineConfig } from "nitro";
+import { defineConfig } from "nitro/config";
 
 export default defineConfig({
   preset: "node_server",
@@ -56,7 +56,7 @@ export default defineConfig({
 | `redirect` | `string` | Redirect URL |
 | `prerender` | `boolean` | Pre-render at build |
 
-## Storage
+## Storage (unstorage)
 
 ```typescript
 export default defineConfig({
@@ -78,10 +78,13 @@ export default defineConfig({
 | `cloudflare-kv` | `@cloudflare/kv` | Cloudflare KV |
 | `http` | Built-in | HTTP-based storage |
 
-## Database
+## Database (db0)
 
 ```typescript
 export default defineConfig({
+  experimental: {
+    database: true
+  },
   database: {
     default: {
       connector: "sqlite",

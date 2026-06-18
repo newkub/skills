@@ -20,10 +20,10 @@
 bun add -D vitest
 ```
 
-### npm
+### bun
 
 ```bash
-npm install -D vitest
+bun install -D vitest
 ```
 
 ### yarn
@@ -32,10 +32,10 @@ npm install -D vitest
 yarn add -D vitest
 ```
 
-### pnpm
+### bun
 
 ```bash
-pnpm add -D vitest
+bun add -D vitest
 ```
 
 ## Test Environments
@@ -142,7 +142,7 @@ export default defineConfig({
 
 ```bash
 # React + TypeScript
-npm create vite@latest my-app -- --template react-ts
+bun create vite@latest my-app -- --template react-ts
 cd my-app
 bun install
 bun add -D vitest jsdom @testing-library/react @testing-library/jest-dom
@@ -150,7 +150,7 @@ bun add -D vitest jsdom @testing-library/react @testing-library/jest-dom
 
 ```bash
 # Vue + TypeScript
-npm create vite@latest my-app -- --template vue-ts
+bun create vite@latest my-app -- --template vue-ts
 cd my-app
 bun install
 bun add -D vitest jsdom @vue/test-utils @testing-library/jest-dom

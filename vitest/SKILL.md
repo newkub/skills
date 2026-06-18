@@ -1,144 +1,196 @@
 ---
 title: Vitest
-description: Vitest - Next Generation Unit Testing Framework สำหรับ Vite ที่รองรับ TypeScript, HMR, และ Jest-compatible API
+description: Next Generation Testing Framework สำหรับ Vite ด้วย TypeScript, HMR, Jest-compatible API, และ Browser Mode
 auto_execution_mode: 3
+related_workflows:
+  - /follow-vitest
+  - /write-test
+  - /run-test
 ---
 
 ## Goal
 
-ใช้ Vitest สำหรับ unit testing ด้วย TypeScript support, HMR, และ Jest-compatible API
+ใช้ Vitest สำหรับ unit testing ด้วย Vite-native integration, watch mode, Jest-compatible API, และ Browser Mode
 
 ## Scope
 
-ใช้สำหรับ unit testing ของ Vite projects ด้วย Vitest framework
+ใช้สำหรับ unit testing ใน Vite projects, TypeScript projects, และ projects ที่ต้องการ Jest-compatible API หรือ Browser Mode
+
+## โครงสร้าง Directory
+
+```
+vitest/
+├── SKILL.md
+├── guide/
+│   ├── installation.md
+│   ├── quick-start.md
+│   ├── configuration.md
+│   ├── features.md
+│   ├── browser-mode.md
+│   ├── coverage.md
+│   ├── mocking.md
+│   ├── benchmarking.md
+│   ├── in-source-testing.md
+│   └── migration.md
+├── key-concepts/
+│   ├── test-suite.md
+│   ├── hooks.md
+│   ├── matchers.md
+│   ├── fixtures.md
+│   └── test-context.md
+├── principles/
+│   ├── arrange-act-assert.md
+│   ├── test-isolation.md
+│   └── test-naming.md
+├── references/
+│   ├── api.md
+│   ├── cli.md
+│   └── configuration.md
+└── workflows/
+    ├── setup-vitest.md
+    └── write-test.md
+```
 
 ## Execute
 
-### 1. Installation
+### 1. Install Vitest
 
-ติดตั้ง Vitest ด้วย `bun add -D vitest`
+ติดตั้ง Vitest ด้วย bun
 
-### 2. Setup
+```bash
+bun add -D vitest
+```
 
-อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
+ต้องการ Vite >=v6.0.0 และ Node >=v20.0.0
 
-### 3. Quick Start
+### 2. Configure Vitest
 
-อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
+ตั้งค่า `vitest.config.ts` หรือใช้ `vite.config.ts` ตาม project requirements
 
-### 4. Setup Project
+### 3. Learn Fundamentals
 
-ใช้ `workflows/setup-vitest.md` สำหรับ setup project
+เรียนรู้พื้นฐาน Vitest
 
-### 5. Learn Concepts
+- อ่าน `guide/quick-start.md` สำหรับเริ่มต้น
+- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- อ่าน `guide/features.md` สำหรับ features หลัก
 
-อ่าน `guide/key-concepts.md` สำหรับแนวคิดหลัก
+### 4. Understand Key Concepts
 
-### 6. Understand Workflow
+ทำความเข้าใจ key concepts
 
-อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+- อ่าน `key-concepts/test-suite.md` สำหรับ test suite
+- อ่าน `key-concepts/hooks.md` สำหรับ test hooks
+- อ่าน `key-concepts/matchers.md` สำหรับ matchers
+- อ่าน `key-concepts/fixtures.md` สำหรับ fixtures
+- อ่าน `key-concepts/test-context.md` สำหรับ test context
 
-### 7. Test Suite
+### 5. Learn Advanced Features
 
-อ่าน `key-concepts/test-suite.md` สำหรับ test suite
+ศึกษา features ขั้นสูง
 
-### 8. Matchers
+- อ่าน `guide/browser-mode.md` สำหรับ Browser Mode
+- อ่าน `guide/coverage.md` สำหรับ code coverage
+- อ่าน `guide/mocking.md` สำหรับ mocking
+- อ่าน `guide/benchmarking.md` สำหรับ benchmarking
+- อ่าน `guide/in-source-testing.md` สำหรับ in-source testing
 
-อ่าน `key-concepts/matchers.md` สำหรับ matchers
+### 6. Use Best Practices
 
-### 9. Mocking
+ใช้ best practices ในการเขียน tests
 
-อ่าน `key-concepts/mocking.md` สำหรับ mocking
+- อ่าน `principles/arrange-act-assert.md` สำหรับ AAA pattern
+- อ่าน `principles/test-isolation.md` สำหรับ test isolation
+- อ่าน `principles/test-naming.md` สำหรับ test naming
 
-### 10. Test Hooks
+### 7. Write Tests
 
-อ่าน `key-concepts/hooks.md` สำหรับ test hooks
+เขียน tests ด้วย Vitest
 
-### 11. Configuration
+- อ่าน `workflows/write-test.md` สำหรับเขียน tests
+- อ่าน `workflows/setup-vitest.md` สำหรับ setup
 
-อ่าน `guide/configuration.md` สำหรับการตั้งค่า
-อ่าน `references/configuration.md` สำหรับ configuration reference
-ตั้งค่า `vitest.config.ts`
+### 8. Run Tests
 
-### 12. Features
+รัน tests ด้วย Vitest
 
-อ่าน `guide/features.md` สำหรับ features ที่มี
+```bash
+bun run test
+```
 
-### 13. Write Tests
+### 9. Migrate from Other Frameworks
 
-อ่าน `workflows/write-test.md` สำหรับการเขียน tests
+Migration จาก test frameworks อื่น
 
-### 14. Mock Dependencies
+- อ่าน `guide/migration.md` สำหรับ migration
 
-ใช้ `workflows/mock-dependencies.md` สำหรับ mocking
+## หมวดหมู่ไฟล์
 
-### 15. Best Practices
+### Guide
 
-อ่าน `guide/best-practices.md` สำหรับ best practices
+- **Installation** - อ่าน `guide/installation.md` สำหรับการติดตั้ง
+- **Quick Start** - อ่าน `guide/quick-start.md` สำหรับเริ่มต้น
+- **Configuration** - อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+- **Features** - อ่าน `guide/features.md` สำหรับ features หลัก
+- **Browser Mode** - อ่าน `guide/browser-mode.md` สำหรับ Browser Mode
+- **Coverage** - อ่าน `guide/coverage.md` สำหรับ code coverage
+- **Mocking** - อ่าน `guide/mocking.md` สำหรับ mocking
+- **Benchmarking** - อ่าน `guide/benchmarking.md` สำหรับ benchmarking
+- **In-Source Testing** - อ่าน `guide/in-source-testing.md` สำหรับ in-source testing
+- **Migration** - อ่าน `guide/migration.md` สำหรับ migration
 
-### 16. Test Isolation
+### Key Concepts
 
-อ่าน `principles/test-isolation.md` สำหรับ test isolation
+- **Test Suite** - อ่าน `key-concepts/test-suite.md` สำหรับ test suite
+- **Hooks** - อ่าน `key-concepts/hooks.md` สำหรับ test hooks
+- **Matchers** - อ่าน `key-concepts/matchers.md` สำหรับ matchers
+- **Fixtures** - อ่าน `key-concepts/fixtures.md` สำหรับ fixtures
+- **Test Context** - อ่าน `key-concepts/test-context.md` สำหรับ test context
 
-### 17. AAA Pattern
+### Principles
 
-อ่าน `principles/arrange-act-assert.md` สำหรับ AAA pattern
+- **Arrange-Act-Assert** - อ่าน `principles/arrange-act-assert.md` สำหรับ AAA pattern
+- **Test Isolation** - อ่าน `principles/test-isolation.md` สำหรับ test isolation
+- **Test Naming** - อ่าน `principles/test-naming.md` สำหรับ test naming
 
-### 18. Test Naming
+### References
 
-อ่าน `principles/test-naming.md` สำหรับ test naming
+- **API Documentation** - อ่าน `references/api.md` สำหรับ API reference
+- **CLI Commands** - อ่าน `references/cli.md` สำหรับ CLI commands
+- **Configuration Reference** - อ่าน `references/configuration.md` สำหรับ configuration reference
 
-### 19. Single Responsibility
+### Workflows
 
-อ่าน `principles/single-responsibility.md` สำหรับ single responsibility
-
-### 20. Integration
-
-อ่าน `guide/integration.md` สำหรับ framework integration
-
-### 21. Architecture
-
-อ่าน `guide/architecture.md` สำหรับ system architecture
-
-### 22. Project Structure
-
-อ่าน `guide/structure.md` สำหรับ project structure
-
-### 23. Testing Strategies
-
-อ่าน `guide/testing.md` สำหรับ testing strategies
-
-### 24. Migration
-
-อ่าน `guide/migration.md` สำหรับ migration จาก test frameworks อื่น
-
-### 25. Ecosystem
-
-อ่าน `guide/ecosystem.md` สำหรับ ecosystem และ plugins
-
-### 26. Security
-
-อ่าน `guide/security.md` สำหรับ security considerations
-
-### 27. Troubleshooting
-
-อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+- **Setup Vitest** - อ่าน `workflows/setup-vitest.md` สำหรับ setup Vitest
+- **Write Test** - อ่าน `workflows/write-test.md` สำหรับเขียน tests
 
 ## Rules
 
-- ใช้ `bun add -D vitest` สำหรับ installation
-- ใช้ backticks สำหรับ `describe()`, `it()`, `expect()`, commands
-- ใช้ code blocks สำหรับ test examples
-- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
-- ใช้ AAA pattern (Arrange, Act, Assert)
-- ใช้ test isolation เสมอ
-- ใช้ proper test naming
-- ใช้ mocking อย่างเหมาะสม
-- ใช้ HMR สำหรับ development
+- ใช้ `bun run test` สำหรับรัน tests (ไม่ใช้ `bun test` เพราะจะรัน Bun test runner)
+- ใช้ `describe` สำหรับ grouping tests
+- ใช้ `it` หรือ `test` สำหรับ individual tests
+- ใช้ `expect` สำหรับ assertions (Jest-compatible)
+- ใช้ `vi.mock` สำหรับ mocking modules
+- ใช้ `vi.fn` และ `vi.spyOn` สำหรับ mocking functions
+- ใช้ `beforeEach` และ `afterEach` สำหรับ setup/teardown
+- ใช้ AAA pattern (Arrange-Act-Assert) สำหรับ test structure
+- ใช้ descriptive test names
+- ใช้ test isolation สำหรับ independent tests
+- ใช้ TypeScript สำหรับ type-safe tests
+- ใช้ `test.extend` สำหรับ fixtures และ test context
+- ใช้ tags สำหรับ test categorization และ filtering
+- ใช้ Browser Mode สำหรับ component testing ใน real browser
+- ใช้ `vi.stubEnv` และ `vi.stubGlobal` สำหรับ environment mocking
+- ใช้ coverage (v8 หรือ istanbul) สำหรับ code coverage
+- ใช้ `vitest.config.ts` หรือ `vite.config.ts` สำหรับ configuration
 
 ## Expected Outcome
 
-- Tests ที่ comprehensive และ maintainable
-- Test isolation ที่ proper
-- Development ที่รวดเร็วด้วย HMR
-- Integration ที่ smooth กับ Vite
+- Tests ที่เขียนด้วย Vitest ตาม best practices
+- Test coverage ที่ครอบคลุม
+- Mocking ที่ถูกต้อง
+- Performance ที่ดีด้วย parallel execution
+- Tests ที่ maintainable และ readable
+- Browser Mode สำหรับ component testing
+- Test Context และ fixtures สำหรับ reusable test logic
+- Tags สำหรับ test categorization และ filtering

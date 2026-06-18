@@ -28,7 +28,12 @@ nextest/
 ├── key-concepts/
 │   ├── test-isolation.md
 │   ├── retry-policies.md
-│   └── test-groups.md
+│   ├── test-groups.md
+│   ├── recording-replay.md
+│   ├── setup-scripts.md
+│   ├── test-priorities.md
+│   ├── archiving.md
+│   └── filtersets.md
 ├── principles/
 │   ├── test-organization.md
 │   └── ci-integration.md
@@ -55,6 +60,11 @@ nextest/
 - อ่าน `key-concepts/test-isolation.md` สำหรับ test isolation
 - อ่าน `key-concepts/retry-policies.md` สำหรับ retry policies
 - อ่าน `key-concepts/test-groups.md` สำหรับ test groups
+- อ่าน `key-concepts/recording-replay.md` สำหรับ recording, replay, และ rerun
+- อ่าน `key-concepts/setup-scripts.md` สำหรับ setup และ wrapper scripts
+- อ่าน `key-concepts/test-priorities.md` สำหรับ test priorities
+- อ่าน `key-concepts/archiving.md` สำหรับ archiving และ build reuse
+- อ่าน `key-concepts/filtersets.md` สำหรับ filter expression language
 - อ่าน `principles/test-organization.md` สำหรับการจัดระเบียบ tests
 - อ่าน `principles/ci-integration.md` สำหรับ CI integration
 - อ่าน `references/api.md` สำหรับ API documentation

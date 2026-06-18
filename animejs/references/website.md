@@ -22,23 +22,23 @@
 
 | Format | URL | Description |
 |--------|-----|-------------|
-| ESM | https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.es.js | ES Module |
-| UMD | https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js | Universal Module Definition |
+| ESM | https://cdn.jsdelivr.net/bun/animejs@3.2.1/lib/anime.es.js | ES Module |
+| UMD | https://cdn.jsdelivr.net/bun/animejs@3.2.1/lib/anime.min.js | Universal Module Definition |
 
 ## Package Managers
 
 | Manager | Package | Command |
 |---------|---------|---------|
-| npm | animejs | `npm install animejs` |
+| bun | animejs | `bun install animejs` |
 | yarn | animejs | `yarn add animejs` |
-| pnpm | animejs | `pnpm add animejs` |
+| bun | animejs | `bun add animejs` |
 | bun | animejs | `bun add animejs` |
 
 ## Type Definitions
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| @types/animejs | https://www.npmjs.com/package/@types/animejs | TypeScript definitions |
+| @types/animejs | https://www.bunjs.com/package/@types/animejs | TypeScript definitions |
 
 ## Community Resources
 

@@ -5,7 +5,7 @@ Programmatic API for Changesets
 ## Package
 
 ```bash
-npm install @changesets/cli
+bun install @changesets/cli
 ```
 
 ## readChangesets

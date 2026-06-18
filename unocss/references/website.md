@@ -6,7 +6,7 @@
 |----------|-----|
 | **Website** | <https://unocss.dev> |
 | **GitHub** | <https://github.com/unocss/unocss> |
-| **npm** | <https://npmjs.com/package/unocss> |
+| **bun** | <https://bunjs.com/package/unocss> |
 | **Playground** | <https://uno.antfu.me> |
 
 ## Integrations

@@ -7,7 +7,7 @@
 | Requirement | Version |
 |-------------|---------|
 | Node.js | 18.x หรือสูงกว่า |
-| Package Manager | npm, yarn, pnpm, หรือ bun |
+| Package Manager | bun, yarn, bun, หรือ bun |
 
 ### 1. Initialize Project
 
@@ -16,20 +16,20 @@
 npx nuxi@latest init my-project
 cd my-project
 
-# Or using npm
-npm install nuxt
+# Or using bun
+bun install nuxt
 ```
 
 ### 2. Install Dependencies
 
 ```bash
-npm install
+bun install
 ```
 
 ### 3. Start Development Server
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 เปิด http://localhost:3000
@@ -63,7 +63,7 @@ export default defineNuxtConfig({
 ### Tailwind CSS
 
 ```bash
-npm install -D @nuxtjs/tailwindcss
+bun install -D @nuxtjs/tailwindcss
 ```
 
 ```typescript
@@ -76,7 +76,7 @@ export default defineNuxtConfig({
 ### Pinia
 
 ```bash
-npm install @pinia/nuxt pinia
+bun install @pinia/nuxt pinia
 ```
 
 ```typescript
@@ -89,7 +89,7 @@ export default defineNuxtConfig({
 ### Nuxt UI
 
 ```bash
-npm install @nuxt/ui
+bun install @nuxt/ui
 ```
 
 ```typescript
@@ -180,22 +180,22 @@ mkdir -p public
 
 ```bash
 # Development
-npm run dev
+bun run dev
 
 # Type checking
-npm run typecheck
+bun run typecheck
 
 # Linting
-npm run lint
+bun run lint
 
 # Build for production
-npm run build
+bun run build
 
 # Preview production
-npm run preview
+bun run preview
 
 # Generate static site
-npm run generate
+bun run generate
 ```
 
 ## Verify Setup

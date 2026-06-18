@@ -9,7 +9,7 @@
 ### 1. ตรวจสอบความต้องการ
 
 - ต้องการใช้ ES Modules บน browser
-- ต้องการ import จาก npm โดยตรง
+- ต้องการ import จาก bun โดยตรง
 - ต้องการ tree-shaking เพื่อลด bundle size
 
 ### 2. ใช้งานพื้นฐาน

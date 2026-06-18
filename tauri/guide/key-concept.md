@@ -85,9 +85,9 @@ const greeting = await invoke('greet', { name: 'World' });
 ระบบ plugin สำหรับขยาย functionality:
 
 ```bash
-npm run tauri add store    # Add built-in plugins
-npm run tauri add sql
-npm run tauri add fs
+bun run tauri add store    # Add built-in plugins
+bun run tauri add sql
+bun run tauri add fs
 ```
 
 | Plugin | คำอธิบาย |

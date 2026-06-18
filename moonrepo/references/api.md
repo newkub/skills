@@ -33,7 +33,7 @@ projects:
 
 tasks:
   build:
-    command: 'npm run build'
+    command: 'bun run build'
     inputs:
       - 'src/**'
       - 'package.json'
@@ -41,7 +41,7 @@ tasks:
       - 'dist'
 
   test:
-    command: 'npm test'
+    command: 'bun test'
     deps:
       - build
 ```

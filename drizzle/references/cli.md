@@ -7,7 +7,7 @@ Command-line interface for Drizzle Kit (migration tool)
 ## Installation
 
 ```bash
-npm install -D drizzle-kit
+bun install -D drizzle-kit
 ```
 
 ## Commands

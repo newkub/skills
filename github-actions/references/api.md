@@ -26,13 +26,13 @@ jobs:
           node-version: '20'
           
       - name: Install dependencies
-        run: npm ci
+        run: bun ci
         
       - name: Run tests
-        run: npm test
+        run: bun test
         
       - name: Build
-        run: npm run build
+        run: bun run build
 ```
 
 ## Key Events
@@ -55,7 +55,7 @@ steps:
   - name: Deploy
     env:
       API_KEY: ${{ secrets.API_KEY }}
-    run: npm run deploy
+    run: bun run deploy
 ```
 
 ## Using Artifacts
@@ -76,7 +76,7 @@ steps:
   - name: Cache node modules
     uses: actions/cache@v4
     with:
-      path: ~/.npm
+      path: ~/.bun
       key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 ```
 

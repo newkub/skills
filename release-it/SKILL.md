@@ -15,7 +15,7 @@ auto_execution_mode: 3
 - Git commit/tag/push automation
 - GitHub/GitLab releases
 - Changelog generation
-- npm publishing
+- bun publishing
 
 ## Execute
 
@@ -60,4 +60,4 @@ bunx release-it --dry-run
 - Git commit/tag/push ที่ automated
 - GitHub/GitLab releases ที่ automated
 - Changelog generation ที่ automated
-- npm publishing ที่ automated
+- bun publishing ที่ automated

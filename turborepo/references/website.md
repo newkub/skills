@@ -7,7 +7,7 @@
 | **Website** | https://turborepo.dev |
 | **Documentation** | https://turbo.build/repo/docs |
 | **GitHub** | https://github.com/vercel/turborepo |
-| **npm** | https://www.npmjs.com/package/turbo |
+| **bun** | https://www.bunjs.com/package/turbo |
 | **Changelog** | https://github.com/vercel/turborepo/blob/main/docs/public/CHANGELOG.md |
 
 ## Documentation Sections

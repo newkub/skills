@@ -10,6 +10,8 @@
 | `devtools` | `boolean \| object` | `false` | Enable Nuxt DevTools |
 | `modules` | `string[]` | `[]` | Nuxt modules |
 | `compatibilityDate` | `string` | - | Nuxt version compatibility |
+| `features` | `object` | `{}` | Enable/disable optional features |
+| `future` | `object` | `{}` | Early opt-in to future features |
 
 ### App
 
@@ -103,6 +105,42 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/', '/about']
     }
+  }
+})
+```
+
+## features Configuration
+
+```typescript
+// nuxt.config.ts
+export default defineNuxtConfig({
+  features: {
+    // Stream server logs to client (default: true in dev)
+    devLogs: true,
+
+    // Inline styles when rendering HTML (Vite only)
+    inlineStyles: false, // or function: (id) => id.includes('.vue')
+
+    // Turn off Nuxt scripts and JS resource hints
+    noScripts: false, // or 'production' | 'all'
+  }
+})
+```
+
+## future Configuration
+
+```typescript
+// nuxt.config.ts
+export default defineNuxtConfig({
+  future: {
+    // Early opt-in to Nuxt 5 features
+    compatibilityVersion: 4, // or 5 for Nuxt 5 preview
+
+    // Experimental multi-app support
+    multiApp: false,
+
+    // TypeScript bundler resolution
+    typescriptBundlerResolution: false,
   }
 })
 ```

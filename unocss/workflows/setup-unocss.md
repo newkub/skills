@@ -25,11 +25,11 @@ cat package.json
 # Bun
 bun add -D unocss
 
-# npm
-npm install -D unocss
+# bun
+bun install -D unocss
 
-# pnpm
-pnpm add -D unocss
+# bun
+bun add -D unocss
 
 # yarn
 yarn add -D unocss
@@ -176,7 +176,7 @@ export default defineConfig({
 
 ### 1. ใช้ Bun สำหรับ package management
 
-ใช้ `bun add -D` แทน `npm install -D` เสมอ
+ใช้ `bun add -D` แทน `bun install -D` เสมอ
 
 ### 2. ติดตั้ง dependencies ที่จำเป็นเท่านั้น
 

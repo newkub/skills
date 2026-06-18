@@ -54,7 +54,7 @@ Specify package manager in `package.json`:
 
 ```json
 {
-  "packageManager": "pnpm@9.0.0"
+  "packageManager": "bun@9.0.0"
 }
 ```
 

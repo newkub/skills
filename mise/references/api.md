@@ -43,7 +43,7 @@ curl https://mise.run | sh
 mise install
 
 # Run with specific tools
-mise run -- npm test
+mise run -- bun test
 ```
 
 ## See Also

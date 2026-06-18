@@ -1,12 +1,12 @@
 ---
 title: jsDelivr
-description: Open Source CDN for npm packages and GitHub repositories with multi-CDN infrastructure, smart load balancing, and global performance. Use for loading JavaScript libraries, CSS frameworks, and static assets on web pages.
+description: Open Source CDN for bun packages and GitHub repositories with multi-CDN infrastructure, smart load balancing, and global performance. Use for loading JavaScript libraries, CSS frameworks, and static assets on web pages.
 auto_execution_mode: 3
 ---
 
 ## Goal
 
-ใช้ jsDelivr CDN สำหรับโหลด npm packages และ GitHub repositories บน web pages
+ใช้ jsDelivr CDN สำหรับโหลด bun packages และ GitHub repositories บน web pages
 
 ## Scope
 
@@ -14,7 +14,7 @@ auto_execution_mode: 3
 
 ## Execute
 
-- Load packages ด้วย URL format: `https://cdn.jsdelivr.net/npm/package@version`
+- Load packages ด้วย URL format: `https://cdn.jsdelivr.net/bun/package@version`
 - ใช้ ES Modules ด้วย `<script type="module">` และ import จาก jsDelivr
 - ใช้ combine feature เพื่อลด HTTP requests
 - Pin version เสมอเพื่อ stability
@@ -25,7 +25,7 @@ auto_execution_mode: 3
 
 ## Rules
 
-- ใช้ URL format: `https://cdn.jsdelivr.net/npm/package@version`
+- ใช้ URL format: `https://cdn.jsdelivr.net/bun/package@version`
 - Pin version เสมอเพื่อ stability
 - ใช้ `+semver` สำหรับ version ranges
 - Test ใน production ก่อน deploy

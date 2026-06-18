@@ -1,5 +1,7 @@
 ---
+title: Setup SolidJS
 description: ติดตั้งและตั้งค่า SolidJS ใน project
+auto_execution_mode: 3
 ---
 
 ## Goal
@@ -14,7 +16,7 @@ description: ติดตั้งและตั้งค่า SolidJS ใน 
 - สร้าง component แรก
 - ตั้งค่า JSX transform
 
-## Steps
+## Execute
 
 ### 1. ติดตั้ง SolidJS
 
@@ -138,9 +140,35 @@ render(() => <App />, document.getElementById('root')!)
 bun run dev
 ```
 
-## Notes
+## Rules
 
-- SolidJS ใช้ JSX transform ผ่าน `vite-plugin-solid`
-- `createSignal` สร้าง reactive state ด้วย getter/setter pattern
-- JSX ใน SolidJS คือ template strings ที่ compile เป็น DOM operations
-- ไม่มี virtual DOM ทำให้ performance ดีกว่า React
+### Installation
+
+- ใช้ `bun add solid-js` สำหรับ installation
+- ใช้ `bun add -D vite-plugin-solid` สำหรับ dev dependency
+
+### Configuration
+
+- ตั้งค่า `vite.config.ts` ให้ใช้ `vite-plugin-solid`
+- ตั้งค่า `tsconfig.json` ให้รองรับ JSX และ modern TypeScript
+- ใช้ `jsx: "preserve"` สำหรับ JSX transform
+
+### Component Structure
+
+- ใช้ `createSignal` สำหรับ reactive state
+- ใช้ `render` จาก `solid-js/web` สำหรับ mount component
+- ใช้ TypeScript สำหรับ type safety
+
+### Development
+
+- ใช้ `bun run dev` สำหรับ development server
+- ใช้ `bun run build` สำหรับ production build
+- ใช้ `bun run preview` สำหรับ preview build
+
+## Expected Outcome
+
+- SolidJS project ที่ติดตั้งและตั้งค่าเรียบร้อย
+- Vite ที่ config สำหรับ SolidJS
+- TypeScript ที่ตั้งค่ารองรับ JSX
+- Component แรกที่ใช้ `createSignal`
+- Development server ที่พร้อมใช้งาน

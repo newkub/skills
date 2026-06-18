@@ -6,7 +6,7 @@ Command-line interface for Renovate
 
 ```bash
 # Global installation
-npm install -g renovate
+bun install -g renovate
 
 # Local usage with npx
 npx renovate --version

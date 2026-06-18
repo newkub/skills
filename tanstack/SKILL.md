@@ -38,6 +38,10 @@ auto_execution_mode: 3
 - อ่าน `guide/architecture.md` สำหรับ system architecture
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+- อ่าน `references/api.md` สำหรับ API reference ทั้งหมด
+- อ่าน `references/cli.md` สำหรับ CLI commands
+- อ่าน `references/configuration.md` สำหรับ configuration options
+- อ่าน `references/website.md` สำหรับ official documentation และ resources
 
 ## Rules
 

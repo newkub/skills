@@ -1,11 +1,11 @@
-# website
+# Website Reference
 
 ## Official Resources
 
 | Resource | URL |
 |----------|-----|
 | Official Website | https://nuxt.com |
-| Documentation | https://nuxt.com/docs |
+| Documentation v4 | https://nuxt.com/docs/4.x |
 | GitHub Repository | https://github.com/nuxt/nuxt |
 | Nuxt UI Components | https://ui.nuxt.com |
 | Module Directory | https://nuxt.com/modules |
@@ -32,4 +32,4 @@
 |------|-----|
 | Nuxt DevTools | https://devtools.nuxt.com |
 | Module Search | https://nuxt.com/modules |
-| Themes | https://nuxt.com/themes |
+| Templates | https://nuxt.com/templates |

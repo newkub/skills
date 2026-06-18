@@ -6,7 +6,7 @@ Workflow for deploying projects to Vercel.
 
 1. **Install Vercel CLI**
    ```bash
-   npm i -g vercel
+   bun i -g vercel
    ```
 
 2. **Login to Vercel**

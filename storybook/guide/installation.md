@@ -27,8 +27,8 @@ bunx storybook@latest init --type svelte
 ## Manual Setup
 
 ```bash
-npm install @storybook/react storybook
-npm install -D @storybook/addon-essentials
+bun install @storybook/react storybook
+bun install -D @storybook/addon-essentials
 ```
 
 ## Add to package.json

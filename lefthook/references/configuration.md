@@ -99,14 +99,14 @@ pre-push:
   parallel: true
   commands:
     test:
-      run: npm run test:ci
+      run: bun run test:ci
       env:
         CI: "true"
       timeout: 300
       tags: [ci]
       
     build:
-      run: npm run build
+      run: bun run build
       timeout: 120
       tags: [ci]
 ```
@@ -116,7 +116,7 @@ pre-push:
 ```yaml
 commands:
   lint:
-    run: npm run lint
+    run: bun run lint
     env:
       NODE_ENV: test
       CI: "true"
@@ -128,11 +128,11 @@ commands:
 ```yaml
 commands:
   slow-test:
-    run: npm run test
+    run: bun run test
     timeout: 600  # 10 minutes
     
   fast-check:
-    run: npm run check
+    run: bun run check
     timeout: 30  # 30 seconds
 ```
 
@@ -143,11 +143,11 @@ commands:
 pre-commit:
   commands:
     lint:
-      run: npm run lint
+      run: bun run lint
       tags: [frontend, ci]
       
     backend-lint:
-      run: npm run lint:backend
+      run: bun run lint:backend
       tags: [backend, ci]
 ```
 

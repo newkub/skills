@@ -206,7 +206,7 @@ export default defineConfig({
 
 ```bash
 # Install icon collection
-npm i -D @iconify-json/carbon
+bun i -D @iconify-json/carbon
 ```
 
 ```html

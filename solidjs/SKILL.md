@@ -1,144 +1,95 @@
 ---
 title: SolidJS
-description: แนวทางการพัฒนา SolidJS ตาม best practices สำหรับ declarative JavaScript library ที่มี fine-grained reactivity, no virtual DOM และ compile-time optimization
+description: พัฒนา SolidJS applications ด้วย fine-grained reactivity และ no virtual DOM
 auto_execution_mode: 3
 ---
 
 ## Goal
 
-ใช้ SolidJS สร้าง reactive applications ด้วย fine-grained reactivity, no virtual DOM, และ compile-time optimization
+พัฒนา reactive UI applications ด้วย SolidJS โดยใช้ fine-grained reactivity, compile-time optimization, และ no virtual DOM
 
 ## Scope
 
-ใช้สำหรับสร้าง UI และ reactive applications ด้วย SolidJS library
+ใช้สำหรับพัฒนา web applications ด้วย SolidJS library รวมถึง component development, state management, และ performance optimization
 
 ## Execute
 
-### 1. Install SolidJS
+### 1. Setup Project
 
-ติดตั้ง SolidJS ด้วย Bun
+ติดตั้งและตั้งค่า SolidJS project
 
-```bash
-bun add solid-js
-```
+- ใช้ `bun add solid-js` สำหรับ installation
+- ตั้งค่า `tsconfig.json` ด้วย `"jsx": "preserve"` และ `"jsxImportSource": "solid-js"`
+- ใช้ `babel-preset-solid` สำหรับ JSX compilation
 
-### 2. Learn Key Concepts
+### 2. Develop Components
 
-อ่านแนวคิดหลักของ SolidJS
-- อ่าน `key-concepts/signals.md` สำหรับ signals
-- อ่าน `key-concepts/reactivity.md` สำหรับ reactivity model
-- อ่าน `key-concepts/components.md` สำหรับ components
-- อ่าน `key-concepts/effects.md` สำหรับ effects
+สร้าง components ด้วย SolidJS patterns
 
-### 3. Setup Project
+- ใช้ `createSignal()` สำหรับ reactive state
+- ใช้ `createEffect()` สำหรับ side effects
+- ใช้ `createMemo()` สำหรับ derived state
+- ใช้ control flow components: `<For>`, `<Show>`, `<Index>`
 
-ตั้งค่า project และ configuration
-- อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
-- อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
-- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
-- อ่าน `references/configuration.md` สำหรับ configuration reference
-- ตั้งค่า SolidJS configuration
+### 3. Manage State
 
-### 4. Learn Patterns
+จัดการ state ด้วย reactive primitives
 
-ศึกษา patterns และ best practices
-- อ่าน `guide/features.md` สำหรับ features ที่มี
-- อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
-- อ่าน `principles/fine-grained-reactivity.md` สำหรับ fine-grained reactivity
-- อ่าน `principles/minimal-runtime.md` สำหรับ minimal runtime
+- ใช้ `createStore()` สำหรับ nested state
+- ใช้ Context API สำหรับ global state
+- ใช้ proper reactivity patterns เพื่อ avoid unnecessary re-renders
 
-### 5. Optimize Performance
+### 4. Optimize Performance
 
-ปรับปรุง performance
-- อ่าน `guide/performance.md` สำหรับ performance optimization
-- ใช้ fine-grained reactivity
-- หลีกเลี่ยง unnecessary re-renders
+ปรับปรุง performance ด้วย SolidJS features
 
-### 6. Integrate And Deploy
-
-- อ่าน `guide/integration.md` สำหรับ framework integration
-- อ่าน `guide/architecture.md` สำหรับ system architecture
-- อ่าน `guide/structure.md` สำหรับ project structure
-- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+- ใช้ fine-grained reactivity เสมอ
+- หลีกเลี่ยง virtual DOM overhead
+- ใช้ compile-time optimization จาก JSX compilation
 
 ## Rules
 
-### Installation
-- ใช้ `bun add solid-js` สำหรับ installation
+### Reactivity Patterns
 
-### Development
 - ใช้ signals สำหรับ state management
-- ใช้ fine-grained reactivity เสมอ
-- ใช้ proper reactivity patterns
-- หลีกเลี่ยง unnecessary re-renders
+- Component functions execute once ที่ initialization
+- Updates เกิดผ่าน reactive system ไม่ใช่ re-renders
+- ใช้ `createMemo()` สำหรับ expensive computations
+- ใช้ `createEffect()` สำหรับ side effects ที่ต้อง tracking
 
-### Code Style
-- ใช้ backticks สำหรับ `createSignal()`, `createEffect()`, commands
-- ใช้ code blocks สำหรับ component examples
-- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+### Component Design
 
-### Performance
-- หลีกเลี่ยง virtual DOM
-- ใช้ compile-time optimization
+- Components เป็น regular JavaScript functions
+- ใช้ JSX สำหรับ declarative UI
+- ใช้ fragments, Context, Portals ตามต้องการ
+- ใช้ Suspense สำหรับ async components
+- ใช้ Error Boundaries สำหรับ error handling
 
-## Directory Structure
+### Performance Best Practices
 
-```
-lib-solidjs/
-├── SKILL.md
-├── guide/
-│   ├── installation.md
-│   ├── quick-start.md
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── configuration.md
-│   ├── features.md
-│   ├── patterns.md
-│   ├── performance.md
-│   ├── integration.md
-│   ├── architecture.md
-│   ├── structure.md
-│   └── troubleshooting.md
-├── key-concepts/
-│   ├── signals.md
-│   ├── reactivity.md
-│   ├── components.md
-│   └── effects.md
-├── principles/
-│   ├── fine-grained-reactivity.md
-│   └── minimal-runtime.md
-└── references/
-    └── configuration.md
-```
+- ใช้ `<For>` สำหรับ keyed list rendering
+- ใช้ `<Index>` สำหรับ index-based lists
+- ใช้ `<Show>` สำหรับ conditional rendering
+- หลีกเลี่ยง inline functions ใน JSX
+- ใช้ `onMount` และ `onCleanup` สำหรับ lifecycle
 
-## File Categories
+### TypeScript Integration
 
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|-----------|------|-----------|
-| Root Files | SKILL.md | Index file สำหรับ SolidJS skill |
-| guide/ | installation.md | Installation และ setup |
-| guide/ | quick-start.md | เริ่มต้นใช้งาน |
-| guide/ | key-concept.md | แนวคิดหลัก |
-| guide/ | how-it-works.md | วิธีการทำงาน |
-| guide/ | configuration.md | Configuration และ setup |
-| guide/ | features.md | Features ที่มี |
-| guide/ | patterns.md | Patterns ทั่วไป |
-| guide/ | performance.md | Performance optimization |
-| guide/ | integration.md | Framework integration |
-| guide/ | architecture.md | System architecture |
-| guide/ | structure.md | Project structure |
-| guide/ | troubleshooting.md | ปัญหาทั่วไป |
-| key-concepts/ | signals.md | Signals |
-| key-concepts/ | reactivity.md | Reactivity model |
-| key-concepts/ | components.md | Components |
-| key-concepts/ | effects.md | Effects |
-| principles/ | fine-grained-reactivity.md | Fine-grained reactivity |
-| principles/ | minimal-runtime.md | Minimal runtime |
-| references/ | configuration.md | Configuration reference |
+- ตั้งค่า `jsxImportSource` ใน tsconfig.json
+- ใช้ type annotations สำหรับ signals
+- ใช้ generic types สำหรับ components
+- ใช้ proper typing สำหรับ props
+
+### File Organization
+
+- ใช้ `kebab-case` สำหรับ file names
+- จัดโครงสร้างตาม features หรือ modules
+- แยก components, hooks, utilities ออกจากกัน
+- แต่ละไฟล์ต้องไม่เกิน 250 บรรทัด
 
 ## Expected Outcome
 
-- Reactive applications ที่ performant
-- Code ที่ใช้ fine-grained reactivity
+- Reactive applications ที่ performant ด้วย fine-grained updates
+- Code ที่ maintainable ด้วย clear reactivity patterns
 - Performance ที่ optimized ด้วย no virtual DOM
-- Integration ที่ smooth กับ SolidJS ecosystem
+- Integration ที่ smooth กับ TypeScript และ ecosystem

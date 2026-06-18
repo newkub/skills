@@ -6,8 +6,8 @@ Workflow for creating an Electron application.
 
 1. **Initialize project**
    ```bash
-   npm init
-   npm install --save-dev electron
+   bun init
+   bun install --save-dev electron
    ```
 
 2. **Create main process**
@@ -57,13 +57,13 @@ Workflow for creating an Electron application.
 
 5. **Run development**
    ```bash
-   npm start
+   bun start
    ```
 
 6. **Build for production**
    ```bash
-   npm install --save-dev electron-builder
-   npm run build
+   bun install --save-dev electron-builder
+   bun run build
    ```
 
 ## Best Practices

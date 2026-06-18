@@ -20,7 +20,7 @@ Configuration options for semantic-release
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/npm",
+    "@semantic-release/bun",
     "@semantic-release/github"
   ]
 }
@@ -43,7 +43,7 @@ Configuration options for semantic-release
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
+      "@semantic-release/bun",
       "@semantic-release/github"
     ]
   }
@@ -65,7 +65,7 @@ Configuration options for semantic-release
 |--------|-------------|
 | `@semantic-release/commit-analyzer` | Analyze commits |
 | `@semantic-release/release-notes-generator` | Generate notes |
-| `@semantic-release/npm` | Publish to npm |
+| `@semantic-release/bun` | Publish to bun |
 | `@semantic-release/github` | Create GitHub release |
 | `@semantic-release/changelog` | Generate changelog |
 | `@semantic-release/git` | Git operations |

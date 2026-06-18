@@ -6,7 +6,7 @@ Workflow for creating a Raycast extension.
 
 1. **Install Raycast CLI**
    ```bash
-   npm install -g @raycast/api
+   bun install -g @raycast/api
    ```
 
 2. **Create new extension**
@@ -32,12 +32,12 @@ Workflow for creating a Raycast extension.
 
 6. **Test locally**
    ```bash
-   npm run dev
+   bun run dev
    ```
 
 7. **Build for production**
    ```bash
-   npm run build
+   bun run build
    ```
 
 8. **Publish to store**

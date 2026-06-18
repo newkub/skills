@@ -7,7 +7,7 @@
 | **Website** | https://developers.cloudflare.com/workers/ |
 | **Wrangler Docs** | https://developers.cloudflare.com/workers/wrangler/ |
 | **GitHub** | https://github.com/cloudflare/workers-sdk |
-| **npm** | https://www.npmjs.com/package/wrangler |
+| **bun** | https://www.bunjs.com/package/wrangler |
 | **Changelog** | https://github.com/cloudflare/workers-sdk/blob/main/packages/wrangler/CHANGELOG.md |
 
 ## Documentation Sections

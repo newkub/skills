@@ -14,11 +14,11 @@ Command-line interface reference สำหรับ Release It
 ## Installation
 
 ```bash
-# npm
-npm install -D release-it
+# bun
+bun install -D release-it
 
 # Global
-npm install -g release-it
+bun install -g release-it
 ```
 
 ## Basic Commands
@@ -95,7 +95,7 @@ release-it --preRelease
 | Option | Description |
 |--------|-------------|
 | `--no-git` | Skip git operations |
-| `--no-npm` | Skip npm publish |
+| `--no-bun` | Skip bun publish |
 | `--no-increment` | Don't increment version |
 | `--no-git.push` | Skip git push |
 | `--no-github` | Skip GitHub release |
@@ -109,12 +109,12 @@ release-it --preRelease
 | `--git-tag-name` | Custom tag name | `--git-tag-name="v${version}"` |
 | `--git-push-args` | Custom push args | `--git-push-args="--force"` |
 
-### npm Options
+### bun Options
 
 | Option | Description | Example |
 |--------|-------------|---------|
-| `--npm-dist-tag` | Distribution tag | `--npm-dist-tag=next` |
-| `--npm-otp` | One-time password | `--npm-otp=123456` |
+| `--bun-dist-tag` | Distribution tag | `--bun-dist-tag=next` |
+| `--bun-otp` | One-time password | `--bun-otp=123456` |
 
 ### GitHub Options
 
@@ -136,7 +136,7 @@ release-it --preRelease
 
 ```bash
 # Before init hook
-release-it --'hooks.before:init="npm run lint"'
+release-it --'hooks.before:init="bun run lint"'
 
 # After release hook
 release-it --'hooks.after:release="echo Released v${version}"'
@@ -158,7 +158,7 @@ release-it -VV
 |----------|---------|
 | `GITHUB_TOKEN` | GitHub releases |
 | `GITLAB_TOKEN` | GitLab releases |
-| `NPM_TOKEN` | npm publishing |
+| `bun_TOKEN` | bun publishing |
 | `NODE_DEBUG` | Debug mode |
 
 ### Debug Mode

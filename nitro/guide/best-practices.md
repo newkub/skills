@@ -70,7 +70,7 @@ export default defineHandler(async (event) => {
 | Practice | Description |
 |----------|-------------|
 | ใช้ Cache | `defineCachedHandler` สำหรับข้อมูลที่ไม่เปลี่ยนบ่อย |
-| Code-splitting | แยก handler เป็นไฟล์ย่อย (ทำอัตโนมัติ) |
+| Code-splitting | แยก handler เป็นไฟล์ย่อย (ทำอัตโนมัติด้วย compiled routing) |
 | Streaming | ส่ง response เป็น stream สำหรับข้อมูลใหญ่ |
 | Lazy loading | ใช้ dynamic import สำหรับ modules ที่ไม่จำเป็น |
 
@@ -96,6 +96,8 @@ export default defineHandler(async () => {
 
 ```typescript
 // nitro.config.ts
+import { defineConfig } from "nitro/config";
+
 export default defineConfig({
   runtimeConfig: {
     dbUrl: "postgres://localhost",   // NITRO_DB_URL
@@ -118,6 +120,6 @@ test("GET /api/hello", async () => {
 
 ## Next Steps
 
-- [Configuration](configuration.md)
+- [Configuration](../references/configuration.md)
 - [Architecture](architecture.md)
 - [Integration](integration.md)

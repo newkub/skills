@@ -4,10 +4,10 @@
 
 ```bash
 # Global install
-npm install -g @scalar/api-designer
+bun install -g @scalar/api-designer
 
 # Development install
-npm install @scalar/api-designer
+bun install @scalar/api-designer
 ```
 
 ## Commands

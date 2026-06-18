@@ -45,7 +45,7 @@
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| npm | https://www.npmjs.com | Package registry |
+| bun | https://www.bunjs.com | Package registry |
 | npx | https://nodejs.org/api/npx.html | Package executor |
 | Core Modules | https://nodejs.org/api | Built-in modules |
 

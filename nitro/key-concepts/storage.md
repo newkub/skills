@@ -2,7 +2,7 @@
 
 ## What is Storage
 
-Storage คือ abstraction สำหรับ data persistence:
+Storage คือ abstraction สำหรับ data persistence โดยใช้ unstorage:
 - **Key-Value** - simple key-value storage
 - **Multi-platform** - รองรับ multiple storage backends
 - **Type-safe** - TypeScript support
@@ -10,7 +10,9 @@ Storage คือ abstraction สำหรับ data persistence:
 ## Using Storage
 
 ```typescript
-export default defineEventHandler(async (event) => {
+import { useStorage } from "nitro/storage";
+
+export default defineHandler(async (event) => {
   const storage = useStorage('data');
   await storage.setItem('key', { value: 123 });
   const data = await storage.getItem('key');
@@ -18,7 +20,7 @@ export default defineEventHandler(async (event) => {
 });
 ```
 
-## Storage Drivers
+## Storage Drivers (unstorage)
 
 - **Memory** - in-memory storage
 - **Redis** - Redis storage

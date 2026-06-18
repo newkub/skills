@@ -98,7 +98,7 @@ describe('sum', () => {
 ### Watch Mode (Development)
 
 ```bash
-npm test
+bun test
 # หรือ
 vitest
 ```
@@ -108,7 +108,7 @@ Vitest จะ watch ไฟล์และรัน tests เมื่อมี�
 ### CI Mode (Run Once)
 
 ```bash
-npm run test
+bun run test
 # หรือ
 vitest run
 ```

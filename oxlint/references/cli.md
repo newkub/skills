@@ -6,7 +6,7 @@ Command-line interface for oxlint
 
 ```bash
 # Install globally
-npm install -g oxlint
+bun install -g oxlint
 
 # Or use via npx
 npx oxlint --help

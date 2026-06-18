@@ -34,7 +34,7 @@ export const Secondary: Story = {
 ## Run Storybook
 
 ```bash
-npm run storybook
+bun run storybook
 ```
 
 ## Open Browser

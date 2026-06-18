@@ -18,7 +18,7 @@ Mastra command-line interface
 
 ```bash
 # Start with Studio (default port 4111)
-npm run dev
+bun run dev
 
 # Or use CLI
 bunx mastra dev
@@ -33,7 +33,7 @@ Opens Mastra Studio at `http://localhost:4111`
 
 ```bash
 # Build for production
-npm run build
+bun run build
 
 # Or use CLI
 bunx mastra build

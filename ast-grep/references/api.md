@@ -4,7 +4,7 @@
 
 ast-grep provides a programmatic API for integrating into build tools, editors, and custom workflows.
 
-### npm Package
+### bun Package
 
 ```typescript
 import {Sg} from '@ast-grep/cli';

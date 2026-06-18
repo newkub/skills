@@ -6,7 +6,7 @@ Effect มี CLI สำหรับ development workflow ที่ช่วย�
 
 ```bash
 # Install globally (optional)
-npm install -g effect-cli
+bun install -g effect-cli
 ```
 
 ## Commands

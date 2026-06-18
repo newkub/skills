@@ -15,7 +15,7 @@
 ## Step 1: Install ArkType
 
 ```bash
-npm install arktype
+bun add arktype
 ```
 
 ## Step 2: Create Type
@@ -97,6 +97,6 @@ const Users = type({
 
 ## Next Steps
 
-- Learn about [Key Concepts](./key-concept.md)
+- Learn about [Key Concepts](../key-concepts/overview.md)
 - Explore [Features](./features.md)
 - Read about [Integration](./integration.md)

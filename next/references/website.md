@@ -5,7 +5,7 @@
 - **Website**: https://nextjs.org
 - **Documentation**: https://nextjs.org/docs
 - **GitHub**: https://github.com/vercel/next.js
-- **NPM**: https://www.npmjs.com/package/next
+- **bun**: https://www.bunjs.com/package/next
 
 ## Key Sections
 

@@ -11,8 +11,8 @@ Collection of official links and resources for Drizzle ORM and Drizzle Kit.
 | **Website** | [orm.drizzle.team](https://orm.drizzle.team) | Official website and documentation |
 | **Docs** | [orm.drizzle.team/docs](https://orm.drizzle.team/docs/overview) | Full documentation |
 | **GitHub** | [github.com/drizzle-team/drizzle-orm](https://github.com/drizzle-team/drizzle-orm) | Source code and issues |
-| **npm (ORM)** | [npmjs.com/package/drizzle-orm](https://www.npmjs.com/package/drizzle-orm) | ORM package on npm |
-| **npm (Kit)** | [npmjs.com/package/drizzle-kit](https://www.npmjs.com/package/drizzle-kit) | Kit CLI package on npm |
+| **bun (ORM)** | [bunjs.com/package/drizzle-orm](https://www.bunjs.com/package/drizzle-orm) | ORM package on bun |
+| **bun (Kit)** | [bunjs.com/package/drizzle-kit](https://www.bunjs.com/package/drizzle-kit) | Kit CLI package on bun |
 | **Discord** | [discord.gg/drizzle](https://discord.gg/drizzle) | Community Discord server |
 | **Twitter** | [twitter.com/DrizzleORM](https://twitter.com/DrizzleORM) | Official Twitter/X account |
 | **Blog** | [orm.drizzle.team/blog](https://orm.drizzle.team/blog) | Official blog posts |
@@ -32,12 +32,12 @@ Collection of official links and resources for Drizzle ORM and Drizzle Kit.
 
 | Package | Registry | Latest |
 |---------|----------|--------|
-| `drizzle-orm` | [npm](https://www.npmjs.com/package/drizzle-orm) | Core ORM library |
-| `drizzle-kit` | [npm](https://www.npmjs.com/package/drizzle-kit) | CLI and migration tool |
-| `drizzle-zod` | [npm](https://www.npmjs.com/package/drizzle-zod) | Zod schema generator |
-| `drizzle-typebox` | [npm](https://www.npmjs.com/package/drizzle-typebox) | TypeBox schema generator |
-| `drizzle-valibot` | [npm](https://www.npmjs.com/package/drizzle-valibot) | Valibot schema generator |
-| `eslint-plugin-drizzle` | [npm](https://www.npmjs.com/package/eslint-plugin-drizzle) | ESLint plugin |
+| `drizzle-orm` | [bun](https://www.bunjs.com/package/drizzle-orm) | Core ORM library |
+| `drizzle-kit` | [bun](https://www.bunjs.com/package/drizzle-kit) | CLI and migration tool |
+| `drizzle-zod` | [bun](https://www.bunjs.com/package/drizzle-zod) | Zod schema generator |
+| `drizzle-typebox` | [bun](https://www.bunjs.com/package/drizzle-typebox) | TypeBox schema generator |
+| `drizzle-valibot` | [bun](https://www.bunjs.com/package/drizzle-valibot) | Valibot schema generator |
+| `eslint-plugin-drizzle` | [bun](https://www.bunjs.com/package/eslint-plugin-drizzle) | ESLint plugin |
 
 ## Community
 

@@ -7,13 +7,13 @@
 | Website | https://lefthook.dev |
 | GitHub | https://github.com/evilmartians/lefthook |
 | Documentation | https://github.com/evilmartians/lefthook#readme |
-| npm | https://www.npmjs.com/package/lefthook |
+| bun | https://www.bunjs.com/package/lefthook |
 
 ## Installation
 
 | Method | Command |
 |--------|---------|
-| npm | `npm install --save-dev lefthook` |
+| bun | `bun install --save-dev lefthook` |
 | Go | `go install github.com/evilmartians/lefthook@latest` |
 | Homebrew | `brew install lefthook` |
 | GitHub Releases | Download binary from releases page |

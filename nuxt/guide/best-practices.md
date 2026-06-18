@@ -4,6 +4,7 @@
 
 | Practice | Description |
 |----------|-------------|
+| Use `app/` directory | Nuxt v4 ใช้ `app/` directory สำหรับ pages, components, composables |
 | Use `composables/` | ใช้ composables สำหรับ reusable logic |
 | Use `components/` | แบ่ง components ให้เล็กและ reusable |
 | Use `layouts/` | สร้าง layouts สำหรับ shared UI |
@@ -159,17 +160,13 @@ export const useUserStore = defineStore('user', () => {
 
 ```text
 your-app/
-├── pages/              # Routes (file-based)
-├── components/         # Auto-imported components
-│   ├── AppHeader.vue
-│   └── base/          # Sub-directory
-│       └── Button.vue  # auto-imported as BaseButton
-├── composables/        # Auto-imported composables
-├── layouts/            # Page layouts
-├── plugins/            # Run at startup
-├── middleware/         # Route middleware
+├── app/                # Nuxt v4 app directory
+│   ├── pages/         # Routes (file-based)
+│   ├── components/    # Auto-imported components
+│   ├── composables/   # Auto-imported composables
+│   └── layouts/       # Page layouts
 ├── server/            # Server routes
 │   └── api/           # API routes
-├── utils/             # Utility functions
-└── public/            # Static assets
+├── public/            # Static assets
+└── nuxt.config.ts     # Configuration
 ```

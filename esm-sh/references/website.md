@@ -6,7 +6,7 @@
 |------|-----|-------------|
 | หน้าเว็บหลัก | https://esm.sh | เว็บไซต์หลักของ esm.sh |
 | เอกสาร | https://esm.sh/docs | เอกสารอย่างเป็นทางการ |
-| Package Browser | https://esm.sh/package | เครื่องมือค้นหาและดู npm packages |
+| Package Browser | https://esm.sh/package | เครื่องมือค้นหาและดู bun packages |
 | Status | https://esm.sh/status | สถานะของบริการ |
 | GitHub | https://github.com/esm-dev/esm.sh | ซอร์สโค้ดบน GitHub |
 

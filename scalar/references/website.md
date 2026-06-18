@@ -16,13 +16,13 @@
 | API Designer | https://github.com/scalar/scalar/tree/main/packages/api-designer | API Designer package |
 | VS Code Extension | https://github.com/scalar/scalar-vscode-extension | VS Code extension |
 
-## NPM Packages
+## bun Packages
 
 | Package | Command | Description |
 |---------|---------|-------------|
-| API Designer | `npm install @scalar/api-designer` | Main package |
-| CLI | `npm install @scalar/cli` | Command line tool |
-| Vercel | `npm install @scalar/vercel` | Vercel adapter |
+| API Designer | `bun install @scalar/api-designer` | Main package |
+| CLI | `bun install @scalar/cli` | Command line tool |
+| Vercel | `bun install @scalar/vercel` | Vercel adapter |
 
 ## Community Resources
 

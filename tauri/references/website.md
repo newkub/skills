@@ -29,7 +29,7 @@
 
 ## Plugin Packages
 
-| Plugin | npm Package | Docs |
+| Plugin | bun Package | Docs |
 |--------|-------------|------|
 | **fs** | @tauri-apps/plugin-fs | https://v2.tauri.app/plugin/fs/ |
 | **dialog** | @tauri-apps/plugin-dialog | https://v2.tauri.app/plugin/dialog/ |

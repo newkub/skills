@@ -43,6 +43,16 @@ auto_execution_mode: 3
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 - อ่าน `principles/type-safety.md` สำหรับ type safety
 - อ่าน `principles/sql-like-syntax.md` สำหรับ SQL-like syntax
+- อ่าน `guide/drizzle-seed.md` สำหรับ test data generation
+- อ่าน `guide/schema-validation.md` สำหรับ schema validation ด้วย Zod/Valibot/TypeBox/ArkType
+- อ่าน `guide/drizzle-studio.md` สำหรับ GUI database management
+- อ่าน `guide/advanced-sql.md` สำหรับ CTE, set operators, aggregate functions
+- อ่าน `guide/serverless-edge.md` สำหรับ serverless และ edge runtime support
+- อ่าน `guide/eslint-plugin.md` สำหรับ ESLint plugin และ lint rules
+- อ่าน `guide/query-caching.md` สำหรับ query caching
+- อ่าน `guide/read-replicas.md` สำหรับ read replicas
+- อ่าน `guide/database-specific-features.md` สำหรับ database-specific features
+- อ่าน `guide/testing-infrastructure.md` สำหรับ testing infrastructure
 
 ## Rules
 

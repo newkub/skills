@@ -17,7 +17,7 @@
 | **GitHub App** | https://github.com/apps/renovate | ติดตั้งผ่าน GitHub App |
 | **GitLab App** | https://gitlab.com/renovate-bot | ติดตั้งผ่าน GitLab |
 | **Docker Image** | https://hub.docker.com/r/renovate/renovate | Docker image |
-| **npm** | https://www.npmjs.com/package/renovate | npm package |
+| **bun** | https://www.bunjs.com/package/renovate | bun package |
 
 ## Configuration
 

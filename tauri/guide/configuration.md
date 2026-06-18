@@ -27,8 +27,8 @@ src-tauri/
   "build": {
     "devUrl": "http://localhost:3000",
     "frontendDist": "../dist",
-    "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build"
+    "beforeDevCommand": "bun run dev",
+    "beforeBuildCommand": "bun run build"
   },
   "app": {
     "windows": [

@@ -5,7 +5,7 @@ CLI commands สำหรับ moonrepo
 ## Installation
 
 ```bash
-npm install -g moonrepo
+bun install -g moonrepo
 ```
 
 ## Commands

@@ -15,7 +15,7 @@
 |--------|-----|-------------|
 | **Commit Analyzer** | https://github.com/semantic-release/commit-analyzer | วิเคราะห์ commits |
 | **Release Notes** | https://github.com/semantic-release/release-notes-generator | สร้าง release notes |
-| **NPM** | https://github.com/semantic-release/npm | publish ไปยัง npm |
+| **bun** | https://github.com/semantic-release/bun | publish ไปยัง bun |
 | **GitHub** | https://github.com/semantic-release/github | GitHub releases |
 | **Changelog** | https://github.com/semantic-release/changelog | สร้าง CHANGELOG.md |
 | **Git** | https://github.com/semantic-release/git | git operations |

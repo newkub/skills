@@ -3,9 +3,9 @@
 ## Create Project
 
 ```bash
-npm create vite@latest my-vue-app -- --template vue-ts
+bun create vite@latest my-vue-app -- --template vue-ts
 cd my-vue-app
-npm install
+bun install
 ```
 
 ## Basic Component
@@ -90,12 +90,12 @@ export const router = createRouter({
 ## Run Development
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 ## Build Production
 
 ```bash
-npm run build
-npm run preview
+bun run build
+bun run preview
 ```

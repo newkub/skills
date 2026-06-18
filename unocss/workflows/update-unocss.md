@@ -26,10 +26,10 @@ bun pm ls | grep unocss
 
 ```bash
 # ตรวจสอบ latest version
-bunx npm view unocss version
+bunx bun view unocss version
 
 # หรือตรวจสอบ changelog
-bunx npm view unocss versions --json
+bunx bun view unocss versions --json
 ```
 
 ### 3. อัปเดต UnoCSS
@@ -40,11 +40,11 @@ bunx npm view unocss versions --json
 # Bun
 bun add -D unocss@latest
 
-# npm
-npm install -D unocss@latest
+# bun
+bun install -D unocss@latest
 
-# pnpm
-pnpm add -D unocss@latest
+# bun
+bun add -D unocss@latest
 
 # yarn
 yarn add -D unocss@latest
@@ -71,7 +71,7 @@ bun add -D @unocss/preset-icons@latest
 
 ```bash
 # ตรวจสอบ changelog
-bunx npm view unocss --json | jq '.versions'
+bunx bun view unocss --json | jq '.versions'
 ```
 
 หรือเข้าไปดูที่:

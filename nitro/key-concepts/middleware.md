@@ -10,7 +10,9 @@ Middleware คือ functions ที่ intercept requests:
 ## Using Middleware
 
 ```typescript
-export default defineEventHandler(async (event) => {
+import { defineHandler, createError } from "nitro";
+
+export default defineHandler(async (event) => {
   // Middleware logic
   const auth = await verifyAuth(event);
   if (!auth) {
@@ -23,7 +25,9 @@ export default defineEventHandler(async (event) => {
 
 ```typescript
 // middleware/auth.ts
-export default defineEventHandler(async (event) => {
+import { defineHandler } from "nitro";
+
+export default defineHandler(async (event) => {
   // Global auth logic
 });
 ```

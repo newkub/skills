@@ -5,7 +5,7 @@
 | Requirement | Version |
 |-------------|---------|
 | Node.js | 18.x หรือสูงกว่า |
-| Package Manager | npm, yarn, pnpm, หรือ bun |
+| Package Manager | bun, yarn, bun, หรือ bun |
 
 ## Installation Methods
 
@@ -14,13 +14,13 @@
 ```bash
 npx nuxi@latest init my-nuxt-app
 cd my-nuxt-app
-npm install
+bun install
 ```
 
-### Using npm
+### Using bun
 
 ```bash
-npm install nuxt
+bun install nuxt
 ```
 
 ### Using yarn
@@ -29,10 +29,10 @@ npm install nuxt
 yarn add nuxt
 ```
 
-### Using pnpm
+### Using bun
 
 ```bash
-pnpm add nuxt
+bun add nuxt
 ```
 
 ### Using bun
@@ -46,8 +46,8 @@ bun add nuxt
 ```bash
 mkdir my-nuxt-app
 cd my-nuxt-app
-npm init -y
-npm install nuxt
+bun init -y
+bun install nuxt
 ```
 
 ## Create First Project
@@ -57,7 +57,7 @@ npm install nuxt
 npx nuxi@latest init .
 
 # Start development server
-npm run dev
+bun run dev
 ```
 
 ## Project Structure

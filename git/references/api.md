@@ -4,12 +4,12 @@
 
 ### JavaScript/TypeScript
 
-| Library | Description | npm |
+| Library | Description | bun |
 |---------|-------------|-----|
-| [simple-git](https://github.com/steveukx/git-js) | Simple Git API | `npm install simple-git` |
-| [ isomorphic-git](https://isomorphic-git.org/) | Pure JS implementation | `npm install isomorphic-git` |
-| [nodegit](https://www.nodegit.org/) | Native Git bindings | `npm install nodegit` |
-| [git-js](https://github.com/steveukx/git-js) | Promise-based Git | `npm install git` |
+| [simple-git](https://github.com/steveukx/git-js) | Simple Git API | `bun install simple-git` |
+| [ isomorphic-git](https://isomorphic-git.org/) | Pure JS implementation | `bun install isomorphic-git` |
+| [nodegit](https://www.nodegit.org/) | Native Git bindings | `bun install nodegit` |
+| [git-js](https://github.com/steveukx/git-js) | Promise-based Git | `bun install git` |
 
 ### simple-git Example
 

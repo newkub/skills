@@ -2,8 +2,8 @@
 
 ## เงื่อนไขเบื้องต้น
 
-- Node.js 18+ หรือ Bun หรือ Deno
-- npm, yarn, pnpm, หรือ bun
+- Node.js ^20.19.0 || >=22.12.0 หรือ Bun หรือ Deno
+- bun, yarn, bun, หรือ bun
 
 ## สร้างโปรเจกต์ใหม่
 
@@ -12,7 +12,7 @@
 ```bash
 npx create-nitro-app@latest my-app
 cd my-app
-npm install
+bun install
 ```
 
 ## เพิ่มใน Vite โปรเจกต์ที่มีอยู่แล้ว
@@ -20,7 +20,7 @@ npm install
 ### 1. ติดตั้ง packages
 
 ```bash
-npm install nitro vite
+bun install nitro vite
 ```
 
 ### 2. เพิ่ม Nitro plugin ใน Vite config
@@ -39,7 +39,7 @@ export default defineConfig({
 
 ```typescript
 // nitro.config.ts
-import { defineConfig } from "nitro";
+import { defineConfig } from "nitro/config";
 
 export default defineConfig({
   serverDir: "./server",
@@ -61,7 +61,7 @@ export default defineConfig({
 ## ตรวจสอบการติดตั้ง
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 Server จะทำงานที่ `http://localhost:3000`

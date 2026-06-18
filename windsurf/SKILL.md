@@ -1,69 +1,74 @@
 ---
 title: Windsurf
-description: AI-powered IDE สำหรับ collaborative coding ด้วย AI agents และ context understanding
+description: AI-powered IDE (Devin Desktop) สำหรับ collaborative coding ด้วย AI agents และ context understanding
 auto_execution_mode: 3
 ---
 
 ## Goal
 
-ใช้งาน Windsurf สำหรับ AI-powered collaborative coding
+ใช้งาน Windsurf (Devin Desktop IDE) สำหรับ AI-powered collaborative coding
 
 ## Scope
 
 ใช้สำหรับ:
 - AI-powered IDE สำหรับ collaborative coding
-- AI agents สำหรับ automate tasks
+- Cascade AI agents สำหรับ automate tasks
 - Context understanding สำหรับ project-wide analysis
-- Code generation และ editing
+- Code generation, editing, และ refactoring
+- MCP (Model Context Protocol) integration
+- Skills, Workflows, และ Rules automation
 
 ## Execute
 
 ### 1. Installation
 
-ติดตั้ง Windsurf ตาม guide/installation.md
+ติดตั้ง Windsurf ตาม [learn/guide/installation.md](learn/guide/installation.md)
 
-### 2. Configuration
+### 2. Quick Start
 
-ตั้งค่า Windsurf ตาม guide/configuration.md
+เริ่มต้นใช้งานตาม [learn/guide/quick-start.md](learn/guide/quick-start.md)
 
-### 3. Quick Start
+### 3. Configuration
 
-อ่าน guide/quick-start.md สำหรับเริ่มต้นใช้งาน
+ตั้งค่า Windsurf ตาม [learn/guide/configuration.md](learn/guide/configuration.md)
 
-### 4. Learn Concepts
+### 4. Learn Key Concepts
 
-อ่าน guide/key-concept.md สำหรับแนวคิดหลัก
+อ่าน key concepts ใน [learn/key-concepts/](learn/key-concepts/):
+- [Cascade](learn/key-concepts/cascade.md) - AI agent system
+- [Context Awareness](learn/key-concepts/context-awareness.md) - Codebase understanding
+- [MCP](learn/key-concepts/mcp.md) - Model Context Protocol
+- [Skills](learn/key-concepts/skills.md) - Domain knowledge packages
+- [Workflows](learn/key-concepts/workflows.md) - Multi-step processes
 
-### 5. Understand Workflow
+### 5. Learn Best Practices
 
-อ่าน guide/how-it-works.md สำหรับวิธีการทำงาน
+อ่าน principles ใน [learn/principles/](learn/principles/):
+- [Prompt Engineering](learn/principles/prompt-engineering.md) - Effective prompts
+- [Best Practices](learn/principles/best-practices.md) - General guidelines
 
-### 6. Features
+### 6. Reference
 
-อ่าน guide/features.md สำหรับ features ที่มี
-
-### 7. Use Windsurf
-
-ใช้ Windsurf สำหรับ code generation, editing, และ collaboration
-
-### 8. Best Practices
-
-อ่าน guide/best-practices.md สำหรับ best practices
-
-### 9. Reference
-
-อ่าน references/cli.md และ references/configuration.md สำหรับ reference
+อ่าน references ใน [references/](references/):
+- [API Reference](references/api.md) - Analytics and management APIs
+- [CLI Commands](references/cli.md) - Common commands
+- [Configuration](references/configuration.md) - Settings reference
+- [Website](references/website.md) - Official resources
 
 ## Rules
 
-- ติดตั้ง Windsurf ตาม guide/installation.md
-- ตั้งค่า Windsurf ตาม guide/configuration.md
+- ติดตั้ง Windsurf ตาม installation guide
+- ตั้งค่า Windsurf ตาม configuration guide
 - ใช้ context understanding สำหรับ project-wide analysis
-- ใช้ AI agents สำหรับ automate tasks
+- ใช้ Cascade agents สำหรับ automate tasks
+- เขียน prompts ที่มีประสิทธิภาพตาม prompt engineering principles
+- ใช้ Skills และ Workflows สำหรับ reusable knowledge
 
 ## Expected Outcome
 
 - AI-powered IDE ที่ efficient
-- AI agents ที่ autonomous
-- Code generation ที่ fast
+- Cascade agents ที่ autonomous
+- Code generation ที่ fast และ accurate
 - Project-wide context understanding ที่ comprehensive
+- MCP integration สำหรับ external tools
+- Skills และ Workflows ที่ reusable

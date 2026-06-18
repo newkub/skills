@@ -45,7 +45,7 @@ Official resources for VS Code extension development
 
 | Resource | URL |
 |----------|-----|
-| Yeoman Generator | https://www.npmjs.com/package/generator-code |
+| Yeoman Generator | https://www.bunjs.com/package/generator-code |
 | VSCE CLI | https://code.visualstudio.com/api/working-with-extensions/publishing-extension#vsce |
 | TypeScript | https://www.typescriptlang.org/ |
 

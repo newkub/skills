@@ -5,7 +5,7 @@
 ### Installation
 
 ```bash
-npm install lefthook
+bun install lefthook
 ```
 
 ### Node.js Usage

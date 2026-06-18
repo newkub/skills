@@ -43,7 +43,7 @@ auto_execution_mode: 3
 
 ## Rules
 
-- ใช้ `bun add` หรือ `bun add -D` แทน `npm install` เสมอ
+- ใช้ `bun add` หรือ `bun add -D` แทน `bun install` เสมอ
 - ใช้ actions เวอร์ชันล่าสุด (v4, v5)
 - ตั้งค่า permissions อย่างเหมาะสม
 - ใช้ caching สำหรับ dependencies เสมอ

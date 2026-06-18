@@ -6,7 +6,7 @@ Workflow for creating a VS Code extension.
 
 1. **Install prerequisites**
    ```bash
-   npm install -g yo generator-code
+   bun install -g yo generator-code
    ```
 
 2. **Generate extension**
@@ -41,12 +41,12 @@ Workflow for creating a VS Code extension.
 
 7. **Build for production**
    ```bash
-   npm run compile
+   bun run compile
    ```
 
 8. **Package extension**
    ```bash
-   npm install -g vsce
+   bun install -g vsce
    vsce package
    ```
 

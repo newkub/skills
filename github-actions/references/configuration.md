@@ -69,7 +69,7 @@ jobs:
 ```yaml
 - uses: actions/cache@v4
   with:
-    path: ~/.npm
-    key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+    path: ~/.bun
+    key: ${{ runner.os }}-bun-${{ hashFiles('**/package-lock.json') }}
 ```
 

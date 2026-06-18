@@ -5,7 +5,7 @@
 ### Using create-tauri-app
 
 ```bash
-npm create tauri-app@latest my-app
+bun create tauri-app@latest my-app
 cd my-app
 ```
 
@@ -13,9 +13,9 @@ cd my-app
 
 ```bash
 mkdir my-app && cd my-app
-npm init -y
-npm install @tauri-apps/cli@latest @tauri-apps/api@latest
-npm run tauri init
+bun init -y
+bun install @tauri-apps/cli@latest @tauri-apps/api@latest
+bun run tauri init
 ```
 
 ## 2. Project Structure
@@ -44,8 +44,8 @@ my-app/
   "build": {
     "devUrl": "http://localhost:3000",
     "frontendDist": "../dist",
-    "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build"
+    "beforeDevCommand": "bun run dev",
+    "beforeBuildCommand": "bun run build"
   }
 }
 ```
@@ -99,7 +99,7 @@ greetUser();
 ## 7. Run Development Server
 
 ```bash
-npm run tauri dev
+bun run tauri dev
 # or
 cargo tauri dev
 ```
@@ -107,7 +107,7 @@ cargo tauri dev
 ## 8. Build for Production
 
 ```bash
-npm run tauri build
+bun run tauri build
 # or
 cargo tauri build
 ```
@@ -116,8 +116,8 @@ cargo tauri build
 
 | Task | Command |
 |------|---------|
-| Add plugin | `npm run tauri add fs` |
-| Add plugin | `npm run tauri add dialog` |
-| Generate icons | `npm run tauri icon` |
-| Run on Android | `npm run tauri android dev` |
-| Run on iOS | `npm run tauri ios dev` |
+| Add plugin | `bun run tauri add fs` |
+| Add plugin | `bun run tauri add dialog` |
+| Generate icons | `bun run tauri icon` |
+| Run on Android | `bun run tauri android dev` |
+| Run on iOS | `bun run tauri ios dev` |

@@ -4,14 +4,22 @@
 
 | Feature | Description |
 |---------|-------------|
-| File-based Routing | สร้าง routes อัตโนมัติจาก `pages/` directory |
-| Auto Imports | Components, composables, utils auto-imported |
-| Server-Side Rendering | SSR โดย default |
+| File-based Routing | สร้าง routes อัตโนมัติจาก `app/pages/` directory |
+| Auto Imports | Components, composables, utils auto-imported จาก `app/` |
+| Server-Side Rendering | SSR โดย default ด้วย Nitro |
 | Static Site Generation | SSG ด้วย `nuxt generate` |
-| Hybrid Rendering | เลือก rendering mode ต่างกันในแต่ละ route |
-| TypeScript | Built-in TypeScript support |
-| Hot Module Replacement | Fast dev server with HMR |
+| Hybrid Rendering | เลือก rendering mode ต่างกันในแต่ละ route ด้วย `routeRules` |
+| TypeScript | Built-in TypeScript support ด้วย zero-config และ separate TS projects |
+| Hot Module Replacement | Fast dev server ด้วย Vite HMR |
 | SEO | Built-in meta tags และ SEO utilities |
+| Nitro Server | Server engine สำหรับ full-stack capabilities |
+| app/ Directory | New directory structure สำหรับ application code (Nuxt v4) |
+| Features System | Enable/disable optional features (devLogs, inlineStyles, noScripts) |
+| Future Namespace | Early opt-in ไปยัง Nuxt 5 features |
+| Vue Router v5 (4.4+) | 28x faster dev routing |
+| Accessibility (4.4+) | `useAnnouncer` composable สำหรับ screen reader announcements |
+| Typed Layout Props (4.4+) | Full type safety สำหรับ layout props ใน `definePageMeta` |
+| Custom Data Fetching (4.4+) | `createUseFetch` และ `createUseAsyncData` factory functions |
 
 ## Rendering Modes
 
@@ -31,6 +39,8 @@
 | `useAsyncData` | Async data with caching |
 | `useLazyFetch` | Lazy loading fetch |
 | `useLazyAsyncData` | Lazy async data |
+| `createUseFetch` (4.4+) | Custom useFetch instances with default options |
+| `createUseAsyncData` (4.4+) | Custom useAsyncData instances with default options |
 
 ## State Management
 

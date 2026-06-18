@@ -12,6 +12,34 @@ auto_execution_mode: 3
 
 ใช้สำหรับออกแบบ software architecture, apply SOLID principles, implement Domain-Driven Design, เลือกระหว่าง microservices และ monolith, และ design API และ systems
 
+## โครงสร้าง Directory
+
+```
+software-design/
+├── SKILL.md
+├── learn/
+│   ├── guide/              (ภาษาอังกฤษ)
+│   │   ├── architecture.md
+│   │   ├── best-practices.md
+│   │   ├── patterns.md
+│   │   ├── domain-driven-design.md
+│   │   ├── api-design.md
+│   │   └── system-design.md
+│   ├── key-concepts/       (ภาษาอังกฤษ)
+│   │   ├── solid-principles.md
+│   │   ├── design-patterns.md
+│   │   └── architectural-patterns.md
+│   └── principles/         (ภาษาไทย)
+│       ├── solid-application.md
+│       └── design-principles.md
+├── references/
+│   └── website.md
+└── workflows/
+    ├── apply-solid-principles.md
+    ├── design-architecture.md
+    └── implement-ddd.md
+```
+
 ## Execute
 
 ### 1. Study Key Concepts
@@ -25,22 +53,25 @@ auto_execution_mode: 3
 
 ปฏิบัติตาม `principles/` เพื่อ apply หลักการในการออกแบบ
 - SOLID principles application
-- Design patterns usage
+- Design principles (DRY, KISS, YAGNI)
 - Architecture selection
 
 ### 3. Follow Guides
 
 อ่าน `guide/` เพื่อเข้าใจ best practices และ implementation
-- Architecture patterns
+- Architecture patterns (Layered, Clean, Microservices)
 - Design patterns detailed
+- Domain-Driven Design
+- API design
+- System design
 - Best practices
 
 ### 4. Use Workflows
 
 ปฏิบัติตาม `workflows/` สำหรับการทำงานเฉพาะทาง
-- Design workflows
-- Architecture decision records
-- Pattern selection
+- Apply SOLID principles
+- Design architecture
+- Implement DDD
 
 ### 5. Reference Documentation
 

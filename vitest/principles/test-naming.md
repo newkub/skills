@@ -1,6 +1,15 @@
----
-description: Test Naming - ตั้งชื่อ test ที่ชัดเจนและอธิบาย behavior
----
+# Test Naming
+
+## Purpose
+
+อธิบายหลักการ Test Naming - ตั้งชื่อ test ที่ชัดเจนและอธิบาย behavior
+
+## Scope
+
+- หลักการตั้งชื่อ test
+- Patterns ต่างๆ (Should, When-Then, Given-When-Then)
+- Best Practices
+- Nested Describes
 
 ## Principle
 

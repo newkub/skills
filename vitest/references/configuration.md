@@ -1,5 +1,26 @@
 # Configuration
 
+## Purpose
+
+Configuration options reference สำหรับ vitest.config.ts
+
+## Scope
+
+- Basic Options
+- Timeout Options
+- Environment Options
+- Pool Options
+- Coverage Options
+- Watch Mode
+- Type Checking
+- Snapshot Options
+- Reporter Options
+- Global Setup/Teardown
+- Workspace Options
+- CSS Options
+- Resolve Options
+- Environment Variables
+
 Vitest configuration options reference.
 
 ## Config File

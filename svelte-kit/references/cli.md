@@ -20,7 +20,7 @@ sv create [directory] [options]
 | `--types` | TypeScript or JavaScript | ts |
 | `--no-add-ons` | Skip add-ons | false |
 | `--add-ons` | Add-ons to install | - |
-| `--no-install` | Skip npm install | false |
+| `--no-install` | Skip bun install | false |
 | `--no-git` | Skip git init | false |
 
 ### Examples
@@ -87,7 +87,7 @@ sv check --watch
 Build for production.
 
 ```bash
-npm run build
+bun run build
 ```
 
 Uses `vite build` under the hood.
@@ -97,7 +97,7 @@ Uses `vite build` under the hood.
 Start development server.
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 ### Options
@@ -112,13 +112,13 @@ npm run dev
 
 ```bash
 # Default
-npm run dev
+bun run dev
 
 # Custom port
-npm run dev -- --port 3000
+bun run dev -- --port 3000
 
 # Expose to network
-npm run dev -- --host
+bun run dev -- --host
 ```
 
 ## sv preview
@@ -126,10 +126,10 @@ npm run dev -- --host
 Preview production build.
 
 ```bash
-npm run preview
+bun run preview
 ```
 
-## npm Scripts
+## bun Scripts
 
 ### package.json scripts
 

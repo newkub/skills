@@ -162,7 +162,7 @@ const value = await invoke('secure_retrieve', { key: 'api_key' })
 
 - Regularly update dependencies
 - Use `cargo audit` สำหรับ Rust
-- Use `npm audit` สำหรับ JavaScript
+- Use `bun audit` สำหรับ JavaScript
 
 ## Common Security Vulnerabilities
 

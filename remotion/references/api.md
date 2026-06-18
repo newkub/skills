@@ -85,6 +85,36 @@ const scale = interpolate(frame, [0, 30, 60], [0, 1, 0], {
 
 ## Audio/Video
 
+### useAudioData
+
+Load audio data for visualization (from @remotion/media-utils):
+
+```tsx
+import { useAudioData } from '@remotion/media-utils';
+
+const audioData = useAudioData(staticFile('music.mp3'));
+
+if (!audioData) return null;
+
+return (
+  <div>
+    {audioData.map((value, i) => (
+      <div key={i} style={{ height: value * 100 }} />
+    ))}
+  </div>
+);
+```
+
+### useWindowedAudioData
+
+Load audio data windowed for long audio (from @remotion/media-utils):
+
+```tsx
+import { useWindowedAudioData } from '@remotion/media-utils';
+
+const audioData = useWindowedAudioData(staticFile('long-music.mp3'));
+```
+
 ### useAudio
 
 Load and control audio:
@@ -142,6 +172,7 @@ const animation = spring({
   config: {
     damping: 200,
     stiffness: 100,
+    mass: 1,
   },
 });
 ```
@@ -158,6 +189,16 @@ const color = interpolateColor(
   [0, 1],
   ['#000000', '#ffffff']
 );
+```
+
+### useTransform
+
+Transform values based on frame:
+
+```tsx
+import { useTransform } from 'remotion';
+
+const opacity = useTransform(progress, [0, 0.5, 1], [0, 1, 0]);
 ```
 
 ## Sequences
@@ -186,6 +227,25 @@ import { loop } from 'remotion';
 const repeatedFrames = loop(frame, 30);
 ```
 
+## Series
+
+### Series
+
+Play sequences one after another:
+
+```tsx
+import { Series } from 'remotion';
+
+<Series>
+  <Series.Sequence durationInFrames={30}>
+    <Intro />
+  </Series.Sequence>
+  <Series.Sequence durationInFrames={60}>
+    <Main />
+  </Series.Sequence>
+</Series>
+```
+
 ## Delay Render
 
 ### delayRender / continueRender
@@ -193,8 +253,22 @@ const repeatedFrames = loop(frame, 30);
 Handle async operations:
 
 ```tsx
+import { delayRender, continueRender } from 'remotion';
+
 const handle = delayRender('Loading data...');
 fetchData().then(() => continueRender(handle));
+```
+
+## Offthread Video
+
+### OffthreadVideo
+
+Use for large videos:
+
+```tsx
+import { OffthreadVideo } from 'remotion';
+
+<OffthreadVideo src={staticFile('large-video.mp4')} />
 ```
 
 ## Absolute Fill
@@ -213,6 +287,19 @@ import { AbsoluteFill } from 'remotion';
 
 ## Environment
 
+### useRemotionEnvironment
+
+Get current Remotion environment:
+
+```tsx
+import { useRemotionEnvironment } from 'remotion';
+
+const env = useRemotionEnvironment();
+// env.isStudio - true if in Studio
+// env.isRendering - true if rendering
+// env.isPlayer - true if in Player
+```
+
 ### random
 
 Generate deterministic random values:
@@ -223,14 +310,52 @@ import { random } from 'remotion';
 const value = random('seed-string');
 ```
 
-### current Corb
+### useCurrentScale
 
-Get current Corb (coordinate):
+Get current scale of composition:
 
 ```tsx
-const { x, y } = useCurrentCorb();
+import { useCurrentScale } from 'remotion';
+
+const scale = useCurrentScale();
+```
+
+### prefetch
+
+Prefetch assets before they're needed:
+
+```tsx
+import { prefetch } from 'remotion';
+
+prefetch(staticFile('logo.png'));
 ```
 
 ---
 
 For full API documentation, see [Remotion Docs](https://www.remotion.dev/docs).
+
+## Additional Packages
+
+### @remotion/media-utils
+
+Audio visualization utilities:
+
+```bash
+bun add @remotion/media-utils
+```
+
+### @remotion/three
+
+Three.js integration:
+
+```bash
+bun add @remotion/three three
+```
+
+### @remotion/gif
+
+GIF support:
+
+```bash
+bun add @remotion/gif
+```

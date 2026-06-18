@@ -4,14 +4,16 @@
 
 Server routes คือ API endpoints ที่ Nitro สร้างให้อัตโนมัติ:
 - **File-based** - สร้าง routes จาก file structure
-- **Auto-routing** - Nitro จัดการ routing อัตโนมัติ
+- **Auto-routing** - Nitro จัดการ routing อัตโนมัติ (compiled routing)
 - **HTTP Methods** - รองรับ GET, POST, PUT, DELETE
 
 ## Creating Routes
 
 ```typescript
 // server/api/index.get.ts
-export default defineEventHandler(() => {
+import { defineHandler } from "nitro";
+
+export default defineHandler(() => {
   return { message: 'Hello World' };
 });
 ```
@@ -20,7 +22,9 @@ export default defineEventHandler(() => {
 
 ```typescript
 // server/api/users/[id].get.ts
-export default defineEventHandler((event) => {
+import { defineHandler } from "nitro";
+
+export default defineHandler((event) => {
   const id = getRouterParam(event, 'id');
   return { userId: id };
 });

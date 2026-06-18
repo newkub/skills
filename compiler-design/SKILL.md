@@ -12,11 +12,30 @@ auto_execution_mode: 3
 
 ใช้สำหรับเข้าใจวิธีการทำงานของ compiler, ออกแบบหรือสร้าง compiler ของตัวเอง, ปรับปรุง performance ของ compiler, เข้าใจ intermediate representations และ optimization techniques, และ implement language features ใหม่
 
+## โครงสร้าง Directory
+
+```
+compiler-design/
+├── SKILL.md
+├── learn/
+│   └── guide/           (guides สำหรับการใช้งาน)
+├── key-concepts/        (concepts พื้นฐานของ compiler design)
+├── principles/          (best practices และ design principles)
+├── references/          (documentation และ external resources)
+├── workflows/           (workflows สำหรับ tasks เฉพาะทาง)
+├── templates/           (templates สำหรับ compiler examples)
+└── scripts/             (scripts สำหรับ automation)
+```
+
 ## Execute
 
-- อ่าน guide/ เพื่อเข้าใจ concepts และ best practices
+- อ่าน learn/guide/ เพื่อเข้าใจ concepts และ best practices
+- ศึกษา key-concepts/ สำหรับ fundamentals ของ compiler design
+- ปฏิบัติตาม principles/ สำหรับ best practices และ design patterns
 - ศึกษา references/ สำหรับ documentation และ resources
 - ปฏิบัติตาม workflows/ สำหรับการทำงานเฉพาะทาง
+- ใช้ templates/ สำหรับ examples และ starter code
+- ใช้ scripts/ สำหรับ automation
 - ใช้ภาษาไทยในการอธิบาย
 - ให้ code examples ที่ชัดเจนและใช้งานได้จริง
 - อ้างอิง sources ที่เชื่อถือได้

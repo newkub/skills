@@ -4,9 +4,9 @@
 
 | Command | Description |
 |---------|-------------|
-| `create-nitro-app` | Create a new Nitro project |
-| `vite dev` | Start development server |
-| `vite build` | Build for production |
+| `npx create-nitro-app` | Create a new Nitro project |
+| `vite dev` | Start development server (Vite integration) |
+| `vite build` | Build for production (Vite integration) |
 | `nitro build` | Build Nitro server (standalone) |
 | `nitro prepare` | Prepare Nitro for build |
 
@@ -19,8 +19,8 @@ npx create-nitro-app@latest my-app
 ## Development
 
 ```bash
-# Start dev server
-npm run dev
+# Start dev server (Vite integration)
+bun run dev
 
 # With custom port
 vite dev --port 4000
@@ -32,14 +32,14 @@ vite dev --host 0.0.0.0
 ## Build
 
 ```bash
-# Build for production
-npm run build
+# Build for production (Vite integration)
+bun run build
 
 # Build with specific preset
-NITRO_PRESET=cloudflare_pages npm run build
+NITRO_PRESET=cloudflare_pages bun run build
 
 # Build with custom output
-NITRO_OUTPUT_DIR=./dist npm run build
+NITRO_OUTPUT_DIR=./dist bun run build
 ```
 
 ## Preview
@@ -62,6 +62,7 @@ NITRO_PORT=4000 node .output/server/index.mjs
 | `NITRO_OUTPUT_DIR` | `.output` | Output directory |
 | `NITRO_LOG_LEVEL` | `3` | Log verbosity |
 | `NODE_ENV` | `development` | Environment |
+| `NITRO_BUILDER` | `rolldown` | Bundler (rolldown/rollup/vite) |
 
 ## Flags
 

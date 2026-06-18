@@ -1,6 +1,6 @@
 ---
 title: esm.sh
-description: CDN สำหรับ ES Modules ที่ให้บริการโหลด npm packages ผ่าน ESM format โดยตรงบน browser รองรับ tree-shaking, การ bundle และ optimize อัตโนมัติ
+description: CDN สำหรับ ES Modules ที่ให้บริการโหลด bun packages ผ่าน ESM format โดยตรงบน browser รองรับ tree-shaking, การ bundle และ optimize อัตโนมัติ
 auto_execution_mode: 3
 ---
 
@@ -10,7 +10,7 @@ auto_execution_mode: 3
 
 ## Scope
 
-ใช้สำหรับการโหลด npm packages ผ่าน ESM format บน browser ด้วย tree-shaking และ optimization อัตโนมัติ
+ใช้สำหรับการโหลด bun packages ผ่าน ESM format บน browser ด้วย tree-shaking และ optimization อัตโนมัติ
 
 ## Execute
 

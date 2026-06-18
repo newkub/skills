@@ -2,11 +2,12 @@
 
 ## nuxt.config.ts
 
-ไฟล์ config หลักสำหรับ Nuxt application
+ไฟล์ config หลักสำหรับ Nuxt v4 application
 
 ```typescript
 // nuxt.config.ts
 export default defineNuxtConfig({
+  compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   
   modules: [],

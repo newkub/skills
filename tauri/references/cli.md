@@ -6,8 +6,8 @@
 # Install via Cargo
 cargo install tauri-cli
 
-# Or use via npm
-npm install --save-dev @tauri-apps/cli
+# Or use via bun
+bun install --save-dev @tauri-apps/cli
 ```
 
 ## Common Commands
@@ -16,38 +16,62 @@ npm install --save-dev @tauri-apps/cli
 
 | Command | Description |
 |---------|-------------|
-| `npm run tauri init` | Initialize Tauri project in current directory |
+| `bun run tauri init` | Initialize Tauri project in current directory |
 | `cargo tauri init` | Initialize Tauri project via Cargo |
 
 ### Development
 
 | Command | Description |
 |---------|-------------|
-| `npm run tauri dev` | Run Tauri app in development mode |
+| `bun run tauri dev` | Run Tauri app in development mode |
 | `cargo tauri dev` | Run Tauri app in development mode via Cargo |
-| `npm run tauri dev -- --release` | Run in release mode (faster) |
+| `bun run tauri dev -- --release` | Run in release mode (faster) |
 
 ### Building
 
 | Command | Description |
 |---------|-------------|
-| `npm run tauri build` | Build Tauri app for current platform |
+| `bun run tauri build` | Build Tauri app for current platform |
 | `cargo tauri build` | Build Tauri app via Cargo |
-| `npm run tauri build -- --target x86_64-pc-windows-msvc` | Build for specific target |
+| `bun run tauri build -- --target x86_64-pc-windows-msvc` | Build for specific target |
 
 ### Plugin Management
 
 | Command | Description |
 |---------|-------------|
-| `npm run tauri add <plugin>` | Add Tauri plugin to project |
+| `bun run tauri add <plugin>` | Add Tauri plugin to project |
 | `cargo tauri add <plugin>` | Add plugin via Cargo |
 
 ### Info
 
 | Command | Description |
 |---------|-------------|
-| `npm run tauri info` | Display system information and Tauri version |
+| `bun run tauri info` | Display system information and Tauri version |
 | `cargo tauri info` | Display system information via Cargo |
+
+### Mobile Development
+
+| Command | Description |
+|---------|-------------|
+| `bun run tauri android init` | Initialize Android project |
+| `bun run tauri android dev` | Run on Android device/emulator |
+| `bun run tauri android build` | Build Android APK |
+| `bun run tauri ios init` | Initialize iOS project |
+| `bun run tauri ios dev` | Run on iOS simulator |
+| `bun run tauri ios build` | Build iOS app |
+
+### Icon Management
+
+| Command | Description |
+|---------|-------------|
+| `bun run tauri icon <path>` | Generate app icons from source image |
+
+### Signer
+
+| Command | Description |
+|---------|-------------|
+| `bun run tauri signer generate` | Generate key pair for signing |
+| `bun run tauri signer sign` | Sign the app bundle |
 
 ## CLI Options
 
@@ -55,10 +79,10 @@ npm install --save-dev @tauri-apps/cli
 
 ```bash
 # Specify custom frontend dev server
-npm run tauri dev -- --no-watch
+bun run tauri dev -- --no-watch
 
 # Disable watching for file changes
-npm run tauri dev -- --no-watch
+bun run tauri dev -- --no-watch
 
 # Run with specific features
 cargo tauri dev --features custom-feature
@@ -68,7 +92,7 @@ cargo tauri dev --features custom-feature
 
 ```bash
 # Build without updater
-npm run tauri build -- --no-bundle
+bun run tauri build -- --no-bundle
 
 # Build for specific target
 cargo tauri build --target aarch64-apple-darwin
@@ -84,8 +108,8 @@ The CLI can be configured via `tauri.conf.json` or `tauri.conf.json5`:
 ```json
 {
   "build": {
-    "beforeBuildCommand": "npm run build",
-    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "bun run build",
+    "beforeDevCommand": "bun run dev",
     "devUrl": "http://localhost:3000"
   },
   "tauri": {
@@ -110,25 +134,25 @@ The CLI can be configured via `tauri.conf.json` or `tauri.conf.json5`:
 ### Initialize New Project
 
 ```bash
-npm create tauri-app@latest
+bun create tauri-app@latest
 cd my-tauri-app
-npm install
-npm run tauri dev
+bun install
+bun run tauri dev
 ```
 
 ### Add Plugin
 
 ```bash
-npm run tauri add fs
-npm run tauri add shell
-npm run tauri add dialog
+bun run tauri add fs
+bun run tauri add shell
+bun run tauri add dialog
 ```
 
 ### Build for Production
 
 ```bash
 # Build for current platform
-npm run tauri build
+bun run tauri build
 
 # Build for specific platform
 cargo tauri build --target x86_64-pc-windows-msvc
@@ -140,14 +164,14 @@ cargo tauri build --target x86_64-pc-windows-msvc
 
 - **Build fails**: Ensure Rust toolchain is installed and up to date
 - **Dev server not starting**: Check `beforeDevCommand` in config
-- **Plugin not found**: Run `npm run tauri add <plugin>` to install
+- **Plugin not found**: Run `bun run tauri add <plugin>` to install
 - **Permission errors**: Check system permissions for file access
 
 ### Debug Mode
 
 ```bash
 # Enable debug logging
-RUST_LOG=debug npm run tauri dev
+RUST_LOG=debug bun run tauri dev
 
 # Verbose output
 cargo tauri dev --verbose

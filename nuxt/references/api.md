@@ -1,4 +1,4 @@
-# api
+# API Reference
 
 ## Composables
 
@@ -118,9 +118,9 @@ export default defineEventHandler((event) => {
 
 | Convention | Description |
 |------------|-------------|
-| `pages/[page].vue` | File-based routes |
-| `components/[Component].vue` | Auto-imported components |
-| `composables/[name].ts` | Auto-imported composables |
+| `app/pages/[page].vue` | File-based routes |
+| `app/components/[Component].vue` | Auto-imported components |
+| `app/composables/[name].ts` | Auto-imported composables |
 | `middleware/[name].ts` | Route middleware |
 | `plugins/[name].ts` | Plugins |
 | `server/api/[name].ts` | API routes |

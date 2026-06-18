@@ -29,13 +29,13 @@ Workflow for creating a Next.js application.
 5. **Run development**
    ```bash
    cd my-app
-   npm run dev
+   bun run dev
    ```
 
 6. **Build for production**
    ```bash
-   npm run build
-   npm start
+   bun run build
+   bun start
    ```
 
 ## Example: Simple Page

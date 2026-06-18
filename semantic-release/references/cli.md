@@ -6,7 +6,7 @@ Command-line interface for semantic-release
 
 ```bash
 # Install as dev dependency
-npm install -D semantic-release
+bun install -D semantic-release
 
 # Or use via npx
 npx semantic-release --version
@@ -49,7 +49,7 @@ semantic-release --noci
 
 ```bash
 # Required environment variables
-# NPM_TOKEN for npm publishing
+# bun_TOKEN for bun publishing
 # GH_TOKEN or GITHUB_TOKEN for GitHub releases
 ```
 

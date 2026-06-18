@@ -6,7 +6,7 @@ dprint มี CLI สำหรับ code formatting:
 
 ```bash
 # Install dprint
-npm install -g dprint
+bun install -g dprint
 
 # Format files
 dprint fmt

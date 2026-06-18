@@ -1,6 +1,6 @@
 ---
 title: Runtime Node
-description: Node.js JavaScript runtime ที่ใช้ Chrome V8 engine สำหรับรัน JavaScript นอก browser รองรับ npm package manager, ระบบ module ที่หลากหลาย และมี ecosystem ใหญ่ที่สุด
+description: Node.js JavaScript runtime ที่ใช้ Chrome V8 engine สำหรับรัน JavaScript นอก browser รองรับ bun package manager, ระบบ module ที่หลากหลาย และมี ecosystem ใหญ่ที่สุด
 auto_execution_mode: 3
 ---
 
@@ -32,7 +32,7 @@ auto_execution_mode: 3
 
 ## Rules
 
-- ใช้ `npm` สำหรับ package management
+- ใช้ `bun` สำหรับ package management
 - ใช้ `npx` สำหรับ run packages
 - ใช้ CommonJS หรือ ES Modules ตามความเหมาะสม
 - ใช้ TypeScript เสมอ
@@ -43,4 +43,4 @@ auto_execution_mode: 3
 
 - Projects ที่ compatible กับ ecosystem ที่ใหญ่
 - Development ที่ stable ด้วย mature runtime
-- Integration ที่ smooth กับ npm ecosystem
+- Integration ที่ smooth กับ bun ecosystem

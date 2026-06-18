@@ -26,7 +26,8 @@ export default defineHandler((event) => {
 
 ```typescript
 // server/api/posts/index.ts
-import { defineHandler, useStorage } from "nitro";
+import { defineHandler } from "nitro";
+import { useStorage } from "nitro/storage";
 
 export default defineHandler(async () => {
   const storage = useStorage();
@@ -39,7 +40,7 @@ export default defineHandler(async () => {
 
 ```typescript
 // server/api/data.ts
-import { defineCachedHandler } from "nitro";
+import { defineCachedHandler } from "nitro/cache";
 
 export default defineCachedHandler(
   async () => {
@@ -52,7 +53,7 @@ export default defineCachedHandler(
 ## รัน Development Server
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 ## ทดสอบ Endpoint
@@ -65,6 +66,8 @@ curl http://localhost:3000/api/hello
 
 ```typescript
 // server/plugins/setup.ts
+import { defineNitroPlugin } from "nitro";
+
 export default defineNitroPlugin((nitro) => {
   console.log("Nitro is ready!");
 });
@@ -74,6 +77,8 @@ export default defineNitroPlugin((nitro) => {
 
 ```typescript
 // server/tasks/seed.ts
+import { defineTask } from "nitro/task";
+
 export default defineTask({
   meta: { name: "seed", description: "Seed database" },
   async run() {

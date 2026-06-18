@@ -23,7 +23,7 @@ auto_execution_mode: 3
 
 ## Rules
 
-- ใช้ `bun add` หรือ `bun add -D` แทน `npm install`
+- ใช้ `bun add` หรือ `bun add -D` แทน `bun install`
 - Install เฉพาะ clients ที่ต้องการ (modular v3)
 - ใช้ IAM roles สำหรับ production
 - ใช้ environment variables สำหรับ development

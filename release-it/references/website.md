@@ -10,7 +10,7 @@ Official links และ resources สำหรับ Release It
 |----------|------|
 | **Website** | https://release-it.com |
 | **GitHub** | https://github.com/release-it/release-it |
-| **npm** | https://www.npmjs.com/package/release-it |
+| **bun** | https://www.bunjs.com/package/release-it |
 | **Documentation** | https://github.com/release-it/release-it#readme |
 
 ## GitHub
@@ -25,22 +25,22 @@ Official links และ resources สำหรับ Release It
 
 ## Official Plugins
 
-| Plugin | npm | Description |
+| Plugin | bun | Description |
 |--------|-----|-------------|
-| **Conventional Changelog** | [@release-it/conventional-changelog](https://www.npmjs.com/package/@release-it/conventional-changelog) | Conventional changelog |
-| **Keep a Changelog** | [@release-it/keep-a-changelog](https://www.npmjs.com/package/@release-it/keep-a-changelog) | Keep a changelog |
-| **Bumper** | [@release-it/bumper](https://www.npmjs.com/package/@release-it/bumper) | Bump any file |
+| **Conventional Changelog** | [@release-it/conventional-changelog](https://www.bunjs.com/package/@release-it/conventional-changelog) | Conventional changelog |
+| **Keep a Changelog** | [@release-it/keep-a-changelog](https://www.bunjs.com/package/@release-it/keep-a-changelog) | Keep a changelog |
+| **Bumper** | [@release-it/bumper](https://www.bunjs.com/package/@release-it/bumper) | Bump any file |
 
 ## Community Plugins
 
-| Plugin | npm | Description |
+| Plugin | bun | Description |
 |--------|-----|-------------|
-| **Lerna Changelog** | [@release-it-plugins/lerna-changelog](https://www.npmjs.com/package/@release-it-plugins/lerna-changelog) | Lerna monorepo |
-| **Changelogen** | [@jcamp-code/release-it-changelogen](https://www.npmjs.com/package/@jcamp-code/release-it-changelogen) | Unjs changelogen |
-| **Regex Bumper** | [@j-ulrich/release-it-regex-bumper](https://www.npmjs.com/package/@j-ulrich/release-it-regex-bumper) | Regex bumping |
-| **Dotnet** | [@jcamp-code/release-it-dotnet](https://www.npmjs.com/package/@jcamp-code/release-it-dotnet) | .NET projects |
-| **pnpm** | [release-it-pnpm](https://www.npmjs.com/package/release-it-pnpm) | pnpm workspaces |
-| **CalVer** | [release-it-calver-plugin](https://www.npmjs.com/package/release-it-calver-plugin) | Calendar versioning |
+| **Lerna Changelog** | [@release-it-plugins/lerna-changelog](https://www.bunjs.com/package/@release-it-plugins/lerna-changelog) | Lerna monorepo |
+| **Changelogen** | [@jcamp-code/release-it-changelogen](https://www.bunjs.com/package/@jcamp-code/release-it-changelogen) | Unjs changelogen |
+| **Regex Bumper** | [@j-ulrich/release-it-regex-bumper](https://www.bunjs.com/package/@j-ulrich/release-it-regex-bumper) | Regex bumping |
+| **Dotnet** | [@jcamp-code/release-it-dotnet](https://www.bunjs.com/package/@jcamp-code/release-it-dotnet) | .NET projects |
+| **bun** | [release-it-bun](https://www.bunjs.com/package/release-it-bun) | bun workspaces |
+| **CalVer** | [release-it-calver-plugin](https://www.bunjs.com/package/release-it-calver-plugin) | Calendar versioning |
 
 ## Community
 
@@ -79,6 +79,6 @@ Latest schema versions:
 |----------|------|
 | **Documentation** | https://github.com/release-it/release-it#readme |
 | **GitHub** | https://github.com/release-it/release-it |
-| **npm** | https://www.npmjs.com/package/release-it |
-| **Plugins** | https://www.npmjs.com/search?q=release-it |
+| **bun** | https://www.bunjs.com/package/release-it |
+| **Plugins** | https://www.bunjs.com/search?q=release-it |
 | **Discord** | https://discord.gg/release-it |

@@ -166,8 +166,8 @@ src-tauri/
 
 ```bash
 # Generate signing key
-npm run tauri signer generate
+bun run tauri signer generate
 
 # Sign during build
-npm run tauri build -- --signing-key ./key.pem
+bun run tauri build -- --signing-key ./key.pem
 ```

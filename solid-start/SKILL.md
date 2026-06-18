@@ -1,7 +1,13 @@
 ---
 title: Solid Start
-description: SolidJS meta-framework for building web applications with CSR, SSR, and SSG. Includes file-based routing, server functions, data fetching, and TypeScript support.
+description: แนวทางการพัฒนา Solid Start ตาม best practices สำหรับ SolidJS meta-framework ที่มี CSR, SSR, SSG, file-based routing, server functions และ TypeScript support
 auto_execution_mode: 3
+related_workflows:
+  - /deep-research
+  - /write-content-coverage
+  - /improve-correctness
+  - /follow-solid-start
+  - /follow-solid-start-architecture
 ---
 
 ## Goal
@@ -12,82 +18,199 @@ auto_execution_mode: 3
 
 ใช้สำหรับการพัฒนา SolidJS applications ที่ต้องการ TypeScript support, server functions และ multi-platform deployment
 
-## Execute
-
-### 1. Create Project
-
-สร้าง Solid Start project ด้วย CLI
-
-```bash
-bun create solid@latest
-```
-
-### 2. Setup Configuration
-
-ตั้งค่า TypeScript, routing และ configuration ตาม requirements
-
-### 3. Develop Pages
-
-ใช้ file-based routing ใน `src/routes/` directory
-
-### 4. Implement Server Functions
-
-ใช้ server functions สำหรับ API routes
-
-### 5. Build and Deploy
-
-Build สำหรับ CSR, SSR หรือ SSG และ deploy ไปยัง target platform
-
-## Rules
-
-### Development
-- ใช้ TypeScript สำหรับ type safety
-- ใช้ SolidJS components สำหรับ UI
-- Follow SolidStart conventions
-
-### Best Practices
-- ใช้ proper caching strategies
-- Optimize bundle size
-- Implement proper error handling
-
 ## Directory Structure
 
 ```
-framework-solid-start/
+solid-start/
 ├── SKILL.md
-├── guide/
-│   ├── architecture.md
-│   ├── best-practices.md
-│   ├── configuration.md
-│   └── ...
-├── key-concepts/
-├── principles/
-├── references/
-│   ├── cli.md
-│   ├── configuration.md
-│   ├── sitemap.md
-│   └── website.md
-└── workflows/
-    └── create-solidstart-app.md
+├── learn/
+│   ├── guide/
+│   │   ├── getting-started/
+│   │   │   ├── index.md
+│   │   │   ├── installation.md
+│   │   │   └── quick-start.md
+│   │   ├── core-concepts/
+│   │   │   ├── index.md
+│   │   │   ├── key-concept.md
+│   │   │   ├── how-it-works.md
+│   │   │   ├── architecture.md
+│   │   │   ├── vinxi-architecture.md
+│   │   │   └── structure.md
+│   │   ├── features/
+│   │   │   ├── index.md
+│   │   │   ├── features.md
+│   │   │   ├── integration.md
+│   │   │   ├── migration.md
+│   │   │   └── ecosystem.md
+│   │   ├── configuration/
+│   │   │   ├── index.md
+│   │   │   └── configuration.md
+│   │   └── best-practices/
+│   │       ├── index.md
+│   │       ├── best-practices.md
+│   │       ├── patterns.md
+│   │       ├── performance.md
+│   │       ├── security.md
+│   │       ├── testing.md
+│   │       └── troubleshooting.md
+│   ├── key-concepts/
+│   │   ├── file-based-routing.md
+│   │   ├── server-functions.md
+│   │   ├── data-loading.md
+│   │   ├── rendering-modes.md
+│   │   ├── caching.md
+│   │   ├── streaming.md
+│   │   ├── error-handling.md
+│   │   ├── middleware.md
+│   │   ├── islands-architecture.md
+│   │   └── hydration.md
+│   ├── principles/
+│   │   ├── composition-over-inheritance.md
+│   │   ├── explicit-over-implicit.md
+│   │   └── single-responsibility.md
+│   └── references/
+│       ├── api.md
+│       ├── cli.md
+│       ├── configuration.md
+│       └── website.md
+├── workflows/
+│   └── create-solidstart-app.md
+└── templates/
+    ├── api-server-functions.md
+    ├── blog-ssg.md
+    └── dashboard-csr.md
 ```
 
-## File Categories
+## Execute
 
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|-----------|------|-----------|
-| Root Files | SKILL.md | Index file สำหรับ Solid Start skill |
-| guide/ | architecture.md | Architecture ของ Solid Start |
-| guide/ | best-practices.md | Best practices สำหรับ development |
-| guide/ | configuration.md | Configuration และ setup |
-| references/ | cli.md | CLI documentation |
-| references/ | configuration.md | Configuration reference |
-| references/ | sitemap.md | Sitemap ของ documentation |
-| references/ | website.md | เว็บไซต์และ resources |
-| workflows/ | create-solidstart-app.md | Workflow สำหรับสร้าง Solid Start app |
+### 1. Create Directory Structure
+
+สร้าง folders ตามมาตรฐานที่แสดงใน Directory Structure
+
+### 2. Write SKILL.md Index
+
+เขียน index file ตามมาตรฐาน `/write-skills`
+
+### 3. Research Before Writing
+
+ค้นหาข้อมูลเกี่ยวกับ Solid Start
+
+- ทำตาม workflow `/deep-research` สำหรับค้นหาข้อมูลจาก multiple sources
+- ค้นหาใน package registries ตามภาษาที่เกี่ยวข้อง
+- ใช้ DeepWiki สำหรับ GitHub repositories
+- ใช้ Context7 สำหรับ library documentation
+- ตรวจสอบ source reputation และ information freshness
+- สรุป findings ที่สำคัญก่อนเขียน
+
+### 4. Write Content Files
+
+เขียน content files ใน learn/guide/, learn/key-concepts/, learn/principles/ folders ตามมาตรฐาน
+
+- ทำตามมาตรฐาน `/write-skills` สำหรับทุกไฟล์
+- เวลาเขียนเกี่ยวกับการติดตั้ง ให้ใช้ `bun add` หรือ `bun add -D` แทน `bun install` เสมอ
+- **แต่ละ .md ใต้ heading ต่างๆ ต้องเขียนอธิบายให้เข้าใจ**
+  - อธิบายความหมายของแต่ละ heading อย่างชัดเจน
+  - ให้ตัวอย่างที่เข้าใจง่ายเมื่อจำเป็น
+  - ใช้ประโยคที่สั้น กระชับ และตรงประเด็น
+  - หลีกเลี่ยงการใช้คำศัพท์ที่ซับซ้อนโดยไม่จำเป็น
+  - อธิบาย "ทำไม" และ "อย่างไร" ให้เข้าใจ
+
+### 5. Write Content Coverage
+
+เขียน content ครอบคลุมทุก features, APIs, และ use cases
+
+- ทำตาม workflow `/write-content-coverage` สำหรับเขียน content ครอบคลุม
+- วิเคราะห์ features ที่ยังไม่มี content
+- เขียน guides สำหรับ features ที่ขาด
+- ตรวจสอบ content ครอบคลุมทุก aspects
+
+### 6. Improve Correctness
+
+ปรับปรุงความถูกต้องของ content
+
+- ทำตาม workflow `/improve-correctness` สำหรับตรวจสอบและปรับปรุง
+- ตรวจสอบความถูกต้องของข้อมูล
+- แก้ไข issues ตาม priority (Critical, High, Medium, Low)
+- ตรวจสอบว่าไม่มี regressions
+- อัปเดต references ที่เกี่ยวข้อง
+
+### 7. Validate And Verify
+
+ตรวจสอบความถูกต้อง
+
+- ตรวจสอบ references ถูกต้อง
+- ตรวจสอบว่าไม่มี conflicts ระหว่าง skills
+- ตรวจสอบโครงสร้างตรงกับมาตรฐาน
+- ตรวจสอบ content ครอบคลุมทุก aspects
+
+
+## Rules
+
+### Structure And Consistency
+
+- ทำตามมาตรฐาน `/write-skills` สำหรับโครงสร้างและ consistency
+- ทุก `SKILL.md` ต้องมี frontmatter: `title`, `description`, `auto_execution_mode: 3`
+- ทุก `SKILL.md` ต้องมี sections: `## Goal`, `## Scope`, `## Execute`, `## Rules`, `## Expected Outcome`
+- Goal สอดคล้องกับ skill name, Execute สอดคล้องกับ Goal และ Rules
+- Expected Outcome สอดคล้องกับ Goal
+- ใช้คำศัพท์สม่ำเสมอ
+
+### Installation
+
+- ใช้ `bun create solid@latest` สำหรับสร้าง project
+- ใช้ `bun add` หรือ `bun add -D` แทน `bun install` เสมอ
+
+### Development
+
+- ใช้ file-based routing ใน `src/routes/` directory
+- ใช้ server functions สำหรับ API routes
+- Build สำหรับ CSR, SSR หรือ SSG ตาม requirements
+
+### Content And Style
+
+- ทุกไฟล์ `.md` เขียนเป็นภาษาไทย ยกเว้น headings และศัพท์เทคนิค
+- ใช้ตารางสรุปข้อมูลที่เปรียบเทียบได้เมื่อเหมาะสม
+- ใช้ `codeblock` สำหรับ code examples, configuration, หรือ commands
+- ใช้ `ansi markdown diagrams` สำหรับ flow, architecture, หรือ how-it-works
+- **แต่ละ .md ใต้ heading ต่างๆ ต้องเขียนอธิบายให้เข้าใจ**
+  - อธิบายความหมายของแต่ละ heading อย่างชัดเจน
+  - ให้ตัวอย่างที่เข้าใจง่ายเมื่อจำเป็น
+  - ใช้ประโยคที่สั้น กระชับ และตรงประเด็น
+  - หลีกเลี่ยงการใช้คำศัพท์ที่ซับซ้อนโดยไม่จำเป็น
+  - อธิบาย "ทำไม" และ "อย่างไร" ให้เข้าใจ
+
+### Code Style
+
+- ใช้ backticks สำหรับ `createServerData$()`, `createServerAction$()`, commands
+- ใช้ code blocks สำหรับ component examples
+- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
+### File Organization
+
+- ใช้ชื่อสื่อความหมายโดยตรง ไม่ใช้ prefix ชื่อ skill
+- ใช้ `kebab-case` เสมอ ชื่อไฟล์ต้องสอดคล้องกับเนื้อหา
+- แต่ละไฟล์ต้องไม่เกิน 250 บรรทัด ถ้าเกินให้ refactor แยกไฟล์
+- ถ้าไฟล์ยาวเกิน ให้แยกเป็น folder และไฟล์ย่อย (เช่น `best-practices/` พร้อม `index.md`)
+- ทำตาม Execute ตามลำดับเสมอ
+
+### Scripts
+
+- สร้าง scripts ใน `scripts/temp/` ที่ root workspace เท่านั้น
+- ใช้ Bun native APIs, pwsh, หรือ ast-grep ตามความเหมาะสม
+- ทำตามมาตรฐาน `/use-scripts`
+- ลบ scripts หลังใช้งาน
 
 ## Expected Outcome
 
 - SolidJS applications ด้วย CSR/SSR/SSG
 - File-based routing และ TypeScript support
 - Multi-platform deployment
+- Server functions สำหรับ API routes
+- Devin Skills ที่มีโครงสร้างสม่ำเสมอตามมาตรฐาน
+- Folder structure ที่เป็นระบบและ deterministic
+- SKILL.md index ที่ครบถ้วนและอ่านง่าย
+- File naming ที่สอดคล้องกันทั่วทั้ง skill
+- Content ที่มีคุณภาพและถูกต้องตามมาตรฐาน
+- References ที่ถูกต้องและอ้างอิงไปยังไฟล์ที่มีอยู่จริง
+- Skills ที่ maintainable และ easy to navigate
 

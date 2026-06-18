@@ -9,6 +9,9 @@ import { Config } from '@remotion/cli/config';
 
 Config.setVideoImageFormat('jpeg');
 Config.setOverwriteOutput(true);
+Config.setPixelFormat('yuv420p');
+Config.setQuality(80);
+Config.setFps(30);
 ```
 
 ## Key Configuration Options
@@ -24,6 +27,15 @@ Config.setPixelFormat('yuv420p');
 
 // Set frame rate
 Config.setFps(30);
+
+// Set video codec
+Config.setCodec('h264');
+
+// Set video image format
+Config.setVideoImageFormat('jpeg');
+
+// Set CRF value
+Config.setCrf(23);
 ```
 
 ### Output Settings
@@ -32,8 +44,14 @@ Config.setFps(30);
 // Set output directory
 Config.setOutputDir('./out');
 
-// Set binary directory
+// Set overwrite output
+Config.setOverwriteOutput(true);
+
+// Set bundler define
 Config.setBundlerDefine('MY_VARIABLE', '"value"');
+
+// Set image sequence
+Config.setImageSequence(false);
 ```
 
 ### Server Settings
@@ -46,6 +64,35 @@ Config.setPort(3000);
 Config.setHttpsLocalhost({
   enabled: true,
 });
+
+// Set webpack config
+Config.setWebpackOverride((config) => {
+  config.module.rules.push({
+    test: /\.svg$/,
+    use: 'svg-loader',
+  });
+  return config;
+});
+
+// Set bundler (webpack or rspack)
+Config.setBundler('rspack');
+```
+
+### Chromium Settings
+
+```typescript
+// Set Chrome executable path
+Config.setChromiumExecutablePath('/path/to/chrome');
+
+// Set Chrome flags
+Config.setChromiumFlags(['--no-sandbox', '--disable-gpu']);
+```
+
+### Environment Variables
+
+```typescript
+// Set environment variable
+Config.setEnvironmentVariable('MY_VAR', 'value');
 ```
 
 ## package.json Configuration

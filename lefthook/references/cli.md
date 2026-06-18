@@ -88,11 +88,11 @@ lefthook run pre-commit -c lefthook.prod.yml
 lefthook version
 ```
 
-### npx/npm Commands
+### npx/bun Commands
 
 ```bash
 # Install
-npm install --save-dev lefthook
+bun install --save-dev lefthook
 
 # Initialize hooks
 npx lefthook install
@@ -100,7 +100,7 @@ npx lefthook install
 # Run hooks
 npx lefthook run pre-commit
 
-# With npm scripts in package.json
+# With bun scripts in package.json
 {
   "scripts": {
     "prepare": "lefthook install"

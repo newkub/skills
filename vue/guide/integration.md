@@ -3,7 +3,7 @@
 ## State Management (Pinia)
 
 ```bash
-npm install pinia
+bun install pinia
 ```
 
 ```typescript
@@ -20,7 +20,7 @@ app.mount('#app');
 ## Routing (Vue Router)
 
 ```bash
-npm install vue-router
+bun install vue-router
 ```
 
 ```typescript
@@ -51,7 +51,7 @@ export default router;
 ## Testing (Vitest)
 
 ```bash
-npm install -D vitest @vue/test-utils
+bun install -D vitest @vue/test-utils
 ```
 
 ```typescript

@@ -25,11 +25,11 @@ npx create-tanstack-start-app@latest
 ### Dev Server
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 ### Build
 
 ```bash
-npm run build
+bun run build
 ```

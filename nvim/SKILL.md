@@ -42,39 +42,99 @@ auto_execution_mode: 3
 
 อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
 
-### 8. Modal Editing
+### 8. LSP Guide
+
+อ่าน `guide/lsp.md` สำหรับการใช้งาน LSP (Language Server Protocol)
+
+### 9. Treesitter Guide
+
+อ่าน `guide/treesitter.md` สำหรับการใช้งาน Treesitter สำหรับ syntax highlighting
+
+### 10. Diagnostics Guide
+
+อ่าน `guide/diagnostics.md` สำหรับการใช้งาน Diagnostic System
+
+### 11. Autocommands Guide
+
+อ่าน `guide/autocommands.md` สำหรับการใช้งาน Autocommands และ Events
+
+### 12. Terminal Guide
+
+อ่าน `guide/terminal.md` สำหรับการใช้งาน Terminal Emulator
+
+### 13. Buffer and Window Guide
+
+อ่าน `guide/buffer-window.md` สำหรับการจัดการ Buffers และ Windows
+
+### 14. Modal Editing
 
 อ่าน `key-concepts/modal-editing.md` สำหรับ modal editing
 
-### 9. Macros
+### 15. Macros
 
 อ่าน `key-concepts/macros.md` สำหรับ macros
 
-### 10. Registers
+### 16. Registers
 
 อ่าน `key-concepts/registers.md` สำหรับ registers
 
-### 11. Key Mappings
+### 17. Extmarks
+
+อ่าน `key-concepts/extmarks.md` สำหรับ Extmarks และ Decorations
+
+### 18. Completion
+
+อ่าน `key-concepts/completion.md` สำหรับ Completion System
+
+### 19. Quickfix
+
+อ่าน `key-concepts/quickfix.md` สำหรับ Quickfix และ Location Lists
+
+### 20. Key Mappings
 
 อ่าน `principles/key-mappings.md` สำหรับ key mappings
 
-### 12. Plugin Management
+### 21. Plugin Management
 
 อ่าน `principles/plugin-management.md` สำหรับ plugin management
 
-### 13. Lua API
+### 22. Performance Principles
+
+อ่าน `principles/performance.md` สำหรับหลักการปรับปรุง Performance
+
+### 23. Extensibility Principles
+
+อ่าน `principles/extensibility.md` สำหรับหลักการขยายความสามารถ
+
+### 24. Remote Development Principles
+
+อ่าน `principles/remote-development.md` สำหรับหลักการ Remote Development
+
+### 25. Lua API
 
 อ่าน `references/api.md` สำหรับ Lua API
 
-### 14. CLI Commands
+### 26. CLI Commands
 
 อ่าน `references/cli.md` สำหรับ CLI commands
 
-### 15. Configuration Options
+### 27. Configuration Options
 
 อ่าน `references/configuration.md` สำหรับ configuration options
 
-### 16. Official Website
+### 28. RPC API
+
+อ่าน `references/rpc-api.md` สำหรับ RPC API และ Remote Plugins
+
+### 29. Built-in Functions
+
+อ่าน `references/built-in-functions.md` สำหรับ Built-in Functions
+
+### 30. Expression Evaluation
+
+อ่าน `references/expression-evaluation.md` สำหรับ Expression Evaluation Engine
+
+### 31. Official Website
 
 อ่าน `references/website.md` สำหรับ official website
 

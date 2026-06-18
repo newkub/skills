@@ -14,11 +14,11 @@ Command-line interface reference สำหรับ Rolldown
 ## Installation
 
 ```bash
-# npm
-npm install -D rolldown
+# bun
+bun install -D rolldown
 
-# pnpm
-pnpm add -D rolldown
+# bun
+bun add -D rolldown
 
 # yarn
 yarn add -D rolldown

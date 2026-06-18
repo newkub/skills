@@ -15,28 +15,28 @@ description: ตั้งค่าโปรเจกต์ด้วย Node.js �
 ### 1. Initialize Project
 
 ```bash
-npm init -y
+bun init -y
 ```
 
 หรือใช้ TypeScript:
 
 ```bash
-npm init -y
-npm install -D typescript @types/node
+bun init -y
+bun install -D typescript @types/node
 ```
 
 ### 2. Install Dependencies
 
-ใช้ `npm install` สำหรับ production dependencies:
+ใช้ `bun install` สำหรับ production dependencies:
 
 ```bash
-npm install package-name
+bun install package-name
 ```
 
-ใช้ `npm install -D` สำหรับ dev dependencies:
+ใช้ `bun install -D` สำหรับ dev dependencies:
 
 ```bash
-npm install -D typescript @types/node
+bun install -D typescript @types/node
 ```
 
 ### 3. Configure TypeScript
@@ -90,13 +90,13 @@ console.log("Hello from Node.js!");
 ### 6. Run Development
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 ## Rules
 
-- ใช้ `npm install` สำหรับ dependencies
-- ใช้ `npm install -D` สำหรับ dev dependencies
+- ใช้ `bun install` สำหรับ dependencies
+- ใช้ `bun install -D` สำหรับ dev dependencies
 - ใช้ TypeScript strict mode
 - ใช้ `@types/node` สำหรับ type definitions
 - ใช้ `nodemon` สำหรับ development watch mode

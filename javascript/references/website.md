@@ -32,7 +32,7 @@
 
 ### Node.js
 - [Node.js API](https://nodejs.org/api/) - Node.js modules
-- [npm Documentation](https://docs.npmjs.com/) - npm guides
+- [bun Documentation](https://docs.bunjs.com/) - bun guides
 - [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices) - Security and patterns
 
 ## Community Resources
@@ -77,6 +77,6 @@
 
 - Current ECMAScript: ES2023
 - Node.js LTS: 20.x
-- npm: 10.x
+- bun: 10.x
 - First release: December 1995 (Netscape)
 - Current maintainer: ECMA International

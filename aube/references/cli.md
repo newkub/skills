@@ -5,7 +5,7 @@
 | Command | Description |
 |---------|-------------|
 | `mise use -g aube` | Install via mise (recommended) |
-| `npm install -g @endevco/aube` | Install via npm |
+| `bun install -g @endevco/aube` | Install via bun |
 | `brew install endevco/tap/aube` | Install via Homebrew |
 | `mise use aube` | Pin aube in project |
 | `aube --version` | Check version |

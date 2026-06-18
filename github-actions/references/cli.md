@@ -6,7 +6,7 @@ CLI commands สำหรับ GitHub Actions (via GitHub CLI)
 
 ```bash
 # Install GitHub CLI
-npm install -g gh
+bun install -g gh
 
 # Login
 gh auth login

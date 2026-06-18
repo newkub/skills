@@ -18,7 +18,7 @@ https://esm.sh/{package}@{version}/{path}
 
 | Component | Description | Example |
 |-----------|-------------|---------|
-| `package` | npm package name | `vue`, `@vue/core` |
+| `package` | bun package name | `vue`, `@vue/core` |
 | `version` | Version or tag | `3.4.21`, `next`, `3` |
 | `path` | File path in package | `dist/vue.esm.js` |
 
@@ -107,7 +107,7 @@ Response:
     "totalRequests": 1000000
   },
   "upstream": {
-    "npm": "ok"
+    "bun": "ok"
   }
 }
 ```
@@ -178,7 +178,7 @@ https://esm.sh/preact@10/hooks
 esm.sh also mirrors jsdelivr:
 
 ```text
-# Equivalent to cdn.jsdelivr.net/npm/vue@3
+# Equivalent to cdn.jsdelivr.net/bun/vue@3
 https://esm.sh/v3/vue
 ```
 
@@ -186,7 +186,7 @@ https://esm.sh/v3/vue
 
 ```text
 # Equivalent to unpkg.com/vue@3
-https://esm.sh/npm/vue@3
+https://esm.sh/bun/vue@3
 ```
 
 ## Headers

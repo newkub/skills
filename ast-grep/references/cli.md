@@ -7,8 +7,8 @@
 ## Installation
 
 ```bash
-# npm
-npm install -g @ast-grep/cli
+# bun
+bun install -g @ast-grep/cli
 
 # homebrew
 brew install ast-grep

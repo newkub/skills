@@ -8,17 +8,17 @@
 
 | Command | Description |
 |---------|-------------|
-| `npm create vite` | Create project |
-| `npm run dev` | Start dev server |
-| `npm run build` | Build production |
-| `npm run preview` | Preview build |
+| `bun create vite` | Create project |
+| `bun run dev` | Start dev server |
+| `bun run build` | Build production |
+| `bun run preview` | Preview build |
 
 ## Create React App
 
 ```bash
 bunx create-react-app my-app
 cd my-app
-npm start
+bun start
 ```
 
 ## Options
@@ -32,7 +32,7 @@ npm start
 ## Development
 
 ```bash
-npm run dev -- --port 3000 --host
+bun run dev -- --port 3000 --host
 ```
 
 ---

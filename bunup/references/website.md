@@ -71,12 +71,12 @@ Official resources and documentation for Bunup
 |------|-----|
 | Why Bunup | https://bunup.dev/notes/why-bunup.md |
 
-## NPM
+## bun
 
 | Resource | URL |
 |----------|-----|
-| Package | https://www.npmjs.com/package/bunup |
-| CLI Package | https://www.npmjs.com/package/@bunup/cli |
+| Package | https://www.bunjs.com/package/bunup |
+| CLI Package | https://www.bunjs.com/package/@bunup/cli |
 
 ## Social
 

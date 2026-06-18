@@ -5,7 +5,7 @@ CLI commands สำหรับ Knip
 ## Installation
 
 ```bash
-npm install -D knip
+bun install -D knip
 ```
 
 ## Run Commands

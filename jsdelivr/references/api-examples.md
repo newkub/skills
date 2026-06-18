@@ -14,28 +14,28 @@
   <title>jsDelivr Examples</title>
 
   <!-- Vue 3 -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/bun/vue@3.4.21/dist/vue.global.js"></script>
 
   <!-- React 18 -->
-  <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/bun/react@18/umd/react.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/bun/react-dom@18/umd/react-dom.development.js"></script>
 
   <!-- jQuery -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bun/jquery@3.7.1/dist/jquery.min.js"></script>
 
   <!-- Axios -->
-  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.2/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bun/axios@1.6.2/dist/axios.min.js"></script>
 
   <!-- Lodash -->
-  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bun/lodash@4.17.21/lodash.min.js"></script>
 
   <!-- CSS Frameworks -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/bun/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/bulma@0.9.4/css/bulma.min.css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body>
   <div class="container mt-4">
@@ -66,8 +66,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <script defer src="https://cdn.jsdelivr.net/bun/alpinejs@3.13.3/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/water.css@2/out/water.css">
 </head>
 <body>
   <div x-data="{ 
@@ -104,7 +104,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/water.css@2/out/water.css">
 </head>
 <body>
   <div id="app">
@@ -145,9 +145,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7/babel.min.js"></script>
+  <script crossorigin src="https://cdn.jsdelivr.net/bun/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://cdn.jsdelivr.net/bun/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/bun/@babel/standalone@7/babel.min.js"></script>
 </head>
 <body>
   <div id="root"></div>
@@ -181,7 +181,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/water.css@2/out/water.css">
 </head>
 <body>
   <div id="app"></div>
@@ -253,7 +253,7 @@
 // Get all available versions of a package
 async function getPackageVersions(packageName) {
   const response = await fetch(
-    `https://data.jsdelivr.com/v1/package/npm/${packageName}`
+    `https://data.jsdelivr.com/v1/package/bun/${packageName}`
   );
 
   if (!response.ok) {
@@ -285,7 +285,7 @@ getPackageVersions('vue')
 // Get all files in a specific version
 async function getPackageFiles(packageName, version) {
   const response = await fetch(
-    `https://data.jsdelivr.com/v1/package/npm/${packageName}@${version}`
+    `https://data.jsdelivr.com/v1/package/bun/${packageName}@${version}`
   );
 
   if (!response.ok) {
@@ -320,7 +320,7 @@ getPackageFiles('vue', '3.4.21')
 // Get the resolved CDN URL for a package
 async function resolvePackageEntry(packageName, version) {
   const response = await fetch(
-    `https://data.jsdelivr.com/v1/package/resolve/npm/${packageName}@${version}`
+    `https://data.jsdelivr.com/v1/package/resolve/bun/${packageName}@${version}`
   );
 
   if (!response.ok) {
@@ -349,7 +349,7 @@ resolvePackageEntry('vue', '3.4.21')
 // Get download stats for a package
 async function getPackageStats(packageName) {
   const response = await fetch(
-    `https://data.jsdelivr.com/v1/stats/packages/npm/${packageName}`
+    `https://data.jsdelivr.com/v1/stats/packages/bun/${packageName}`
   );
 
   if (!response.ok) {
@@ -409,10 +409,10 @@ findFiles('bootstrap', '5.3.2', '.css')
 <html>
 <head>
   <!-- Combine Vue, Lodash, and Axios -->
-  <script src="https://cdn.jsdelivr.net/combine/npm/vue@3/dist/vue.global.js,npm/lodash@4/lodash.min.js,npm/axios@1/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/combine/bun/vue@3/dist/vue.global.js,bun/lodash@4/lodash.min.js,bun/axios@1/dist/axios.min.js"></script>
 
   <!-- Combine CSS files -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@5/dist/css/bootstrap.min.css,npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/bun/bootstrap@5/dist/css/bootstrap.min.css,bun/@fortawesome/fontawesome-free@6/css/all.min.css">
 </head>
 <body>
   <div id="app">
@@ -450,8 +450,8 @@ findFiles('bootstrap', '5.3.2', '.css')
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.9.10/dist/htmx.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <script src="https://cdn.jsdelivr.net/bun/htmx.org@1.9.10/dist/htmx.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/water.css@2/out/water.css">
 </head>
 <body>
   <h1>HTMX Demo</h1>
@@ -599,8 +599,8 @@ findFiles('bootstrap', '5.3.2', '.css')
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
   <div class="section">
@@ -648,7 +648,7 @@ findFiles('bootstrap', '5.3.2', '.css')
 // ตรวจสอบว่า jsDelivr URL ถูกต้อง
 function validateJsdelivrUrl(url) {
   const patterns = {
-    npm: /^https:\/\/cdn\.jsdelivr\.net\/npm\/([^@]+)(?:@([^/]+))?(?:\/(.+))?$/,
+    bun: /^https:\/\/cdn\.jsdelivr\.net\/bun\/([^@]+)(?:@([^/]+))?(?:\/(.+))?$/,
     gh: /^https:\/\/cdn\.jsdelivr\.net\/gh\/([^/]+)\/([^@]+)(?:@([^/]+))?(?:\/(.+))?$/,
     esm: /^https:\/\/esm\.run\/([^@]+)(?:@(.+))?$/,
     combine: /^https:\/\/cdn\.jsdelivr\.net\/combine\/(.+)$/
@@ -665,8 +665,8 @@ function validateJsdelivrUrl(url) {
 }
 
 // Usage
-console.log(validateJsdelivrUrl('https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.js'));
-// { valid: true, type: 'npm', match: [...] }
+console.log(validateJsdelivrUrl('https://cdn.jsdelivr.net/bun/vue@3.4.21/dist/vue.global.js'));
+// { valid: true, type: 'bun', match: [...] }
 ```
 
 ## 10. Complete Application Example
@@ -679,7 +679,7 @@ console.log(validateJsdelivrUrl('https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vu
 <head>
   <meta charset="UTF-8">
   <title>Todo App - jsDelivr Demo</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bun/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
   <section class="section" id="app">
@@ -771,7 +771,7 @@ console.log(validateJsdelivrUrl('https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vu
     </div>
   </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/bun/vue@3/dist/vue.global.js"></script>
   <script>
     const { createApp, ref, computed } = Vue;
 

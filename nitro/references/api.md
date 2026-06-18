@@ -15,8 +15,8 @@
 
 | Function | Description |
 |----------|-------------|
-| `useStorage(base?)` | Access KV storage |
-| `useDatabase(name?)` | Access SQL database |
+| `useStorage(base?)` | Access KV storage (unstorage) |
+| `useDatabase(name?)` | Access SQL database (db0) |
 | `useRuntimeConfig()` | Access runtime configuration |
 | `useBase(base, handler)` | Set base path for routes |
 
@@ -48,7 +48,7 @@
 | `Response` | Web standard Response |
 | `ReadableStream` | Streamed response |
 
-## Storage API
+## Storage API (unstorage)
 
 | Method | Description |
 |--------|-------------|
@@ -76,8 +76,10 @@
 |----------|-------------|
 | `createError({ statusCode, statusMessage })` | Create HTTP error |
 
-## Database API
+## Database API (db0)
 
 | Method | Description |
 |--------|-------------|
 | `db.sql\`query\`` | Execute SQL template literal |
+| `db.exec\`query\`` | Execute SQL without return |
+| `db.prepare(query)` | Prepare statement for reuse |

@@ -5,7 +5,7 @@
 ### Tailwind CSS
 
 ```bash
-npm install -D @nuxtjs/tailwindcss
+bun install -D @nuxtjs/tailwindcss
 ```
 
 ```typescript
@@ -18,7 +18,7 @@ export default defineNuxtConfig({
 ### UnoCSS
 
 ```bash
-npm install -D @unocss/nuxt
+bun install -D @unocss/nuxt
 ```
 
 ```typescript
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
 ### Nuxt UI
 
 ```bash
-npm install @nuxt/ui
+bun install @nuxt/ui
 ```
 
 ```typescript
@@ -54,7 +54,7 @@ npx nuxi module add shadcn
 ### Pinia
 
 ```bash
-npm install @pinia/nuxt pinia
+bun install @pinia/nuxt pinia
 ```
 
 ```typescript
@@ -69,7 +69,7 @@ export default defineNuxtConfig({
 ### Auth.js
 
 ```bash
-npm install @sidebase/nuxt-auth
+bun install @sidebase/nuxt-auth
 ```
 
 ```typescript
@@ -87,14 +87,14 @@ export default defineNuxtConfig({
 ### Prisma
 
 ```bash
-npm install prisma @prisma/client
+bun install prisma @prisma/client
 npx prisma init
 ```
 
 ### Drizzle
 
 ```bash
-npm install drizzle-orm drizzle-kit
+bun install drizzle-orm drizzle-kit
 ```
 
 ## API Client
@@ -115,7 +115,7 @@ export function useApi() {
 ### Vitest
 
 ```bash
-npm install -D vitest @nuxt/test-utils
+bun install -D vitest @nuxt/test-utils
 ```
 
 ```typescript
@@ -130,7 +130,7 @@ export default defineConfig({
 ### Playwright
 
 ```bash
-npm install -D @playwright/test
+bun install -D @playwright/test
 npx playwright install
 ```
 
@@ -154,14 +154,14 @@ npx playwright install
 ```toml
 # netlify.toml
 [build]
-  command = "npm run generate"
+  command = "bun run generate"
   publish = ".output/public"
 ```
 
 ### Cloudflare Pages
 
 ```bash
-npm install -D @nuxtjs/cloudflare
+bun install -D @nuxtjs/cloudflare
 ```
 
 ## Analytics
@@ -169,7 +169,7 @@ npm install -D @nuxtjs/cloudflare
 ### Vercel Analytics
 
 ```bash
-npm install @vercel/analytics
+bun install @vercel/analytics
 ```
 
 ```vue
@@ -190,7 +190,7 @@ onMounted(() => {
 ### Sentry
 
 ```bash
-npm install @sentry/vue
+bun install @sentry/vue
 ```
 
 ```typescript

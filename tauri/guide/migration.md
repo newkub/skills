@@ -44,8 +44,8 @@ tauri = { version = "2.0", features = ["..."] }
   "version": "1.0.0",
   "identifier": "com.example.app",
   "build": {
-    "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build"
+    "beforeDevCommand": "bun run dev",
+    "beforeBuildCommand": "bun run build"
   }
 }
 ```
@@ -74,8 +74,8 @@ await window.setTitle('New Title')
 Plugins ใน v2 ต้องติดตั้งแยก:
 
 ```bash
-npm install @tauri-apps/plugin-fs
-npm install @tauri-apps-plugin-shell
+bun install @tauri-apps/plugin-fs
+bun install @tauri-apps-plugin-shell
 ```
 
 **v1**
@@ -147,8 +147,8 @@ Create `capabilities/default.json`:
 
 1. **Update package.json**
    ```bash
-   npm install @tauri-apps/api@latest
-   npm install @tauri-apps/cli@latest
+   bun install @tauri-apps/api@latest
+   bun install @tauri-apps/cli@latest
    ```
 
 2. **Update Cargo.toml**
@@ -159,10 +159,10 @@ Create `capabilities/default.json`:
 
 3. **Install Required Plugins**
    ```bash
-   npm install @tauri-apps/plugin-fs
-   npm install @tauri-apps/plugin-shell
-   npm install @tauri-apps/plugin-dialog
-   npm install @tauri-apps/plugin-notification
+   bun install @tauri-apps/plugin-fs
+   bun install @tauri-apps/plugin-shell
+   bun install @tauri-apps/plugin-dialog
+   bun install @tauri-apps/plugin-notification
    ```
 
 #### Phase 3: Configuration Migration
@@ -202,7 +202,7 @@ Create `capabilities/default.json`:
 
 1. **Run Development Server**
    ```bash
-   npm run tauri dev
+   bun run tauri dev
    ```
 
 2. **Test All Features**
@@ -213,7 +213,7 @@ Create `capabilities/default.json`:
 
 3. **Build Production**
    ```bash
-   npm run tauri build
+   bun run tauri build
    ```
 
 #### Phase 6: Deployment
@@ -236,7 +236,7 @@ Create `capabilities/default.json`:
 
 **Solution**:
 ```bash
-npm install @tauri-apps/plugin-<name>
+bun install @tauri-apps/plugin-<name>
 ```
 
 Update `src-tauri/capabilities/default.json`:

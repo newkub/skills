@@ -20,6 +20,32 @@
 | Suspense | Async component loading |
 | KeepAlive | Cached component instances |
 
+## Vue 3.5+ New Features
+
+| Feature | Description |
+|---------|-------------|
+| Reactive Props Destructuring | Built-in reactive destructuring (no toRefs needed) |
+| useTemplateRef() | Template ref management with dynamic bindings |
+| useId() | SSR-safe ID generation |
+| onWatcherCleanup() | Cleanup callbacks in watchers |
+| onEffectCleanup() | Cleanup in effects |
+| Lazy Hydration | Control when async components hydrate |
+| data-allow-mismatch | Suppress hydration mismatch warnings |
+| useHost()/useShadowRoot() | Custom element APIs |
+| Deferred Teleport | Teleport with defer prop |
+| watch numeric deep option | Control watch depth with number |
+| Reactivity optimizations | -56% memory, 10x faster arrays |
+
+## Vue 3.6 Beta Features
+
+| Feature | Description |
+|---------|-------------|
+| Vapor Mode | No Virtual DOM, direct DOM compilation |
+| createVaporApp() | Vapor-only app instances |
+| vaporInteropPlugin | Mix Vapor and VDOM components |
+| Reduced bundle size | 30-50% smaller baseline bundles |
+| Performance parity | Matches Solid and Svelte 5 benchmarks |
+
 ## Component Features
 
 | Feature | Description |
@@ -39,6 +65,8 @@
 | computed() | Computed value |
 | watch() | Watch for changes |
 | watchEffect() | Immediate watcher |
+| deferredComputed() | Deferred computation (3.5+) |
+| watchSyncEffect() | Synchronous effects (3.5+) |
 
 ## Build Features
 

@@ -23,6 +23,47 @@ const router = createRouter({
 });
 ```
 
+## TanStack Table
+
+```typescript
+const table = useReactTable({
+  data,
+  columns,
+  getCoreRowModel: getCoreRowModel(),
+  getSortedRowModel: getSortedRowModel(),
+  getFilteredRowModel: getFilteredRowModel(),
+  getPaginationRowModel: getPaginationRowModel(),
+});
+```
+
+## TanStack Form
+
+```typescript
+const form = useForm({
+  defaultValues: {
+    name: '',
+    email: '',
+  },
+  validators: {
+    onChange: ({ value }) => {
+      if (!value.email) return 'Email is required';
+    },
+  },
+});
+```
+
+## TanStack Store
+
+```typescript
+const store = createStore({
+  count: 0,
+  name: 'default',
+  increment: () => {
+    store.count++;
+  },
+});
+```
+
 ## TanStack Start
 
 ```typescript

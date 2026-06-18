@@ -4,17 +4,17 @@ Workflow for using jsDelivr CDN in projects.
 
 ## Steps
 
-1. **Determine the source** (npm, GitHub, or WordPress)
+1. **Determine the source** (bun, GitHub, or WordPress)
 2. **Choose the appropriate URL format**
 3. **Select the version** (exact, latest, or range)
 4. **Configure the file path**
 5. **Test the URL in browser**
 6. **Implement in project**
 
-## Example: Load npm package
+## Example: Load bun package
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+<script src="https://cdn.jsdelivr.net/bun/vue@3/dist/vue.global.js"></script>
 ```
 
 ## Example: Use ES Modules

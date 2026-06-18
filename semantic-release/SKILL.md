@@ -14,7 +14,7 @@ auto_execution_mode: 3
 - Automated version management
 - Semantic versioning อัตโนมัติ
 - Automated changelog generation
-- Package publishing ไปยัง npm, GitHub, GitLab
+- Package publishing ไปยัง bun, GitHub, GitLab
 
 ## Execute
 

@@ -9,7 +9,7 @@ Setup Oxlint ใน project
 ### 1. Install Oxlint
 
 ```bash
-npm install -D oxlint
+bun install -D oxlint
 ```
 
 ### 2. Initialize Config
@@ -53,7 +53,7 @@ oxlint --init
 ### 5. Run Lint
 
 ```bash
-npm run lint
+bun run lint
 ```
 
 ## Best Practices

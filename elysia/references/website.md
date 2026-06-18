@@ -12,7 +12,7 @@
 
 ## Package Registry
 
-| Package | npm | Description |
+| Package | bun | Description |
 |---------|-----|-------------|
 | **elysia** | `elysia` | Core framework |
 | **@elysia/cors** | `@elysiajs/cors` | CORS support |

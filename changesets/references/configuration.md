@@ -161,5 +161,5 @@ Packages to skip during versioning:
 | Variable | Description |
 |----------|-------------|
 | `GITHUB_TOKEN` | GitHub API token (for GitHub changelog) |
-| `NPM_TOKEN` | npm publish token |
+| `bun_TOKEN` | bun publish token |
 | `CI` | Set when running in CI environment |

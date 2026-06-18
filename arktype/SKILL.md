@@ -1,49 +1,83 @@
 ---
 title: ArkType
-description: TypeScript runtime validation library ที่ใช้ type syntax โดยตรง มาพร้อมความเร็ว 20x กว่า Zod และ type inference ที่แม่นยำ สำหรับ validation, type checking, และ schema definition
+description: TypeScript runtime validation ด้วย native type syntax 1:1, 20x faster than Zod
 auto_execution_mode: 3
+url: https://arktype.io/
 ---
 
 ## Goal
 
-ใช้ ArkType สำหรับ TypeScript runtime validation ด้วย type syntax โดยตรง ที่รวดเร็วและแม่นยำ
+ใช้ ArkType สำหรับ TypeScript runtime validation ด้วย type syntax โดยตรง
 
 ## Scope
 
 ใช้สำหรับ schema validation, type checking, และ type-safe validation ทั้ง compile-time และ runtime
 
+## โครงสร้าง Directory
+
+```
+arktype/
+├── SKILL.md
+├── guide/              (guides และ how-to)
+├── key-concepts/       (key concepts และ terminology)
+├── principles/         (principles และ design patterns)
+├── references/         (API docs, CLI, configuration)
+├── workflows/          (skill-specific workflows)
+├── templates/         (templates สำหรับ skill)
+└── scripts/            (automation scripts)
+```
+
 ## Execute
 
-- ติดตั้ง ArkType ด้วย `bun add arktype`
+### 1. Installation
+
+ติดตั้ง ArkType ด้วย `bun add arktype`
+
+### 2. Learn Basics
+
 - อ่าน `guide/installation.md` สำหรับการติดตั้งและ setup
 - อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
-- อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
-- อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
-- อ่าน `guide/configuration.md` สำหรับการตั้งค่า
+
+### 3. Understand Key Concepts
+
+- อ่าน `key-concepts/overview.md` สำหรับแนวคิดหลัก
+- อ่าน `key-concepts/architecture.md` สำหรับสถาปัตยกรรม
+- อ่าน `key-concepts/match.md` สำหรับ pattern matching
+- อ่าน `key-concepts/declare.md` สำหรับ declare API
+- อ่าน `key-concepts/generics.md` สำหรับ generics
+
+### 4. Apply Principles
+
+- อ่าน `principles/best-practices.md` สำหรับ best practices
+
+### 5. Advanced Guides
+
 - อ่าน `guide/features.md` สำหรับ features ที่มี
 - อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
-- อ่าน `references/api.md` สำหรับ API documentation
-- อ่าน `guide/best-practices.md` สำหรับ best practices
-- อ่าน `guide/performance.md` สำหรับ performance optimization
 - อ่าน `guide/integration.md` สำหรับการ integrate กับ frameworks
-- อ่าน `guide/architecture.md` สำหรับ system architecture
-- อ่าน `guide/structure.md` สำหรับ project structure
-- อ่าน `guide/migration.md` สำหรับ migration guides
-- อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+
+### 6. Reference Documentation
+
+- อ่าน `references/api.md` สำหรับ API reference
+- อ่าน `references/configuration.md` สำหรับ configuration options
+- อ่าน `references/website.md` สำหรับ official resources
 
 ## Rules
 
 - ใช้ `bun add arktype` สำหรับ installation
 - ใช้ `bun add -D arktype` สำหรับ dev dependencies
-- ใช้ backticks สำหรับ `type()`, `validate()`, commands
+- ใช้ backticks สำหรับ `type()`, `match()`, `declare()`, commands
 - ใช้ code blocks สำหรับ schema examples
-- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 - ใช้ type inference จาก ArkType เสมอ
 - หลีกเลี่ยง type assertions ที่ไม่จำเป็น
 - ใช้ `type()` สำหรับ schema definitions
+- ใช้ `match()` สำหรับ pattern matching
 - ใช้ ArkType สำหรับ performance-critical validation
 - หลีกเลี่ยง redundant validations
 - ใช้ caching สำหรับ repeated validations
+- ตั้งค่า TypeScript strict mode ใน `tsconfig.json`
+- ตั้งค่า VSCode quickSuggestions สำหรับ strings
+- ใช้ Standard Schema integration เมื่อจำเป็น
 
 ## Expected Outcome
 

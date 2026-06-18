@@ -39,7 +39,7 @@ Official resources and links for ESLint
 |--------|---------|------|
 | TypeScript | `@typescript-eslint/eslint-plugin` | https://typescript-eslint.io/ |
 | React | `eslint-plugin-react` | https://github.com/jsx-eslint/eslint-plugin-react |
-| React Hooks | `eslint-plugin-react-hooks` | https://www.npmjs.com/package/eslint-plugin-react-hooks |
+| React Hooks | `eslint-plugin-react-hooks` | https://www.bunjs.com/package/eslint-plugin-react-hooks |
 | Vue | `eslint-plugin-vue` | https://eslint.vuejs.org/ |
 | Node | `eslint-plugin-n` | https://github.com/eslint-community/eslint-plugin-n |
 | Import | `eslint-plugin-import` | https://github.com/import-js/eslint-plugin-import |
@@ -123,10 +123,10 @@ Official resources and links for ESLint
 
 ```bash
 # Install latest
-npm install --save-dev eslint@latest
+bun install --save-dev eslint@latest
 
 # Specific version
-npm install --save-dev eslint@9.0.0
+bun install --save-dev eslint@9.0.0
 ```
 
 ### Version Requirements

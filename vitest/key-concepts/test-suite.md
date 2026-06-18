@@ -1,6 +1,15 @@
----
-description: Test และ Test Suite ใน Vitest
----
+# Test Suite
+
+## Purpose
+
+อธิบายโครงสร้าง Test และ Test Suite ใน Vitest
+
+## Scope
+
+- Test Suite ด้วย `describe`
+- Test Case ด้วย `it`/`test`
+- Nested Suites
+- Skip/Only modifiers
 
 ## Test Suite
 

@@ -1,6 +1,15 @@
----
-description: Test Isolation - แต่ละ test ควรเป็นอิสระจากกัน
----
+# Test Isolation
+
+## Purpose
+
+อธิบายหลักการ Test Isolation - แต่ละ test ควรเป็นอิสระจากกัน
+
+## Scope
+
+- หลักการ Test Isolation
+- การใช้ beforeEach/afterEach
+- การใช้ mock data ใหม่ทุก test
+- การหลีกเลี่ยง shared state
 
 ## Principle
 

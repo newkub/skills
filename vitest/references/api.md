@@ -1,5 +1,18 @@
 # API
 
+## Purpose
+
+API reference สำหรับ Vitest public API
+
+## Scope
+
+- Test Functions (describe, it, expect)
+- vi Utilities (mock, spy, timers)
+- Hooks (beforeEach, afterEach, etc.)
+- Snapshot API
+- Coverage API
+- TypeScript Types
+
 Vitest public API reference.
 
 ## Test Functions

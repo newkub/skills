@@ -5,13 +5,13 @@
 ```bash
 npx nuxi@latest init my-nuxt-app
 cd my-nuxt-app
-npm install
+bun install
 ```
 
 ## Start Development Server
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 เปิด browser ไปที่ http://localhost:3000
@@ -120,16 +120,16 @@ definePageMeta({
 
 ```bash
 # Build
-npm run build
+bun run build
 
 # Preview production build
-npm run preview
+bun run preview
 ```
 
 ## Static Site Generation
 
 ```bash
-npm run generate
+bun run generate
 ```
 
 ## Next Steps

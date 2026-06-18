@@ -10,10 +10,10 @@
 
 ## Install Tauri CLI
 
-### Using npm (Recommended)
+### Using bun (Recommended)
 
 ```bash
-npm install --save-dev @tauri-apps/cli@latest
+bun install --save-dev @tauri-apps/cli@latest
 ```
 
 ### Using yarn
@@ -22,16 +22,16 @@ npm install --save-dev @tauri-apps/cli@latest
 yarn add -D @tauri-apps/cli@latest
 ```
 
-### Using pnpm
+### Using bun
 
 ```bash
-pnpm add -D @tauri-apps/cli@latest
+bun add -D @tauri-apps/cli@latest
 ```
 
 ### Using Deno
 
 ```bash
-deno add -D npm:@tauri-apps/cli@latest
+deno add -D bun:@tauri-apps/cli@latest
 ```
 
 ### Using Bun
@@ -49,13 +49,13 @@ cargo install tauri-cli --version "^2.0.0" --locked
 ## Install Tauri API
 
 ```bash
-npm install @tauri-apps/api@latest
+bun install @tauri-apps/api@latest
 ```
 
 ## Verify Installation
 
 ```bash
-npm run tauri -- --version
+bun run tauri -- --version
 # or
 cargo tauri --version
 ```

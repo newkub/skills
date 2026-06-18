@@ -1,16 +1,16 @@
 ---
 title: Tauri
-description: Framework for building desktop and mobile applications with Rust backend and web technologies frontend. Includes WebView, IPC, system APIs, and cross-platform deployment.
+description: Build cross-platform desktop and mobile applications with Rust backend and web frontend. Features small binaries, ACL security, multi-webview, and native system APIs.
 auto_execution_mode: 3
 ---
 
 ## Goal
 
-สร้าง desktop และ mobile applications ด้วย Rust backend และ web technologies frontend
+สร้าง cross-platform desktop และ mobile applications ด้วย Rust backend และ web technologies frontend
 
 ## Scope
 
-ใช้สำหรับการพัฒนา applications ที่ต้องการ performance สูง, security และ cross-platform deployment
+ใช้สำหรับการพัฒนา applications บน Linux, macOS, Windows, Android และ iOS ด้วย single codebase
 
 ## Execute
 
@@ -22,109 +22,79 @@ auto_execution_mode: 3
 
 อ่าน `guide/quick-start.md` สำหรับเริ่มต้นใช้งาน
 
-### 3. Learn Concepts
+### 3. Architecture
 
-อ่าน `guide/key-concept.md` สำหรับแนวคิดหลัก
+อ่าน `guide/architecture.md` สำหรับ multi-process architecture (Core process, WebView processes)
 
-### 4. Understand Workflow
+### 4. Key Concepts
 
-อ่าน `guide/how-it-works.md` สำหรับวิธีการทำงาน
+อ่าน `key-concepts/` สำหรับแนวคิดเฉพาะทาง (IPC, Commands, Events, ACL, Capabilities, WebView, System APIs)
 
-### 5. Key Concepts
-
-อ่าน `key-concepts/` สำหรับแนวคิดเฉพาะทาง (IPC, WebView, System APIs)
-
-### 6. Architecture
-
-อ่าน `guide/architecture.md` สำหรับ system architecture
-
-### 7. Project Structure
-
-อ่าน `guide/structure.md` สำหรับ project structure
-
-### 8. Configuration
+### 5. Configuration
 
 อ่าน `guide/configuration.md` สำหรับการตั้งค่า
-อ่าน `references/configuration.md` สำหรับ configuration reference
-ตั้งค่า `tauri.conf.json`
+อ่าน `references/configuration.md` สำหรับ configuration reference (tauri.conf.json, Capabilities, ACL)
 
-### 9. Features
+### 6. Security
 
-อ่าน `guide/features.md` สำหรับ features ที่มี
+อ่าน `guide/security.md` สำหรับ ACL system และ security best practices
 
-### 10. Patterns
+### 7. Features
 
-อ่าน `guide/patterns.md` สำหรับ patterns ทั่วไป
+อ่าน `guide/features.md` สำหรับ features ที่มี (mobile support, multi-webview, system tray, updater)
 
-### 11. Best Practices
+### 8. Principles
+
+อ่าน `principles/` สำหรับหลักการพัฒนา (separation of concerns, async programming, type safety)
+
+### 9. Best Practices
 
 อ่าน `guide/best-practices.md` สำหรับ best practices
 
-### 12. Principles
-
-อ่าน `principles/` สำหรับหลักการพัฒนา
-
-### 13. Security
-
-อ่าน `guide/security.md` สำหรับ security best practices
-
-### 14. Performance
-
-อ่าน `guide/performance.md` สำหรับ performance optimization
-
-### 15. Testing
-
-อ่าน `guide/testing.md` สำหรับ testing strategies
-
-### 16. Integration
+### 10. Integration
 
 อ่าน `guide/integration.md` สำหรับ framework integration
 
-### 17. Ecosystem
+### 11. Testing
 
-อ่าน `guide/ecosystem.md` สำหรับ Tauri ecosystem
+อ่าน `guide/testing.md` สำหรับ testing strategies
 
-### 18. Migration
+### 12. Performance
 
-อ่าน `guide/migration.md` สำหรับ migration guide
+อ่าน `guide/performance.md` สำหรับ performance optimization
 
-### 19. Troubleshooting
+### 13. Ecosystem
 
-อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
+อ่าน `guide/ecosystem.md` สำหรับ Tauri ecosystem และ plugins
 
-### 20. Create App
+### 14. CLI
 
-อ่าน `workflows/create-tauri-app.md` สำหรับสร้าง Tauri app
+อ่าน `references/cli.md` สำหรับ CLI documentation (init, dev, build, mobile)
 
-### 21. CLI
+### 15. API
 
-อ่าน `references/cli.md` สำหรับ CLI documentation
+อ่าน `references/api.md` สำหรับ API reference (Core APIs, Plugin APIs)
 
-### 22. API
+### 16. Resources
 
-อ่าน `references/api.md` สำหรับ API reference
-
-### 23. Resources
-
-อ่าน `references/website.md` สำหรับ resources
+อ่าน `references/website.md` สำหรับ resources (official docs, plugins, community)
 
 ## Rules
 
-- ใช้ Rust สำหรับ backend logic
-- ใช้ web technologies สำหรับ frontend
-- ใช้ IPC สำหรับ secure communication
-- ใช้ proper IPC validation
-- ไม่ hardcode secrets
-- Optimize bundle size
-- Test บน target platforms
+- ใช้ Rust สำหรับ backend logic ใน Core process
+- ใช้ web technologies สำหรับ frontend ใน WebView processes
+- ใช้ IPC สำหรับ secure communication ระหว่าง Core และ WebView
+- ใช้ ACL และ Capabilities สำหรับ permission management
+- ไม่ hardcode secrets ใน frontend
+- Optimize bundle size (สามารถเล็กถึง 600KB)
+- Test บน target platforms (desktop และ mobile)
 - Use Tauri plugins สำหรับ common tasks
 - ใช้ backticks สำหรับ `tauri`, commands, APIs
 - ใช้ code blocks สำหรับ configuration examples
-- ใช้ ansi markdown diagrams สำหรับ flow และ architecture
 
 ## Expected Outcome
 
-- Desktop และ mobile applications ที่มีขนาดเล็กและเร็ว
+- Cross-platform desktop และ mobile applications ที่มีขนาดเล็ก (600KB+)
 - Rust backend และ web technologies frontend
-- Cross-platform deployment
-- Security และ performance สูง
+- Secure foundation ด้วย ACL และ Capabilities
+- Multi-webview support สำหรับ complex UI layouts
