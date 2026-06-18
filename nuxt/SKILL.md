@@ -99,6 +99,9 @@ nuxt/
 - `nuxt-app-instance.md` - Nuxt App instance และ lifecycle
 - `rendering-modes.md` - rendering modes (SSR, SSG, ISR, SPA)
 - `app-directory.md` - app/ directory structure ใน Nuxt v4
+- `create-use-fetch.md` - createUseFetch และ createUseAsyncData factory functions (4.4+)
+- `use-announcer.md` - useAnnouncer composable สำหรับ accessibility (4.4+)
+- `typed-layout-props.md` - Typed layout props ใน definePageMeta (4.4+)
 
 ### 5. ปฏิบัติตามหลักการ
 
@@ -117,6 +120,7 @@ nuxt/
 - `website.md` - official documentation
 - `hooks.md` - Nuxt hooks system สำหรับ build และ runtime
 - `migration.md` - migration guide จาก Nuxt 2 ไป Nuxt 3
+- `nuxt-5-preparation.md` - Nuxt 5 preparation และ breaking changes
 
 ## Rules
 
