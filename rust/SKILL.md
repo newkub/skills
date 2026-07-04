@@ -151,8 +151,10 @@ cargo fmt
 - ทำให้ `select!` arms เป็น cancellation-safe
 - เพิ่ม `#[tracing::instrument]` สำหรับ debugging async code
 - ใช้ `async fn` และ `impl Trait` ใน traits สำหรับ async programming
-- ใช้ async closures (Rust 1.85+)
+- ใช้ async closures `async || {}` สำหรับ borrowing from closure captures (Rust 1.85+)
+- ใช้ `AsyncFn`, `AsyncFnMut`, `AsyncFnOnce` traits สำหรับ async closures (Rust 1.85+)
 - ใช้ `Future` และ `IntoFuture` จาก prelude (Rust 2024)
+- ใช้ `std::task::Waker::noop` สำหรับ no-op wakers (Rust 1.85+)
 
 ### Standard Library Features
 
