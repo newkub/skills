@@ -1,12 +1,13 @@
 ---
-title: Supabase
-description: Open source Firebase alternative สำหรับ build backend ด้วย PostgreSQL, Auth, Edge Functions, และ Realtime
-auto_execution_mode: 3
+name: supabase
+description: "Open source Firebase alternative สำหรับ build backend ด้วย PostgreSQL, Auth, Edge Functions, และ..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Supabase สำหรับ build backend ด้วย PostgreSQL, Auth, Edge Functions, และ Realtime
+
 
 ## Scope
 
@@ -16,6 +17,7 @@ auto_execution_mode: 3
 - Authentication และ authorization
 - Realtime subscriptions
 - Edge functions ด้วย Deno
+
 
 ## Execute
 
@@ -35,12 +37,14 @@ auto_execution_mode: 3
 
 อ่าน `references/website.md` สำหรับ official links และ resources
 
+
 ## Rules
 
 - ใช้ `bunx supabase init` สำหรับ initialize project
 - ใช้ `bunx supabase start` สำหรับ start local development
 - ใช้ `bunx supabase gen types` สำหรับ generate types
 - ใช้ migrations สำหรับ database schema
+
 
 ## Expected Outcome
 

@@ -1,16 +1,18 @@
 ---
-title: Verification
-description: ตรวจสอบคุณภาพ code อย่างครบถ้วนก่อน deploy
-auto_execution_mode: 3
+name: verification
+description: "ตรวจสอบคุณภาพ code อย่างครบถ้วนก่อน deploy"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ตรวจสอบคุณภาพ code อย่างครบถ้วนเพื่อให้มั่นใจว่าพร้อม deploy
 
+
 ## Scope
 
 ใช้สำหรับตรวจสอบคุณภาพ code ก่อน deploy หรือ merge
+
 
 ## Execute
 
@@ -72,6 +74,7 @@ auto_execution_mode: 3
 - Verify code comments เหมาะสม
 - Check changelog อัพเดทแล้ว
 
+
 ## Rules
 
 ### 1. All Checks Must Pass
@@ -100,6 +103,7 @@ auto_execution_mode: 3
 - บันทึก test failures
 - บันทึก security vulnerabilities
 - บันทึก performance bottlenecks
+
 
 ## Expected Outcome
 

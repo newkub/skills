@@ -1,16 +1,18 @@
 ---
-title: Guide Algorithms Data Structures
-description: คู่มือ algorithms และ data structures รวมถึง complexity analysis, sorting, searching, graph algorithms, และ dynamic programming
-auto_execution_mode: 3
+name: algorithms-data-structures
+description: "คู่มือ algorithms และ data structures รวมถึง complexity analysis, sorting, searching, graph..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ให้ผู้ใช้เข้าใจและสามารถใช้ algorithms และ data structures ได้อย่างมีประสิทธิภาพ
 
+
 ## Scope
 
 ใช้สำหรับเข้าใจ algorithms และ data structures, วิเคราะห์ time/space complexity, เลือก data structure ที่เหมาะสม, implement algorithms ที่ซับซ้อน, และ optimize algorithm performance
+
 
 ## Execute
 
@@ -22,12 +24,14 @@ auto_execution_mode: 3
 - อ้างอิง sources ที่เชื่อถือได้
 - อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
+
 ## Rules
 
 - ใช้ภาษาไทยในการอธิบาย
 - ให้ code examples ที่ชัดเจนและใช้งานได้จริง
 - อ้างอิง sources ที่เชื่อถือได้
 - อัปเดต content ให้ทันสมัยตาม version ล่าสุด
+
 
 ## Expected Outcome
 

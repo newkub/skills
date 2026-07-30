@@ -1,16 +1,18 @@
 ---
-title: Planning And Design
-description: วางแผนและออกแบบ architecture ก่อนเริ่มพัฒนา
-auto_execution_mode: 3
+name: planning-and-design
+description: "วางแผนและออกแบบ architecture ก่อนเริ่มพัฒนา"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 วางแผนและออกแบบ architecture ที่เหมาะสมกับ project requirements
 
+
 ## Scope
 
 ใช้สำหรับวางแผนและออกแบบ architecture ของ project ใหม่หรือ major refactor
+
 
 ## Execute
 
@@ -104,6 +106,7 @@ auto_execution_mode: 3
 - กำหนด dependencies ระหว่าง tasks
 - กำหนด estimates
 
+
 ## Rules
 
 ### 1. Document Everything
@@ -130,6 +133,7 @@ auto_execution_mode: 3
 - ทำตาม `/follow-clean-architecture` สำหรับ architecture
 - ทำตาม `/follow-drizzle` สำหรับ database
 - ทำตาม `/follow-best-practice` สำหรับ design
+
 
 ## Expected Outcome
 

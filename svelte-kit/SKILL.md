@@ -1,16 +1,18 @@
 ---
-title: SvelteKit
-description: Full-stack framework สำหรับสร้าง web applications ด้วย Svelte รองรับ file-based routing, SSR/CSR/Prerendering, Vite-powered HMR และ built-in optimization
-auto_execution_mode: 3
+name: svelte-kit
+description: "Full-stack framework สำหรับสร้าง web applications ด้วย Svelte รองรับ file-based routing,..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 สร้าง Svelte applications ด้วย SSR/CSR/Prerendering และ file-based routing ตามมาตรฐาน SvelteKit
 
+
 ## Scope
 
 ใช้สำหรับการพัฒนา Svelte applications ที่ต้องการ full-stack framework ด้วย Vite-powered HMR
+
 
 ## Execute
 
@@ -38,6 +40,7 @@ bun create svelte@latest my-app
 
 Build สำหรับ SSR, CSR หรือ prerendering
 
+
 ## Rules
 
 ### Development
@@ -60,6 +63,7 @@ Build สำหรับ SSR, CSR หรือ prerendering
 - แยก server และ client logic
 - ใช้ layouts สำหรับ shared UI
 - ใช้ error pages สำหรับ error handling
+
 
 ## Expected Outcome
 

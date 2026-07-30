@@ -1,16 +1,18 @@
 ---
-title: Lang Lua
-description: แนวทางการพัฒนา Lua ตาม best practices สำหรับ embedded scripting และ lightweight automation
-auto_execution_mode: 3
+name: lua
+description: "แนวทางการพัฒนา Lua ตาม best practices สำหรับ embedded scripting และ lightweight automation"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 พัฒนา Lua ตาม best practices สำหรับ embedded scripting และ lightweight automation
 
+
 ## Scope
 
 ใช้สำหรับการพัฒนา Lua ทุกประเภท เช่น game development, embedded systems, scripting within applications, rapid prototyping, configuration files, และ lightweight automation
+
 
 ## Execute
 
@@ -30,6 +32,7 @@ auto_execution_mode: 3
 - เขียน unit tests สำหรับ functions สำคัญ
 - ใช้ debugging tools
 - ตรวจสอบ memory usage และ performance
+
 
 ## Rules
 
@@ -53,6 +56,7 @@ auto_execution_mode: 3
 - ใช้ custom error types
 - log errors อย่างเหมาะสม
 - ให้ error messages ที่ชัดเจน
+
 
 ## Expected Outcome
 

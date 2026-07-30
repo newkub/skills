@@ -1,16 +1,18 @@
 ---
-title: Bun
-description: Bun JavaScript runtime - all-in-one toolkit สำหรับ JavaScript/TypeScript ที่เร็วกว่า Node.js 10-20 เท่า
-auto_execution_mode: 3
+name: bun
+description: "Bun JavaScript runtime - all-in-one toolkit สำหรับ JavaScript/TypeScript ที่เร็วกว่า Node.js..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Bun JavaScript runtime สำหรับพัฒนาและรันโปรเจกต์ JavaScript/TypeScript ด้วยประสิทธิภาพสูง
 
+
 ## Scope
 
 ใช้สำหรับโปรเจกต์ที่ต้องการประสิทธิภาพสูงกว่า Node.js หรือต้องการ all-in-one toolkit
+
 
 ## Execute
 
@@ -31,6 +33,7 @@ auto_execution_mode: 3
 - ดู `references/cli.md` สำหรับคำสั่ง CLI
 - ดู `references/website.md` สำหรับเอกสารอย่างเป็นทางการ
 
+
 ## Rules
 
 - ใช้ `bun` สำหรับ run scripts
@@ -39,6 +42,7 @@ auto_execution_mode: 3
 - ใช้ TypeScript เสมอ
 - ใช้ native APIs อย่างเหมาะสม
 - ใช้ performance optimization techniques
+
 
 ## Expected Outcome
 

@@ -1,12 +1,13 @@
 ---
-title: Wrangler
-description: CLI tool สำหรับ develop และ deploy Cloudflare Workers ด้วย edge computing
-auto_execution_mode: 3
+name: wrangler
+description: "CLI tool สำหรับ develop และ deploy Cloudflare Workers ด้วย edge computing"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Wrangler สำหรับ develop และ deploy Cloudflare Workers
+
 
 ## Scope
 
@@ -15,6 +16,7 @@ auto_execution_mode: 3
 - Edge computing ด้วย JavaScript/TypeScript
 - Serverless functions ที่ fast
 - KV storage, D1 database, R2 storage
+
 
 ## Execute
 
@@ -46,6 +48,7 @@ Deploy:
 bunx wrangler deploy
 ```
 
+
 ## Rules
 
 - ใช้ `bun add -D wrangler` สำหรับติดตั้ง
@@ -53,10 +56,10 @@ bunx wrangler deploy
 - ใช้ `bunx wrangler dev` สำหรับ local development
 - ใช้ `bunx wrangler deploy` สำหรับ deploy
 
+
 ## Expected Outcome
 
 - Cloudflare Workers ที่ deployed
 - Edge computing ที่ fast
 - Serverless functions ที่ efficient
 - KV/D1/R2 ที่ integrated
-

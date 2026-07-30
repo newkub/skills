@@ -1,16 +1,18 @@
 ---
-title: TSDown
-description: TypeScript development tool สำหรับ build, test, และ run TypeScript projects ด้วย Bun runtime
-auto_execution_mode: 3
+name: tsdown
+description: "TypeScript development tool สำหรับ build, test, และ run TypeScript projects ด้วย Bun runtime"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ TSDown สำหรับ build, test, และ run TypeScript projects ด้วย Bun runtime
 
+
 ## Scope
 
 ใช้สำหรับ TypeScript development ด้วย TSDown tool
+
 
 ## Execute
 
@@ -34,6 +36,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `bun add -D tsdown` สำหรับ installation
@@ -44,6 +47,7 @@ auto_execution_mode: 3
 - ใช้ TypeScript เสมอ
 - ใช้ proper build configuration
 - ใช้ proper test configuration
+
 
 ## Expected Outcome
 

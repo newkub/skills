@@ -1,16 +1,18 @@
 ---
-title: Tool Lefthook
-description: แนวทางการใช้งาน Lefthook สำหรับจัดการ Git hooks อย่างมีประสิทธิภาพ
-auto_execution_mode: 3
+name: lefthook
+description: "แนวทางการใช้งาน Lefthook สำหรับจัดการ Git hooks อย่างมีประสิทธิภาพ"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Lefthook สำหรับจัดการ Git hooks อย่างมีประสิทธิภาพ
 
+
 ## Scope
 
 ใช้สำหรับจัดการ Git hooks อย่างมีประสิทธิภาพ, automate code quality checks, enforce commit message standards, และ run tests ก่อน push
+
 
 ## Execute
 
@@ -29,6 +31,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `bun add -D lefthook` สำหรับติดตั้ง
@@ -38,6 +41,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

@@ -1,55 +1,18 @@
 ---
-title: Vitest
-description: Next Generation Testing Framework สำหรับ Vite ด้วย TypeScript, HMR, Jest-compatible API, และ Browser Mode
-auto_execution_mode: 3
-related_workflows:
-  - /follow-vitest
-  - /write-test
-  - /run-test
+name: vitest
+description: "Next Generation Testing Framework สำหรับ Vite ด้วย TypeScript, HMR, Jest-compatible API, และ..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Vitest สำหรับ unit testing ด้วย Vite-native integration, watch mode, Jest-compatible API, และ Browser Mode
+
 
 ## Scope
 
 ใช้สำหรับ unit testing ใน Vite projects, TypeScript projects, และ projects ที่ต้องการ Jest-compatible API หรือ Browser Mode
 
-## โครงสร้าง Directory
-
-```
-vitest/
-├── SKILL.md
-├── guide/
-│   ├── installation.md
-│   ├── quick-start.md
-│   ├── configuration.md
-│   ├── features.md
-│   ├── browser-mode.md
-│   ├── coverage.md
-│   ├── mocking.md
-│   ├── benchmarking.md
-│   ├── in-source-testing.md
-│   └── migration.md
-├── key-concepts/
-│   ├── test-suite.md
-│   ├── hooks.md
-│   ├── matchers.md
-│   ├── fixtures.md
-│   └── test-context.md
-├── principles/
-│   ├── arrange-act-assert.md
-│   ├── test-isolation.md
-│   └── test-naming.md
-├── references/
-│   ├── api.md
-│   ├── cli.md
-│   └── configuration.md
-└── workflows/
-    ├── setup-vitest.md
-    └── write-test.md
-```
 
 ## Execute
 
@@ -124,45 +87,6 @@ Migration จาก test frameworks อื่น
 
 - อ่าน `guide/migration.md` สำหรับ migration
 
-## หมวดหมู่ไฟล์
-
-### Guide
-
-- **Installation** - อ่าน `guide/installation.md` สำหรับการติดตั้ง
-- **Quick Start** - อ่าน `guide/quick-start.md` สำหรับเริ่มต้น
-- **Configuration** - อ่าน `guide/configuration.md` สำหรับการตั้งค่า
-- **Features** - อ่าน `guide/features.md` สำหรับ features หลัก
-- **Browser Mode** - อ่าน `guide/browser-mode.md` สำหรับ Browser Mode
-- **Coverage** - อ่าน `guide/coverage.md` สำหรับ code coverage
-- **Mocking** - อ่าน `guide/mocking.md` สำหรับ mocking
-- **Benchmarking** - อ่าน `guide/benchmarking.md` สำหรับ benchmarking
-- **In-Source Testing** - อ่าน `guide/in-source-testing.md` สำหรับ in-source testing
-- **Migration** - อ่าน `guide/migration.md` สำหรับ migration
-
-### Key Concepts
-
-- **Test Suite** - อ่าน `key-concepts/test-suite.md` สำหรับ test suite
-- **Hooks** - อ่าน `key-concepts/hooks.md` สำหรับ test hooks
-- **Matchers** - อ่าน `key-concepts/matchers.md` สำหรับ matchers
-- **Fixtures** - อ่าน `key-concepts/fixtures.md` สำหรับ fixtures
-- **Test Context** - อ่าน `key-concepts/test-context.md` สำหรับ test context
-
-### Principles
-
-- **Arrange-Act-Assert** - อ่าน `principles/arrange-act-assert.md` สำหรับ AAA pattern
-- **Test Isolation** - อ่าน `principles/test-isolation.md` สำหรับ test isolation
-- **Test Naming** - อ่าน `principles/test-naming.md` สำหรับ test naming
-
-### References
-
-- **API Documentation** - อ่าน `references/api.md` สำหรับ API reference
-- **CLI Commands** - อ่าน `references/cli.md` สำหรับ CLI commands
-- **Configuration Reference** - อ่าน `references/configuration.md` สำหรับ configuration reference
-
-### Workflows
-
-- **Setup Vitest** - อ่าน `workflows/setup-vitest.md` สำหรับ setup Vitest
-- **Write Test** - อ่าน `workflows/write-test.md` สำหรับเขียน tests
 
 ## Rules
 
@@ -192,6 +116,7 @@ Migration จาก test frameworks อื่น
 - ใช้ `__mocks__` folders สำหรับ automatic mocking
 - ใช้ `--ui` flag สำหรับ Vitest UI
 - ใช้ `bench()` สำหรับ benchmarking tests
+
 
 ## Expected Outcome
 

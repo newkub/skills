@@ -1,16 +1,18 @@
 ---
-title: Monitoring And Observability
-description: ตั้งค่า monitoring และ observability สำหรับ production
-auto_execution_mode: 3
+name: monitoring-and-observability
+description: "ตั้งค่า monitoring และ observability สำหรับ production"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ตั้งค่า monitoring และ observability เพื่อติดตามและสังเกต application ใน production
 
+
 ## Scope
 
 ใช้สำหรับตั้งค่า monitoring และ observability สำหรับ production applications
+
 
 ## Execute
 
@@ -42,6 +44,7 @@ auto_execution_mode: 3
 - Configure uptime alerts
 - Setup on-call rotation
 
+
 ## Rules
 
 ### 1. Essential Metrics
@@ -70,6 +73,7 @@ auto_execution_mode: 3
 - บันทึก alerting rules
 - บันทึก on-call procedures
 - บันทึกใน `docs/monitoring/`
+
 
 ## Expected Outcome
 

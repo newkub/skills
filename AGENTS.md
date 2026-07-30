@@ -8,11 +8,11 @@
 
 ## Execute
 
-สร้างหรือแก้ไข skill ตาม workflow `/write-skills`
+สร้างหรือแก้ไข skill ตาม workflow `/write-devin-skills`
 
 ## Rules
 
-ทุก skill ต้องทำตาม workflow `/write-skills` อย่างเคร่งครัด
+ทุก skill ต้องทำตาม workflow `/write-devin-skills` อย่างเคร่งครัด
 
 ## Expected Outcome
 

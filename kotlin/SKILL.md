@@ -1,16 +1,18 @@
 ---
-title: Lang Kotlin
-description: แนวทางการพัฒนาด้วย Kotlin ตาม best practices สำหรับ modern software development ที่เน้น null safety, coroutines และ concise syntax
-auto_execution_mode: 3
+name: kotlin
+description: "แนวทางการพัฒนาด้วย Kotlin ตาม best practices สำหรับ modern software development ที่เน้น null..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 พัฒนา Kotlin ตาม best practices สำหรับ modern software development ที่เน้น null safety, coroutines และ concise syntax
 
+
 ## Scope
 
 ใช้สำหรับการพัฒนา Kotlin ทุกประเภท เช่น Android development, server-side development, multiplatform development, scripting and automation, และ desktop applications
+
 
 ## Execute
 
@@ -31,6 +33,7 @@ auto_execution_mode: 3
 - เขียน unit tests ด้วย Kotlin Test
 - ใช้ debugging tools ใน IntelliJ IDEA
 - ตรวจสอบ performance และ memory usage
+
 
 ## Rules
 
@@ -54,6 +57,7 @@ auto_execution_mode: 3
 - ใช้ sealed classes สำหรับ error types
 - log errors อย่างเหมาะสม
 - ให้ error messages ที่ชัดเจน
+
 
 ## Expected Outcome
 

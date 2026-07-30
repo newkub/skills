@@ -1,16 +1,18 @@
 ---
-title: Tool Changesets
-description: แนวทางการใช้งาน Changesets สำหรับ version management และ release automation ใน monorepos
-auto_execution_mode: 3
+name: changesets
+description: "แนวทางการใช้งาน Changesets สำหรับ version management และ release automation ใน monorepos"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Changesets สำหรับ version management และ release automation ใน monorepos
 
+
 ## Scope
 
 ใช้สำหรับ version management ใน monorepos, automated changelog generation, release automation, และ semantic versioning
+
 
 ## Execute
 
@@ -31,6 +33,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `bun add -D @changesets/cli` สำหรับ installation
@@ -40,6 +43,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

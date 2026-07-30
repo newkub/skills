@@ -1,16 +1,18 @@
 ---
-title: Software Security
-description: คู่มือ software security รวมถึง authentication, authorization, cryptography, OWASP top 10, และ secure coding practices
-auto_execution_mode: 3
+name: software-security
+description: "คู่มือ software security รวมถึง authentication, authorization, cryptography, OWASP top 10, และ..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ให้ผู้ใช้เข้าใจและสามารถ implement security ใน applications ได้อย่างมีประสิทธิภาพ
 
+
 ## Scope
 
 ใช้สำหรับ authentication และ authorization, cryptography ใน applications, ป้องกัน OWASP top 10 vulnerabilities, apply secure coding practices, และ design secure architecture
+
 
 ## Execute
 
@@ -22,12 +24,14 @@ auto_execution_mode: 3
 - อ้างอิง sources ที่เชื่อถือได้
 - อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
+
 ## Rules
 
 - ใช้ภาษาไทยในการอธิบาย
 - ให้ code examples ที่ชัดเจนและใช้งานได้จริง
 - อ้างอิง sources ที่เชื่อถือได้
 - อัปเดต content ให้ทันสมัยตาม version ล่าสุด
+
 
 ## Expected Outcome
 

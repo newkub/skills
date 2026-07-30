@@ -1,16 +1,18 @@
 ---
-title: Tool Knip
-description: แนวทางการใช้งาน Knip สำหรับหา unused files, dependencies และ exports
-auto_execution_mode: 3
+name: knip
+description: "แนวทางการใช้งาน Knip สำหรับหา unused files, dependencies และ exports"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Knip สำหรับหา unused files, dependencies และ exports
 
+
 ## Scope
 
 ใช้สำหรับหา unused files, หา unused dependencies, หา unused exports, และ TypeScript/JavaScript projects
+
 
 ## Execute
 
@@ -29,6 +31,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `bun add -D knip` สำหรับติดตั้ง
@@ -37,6 +40,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

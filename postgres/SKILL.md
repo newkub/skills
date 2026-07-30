@@ -1,16 +1,18 @@
 ---
-title: Tool Postgres
-description: แนวทางการใช้งาน PostgreSQL ซึ่งเป็น world's most advanced open source relational database system
-auto_execution_mode: 3
+name: postgres
+description: "แนวทางการใช้งาน PostgreSQL ซึ่งเป็น world's most advanced open source relational database system"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน PostgreSQL สำหรับ relational database
 
+
 ## Scope
 
 ใช้สำหรับ relational database ที่ powerful, ACID transactions, complex queries, extensions (PostGIS, pgvector, ฯลฯ), และ data integrity และ reliability
+
 
 ## Execute
 
@@ -30,6 +32,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `psql` สำหรับ command-line interface
@@ -39,6 +42,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands, SQL keywords
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

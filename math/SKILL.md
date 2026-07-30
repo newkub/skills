@@ -1,16 +1,18 @@
 ---
-title: Guide Math
-description: Mathematics guide for software development covering computation, discrete mathematics, information theory, linear algebra, and set theory.
-auto_execution_mode: 3
+name: math
+description: "Mathematics guide for software development covering computation, discrete mathematics,..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ให้ผู้ใช้เข้าใจและสามารถประยุกต์ใช้คณิตศาสตร์ในการพัฒนาซอฟต์แวร์ได้อย่างมีประสิทธิภาพ
 
+
 ## Scope
 
 ใช้สำหรับเข้าใจคณิตศาสตร์ที่ใช้ใน algorithms, เรียนรู้ discrete math สำหรับ data structures, เข้าใจ linear algebra สำหรับ ML และ graphics, เรียนรู้ information theory สำหรับ data compression, เข้าใจ set theory สำหรับ database และ logic, และวิเคราะห์ algorithm complexity
+
 
 ## Execute
 
@@ -22,12 +24,14 @@ auto_execution_mode: 3
 - อ้างอิง sources ที่เชื่อถือได้
 - อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
+
 ## Rules
 
 - ใช้ภาษาไทยในการอธิบาย
 - ให้ examples ที่ชัดเจนและใช้งานได้จริง
 - อ้างอิง sources ที่เชื่อถือได้
 - อัปเดต content ให้ทันสมัยตาม version ล่าสุด
+
 
 ## Expected Outcome
 

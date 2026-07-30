@@ -1,31 +1,18 @@
 ---
-title: ArkType
-description: TypeScript runtime validation ด้วย native type syntax 1:1, 20x faster than Zod
-auto_execution_mode: 3
-url: https://arktype.io/
+name: arktype
+description: "TypeScript runtime validation ด้วย native type syntax 1:1, 20x faster than Zod"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ ArkType สำหรับ TypeScript runtime validation ด้วย type syntax โดยตรง
+
 
 ## Scope
 
 ใช้สำหรับ schema validation, type checking, และ type-safe validation ทั้ง compile-time และ runtime
 
-## โครงสร้าง Directory
-
-```
-arktype/
-├── SKILL.md
-├── guide/              (guides และ how-to)
-├── key-concepts/       (key concepts และ terminology)
-├── principles/         (principles และ design patterns)
-├── references/         (API docs, CLI, configuration)
-├── workflows/          (skill-specific workflows)
-├── templates/         (templates สำหรับ skill)
-└── scripts/            (automation scripts)
-```
 
 ## Execute
 
@@ -62,6 +49,7 @@ arktype/
 - อ่าน `references/configuration.md` สำหรับ configuration options
 - อ่าน `references/website.md` สำหรับ official resources
 
+
 ## Rules
 
 - ใช้ `bun add arktype` สำหรับ installation
@@ -78,6 +66,7 @@ arktype/
 - ตั้งค่า TypeScript strict mode ใน `tsconfig.json`
 - ตั้งค่า VSCode quickSuggestions สำหรับ strings
 - ใช้ Standard Schema integration เมื่อจำเป็น
+
 
 ## Expected Outcome
 

@@ -1,16 +1,18 @@
 ---
-title: Deployment
-description: Deploy ไป production อย่างปลอดภัยและถูกต้อง
-auto_execution_mode: 3
+name: deployment
+description: "Deploy ไป production อย่างปลอดภัยและถูกต้อง"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 Deploy ไป production อย่างปลอดภัยและถูกต้อง
 
+
 ## Scope
 
 ใช้สำหรับ deploy library หรือ application ไป production
+
 
 ## Execute
 
@@ -62,6 +64,7 @@ Deploy serverless functions
 - Configure bindings & secrets
 - Verify function ใช้งานได้
 
+
 ## Rules
 
 ### 1. Use Existing Workflows
@@ -88,6 +91,7 @@ Deploy serverless functions
 - บันทึก version ก่อนหน้า
 - บันทึก rollback steps
 - Test rollback process
+
 
 ## Expected Outcome
 

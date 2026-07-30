@@ -1,16 +1,18 @@
 ---
-title: Guide Runtime Optimization
-description: คู่มือการ optimize runtime รวมถึง JIT compilation, memory management, hot path optimization, และ profile-guided optimization
-auto_execution_mode: 3
+name: runtime-optimization
+description: "คู่มือการ optimize runtime รวมถึง JIT compilation, memory management, hot path optimization, และ..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ให้ผู้ใช้เข้าใจและสามารถ optimize runtime systems ได้อย่างมีประสิทธิภาพ
 
+
 ## Scope
 
 ใช้สำหรับ JIT compiler implementation, memory management optimization, hot path optimization, profile-guided optimization, และ runtime performance tuning
+
 
 ## Execute
 
@@ -22,12 +24,14 @@ auto_execution_mode: 3
 - อ้างอิง sources ที่เชื่อถือได้
 - อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
+
 ## Rules
 
 - ใช้ภาษาไทยในการอธิบาย
 - ให้ code examples ที่ชัดเจนและใช้งานได้จริง
 - อ้างอิง sources ที่เชื่อถือได้
 - อัปเดต content ให้ทันสมัยตาม version ล่าสุด
+
 
 ## Expected Outcome
 

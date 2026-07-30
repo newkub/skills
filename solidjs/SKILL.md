@@ -1,16 +1,18 @@
 ---
-title: SolidJS
-description: พัฒนา SolidJS applications ด้วย fine-grained reactivity และ no virtual DOM
-auto_execution_mode: 3
+name: solidjs
+description: "พัฒนา SolidJS applications ด้วย fine-grained reactivity และ no virtual DOM"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 พัฒนา reactive UI applications ด้วย SolidJS โดยใช้ fine-grained reactivity, compile-time optimization, และ no virtual DOM
 
+
 ## Scope
 
 ใช้สำหรับพัฒนา web applications ด้วย SolidJS library รวมถึง component development, state management, และ performance optimization
+
 
 ## Execute
 
@@ -46,6 +48,7 @@ auto_execution_mode: 3
 - ใช้ fine-grained reactivity เสมอ
 - หลีกเลี่ยง virtual DOM overhead
 - ใช้ compile-time optimization จาก JSX compilation
+
 
 ## Rules
 
@@ -86,6 +89,7 @@ auto_execution_mode: 3
 - จัดโครงสร้างตาม features หรือ modules
 - แยก components, hooks, utilities ออกจากกัน
 - แต่ละไฟล์ต้องไม่เกิน 250 บรรทัด
+
 
 ## Expected Outcome
 

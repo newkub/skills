@@ -1,16 +1,18 @@
 ---
-title: Maintenance
-description: ดูแลรักษา project อย่างมีระบบ
-auto_execution_mode: 3
+name: maintenance
+description: "ดูแลรักษา project อย่างมีระบบ"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ดูแลรักษา project อย่างมีระบบเพื่อให้ codebase อยู่ในสภาพดีเสมอ
 
+
 ## Scope
 
 ใช้สำหรับดูแลรักษา project ที่อยู่ใน production
+
 
 ## Execute
 
@@ -59,6 +61,7 @@ Refactor code
 - Maintain changelog
 - Update examples และ tutorials
 
+
 ## Rules
 
 ### 1. Regular Updates
@@ -84,6 +87,7 @@ Refactor code
 - อัพเดท README เมื่อมีการเปลี่ยนแปลง
 - อัพเดท API documentation เมื่อมีการเปลี่ยนแปลง
 - อัพเดท changelog เมื่อมี release
+
 
 ## Expected Outcome
 

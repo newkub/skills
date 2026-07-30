@@ -1,10 +1,13 @@
 ---
-description: Devin/Cascade AI coding assistant สำหรับ autonomous software engineering
+name: devin
+description: "Devin/Cascade AI coding assistant สำหรับ autonomous software engineering"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ skill นี้เพื่อเข้าใจและใช้งาน Devin/Cascade AI coding assistant สำหรับ autonomous software development, code generation, debugging, และ testing
+
 
 ## Scope
 
@@ -15,6 +18,7 @@ description: Devin/Cascade AI coding assistant สำหรับ autonomous sof
 - เขียน prompts ที่มีประสิทธิภาพสำหรับ coding agents
 - Debug และ review code ที่ agents สร้าง
 - จัดการ fleets ของ local และ cloud agents
+
 
 ## Execute
 
@@ -55,72 +59,6 @@ description: Devin/Cascade AI coding assistant สำหรับ autonomous sof
 - `review-code.md`: Review code จาก agents
 - `deploy-with-agent.md`: Deploy ด้วย agents
 
-## โครงสร้าง Directory
-
-```
-devin/
-├── SKILL.md
-├── guide/                    # Guides สำหรับเริ่มต้นและใช้งาน
-│   ├── getting-started.md
-│   ├── prompt-engineering.md
-│   └── advanced-usage.md
-├── key-concepts/             # Core concepts ของ Devin/Cascade
-│   ├── swe-models.md
-│   ├── agent-client-protocol.md
-│   ├── spaces.md
-│   ├── supercomplete.md
-│   └── context-awareness.md
-├── principles/               # Best practices และ guidelines
-│   ├── prompt-best-practices.md
-│   ├── debugging.md
-│   ├── security.md
-│   └── performance.md
-├── references/               # API references และ documentation
-│   ├── api.md
-│   ├── cli.md
-│   └── configuration.md
-├── workflows/               # Workflows สำหรับ tasks เฉพาะ
-│   ├── setup-devin.md
-│   ├── create-agent.md
-│   ├── debug-with-agent.md
-│   ├── review-code.md
-│   └── deploy-with-agent.md
-├── templates/               # Templates สำหรับ prompts และ configs
-│   └── prompts/
-└── scripts/                 # Utility scripts
-```
-
-## หมวดหมู่ไฟล์
-
-### Guides
-- `guide/getting-started.md`: เริ่มต้นใช้งาน Devin Desktop และ Cascade
-- `guide/prompt-engineering.md`: เขียน prompts ที่มีประสิทธิภาพ
-- `guide/advanced-usage.md`: การใช้งานขั้นสูง
-
-### Key Concepts
-- `key-concepts/swe-models.md`: เข้าใจ SWE models ต่างๆ
-- `key-concepts/agent-client-protocol.md`: Agent Client Protocol
-- `key-concepts/spaces.md`: Spaces และ shared context
-- `key-concepts/supercomplete.md`: Supercomplete autocomplete
-- `key-concepts/context-awareness.md`: Context awareness และ Fast Context
-
-### Principles
-- `principles/prompt-best-practices.md`: Best practices สำหรับ prompts
-- `principles/debugging.md`: Debugging ด้วย agents
-- `principles/security.md`: Security และ privacy
-- `principles/performance.md`: Performance optimization
-
-### References
-- `references/api.md`: API reference
-- `references/cli.md`: CLI commands
-- `references/configuration.md`: Configuration options
-
-### Workflows
-- `workflows/setup-devin.md`: Setup Devin Desktop
-- `workflows/create-agent.md`: สร้าง custom agents
-- `workflows/debug-with-agent.md`: Debug ด้วย agents
-- `workflows/review-code.md`: Review code จาก agents
-- `workflows/deploy-with-agent.md`: Deploy ด้วย agents
 
 ## Rules
 
@@ -153,6 +91,7 @@ devin/
 - Review code สำหรับ security issues
 - ใช้ environment variables สำหรับ secrets
 - Follow security best practices
+
 
 ## Expected Outcome
 

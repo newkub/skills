@@ -1,16 +1,18 @@
 ---
-title: Next.js
-description: React framework for building web applications with SSR, SSG, ISR, and App Router. Includes server components, client components, routing, data fetching, and optimization features.
-auto_execution_mode: 3
+name: next
+description: "React framework for building web applications with SSR, SSG, ISR, and App Router. Includes..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 สร้าง React applications ด้วย SSR/SSG/ISR และ App Router
 
+
 ## Scope
 
 ใช้สำหรับการพัฒนา React applications ที่ต้องการ SEO-friendly, performance สูง และ optimized loading
+
 
 ## Execute
 
@@ -74,6 +76,7 @@ auto_execution_mode: 3
 
 อ่าน `workflows/create-nextjs-app.md` สำหรับ workflow สร้าง Next.js app
 
+
 ## Rules
 
 - ใช้ TypeScript สำหรับ type safety
@@ -86,6 +89,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

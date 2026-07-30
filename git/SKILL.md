@@ -1,92 +1,18 @@
 ---
-title: Tool Git
-description: แนวทางการใช้งาน Git สำหรับ version control และ collaborative development
-auto_execution_mode: 3
+name: git
+description: "แนวทางการใช้งาน Git สำหรับ version control และ collaborative development"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Git สำหรับ version control และ collaborative development
+
 
 ## Scope
 
 ใช้สำหรับ track การเปลี่ยนแปลงของ code, ทำงานร่วมกับ team, version control, rollback การเปลี่ยนแปลง, และ code review ผ่าน pull requests
 
-## โครงสร้าง Directory
-
-```
-git/
-├── SKILL.md
-├── learn/
-│   ├── guide/              # Guides สำหรับการใช้งาน
-│   ├── key-concepts/       # แนวคิดพื้นฐานของ Git
-│   └── principles/         # Best practices และ principles
-├── references/             # API, CLI, configuration references
-└── workflows/              # Workflows สำหรับ tasks ทั่วไป
-```
-
-## หมวดหมู่ไฟล์
-
-### Key Concepts (แนวคิดพื้นฐาน)
-
-- `repository.md` - Repository structure และ concepts
-- `commit.md` - Commit objects และ history
-- `staging-area.md` - Index/staging area
-- `head.md` - HEAD reference
-- `branch.md` - Branching concepts
-- `merge.md` - Merging strategies
-- `remote.md` - Remote repositories
-- `rebase.md` - Rebase และ history rewriting
-- `stash.md` - Stashing changes
-- `tag.md` - Tagging releases
-- `submodule.md` - Submodules
-- `reset.md` - Reset modes
-- `checkout.md` - Checkout, switch, restore
-- `sparse-checkout.md` - Sparse checkout
-- `worktree.md` - Worktrees
-- `blame-grep-search.md` - Search tools
-
-### Guides (คู่มือการใช้งาน)
-
-- `installation.md` - การติดตั้งและ setup
-- `quick-start.md` - เริ่มต้นใช้งาน
-- `key-concept.md` - แนวคิดหลัก
-- `how-it-works.md` - วิธีการทำงาน
-- `features.md` - Features ที่มี
-- `configuration.md` - Configuration
-- `best-practices.md` - Best practices
-- `rebase.md` - Rebase guide
-- `stash.md` - Stash guide
-- `tag.md` - Tag guide
-- `submodule.md` - Submodule guide
-- `reset.md` - Reset guide
-- `checkout.md` - Checkout guide
-
-### Principles (หลักการ)
-
-- `atomic-commits.md` - Atomic commits
-- `meaningful-messages.md` - Commit messages
-- `branch-strategy.md` - Branch strategies
-- `collaboration.md` - Collaboration workflows
-- `security.md` - Security best practices
-
-### Workflows (เวิร์กโฟลว์)
-
-- `init-repository.md` - สร้าง repository ใหม่
-- `clone-repository.md` - Clone repository
-- `commit-changes.md` - Commit changes
-- `push-changes.md` - Push changes
-- `pull-changes.md` - Pull changes
-- `manage-branches.md` - จัดการ branches
-- `merge-branches.md` - Merge branches
-- `resolve-conflicts.md` - แก้ conflicts
-
-### References (เอกสารอ้างอิง)
-
-- `api.md` - API reference
-- `cli.md` - CLI commands
-- `configuration.md` - Configuration options
-- `website.md` - Official documentation
 
 ## Execute
 
@@ -140,6 +66,7 @@ git/
 - ใช้ `workflows/merge-branches.md` สำหรับ merge branches
 - ใช้ `workflows/resolve-conflicts.md` สำหรับแก้ conflicts
 
+
 ## Rules
 
 - ใช้ `git init` สำหรับ initialize
@@ -149,6 +76,7 @@ git/
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

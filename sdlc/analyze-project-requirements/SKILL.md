@@ -1,16 +1,18 @@
 ---
-title: Analyze Project Requirements
-description: วิเคราะห์ความต้องการ project อย่างครบถ้วนก่อนเริ่มพัฒนา
-auto_execution_mode: 3
+name: analyze-project-requirements
+description: "วิเคราะห์ความต้องการ project อย่างครบถ้วนก่อนเริ่มพัฒนา"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 วิเคราะห์ความต้องการ project อย่างครบถ้วนเพื่อวางแผน development ที่เหมาะสม
 
+
 ## Scope
 
 ใช้สำหรับวิเคราะห์ความต้องการ project ใหม่ หรือ major refactor
+
 
 ## Execute
 
@@ -82,6 +84,7 @@ auto_execution_mode: 3
 - กำหนด scalability requirements
 - กำหนด resource limits
 
+
 ## Rules
 
 ### 1. Comprehensive Analysis
@@ -107,6 +110,7 @@ auto_execution_mode: 3
 - ยืนยัน requirements กับ team
 - ยืนยัน constraints กับ business
 - ยืนยัน tech stack กับ engineering
+
 
 ## Expected Outcome
 

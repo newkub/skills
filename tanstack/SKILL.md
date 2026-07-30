@@ -1,16 +1,18 @@
 ---
-title: TanStack
-description: Collection ของ libraries สำหรับ data fetching, state management, routing, และ form handling ที่ทำงานได้ดีกับ React และ frameworks อื่นๆ
-auto_execution_mode: 3
+name: tanstack
+description: "Collection ของ libraries สำหรับ data fetching, state management, routing, และ form handling..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ TanStack libraries สำหรับ data fetching, state management, routing, table components, และ form handling
 
+
 ## Scope
 
 ใช้สำหรับ TanStack Query, Table, Router, Form, Start, และ Store
+
 
 ## Execute
 
@@ -43,6 +45,7 @@ auto_execution_mode: 3
 - อ่าน `references/configuration.md` สำหรับ configuration options
 - อ่าน `references/website.md` สำหรับ official documentation และ resources
 
+
 ## Rules
 
 - ใช้ `bun add @tanstack/*` สำหรับ installation
@@ -53,6 +56,7 @@ auto_execution_mode: 3
 - ใช้ type-safe routing เสมอ
 - ใช้ proper error handling
 - ใช้ virtualization สำหรับ large datasets
+
 
 ## Expected Outcome
 

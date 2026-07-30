@@ -1,16 +1,18 @@
 ---
-title: Anime.js
-description: JavaScript animation library สำหรับสร้าง animation ที่รวดเร็ว มีประสิทธิภาพ และใช้งานง่าย
-auto_execution_mode: 3
+name: animejs
+description: "JavaScript animation library สำหรับสร้าง animation ที่รวดเร็ว มีประสิทธิภาพ และใช้งานง่าย"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Anime.js สร้าง animation ที่รวดเร็ว มีประสิทธิภาพ และใช้งานง่ายในโปรเจกต์
 
+
 ## Scope
 
 ใช้สำหรับสร้าง CSS/JS animations ด้วย Anime.js
+
 
 ## Execute
 
@@ -36,6 +38,7 @@ auto_execution_mode: 3
 - อ่าน `references/api.md` สำหรับ API documentation
 - อ่าน `references/configuration.md` สำหรับ configuration reference
 
+
 ## Rules
 
 - ใช้ `bun add animejs` สำหรับ installation
@@ -49,6 +52,7 @@ auto_execution_mode: 3
 - ให้ผู้ใช้ปิด animations ได้ด้วย `prefers-reduced-motion`
 - ใช้ animations เพื่อเสริม UX ไม่ใช่ distraction
 - ให้ feedback ชัดเจนเมื่อ animation เสร็จ
+
 
 ## Expected Outcome
 

@@ -1,34 +1,18 @@
 ---
-title: Rust
-description: แนวทางการพัฒนา Rust ตาม best practices สำหรับ systems programming (Rust 1.85.0+, Edition 2024)
-auto_execution_mode: 3
-related_workflows:
-  - /follow-rust
-  - /follow-clean-architecture
-  - /follow-clippy
+name: rust
+description: "แนวทางการพัฒนา Rust ตาม best practices สำหรับ systems programming (Rust 1.85.0+, Edition 2024)"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 พัฒนา Rust ตาม best practices สำหรับ systems programming ที่เน้น memory safety, performance และ concurrency โดยไม่ต้องมี garbage collector โดยใช้ Rust 1.85.0+ และ Edition 2024
+
 
 ## Scope
 
 ใช้สำหรับการพัฒนา Rust ทุกประเภท เช่น systems programming, WebAssembly, CLI tools, network services, async applications, และ embedded systems
 
-## โครงสร้าง Directory
-
-```
-rust/
-├── SKILL.md
-├── guide/              (guides และ how-to)
-├── key-concepts/       (ownership, borrowing, lifetimes)
-├── principles/         (memory safety, error handling, concurrency)
-├── references/         (API, CLI, configuration, website)
-├── workflows/          (setup, build, test)
-├── templates/          (Cargo.toml, main.rs)
-└── scripts/            (check.sh, test.sh)
-```
 
 ## Execute
 
@@ -107,6 +91,7 @@ cargo fmt
 - อ่าน `workflows/build-rust-project.md` สำหรับ build project
 - อ่าน `workflows/test-rust-project.md` สำหรับ test project
 
+
 ## Rules
 
 ### Naming And Style
@@ -181,6 +166,7 @@ cargo fmt
 - ตั้งค่า `rust-version` ใน Cargo.toml สำหรับ dependency resolution ที่ดีขึ้น (Rust 2024)
 - ใช้ `config include` key สำหรับ sharing configurations (Rust 1.80+)
 - ตรวจสอบ `default-features = false` กับ workspace dependencies (Rust 2024)
+
 
 ## Expected Outcome
 

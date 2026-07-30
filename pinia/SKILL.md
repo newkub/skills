@@ -1,16 +1,18 @@
 ---
-title: Pinia
-description: แนวทางการพัฒนา Pinia ตาม best practices สำหรับ Vue 3 state management ที่มี type-safe, devtools integration และรองรับทั้ง Options API และ Composition API
-auto_execution_mode: 3
+name: pinia
+description: "แนวทางการพัฒนา Pinia ตาม best practices สำหรับ Vue 3 state management ที่มี type-safe, devtools..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Pinia สำหรับ Vue 3 state management ที่ type-safe, integrate กับ devtools, และรองรับทั้ง Options API และ Composition API
 
+
 ## Scope
 
 ใช้สำหรับ state management ใน Vue 3 applications ด้วย Pinia
+
 
 ## Execute
 
@@ -35,6 +37,7 @@ auto_execution_mode: 3
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 - อ่าน `references/api.md` สำหรับ API reference
 
+
 ## Rules
 
 - ใช้ `bun add pinia` สำหรับ installation
@@ -49,6 +52,7 @@ auto_execution_mode: 3
 - ใช้ computed getters สำหรับ derived state
 - หลีกเลี่ยง unnecessary reactivity
 - ใช้ plugins อย่างเหมาะสม
+
 
 ## Expected Outcome
 

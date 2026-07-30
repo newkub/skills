@@ -1,16 +1,18 @@
 ---
-title: Storybook
-description: Build, test, and document UI components in isolation with Storybook v10.4+
-auto_execution_mode: 3
+name: storybook
+description: "Build, test, and document UI components in isolation with Storybook v10.4+"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Storybook สำหรับ develop, test, และ document UI components ใน isolated environment ด้วย CSF3, Autodocs, และ testing ecosystem
 
+
 ## Scope
 
 ใช้สำหรับ component development, testing, และ documentation ด้วย Storybook v10.4+ สำหรับ React, Vue, Angular, Svelte, Web Components, และ React Native
+
 
 ## Execute
 
@@ -45,6 +47,7 @@ auto_execution_mode: 3
 ### 7. References
 
 อ่าน `references/` สำหรับ CLI, configuration, และ API reference
+
 
 ## Rules
 
@@ -106,6 +109,7 @@ auto_execution_mode: 3
 - ใช้ Doc Blocks สำหรับ structured documentation components
 - Configure docs options ใน `.storybook/main.ts` (defaultName, docsMode)
 - Publish Storybook สำหรับ team collaboration และ design system
+
 
 ## Expected Outcome
 

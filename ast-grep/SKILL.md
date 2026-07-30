@@ -1,16 +1,18 @@
 ---
-title: Ast-grep
-description: AST-based structural search, lint และ rewriting tool สำหรับ polyglot code transformation
-auto_execution_mode: 3
+name: ast-grep
+description: "AST-based structural search, lint และ rewriting tool สำหรับ polyglot code transformation"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน ast-grep สำหรับ structural code search, linting และ rewriting ด้วย AST patterns บน multiple languages
 
+
 ## Scope
 
 ใช้สำหรับค้นหา code patterns ด้วย AST-based matching, สร้าง custom lint rules, ทำ code transformation และ refactoring อัตโนมัติ, scan codebase สำหรับ code smells และ anti-patterns, และ integrate กับ editor ผ่าน LSP
+
 
 ## Execute
 
@@ -25,6 +27,7 @@ auto_execution_mode: 3
 - อ่าน `learn/key-concepts/` สำหรับ pattern matching, metavariables, rule types
 - อ่าน `learn/principles/` สำหรับ atomic-first, compose rules, test-driven
 - อ่าน `references/` สำหรับ API docs, CLI, และ configuration
+
 
 ## Rules
 
@@ -60,6 +63,7 @@ auto_execution_mode: 3
 - ใช้ playground สำหรับ debug patterns
 - ใช้ code blocks สำหรับ examples และ patterns
 - ทำตาม `learn/principles/atomic-first.md` สำหรับ rule design
+
 
 ## Expected Outcome
 

@@ -1,16 +1,18 @@
 ---
-title: Svelte
-description: แนวทางการพัฒนา Svelte ตาม best practices สำหรับ compiler-based JavaScript framework ที่มี reactive declarations, stores และ no virtual DOM
-auto_execution_mode: 3
+name: svelte
+description: "แนวทางการพัฒนา Svelte ตาม best practices สำหรับ compiler-based JavaScript framework ที่มี..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Svelte สร้าง web applications ด้วย compiler-based framework, reactive declarations, stores, และ no virtual DOM
 
+
 ## Scope
 
 ใช้สำหรับสร้าง UI และ web applications ด้วย Svelte framework
+
 
 ## Execute
 
@@ -152,6 +154,7 @@ auto_execution_mode: 3
 
 อ่าน `references/website.md` สำหรับ official website
 
+
 ## Rules
 
 - ใช้ `bun add svelte` สำหรับ installation
@@ -164,6 +167,7 @@ auto_execution_mode: 3
 - ใช้ compile-time optimization
 - ใช้ proper reactivity patterns
 - ใช้ component lifecycle อย่างเหมาะสม
+
 
 ## Expected Outcome
 

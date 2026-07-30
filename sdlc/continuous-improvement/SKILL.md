@@ -1,16 +1,18 @@
 ---
-title: Continuous Improvement
-description: ปรับปรุงอย่างต่อเนื่องเพื่อพัฒนา team และ process
-auto_execution_mode: 3
+name: continuous-improvement
+description: "ปรับปรุงอย่างต่อเนื่องเพื่อพัฒนา team และ process"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ปรับปรุงอย่างต่อเนื่องเพื่อพัฒนา team และ development process
 
+
 ## Scope
 
 ใช้สำหรับปรับปรุง development process และ team skills
+
 
 ## Execute
 
@@ -50,6 +52,7 @@ auto_execution_mode: 3
 - Keep skills up-to-date
 - Contribute to open source
 
+
 ## Rules
 
 ### 1. Regular Retrospectives
@@ -75,6 +78,7 @@ auto_execution_mode: 3
 - Conduct code reviews regularly
 - Share best practices กับ team
 - Mentor junior developers
+
 
 ## Expected Outcome
 

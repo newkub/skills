@@ -1,16 +1,18 @@
 ---
-title: Effect-TS
-description: Effect คือ TypeScript library สำหรับ functional programming ที่มี type-safe error handling, dependency injection และ composable effects
-auto_execution_mode: 3
+name: effect-ts
+description: "Effect คือ TypeScript library สำหรับ functional programming ที่มี type-safe error handling,..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Effect-TS สำหรับ functional programming ใน TypeScript ด้วย type-safe error handling, dependency injection, และ composable effects
 
+
 ## Scope
 
 ใช้สำหรับ functional programming, error handling, dependency injection, และ composable effects ใน TypeScript
+
 
 ## Execute
 
@@ -39,6 +41,7 @@ auto_execution_mode: 3
 - อ่าน `references/api.md` สำหรับ API reference
 - อ่าน `references/cli.md` สำหรับ CLI commands
 
+
 ## Rules
 
 - ใช้ `bun add effect` สำหรับ installation
@@ -52,6 +55,7 @@ auto_execution_mode: 3
 - ใช้ Effect สำหรับ error handling
 - ใช้ type-safe error types
 - ใช้ recovery mechanisms สำหรับ error recovery
+
 
 ## Expected Outcome
 

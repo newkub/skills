@@ -1,16 +1,18 @@
 ---
-title: Shadcn UI Solid
-description: shadcn/ui port สำหรับ SolidJS - accessible, customizable components ที่ copy-paste ได้
-auto_execution_mode: 3
+name: shadcn-solid
+description: "shadcn/ui port สำหรับ SolidJS - accessible, customizable components ที่ copy-paste ได้"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ shadcn/ui สำหรับ SolidJS component library ด้วย copy-to-own pattern และ accessible components
 
+
 ## Scope
 
 ใช้สำหรับสร้าง UI components ด้วย shadcn/ui บน SolidJS
+
 
 ## Execute
 
@@ -34,6 +36,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ CLI init สำหรับ initial setup
@@ -46,6 +49,7 @@ auto_execution_mode: 3
 - ใช้ accessible components เสมอ
 - Customize components ตามความต้องการ
 - หลีกเลี่ยง modifying core components
+
 
 ## Expected Outcome
 

@@ -1,51 +1,18 @@
 ---
-title: Tool Nextest
-description: Next-generation test runner for Rust with faster execution, per-test isolation, and CI support
-auto_execution_mode: 3
+name: nextest
+description: "Next-generation test runner for Rust with faster execution, per-test isolation, and CI support"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Nextest สำหรับ test runner ที่เร็วกว่า cargo test
+
 
 ## Scope
 
 ใช้สำหรับ test runner ที่เร็วกว่า cargo test, per-test isolation, CI support ระดับหนึ่ง, retry policies และ test groups
 
-## โครงสร้าง Directory
-
-```
-nextest/
-├── SKILL.md
-├── guide/
-│   ├── installation.md
-│   ├── quick-start.md
-│   ├── key-concept.md
-│   ├── how-it-works.md
-│   ├── features.md
-│   ├── configuration.md
-│   └── best-practices.md
-├── key-concepts/
-│   ├── test-isolation.md
-│   ├── retry-policies.md
-│   ├── test-groups.md
-│   ├── recording-replay.md
-│   ├── setup-scripts.md
-│   ├── test-priorities.md
-│   ├── archiving.md
-│   └── filtersets.md
-├── principles/
-│   ├── test-organization.md
-│   └── ci-integration.md
-├── references/
-│   ├── api.md
-│   ├── cli.md
-│   ├── configuration.md
-│   └── website.md
-└── workflows/
-    ├── configure-nextest.md
-    └── run-tests.md
-```
 
 ## Execute
 
@@ -74,6 +41,7 @@ nextest/
 - อ่าน `workflows/configure-nextest.md` สำหรับการตั้งค่า
 - อ่าน `workflows/run-tests.md` สำหรับการรัน tests
 
+
 ## Rules
 
 - ใช้ Nextest แทน cargo test สำหรับ performance
@@ -83,6 +51,7 @@ nextest/
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

@@ -1,16 +1,18 @@
 ---
-title: Tool JSPM
-description: JSPM เป็น ES Module Package Manager และ CDN ที่ใช้มาตรฐาน native ES modules พร้อม import maps
-auto_execution_mode: 3
+name: jspm
+description: "JSPM เป็น ES Module Package Manager และ CDN ที่ใช้มาตรฐาน native ES modules พร้อม import maps"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน JSPM สำหรับ ES Module Package Manager และ CDN
 
+
 ## Scope
 
 ใช้สำหรับ native ES modules โดยไม่ต้อง bundle, import maps สำหรับ module resolution, zero config, TypeScript support, hot reloading, และ CDN integration
+
 
 ## Execute
 
@@ -30,6 +32,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `bun add -g jspm` สำหรับ installation
@@ -39,6 +42,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

@@ -1,16 +1,18 @@
 ---
-title: Nitro
-description: Universal server framework ที่ deploy ได้ทุก platform ด้วย Vite integration
-auto_execution_mode: 3
+name: nitro
+description: "Universal server framework ที่ deploy ได้ทุก platform ด้วย Vite integration"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Nitro สร้าง server applications ที่ deploy ได้ทุก runtime และ platform ด้วย zero config และ Vite integration
 
+
 ## Scope
 
 ใช้สำหรับสร้าง server applications, APIs, backend services และ full-stack applications ด้วย Nitro v3 framework
+
 
 ## Execute
 
@@ -22,6 +24,7 @@ auto_execution_mode: 3
 - ใช้ `workflows/` สำหรับ setup และ deployment
 - ใช้ `templates/` สำหรับ code templates
 - ใช้ `scripts/` สำหรับ automation scripts
+
 
 ## Rules
 
@@ -39,6 +42,7 @@ auto_execution_mode: 3
 - หลีกเลี่ยง long-running processes (serverless-friendly)
 - ใช้ `defineCachedHandler` สำหรับ caching ด้วย SWR pattern
 - ใช้ route rules สำหรับ per-path configuration
+
 
 ## Expected Outcome
 

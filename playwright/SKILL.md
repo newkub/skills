@@ -1,53 +1,18 @@
 ---
-title: Tool Playwright
-description: แนวทางการใช้งาน Playwright - End-to-end testing สำหรับ web applications
-auto_execution_mode: 3
+name: playwright
+description: "แนวทางการใช้งาน Playwright - End-to-end testing สำหรับ web applications"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Playwright สำหรับ end-to-end testing ของ web applications
+
 
 ## Scope
 
 ใช้สำหรับ E2E testing สำหรับ web applications, multi-browser testing, auto-waiting และ reliability, network interception, และ mobile testing
 
-## โครงสร้าง Directory
-
-```
-playwright/
-├── SKILL.md
-├── learn/
-│   ├── guide/
-│   │   ├── installation.md
-│   │   ├── quick-start.md
-│   │   ├── configuration.md
-│   │   ├── network-interception.md
-│   │   ├── api-testing.md
-│   │   ├── codegen.md
-│   │   ├── device-emulation.md
-│   │   ├── trace-viewer.md
-│   │   └── ui-mode.md
-│   ├── key-concepts/
-│   │   ├── assertions.md
-│   │   ├── locators.md
-│   │   ├── network-interception.md
-│   │   ├── browser-context.md
-│   │   ├── actionability.md
-│   │   └── frames.md
-│   └── principles/
-│       ├── debugging.md
-│       ├── test-organization.md
-│       └── best-practices.md
-├── references/
-│   ├── api.md
-│   ├── cli.md
-│   ├── configuration.md
-│   └── website.md
-└── workflows/
-    ├── setup-playwright.md
-    └── run-tests.md
-```
 
 ## Execute
 
@@ -80,6 +45,7 @@ playwright/
 - อ่าน `workflows/setup-playwright.md` สำหรับการ setup
 - อ่าน `workflows/run-tests.md` สำหรับการรัน tests
 
+
 ## Rules
 
 - ใช้ `bunx create-playwright` สำหรับ installation
@@ -89,6 +55,7 @@ playwright/
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

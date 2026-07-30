@@ -1,16 +1,18 @@
 ---
-title: Tool ESLint
-description: ESLint เป็น linting tool สำหรับ JavaScript และ TypeScript ที่ช่วยตรวจสอบ code quality, find bugs, และ enforce coding conventions
-auto_execution_mode: 3
+name: eslint
+description: "ESLint เป็น linting tool สำหรับ JavaScript และ TypeScript ที่ช่วยตรวจสอบ code quality, find..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน ESLint สำหรับ linting JavaScript และ TypeScript
 
+
 ## Scope
 
 ใช้สำหรับ static analysis ของ code, auto-fix ปัญหา, plugin system, ESLint Flat Config, extends จาก preset configs, severity levels, cache สำหรับ performance, และ output formats หลายแบบ
+
 
 ## Execute
 
@@ -30,6 +32,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `bun add -D eslint` สำหรับ installation
@@ -39,6 +42,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

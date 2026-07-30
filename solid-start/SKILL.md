@@ -1,85 +1,18 @@
 ---
-title: Solid Start
-description: แนวทางการพัฒนา Solid Start ตาม best practices สำหรับ SolidJS meta-framework ที่มี CSR, SSR, SSG, file-based routing, server functions และ TypeScript support
-auto_execution_mode: 3
-related_workflows:
-  - /deep-research
-  - /write-content-coverage
-  - /improve-correctness
-  - /follow-solid-start
-  - /follow-solid-start-architecture
+name: solid-start
+description: "แนวทางการพัฒนา Solid Start ตาม best practices สำหรับ SolidJS meta-framework ที่มี CSR, SSR, SSG,..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 สร้าง SolidJS applications ด้วย CSR, SSR, SSG และ file-based routing
+
 
 ## Scope
 
 ใช้สำหรับการพัฒนา SolidJS applications ที่ต้องการ TypeScript support, server functions และ multi-platform deployment
 
-## Directory Structure
-
-```
-solid-start/
-├── SKILL.md
-├── learn/
-│   ├── guide/
-│   │   ├── getting-started/
-│   │   │   ├── index.md
-│   │   │   ├── installation.md
-│   │   │   └── quick-start.md
-│   │   ├── core-concepts/
-│   │   │   ├── index.md
-│   │   │   ├── key-concept.md
-│   │   │   ├── how-it-works.md
-│   │   │   ├── architecture.md
-│   │   │   ├── vinxi-architecture.md
-│   │   │   └── structure.md
-│   │   ├── features/
-│   │   │   ├── index.md
-│   │   │   ├── features.md
-│   │   │   ├── integration.md
-│   │   │   ├── migration.md
-│   │   │   └── ecosystem.md
-│   │   ├── configuration/
-│   │   │   ├── index.md
-│   │   │   └── configuration.md
-│   │   └── best-practices/
-│   │       ├── index.md
-│   │       ├── best-practices.md
-│   │       ├── patterns.md
-│   │       ├── performance.md
-│   │       ├── security.md
-│   │       ├── testing.md
-│   │       └── troubleshooting.md
-│   ├── key-concepts/
-│   │   ├── file-based-routing.md
-│   │   ├── server-functions.md
-│   │   ├── data-loading.md
-│   │   ├── rendering-modes.md
-│   │   ├── caching.md
-│   │   ├── streaming.md
-│   │   ├── error-handling.md
-│   │   ├── middleware.md
-│   │   ├── islands-architecture.md
-│   │   └── hydration.md
-│   ├── principles/
-│   │   ├── composition-over-inheritance.md
-│   │   ├── explicit-over-implicit.md
-│   │   └── single-responsibility.md
-│   └── references/
-│       ├── api.md
-│       ├── cli.md
-│       ├── configuration.md
-│       └── website.md
-├── workflows/
-│   └── create-solidstart-app.md
-└── templates/
-    ├── api-server-functions.md
-    ├── blog-ssg.md
-    └── dashboard-csr.md
-```
 
 ## Execute
 
@@ -89,7 +22,7 @@ solid-start/
 
 ### 2. Write SKILL.md Index
 
-เขียน index file ตามมาตรฐาน `/write-skills`
+เขียน index file ตามมาตรฐาน `/write-devin-skills`
 
 ### 3. Research Before Writing
 
@@ -106,7 +39,7 @@ solid-start/
 
 เขียน content files ใน learn/guide/, learn/key-concepts/, learn/principles/ folders ตามมาตรฐาน
 
-- ทำตามมาตรฐาน `/write-skills` สำหรับทุกไฟล์
+- ทำตามมาตรฐาน `/write-devin-skills` สำหรับทุกไฟล์
 - เวลาเขียนเกี่ยวกับการติดตั้ง ให้ใช้ `bun add` หรือ `bun add -D` แทน `bun install` เสมอ
 - **แต่ละ .md ใต้ heading ต่างๆ ต้องเขียนอธิบายให้เข้าใจ**
   - อธิบายความหมายของแต่ละ heading อย่างชัดเจน
@@ -144,11 +77,12 @@ solid-start/
 - ตรวจสอบ content ครอบคลุมทุก aspects
 
 
+
 ## Rules
 
 ### Structure And Consistency
 
-- ทำตามมาตรฐาน `/write-skills` สำหรับโครงสร้างและ consistency
+- ทำตามมาตรฐาน `/write-devin-skills` สำหรับโครงสร้างและ consistency
 - ทุก `SKILL.md` ต้องมี frontmatter: `title`, `description`, `auto_execution_mode: 3`
 - ทุก `SKILL.md` ต้องมี sections: `## Goal`, `## Scope`, `## Execute`, `## Rules`, `## Expected Outcome`
 - Goal สอดคล้องกับ skill name, Execute สอดคล้องกับ Goal และ Rules
@@ -200,6 +134,7 @@ solid-start/
 - ทำตามมาตรฐาน `/use-scripts`
 - ลบ scripts หลังใช้งาน
 
+
 ## Expected Outcome
 
 - SolidJS applications ด้วย CSR/SSR/SSG
@@ -213,4 +148,3 @@ solid-start/
 - Content ที่มีคุณภาพและถูกต้องตามมาตรฐาน
 - References ที่ถูกต้องและอ้างอิงไปยังไฟล์ที่มีอยู่จริง
 - Skills ที่ maintainable และ easy to navigate
-

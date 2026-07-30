@@ -1,44 +1,18 @@
 ---
-title: Software Design
-description: คู่มือการออกแบบ software รวมถึง SOLID principles, DDD, clean architecture, microservices, และ event-driven architecture
-auto_execution_mode: 3
+name: software-design
+description: "คู่มือการออกแบบ software รวมถึง SOLID principles, DDD, clean architecture, microservices, และ..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ให้ผู้ใช้เข้าใจและสามารถออกแบบ software ได้อย่างมีประสิทธิภาพ
+
 
 ## Scope
 
 ใช้สำหรับออกแบบ software architecture, apply SOLID principles, implement Domain-Driven Design, เลือกระหว่าง microservices และ monolith, และ design API และ systems
 
-## โครงสร้าง Directory
-
-```
-software-design/
-├── SKILL.md
-├── learn/
-│   ├── guide/              (ภาษาอังกฤษ)
-│   │   ├── architecture.md
-│   │   ├── best-practices.md
-│   │   ├── patterns.md
-│   │   ├── domain-driven-design.md
-│   │   ├── api-design.md
-│   │   └── system-design.md
-│   ├── key-concepts/       (ภาษาอังกฤษ)
-│   │   ├── solid-principles.md
-│   │   ├── design-patterns.md
-│   │   └── architectural-patterns.md
-│   └── principles/         (ภาษาไทย)
-│       ├── solid-application.md
-│       └── design-principles.md
-├── references/
-│   └── website.md
-└── workflows/
-    ├── apply-solid-principles.md
-    ├── design-architecture.md
-    └── implement-ddd.md
-```
 
 ## Execute
 
@@ -80,6 +54,7 @@ software-design/
 - Tools
 - Best practices
 
+
 ## Rules
 
 ### Structure And Consistency
@@ -104,6 +79,7 @@ software-design/
 - `principles/` - เขียนเป็นภาษาไทย แต่ละ principle อยู่ในไฟล์แยกกัน
 - ใช้ชื่อสื่อความหมายโดยตรง ไม่ใช้ prefix ชื่อ skill
 - ใช้ `kebab-case` เสมอ ชื่อไฟล์ต้องสอดคล้องกับเนื้อหา
+
 
 ## Expected Outcome
 

@@ -1,12 +1,13 @@
 ---
-title: RMUX
-description: Terminal multiplexer สำหรับ automation ที่เขียนด้วย Rust เข้ากันได้กับ tmux และมี Rust SDK สำหรับ programmatic control
-auto_execution_mode: 3
+name: rmux
+description: "Terminal multiplexer สำหรับ automation ที่เขียนด้วย Rust เข้ากันได้กับ tmux และมี Rust SDK..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน RMUX สำหรับ terminal multiplexer และ automation
+
 
 ## Scope
 
@@ -15,6 +16,7 @@ auto_execution_mode: 3
 - เขียน Rust code เพื่อ control tmux sessions
 - Programmatic terminal management
 - Session automation และ scripting
+
 
 ## Execute
 
@@ -39,12 +41,14 @@ rmux attach -t mysession
 rmux ls
 ```
 
+
 ## Rules
 
 - ใช้ Rust SDK สำหรับ programmatic control
 - เข้ากันได้กับ tmux
 - ใช้สำหรับ automation และ scripting
 - ใช้ session management ที่ efficient
+
 
 ## Expected Outcome
 

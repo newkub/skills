@@ -1,16 +1,18 @@
 ---
-title: Vite
-description: Modern frontend build tool with Native ESM, Rolldown bundler, and instant HMR
-auto_execution_mode: 3
+name: vite
+description: "Modern frontend build tool with Native ESM, Rolldown bundler, and instant HMR"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Vite สำหรับ frontend build tool ด้วย Native ESM, Rolldown (Rust-based bundler), HMR ที่รวดเร็ว, และ Plugin API
 
+
 ## Scope
 
 ใช้สำหรับ build และ development ของ frontend projects ด้วย Vite 8+
+
 
 ## Execute
 
@@ -49,6 +51,7 @@ auto_execution_mode: 3
 อ่าน `references/api.md` สำหรับ API documentation
 อ่าน `references/website.md` สำหรับ official documentation
 
+
 ## Rules
 
 - ใช้ `bun add -D vite` สำหรับ installation
@@ -61,6 +64,7 @@ auto_execution_mode: 3
 - ใช้ Plugin API ที่ compatible กับ Rollup/Rolldown
 - ใช้ backticks สำหรับ `vite`, commands, plugins
 - ใช้ code blocks สำหรับ configuration examples
+
 
 ## Expected Outcome
 

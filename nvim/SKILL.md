@@ -1,16 +1,18 @@
 ---
-title: Tool Nvim
-description: แนวทางการใช้งาน Neovim - Modern, extensible text editor ที่พัฒนาจาก Vim
-auto_execution_mode: 3
+name: nvim
+description: "แนวทางการใช้งาน Neovim - Modern, extensible text editor ที่พัฒนาจาก Vim"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Neovim สำหรับ text editing ที่ highly customizable
 
+
 ## Scope
 
 ใช้สำหรับ text editor ที่ highly customizable, modal editing สำหรับ efficiency, built-in terminal และ LSP support, Lua plugin system, และ remote development
+
 
 ## Execute
 
@@ -138,6 +140,7 @@ auto_execution_mode: 3
 
 อ่าน `references/website.md` สำหรับ official website
 
+
 ## Rules
 
 - ใช้ modal editing สำหรับ efficiency
@@ -147,6 +150,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

@@ -1,16 +1,18 @@
 ---
-title: Tool Aube
-description: Package manager สำหรับ Node.js ที่เร็วที่สุด รองรับ lockfiles หลายรูปแบบ มี security defaults ที่ดีที่สุด และใช้ disk น้อยกว่าด้วย global content-addressable store
-auto_execution_mode: 3
+name: aube
+description: "Package manager สำหรับ Node.js ที่เร็วที่สุด รองรับ lockfiles หลายรูปแบบ มี security defaults..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Aube สำหรับ package management ใน Node.js projects
 
+
 ## Scope
 
 ใช้สำหรับ package management สำหรับ Node.js, จัดการ lockfiles หลายรูปแบบ, security defaults ที่ดีที่สุด, และ global content-addressable store
+
 
 ## Execute
 
@@ -29,6 +31,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `aube add` สำหรับเพิ่ม dependencies
@@ -38,6 +41,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

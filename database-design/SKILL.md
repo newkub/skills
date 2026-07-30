@@ -1,16 +1,18 @@
 ---
-title: Guide Database Design
-description: คู่มือการออกแบบ database รวมถึง relational vs NoSQL, schema design, indexing, query optimization, และ distributed databases
-auto_execution_mode: 3
+name: database-design
+description: "คู่มือการออกแบบ database รวมถึง relational vs NoSQL, schema design, indexing, query..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ให้ผู้ใช้เข้าใจและสามารถออกแบบ database ได้อย่างมีประสิทธิภาพ
 
+
 ## Scope
 
 ใช้สำหรับออกแบบ database schema, เลือกระหว่าง relational และ NoSQL, optimize queries และ indexing, design distributed databases, และเข้าใจ ACID และ consistency models
+
 
 ## Execute
 
@@ -129,6 +131,7 @@ auto_execution_mode: 3
 อ้างอิง sources ที่เชื่อถือได้
 อัปเดต content ให้ทันสมัยตาม version ล่าสุด
 
+
 ## Rules
 
 ### Structure And Consistency
@@ -163,6 +166,7 @@ auto_execution_mode: 3
 - แต่ละไฟล์ต้องไม่เกิน 250 บรรทัด ถ้าเกินให้ refactor แยกไฟล์
 - ทำตาม Execute ตามลำดับเสมอ
 - ใช้ backticks สำหรับ technical terms, file names, commands, หรือ code references
+
 
 ## Expected Outcome
 

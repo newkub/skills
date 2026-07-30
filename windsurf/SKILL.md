@@ -1,12 +1,13 @@
 ---
-title: Windsurf
-description: AI-powered IDE (Devin Desktop) สำหรับ collaborative coding ด้วย AI agents และ context understanding
-auto_execution_mode: 3
+name: windsurf
+description: "AI-powered IDE (Devin Desktop) สำหรับ collaborative coding ด้วย AI agents และ context understanding"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Windsurf (Devin Desktop IDE) สำหรับ AI-powered collaborative coding
+
 
 ## Scope
 
@@ -17,6 +18,7 @@ auto_execution_mode: 3
 - Code generation, editing, และ refactoring
 - MCP (Model Context Protocol) integration
 - Skills, Workflows, และ Rules automation
+
 
 ## Execute
 
@@ -55,6 +57,7 @@ auto_execution_mode: 3
 - [Configuration](references/configuration.md) - Settings reference
 - [Website](references/website.md) - Official resources
 
+
 ## Rules
 
 - ติดตั้ง Windsurf ตาม installation guide
@@ -63,6 +66,7 @@ auto_execution_mode: 3
 - ใช้ Cascade agents สำหรับ automate tasks
 - เขียน prompts ที่มีประสิทธิภาพตาม prompt engineering principles
 - ใช้ Skills และ Workflows สำหรับ reusable knowledge
+
 
 ## Expected Outcome
 

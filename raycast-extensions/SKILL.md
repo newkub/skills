@@ -1,16 +1,18 @@
 ---
-title: Raycast Extensions
-description: Guidelines for creating Raycast extensions using React, TypeScript, and Node.js. Includes commands, views, lists, forms, actions, hooks, and publishing workflows for the Raycast productivity tool.
-auto_execution_mode: 3
+name: raycast-extensions
+description: "Guidelines for creating Raycast extensions using React, TypeScript, and Node.js. Includes..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 สร้าง Raycast extensions ด้วย React, TypeScript และ Node.js
 
+
 ## Scope
 
 ใช้สำหรับการสร้าง extensions ที่ add commands, integrate กับ external APIs, automate workflows และ create custom UI components
+
 
 ## Execute
 
@@ -32,6 +34,7 @@ Test ใน Raycast ด้วย development mode
 
 Publish ไปยัง Raycast Store
 
+
 ## Rules
 
 ### Development
@@ -46,11 +49,6 @@ Publish ไปยัง Raycast Store
 - Implement error handling
 - Test commands อย่างเหมาะสม
 
-## Expected Outcome
-
-- Raycast extensions ที่ integrate กับ Raycast ecosystem
-- Commands ที่ responsive และ user-friendly
-- Code ที่ follow Raycast best practices
 
 ## References
 
@@ -58,3 +56,10 @@ Publish ไปยัง Raycast Store
 - [Raycast Extensions](https://www.raycast.com/store)
 - [Raycast GitHub](https://github.com/raycast)
 - [Raycast CLI](https://developers.raycast.com/cli)
+
+
+## Expected Outcome
+
+- Raycast extensions ที่ integrate กับ Raycast ecosystem
+- Commands ที่ responsive และ user-friendly
+- Code ที่ follow Raycast best practices

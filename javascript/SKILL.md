@@ -1,16 +1,18 @@
 ---
-title: Lang Javascript
-description: แนวทางการพัฒนา JavaScript ตาม best practices สำหรับ modern web development ที่เน้น ES6+ features, async programming และ module systems
-auto_execution_mode: 3
+name: javascript
+description: "แนวทางการพัฒนา JavaScript ตาม best practices สำหรับ modern web development ที่เน้น ES6+..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 พัฒนา JavaScript ตาม best practices สำหรับ modern web development ที่เน้น ES6+ features, async programming และ module systems
 
+
 ## Scope
 
 ใช้สำหรับการพัฒนา JavaScript ทุกประเภท เช่น web development, server-side development, mobile applications, desktop applications, API development, และ full-stack development
+
 
 ## Execute
 
@@ -32,6 +34,7 @@ auto_execution_mode: 3
 - ใช้ debugging tools (Chrome DevTools, Node.js debugger)
 - ตรวจสอบ memory leaks และ performance issues
 
+
 ## Rules
 
 - ใช้ `const` และ `let` แทน `var`
@@ -51,6 +54,7 @@ auto_execution_mode: 3
 - ใช้ custom error classes สำหรับ specific errors
 - log errors อย่างเหมาะสม
 - ให้ error messages ที่ชัดเจน
+
 
 ## Expected Outcome
 

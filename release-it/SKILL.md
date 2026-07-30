@@ -1,12 +1,13 @@
 ---
-title: Release It
-description: Generic CLI tool สำหรับ automate versioning และ package publishing
-auto_execution_mode: 3
+name: release-it
+description: "Generic CLI tool สำหรับ automate versioning และ package publishing"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Release It สำหรับ automate versioning และ package publishing
+
 
 ## Scope
 
@@ -16,6 +17,7 @@ auto_execution_mode: 3
 - GitHub/GitLab releases
 - Changelog generation
 - bun publishing
+
 
 ## Execute
 
@@ -47,12 +49,14 @@ Dry run:
 bunx release-it --dry-run
 ```
 
+
 ## Rules
 
 - ใช้ `bun add -D release-it` สำหรับติดตั้ง
 - ใช้ `bunx release-it` สำหรับ interactive release
 - ใช้ `--ci` สำหรับ CI mode
 - ใช้ `--dry-run` สำหรับ dry run
+
 
 ## Expected Outcome
 

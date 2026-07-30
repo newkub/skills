@@ -1,16 +1,18 @@
 ---
-title: Tool Mise
-description: Mise - Development environment manager สำหรับ manage tools และ versions ต่างๆ
-auto_execution_mode: 3
+name: mise
+description: "Mise - Development environment manager สำหรับ manage tools และ versions ต่างๆ"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 จัดการ development environment และ tool versions อย่างมีประสิทธิภาพด้วย mise
 
+
 ## Scope
 
 ใช้สำหรับจัดการ multiple tool versions, environment setup, และ automation สำหรับ development
+
 
 ## Execute
 
@@ -33,6 +35,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `.mise.toml` สำหรับ project config
@@ -43,6 +46,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

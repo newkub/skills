@@ -1,16 +1,18 @@
 ---
-title: Lang Typescript
-description: แนวทางการพัฒนา TypeScript ตาม best practices สำหรับ type-safe JavaScript development ที่เน้น type safety, developer experience และ scalability
-auto_execution_mode: 3
+name: typescript
+description: "แนวทางการพัฒนา TypeScript ตาม best practices สำหรับ type-safe JavaScript development ที่เน้น..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 พัฒนา TypeScript ตาม best practices สำหรับ type-safe JavaScript development ที่เน้น type safety, developer experience และ scalability
 
+
 ## Scope
 
 ใช้สำหรับการพัฒนา TypeScript ทุกประเภท เช่น web development, large-scale applications, API development, full-stack development, และ library development
+
 
 ## Execute
 
@@ -31,6 +33,7 @@ auto_execution_mode: 3
 - ใช้ TypeScript compiler สำหรับ type checking
 - ใช้ debugging tools
 - ตรวจสอบ type coverage
+
 
 ## Rules
 
@@ -54,6 +57,7 @@ auto_execution_mode: 3
 - ใช้ try/catch สำหรับ async operations
 - log errors อย่างเหมาะสม
 - ให้ error messages ที่ชัดเจน
+
 
 ## Expected Outcome
 

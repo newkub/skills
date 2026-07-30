@@ -1,12 +1,13 @@
 ---
-title: Solid Nitro TanStack
-description: ตั้งค่า TanStack Start (SolidJS) กับ Nitro สำหรับ SSR และ deployment
-auto_execution_mode: 3
+name: solid-nitro-tanstack
+description: "ตั้งค่า TanStack Start (SolidJS) กับ Nitro สำหรับ SSR และ deployment"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ตั้งค่าและใช้งาน TanStack Start (SolidJS) ร่วมกับ Nitro สำหรับ server-side rendering และ universal deployment
+
 
 ## Scope
 
@@ -16,6 +17,7 @@ auto_execution_mode: 3
 - Deployment ผ่าน Nitro ไปยังหลาย platforms (Node.js, Bun, Cloudflare Workers, etc.)
 - Type-safe routing ด้วย TanStack Router
 - Server functions และ API routes
+
 
 ## Execute
 
@@ -105,6 +107,7 @@ bun run build
 bun run start
 ```
 
+
 ## Rules
 
 ### 1. Nitro Configuration
@@ -156,6 +159,7 @@ bun run start
 - Cloudflare Workers: ใช้ `cloudflare-workers` preset
 - Vercel/Netlify/Railway: ใช้ preset ที่เกี่ยวข้อง
 - ทำตาม `/follow-deploy-to-cloudflare` สำหรับ Cloudflare deployment
+
 
 ## Expected Outcome
 

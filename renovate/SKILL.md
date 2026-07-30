@@ -1,12 +1,13 @@
 ---
-title: Renovate
-description: Automated dependency update tool ที่สร้าง pull requests อัตโนมัติสำหรับ update dependencies
-auto_execution_mode: 3
+name: renovate
+description: "Automated dependency update tool ที่สร้าง pull requests อัตโนมัติสำหรับ update dependencies"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Renovate สำหรับ automated dependency updates
+
 
 ## Scope
 
@@ -16,6 +17,7 @@ auto_execution_mode: 3
 - Support หลาย platform เช่น GitHub, GitLab, Bitbucket
 - Monorepo support
 - Schedule dependency updates
+
 
 ## Execute
 
@@ -47,12 +49,14 @@ renovate:config:validate
 npx renovate --platform=github
 ```
 
+
 ## Rules
 
 - ใช้ presets คล้าย ESLint - ใช้ config ที่มีอยู่แล้วได้
 - รองรับ monorepo ได้ดี
 - กำหนดเวลาสร้าง PR ได้
 - ใช้ configuration ที่ centralized
+
 
 ## Expected Outcome
 

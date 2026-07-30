@@ -1,16 +1,18 @@
 ---
-title: Mastra
-description: Comprehensive Mastra framework guide for building agents, workflows, tools, memory, workspaces, and storage with current APIs
-auto_execution_mode: 3
+name: mastra
+description: "Comprehensive Mastra framework guide for building agents, workflows, tools, memory, workspaces,..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Mastra framework สร้าง AI agents, workflows, tools, memory, workspaces, และ storage ด้วย TypeScript
 
+
 ## Scope
 
 ใช้สำหรับ building AI agents, workflows, tools, memory, workspaces, และ storage ด้วย Mastra framework
+
 
 ## Execute
 
@@ -43,6 +45,7 @@ auto_execution_mode: 3
 - อ่าน `references/api.md` สำหรับ API reference
 - อ่าน `references/cli.md` สำหรับ CLI commands
 
+
 ## Rules
 
 - ใช้ `bun add @mastra/core` สำหรับ core library
@@ -57,6 +60,7 @@ auto_execution_mode: 3
 - ใช้ memory สำหรับ context management
 - ใช้ storage สำหรับ persistent data
 - หลีกเลี่ยง unnecessary API calls
+
 
 ## Expected Outcome
 

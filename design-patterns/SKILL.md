@@ -1,16 +1,18 @@
 ---
-title: Guide Design Patterns
-description: Design patterns guide covering creational, structural, and behavioral patterns with examples and best practices for maintainable and extensible software design.
-auto_execution_mode: 3
+name: design-patterns
+description: "Design patterns guide covering creational, structural, and behavioral patterns with examples and..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ให้ผู้ใช้เข้าใจและสามารถใช้ design patterns ได้อย่างมีประสิทธิภาพ
 
+
 ## Scope
 
 ใช้สำหรับเลือก pattern ที่เหมาะสมกับปัญหา, เข้าใจและใช้งาน GoF patterns, ออกแบบซอฟต์แวร์ที่ maintainable และ extensible, หลีกเลี่ยง anti-patterns, ปรับปรุง code quality ผ่าน patterns, และเรียนรู้ best practices ในการออกแบบ
+
 
 ## Execute
 

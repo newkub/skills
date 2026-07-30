@@ -1,16 +1,18 @@
 ---
-title: Tool Oxlint
-description: แนวทางการใช้งาน Oxlint - Blazing fast JavaScript linter ที่เขียนด้วย Rust
-auto_execution_mode: 3
+name: oxlint
+description: "แนวทางการใช้งาน Oxlint - Blazing fast JavaScript linter ที่เขียนด้วย Rust"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Oxlint สำหรับ linting JavaScript/TypeScript ที่เร็วกว่า ESLint
 
+
 ## Scope
 
 ใช้สำหรับ linter ที่เร็วกว่า ESLint, ESLint compatibility, type-aware linting, multi-file analysis, และ CI/CD integration
+
 
 ## Execute
 
@@ -30,6 +32,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `bun add -D oxlint` สำหรับ installation
@@ -39,6 +42,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

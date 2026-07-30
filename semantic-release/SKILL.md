@@ -1,12 +1,13 @@
 ---
-title: Semantic Release
-description: Fully automated version management และ package publishing tool ที่ใช้ conventional commits
-auto_execution_mode: 3
+name: semantic-release
+description: "Fully automated version management และ package publishing tool ที่ใช้ conventional commits"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Semantic Release สำหรับ automated version management และ package publishing
+
 
 ## Scope
 
@@ -15,6 +16,7 @@ auto_execution_mode: 3
 - Semantic versioning อัตโนมัติ
 - Automated changelog generation
 - Package publishing ไปยัง bun, GitHub, GitLab
+
 
 ## Execute
 
@@ -46,12 +48,14 @@ Debug mode:
 DEBUG=semantic-release:* bunx semantic-release
 ```
 
+
 ## Rules
 
 - ใช้ `bun add -D semantic-release` สำหรับติดตั้ง
 - ใช้ `bunx semantic-release` สำหรับรัน
 - ใช้ `--dry-run` สำหรับ dry run
 - ใช้ conventional commits สำหรับ version bump
+
 
 ## Expected Outcome
 

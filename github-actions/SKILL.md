@@ -1,16 +1,18 @@
 ---
-title: Tool GitHub Actions
-description: แนวทางการใช้งาน GitHub Actions สำหรับ CI/CD
-auto_execution_mode: 3
+name: github-actions
+description: "แนวทางการใช้งาน GitHub Actions สำหรับ CI/CD"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 แนวทางการใช้งาน GitHub Actions สำหรับ CI/CD และ automation ภายใน GitHub
 
+
 ## Scope
 
 ใช้สำหรับตั้งค่าและใช้งาน GitHub Actions ในโปรเจกต์
+
 
 ## Execute
 
@@ -41,6 +43,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `bun add` หรือ `bun add -D` แทน `bun install` เสมอ
@@ -51,6 +54,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

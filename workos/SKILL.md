@@ -1,16 +1,18 @@
 ---
-title: WorkOS
-description: Enterprise identity platform for SSO, SCIM, user management, and compliance
-auto_execution_mode: 3
+name: workos
+description: "Enterprise identity platform for SSO, SCIM, user management, and compliance"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ WorkOS สำหรับ enterprise identity platform ด้วย SSO, SCIM, user management, audit logs, และ compliance
 
+
 ## Scope
 
 ใช้สำหรับ SSO (SAML/OIDC), SCIM, user management, directory sync, audit logs, organizations, MFA, passwordless authentication, AuthKit, Admin Portal, RBAC, FGA, Vault, Pipes, Feature Flags, Widgets, Domain Verification, Radar, Custom Metadata, Connect และ multi-tenant organization management
+
 
 ## Execute
 
@@ -147,6 +149,7 @@ auto_execution_mode: 3
 อ่าน `principles/best-practices.md` สำหรับ best practices
 อ่าน `principles/security.md` สำหรับ security guidelines
 
+
 ## Rules
 
 - ใช้ SDK ที่เหมาะสมกับภาษาที่ใช้ (Node.js, Python, Go, Ruby, PHP)
@@ -170,6 +173,7 @@ auto_execution_mode: 3
 - ใช้ Radar สำหรับ fraud protection
 - ใช้ Custom Metadata สำหรับ additional data storage
 - ใช้ Connect สำหรับ MCP และ OAuth integrations
+
 
 ## Expected Outcome
 

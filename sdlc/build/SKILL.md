@@ -1,16 +1,18 @@
 ---
-title: Build
-description: Build artifacts สำหรับ deployment
-auto_execution_mode: 3
+name: build
+description: "Build artifacts สำหรับ deployment"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 Build artifacts สำหรับ deployment อย่างถูกต้องและ optimized
 
+
 ## Scope
 
 ใช้สำหรับ build project สำหรับ deployment
+
 
 ## Execute
 
@@ -42,6 +44,7 @@ Build artifacts สำหรับ deployment อย่างถูกต้อ�
 - Create distribution package
 - Verify `package.json` exports
 
+
 ## Rules
 
 ### 1. Use Existing Workflows
@@ -69,6 +72,7 @@ Build artifacts สำหรับ deployment อย่างถูกต้อ�
 - Enable tree-shaking
 - Enable code splitting (ถ้าจำเป็น)
 - Enable compression (ถ้าจำเป็น)
+
 
 ## Expected Outcome
 

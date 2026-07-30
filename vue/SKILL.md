@@ -1,16 +1,18 @@
 ---
-title: Vue.js
-description: แนวทางการพัฒนา Vue.js 3.5+ ตาม best practices สำหรับ progressive framework ที่มี Composition API, reactivity system, component-based architecture และ Vapor Mode (3.6 beta)
-auto_execution_mode: 3
+name: vue
+description: "แนวทางการพัฒนา Vue.js 3.5+ ตาม best practices สำหรับ progressive framework ที่มี Composition..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Vue.js 3.5+ สร้าง web applications ด้วย Composition API, reactive system, component-based architecture และ Vapor Mode (3.6 beta) สำหรับ performance optimization
 
+
 ## Scope
 
 ใช้สำหรับสร้าง UI และ web applications ด้วย Vue.js 3.5+ framework รวมถึง Vapor Mode (3.6 beta) สำหรับ performance optimization และ reduced bundle size
+
 
 ## Execute
 
@@ -70,6 +72,7 @@ auto_execution_mode: 3
 - `workflows/create-component.md` สำหรับสร้าง component
 - `workflows/optimize-performance.md` สำหรับ performance optimization
 
+
 ## Rules
 
 - ใช้ `bun add vue` สำหรับ installation
@@ -109,6 +112,7 @@ auto_execution_mode: 3
 - ใช้ deferred Teleport (3.5+) ด้วย `defer` prop
 - ใช้ `createVaporApp()` (3.6 beta) สำหรับ Vapor-only apps
 - ใช้ `vaporInteropPlugin` (3.6 beta) สำหรับ mixing Vapor and VDOM components
+
 
 ## Expected Outcome
 

@@ -1,16 +1,18 @@
 ---
-title: Drizzle ORM
-description: แนวทางการพัฒนา Drizzle ORM ตาม best practices สำหรับ TypeScript database ORM ที่มี type safety, SQL-like API และรองรับหลาย database (PostgreSQL, MySQL, SQLite)
-auto_execution_mode: 3
+name: drizzle
+description: "แนวทางการพัฒนา Drizzle ORM ตาม best practices สำหรับ TypeScript database ORM ที่มี type safety,..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Drizzle ORM สำหรับ TypeScript database operations ด้วย type safety และ SQL-like API
 
+
 ## Scope
 
 ใช้สำหรับ database operations ด้วย Drizzle ORM บน PostgreSQL, MySQL, และ SQLite
+
 
 ## Execute
 
@@ -54,6 +56,7 @@ auto_execution_mode: 3
 - อ่าน `guide/database-specific-features.md` สำหรับ database-specific features
 - อ่าน `guide/testing-infrastructure.md` สำหรับ testing infrastructure
 
+
 ## Rules
 
 - ใช้ `bun add drizzle-orm` สำหรับ core library
@@ -68,6 +71,7 @@ auto_execution_mode: 3
 - ใช้ indexes สำหรับ frequently queried columns
 - ใช้ transactions สำหรับ multiple operations
 - หลีกเลี่ยง N+1 queries ด้วย proper relations
+
 
 ## Expected Outcome
 

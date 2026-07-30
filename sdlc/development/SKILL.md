@@ -1,16 +1,18 @@
 ---
-title: Development
-description: พัฒนา features และ modules ตาม Clean Architecture
-auto_execution_mode: 3
+name: development
+description: "พัฒนา features และ modules ตาม Clean Architecture"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 พัฒนา features และ modules ตาม Clean Architecture อย่างมีคุณภาพ
 
+
 ## Scope
 
 ใช้สำหรับพัฒนา features ใหม่ หรือ modules ใหม่
+
 
 ## Execute
 
@@ -73,6 +75,7 @@ auto_execution_mode: 3
 - Refactor long functions (>50 lines)
 - Split long files (>250 lines)
 
+
 ## Rules
 
 ### 1. Follow Clean Architecture
@@ -99,6 +102,7 @@ auto_execution_mode: 3
 - เขียน unit tests สำหรับ domain logic
 - เขียน integration tests สำหรับ adapters
 - รัน tests บ่อยๆ
+
 
 ## Expected Outcome
 

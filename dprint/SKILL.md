@@ -1,16 +1,18 @@
 ---
-title: Tool Dprint
-description: Dprint เป็น pluggable and configurable code formatting platform ที่รวดเร็วมาก ใช้ Rust และ WebAssembly
-auto_execution_mode: 3
+name: dprint
+description: "Dprint เป็น pluggable and configurable code formatting platform ที่รวดเร็วมาก ใช้ Rust และ..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Dprint สำหรับ code formatting ที่รวดเร็วและ configurable
 
+
 ## Scope
 
 ใช้สำหรับ code formatting ที่รวดเร็ว, pluggable and configurable formatting, รองรับหลายภาษา (TypeScript, JavaScript, JSON, Markdown, TOML, Rust), และ Rust และ WebAssembly
+
 
 ## Execute
 
@@ -30,6 +32,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `bun add -D dprint` สำหรับ installation
@@ -39,6 +42,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

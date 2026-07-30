@@ -1,16 +1,18 @@
 ---
-title: UnoCSS
-description: UnoCSS is an instant, on-demand atomic CSS engine with the best performance. It provides fully customizable utilities, presets, shortcuts, and icon system for any web project.
-auto_execution_mode: 3
+name: unocss
+description: "UnoCSS is an instant, on-demand atomic CSS engine with the best performance. It provides fully..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ UnoCSS สำหรับ atomic CSS engine ที่ generate ทันที ด้วย performance สูงและ fully customizable
 
+
 ## Scope
 
 ใช้สำหรับ atomic CSS styling ด้วย UnoCSS engine
+
 
 ## Execute
 
@@ -53,6 +55,7 @@ auto_execution_mode: 3
 - อ่าน `guide/inspector.md` สำหรับ CSS generation inspector
 - อ่าน `guide/playground.md` สำหรับ online playground
 
+
 ## Rules
 
 - ใช้ `bun add -D unocss` สำหรับ installation
@@ -63,6 +66,7 @@ auto_execution_mode: 3
 - ใช้ presets สำหรับ extend functionality
 - ใช้ shortcuts สำหรับ custom utilities
 - ใช้ icon system อย่างเหมาะสม
+
 
 ## Expected Outcome
 

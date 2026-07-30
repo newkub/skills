@@ -1,16 +1,18 @@
 ---
-title: Tool Biome
-description: Guide for using Biome - a fast, all-in-one toolchain for web development with formatting, linting, and code analysis capabilities
-auto_execution_mode: 3
+name: biome
+description: "Guide for using Biome - a fast, all-in-one toolchain for web development with formatting,..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Biome สำหรับ formatting, linting, และ code analysis ใน web projects
 
+
 ## Scope
 
 ใช้สำหรับ setting up formatting และ linting สำหรับ web projects, migrating จาก ESLint + Prettier, fast code quality tools, และ automating code quality ใน CI/CD
+
 
 ## Execute
 
@@ -33,6 +35,7 @@ auto_execution_mode: 3
 - อ่าน `references/configuration.md` สำหรับ configuration options
 - อ่าน `references/website.md` สำหรับ official documentation
 
+
 ## Rules
 
 - ใช้ `bun add -D @biomejs/biome` สำหรับ installation
@@ -42,6 +45,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

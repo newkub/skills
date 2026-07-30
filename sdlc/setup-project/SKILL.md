@@ -1,16 +1,18 @@
 ---
-title: Setup Project
-description: ตั้งค่าพื้นฐาน project อย่างครบถ้วน
-auto_execution_mode: 3
+name: setup-project
+description: "ตั้งค่าพื้นฐาน project อย่างครบถ้วน"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ตั้งค่าพื้นฐาน project อย่างครบถ้วนเพื่อเริ่ม development ได้ทันที
 
+
 ## Scope
 
 ใช้สำหรับตั้งค่า project ใหม่หรือ restructure project ที่มีอยู่
+
 
 ## Execute
 
@@ -65,6 +67,7 @@ auto_execution_mode: 3
 - Setup changelog generator (changesets/changelogen)
 - Setup release automation (Auto/release-it)
 
+
 ## Rules
 
 ### 1. Use Existing Workflows
@@ -93,6 +96,7 @@ auto_execution_mode: 3
 - รัน linting สำเร็จ
 - รัน type checking สำเร็จ
 - รัน tests สำเร็จ
+
 
 ## Expected Outcome
 

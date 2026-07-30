@@ -1,16 +1,18 @@
 ---
-title: Tool Moonrepo
-description: แนวทางการใช้งาน moonrepo สำหรับ monorepo management และ task running
-auto_execution_mode: 3
+name: moonrepo
+description: "แนวทางการใช้งาน moonrepo สำหรับ monorepo management และ task running"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน moonrepo สำหรับ monorepo management และ task running
 
+
 ## Scope
 
 ใช้สำหรับจัดการ monorepo อย่างมีประสิทธิภาพ, run tasks ข้าม multiple projects, ใช้ smart hashing และ caching, และตรวจสอบ affected projects
+
 
 ## Execute
 
@@ -27,6 +29,7 @@ auto_execution_mode: 3
 - อ่าน `guide/structure.md` สำหรับ project structure
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ smart hashing สำหรับ efficiency
@@ -35,6 +38,7 @@ auto_execution_mode: 3
 - ใช้ backticks สำหรับ commands
 - ใช้ code blocks สำหรับ examples
 - ใช้ ansi markdown diagrams สำหรับ flow และ architecture
+
 
 ## Expected Outcome
 

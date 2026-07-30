@@ -1,12 +1,13 @@
 ---
-title: Turborepo
-description: High-performance build system สำหรับ JavaScript/TypeScript monorepos ด้วย caching และ parallel execution
-auto_execution_mode: 3
+name: turborepo
+description: "High-performance build system สำหรับ JavaScript/TypeScript monorepos ด้วย caching และ parallel..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้งาน Turborepo สำหรับ build JavaScript/TypeScript monorepos ด้วยความเร็วสูง
+
 
 ## Scope
 
@@ -15,6 +16,7 @@ auto_execution_mode: 3
 - Remote caching สำหรับ teams
 - Parallel execution สำหรับ efficiency
 - Incremental builds สำหรับ speed
+
 
 ## Execute
 
@@ -46,6 +48,7 @@ bunx turbo run build
 bunx turbo run build --filter=myapp
 ```
 
+
 ## Rules
 
 - ใช้ `bun add -D turbo` สำหรับติดตั้ง
@@ -53,10 +56,10 @@ bunx turbo run build --filter=myapp
 - ใช้ `bunx turbo run` สำหรับรัน tasks
 - ใช้ `--filter` สำหรับ filter packages
 
+
 ## Expected Outcome
 
 - Monorepo builds ที่ fast
 - Remote caching ที่ efficient
 - Parallel execution ที่ optimized
 - Incremental builds ที่ fast
-

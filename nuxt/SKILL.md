@@ -1,68 +1,18 @@
 ---
-title: Nuxt
-description: Full-stack Vue framework ด้วย SSR, auto-imports, file-based routing และ Nitro server
-auto_execution_mode: 3
+name: nuxt
+description: "Full-stack Vue framework ด้วย SSR, auto-imports, file-based routing และ Nitro server"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 สร้าง Vue.js applications ด้วย SSR/SSG/ISR และ full-stack capabilities ด้วย Nuxt v4
+
 
 ## Scope
 
 ใช้สำหรับการพัฒนา Vue.js applications ที่ต้องการ SEO-friendly, auto-imports, file-based routing, TypeScript support และ server-side capabilities ด้วย Nitro engine
 
-## โครงสร้าง Directory
-
-```
-nuxt/
-├── SKILL.md
-├── guide/                # คู่มือการใช้งาน
-├── key-concepts/         # แนวคิดหลัก
-├── principles/           # แนวทางปฏิบัติที่ดี
-├── references/           # เอกสารอ้างอิง
-├── workflows/            # workflows การทำงาน
-├── templates/            # templates สำหรับ scaffolding
-└── scripts/              # automation scripts
-```
-
-## หมวดหมู่ไฟล์
-
-| หมวดหมู่ | ไฟล์ | คำอธิบาย |
-|---------|------|---------|
-| **guide/** | best-practices.md | Best practices สำหรับการพัฒนา |
-| | configuration.md | การตั้งค่า `nuxt.config.ts` |
-| | features.md | ฟีเจอร์หลักของ Nuxt v4 |
-| | how-it-works.md | ภาพรวม architecture และ request lifecycle |
-| | installation.md | วิธีติดตั้งและ setup โปรเจกต์ |
-| | integration.md | การเชื่อมต่อกับ libraries และ tools อื่นๆ |
-| | quick-start.md | เริ่มต้นใช้งานอย่างรวดเร็ว |
-| **key-concepts/** | overview.md | ภาพรวมแนวคิดหลักของ Nuxt |
-| | auto-imports.md | Auto-imports system สำหรับ components และ composables |
-| | nitro-server.md | Nitro server engine สำหรับ full-stack capabilities |
-| | nuxt-app-instance.md | Nuxt App instance และ lifecycle |
-| | rendering-modes.md | Rendering modes (SSR, SSG, ISR, SPA) |
-| | app-directory.md | app/ directory structure ใน Nuxt v4 |
-| | create-use-fetch.md | createUseFetch และ createUseAsyncData factory functions (4.4+) |
-| | use-announcer.md | useAnnouncer composable สำหรับ accessibility (4.4+) |
-| | typed-layout-props.md | Typed layout props ใน definePageMeta (4.4+) |
-| **principles/** | component-design.md | Component design principles |
-| | data-fetching.md | Data fetching best practices |
-| | performance.md | Performance optimization |
-| **references/** | api.md | API documentation |
-| | cli.md | CLI commands |
-| | configuration.md | Configuration options |
-| | modules.md | Module system |
-| | website.md | Official documentation |
-| | hooks.md | Nuxt hooks system สำหรับ build และ runtime |
-| | migration.md | Migration guide จาก Nuxt 2 ไป Nuxt 3 |
-| | nuxt-5-preparation.md | Nuxt 5 preparation และ breaking changes |
-| **workflows/** | setup-project.md | ตั้งค่าโปรเจกต์ |
-| | create-page.md | สร้างหน้าเว็บด้วย file-based routing |
-| | create-component.md | สร้างคอมโพเนนต์ |
-| | create-module.md | สร้าง Nuxt module |
-| | deploy-nuxt.md | Deploy application |
-| | upgrade-to-v4.md | Upgrade จาก Nuxt 3 เป็น Nuxt 4 |
 
 ## Execute
 
@@ -122,6 +72,7 @@ nuxt/
 - `migration.md` - migration guide จาก Nuxt 2 ไป Nuxt 3
 - `nuxt-5-preparation.md` - Nuxt 5 preparation และ breaking changes
 
+
 ## Rules
 
 - ใช้ Nuxt v4 (stable) หรือ Nuxt 3 (maintenance until July 2026)
@@ -148,6 +99,7 @@ nuxt/
 - ใช้ `useState` reset to default (Nuxt 4.4+) สำหรับ state management
 - เตรียมสำหรับ Nuxt 5: Vite 8 (Rolldown), Nitro v3 (Web standard APIs), package renames
 - ทำตาม `/follow-nuxt` สำหรับ best practices
+
 
 ## Expected Outcome
 

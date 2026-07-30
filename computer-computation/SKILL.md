@@ -1,16 +1,18 @@
 ---
-title: Guide Computer Computation
-description: Computer computation and theory of computation guide covering computational models, complexity theory, algorithms, and formal languages.
-auto_execution_mode: 3
+name: computer-computation
+description: "Computer computation and theory of computation guide covering computational models, complexity..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ให้ผู้ใช้เข้าใจและสามารถประยุกต์ใช้ theory of computation ได้อย่างมีประสิทธิภาพ
 
+
 ## Scope
 
 ใช้สำหรับเข้าใจทฤษฎี computation และ computational models, เรียนรู้ complexity theory และ algorithm analysis, เข้าใจ formal languages และ automata, เตรียมสอบ theory of computation, ออกแบบ algorithms ที่มีประสิทธิภาพ, และเข้าใจ limits ของ computation
+
 
 ## Execute
 

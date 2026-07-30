@@ -1,16 +1,18 @@
 ---
-title: Tauri
-description: Build cross-platform desktop and mobile applications with Rust backend and web frontend. Features small binaries, ACL security, multi-webview, and native system APIs.
-auto_execution_mode: 3
+name: tauri
+description: "Build cross-platform desktop and mobile applications with Rust backend and web frontend...."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 สร้าง cross-platform desktop และ mobile applications ด้วย Rust backend และ web technologies frontend
 
+
 ## Scope
 
 ใช้สำหรับการพัฒนา applications บน Linux, macOS, Windows, Android และ iOS ด้วย single codebase
+
 
 ## Execute
 
@@ -79,6 +81,7 @@ auto_execution_mode: 3
 
 อ่าน `references/website.md` สำหรับ resources (official docs, plugins, community)
 
+
 ## Rules
 
 - ใช้ Rust สำหรับ backend logic ใน Core process
@@ -91,6 +94,7 @@ auto_execution_mode: 3
 - Use Tauri plugins สำหรับ common tasks
 - ใช้ backticks สำหรับ `tauri`, commands, APIs
 - ใช้ code blocks สำหรับ configuration examples
+
 
 ## Expected Outcome
 

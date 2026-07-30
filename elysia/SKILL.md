@@ -1,16 +1,18 @@
 ---
-title: Elysia
-description: แนวทางการพัฒนา Elysia ตาม best practices สำหรับ ergonomic web framework สำหรับ Bun ที่มี type-safe, high performance และ plugin system
-auto_execution_mode: 3
+name: elysia
+description: "แนวทางการพัฒนา Elysia ตาม best practices สำหรับ ergonomic web framework สำหรับ Bun ที่มี..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Elysia สร้าง web applications ด้วย Bun runtime ที่มี type-safe, high performance, และ ergonomic API
 
+
 ## Scope
 
 ใช้สำหรับสร้าง web applications, APIs, และ microservices ด้วย Elysia framework บน Bun runtime
+
 
 ## Execute
 
@@ -42,6 +44,7 @@ auto_execution_mode: 3
 - อ่าน `guide/security.md` สำหรับ security considerations
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 
+
 ## Rules
 
 - ใช้ `bun add elysia` สำหรับ installation
@@ -56,6 +59,7 @@ auto_execution_mode: 3
 - ใช้ Trie tree routing สำหรับ fast routing
 - ใช้ lifecycle hooks อย่างเหมาะสม
 - หลีกเลี่ยง unnecessary middleware
+
 
 ## Expected Outcome
 

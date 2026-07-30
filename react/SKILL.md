@@ -1,16 +1,18 @@
 ---
-title: React
-description: แนวทางการพัฒนา React ตาม best practices สำหรับ JavaScript library สำหรับสร้าง UI ที่มี component-based architecture, virtual DOM และ extensive ecosystem
-auto_execution_mode: 3
+name: react
+description: "แนวทางการพัฒนา React ตาม best practices สำหรับ JavaScript library สำหรับสร้าง UI ที่มี..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ React สร้าง web applications ด้วย component-based architecture, virtual DOM, และ hooks
 
+
 ## Scope
 
 ใช้สำหรับสร้าง UI และ web applications ด้วย React library
+
 
 ## Execute
 
@@ -37,6 +39,7 @@ auto_execution_mode: 3
 - อ่าน `references/api.md` สำหรับ API reference
 - อ่าน `workflows/migrate-to-react-18.md` สำหรับ migration
 
+
 ## Rules
 
 - ใช้ `bun add react react-dom` สำหรับ installation
@@ -51,6 +54,7 @@ auto_execution_mode: 3
 - ใช้ `useMemo()` สำหรับ expensive computations
 - ใช้ `useCallback()` สำหรับ function references
 - หลีกเลี่ยง unnecessary re-renders
+
 
 ## Expected Outcome
 

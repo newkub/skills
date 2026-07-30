@@ -1,22 +1,18 @@
 ---
-
-title: ORPC
-
-description: Build typesafe APIs with end-to-end type safety and OpenAPI support
-
-auto_execution_mode: 3
-
-url: https://orpc.dev/
-
+name: orpc
+description: "Build typesafe APIs with end-to-end type safety and OpenAPI support"
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 สร้าง APIs ที่มี end-to-end type safety ด้วย oRPC ตาม best practices
 
+
 ## Scope
 
 ใช้สำหรับการพัฒนา APIs ด้วย oRPC บน TypeScript projects
+
 
 ## Execute
 
@@ -73,6 +69,17 @@ url: https://orpc.dev/
 2. export เป็น JSON หรือ YAML
 3. integrate กับ Swagger UI หรือ Redoc
 4. ทำตาม `/check-api` สำหรับ API documentation
+
+
+### 9. Report
+
+รายงานผลลัพธ์:
+
+1. ทำ `/report` เพื่อจัดรูปแบบ output
+2. แสดง procedures ที่สร้าง
+3. แสดง integration points
+4. แสดง type safety coverage
+
 
 ## Rules
 
@@ -148,18 +155,10 @@ Integrate client อย่างถูกต้อง:
 - ใช้ auth middleware สำหรับ protected routes
 - ใช้ rate limiting สำหรับ public APIs
 
+
 ## Expected Outcome
 
 - APIs มี end-to-end type safety
 - OpenAPI documentation สมบูรณ์
 - Client-server integration ทำงานได้อย่างราบรื่น
 - Code มีคุณภาพและ maintainability สูง
-
-## Report
-
-รายงานผลลัพธ์:
-
-1. ทำ `/report` เพื่อจัดรูปแบบ output
-2. แสดง procedures ที่สร้าง
-3. แสดง integration points
-4. แสดง type safety coverage

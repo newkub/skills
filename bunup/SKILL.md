@@ -1,16 +1,18 @@
 ---
-title: Bunup
-description: แนวทางการใช้งาน Bunup สำหรับ bundle TypeScript libraries ด้วย Bun's native bundler - เร็ว ง่าย และ auto-detect entry points
-auto_execution_mode: 3
+name: bunup
+description: "แนวทางการใช้งาน Bunup สำหรับ bundle TypeScript libraries ด้วย Bun's native bundler - เร็ว ง่าย..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 ใช้ Bunup bundle TypeScript libraries ด้วย Bun's native bundler ที่รวดเร็วและ auto-detect entry points
 
+
 ## Scope
 
 ใช้สำหรับ bundle TypeScript libraries ด้วย Bun's native bundler
+
 
 ## Execute
 
@@ -38,6 +40,7 @@ auto_execution_mode: 3
 - อ่าน `guide/troubleshooting.md` สำหรับปัญหาทั่วไป
 - อ่าน `references/api.md` สำหรับ API reference
 
+
 ## Rules
 
 - ใช้ `bun add -D bunup` สำหรับ dev dependencies
@@ -51,6 +54,7 @@ auto_execution_mode: 3
 - ใช้ Bun's native bundler สำหรับ performance
 - หลีกเลี่ยง unnecessary configurations
 - ใช้ caching สำหรับ repeated builds
+
 
 ## Expected Outcome
 
