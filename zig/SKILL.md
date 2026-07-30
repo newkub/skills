@@ -1,16 +1,18 @@
 ---
-title: Lang Zig
-description: แนวทางการพัฒนา Zig ตาม best practices สำหรับ systems programming ที่เน้นความเรียบง่าย, performance และ memory safety โดยไม่มี hidden control flow หรือ hidden allocations
-auto_execution_mode: 3
+name: zig
+description: "แนวทางการพัฒนา Zig ตาม best practices สำหรับ systems programming ที่เน้นความเรียบง่าย,..."
+triggers: ['user', 'model']
+allowed-tools: ['read', 'edit', 'grep', 'glob', 'exec']
 ---
-
 ## Goal
 
 พัฒนา Zig ตาม best practices สำหรับ systems programming ที่เน้นความเรียบง่าย, performance และ memory safety โดยไม่มี hidden control flow หรือ hidden allocations
 
+
 ## Scope
 
 ใช้สำหรับการพัฒนา Zig ทุกประเภท เช่น systems programming, game development, CLI tools, WebAssembly development, และ C/C++ interoperability
+
 
 ## Execute
 
@@ -31,6 +33,7 @@ auto_execution_mode: 3
 - ใช้ `zig test` สำหรับ running tests
 - ใช้ debugging tools
 - ตรวจสอบ memory leaks
+
 
 ## Rules
 
@@ -54,6 +57,7 @@ auto_execution_mode: 3
 - ใช้ catch สำหรับ error handling
 - ใช้ custom error types
 - ให้ error messages ที่ชัดเจน
+
 
 ## Expected Outcome
 
